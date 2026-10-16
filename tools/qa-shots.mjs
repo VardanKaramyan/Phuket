@@ -1,7 +1,7 @@
 // Visual QA screenshots for the parts that changed most often: the home pass (390 light, 320 dark), every day of the
 // agenda, the events list filtered per trip phase, the Info sections, the Apps view and chosen cards.
 // Usage: node tools/qa-shots.mjs [html, default dist/phuket-guide-offline.html] [out dir, default qa-out]
-//        CARDS="ev-circoloco-thailand-2027,ht-the-slate-phuket" node tools/qa-shots.mjs
+//        CARDS="ev-circoloco-thailand-2027,ht-luxurious-seaview-villa-rawai" node tools/qa-shots.mjs
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -11,7 +11,7 @@ import { chromePath } from './chrome.mjs'
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const file = path.resolve(process.argv[2] || path.join(ROOT, 'dist/phuket-guide-offline.html'))
 const out = path.resolve(process.argv[3] || 'qa-out')
-const CARDS = (process.env.CARDS || 'ev-circoloco-thailand-2027,ev-wet-pool-party-haad-rin,ht-the-slate-phuket,pl-natural-restaurant-airport').split(',').filter(Boolean)
+const CARDS = (process.env.CARDS || 'ev-circoloco-thailand-2027,ev-wet-pool-party-haad-rin,ht-luxurious-seaview-villa-rawai,pl-natural-restaurant-airport').split(',').filter(Boolean)
 fs.mkdirSync(out, { recursive: true })
 const browser = await puppeteer.launch({ executablePath: chromePath(), headless: true, args: ['--no-sandbox', '--allow-file-access-from-files'] })
 const errors = []

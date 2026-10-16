@@ -78,6 +78,7 @@ const ICON = {
   theme: '<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/>',
   plus: '<path d="M12 5v14M5 12h14"/>',
   minus: '<path d="M5 12h14"/>',
+  hide: '<path d="M3 3l18 18"/><path d="M10.6 6.1A9.6 9.6 0 0 1 12 6c5 0 8.5 4.2 9.5 6a15 15 0 0 1-2.6 3.3M6.5 7.6C4.6 8.9 3.2 10.7 2.5 12c1 1.8 4.5 6 9.5 6 1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>',
   locate: '<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/>',
   fit: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
   ticket: '<path d="M3 8.5a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v2a1.5 1.5 0 0 0 0 3v2a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2v-2a1.5 1.5 0 0 0 0-3z"/>',
@@ -284,9 +285,11 @@ const hotelOrder = { luxury: 0, boutique: 1, 'mid-range': 2, budget: 3, hostel: 
 const hotelsSorted = hotels.slice().sort((a, b) => ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
 function hotelCard(h, mode) {
   const tierKey = h.tier === 'hostel' ? 'budget hostel' : h.tier
-  const extraBtns = isUrl(h.website) ? `<a class="btn" href="${esc(h.website)}" target="_blank" rel="noopener">${icon('globe')}Website</a>` : ''
+  const extraBtns = isUrl(h.website) ? `<a class="btn" href="${esc(h.website)}" target="_blank" rel="noopener">${icon('globe')}${esc(h.websiteLabel || 'Website')}</a>` : ''
+  // 'Hide' takes the villa off the list and the map on this phone; the Hidden villas list brings it back
+  const hideBtn = `<button class="btn js-only" type="button" data-hide-stay="${esc(h.id)}" aria-label="${esc('Hide ' + h.name)}">${icon('hide')}Hide</button>`
   const vibe = (h.vibe || []).filter(has)
-  return `<article class="card" id="ht-${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
+  return `<article class="card" id="ht-${esc(h.id)}" data-stay="${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
 ${imgTag('hotels:' + h.id, h.name, mode, 'H')}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
@@ -294,7 +297,7 @@ ${imgTag('hotels:' + h.id, h.name, mode, 'H')}<div class="tag-top"><span class="
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
 ${facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
-${actionRow({ item: h, mapKey: 'hotel:' + h.id, fav: 'ht:' + h.id, extraBtns })}
+${actionRow({ item: h, mapKey: 'hotel:' + h.id, fav: 'ht:' + h.id, extraBtns: extraBtns + hideBtn })}
 </div></article>`
 }
 
@@ -412,7 +415,7 @@ function homeView(mode) {
     ['events', 'events', 'Music & raves', plural(datedEvents.filter((e) => e.window === 'in').length, 'dated event') + ' in your dates'],
     ['places', 'places', 'Places to go', plural(places.filter((p) => p.tier !== 'day-trip').length, 'spot') + ' · ' + plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
-    ['stay', 'stay', 'Where to stay', plural(hotels.length, 'hotel') + ' + your own'],
+    ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
     ['money', 'money', 'Money', bestBrand ? `Best rates: ${bestBrand.name}` : 'Exchange & ATMs'],
     ['info', 'info', 'Essentials', 'Entry, transport, safety, phrases'],
     ...(apps.length ? [['apps', 'apps', 'Apps to install', `${plural(apps.filter((a) => a.priority === 'must').length, 'app')} to set up before you fly, ${apps.length} in all`, 'wide']] : []),
@@ -527,8 +530,10 @@ ${chipRow('areas', 'best', [['all', 'All areas'], ...tags.map((t) => [t, cap(t.r
 }
 function stayView(mode) {
   const zonesUsed = ZONES.filter(([z]) => hotels.some((h) => zoneOf(h) === z))
+  // only the price chips that match a card (the villa list has no boutique hotels)
+  const tiersUsed = [['luxury', 'Luxury'], ['boutique', 'Boutique'], ['mid-range', 'Mid-range'], ['budget', 'Budget']].filter(([t]) => hotels.some((h) => (h.tier === 'hostel' ? 'budget' : h.tier) === t))
   return `<section class="view" id="stay" aria-labelledby="stay-title">
-<div class="view-head"><span class="eyebrow">Hotels</span><h1 class="view-title" id="stay-title">Where to stay</h1><p class="lede">${esc(extra.stayIntro || 'Add your own bookings, and browse hotels picked for this trip, from Circoloco’s beach to Old Town.')}</p></div>
+<div class="view-head"><span class="eyebrow">8 guests · 8–18 Jan</span><h1 class="view-title" id="stay-title">Where to stay</h1><p class="lede">${esc(extra.stayIntro || 'Add your own bookings, and browse hotels picked for this trip, from Circoloco’s beach to Old Town.')}</p></div>
 <div class="stack"><h2 class="block-title">My hotels</h2>
 <div class="mine" id="my-hotels"><p class="note">Turn on JavaScript to save your own hotels here.</p></div>
 <form class="myform js-only" id="my-hotel-form" autocomplete="off">
@@ -537,13 +542,16 @@ function stayView(mode) {
 <div class="row2"><label for="mh-dates">Dates<input id="mh-dates" name="dates" placeholder="8–11 Jan"></label><label for="mh-notes">Notes<input id="mh-notes" name="notes" placeholder="Booking no., check-in time"></label></div>
 <button class="btn primary" type="submit">${icon('plus')}Add hotel</button>
 </form></div>
-<h2 class="block-title">Hotels picked for you <small>${hotels.length} places</small></h2>
+<h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <div class="toolbar" data-toolbar="stay">
-${chipRow('stay', 'tier', [['all', 'All'], ['luxury', 'Luxury'], ['boutique', 'Boutique'], ['mid-range', 'Mid-range'], ['budget', 'Budget'], ['saved', 'Saved']], 'Filter hotels by price')}
+${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed, ['saved', 'Saved']], 'Filter villas by price')}
 ${chipRow('stay', 'zone', [['all', 'Everywhere'], ...zonesUsed], 'Filter hotels by area')}
 </div>
 <div class="list" data-list="stay">${hotelsSorted.map((h) => hotelCard(h, mode)).join('\n')}</div>
-<p class="empty" data-empty="stay" hidden>No hotels match these filters.</p>
+<p class="empty" data-empty="stay" hidden>No villas match these filters.</p>
+<div class="stack js-only" id="hidden-stays" hidden><h2 class="block-title">Hidden villas <small id="hidden-stays-n"></small></h2>
+<p class="note">Hidden on this phone only. Tap Show again to put a villa back on the list and the map.</p>
+<div class="mine" id="hidden-stays-list"></div></div>
 </section>`
 }
 function moneyView(mode) {
@@ -669,7 +677,7 @@ function clientData(build) {
   // the headline price only; the card has the full price notes
   const popPrice = (h) => {
     if (h.noRoomsOnTrip) return 'no rooms on sale for your dates'
-    const m = String(h.priceText || '').match(/(?:from |about )?[\d,]+(?:\s?[-–]\s?[\d,]+)? THB(?: \/ night)?/i)
+    const m = String(h.priceText || '').match(/(?:from |about )?[\d,]+(?:\s?[-–]\s?[\d,]+)? THB(?: \/ night| for \d+ nights)?/i)
     return m ? m[0].replace(/^(From|About) /, (w) => w.toLowerCase()) : popPattern(h.priceText)
   }
   hotels.forEach((h) => add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], popPrice(h)].filter(has).join(' · '), 'ht-' + h.id))

@@ -96,6 +96,9 @@
 
   /* ---------- favourites ---------- */
   const favs = new Set(store.get('favs', []))
+  // villas hidden with 'Hide' (kept on this phone only): off the list and the map until 'Show again'
+  const hiddenStays = new Set(store.get('hiddenStays', []))
+  const isHiddenStay = (card) => !!card.dataset.stay && hiddenStays.has(card.dataset.stay)
   function syncFavs() {
     $$('.fav').forEach((b) => b.setAttribute('aria-pressed', String(favs.has(b.dataset.fav))))
     const n = $('#saved-count'); if (n) n.textContent = favs.size ? favs.size + ' saved' : 'Nothing saved yet'
@@ -136,7 +139,7 @@
     const apply = () => {
       let shown = 0
       cards.forEach((card) => {
-        let ok = Object.entries(state).every(([g, v]) => match(card, g, v))
+        let ok = !isHiddenStay(card) && Object.entries(state).every(([g, v]) => match(card, g, v))
         if (ok && query) ok = (card.dataset.text || card.textContent).toLowerCase().includes(query)
         card.hidden = !ok; if (ok) shown++
       })
@@ -144,7 +147,7 @@
       if (bar) $$('.chip[data-value]', bar).forEach((chip) => {
         const n = $('.n', chip); if (!n) return
         const g = chip.dataset.group, v = chip.dataset.value
-        n.textContent = cards.filter((c) => Object.entries(state).every(([gg, vv]) => gg === g || match(c, gg, vv)) && match(c, g, v)).length
+        n.textContent = cards.filter((c) => !isHiddenStay(c) && Object.entries(state).every(([gg, vv]) => gg === g || match(c, gg, vv)) && match(c, g, v)).length
       })
     }
     const reset = () => {
@@ -167,6 +170,37 @@
       if (search) search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); apply() })
     }
     lists.push({ apply, reset, el: listEl })
+  })
+
+  /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
+  function syncHiddenStays() {
+    const box = $('#hidden-stays'), list = $('#hidden-stays-list')
+    const cards = Array.from(hiddenStays).map((id) => document.getElementById('ht-' + id)).filter(Boolean)
+    if (box && list) {
+      box.hidden = !cards.length
+      const n = $('#hidden-stays-n'); if (n) n.textContent = cards.length
+      list.innerHTML = cards.map((c) => '<div class="mine-item"><b>' + esc(c.dataset.name) + '</b>' +
+        '<div class="actions"><button class="btn" type="button" data-unhide-stay="' + esc(c.dataset.stay) + '">Show again</button></div></div>').join('') +
+        (cards.length > 1 ? '<button class="btn" type="button" data-unhide-stay="*">Show all again</button>' : '')
+    }
+    syncHiddenPins()
+    lists.forEach((l) => l.apply())
+  }
+  function setStayHidden(id, hide) {
+    if (id === '*') hiddenStays.clear(); else if (hide) hiddenStays.add(id); else hiddenStays.delete(id)
+    saveOrWarn('hiddenStays', Array.from(hiddenStays)); syncHiddenStays()
+  }
+  document.addEventListener('click', (e) => {
+    const h = e.target.closest('[data-hide-stay]')
+    if (h) {
+      e.preventDefault()
+      const id = h.dataset.hideStay
+      setStayHidden(id, true)
+      toast('Hidden: ' + (document.getElementById('ht-' + id)?.dataset.name || 'villa'), { label: 'Undo', run: () => { setStayHidden(id, false); $('#toast').hidden = true } })
+      return
+    }
+    const u = e.target.closest('[data-unhide-stay]')
+    if (u) { e.preventDefault(); setStayHidden(u.dataset.unhideStay, false); toast(u.dataset.unhideStay === '*' ? 'All villas are back on the list' : 'Back on the list') }
   })
 
   /* ---------- apps: 'Ready' ticks (kept on this phone only) and the store button for this phone ---------- */
@@ -332,6 +366,7 @@
       layers[p.k === 'gem' ? 'gem' : p.t].addLayer(m)
       markers[p.t + ':' + p.id] = m
     })
+    syncHiddenPins()
     $$('.layerbar .chip').forEach((chip) => {
       chip.addEventListener('click', () => {
         const on = chip.getAttribute('aria-pressed') !== 'true'
@@ -374,6 +409,13 @@
       })
     }
     if (pendingFocus) { focusPoint(pendingFocus); pendingFocus = null }
+  }
+  function syncHiddenPins() {
+    if (!map) return
+    Object.entries(markers).forEach(([k, m]) => {
+      if (!k.startsWith('hotel:')) return
+      if (hiddenStays.has(k.slice(6))) layers.hotel.removeLayer(m); else layers.hotel.addLayer(m)
+    })
   }
   function focusPoint(key) {
     const m = markers[key]
@@ -530,6 +572,7 @@
     $('#install-android').hidden = ios
   }
 
+  syncHiddenStays()
   syncFavs()
   refreshToday()
   route()

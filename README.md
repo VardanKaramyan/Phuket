@@ -37,11 +37,13 @@ node tools/offline-test.mjs                        # serves dist/, stops the ser
 node tools/popup-test.mjs                          # map popups stay tappable at 390, 360 and 320 px
 ```
 
-Content edits: hand-written copy is in `data/extra.json`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
+Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
 
 ## Deploy `dist/`
 
-Ask the user first: they chose to skip hosting on 16 Oct 2026 (see `HANDOFF.md`, section 2). Any static host works, for example:
+Vercel (17 Oct 2026): the project imports `VardanKaramyan/Phuket` from GitHub, and `vercel.json` tells it to skip the install and build and serve the committed `dist/`. So rebuild locally (`npm run build`), commit `dist/`, and push to the `karamyan` remote; each push to `main` redeploys.
+
+Any other static host works too, for example:
 
 ```sh
 npx vercel deploy dist --prod              # after: npx vercel login

@@ -31,7 +31,7 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
    - Python 3.9 or newer, for `tools/collect-photos.py` and a few helpers.
    - Google Chrome (or Chromium), for the tests and screenshots. It is found automatically on macOS, Linux and Windows; otherwise set `CHROME_PATH=/path/to/chrome`.
 3. Run `npm install`, then `npm run all`. That rebuilds the data, builds the site and runs the tests. It should exit with code 0 and print:
-   - `checked: 40 events, 71 places, 20 areas, 28 hotels, 8 brands` and `no problems found`
+   - `checked: 40 events, 71 places, 20 areas, 16 hotels, 8 brands` and `no problems found`
    - `OFFLINE TEST PASSED`
    - 27 lines of `buttons ok` (3 phone sizes × 9 popups), then `POPUP TEST PASSED`
    - `51 apps · by priority {"must":12,"useful":23,"optional":16} …`, and the 4 `apps fix:` lines from curate.
@@ -50,7 +50,8 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 - Writes short, informal English with typos; English is not their first language. All guide copy uses **short, simple, concrete English**: no marketing words, no emoji, no exclamation marks, no em-dash asides.
 - Likes big tasks done thoroughly. They turn on **max effort and "ultracode"** (run substantive work as Workflow orchestrations with adversarial fact-checks). They expect progress updates while long workflows run.
 - Wants this `HANDOFF.md` kept up to date during long work. They switch sessions and machines, and a terminal restart once killed a long workflow mid-run.
-- Ask before anything outward-facing: hosting `dist/`, a Google My Maps import, pushing to GitHub. They chose **"Skip for now"** on hosting (16 Oct 2026).
+- Ask before anything outward-facing: hosting `dist/`, a Google My Maps import, pushing to GitHub. They chose **"Skip for now"** on hosting (16 Oct 2026), then set up Vercel themselves on 17 Oct 2026 (see section 9, item 2).
+- Two GitHub remotes: `origin` = `vardan-k/Phuket`, `karamyan` = `VardanKaramyan/Phuket` (public; Vercel deploys from its `main`). Push with `git push karamyan main` and `git push origin main`.
 - Loves underground techno (Bassiani / Berlin style), good raves and festivals. Events are ranked underground-first.
 
 ## 3. The trip (the content depends on these facts)
@@ -147,12 +148,12 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 
 ## 5. Where everything stands (done and tested)
 
-- **Content:** 40 music items (dated events, weekly nights, clubs), 71 places (must-see, hidden gems, day trips, food), 20 areas, 28 hotels (including a "Near the airport" group), 8 money-changer brands, 12 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
+- **Content:** 40 music items (dated events, weekly nights, clubs), 71 places (must-see, hidden gems, day trips, food), 20 areas, 16 villas for the group (the user's own Airbnb and Booking.com shortlist for 8 guests, 8-18 Jan, which replaced the 28 researched hotels on 16 Oct 2026), 8 money-changer brands, 12 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
 - **Photos:** 173 photos, 166 in use. Each was looked at by an agent and cropped to 640×360 WebP. Sources are Wikimedia Commons (with author and license) or the venue's own site or social accounts, for personal use only.
 - **Site:**
   - Hash-routed and works with JavaScript off (CSS `:target`); light and dark themes.
   - Home: a boarding-pass header with one row of days per trip phase, the flight, and a day agenda. On 19-22 Jan the agenda lists Koh Phangan first; flight day lists no evening events.
-  - An 18-night plan grouped by phase, phase and place filters, favourites, "My hotels", a converter.
+  - An 18-night plan grouped by phase, phase and place filters, favourites, "My hotels", Hide / Show again on the villa cards, a converter.
   - Google place IDs on 142 links; Directions go to piers or car parks where the pin is in the sea or uphill.
   - Map popups use short texts so they fit a 320×640 phone.
 - **Outputs:**
@@ -192,7 +193,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run build`, `npm run check
 | Path | What |
 | --- | --- |
 | `src/styles.css` | Design tokens (light + dark), layout, components, CSS-only routing for the no-JS case. |
-| `src/app.js` | Router (`VIEWS`), filters (generic: chip `data-group` ↔ card `data-<group>`), favourites, day planner, Leaflet map (vector offline basemap + Esri tiles online), converter, My hotels, Apps ticks, service-worker registration. |
+| `src/app.js` | Router (`VIEWS`), filters (generic: chip `data-group` ↔ card `data-<group>`), favourites, day planner, Leaflet map (vector offline basemap + Esri tiles online), converter, My hotels, hidden villas (`pg:hiddenStays`), Apps ticks, service-worker registration. |
 | `src/sw.js` | Service worker template (precache list and version injected by the build). |
 | `tools/trip.mjs` | **The trip dates in one place:** `TRIP` (start, end, last night, flight, phases), `TRIP_DAYS`, `inTrip`, `windowOf`, `phaseOf`, and date words for the copy. The build, import, merge, check and curate scripts all import it. |
 | `tools/build.mjs` | Renders every view to static HTML from `data/*.json`; inlines fonts, CSS, JS and Leaflet; writes the outputs, manifest, icons and KML. `PLAN_PHANGAN` (the nights the plan puts the two of them on Koh Phangan) is plan-specific. |
@@ -205,6 +206,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run build`, `npm run check
 | `tools/journal-extract.py`, `tools/transcript-digest.py`, `tools/watch-workflows.py` | Helpers for Claude Code workflow journals (only useful on the machine that ran the workflows). |
 | `tools/workflows/` | Workflow scripts. Run one by asking Claude Code to call the Workflow tool with `{ scriptPath: "<absolute path>", args: {…} }`.<br>• `research.js`: the original 8-18 Jan research. `args.root` = project folder; `args.resume` / `args.precomputed` resume a killed run.<br>• `late-january.js`: the 19-26 Jan research. `args.known` = ids already in the guide.<br>• `apps.js`: the apps research (no args).<br>• `photos.js`: the photo hunt. `args.outDir` and `args.itemsFile` as absolute paths, `args.batches` = arrays of item keys.<br>• `qa.js` (`args.project`, `args.shots` = a folder of `light-/dark-<view>.png`) and `qa-2.js` (`args.project`): review rounds.<br>• `handoff-check.js` (`args.project`, `args.tmp`): the fresh-machine test of this handoff.<br>• `handoff-recheck.js` (`args.project`, `args.tmp`, `args.first` = an earlier check's JSON): the second pass that confirms its fixes. |
 | `data/events.json`, `places.json`, `areas.json`, `hotels.json`, `exchanges.json`, `essentials.json` | Content (generated by import + curate). |
+| `data/stays.json` | The villa shortlist, hand-written (16 Oct 2026: price for 8 guests on 8-18 Jan, copy, approximate Airbnb pins). `curate.mjs` replaces `hotels.json` with it after the late-January merge. Photos: `research/photos/w8/stays.json` → `npm run photos`. |
 | `data/extra.json` | Hand-written copy, edited directly: intros, `eventsCallout.groups` (18-night plan per phase), `eventsFooter`, `dayTips` (per date), `areasRecommendation`, `beforeYouFly`, `imageNotes` (stand-in photo labels), `dropImages`, `researchedOn` (the footer date: update it after re-checks), and `offlineUrl` (not in the file yet: add `"offlineUrl": "https://…"` once hosted). |
 | `data/apps.json` | Apps page content (from `import-apps.mjs`). |
 | `data/images.json`, `data/image-picks.json` | Processed photos and the chosen source photos (paths relative to the project). |
@@ -215,7 +217,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run build`, `npm run check
 **Data fields worth knowing:**
 - Events: `kind` (dated/recurring/venue), `dates` (ISO; only days that matter), `window` (in/before/after), `status` (`unconfirmed` shows as "Maybe" / "not confirmed"), `undergroundScore`, `pick`, `agendaNote`, `tile`, `placeId`, `extraMaps`.
 - Places: `tier`, `durationLabel`, `days`, `dirLat`/`dirLng`/`dirLabel`, `noDirections`.
-- Hotels: `lastNights`, `noRoomsOnTrip`.
+- Hotels: `lastNights`, `noRoomsOnTrip`, `websiteLabel` (the site button text, e.g. Airbnb). Villas with approximate Airbnb pins use `coordConfidence: medium` + `noDirections`, so they stay on the map without a Directions button.
 - Low `coordConfidence` pins get no map dot and no Directions button.
 
 ## 8. Publishing the artifact
@@ -235,7 +237,7 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
    - Update the Argy `priceText` in `tools/curate.mjs` (the `cafe-del-mar-pyramid-2027-01-08` fix) and the ticket line in `data/extra.json` → `beforeYouFly`.
    - Check the ticket link. It points to Café del Mar's Megatix page, `https://megatix.in.th/cafedelmarphuket`, because the old `megatix.co.th` link was a parked domain (checked 16 Oct 2026). Use the Argy event page on Megatix once it is listed.
 1. Optional: add the critic's additions to the Apps page (section 1 step 0), and cut Info → "Power and apps" down to "Plugs and voltage", now that the Apps page covers those apps.
-2. **Hosting** (ask first; the user skipped it on 16 Oct 2026). Put `dist/` on any HTTPS static host, for example:
+2. **Hosting:** Vercel, imported from `VardanKaramyan/Phuket` on 17 Oct 2026. `vercel.json` skips the install and build and serves the committed `dist/`, so rebuild locally, commit `dist/`, and push to `karamyan`. Once the URL is known, add it as `offlineUrl` in `data/extra.json` and rebuild. Other static hosts work too:
    - `npx vercel deploy dist --prod` after `npx vercel login`
    - `npx netlify-cli deploy --dir dist --prod`
    - `npx surge dist`

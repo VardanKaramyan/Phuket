@@ -1,0 +1,788 @@
+{
+ "items": [
+  {
+   "id": "luxurious-seaview-villa-rawai",
+   "name": "Luxurious SeaView Pool Villa",
+   "area": "rawai",
+   "tier": "luxury",
+   "priceText": "241,500 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included, after a discount from 283,500 THB. About 24,150 THB a night, or 3,020 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "Four bedrooms, a marble pool off the living room and a rooftop jacuzzi over Chalong Bay, about 100 m from Friendship Beach. Sleeps 11, so there is room to spare for 8.",
+   "description": "Entire villa in Rawai: 4 bedrooms (3 with a king bed, 1 with twin beds), 8 beds, 3.5 baths. A 4 x 10 m marble pool with two waterfalls, a rooftop terrace with a jacuzzi and a covered sala, a full kitchen, an 85-inch TV and fast wifi (188 Mbps). Hosted by Jonas & Noi, Superhosts for 12 years.",
+   "nearby": "The host says: 100 m to Friendship Beach and the Atmanjai Wellness Spa (yoga, detox), 200 m to the Hockholelee coffee roasters. In a straight line from the pin: Nai Harn Beach 4 km, Bangla Road 11 km, the airport 35 km, Baba Beach Club Natai (Circoloco) 50 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in 4 PM to midnight, checkout by noon.",
+    "Free cancellation for 24 hours after booking; cancel before 1 Jan for a partial refund.",
+    "Two extra single beds can be added for a fee.",
+    "The same hosts rent the Fantastic SeaView villa at the same spot, if the group grows."
+   ],
+   "vibe": [
+    "private pool",
+    "sea view",
+    "rooftop jacuzzi"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb 4.85 (47 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-930761022304341654/original/af4e24a1-66b0-49ae-81ba-2f1e40e88510.png",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Jonas & Noi"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Rawai · ★4.85 · 4 bedrooms · 8 beds · 3.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.80056,
+   "lng": 98.33697,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.80056,98.33697",
+   "airbnbId": "930761022304341654"
+  },
+  {
+   "id": "fantastic-seaview-villa-rawai",
+   "name": "Fantastic SeaView Pool Villa",
+   "area": "rawai",
+   "tier": "mid-range",
+   "priceText": "217,700 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included, after a discount from 255,500 THB. About 21,770 THB a night, or 2,720 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "The sister villa of the Luxurious SeaView, by the same hosts: four bedrooms, a marble pool off the living room, a lift between floors and a roof terrace over Chalong Bay. The cheaper of the two, for up to 10.",
+   "description": "Entire villa in Rawai: 4 bedrooms (3 king beds and 2 single beds), 5 beds, 3.5 baths, a lift and a pool table. A 4 x 10 m marble pool with two waterfalls, a rooftop terrace with a sea view, a BBQ, fast wifi (282 Mbps) and self check-in with a lockbox. Hosted by Jonas & Noi, Superhosts for 12 years.",
+   "nearby": "The host says: 100 m to Friendship Beach and the Atmanjai Wellness Spa, 200 m to the Hockholelee coffee roasters. Airbnb has verified the location. In a straight line from the pin: Nai Harn Beach 4 km, Bangla Road 11 km, the airport 35 km, Baba Beach Club Natai (Circoloco) 50 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in 4 PM to midnight, checkout by noon.",
+    "Free cancellation for 24 hours after booking; cancel before 1 Jan for a partial refund.",
+    "Two extra single beds can be added for a fee."
+   ],
+   "vibe": [
+    "private pool",
+    "sea view",
+    "lift"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb 4.68 (41 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/43792215?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/43792215?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/43792215?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-43792215/original/ffa0b18b-98a0-4be2-abfb-721ece5ed58a.png",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Jonas & Noi"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Amphoe Mueang Phuket · ★4.68 · 4 bedrooms · 5 beds · 3.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.80094,
+   "lng": 98.3369,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.80094,98.33690",
+   "airbnbId": "43792215"
+  },
+  {
+   "id": "luxury-4br-pool-villa-rawai",
+   "name": "Luxury 4-Bedroom Saltwater Pool Villa",
+   "area": "rawai",
+   "tier": "luxury",
+   "priceText": "Not available for 8-18 Jan 2027: Airbnb shows the dates as taken. Try nearby dates or message the host. Checked 16 Oct 2026.",
+   "whyStay": "A new villa in a quiet gated estate 5 minutes from Rawai and Nai Harn beaches, with a saltwater pool and a shallow beach area. A guest favourite in the top 10% on Airbnb, but your dates are already booked.",
+   "description": "Entire villa in Rawai, 220 m² inside: 4 bedrooms, each with its own bathroom and a 55-inch TV (4 beds, 4.5 baths), a saltwater pool with a beach entry, a BBQ and two covered parking spaces. Security cameras outside. Sleeps 8. Hosted by Benoit (4 years hosting).",
+   "nearby": "The host says: 5 minutes to Rawai and Nai Harn beaches, with restaurants, supermarkets and massage shops close by. In a straight line from the pin: Nai Harn Beach 3 km, Bangla Road 12 km, the airport 36 km, Baba Beach Club Natai (Circoloco) 51 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation for 24 hours after booking; cancel before 1 Jan for a partial refund."
+   ],
+   "vibe": [
+    "private pool",
+    "quiet estate",
+    "guest favourite"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb Guest favourite 4.97 (91 reviews)",
+   "website": "https://www.airbnb.com/rooms/1136544214678784827?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1136544214678784827?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1136544214678784827?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/miso/Hosting-1136544214678784827/original/6f5c4027-2015-4bcd-92c7-eee87afa87fd.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Benoit"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Rawai · ★4.97 · 4 bedrooms · 4 beds · 4.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.7911,
+   "lng": 98.3267,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.79110,98.32670",
+   "noRoomsOnTrip": "Booked 8–18 Jan",
+   "airbnbId": "1136544214678784827"
+  },
+  {
+   "id": "kata-v2-sea-view-villa",
+   "name": "Kata V2 Sea View Villa",
+   "area": "kata",
+   "tier": "mid-range",
+   "priceText": "195,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 19,500 THB a night, or 2,440 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A three-floor villa at the edge of Kata Beach with a private pool off the living room and a rooftop terrace facing the sea. Five bedrooms, each with its own bathroom, for up to 12.",
+   "description": "Entire villa: 5 bedrooms, 6 beds, 6 baths over three floors plus the roof terrace. The middle floor has the sea-facing living room, the pool and three bedrooms; the lower floor is a two-bedroom suite. Hot tub, beach access, kitchen and washer. Hosted by Yang (2 years hosting).",
+   "nearby": "The host says: on the edge of Kata Beach, in a row of three villas (V1 to V3). In a straight line from the pin: Kata Beach 1 km, Bangla Road 9 km, the airport 34 km, Baba Beach Club Natai (Circoloco) 49 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 2 PM, checkout by 11 AM.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "No reviews yet: message the host and ask for recent photos before you pay."
+   ],
+   "vibe": [
+    "private pool",
+    "sea view",
+    "rooftop",
+    "near the beach"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1292044049224109456?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1292044049224109456?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1292044049224109456?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/miso/Hosting-1292044049224109456/original/d3e65cf5-d551-4556-8c1b-3a62a84a8764.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Yang"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Karon · 5 bedrooms · 6 beds · 6 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.81009,
+   "lng": 98.30133,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.81009,98.30133",
+   "airbnbId": "1292044049224109456"
+  },
+  {
+   "id": "sawansa-34a-patong",
+   "name": "SawanSa 3BR Seaview Townhouse #34A",
+   "area": "patong",
+   "tier": "luxury",
+   "priceText": "232,110 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included, after a discount from 255,400 THB. About 23,210 THB a night, or 2,900 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A four-level luxury townhouse on Patong's north hill with panoramic sea views from the roof, a 5-minute walk to the beach and 3 minutes by taxi to Bangla Road. Daily maid service, electricity and drinking water are included.",
+   "description": "Entire townhouse, 450 m²: 3 bedrooms, 5 beds, 4 baths, a rooftop terrace with sun loungers, a BBQ, a 50-inch TV and gigabit wifi, in a quiet private estate. Sleeps 8. Hosted by Oy, Superhost.",
+   "nearby": "The host says: 300 m from the beach, 15 minutes on foot or 2 minutes by taxi to central Patong, the malls and Bangla Road. The house is 60 m up the hill, on a steep concrete road with stairs. In a straight line from the pin: Bangla Road 2 km, the airport 23 km, Baba Beach Club Natai (Circoloco) 38 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 4 PM, checkout by 11 AM.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Included: daily maid, electricity, water, coffee and tea.",
+    "Quiet time from 10 PM and no cannabis. No lift, and the walk up the hill is steep."
+   ],
+   "vibe": [
+    "sea view",
+    "rooftop",
+    "walk to Patong"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb Guest favourite 5.0 (130 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/648811354904336000?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/648811354904336000?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/648811354904336000?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-648811354904336000/original/208cfb09-0fb2-4ee4-80da-6ce507eaac59.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Oy"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Townhouse in Pa Tong · ★5.0 · 3 bedrooms · 5 beds · 4 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.9068,
+   "lng": 98.3022,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.90680,98.30220",
+   "airbnbId": "648811354904336000"
+  },
+  {
+   "id": "modern-4br-villa-laguna",
+   "name": "Modern 4-Bedroom Pool Villa near Laguna",
+   "area": "bang-tao",
+   "tier": "mid-range",
+   "priceText": "206,630 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 20,660 THB a night, or 2,580 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A modern four-bedroom pool villa in an estate between Laguna and Layan Beach, a walk from shops and restaurants. Weekly cleaning is included, and the host can book tours, a cook, massages and transport.",
+   "description": "Entire villa: 4 bedrooms, 4 beds, 5 baths, a private pool with sun beds and outdoor dining, and a washer. The rate includes weekly cleaning, wifi, water and pool cleaning. Sleeps 8. Hosted by Debbie, Superhost for 13 years.",
+   "nearby": "The host says: close to Laguna and Layan Beach, with shops and restaurants in walking distance. In a straight line from the pin: Bangla Road 14 km, the airport 10 km, Baba Beach Club Natai (Circoloco) 26 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in 3 to 7 PM, checkout by noon.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Electricity is extra: 7 THB per unit, taken from a small deposit.",
+    "This listing has no reviews yet, but the host has 13 years of them."
+   ],
+   "vibe": [
+    "private pool",
+    "quiet estate",
+    "near Laguna"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet · Superhost",
+   "website": "https://www.airbnb.com/rooms/1516415222322114858?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1516415222322114858?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1516415222322114858?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1516415222322114858/original/c418c02e-20c9-4844-ad67-fdab559a09e9.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Debbie"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Thep Krasattri · 4 bedrooms · 4 beds · 5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0206,
+   "lng": 98.32437,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.02060,98.32437",
+   "airbnbId": "1516415222322114858"
+  },
+  {
+   "id": "spacious-4br-home-bluetree",
+   "name": "Spacious 4BR Home near Blue Tree",
+   "area": "bang-tao",
+   "tier": "mid-range",
+   "priceText": "207,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 20,700 THB a night, or 2,590 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A big family home (480 m²) a few minutes' drive from Bang Tao Beach, Laguna, Boat Avenue and Blue Tree, with a private pool, four en-suite king bedrooms and two living rooms. Excellent reviews.",
+   "description": "Entire home: 4 bedrooms with king beds and their own bathrooms (4.5 baths), a private pool and outdoor lounge, a gas BBQ, two living rooms plus a family room with an 85-inch TV and sound system, an office, washer and dryer and a two-car garage. The estate has 24-hour security and a clubhouse gym. Sleeps 8. Hosted by Jennifer, Superhost.",
+   "nearby": "The host says: a few minutes' drive to Bang Tao Beach and its beach clubs, Laguna, Boat Avenue and Blue Tree. Airbnb has verified the location. In a straight line from the pin: Bangla Road 12 km, the airport 13 km, Baba Beach Club Natai (Circoloco) 29 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in 3 to 9 PM, checkout by 11 AM.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Airbnb calls it a 'Rare find': it is usually booked."
+   ],
+   "vibe": [
+    "private pool",
+    "big house",
+    "near beach clubs"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb 4.96 (89 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/948105045915258272?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/948105045915258272?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/948105045915258272?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-948105045915258272/original/8a919e20-fa46-4b4f-97ad-ea61ffcd9aba.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Jennifer"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Choeng Thale · ★4.96 · 4 bedrooms · 4 beds · 4.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.9962,
+   "lng": 98.3195,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.99620,98.31950",
+   "airbnbId": "948105045915258272"
+  },
+  {
+   "id": "luxpride-2-wallaya-v7",
+   "name": "LuxPride 2 by Wallaya Villas (V7)",
+   "area": "bang-tao",
+   "tier": "luxury",
+   "priceText": "261,723 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 26,170 THB a night, or 3,270 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A designer villa with a cedar roof, floor-to-ceiling windows and a garden pool, a few minutes' drive from Laguna and Layan Beach. Strict house rules and extra costs, so read them first.",
+   "description": "Entire villa: 4 bedrooms, 4 beds, 4.5 baths, a garden pool, a hot tub, a kitchen and a washer. Sleeps 8. Run by Island Travel (3 years hosting).",
+   "nearby": "The host says: a few minutes' drive to the Laguna area and Layan Beach. In a straight line from the pin: Bangla Road 14 km, the airport 11 km, Baba Beach Club Natai (Circoloco) 26 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by noon. Arriving early or leaving late costs 1,500 THB per hour.",
+    "A 20,000 THB deposit at check-in. Electricity is extra at 7 THB per kWh.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "No reviews yet, and the listing names only 9 amenities."
+   ],
+   "vibe": [
+    "private pool",
+    "design",
+    "garden"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1544037797487869623?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1544037797487869623?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1544037797487869623?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1544037797487869623/original/7ae072b3-0837-407b-8bd6-195c87a0d3bf.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Island Travel"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Thep Krasattri · 4 bedrooms · 4 beds · 4.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.01865,
+   "lng": 98.32464,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.01865,98.32464",
+   "airbnbId": "1544037797487869623"
+  },
+  {
+   "id": "la-belle-pool-villa",
+   "name": "La Belle Pool Villa",
+   "area": "bang-tao",
+   "tier": "mid-range",
+   "priceText": "229,139 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 22,910 THB a night, or 2,860 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A two-storey tropical villa (402 m²) in the green Wallaya Villa Harmony estate, 5 km from Bang Tao Beach, with a large pool, a hot tub and a garden. A quiet base with mountain views and a long record of good reviews.",
+   "description": "Entire villa: 4 bedrooms, 5 beds, 5 bathrooms with rain showers, a large private pool, a private hot tub, a garden and a workspace. Self check-in with a lockbox. Sleeps 8. Hosted by Na, Superhost for 7 years.",
+   "nearby": "The host says: 5 km to Bang Tao Beach, and a short drive to Laguna, Blue Tree, Central Food Hall and Boat Avenue. In a straight line from the pin: Bangla Road 12 km, the airport 13 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation for 24 hours after booking; cancel before 1 Jan for a partial refund."
+   ],
+   "vibe": [
+    "private pool",
+    "hot tub",
+    "quiet",
+    "garden"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb 4.9 (48 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/39211283?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/39211283?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/39211283?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/758a9ad4-0a64-45d1-a7d5-de5d8cd3ef0d.jpg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Na"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Amphoe Thalang · ★4.9 · 4 bedrooms · 5 beds · 5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0003,
+   "lng": 98.3212,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00030,98.32120",
+   "airbnbId": "39211283"
+  },
+  {
+   "id": "alisa-pool-villa",
+   "name": "Alisa Pool Villa",
+   "area": "bang-tao",
+   "tier": "luxury",
+   "priceText": "240,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 24,000 THB a night, or 3,000 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A contemporary four-bedroom pool villa in a gated community in Bang Tao: Blue Tree is about 5 minutes away, Boat Avenue and Porto de Phuket about 8.",
+   "description": "Entire villa: 4 bedrooms, 4 beds, 4 baths, a private pool, floor-to-ceiling windows and a workspace. Sleeps 8. Hosted by The Club Miracle Family (11 years hosting).",
+   "nearby": "The host says: Blue Tree about 5 minutes, Boat Avenue and Porto de Phuket about 8 minutes, Bang Tao Beach close by. In a straight line from the pin: Bangla Road 12 km, the airport 12 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund."
+   ],
+   "vibe": [
+    "private pool",
+    "gated",
+    "new"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new (1 review)",
+   "website": "https://www.airbnb.com/rooms/1761484044779958433?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1761484044779958433?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1761484044779958433?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1761484044779958433/original/31933df7-a8c3-4dd8-90d9-9bbecb940e60.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© The Club Miracle Family"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Si Sunthon · ★New · 4 bedrooms · 4 beds · 4 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0021,
+   "lng": 98.3228,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00210,98.32280",
+   "airbnbId": "1761484044779958433"
+  },
+  {
+   "id": "brand-new-4br-villa-bangtao",
+   "name": "Brand-New 4BR Villa, Bang Tao",
+   "area": "bang-tao",
+   "tier": "budget",
+   "priceText": "150,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 15,000 THB a night, or 1,880 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "The cheapest villa on this list: a brand-new four-bedroom house with a private pool in the heart of Bang Tao, 150,000 THB for all 10 nights. Sleeps 9.",
+   "description": "Entire home: 4 bedrooms, 5 beds, 4.5 baths, a private pool with a planted deck, a BBQ, a kitchen and a washer. Hosted by Elizaveta (3 years hosting).",
+   "nearby": "The host says: in the heart of Bang Tao. In a straight line from the pin: Bangla Road 13 km, the airport 12 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM.",
+    "Free cancellation until 7 Jan 2027; cancel before check-in on 8 Jan for a partial refund. The most flexible on this list.",
+    "No reviews yet and only 9 amenities listed: ask the host for more photos."
+   ],
+   "vibe": [
+    "private pool",
+    "new",
+    "best price"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1510640953380000157?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1510640953380000157?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1510640953380000157?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1510640953380000157/original/e8435848-d5e5-44e0-834e-25586963b4e1.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Elizaveta"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Choeng Thale · 4 bedrooms · 5 beds · 4.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0059,
+   "lng": 98.32136,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00590,98.32136",
+   "airbnbId": "1510640953380000157"
+  },
+  {
+   "id": "bangtao-3br-pool-villa-laguna",
+   "name": "3BR Pool Villa by Laguna, Bang Tao",
+   "area": "bang-tao",
+   "tier": "budget",
+   "priceText": "181,741 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included, after a discount from 201,741 THB. About 18,170 THB a night, or 2,270 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A private pool villa with a courtyard, 3 to 5 minutes' drive from Bang Tao Beach, 100 m from the main road and next to Laguna. Only 3 bedrooms for 8, but the host has 16 villas here if you need more rooms.",
+   "description": "Entire villa: 3 bedrooms, 4 beds, 3 baths, a private pool, a courtyard with a firepit, a hot tub and outdoor dining. Sleeps 8. Hosted by Taige (8 years hosting); the team answers messages around the clock.",
+   "nearby": "The host says: 3 to 5 minutes' drive to Bang Tao Beach, 100 m to the main road, next to Laguna, with cafes, a 7-Eleven and local markets close by. In a straight line from the pin: Bangla Road 12 km, the airport 12 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation for 24 hours after booking; cancel before 1 Jan for a partial refund.",
+    "The host has 16 villas (3 to 5 bedrooms) in the same area: ask for two side by side."
+   ],
+   "vibe": [
+    "private pool",
+    "near Laguna",
+    "good price"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb 5.0 (3 reviews)",
+   "website": "https://www.airbnb.com/rooms/1263013060593469053?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1263013060593469053?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1263013060593469053?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNzEwMDcxNTc0MjIwNTg1NA%3D%3D/original/4329619f-1dee-4100-b40d-0c0eaaf6f53a.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Taige"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Amphoe Thalang · ★5.0 · 3 bedrooms · 4 beds · 3 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0019,
+   "lng": 98.3078,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00190,98.30780",
+   "airbnbId": "1263013060593469053"
+  },
+  {
+   "id": "laguna-park-5br-villa",
+   "name": "Laguna Park 5BR Pool Villa",
+   "area": "bang-tao",
+   "tier": "luxury",
+   "priceText": "240,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included, after a discount from 300,000 THB. About 24,000 THB a night, or 3,000 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A renovated five-bedroom villa in Laguna Park, among parks and golf courses, a 10-minute walk from Bang Tao Beach with a free shuttle bus. Enough bedrooms for most of the group to have their own.",
+   "description": "Entire home: 5 bedrooms, 6 beds, 5 baths, a private pool, a BBQ, outdoor dining and a washer. Sleeps 10. Hosted by Svetlana (1 year hosting).",
+   "nearby": "The host says: in the centre of Laguna Phuket, a 10-minute walk from Bang Tao Beach, with a free shuttle bus to the beach. In a straight line from the pin: Bangla Road 12 km, the airport 13 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation until 7 Jan 2027; cancel before check-in on 8 Jan for a partial refund.",
+    "A new host with no reviews yet."
+   ],
+   "vibe": [
+    "private pool",
+    "5 bedrooms",
+    "Laguna"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1528952959320085603?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1528952959320085603?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1528952959320085603?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1528952959320085603/original/d48d6e67-5642-4a83-88ad-1d073a45b12a.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Svetlana"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Choeng Thale · 5 bedrooms · 6 beds · 5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0011,
+   "lng": 98.3023,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00110,98.30230",
+   "airbnbId": "1528952959320085603"
+  },
+  {
+   "id": "lux-laguna-park-5br-rooftop-pool",
+   "name": "Lux Laguna Park 5BR, Rooftop Pool",
+   "area": "bang-tao",
+   "tier": "luxury",
+   "priceText": "281,261 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 28,130 THB a night, or 3,520 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A recently renovated five-bedroom villa in Laguna Park with a rooftop pool, near Bang Tao Beach and Boat Avenue. Professionally managed and a guest favourite; the most expensive on this list.",
+   "description": "Entire home: 5 bedrooms, 6 beds, 5 baths, a rooftop pool, a hot tub, a garden patio, a BBQ, a workspace and a washer. Sleeps 10. Run by Perfect Phuket, Superhost for 10 years.",
+   "nearby": "The host says: near Bang Tao Beach, Boat Avenue, restaurants, golf courses and shops. In a straight line from the pin: Bangla Road 12 km, the airport 13 km, Baba Beach Club Natai (Circoloco) 28 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by noon.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Electricity is extra (by the meter, at the government rate). Cleaning during the stay costs 2,500 THB; ask 2 days ahead."
+   ],
+   "vibe": [
+    "rooftop pool",
+    "5 bedrooms",
+    "Laguna"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb Guest favourite 5.0 (11 reviews) · Superhost",
+   "website": "https://www.airbnb.com/rooms/1582239088245163061?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1582239088245163061?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1582239088245163061?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1582239088245163061/original/8736a38e-bc45-4c16-97b2-74fb87265421.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Perfect Phuket"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Choeng Thale · ★5.0 · 5 bedrooms · 6 beds · 5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 8.0005,
+   "lng": 98.302,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "8.00050,98.30200",
+   "airbnbId": "1582239088245163061"
+  },
+  {
+   "id": "diamond-villa-278",
+   "name": "Diamond Villa 278",
+   "area": "surin",
+   "tier": "luxury",
+   "priceText": "250,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 25,000 THB a night, or 3,130 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A five-bedroom pool villa in Choeng Thale, between Bang Tao and Surin, for up to 10. The listing has almost no description, so ask the host for details before booking.",
+   "description": "Entire home: 5 bedrooms, 5 beds, 5 baths, a private pool, a workspace and a washer. The host has 8 years on Airbnb.",
+   "nearby": "Choeng Thale, between Bang Tao and Surin beaches. In a straight line from the pin: Bangla Road 10 km, the airport 15 km, Baba Beach Club Natai (Circoloco) 30 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Only 8 photos and no reviews yet."
+   ],
+   "vibe": [
+    "private pool",
+    "5 bedrooms"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1591208483216514134?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1591208483216514134?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1591208483216514134?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1591208483216514134/original/9410f0ae-7c43-4bc7-be17-fd5522c7c20f.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© host"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Home in Choeng Thale · 5 bedrooms · 5 beds · 5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (16 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.979,
+   "lng": 98.28979,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.97900,98.28979",
+   "airbnbId": "1591208483216514134"
+  },
+  {
+   "id": "chill-beach-bangla-patong",
+   "name": "Chill Beach Bangla Pool House",
+   "area": "patong",
+   "tier": "mid-range",
+   "priceText": "223,230 THB for 10 nights (8-18 Jan, 8 adults): 219,230 THB (8% off 238,000) plus 4,000 THB taxes and charges. About 22,320 THB a night, or 2,790 THB per person a night. Checked 16 Oct 2026.",
+   "whyStay": "A three-bedroom holiday home with its own pool, 500 m from Bangla Road and under 1 km from Patong Beach. The way to sleep right next to Patong's nightlife.",
+   "description": "Entire holiday home, 144 m²: 3 bedrooms (two with 2 large double beds, one with 1), 2 bathrooms, a private pool, a kitchen, a washer, a balcony and a terrace, free wifi and free private parking. Sleeps 8 adults. Address: 169/50 Sansabai Soi 1, Patong.",
+   "nearby": "Bangla Road about 500 m, Patong Beach under 1 km, the airport about 33 km (Booking.com). Baba Beach Club Natai (Circoloco) is 40 km away in a straight line.",
+   "tips": [
+    "Free cancellation before 27 Nov 2026, and nothing to pay until 25 Nov 2026.",
+    "Only 2 bathrooms for 8 people.",
+    "Booking.com guests rate the location 9.4."
+   ],
+   "vibe": [
+    "private pool",
+    "nightlife",
+    "walk to the beach"
+   ],
+   "beachfront": false,
+   "ratingText": "Booking.com 9.8 (4 reviews)",
+   "website": "https://www.booking.com/hotel/th/chill-beach-bangla-comfy-bed-and-pool-with-3-bedrooms.html?checkin=2027-01-08&checkout=2027-01-18&group_adults=8&group_children=0&no_rooms=1",
+   "websiteLabel": "Booking.com",
+   "links": [
+    {
+     "label": "Booking.com listing (8 adults, 8-18 Jan)",
+     "url": "https://www.booking.com/hotel/th/chill-beach-bangla-comfy-bed-and-pool-with-3-bedrooms.html?checkin=2027-01-08&checkout=2027-01-18&group_adults=8&group_children=0&no_rooms=1"
+    }
+   ],
+   "sources": [
+    "https://www.booking.com/hotel/th/chill-beach-bangla-comfy-bed-and-pool-with-3-bedrooms.html?checkin=2027-01-08&checkout=2027-01-18&group_adults=8&group_children=0&no_rooms=1"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/784782256.jpg?k=1e227c793d5ddbb332c554d0be1a9809d55581852b3711283f1f378a642c3b89&o=",
+     "source": "Booking.com listing",
+     "license": "Booking.com listing photo",
+     "credit": "© Chill Beach Bangla"
+    }
+   ],
+   "verification": "Listing live on Booking.com. Price for 8 adults, 8-18 Jan 2027 read from the availability table (16 Oct 2026). Coords: the Booking.com map pin.",
+   "lat": 7.8934,
+   "lng": 98.30131,
+   "coordSource": "Booking.com map pin",
+   "coordConfidence": "medium",
+   "gmapsQuery": "7.8934,98.30131"
+  }
+ ]
+}

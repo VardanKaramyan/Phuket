@@ -1,0 +1,913 @@
+{
+ "asOf": "2026-10-15",
+ "verdict": "The best rate we could check is at Mamy Exchange in Koh Kaew, on route 402 between the airport and Phuket Town. On 15 Oct 2026 it paid 33.35 THB per USD 100 note and 37.35 THB per euro, about 0.5% under the mid-market rate. In Patong, use Lion in Jungceylon. In Old Town, use the SuperRich partner at Suriyadej Circle (closed Sundays). Bank booths paid 0.4-1.2% less. ATMs charge 250 THB (Visa) or 350 THB (Mastercard) per withdrawal, so bring clean USD or EUR notes.",
+ "midMarket": [
+  {
+   "currency": "USD",
+   "thbPerUnit": 33.5,
+   "date": "2026-10-15",
+   "source": "Yahoo Finance USD/THB (THB=X), about 15:00 Bangkok time (33.49 at 17:23). ECB reference rate on 14 Oct 2026: 33.575"
+  },
+  {
+   "currency": "EUR",
+   "thbPerUnit": 37.55,
+   "date": "2026-10-15",
+   "source": "Yahoo Finance EUR/THB (EURTHB=X), about 15:00 Bangkok time (37.50 at 17:19). ECB reference rate on 14 Oct 2026: 37.587"
+  }
+ ],
+ "brands": [
+  {
+   "id": "mamy-exchange",
+   "name": "Mamy Exchange",
+   "rank": 1,
+   "rating": "best",
+   "kind": "money-changer",
+   "summary": "The best rate we could check in Phuket. On 15 Oct 2026 Mamy paid 33.35 THB for USD 50-100 notes and 37.35 THB for a euro, about 0.5% under the mid-market rate. It has one shop, in Koh Kaew on route 402 (airport to Phuket Town). Live rates are on its website.",
+   "branding": {
+    "logoText": "Mamy Exchange",
+    "primaryColor": "#178C43",
+    "secondaryColor": "#FFFFFF",
+    "howToRecognize": "A green 'Mamy Exchange' sign with white letters over a roadside shop on Thepkrasattri Rd (route 402) in Koh Kaew."
+   },
+   "branches": [
+    {
+     "name": "Mamy Exchange Phuket (Koh Kaew)",
+     "area": "koh-kaew",
+     "address": "9/10 Moo 4, Thepkrasattri Rd (route 402), Koh Kaew, Mueang Phuket 83000",
+     "lat": 7.964143,
+     "lng": 98.377564,
+     "coordSource": "official Google Maps link on mamyexchange.com (!3d7.9641433!4d98.3775637) + Google place data via Wanderlog (1 m) + nominatim reverse: Thepkrasattri Rd",
+     "coordConfidence": "high",
+     "gmapsQuery": "Mamy Exchange Phuket, Ko Kaeo, Phuket",
+     "hoursText": "Mon-Fri 08:00-17:00, Sat-Sun 09:00-16:30 (Google listing; call to confirm)",
+     "notes": "On route 402, the road from the airport to Phuket Town and Patong. Ask your taxi to stop here. About 15-20 min from Old Town and about 30 min from Patong. Phone 088-193-1188 or 076-364-111.",
+     "placeId": "ChIJxTr15XQxUDAR9uKj5URPQP8"
+    }
+   ],
+   "rateCheck": {
+    "url": "https://mamyexchange.com/",
+    "note": "Live rate board with the time of the last update. Use the 'Buying' column: this is what you get for your USD or EUR. Public API: mamyexchange.com/wp-json/currencyxrates/v1/rates/USD"
+   },
+   "sampleRates": [
+    {
+     "currency": "USD",
+     "buyTHB": 33.35,
+     "date": "2026-10-15",
+     "source": "mamyexchange.com rate API, 15:17 and again 17:37 Bangkok time, USD 50-100 notes (USD 5-20: 33.05, USD 1-2: 32.55)"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 37.35,
+     "date": "2026-10-15",
+     "source": "mamyexchange.com rate API, 15:17 and again 17:37 Bangkok time, EUR notes (all sizes 37.35)"
+    }
+   ],
+   "pros": [
+    "Best published rate in Phuket on 15 Oct 2026: USD 33.35, EUR 37.35",
+    "Only about 0.1 THB per USD below SuperRich in Bangkok on the same day (33.43-33.45)",
+    "Live rates online, so you can check before you go",
+    "4.9/5 from about 330 Google reviews",
+    "Sells USD at 33.50, so changing leftover baht back costs little"
+   ],
+   "cons": [
+    "Not near the beaches: about 30 min by car from Patong",
+    "Closes early: 17:00 on weekdays and 16:30 at weekends (Google listing)",
+    "Small notes get less: only 32.55 for USD 1-2 notes"
+   ],
+   "links": [
+    {
+     "label": "Live rates",
+     "url": "https://mamyexchange.com/"
+    },
+    {
+     "label": "Google Maps (official link)",
+     "url": "https://goo.gl/maps/7gjPeLLjDiKuCwrcA"
+    },
+    {
+     "label": "LINE",
+     "url": "https://lin.ee/aRrZQ0i"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/mamyexchange"
+    },
+    {
+     "label": "Google reviews summary (Wanderlog)",
+     "url": "https://wanderlog.com/place/details/7110855/mamy-exchange-phuketbest-rates-for-currency-exchange"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://mamyexchange.com/wp-content/uploads/2022/09/mamy-official-logo.webp",
+     "source": "mamyexchange.com (official logo)",
+     "license": "Logo of Mamy Exchange Phuket Co., Ltd. (official website)",
+     "credit": "Mamy Exchange"
+    }
+   ],
+   "website": "https://mamyexchange.com/",
+   "verification": "Re-checked 15 Oct 2026: same rates in the API at 15:17 and 17:37. Address from Mamy's contact page. The official map link and Google data (via Wanderlog) agree within 1 m; OSM puts it on Thepkrasattri Rd. Google: 4.9 from 330 reviews, operational. Hours are from Google (via Exiap), not from Mamy.",
+   "sources": [
+    "https://mamyexchange.com/",
+    "https://mamyexchange.com/contact/",
+    "https://mamyexchange.com/news-promotion/",
+    "https://mamyexchange.com/wp-json/currencyxrates/v1/rates/USD",
+    "https://goo.gl/maps/7gjPeLLjDiKuCwrcA",
+    "https://www.exiap.com/guides/currency-exchanges-best-in-phuket",
+    "https://wanderlog.com/place/details/7110855/mamy-exchange-phuketbest-rates-for-currency-exchange"
+   ]
+  },
+  {
+   "id": "lion-currency-exchange",
+   "name": "Lion Currency Exchange",
+   "rank": 2,
+   "rating": "great",
+   "kind": "money-changer",
+   "summary": "The best choice in Patong by reviews. Lion has a booth on the Jungceylon ground floor (shop GC4118, by the Big C entrance), open daily 09:00-21:00, 2 more booths in Jungceylon and a flagship on the 4th floor of Central Phuket Festival. It does not publish rates, so check the board.",
+   "branding": {
+    "logoText": "LION Currency Exchange",
+    "howToRecognize": "A white marble counter in a navy frame with a yellow lion-head logo, blue 'LION' letters and a white lit 'CURRENCY EXCHANGE' sign above. Ground floor of Jungceylon, Botanica zone (Big C side).",
+    "primaryColor": "#1C2566",
+    "secondaryColor": "#FFFFFF",
+    "accentColor": "#E2DC2A"
+   },
+   "branches": [
+    {
+     "name": "Lion Currency Exchange Patong (Jungceylon)",
+     "area": "patong",
+     "address": "177 Jungceylon Shopping Center, G floor, shop GC4118, Big C entrance, Patong, Kathu 83150",
+     "lat": 7.890028,
+     "lng": 98.299421,
+     "coordSource": "Google place data via Wanderlog (Lion Currency Exchange Patong) + osm Big C Jungceylon node 800423670 (115 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Lion Currency Exchange Patong, Jungceylon, Phuket",
+     "hoursText": "Daily 09:00-21:00 (Google listing)",
+     "notes": "Phone +66 76 366 988. Lion has 2 more booths inside Jungceylon.",
+     "placeId": "ChIJzTKOL1I7UDAR4QVzq0JuDvw"
+    },
+    {
+     "name": "Lion Currency Exchange (Central Phuket Festival flagship)",
+     "area": "phuket-town",
+     "address": "Central Phuket Festival, 4th floor, 74-75 Vichitsongkram Rd, Wichit, Mueang Phuket 83000",
+     "lat": 7.891691,
+     "lng": 98.367244,
+     "coordSource": "Google Maps pin for Central Phuket Festival (7.8916913, 98.3672444) + osm mall way 152773784 (64 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Lion Currency Exchange, Central Phuket Festival",
+     "notes": "Opened 20 Sep 2025. Hours are not published; it follows the mall's hours. Central Phuket has expansion works until 2028, so if the shop has moved, ask the information desk.",
+     "placeId": "ChIJA-YTZMExUDARkKq0I9qr5nM"
+    }
+   ],
+   "rateCheck": {
+    "note": "Lion does not publish rates online. Call +66 76 366 988, or use Mamy's live board as a guide. A fair rate is within about 0.1-0.2 THB of Mamy's rate."
+   },
+   "pros": [
+    "Google reviews from 2024-2025 say 'best money exchange rate in Patong' and 'the best rate that we could find in Phuket'",
+    "A Tripadvisor reply from 15 Mar 2026 says Lion near Jungceylon still has some of the best rates (for GBP)",
+    "Inside Jungceylon and open every day from 09:00 to 21:00",
+    "4.7/5 from about 106 Google reviews; 29 currencies",
+    "Linked to Mamy: Mamy's website quotes Lion's CEO (Peerasilp K.)"
+   ],
+   "cons": [
+    "No online rate board",
+    "There are 3 booths in Jungceylon; the mapped one is by the Big C entrance",
+    "One review from Oct 2025 complained about rude staff"
+   ],
+   "links": [
+    {
+     "label": "Phuket News: Central Festival flagship (Sept 2025)",
+     "url": "https://www.thephuketnews.com/lion-currency-exchange-opens-flagship-branch-97688.php"
+    },
+    {
+     "label": "Facebook (Lion Patong)",
+     "url": "https://www.facebook.com/lionexchangepatong"
+    },
+    {
+     "label": "Google reviews (Wanderlog)",
+     "url": "https://wanderlog.com/place/details/10284826/lion-currency-exchange-patong"
+    },
+    {
+     "label": "Tripadvisor: Best money exchanger rates in Patong",
+     "url": "https://www.tripadvisor.com/ShowTopic-g297930-i9925-k15271316-Best_money_exchanger_rates_in_Patong-Patong_Kathu_Phuket.html"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Jungceylon_Shopping_Center.jpg/1280px-Jungceylon_Shopping_Center.jpg",
+     "source": "Wikimedia Commons: File:Jungceylon Shopping Center.jpg (the mall where the booth is)",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Central_Phuket_shopping_mall.jpg/1280px-Central_Phuket_shopping_mall.jpg",
+     "source": "Wikimedia Commons: File:Central Phuket shopping mall.jpg (flagship branch mall)",
+     "license": "CC0",
+     "credit": "Deepak-nsk"
+    }
+   ],
+   "verification": "Phuket News (22 Sep 2025, via search snippets): flagship opened 20 Sep 2025, 3 Jungceylon booths, 29 currencies, owner Currency Asia Co Ltd (Mamee Asia group), CEO Peerasilp Kritthiammek; Mamy's site quotes the same CEO. Jungceylon pin: Google listing via Wanderlog (operational). Hours, phone: Google via Exiap. No published rates.",
+   "sources": [
+    "https://www.thephuketnews.com/lion-currency-exchange-opens-flagship-branch-97688.php",
+    "https://wanderlog.com/place/details/10284826/lion-currency-exchange-patong",
+    "https://www.exiap.com/guides/currency-exchanges-best-in-phuket",
+    "https://wise.com/gb/currency-exchange/kathu",
+    "https://www.tripadvisor.com/ShowTopic-g297930-i9925-k15271316-Best_money_exchanger_rates_in_Patong-Patong_Kathu_Phuket.html",
+    "https://mamyexchange.com/",
+    "https://en.prnasia.com/releases/apac/central-phuket-unveils-us-836-million-expansion-to-drive-phuket-s-transformation-into-a-global-luxury-living-and-investment-hub-523583.shtml"
+   ],
+   "website": "https://www.facebook.com/lionexchangepatong"
+  },
+  {
+   "id": "superrich-1965-phuket",
+   "name": "SuperRich 1965 Partner (Phuket Old Town)",
+   "rank": 3,
+   "rating": "great",
+   "kind": "money-changer",
+   "summary": "The only official SuperRich in Phuket. It is a SuperRich 1965 (orange brand) partner shop at the fountain roundabout (Suriyadej Circle) in Old Town, open Mon-Sat 10:00-20:00 and closed on Sunday. Its Phuket rates are not online. The Pattaya partner paid 0.15 THB less than SuperRich Bangkok on 15 Oct 2026.",
+   "branding": {
+    "logoText": "SuperRich (SuperRich 1965 Partner)",
+    "primaryColor": "#F26522",
+    "secondaryColor": "#FFFFFF",
+    "howToRecognize": "SuperRich 1965 is the orange SuperRich brand. The shop is at the Suriyadej fountain roundabout, next to the Downtown (central) market, at the start of Ratsada Rd. On Google Maps it is called 'SuperRich Exchange @ Phuket, Downtown Market Fountain Roundabout'. The official branch photo is in the image links."
+   },
+   "branches": [
+    {
+     "name": "SuperRich Exchange @ Phuket, Suriyadej Circle (Partner)",
+     "area": "phuket-town",
+     "address": "Room No. 4, Ratsada Rd, Suriyadej fountain roundabout (Downtown Market), Talat Nuea, Mueang Phuket 83000",
+     "lat": 7.88305,
+     "lng": 98.38702,
+     "coordSource": "official superrich1965.com Google embed (lat 7.88305; lng corrected for the embed's fixed west shift) + osm Suriyadet fountain node 702232496 (33 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "SuperRich Exchange @ Phuket, Downtown Market Fountain Roundabout",
+     "hoursText": "Mon-Sat 10:00-20:00, closed Sunday",
+     "notes": "Phone 093-399-8949. Closed on Sun 10 Jan and Sun 17 Jan 2027. The shop is on the fountain roundabout.",
+     "placeId": "ChIJbwd7ivYxUDARFMvNpjLGLG0"
+    }
+   ],
+   "rateCheck": {
+    "url": "https://www.superrich1965.com/en/exchange-rate",
+    "note": "This page shows Bangkok and Pattaya branches only. The Phuket partner is not listed, so call 093-399-8949 for today's rate."
+   },
+   "sampleRates": [
+    {
+     "currency": "USD",
+     "buyTHB": 33.43,
+     "date": "2026-10-15",
+     "source": "SuperRich 1965 Silom HQ, Bangkok (benchmark, not Phuket), USD 100-50 notes, update 17:12"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 37.45,
+     "date": "2026-10-15",
+     "source": "SuperRich 1965 Silom HQ, Bangkok (benchmark, not Phuket), EUR 500-100, update 17:12"
+    },
+    {
+     "currency": "USD",
+     "buyTHB": 33.28,
+     "date": "2026-10-15",
+     "source": "SuperRich 1965 partner Terminal 21 Pattaya (partner-branch benchmark), USD 100-50, update 17:12"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 37.3,
+     "date": "2026-10-15",
+     "source": "SuperRich 1965 partner Terminal 21 Pattaya (partner-branch benchmark), EUR 500-100, update 17:12"
+    }
+   ],
+   "pros": [
+    "Official partner on superrich1965.com (added in 2026)",
+    "Central location in Old Town, open until 20:00",
+    "Easy to combine with a walk in Old Town"
+   ],
+   "cons": [
+    "Closed on Sunday",
+    "Phuket rates are not online. On 15 Oct 2026 the Pattaya partner paid 33.28 per USD and SuperRich Bangkok paid 33.43",
+    "The green 'SuperRich Thailand' has no Phuket branch",
+    "The Google pin 'Superrich Money Exchange' on Wirat Hong Yok Rd (registered as 'Sunrich Money Exchange') and the old shop at 52 Chao Fa Rd are not on SuperRich's official list",
+    "The sign in the photo says open daily; the official branch page (Sep 2026) says closed on Sundays."
+   ],
+   "links": [
+    {
+     "label": "Official SuperRich 1965 branch list",
+     "url": "https://www.superrich1965.com/en/branch"
+    },
+    {
+     "label": "SuperRich 1965 rates (Bangkok)",
+     "url": "https://www.superrich1965.com/en/exchange-rate"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.superrich1965.com/spr-upload-public/branches/phuket-suriyadej-circle-superrich-partner-gmap.webp",
+     "source": "superrich1965.com official branch image (Phuket, Suriyadej Circle)",
+     "license": "Official SuperRich 1965 website image",
+     "credit": "SuperRich Currency Exchange (1965) Co., Ltd."
+    }
+   ],
+   "website": "https://www.superrich1965.com/",
+   "verification": "Official branch record (id 105, updated 7 Sep 2026): address, hours, phone. The Aug 2026 notice was a one-day closure (29 Aug). The map embed gives lat 7.88305; its centre is shifted west by a fixed amount, so the shop is at about 98.3870, 33 m from the OSM fountain. No other official Phuket branch.",
+   "sources": [
+    "https://www.superrich1965.com/en/branch",
+    "https://www.superrich1965.com/spr/front/branches/105",
+    "https://www.superrich1965.com/en/news/phuket-temporary-closure-29-aug-2026",
+    "https://www.superrich1965.com/en/exchange-rate",
+    "https://api.superrichthailand.com/api/v1/branch-client/options",
+    "https://www.openstreetmap.org/node/702232496",
+    "https://www.openstreetmap.org/node/5002994926",
+    "https://data.creden.co/company/general/0833551002382"
+   ]
+  },
+  {
+   "id": "nc-plus",
+   "name": "NC Plus (Thailand)",
+   "rank": 4,
+   "rating": "ok",
+   "kind": "money-changer",
+   "summary": "A small exchange office in Phuket Town on Thilok Uthit 2 Rd, in business since 2005. Expat forums have recommended it, and its Google rating is about 4.8. It is open Mon-Sat in office hours and closed on Sunday. It has no online rates, so call 076-355-393 before you go.",
+   "branding": {
+    "logoText": "NC PLUS",
+    "howToRecognize": "A small office with an 'NC PLUS' sign on Thilok Uthit 2 Rd in central Phuket Town, east of the Old Town streets. OSM lists it as 'NC'."
+   },
+   "branches": [
+    {
+     "name": "NC PLUS (Thailand) Co., Ltd.",
+     "area": "phuket-town",
+     "address": "46 Thilok Uthit 2 Rd, Talat Yai, Mueang Phuket 83000",
+     "lat": 7.87892,
+     "lng": 98.395469,
+     "coordSource": "osm node 5520221423 (same phone 076 355 393, edited Dec 2025) + nominatim reverse: on Thilok Uthit 2 Rd",
+     "coordConfidence": "medium",
+     "gmapsQuery": "NC PLUS (Thailand) Co.,Ltd., Tilok Uthit 2 Road, Phuket",
+     "hoursText": "Mon-Sat about 09:00-17:00 (OSM says 08:30-18:00), closed Sunday",
+     "notes": "Phone 076-355-393. Call before you go, because the hours differ between sources.",
+     "placeId": "ChIJgUgHav8xUDARLbxKBNTy9OA"
+    }
+   ],
+   "rateCheck": {
+    "note": "No online rates. Call 076-355-393 and compare the rate with Mamy's live board."
+   },
+   "pros": [
+    "Phuket expats have recommended it for good rates (2022 forum post)",
+    "Google rating about 4.8",
+    "In Phuket Town, close to the Old Town"
+   ],
+   "cons": [
+    "No online rates; we could not check its 2026 rates",
+    "Office hours only and closed on Sunday",
+    "Far from the beaches"
+   ],
+   "links": [
+    {
+     "label": "OpenStreetMap",
+     "url": "https://www.openstreetmap.org/node/5520221423"
+    }
+   ],
+   "verification": "Thai company register (via Creden): NC Plus (Thailand) Co., Ltd., 46 Thilok Uthit 2 Rd, currency exchange, operating, 2025 accounts filed. Address, phone and hours from Google via Exiap. The OSM node with the same phone was edited in Dec 2025 and lies on Thilok Uthit 2 Rd. No rate data, so rated 'ok'.",
+   "sources": [
+    "https://data.creden.co/company/general/0835548004363",
+    "https://wise.com/gb/currency-exchange/rawai-beach",
+    "https://www.exiap.com/guides/currency-exchanges-best-in-phuket",
+    "https://ask.in.th/question/where-can-i-find-the-best-exchange-rate-for-thai-baht-to-us-dollars-before-heading-to-america",
+    "https://www.openstreetmap.org/node/5520221423"
+   ]
+  },
+  {
+   "id": "value-plus",
+   "name": "Value Plus Currency Exchange",
+   "rank": 5,
+   "rating": "ok",
+   "kind": "money-changer",
+   "summary": "A chain with booths in Patong, Laguna/Boat Avenue, Porto de Phuket, Central Festival, Floresta and Chalong. Its Phuket rates are not online, so we could not compare them. It is useful late at night: the Soi Sansabai booth in Patong is open until 04:00.",
+   "branding": {
+    "logoText": "Value Plus+ Currency Exchange",
+    "howToRecognize": "A navy sign with white 'Value+ Plus' letters and red trim, over a red 'CURRENCY EXCHANGE' counter.",
+    "primaryColor": "#1B2A5A",
+    "secondaryColor": "#FFFFFF",
+    "accentColor": "#E31B23"
+   },
+   "branches": [
+    {
+     "name": "Value Plus Currency Exchange (Patong)",
+     "area": "patong",
+     "address": "188/2 Phang Muang Sai Kor Rd (3rd road, OSM: Phra Metta Rd), diagonally opposite Patong Hospital, Patong, Kathu 83150",
+     "lat": 7.893812,
+     "lng": 98.301816,
+     "coordSource": "official Value Plus branch API location (= Google embed + fixed shift) + osm: 14 m from Phra Metta Rd, 90 m south of Patong Hospital",
+     "coordConfidence": "high",
+     "gmapsQuery": "Value Plus Currency Exchange (Patong Phuket)",
+     "hoursText": "10:00-19:00",
+     "notes": "Phone 076-540-505 or 095-427-9060.",
+     "placeId": "ChIJFZt-kqM6UDARuTNjebPcGGo"
+    },
+    {
+     "name": "Value Plus Currency Exchange (Soi Sansabai, Patong)",
+     "area": "patong",
+     "address": "171/14 Rat-U-Thit 200 Pi Rd (Soi Sansabai), Patong, Kathu 83150",
+     "lat": 7.89279,
+     "lng": 98.299473,
+     "coordSource": "official Value Plus branch API location + osm Soi San Sabai way (about 30 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "7.892790,98.299473",
+     "hoursText": "09:00-04:00",
+     "notes": "Open very late, next to Jungceylon. Phone 085-075-7777.",
+     "placeIdLocked": true
+    },
+    {
+     "name": "Value Plus Currency Exchange (Laguna / Boat Avenue)",
+     "area": "bang-tao",
+     "address": "46 Lagoon Rd (Boat Avenue area), Cherngtalay, Thalang 83110",
+     "lat": 7.994777,
+     "lng": 98.305652,
+     "coordSource": "official Value Plus branch API location + osm node 5251547724 'Value Plus' (4 m, edited Dec 2025)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Value Plus Currency Exchange (Laguna Phuket)",
+     "hoursText": "09:00-20:00",
+     "notes": "Phone 062-975-7688.",
+     "placeId": "ChIJbZ9Yztk5UDARPW_unL6SQb4"
+    },
+    {
+     "name": "Value Plus Currency Exchange (Porto de Phuket)",
+     "area": "bang-tao",
+     "address": "Porto de Phuket mall, 19/1-6 Ban Don-Cherngtalay Rd, Cherngtalay, Thalang 83110",
+     "lat": 7.991827,
+     "lng": 98.30531,
+     "coordSource": "osm Porto de Phuket shopping centre way 1028561010 + official Value Plus API location (113 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Value Plus Currency Exchange (Central Porto De), Cherngtalay, Phuket",
+     "hoursText": "09:00-21:30",
+     "notes": "Phone 085-075-7777.",
+     "placeIdLocked": true
+    },
+    {
+     "name": "Value Plus Currency Exchange (Central Phuket Festival)",
+     "area": "phuket-town",
+     "address": "Central Phuket Festival, 4th floor, banking zone, Wichit, Mueang Phuket 83000",
+     "lat": 7.891519,
+     "lng": 98.36793,
+     "coordSource": "official Value Plus branch API location + osm Central Phuket Festival way 152773784 (49 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Value Plus Currency Exchange (Central Phuket)",
+     "hoursText": "10:30-20:30",
+     "notes": "Phone 088-752-6144. There is also a booth at Central Phuket Floresta next door (hours not published). Central Phuket has expansion works until 2028, so booths may move.",
+     "placeId": "ChIJvR8_GcQxUDARUv5y7zfetIM"
+    },
+    {
+     "name": "Value Plus Currency Exchange (HomePro Chalong)",
+     "area": "chalong",
+     "address": "HomePro Chalong (Market Village building), 61/10 Moo 10, Chao Fa West Rd, Chalong, Mueang Phuket 83130",
+     "lat": 7.824758,
+     "lng": 98.338988,
+     "coordSource": "osm Home Pro building way 313946112 + osm 'Home Pro Village' node (25 m). The Value Plus API point is 230 m west, which looks like an uncorrected map centre",
+     "coordConfidence": "medium",
+     "gmapsQuery": "Value Plus Currency Exchange (Homepro Chalong), Phuket",
+     "notes": "Hours are not published. Phone 085-075-7777.",
+     "placeId": "ChIJo1CUpQ8vUDARuQmJbyBt57Y"
+    }
+   ],
+   "rateCheck": {
+    "url": "https://valueplusexchange.com/",
+    "note": "The website shows rates for Bangkok branches only. For Phuket, call the branch (Central Festival 088-752-6144) or message LINE @valueplus."
+   },
+   "sampleRates": [
+    {
+     "currency": "USD",
+     "buyTHB": 33.38,
+     "date": "2026-10-15",
+     "source": "Value Plus Thaniya (Bangkok) branch API, afternoon of 15 Oct 2026 (33.36 at 17:55), USD 100-50 notes. Phuket branches do not publish rates"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 37.35,
+     "date": "2026-10-15",
+     "source": "Value Plus Thaniya (Bangkok) branch API, EUR 500-100 notes (also 37.35 at 17:55)"
+    }
+   ],
+   "pros": [
+    "Many booths: Patong, Laguna/Boat Avenue, Porto de Phuket, Central Festival, Floresta and Chalong",
+    "Late hours in Patong: Soi Sansabai 09:00-04:00; hotel booths at Deevana Patong and Deevana Plaza 08:00-02:00"
+   ],
+   "cons": [
+    "Phuket rates are not online",
+    "Not the top choice: compare with Lion or Mamy before you change a big amount"
+   ],
+   "links": [
+    {
+     "label": "Value Plus website",
+     "url": "https://valueplusexchange.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://valueplusexchange.com/assets/img/logo.png",
+     "source": "valueplusexchange.com (official logo)",
+     "license": "Value Plus logo (official website)",
+     "credit": "Value Plus Exchange"
+    }
+   ],
+   "website": "https://valueplusexchange.com/",
+   "verification": "Official branch API, 15 Oct 2026: the 6 mapped booths plus Floresta, Deevana Patong, Deevana Plaza and Novotel are active; Karon, Rawai, Bangla and others are inactive. Hours and phones from the API. The API point is the Google embed centre plus a fixed shift; the Patong pin was 255 m off and is fixed. Phuket rate APIs return no data.",
+   "sources": [
+    "https://valueplusexchange.com/",
+    "https://cwr.valueplusexchange.com/api/branches",
+    "https://www.openstreetmap.org/node/5251547724",
+    "https://wise.com/gb/currency-exchange/phuket",
+    "https://www.tripadvisor.com/ShowTopic-g297930-i9925-k12861573-Best_Exchange_In_Patong-Patong_Kathu_Phuket.html"
+   ]
+  },
+  {
+   "id": "money-shop",
+   "name": "Money Shop Exchange",
+   "rank": 6,
+   "rating": "ok",
+   "kind": "money-changer",
+   "summary": "A small chain with offices in Kata, Karon, Rawai, Nai Harn, Chalong, Bang Tao, Nai Yang and Central Festival. Its Central Festival office posted USD 33.28 and EUR 37.30 on 14 Oct 2026: OK, but lower than Mamy. Several offices close on Sunday.",
+   "branding": {
+    "logoText": "Money Shop",
+    "primaryColor": "#FFAE00",
+    "secondaryColor": "#090E10",
+    "howToRecognize": "Small exchange offices with a 'Money Shop' sign. Yellow and black are the colors of its website. The website names two fake Telegram accounts that use its name."
+   },
+   "branches": [
+    {
+     "name": "Money Shop Exchange Kata",
+     "area": "kata",
+     "address": "64/5 Kata Rd, Karon, Mueang Phuket 83100",
+     "lat": 7.81947,
+     "lng": 98.300501,
+     "coordSource": "official Google Maps link on moneyshopphuket.com + unnamed osm exchange node 11395377369 (6 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Money Shop Exchange Kata, Phuket",
+     "hoursText": "Mon-Sat 10:00-19:00, closed Sunday",
+     "placeId": "ChIJV-MmMbolUDARWBkJrDnFWZs"
+    },
+    {
+     "name": "Money Shop Exchange Karon",
+     "area": "karon",
+     "address": "100 Karon Rd, Karon, Mueang Phuket 83100",
+     "lat": 7.829886,
+     "lng": 98.295213,
+     "coordSource": "official Google Maps link on moneyshopphuket.com (!3d7.8298855!4d98.2952125)",
+     "coordConfidence": "medium",
+     "gmapsQuery": "Exchange, 100 Karon Rd, Karon, Phuket",
+     "hoursText": "Mon-Sun 10:00-19:00 (website)",
+     "placeId": "ChIJw0EoZAAlUDARmp-Rwqi4JLw",
+     "placeIdLocked": true
+    },
+    {
+     "name": "Money Shop Rawai",
+     "area": "rawai",
+     "address": "57/62 Viset Rd, Rawai, Mueang Phuket 83130",
+     "lat": 7.770813,
+     "lng": 98.31935,
+     "coordSource": "official Google Maps link + osm node 11005281366 'Money shop' (3 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Money Shop Rawai, Phuket",
+     "hoursText": "Mon-Sun 10:00-19:00 (website). Google lists Mon-Fri 10:00-18:00, Sat 10:00-17:00, closed Sunday",
+     "notes": "The website and Google give different hours. Call or WhatsApp +66 96 695 9000 before you go.",
+     "placeId": "ChIJYQPBuz0pUDARVQYEM99JebI"
+    },
+    {
+     "name": "Money Shop Exchange Nai Harn",
+     "area": "nai-harn",
+     "address": "90/58 Moo 6, Rawai (in front of Ali's BBQ Nai Harn)",
+     "lat": 7.783255,
+     "lng": 98.317447,
+     "coordSource": "official Google Maps link + osm node 11736309277 'Money Shop' (4 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Money Shop Exchange Nai Harn, Phuket",
+     "hoursText": "Mon-Sat 10:00-19:00, closed Sunday",
+     "placeId": "ChIJfxYu_f8pUDARW9C51faHfBA"
+    },
+    {
+     "name": "Money Shop Chalong (Lotus's)",
+     "area": "chalong",
+     "address": "21/10 Chao Fa West Rd (at Lotus's Chalong), Chalong",
+     "lat": 7.839961,
+     "lng": 98.33387,
+     "coordSource": "official Google Maps link + osm Lotus's Chalong way 321326472 (44 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Money Shop Chalong Lotus, Phuket",
+     "hoursText": "Mon-Sat 10:00-19:00, closed Sunday",
+     "placeId": "ChIJfxpUPgkvUDAR0yq9LHlaIyc"
+    },
+    {
+     "name": "Money Shop Exchange Nai Yang",
+     "area": "nai-yang",
+     "address": "111/5 Sakhu, Thalang 83110 (Nai Yang, near the airport)",
+     "lat": 8.086658,
+     "lng": 98.30066,
+     "coordSource": "official Google Maps link on moneyshopphuket.com",
+     "coordConfidence": "medium",
+     "gmapsQuery": "Money Shop Exchange Nai Yang, Phuket",
+     "notes": "Near the airport. The labels on the website are mixed up, so call before you go.",
+     "hoursText": "Mon-Sat 10:00-19:00, closed Sunday (website)",
+     "placeId": "ChIJOSwsQVhHUDARjtJD915iFg0"
+    },
+    {
+     "name": "Money Shop Exchange (Central Phuket Festival)",
+     "area": "phuket-town",
+     "address": "Central Phuket Festival, 74-75 Vichitsongkram Rd, Wichit, Mueang Phuket 83000 (floor not published)",
+     "lat": 7.891691,
+     "lng": 98.367244,
+     "coordSource": "official moneyshopphuket.com link to the Central Phuket Festival pin + osm mall way 152773784 (64 m)",
+     "coordConfidence": "medium",
+     "gmapsQuery": "Money Shop Exchange Central, Wichit, Phuket",
+     "hoursText": "Mon-Sun 10:00-22:00 (website)",
+     "notes": "The office is inside the mall; the floor is not published. Its rates are on the website (Central Festival tab).",
+     "placeId": "ChIJFz-fz-IxUDARphiV2OFNfAU",
+     "placeIdLocked": true
+    }
+   ],
+   "rateCheck": {
+    "url": "https://moneyshopphuket.com/en/",
+    "note": "The Central Festival rate table was updated on 14 Oct 2026. The table for the beach offices was last updated in June 2026, so it is old. Ask for today's rate by WhatsApp: +66 96 695 9000."
+   },
+   "sampleRates": [
+    {
+     "currency": "USD",
+     "buyTHB": 33.28,
+     "date": "2026-10-14",
+     "source": "moneyshopphuket.com rate feed, Central Festival office (updated 14 Oct 2026 10:22)"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 37.3,
+     "date": "2026-10-14",
+     "source": "moneyshopphuket.com rate feed, Central Festival office (updated 14 Oct 2026 10:22)"
+    }
+   ],
+   "pros": [
+    "Offices in many areas: Kata, Karon, Rawai, Nai Harn, Chalong, Nai Yang, Central Festival, and Bang Tao (250 Bandon-Cherngtalay Rd, Mon-Sat; not mapped)",
+    "Accepts a passport or other valid photo ID (its website)",
+    "WhatsApp contact"
+   ],
+   "cons": [
+    "Pays less than Mamy (USD 33.28 vs 33.35 on 14-15 Oct 2026)",
+    "Several offices are closed on Sunday",
+    "Amounts under 8,000 THB get a different rate (website)",
+    "Focus on rubles and crypto; the online rates for the beach offices are old (June 2026)"
+   ],
+   "links": [
+    {
+     "label": "Money Shop website and branches",
+     "url": "https://moneyshopphuket.com/en/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://static.tildacdn.com/tild3864-6639-4534-b365-313534353334/__2023-09-08__095305.png",
+     "source": "moneyshopphuket.com og:image (official site)",
+     "license": "Official website image",
+     "credit": "Money Shop"
+    }
+   ],
+   "website": "https://moneyshopphuket.com/en/",
+   "verification": "Checked moneyshopphuket.com on 15 Oct 2026: all 6 short map links resolve to Google places that match the pins; OSM confirms Kata, Rawai, Nai Harn and Chalong. The site also lists Central Festival and Bang Tao (Bang Tao not mapped). Rate feeds: Central Festival updated 14 Oct 2026, beach offices June 2026.",
+   "sources": [
+    "https://moneyshopphuket.com/en/",
+    "https://sidkovd.ru/rates_adm/data/out_c.json",
+    "https://sidkovd.ru/rates_adm/data/out.json",
+    "https://www.exiap.com/guides/currency-exchanges-best-in-phuket",
+    "https://wise.com/gb/currency-exchange/rawai-beach"
+   ]
+  },
+  {
+   "id": "thai-bank-booths",
+   "name": "Thai bank exchange booths (Kasikorn, SCB, Bangkok Bank, Krungsri, Krungthai, ttb)",
+   "rank": 7,
+   "rating": "ok",
+   "kind": "bank",
+   "summary": "Bank booths (Kasikorn, SCB, Bangkok Bank, Krungsri, Krungthai, ttb) are in malls and on main streets. They are safe but pay less. On 15 Oct 2026 SCB paid 33.07 and ttb 33.22 THB for a USD 100 note, and 36.92-36.97 THB for a euro: 0.4-0.8% less than Mamy for USD and about 1% less for EUR.",
+   "branding": {
+    "logoText": "Kasikornbank / SCB / Bangkok Bank / Krungsri / Krungthai / ttb",
+    "howToRecognize": "Small booths with a bank logo and a rate board, often next to that bank's ATMs. Kasikorn is green, SCB is purple, Bangkok Bank is dark blue, Krungsri is yellow, Krungthai is light blue and ttb is blue. Read the 'Bank buys - Notes' column."
+   },
+   "branches": [],
+   "rateCheck": {
+    "url": "https://www.scb.co.th/en/personal-banking/foreign-exchange-rates.html",
+    "note": "A bank uses the same rate at all of its branches. Look at the 'Bank buys - Notes' rate for USD $50-$100. Other banks: ttbbank.com/en/rates/exchange-rates and kasikornbank.com rate page."
+   },
+   "sampleRates": [
+    {
+     "currency": "USD",
+     "buyTHB": 33.07,
+     "date": "2026-10-15",
+     "source": "SCB official rate feed, 15:00 round, USD $50-$100 notes"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 36.92,
+     "date": "2026-10-15",
+     "source": "SCB official rate feed, 15:00 round, EUR notes"
+    },
+    {
+     "currency": "USD",
+     "buyTHB": 33.22,
+     "date": "2026-10-15",
+     "source": "ttb official rate data, 14:40 round, USD $50-$100 notes"
+    },
+    {
+     "currency": "EUR",
+     "buyTHB": 36.97,
+     "date": "2026-10-15",
+     "source": "ttb official rate data, 14:40 round, EUR notes"
+    }
+   ],
+   "pros": [
+    "Safe and official, with a printed receipt",
+    "Booths in every mall and tourist street",
+    "Same rate at every branch of one bank"
+   ],
+   "cons": [
+    "0.4-0.8% less for USD and about 1-1.2% less for EUR than Mamy (15 Oct 2026)",
+    "Some booths keep short hours"
+   ],
+   "links": [
+    {
+     "label": "SCB exchange rates",
+     "url": "https://www.scb.co.th/en/personal-banking/foreign-exchange-rates.html"
+    },
+    {
+     "label": "ttb exchange rates",
+     "url": "https://www.ttbbank.com/en/rates/exchange-rates"
+    },
+    {
+     "label": "Kasikorn exchange rates",
+     "url": "https://www.kasikornbank.com/en/rate/pages/foreign-exchange.aspx"
+    }
+   ],
+   "verification": "SCB note rates: official JSON feed, 15:00 round, 15 Oct 2026. ttb: rate page data, 14:40 round. We could not reach the Kasikorn, Bangkok Bank, Krungthai and Krungsri rate pages. No single booths are mapped: the OSM booth points were last edited in 2021-2024 and are not confirmed for 2026.",
+   "sources": [
+    "https://www.scb.co.th/services/scb/exchangeRateService/latest.json",
+    "https://www.scb.co.th/en/personal-banking/foreign-exchange-rates.html",
+    "https://www.ttbbank.com/en/rates/exchange-rates"
+   ]
+  },
+  {
+   "id": "phuket-airport-counters",
+   "name": "Phuket Airport exchange counters (HKT)",
+   "rank": 8,
+   "rating": "avoid",
+   "kind": "airport",
+   "summary": "Exchange counters and bank ATMs are in the arrivals hall. Use the counters only for a small amount, for the taxi and your first meal. Local guides from 2026 say airport rates are 3-5% below town rates. Bank ATMs charge 250-350 THB for each withdrawal.",
+   "branding": {
+    "logoText": "Bank and exchange counters, arrivals hall",
+    "howToRecognize": "Counters with rate boards in the arrivals hall after customs."
+   },
+   "branches": [
+    {
+     "name": "Phuket International Airport, international terminal arrivals",
+     "area": "mai-khao",
+     "address": "Phuket International Airport (HKT), international terminal, arrivals hall",
+     "lat": 8.105882,
+     "lng": 98.305702,
+     "coordSource": "osm international terminal way 152933073 (18 m) + osm exchange node 4613249389 in the terminal (about 35 m)",
+     "coordConfidence": "high",
+     "gmapsQuery": "Phuket International Airport International Terminal",
+     "notes": "The domestic terminal next door also has exchange points (OSM). Change only about 2,000-3,000 THB here.",
+     "placeId": "ChIJCQ93jJhIUDAR0DDUaWtBtOU"
+    }
+   ],
+   "rateCheck": {
+    "note": "No online rates. Compare the board with the mid-market rate on your phone. On 15 Oct 2026 a good town rate was 33.35 when the mid-market rate was 33.50."
+   },
+   "pros": [
+    "Open when flights arrive",
+    "OK for a small first amount"
+   ],
+   "cons": [
+    "Worse rates than in town (2026 local guides estimate 3-5%)",
+    "Long queues after big flights"
+   ],
+   "links": [
+    {
+     "label": "Airport banking and exchange info",
+     "url": "https://airportbanking.com/phuket-airport-hkt/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/201701_International_Terminal_of_HKT.jpg/1280px-201701_International_Terminal_of_HKT.jpg",
+     "source": "Wikimedia Commons: File:201701 International Terminal of HKT.jpg",
+     "license": "CC BY-SA 4.0",
+     "credit": "MNXANL"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Phuket_international_airport_domestic_terminal_2019.jpg/1280px-Phuket_international_airport_domestic_terminal_2019.jpg",
+     "source": "Wikimedia Commons: File:Phuket international airport domestic terminal 2019.jpg",
+     "license": "CC BY-SA 4.0",
+     "credit": "Athikhun.suw"
+    }
+   ],
+   "verification": "An airport info site (2026) lists 4 counters in arrivals and 1 in departures; OSM also shows exchange points in the terminals. The 3-5% gap comes from a local tour operator guide (Jan 2026, updated May 2026) that also quotes an old ATM fee, so treat it as rough. Coordinates from OSM.",
+   "sources": [
+    "https://airportbanking.com/phuket-airport-hkt/",
+    "https://simbaseatrips.com/blog/phuket/everything-tourists-need-to-know-about-currency-exchange-in-phuket/",
+    "https://phukettravel101.com/money-exchange-guide"
+   ]
+  }
+ ],
+ "atm": {
+  "feeText": "In 2026 Thai bank ATMs charge foreign cards 250 THB per withdrawal with Visa or UnionPay and 350 THB with Mastercard (official fee tables: Kasikorn from 25 Aug 2026, SCB from 1 Sep 2026, Krungsri from 11 Mar 2026). Your home bank may add a fee. One withdrawal is usually 20,000-30,000 THB at most.",
+  "cheapest": [
+   "We found no cheaper bank ATM: Kasikorn, SCB and Krungsri all charge 250 THB (Visa) or 350 THB (Mastercard). A 2026 guide says Bangkok Bank and Krungthai also charge 250 THB.",
+   "Use a Visa card if you have one. It saves 100 THB on each withdrawal.",
+   "Take out the maximum each time (20,000-30,000 THB). A 250 THB fee is 1.25% of 20,000 THB but 5% of 5,000 THB.",
+   "Use ATMs at bank branches or inside malls (Jungceylon, Central Festival). If the machine keeps your card, the bank can help."
+  ],
+  "tips": [
+   "If the ATM offers to convert to your home currency, press 'Decline' or 'Without conversion'. Your own bank then converts at a better rate.",
+   "Check the fee on the screen before you press OK.",
+   "Wise and Revolut cards do not remove the Thai ATM fee of 250/350 THB.",
+   "Standalone ATMs in bars and small shops can have lower withdrawal limits.",
+   "Withdraw in daylight, cover your PIN, and keep your cash in two places."
+  ]
+ },
+ "cards": [
+  "Always pay in THB. If a card machine offers your home currency (DCC), say no. On 15 Oct 2026 SCB's card DCC rate was 31.85 THB per USD, while the mid-market rate was 33.50. That is about 5% worse.",
+  "Wise and Revolut cards convert close to the mid-market rate. Use them in malls, hotels, for Grab and for bigger bills.",
+  "Revolut: do big exchanges on weekdays. Standard plans add about 1% at weekends. Check the free monthly limit of your plan.",
+  "You still need cash for taxis, tuk-tuks, markets, beach bars and many small shops. Some places add a fee (often about 3%) for card payments.",
+  "Bring two cards from different banks, ideally one Visa and one Mastercard. Keep one card in the hotel safe.",
+  "Turn on foreign use in your banking app before you fly."
+ ],
+ "tips": [
+  "Best plan: bring clean USD 100 or EUR 100/200 notes and change them at Mamy, Lion or the SuperRich partner. Use ATMs only as a backup.",
+  "Big notes get better rates. At Mamy on 15 Oct 2026: USD 50-100 notes 33.35, USD 5-20 notes 33.05 and USD 1-2 notes 32.55 THB.",
+  "Notes must be clean: not torn, not written on and not stamped. Old USD 100s get less: on 15 Oct 2026 Ex24 paid 33.08 for old 100s and 33.18 for new ones. Very old or damaged notes can be refused.",
+  "Bring your original passport. Changers ask for it and write down the number. Count the baht at the counter and keep the receipt.",
+  "Test a rate quickly: for USD 100 notes a good rate is within about 0.5% of the mid-market rate. On 15 Oct 2026 Mamy paid 33.35 when the mid-market rate was 33.50. A booth that pays 33.00 or less is about 1.5% under the mid-market rate.",
+  "For USD 1,000 on 15 Oct 2026 you got 33,350 THB at Mamy, 33,220 THB at the ttb bank, 33,070 THB at the SCB bank, and only about 31,850 THB when you paid by card with DCC.",
+  "When you arrive, change only a little at the airport or use an ATM there. Mamy is on Thepkrasattri Rd (route 402), on the way from the airport to Phuket Town and Patong. Ask your driver to stop (open Mon-Fri until 17:00, at weekends until 16:30).",
+  "In Patong, use Lion in Jungceylon (09:00-21:00). Late at night, the Value Plus booth on Soi Sansabai is open until 04:00.",
+  "In Phuket Old Town, use the SuperRich partner at Suriyadej Circle (Mon-Sat 10:00-20:00) or NC Plus (Mon-Sat). Both are closed on Sunday, and 10 Jan and 17 Jan 2027 are Sundays.",
+  "In Kata/Karon, Rawai/Nai Harn and Bang Tao/Laguna, use Money Shop, Value Plus or a bank booth. Before you change a big amount, compare with Mamy's live rate on mamyexchange.com.",
+  "Natai and Khao Pilai (Phang Nga) have almost no money changers (OpenStreetMap shows none). Bring baht from Phuket.",
+  "Green SuperRich Thailand and Vasu Exchange have no Phuket branch: green SuperRich lists only Bangkok and nearby cities, and Vasu has one Bangkok office. The Google pin 'Superrich Money Exchange' on Wirat Hong Yok Rd is not SuperRich: the company there is registered as 'Sunrich Money Exchange'.",
+  "On 15 Oct 2026 SuperRich in Bangkok paid 33.43-33.45 for a USD 100 note. Mamy in Phuket paid only about 0.1 THB less.",
+  "If you leave the airport in Bangkok (Suvarnabhumi), SuperRich (green and orange) and Value Plus have booths on the B floor by the Airport Rail Link.",
+  "Ask for some 100 and 500 baht notes. Taxis and small shops often cannot change 1,000 baht notes.",
+  "Changing baht back at a good changer costs little (Mamy sold USD at 33.50 on 15 Oct 2026), but don't change much more than you need.",
+  "No Thai bank holiday falls on your dates (8-26 Jan 2027): the only bank holiday in January 2027 is 1 Jan. Some Phuket Town changers close on Sundays (10, 17 and 24 Jan)."
+ ],
+ "avoid": [
+  "Hotel reception exchange desks: rates are usually much worse.",
+  "Airport counters for big amounts: local guides estimate 3-5% worse than town.",
+  "Saying yes to your home currency (DCC) at an ATM or card machine: about 5% worse.",
+  "Many small ATM withdrawals: you pay 250-350 THB each time.",
+  "Bank booths when a top changer is near: on 15 Oct 2026 they paid 0.4-0.8% less for USD and about 1-1.2% less for EUR.",
+  "Street booths with a 'No commission' sign but a low rate. Compare the board with the mid-market rate first.",
+  "Strangers or Telegram accounts that offer exchange or cash delivery. Mamy says it has no Telegram account, and Money Shop names two fake Telegram accounts.",
+  "Changing small, old or damaged notes.",
+  "Shops that use the SuperRich name but are not on the official superrich1965.com list."
+ ],
+ "sources": [
+  "https://mamyexchange.com/",
+  "https://mamyexchange.com/wp-json/currencyxrates/v1/rates/USD",
+  "https://mamyexchange.com/contact/",
+  "https://www.superrich1965.com/en/branch",
+  "https://www.superrich1965.com/en/news/phuket-temporary-closure-29-aug-2026",
+  "https://www.superrich1965.com/en/exchange-rate",
+  "https://api.superrichthailand.com/api/v1/branch-client/options",
+  "https://www.superrichthailand.com/",
+  "https://www.vasuexchange.co.th/",
+  "https://www.thephuketnews.com/lion-currency-exchange-opens-flagship-branch-97688.php",
+  "https://wanderlog.com/place/details/10284826/lion-currency-exchange-patong",
+  "https://wanderlog.com/place/details/7110855/mamy-exchange-phuketbest-rates-for-currency-exchange",
+  "https://www.tripadvisor.com/ShowTopic-g297930-i9925-k15271316-Best_money_exchanger_rates_in_Patong-Patong_Kathu_Phuket.html",
+  "https://valueplusexchange.com/",
+  "https://cwr.valueplusexchange.com/api/branches",
+  "https://moneyshopphuket.com/en/",
+  "https://www.scb.co.th/en/personal-banking/foreign-exchange-rates.html",
+  "https://www.ttbbank.com/en/rates/exchange-rates",
+  "https://www.kasikornbank.com/th/rate/fee/feePDF/servicingfees-th-25082026.pdf",
+  "https://www.scb.co.th/content/media/personal-banking/rates-fees/others/card-and-electronics-fees/card-and-electronics-fees.pdf",
+  "https://www.krungsri.com/getmedia/081aac13-5648-4da3-898e-9085f2a7ec0d/fee-withdrawal-via-atm-for-international-card-11032026-th",
+  "https://finance.yahoo.com/quote/THB=X/",
+  "https://finance.yahoo.com/quote/EURTHB=X/",
+  "https://api.frankfurter.app/2026-10-14?from=EUR&to=THB,USD",
+  "https://www.exiap.com/guides/currency-exchanges-best-in-phuket",
+  "https://wise.com/gb/currency-exchange/phuket",
+  "https://exchange24.pro/",
+  "https://phuket-insider.com/en/faq/whats-the-exchange-rate-for-the-baht-in-phuket/",
+  "https://airportbanking.com/phuket-airport-hkt/",
+  "https://simbaseatrips.com/blog/phuket/everything-tourists-need-to-know-about-currency-exchange-in-phuket/",
+  "https://5starmarinephuket.com/2026/05/05/where-to-exchange-money-in-phuket-without-getting-burned-on-rates/",
+  "https://thaibudgetplanner.com/news/2026-08-04-thailand-atm-fees-guide",
+  "https://nashaplaneta.net/vopros-otvet/1854-est-li-na-phukete-obmennik-superrich_en",
+  "https://data.creden.co/company/general/0833551002382",
+  "https://www.openstreetmap.org/node/5520221423",
+  "https://www.openstreetmap.org/node/5251547724",
+  "https://www.openstreetmap.org/node/702232496",
+  "https://mamyexchange.com/news-promotion/",
+  "https://www.superrich1965.com/spr/front/branches/105",
+  "https://sidkovd.ru/rates_adm/data/out_c.json",
+  "https://sidkovd.ru/rates_adm/data/out.json",
+  "https://data.creden.co/company/general/0835548004363",
+  "https://www.thansettakij.com/general-news/667611",
+  "https://en.prnasia.com/releases/apac/central-phuket-unveils-us-836-million-expansion-to-drive-phuket-s-transformation-into-a-global-luxury-living-and-investment-hub-523583.shtml",
+  "https://www.facebook.com/lionexchangepatong",
+  "https://wise.com/gb/currency-exchange/kathu",
+  "https://wise.com/gb/currency-exchange/rawai-beach"
+ ]
+}

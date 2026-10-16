@@ -1,0 +1,878 @@
+{
+ "removed": {
+  "events": [
+   {
+    "id": "nikys-speakeasy-bang-tao",
+    "name": "Niky's Speakeasy & Nightclub",
+    "reason": "Not worth it for a techno traveler (cocktail bar with DJs, score 2), and 2026 operation cannot be confirmed: website fails (SSL error, then '404 page not found' on 15 Oct 2026), no Instagram or Facebook found, web search finds nothing, Tripadvisor has 1 review (Jun 2025). Only the Google listing (no closed flag) remains."
+   },
+   {
+    "id": "black-box-samui",
+    "name": "Black Box (Koh Samui)",
+    "reason": "No events listed since 17 Apr 2026 (HACKED, 'final session of the season'). Last season the SECTOR nights started on 6 Sep 2025, but on 15 Oct 2026 RA and phangan.events show nothing for 2026/27. It is a small DJ bar on Samui, far from Phuket, and the music was mostly melodic/organic house and drum and bass. Not worth a slot without confirmed dates. Venue (Google 9.52673, 100.0569) and Instagram @blackboxbar.samui still exist."
+   },
+   {
+    "id": "o-beach-ibiza-club-seen-samui-2027",
+    "name": "O Beach Ibiza x Club SEEN Samui Sundays",
+    "reason": "Not worth it for this trip: the same O Beach Ibiza pool-party show runs in Phuket at Barra Cuda, Patong (item o-beach-ibiza-barra-cuda-2027) on 8, 13 and 15 Jan. This one is on Koh Samui (a flight away), commercial (undergroundScore 1). Facts were correct: Megatix lists Sundays 27 Dec-14 Feb, 12 PM-11 PM, from 800 THB, 18+; the venue (CLUB SEEN, ex SEEN Beach Club, Chaweng) is open."
+   }
+  ],
+  "places": [
+   {
+    "id": "mai-khao-plane-spotting",
+    "name": "Plane Spotting at Mai Khao Beach",
+    "reason": "Duplicate: the same id is already in the must-see list (flagged by the original researcher), and this famous spot is not a hidden gem. Checked for the must-see copy: open beach, watching free, 20 THB motorbike from the car park (Phuket 101, 6 Aug 2026), no 2025-2026 ban found. Coords OK: OSM node 8.11179, 98.30185 plus two Commons geotags within 170 m, about 160 m west of the runway 09 threshold (8.11199, 98.3033). Fix there: in January planes usually land over the sea; the 'December to June' range is doubtful, because the wind usually turns westerly from about May."
+   },
+   {
+    "id": "rawai-seafood-market-2",
+    "name": "Rawai Seafood Market (buy and they cook)",
+    "reason": "Duplicate of 'rawai-seafood-market' in the must-see list. It is the same place (Google pin 7.77574, 98.32892; both items are within 20 m of it) with the same Phuket 101 source. Re-checked facts for the kept item: operating (Google 4.4 from 4,717 reviews); stalls 09:00-21:00 on Google, 11:00-21:00 on Phuket 101; the restaurants that cook are open daily (Mook Manee 11:30-22:00, Khun Pha 11:00-22:00). Phuket 101 says the tour buses have already left by 19:00. Quieter option: Salaloy Seafood, 350 m west, closed on Thursdays."
+   }
+  ],
+  "areas": [],
+  "hotels": [
+   {
+    "id": "see-sea-backpackers",
+    "name": "See Sea Backpackers",
+    "reason": "No booking channel works for Jan 2027. The hostel's own site (seeseabackpackers.com) shows a Wix 404. Its Hostelworld page (property 312348) and the Hostelworld API both return 404, so it has been delisted. Its Kayak page also returns 404, and it does not appear in Booking.com search, while the other Phangan hotels do. Google Hotels says 'Contact this property' and shows no rate for any date from Oct 2026 to Jan 2027. Its Google Maps listing is still up (newest reviews about 3 months old), so it may take walk-ins only, but it cannot be booked and is too risky to recommend. One more error: it is about 150 m from the Ban Tai shore by OSM paths, not the 900 m the item said."
+   }
+  ],
+  "exchanges": [
+   {
+    "id": "kasikorn-patong-beach-rd",
+    "name": "Kasikornbank exchange booth, Patong Beach Rd",
+    "reason": "Only source is an OSM point last edited in 2021. We could not confirm it operates in 2026."
+   },
+   {
+    "id": "scb-laguna",
+    "name": "SCB money exchange and ATM, Cherngtalay (Laguna)",
+    "reason": "Only source is an OSM point last edited in 2023. SCB's locator could not be queried, so it is not confirmed for 2026."
+   },
+   {
+    "id": "krungsri-rawai",
+    "name": "Krungsri exchange booth, Rawai",
+    "reason": "Only source is an OSM point last edited in 2024. It is not in 2026 directories and is not confirmed for 2026."
+   },
+   {
+    "id": "superrich-notice-image",
+    "name": "SuperRich Phuket notice banner (image candidate)",
+    "reason": "A 1333x750 banner for a past one-day closure notice (29 Aug 2026), not a useful photo of the shop."
+   },
+   {
+    "id": "superrich-notice-link",
+    "name": "Link: Phuket branch notice (28 Aug 2026)",
+    "reason": "A past one-day closure that would mislead as a traveler link. Kept in sources."
+   },
+   {
+    "id": "claim-pre-1996-usd-refused",
+    "name": "Tip claim: USD bills from before 1996 are often refused",
+    "reason": "No source found. Replaced with Ex24's published rates for old and new USD 100s."
+   },
+   {
+    "id": "claim-airport-four-counters",
+    "name": "Airport summary: about four counters in international arrivals and one in departures",
+    "reason": "The source is an aggregator that names no terminal or operator. Moved to the verification note as a weak source."
+   },
+   {
+    "id": "claim-value-plus-bangkok-rate-pro",
+    "name": "Value Plus pro: its Bangkok branch paid 33.38 per USD 100",
+    "reason": "Not a Phuket rate. Kept only as a labelled benchmark in sampleRates."
+   },
+   {
+    "id": "claim-sunrich-2024-report",
+    "name": "Tip: a 2024 report says the Wirat Hong Yok shop trades as SunRich (unchecked)",
+    "reason": "Replaced by the Thai company register record: Sunrich Money Exchange LP, active, Wirat Hong Yok Rd."
+   }
+  ],
+  "essentials": [
+   {
+    "id": "tdac-arrival-day-counting",
+    "name": "TDAC window '6, 7 or 8 Jan, counting the arrival day'",
+    "reason": "No official source says the arrival day counts. Official wording is 'within 3 days / 72 hours before arrival'. Replaced with advice that fits both readings."
+   },
+   {
+    "id": "lomprayah-0930-1400",
+    "name": "Lomprayah 'leaves about 09:30, about 1,400 baht, 7 hours'",
+    "reason": "The 2026 timetable shows a 09:30 departure at 1,400 baht, but its pickup point could not be confirmed. It was replaced by the verified 07:30 hotel / 10:00 airport pickups (1,600-1,800 baht, arrive about 16:30)."
+   },
+   {
+    "id": "bkk-airways-1900-3500",
+    "name": "Bangkok Airways Phuket-Samui 'about 1,900-3,500 baht'",
+    "reason": "Too low and out of date. Late-2026 fares were about 2,980-3,700 baht, and about 4,950 baht on busy December dates."
+   },
+   {
+    "id": "entry-fee-probably-not-apply",
+    "name": "Entry fee 'collection would start months later, probably will not apply to your trip'",
+    "reason": "Speculation based on a non-official 180-day lag. The government target is Q1 2027, which overlaps the trip window. Approval status is now stated instead."
+   },
+   {
+    "id": "checks-not-common",
+    "name": "'Checks are not common' (entry documents)",
+    "reason": "No source supports this. FCDO reports travellers refused entry for missing proof."
+   },
+   {
+    "id": "taxi-30-50-percent",
+    "name": "Street taxis 'often 30-50% more than the apps'",
+    "reason": "No source supports this. 2026 prices show about double (500-600 vs 250-350 baht)."
+   },
+   {
+    "id": "grab-night-surge",
+    "name": "Grab 'prices go up at night'",
+    "reason": "Sources only mention peak hours and heavy rain."
+   },
+   {
+    "id": "patong-oldtown-300",
+    "name": "Grab Patong-Old Town lower bound 300 baht",
+    "reason": "The only 2026 source gives 400-550 baht."
+   },
+   {
+    "id": "hotels-first-two-weeks-jan",
+    "name": "'Hotels cost the most in the first two weeks of January'",
+    "reason": "Not supported. Prices peak over Christmas/New Year."
+   },
+   {
+    "id": "vape-customs-police-check",
+    "name": "'Customs and police check' (vape item)",
+    "reason": "Not stated in the sources used. Replaced with the FCDO point about having to stay until the case ends."
+   },
+   {
+    "id": "uv-11-extreme",
+    "name": "UV index 'about 11 (extreme)'",
+    "reason": "Sources disagree (8 to 11). Replaced with a range."
+   },
+   {
+    "id": "seatran-cheap-route-link",
+    "name": "Seatran link in the cheapest Koh Phangan route",
+    "reason": "A Seatran Donsak-Phangan sailing could not be confirmed. Replaced with 12Go."
+   },
+   {
+    "id": "source-insidesamui",
+    "name": "Source insidesamui.com (Phuket to Koh Phangan prices)",
+    "reason": "Unreliable. Its prices conflict with each other and with the official Lomprayah timetable, and it lists flight options that could not be confirmed."
+   },
+   {
+    "id": "source-phukethospital-old-domain",
+    "name": "Link/source phukethospital.com/en/",
+    "reason": "Redirects. Replaced by the official bangkokhospital.com/en/phuket."
+   },
+   {
+    "id": "source-tat-drone-2026-02",
+    "name": "TAT drone URL /2026/02/",
+    "reason": "Redirects. Replaced by the canonical /2026/06/ article (dated 29 Jun 2026)."
+   },
+   {
+    "id": "research-note-immigration-missing",
+    "name": "Research note 'Immigration hotline could not be verified'",
+    "reason": "Now verified as 1178 (thailand.go.th, Australian Embassy) and added to emergency numbers. Note replaced by a fact-check note."
+   }
+  ],
+  "late-jan:events-phuket-late-jan": [],
+  "late-jan:phangan-full-moon-week": [],
+  "late-jan:departure-and-solo-days": [
+   {
+    "name": "Power bank rule '20,000-32,000 mAh at most 2' and 'only Thai Airways and AirAsia ban use', plus the 'HKT: power bank rules' link",
+    "reason": "These are AOT's 2025 rules. The CAAT rules reported in June 2026 are stricter: max 2 per person and no use on any flight."
+   },
+   {
+    "name": "Tourist Police app 'works without a Thai SIM'",
+    "reason": "Not in the TAT source or any other source found."
+   },
+   {
+    "name": "Grab 'calendar icon' and Bolt 'Schedule' button names",
+    "reason": "No source names these buttons. Replaced with the features each company names on its own pages."
+   },
+   {
+    "name": "Lub d Patong 'pub crawls'",
+    "reason": "The Hostelworld listing mentions only pool party nights and an activity team."
+   },
+   {
+    "id": "natural-restaurant-airport",
+    "name": "'garden with ponds'",
+    "reason": "Not in the official site or Phuket 101. The official text says 'tropical waterfall setting'."
+   },
+   {
+    "id": "atom-phuket-hotel",
+    "name": "'guests praise the clean bathrooms'",
+    "reason": "The Google review snippets praise clean rooms and friendly reception. Bathrooms are not mentioned."
+   },
+   {
+    "id": "luna-hostel-phuket-airport",
+    "name": "'Private rooms from about 2,200 THB with shared bathroom'",
+    "reason": "On 16 Oct 2026, Hostelworld offered no shared-bathroom private room for 23-26 Jan."
+   },
+   {
+    "name": "VAT refund 'or its drop box'",
+    "reason": "The official HKT page says the drop box is only for people with no luxury goods to declare. It does not pay cash, so the sentence was misleading."
+   }
+  ],
+  "apps": {
+   "rides-travel": [
+    {
+     "id": "line-man-rides",
+     "name": "LINE MAN (rides)",
+     "reason": "LINE MAN RIDE is certified, but its rides run in Bangkok. No sign of LINE MAN rides in Phuket, Koh Samui or Koh Phangan (Oct 2026)."
+    },
+    {
+     "id": "airasia-ride",
+     "name": "AirAsia MOVE (ride-hailing)",
+     "reason": "No sign that AirAsia's ride service still runs in Phuket. It is not on the Land Transport Department's June 2026 list of certified ride apps; the app is now 'AirAsia MOVE: Flights & Hotels'."
+    },
+    {
+     "id": "hello-phuket",
+     "name": "Hello Phuket (local taxi app)",
+     "reason": "Phuket's transport office listed it as legal in 2024, but it is not in the App Store or Google Play (Oct 2026) and not on the June 2026 list of certified ride apps."
+    },
+    {
+     "id": "tada",
+     "name": "TADA",
+     "reason": "Certified in Thailand and running in Bangkok, but no sign it works in Phuket or on the islands."
+    },
+    {
+     "id": "uber",
+     "name": "Uber",
+     "reason": "Uber left Thailand in 2018, when it sold its Southeast Asia business to Grab."
+    },
+    {
+     "id": "smart-bus-android",
+     "name": "Phuket Smart Bus (Android app by Arowana DevApp)",
+     "reason": "Its store page says 'Unofficial application'. The official website has the live bus map."
+    }
+   ],
+   "money-phone-safety": [
+    {
+     "id": "tourist-police-i-lert-u",
+     "name": "Tourist Police i lert u",
+     "reason": "Older app: iOS v1.0.0 from Mar 2022 (Royal Thai Police), Android by Anywhere 2 Go, last update Jun 2024. The main app is 'Thailand Tourist Police'. TAT (Jul 2026) still names i lert u as a backup, so the guide only needs to tell the two apart."
+    },
+    {
+     "id": "alipay",
+     "name": "Alipay / Alipay+ partner wallets",
+     "reason": "Not one app for this traveler. Alipay+ is a network, and the Wise app already pays Alipay+ QR codes. The Alipay to PromptPay link (Krungthai and Ant, live since 30 Oct 2025 per The Standard) is for Chinese visitors."
+    },
+    {
+     "id": "superrich-apps",
+     "name": "SuperRichTH / SuperRich (1965) apps",
+     "reason": "Real apps (SuperRichTH v4.0.36, Oct 2026; SuperRich (1965) v1.0.3, Sep 2025), but we could not confirm any SuperRich branch in Phuket in 2026. Mamy Exchange's live rates page is more useful in Phuket."
+    },
+    {
+     "id": "tmd-apps",
+     "name": "Thai Weather / TMD forecast apps (Thai Meteorological Department)",
+     "reason": "'Thai Weather' is official but rated 1.9 on Google Play; 'TMD forecast' (TMD พยากรณ์) is only in the Thai App Store. Use Windy plus the tmd.go.th English website."
+    },
+    {
+     "id": "touristdigipay",
+     "name": "TouristDigiPay (crypto to baht sandbox)",
+     "reason": "Thai SEC sandbox launched Aug 2025 for 18 months, for tourists who change crypto to baht. Not needed for this trip, and no 2026 status was found."
+    },
+    {
+     "id": "hospital-apps",
+     "name": "Hospital apps (BDMS My B+, Bumrungrad)",
+     "reason": "Exist, but not needed for a short trip. In an emergency call 1669 or go straight to the hospital."
+    },
+    {
+     "id": "dtac-app",
+     "name": "dtac app",
+     "reason": "dtac is part of True. The True app says it is 'All-in-One for True & dtac'. The dtac app still exists (v10.30.5, May 2026) but is not needed."
+    }
+   ],
+   "food-events-bookings": [
+    {
+     "id": "foodpanda",
+     "name": "foodpanda",
+     "reason": "Left Thailand: Delivery Hero announced on 23 Apr 2025 that foodpanda would stop its platform, food and grocery delivery in Thailand on 23 May 2025. Its Play text still lists Thailand, but do not install it for this trip. Source: https://www.khaosodenglish.com/news/business/2025/04/23/foodpanda-exits-thailands-food-delivery-market-after-years-of-losses/"
+    },
+    {
+     "id": "robinhood",
+     "name": "Robinhood (food delivery)",
+     "reason": "Still running (Play update 8 Oct 2026; SCBX agreed to sell it to a Yip In Tsoi-led group in Sep 2024), but its store text names only Bangkok and surrounding areas. Not useful in Phuket or on the islands. Source: https://www.scbx.com/en/news/scbx-robinhood-deal/"
+    },
+    {
+     "id": "shopeefood",
+     "name": "ShopeeFood",
+     "reason": "Lives inside the Shopee Thailand app, which on iPhone is in the Thai App Store only (id959841453 not found in the US, GB, DE, AU or SG stores). Only a vendor page (Sep 2026) says it works in Phuket; no official area list. Not needed next to Grab."
+    },
+    {
+     "id": "michelin-guide",
+     "name": "The MICHELIN Guide",
+     "reason": "Optional and not needed for this trip. Free app in all stores if you want fine dining: https://apps.apple.com/app/id1541129177 (Tablet Inc.) and https://play.google.com/store/apps/details?id=com.viamichelin.android.gm21 (Michelin), both checked 16 Oct 2026."
+    },
+    {
+     "id": "12go",
+     "name": "12Go",
+     "reason": "Transport tickets (ferries, buses, flights): covered in the Ferries, flights and airport section."
+    },
+    {
+     "id": "megatix-app",
+     "name": "Megatix app (stores)",
+     "reason": "The store apps called Megatix (iOS id1085614750 by Vertigrate Pty Ltd, Android com.megatix.android) describe themselves as ticket scanners for event managers. Buyers use megatix.in.th and the email PDF."
+    }
+   ]
+  }
+ },
+ "changes": {
+  "events": [
+   "oxa-jungle-party: coordinates moved about 3.7 km, from 9.68693,100.04643 (old 'OXA Beach Party' pin stored in the official short link) to 9.71735,100.03195 (current Google listing for the same place ID; matches the Megatix address 72/52 Moo 2 Ban Tai). gmapsQuery now 'OXA - Jungle Party'.",
+   "oxa-jungle-party: removed the false 'beach in front' (official site: jungle venue); floors now with their styles (Oasis tech house/indie dance, Canyon techno, Cabin hip-hop/commercial); price now 500 THB early bird / 800 THB at the gate; 'no ATM' is now the official Megatix rule; recurrence 'every Friday' changed to 'most Fridays' (Megatix also has Sat 31 Oct, Tue 29 Dec, Tue 19 Jan); line-up added; undergroundScore 3 -> 2 (VIP tables, bottle sets, speedboat packages); 2023 'OXA-BEACH' image swapped for a 2025 Canyon floor photo.",
+   "barra-cuda-beach-club: O Beach Ibiza is a day pool party, 12:00-23:59 (Megatix sessions + official page), not '21:00-02:00 pool nights' (that time came from phangan.events). Added prices 1,000/1,500 THB, 20+ rule, daily theme parties; status listed -> tickets-on-sale; distance to Bangla Road 500 m -> 400 m (official site); phangan.events link removed.",
+   "cafe-del-mar-phuket: added the in-trip shows Argy (Fri 8 Jan 2027, presale from 20 Oct) and Marco Carola + Nicolas Masseyeff (Wed 13 Jan 2027, 1,600 THB); dates, lineup, show links and 20+ tip added; status recurring -> tickets-on-sale; Club Room price now 'free or about 300 THB' (official site vs RA).",
+   "shelter-phuket: undergroundScore 4 -> 3 and 'most serious techno room in Phuket' removed; 2026 nights are mostly resident house/tech house/minimal DJs with guests like Caleb Jackson and Sam Collins. Name, genres and times (23:30-04:00) updated.",
+   "illuzion-phuket: removed unconfirmed claims from verification (MK and TSHA in Oct-Dec 2026; Blackchild, Skream and Fisher in Jan 2026). Guest nights are mostly Fri/Sat, not Thu-Sat. Added capacity (about 5,000), a big-name price example (1,200 THB) and the Instagram link.",
+   "boa-phuket: 'normal nights are often free' (no source found) -> 'some nights are free'; unverified review claim about hip-hop removed; Facebook link (could not be verified) replaced with Instagram @boaclubphuket (28K followers); phangan.events moved from links to sources.",
+   "courage-bar-phuket-town: price 300-400 -> 300-800 THB (RA: framework 800, Freestylers 600); description no longer calls it 'the home' of the scene and notes SUB's Apr/May 2026 parties were at other venues; image credit fixed (the flyer is FAKE PALM's FAKE ORBIT, not Framework); gmapsQuery now uses the Google name 'COURAGE КУРАЖ'.",
+   "enthusiast-place-open-doors: times now from the official site (Tuesday, doors 19:00, free, no booking); unconfirmed 'Summerset Lounge Sep 2026' claim dropped; travel time from Bang Tao 15 -> 10 minutes (OSRM 4-5 km); tip about the old Google Tuesday hours added.",
+   "lighthouse-party-phangan: exact 2026 price steps added (free before 21:00, 200 THB 21:00-22:00, 600 THB after); Friday high-season run documented (19 Dec 2025 - 3 Apr 2026).",
+   "retro-mountain-phangan: price range added from RA (350-800 THB; Family Piknik 2,000 THB); '2-3 parties a week in high season' softened to 'usually 1-3 party nights a week'.",
+   "sabaii-friday-beach-party-phangan: end-time range corrected (22:00-02:00 in 2026); OXA distance clarified as 5 km by road (OSRM 5.3 km).",
+   "All four Koh Phangan items: tip added that the island is far from Phuket (flight to Koh Samui + boat; plan at least 2 nights).",
+   "removed nikys-speakeasy-bang-tao (see removed[]).",
+   "Lead, not added: Armania Phuket (11 Bangla Road, Patong) is a house/tech house club with RA-listed Fri/Sat nights 22:00-04:00 in Oct 2026 and David Morales on 11 Dec 2026. Not verified further.",
+   "Removed black-box-samui: no events since 17 Apr 2026 and no 2026/27 season on RA or phangan.events (last season had started by 6 Sep 2025).",
+   "No coordinates changed: Google, OSM, plus codes and Wikidata put all 5 surviving points within 64 m of the given lat/lng.",
+   "chill-up-phangan: Monday Madness start corrected to about 20:00 or 21:00 (DJStrich lists 20:00 from Nov 2026, phangan.events 21:00) and bar hours 19:00-02:00 added. gmapsQuery set to the Google name 'Chill UP club'. Verification updated (nights listed into Jan 2027, Techno Rebellion dates).",
+   "eden-garden-phangan: gmapsQuery changed to 'Eden Garden, Haad Yuan, Koh Phangan' (Google now lists 'Eden Garden', not 'Eden Bar'). Description now says it is mostly house. Added house rules (no videos, drones or shoes), the Ban Tai 7-Eleven truck pickup, a 'deep house' genre and a second link.",
+   "unclave-phangan: pick changed to false. The likely Groovy Tunes dates are Fri 8 Jan (arrival day) and about 22 Jan (after the trip), nothing is posted for Jan 2027, and the music is minimal, not techno.",
+   "unclave-phangan: price corrected to 400-600 THB (regular) and 500-900 THB (30 Oct special). Removed the unverified 'cheaper than the door' tip and added a New Year date-shift caveat. Genres corrected ('techno' removed; rominimal, organic and progressive added). Verification fixed: KONTUR afters was 8 Feb 2026, not January. Capacity 500 confirmed on RA.",
+   "waterfall-festival-phangan: 'four stages' corrected to five (official site and Instagram). The schedule is now 2 days before and after each Full Moon Party; the Jan 2027 Full Moon Party is expected on 22 Jan, after the trip. Prices updated to Oct 2026 (early bird 1,100 THB; VIP 2,500/2,800).",
+   "waterfall-festival-phangan: replaced the near-empty phangan.events/waterfall-festival/ link with the official site, Instagram and the phangan.events dates/tickets page. gmapsQuery set to the Google name 'Waterfall Festival'. Added a transport tip and hip-hop/afrobeat genres.",
+   "pangea-beach-bar-lanta: undergroundScore 4 -> 3 (sunset deep-house sessions at a beach bar). Venue renamed 'Pangea Beach Bar & Kitchen' (Google: 'Pangeabar & kitchen') and gmapsQuery updated. End time added (about midnight; Google Sunday hours 16:00-24:00). Capacity 300 confirmed on RA.",
+   "oxa-jungle-party-jan-2027: pin moved 3.7 km to the current Google listing 'OXA - Jungle Party' (9.71735, 100.03195, plus code P28J+WQ). The old pin was the former 'OXA Beach Party' spot from a stale link.",
+   "oxa-jungle-party-jan-2027: floors corrected to Oasis tech house/indie dance, Canyon techno, Cabin hip-hop/R&B/commercial; removed 'melodic techno', 'often from Berlin' and 'jungle meets the sea'; undergroundScore 3 to 2; pick true to false; gmapsQuery set to 'OXA - Jungle Party, Ban Tai, Koh Phangan'.",
+   "lost-jungle-parvati-2027: dates corrected to 9-11 Jan (organiser flyer and ticket shop say 9. 10. 11 January, 48 h); 12 Jan removed; organiser Sacred Moon Phangan and Parvati Records confirmed; status listed to tickets-on-sale; price 2,500 THB added; Vibez ticket link added; renamed 'Parvati Day & Night at Lost Jungle'.",
+   "lost-jungle-parvati-2027: gmapsQuery changed from 'Lost Jungle, Koh Phangan' (Google shows Retro Mountain Jungle Club, not confirmed as the same place) to 'Koh Phangan, Surat Thani'; tips on the Circoloco clash and Google trap added.",
+   "halfmoon-festival-jan-2027: pin moved 267 m to the venue's own geo / Google link 'Magical Forest by Halfmoon Festival'; gmapsQuery updated; 20+ rule and Harmony Beach tip added. Dates and Day 1 2 PM start confirmed on the official 2027 chart.",
+   "daft-funk-live-phuket-2027: venue confirmed as Google listing 'Banana Beach Club by Sollis 2.0' (pin moved 96 m to it); gmapsQuery set to that exact name; added warning not to confuse with Banana Beach on Coral Island; venue website link added.",
+   "circoloco-thailand-2027: airport drive corrected from about 20 to about 30 minutes; age tip now says Ticketmelon lists 20+ (Dice 18+); added note that only 9 and 16 Jan are in the trip.",
+   "cafe-del-mar-pyramid-2027-01-08 and marco-carola-cafe-del-mar-2027: gmapsQuery set to exact Google name 'Café del Mar Phuket Beach Club, Kamala, Phuket'; Marco Carola entry-time tip clarified (6 PM is advice; late fee up to 1,000 THB).",
+   "o-beach-ibiza-barra-cuda-2027: timeText fixed (Wednesdays plus only Fri 1, 8, 15 Jan; no edition Fri 22 or 29 Jan); gmapsQuery set to Google name 'Barra Cuda Beach Club Phuket, Patong'.",
+   "o-beach-ibiza-club-seen-samui-2027: removed (same O Beach show available in Phuket at Barra Cuda; Samui version is off-island and commercial).",
+   "carl-cox-cafe-del-mar-2027: priceText corrected. 1,200 THB is the after-party-only ticket (Club Room, 11 PM entry), not an early main-event tier. The 1,600 THB presale is sold out, so main-event tickets now start at Early Bird 1,900 THB (4 PM entry), then 1st Release 2,500 THB (6 PM entry). Added the after-party to timeText and a timed-entry / 1,000 THB late-fee tip.",
+   "francis-mercier-cafe-del-mar-2027: priceText corrected. The 'presale opened 13 Oct' claim is wrong per Megatix: every tier is 'on sale soon' from Tue 20 Oct 2026, 6 PM. Added the tiers (900 / 1,700 / 2,500 THB; after-party 800 THB). Venue is now the Pyramid Stage, timeText 2 PM - 10:30 PM, Megatix ticket link added.",
+   "blondish-cafe-del-mar-2027: found the Megatix event (sale opens 20 Oct, 6 PM; no tiers yet), added the ticket link, set the end time to about 10:30 PM, added a timed-entry / 500 THB late-fee tip.",
+   "spiritgust-2027: priceText corrected. Official Tier 1 (about 3,628 THB) ends 15 Oct. RA 1st release is about 4,100 THB with fees, rising to about 4,960 THB (1 Nov) and 5,830 THB (1 Dec). Official Tier 2 is about 4,390 THB.",
+   "spiritgust-2027: lineup grown from RA's 18 names to the official 33 acts, with official spellings (KiLLATK, Junxpunx).",
+   "spiritgust-2027: the ticket link (tickets.spiritgustfestival.com, which 301-redirects) is replaced by https://spiritgustfestival.com/#tickets. timeText now notes that RA and the official site give different hours. Added 18+ and no-transfer tips.",
+   "jungle-experience-2027-01: priceText corrected. Regular 2026 nights are 850 THB early bird / 1,000 THB GA. The 1,400 THB GA was only the special 30 Dec Grand Finale.",
+   "jungle-experience-2027-01: coordConfidence raised from medium to high. The official site's own Google Maps link gives the same point, and the phangan.events plus code P28H+4X is within 5 m.",
+   "macan-live-phuket-2027: coordConfidence raised from medium to high (Google place 'Lotus Arena' within 3 m of the OSM node). Added the Fan Zone 1,900 THB tier and the 5% booking fee. The description now says Lotus Arena is open-air. Added a tip that it is so far listed only on Megatix (single source).",
+   "dnb-allstars-thailand-2027: added THB prices from the Megatix THB shop (GA 10,900 / VIP 14,900 / Inner Circle 22,900 THB). undergroundScore lowered from 3 to 2 (3,000-person brand festival with a Pendulum DJ set). coordSource now explains that the pin comes only from the organiser's plus code, checked against the partner hotels' walking times.",
+   "full-moon-party-2027-01: added priceText (about 200 THB cash at the gate, no online tickets). timeText changed to about 9 PM until sunrise. Added a cash / closed-shoes tip and the fullmoonparty-thailand.com schedule link. The 22 Jan date is now confirmed by 3 sources, plus a computed full moon at 19:17 Thai time.",
+   "zamna-phuket-2027: description now says 'first time in Phuket' (the source wording) instead of 'Thailand', and no longer reads as if Yeden Gardens is known for stage design. timeText clarified (ends 30 Jan, 11:59 PM). Coordinates re-confirmed against Google's place for Yeden Gardens (40 m).",
+   "macan-live-phuket-2027 and the three Café del Mar items: gmapsQuery set to Google's listed names ('Lotus Arena, Cherng Talay, Phuket'; 'Café del Mar Phuket Beach Club, Kamala, Phuket'). All 9 gmapsQuery strings were tested and land on the right place.",
+   "All 9 items: coordinates re-derived independently; none was more than 250 m off, so no lat/lng changed. All image URLs return image content. RA links give 403 to scripts but both events were confirmed through the RA API."
+  ],
+  "places": [
+   "All items: I re-derived coordinates from Google Maps listings, OSM (Photon, Nominatim, Overpass) and Wikipedia. Every pin is within 110 m of an independent source, so no lat/lng values changed.",
+   "promthep-cape: coordConfidence medium -> high. Google's current 'Promthep Cape' listing and two OSM features (sunset viewpoint, lighthouse museum) sit on the terrace within 30 m of the pin. The tip pin cited before is an older listing.",
+   "phuket-old-town: gmapsQuery -> 'Soi Rommani, Phuket Old Town'. The old query first opened a bakery named Soi Romanee.",
+   "nai-harn-beach: gmapsQuery -> 'Nai Han Beach หาดในหาน, Rawai, Phuket'. The English query opened a village pin about 900 m inland.",
+   "patong-beach: gmapsQuery -> 'Patong Beach, Patong, Phuket'. The old query opened the Patong town pin 700 m inland.",
+   "sunday-walking-street: gmapsQuery set to Google's exact name 'Lard Yai Sunday Night Market'. openText notes that Google lists closing at 23:00.",
+   "freedom-beach: feeText corrected. The walk-in fee is free to 200 THB depending on the path (sources disagree); the old note wrongly said North Abroad confirmed 200 THB. Boat range is now 1,000-1,500 THB and the hike 15-25 min.",
+   "freedom-beach: added a closed-toilets tip (North Abroad, Sep 2026). 'Snorkeling is good' -> 'some snorkeling'. Removed the chair-rental claim (one source says there are no sunbeds, only mats).",
+   "black-rock-viewpoint: tier must-see -> hidden-gem (rough access, few visitors, about 930 Google reviews against 6,500-39,700 for the other sights).",
+   "black-rock-viewpoint: removed the claim that Nui Beach charges entry. A May 2026 government order is reclaiming the land and restoring public access.",
+   "black-rock-viewpoint: the route now includes the extra ~500 m after the fork (Jamie's blog). In the view list, 'Ya Nui' (likely hidden behind the windmill hill) is replaced by 'Koh Man'. Added a no-railings safety tip. bestTime no longer suggests a sunrise hike in the dark.",
+   "wat-chalong: bestTime 7:00-9:00 -> 8:00-9:30. openText notes the 7:00 vs 8:00 opening conflict (Google lists 8:00-17:00).",
+   "wat-chalong: Big Buddha transfer 10 -> 15 min (7.7 km by road). The distillery's current name is 'The Distillery Phuket (Chalong Bay Rum)'. Added the temple website (FAQ) link.",
+   "big-buddha: openText notes Google's 6:00-18:30 listing against 9:00-18:00 in the 2026 guides. Dropped the unverified 'toilets are free'.",
+   "big-buddha: replaced the outdated 'map apps show it closed' tip (Google now shows it open) with tips on the limited open area and checking status after heavy rain.",
+   "windmill-viewpoint: openText now gives Google's 24 h against 6:00-19:00 (Pattaya Mail, Feb 2026). Fee 'Free' is confirmed by two sources.",
+   "windmill-viewpoint: removed the unsourced pre-wedding photo tip. Added the paragliding tip (Pattaya Mail) and the narrow-road/small-car-park tip (Thai Holiday Guide). Dropped an unrelated Black Rock source.",
+   "promthep-cape: added free parking, a tip that the museum may close before sunset, and museum hours in openText. Windmill distance 1.5 km -> 1.3 km by road.",
+   "patong-beach: removed the unverified 'more shade' at the north end. The smoking tip now mentions marked smoking areas.",
+   "kata-noi-beach: 'beachfront belongs to one big resort' -> 'is taken by one big resort, Katathani' (Thai beaches are public). The sunbed note names Katathani and The Shore. Walk from Kata is now 15-20 min. Source URL updated after a redirect.",
+   "nai-harn-beach: the rooftop bar is now named (Reflections Rooftop Bar at The Nai Harn, opens 17:00).",
+   "khao-rang-viewpoint: openText says the deck is free and listed as open 24 h (it said 'no gate' with no source). Tunk Ka Cafe hours simplified to about 11:00-22:00.",
+   "phuket-old-town: the Thai Hua Museum tip notes that Google lists it open daily, as a third version of the closed day.",
+   "Links (all items): removed guide and blog links (Phuket 101, Window on Phuket, 21 Sensations, North Abroad, Jamie's blog) from links[] under the official-only rule. They stay in sources[]. I kept Wikipedia, the TAT page and the temple site, and added a Wikipedia link to kata-beach. Several items now have empty links[].",
+   "Images: cleaned image source fields for sunday-walking-street and black-rock-viewpoint to plain Commons URLs. All 33 image URLs return HTTP 200 image/jpeg, and their licenses and authors match Commons.",
+   "chalong-bay-rum: name now includes 'The Distillery Phuket' and gmapsQuery uses the Google listing name 'The Distillery Phuket - Home of Chalong Bay'. Description reworded. openText notes that Google gives closing as 22:00, the official site 23:00.",
+   "ao-yon-beach: gettingThere corrected. You reach Ao Yon before Panwa Beach, on Ao Yon-Khao Khad Road off Sakdidej Road (OSM roads). It is not 'past Panwa Beach'.",
+   "ao-yon-beach: The Cove hours updated from 07:30-21:30 to 07:30-23:00 (Google). Akoya name and hours confirmed. Removed the unverified 'Thai, Italian' menu claim from The Cove tip.",
+   "banana-beach: gettingThere rewritten for both driving directions. The car park is between Trisara and Andaman White Beach Resort: turn left coming from Bang Tao, right coming from Nai Thon. Beach club name and hours added to tips.",
+   "layan-beach: description fixed. Tan Restaurant is at the road end, about 700-800 m from the river mouth and the island, not 'near the island'.",
+   "laem-krating-viewpoint: gmapsQuery changed to Google's name 'Cape Krathing, Phuket'. Sunset corrected from about 18:30 to about 18:25, and dark by about 18:50. Description no longer calls it the south-west tip. Ao Sane tip now cites the Phuket 101 construction closure. COMO hike price added.",
+   "laem-singh-beach: gmapsQuery changed to Google's name 'Haad Laem Sing, Kamala, Phuket'. feeText clarified: the 100 THB boat fare includes the return ride. gettingThere uses Google's name for Tukta.",
+   "naka-weekend-market: closing time set to 22:00 (Google, Phuket 101, official footer) instead of 23:00. Added that only street food is open on weekdays. Added a Nene Royal tip.",
+   "rawai-seafood-market: openText now gives Google 9:00-21:00 next to Phuket 101 11:00-21:00, plus Mook Manee hours.",
+   "sai-kaew-beach: openText now gives restaurant hours 9:00-21:00 (Google). Removed the 'no toilets' claim (OSM maps toilets and a shower about 400 m north). gettingThere adds Highway 402 and the Google Maps name of the access point.",
+   "phuket-elephant-sanctuary: days field added (open daily except 13 April). Canopy Walkway Tour from 1,900 THB added to feeText.",
+   "bang-pae-waterfall: openText updated with Google 9:00-16:00. Fee advice now says to carry 400 THB per adult because sources conflict. Gibbon tip adds the 2.5-hour program and says the project is closed on days with no bookings.",
+   "chillva-market: openText lists the closed Sundays (10 and 17 Jan) and the Tuesday market date (12 Jan). QR-payment tip replaced with cash advice.",
+   "tri-trang-beach: removed which end of the beach The HideOut is at, because sources disagree.",
+   "All items: third-party guide links (Phuket 101, Window on Phuket, Thai National Parks, Thai Holiday Guide) removed from links under the official/ticket-only rule. They stay in sources. Official site, gibbon booking and COMO hike links kept.",
+   "Coordinates: none moved. All 15 pins were checked again against Google Maps, OSM and official or Wikidata points and are 5-180 m from them. Bang Pae is pinned at the entrance and car park (falls about 300-480 m up the trail). Sai Kaew is pinned at the beach restaurant access point (253 m from Google's beach pin).",
+   "Removed mai-khao-plane-spotting: duplicate id of the must-see item (verified facts are in the removed reason).",
+   "All items: third-party guide links (Phuket 101, Thai Holiday Guide, lovethailand, Thai PBS, thainationalparks.com, Tisland) taken out of links[] under the official/ticket-only rule; they stay in sources. Links now empty for khao-khad, koh-sirey, wat-phra-thong, mining museum, karon market, phang-nga, phi-phi.",
+   "gibbon-rehabilitation-project: coords moved 115 m to the Google pin by the Bang Pae car park (OSM node is tagged approximate); gmapsQuery set to the Google name.",
+   "gibbon-rehabilitation-project: waterfall tip corrected (January is not 'very low'; lowest flow is Feb-Apr); unverified '4 km' trail length removed; child park fee 100 THB added; walk-ins can find it closed.",
+   "khao-khad-viewpoint: gmapsQuery changed to the Google listing name 'Kaokard Viewpoint Tower'; about 200 steps added; durationHours 0.5-1; second Thai name added.",
+   "koh-sirey: gmapsQuery changed to Google name 'Wat Ban Koh Sirey'; Starbucks tip corrected (no driving up, 150 THB drink voucher and buggy); distance 4-5 km; unsourced 'few tourists' and 'little changed for decades' softened.",
+   "wat-phra-thong: Wat Phra Nang Sang is about 1 km south-west on the main road, not 'south on the same road'; access detail added (side road on the left coming from the airport); durationHours 0.5-1.",
+   "phuket-mining-museum: Sunday removed from days; openText now flags the conflict (Phuket 101 Mar 2026 says closed Sunday, Google says Sun 10:00-16:00); child fee 50-100 THB (sources differ); description now says some parts are worn.",
+   "karon-temple-market: gmapsQuery changed to Google listing 'Karon Night Market'; durationHours 1-2; parking tip added.",
+   "kruvit-raft: gmapsQuery changed to Google name 'Khru Vit Seafood Raft'; tip added to navigate to Laem Hin Pier, not the raft on the water; card payments unreliable; weekend booking tip.",
+   "view-cafe-phuket: gmapsQuery changed to Google name 'View Cafe at Phuket'; coordConfidence medium to high (Google pin, OSM node and phuket101 map agree within 15 m).",
+   "bang-rong-mangroves: kayak rental softened (2026 guide says to arrange kayaks and boats in advance; old price about 200 THB/h); tour fee now notes 2-3 days advance booking and no hotel transfer.",
+   "soi-dog-foundation: durationHours 1-1.5; tips added on shorter off-time tours and puppy/cat areas closing for quarantine.",
+   "phang-nga-bay-james-bond: durationHours 8-10, days and openText added; fee text says the 300 THB figure comes from a private site (2022), not an official DNP notice; catamaran price band added; tip that Hong by Starlight passes James Bond Island only from the boat.",
+   "hong-by-starlight: description now says the trip passes James Bond Island (from the boat); travel insurance added to inclusions; private charter price (from 62,750 THB) and source of the 3,300 THB competitor price added; days and durationHours added.",
+   "phi-phi-maya-bay: coordConfidence medium to high (Commons geotags on the beach agree within 40 m); durationHours and days added; sunscreen fine added.",
+   "similan-islands: quota tip corrected to 3,325 day visitors + 525 divers (3,850 total); pickup times corrected (normal tours 06:00-07:00, early tours 03:00-04:30); guide/blog links replaced by DNP e-ticket portal and a tour page; coordConfidence raised to high (OSM + Google agree).",
+   "koh-racha-yai: gmapsQuery changed to 'Patok Beach, Racha Yai Island, Phuket' (old query landed on the island centre 450 m away); unsourced crowd window 11:00-14:00 replaced with boat arrival about 10:00; 'walk over the hill' softened; Phuket 101 link replaced by tour page and The Racha official site.",
+   "coral-island-koh-hey: removed unverified tip to walk from Long Beach to Banana Beach; Banana Beach now described as reached with its own packages (from 1,900 THB); guide link replaced by tour page and Banana Beach official site.",
+   "khai-islands: Phuket 101 link removed (not official; no official page exists); feeText notes that tours include entry fees.",
+   "koh-yao-noi: speedboat fare widened to 300-500 THB (sources disagree); return times added (last boat from Manoh about 16:00); airport-to-pier distance added; Phuket 101 link removed.",
+   "koh-hong-krabi: description rewritten (unclear Maya Bay comparison removed); fee clarified as per adult, cash at the pier; Phuket 101 link replaced by the national park's official Facebook page.",
+   "railay-krabi: sunset time corrected from 18:20 to about 18:25 (computed 18:22-18:27 for the trip dates).",
+   "khao-sok-cheow-lan-lake: pin moved 1.6 km east from the dam viewpoint to the boat pier (Ratchaprapha Marina / Cheow Lan Pier); gmapsQuery changed to the pier; distance updated to about 155 km from Phuket Airport; thainationalparks.com link removed (kept as source), 2D1N tour link added.",
+   "samet-nangshe-viewpoint: sunrise corrected from 06:40 to about 06:45; unsourced claim that the upper viewpoint is better removed; distances updated (about 50 km from the airport, 80 km from Patong); coordSource corrected (Google's main pin is the truck stop 860 m south-east); guide link replaced by tour page.",
+   "koh-phangan-rave-trip: pin moved 2.3 km from Ban Tai beach to the OXA jungle venue, gmapsQuery changed to OXA; Circoloco also on Sat 9 Jan added; Halfmoon price corrected from 1,200 to about 1,500-3,500 THB; bus + boat time corrected to 6-9 h with Oct 2026 departures; flight price restated in THB; passport/ID tip added; weak sources (north-vietnam.com, flight.info) replaced.",
+   "one-chun: Raya hours corrected to Google's 11:00-21:00 and air-con wording made precise; Instagram link and Thai name added; Bib Gourmand year 2026 stated.",
+   "mee-ton-poe: price updated to about 80 THB for mee Hokkien with egg (Mar 2026 review); branch names clarified; Phuket 101 link removed.",
+   "lock-tien: gmapsQuery changed to the Google listing of the new shop; ordering tip added; image added (new shopfront); Phuket 101 link removed.",
+   "go-benz: Buddhist holy day inside the trip (Fri 15 Jan) added; cash-only and parking tips added; Facebook link and Thai name added.",
+   "naam-yoi: Ko Tee Sangkasi house number removed (Google 262/3 vs Phuket 101 262/8); Facebook link and Thai name added.",
+   "rawai-seafood-market-2: removed as a duplicate of rawai-seafood-market (must-see list, same place and source).",
+   "mor-mu-dong: Chaiyo tip corrected. It is 480 m away across the canal but 9.6 km by road (OSRM), so it is not 'opposite'. The claim that it is cheaper had no source.",
+   "mor-mu-dong: feeText now says most dishes are 100-200 THB and whole fish is by weight (Phuket 101 FAQ). Michelin and Wongnai list credit cards, so the cash advice is softened to 'bring cash as backup'.",
+   "mor-mu-dong: the closure on the 15th of each month is now backed by Wongnai as well as Phuket 101. Google shows only the regular daily hours.",
+   "mor-mu-dong: added gettingThere (OSRM drive times plus a traffic margin) and tips on queue numbers, floor seating and the photo menu. bestTime now adds high-tide advice.",
+   "mor-mu-dong: links. Added the official Facebook page (it is linked from the Google listing). Phuket 101 moved to sources only, because it is not an official link.",
+   "mor-mu-dong: description changed from '10 km south of Phuket Town' to 'about 10 km from Phuket Town' (9.6 km by road).",
+   "malin-plaza-night-market: description no longer says 'near Patong nightlife', because it is 1.6 km from Bangla Road. 'Cheap' changed to 'cheap for Patong' (Phuket 101).",
+   "malin-plaza-night-market: added gettingThere (1.6 km from Bangla Road, tuk-tuk about 200 THB, parking is hard) and 'free entry' in feeText.",
+   "malin-plaza-night-market: added 2 imageCandidates (Phuket 101 photos, both return image/jpeg). Commons has no photo of the market.",
+   "malin-plaza-night-market: links. The Phuket 101 guide moved to sources, because no official site exists. nameThai set to Google's form 'มาลิน พลาซ่า'.",
+   "Coordinates for mor-mu-dong and malin-plaza-night-market were re-derived (Google pin plus Michelin or OSM). They are within 10 m and 80 m of the given points, so they are unchanged.",
+   "karon-beach: removed the Wikipedia link from links (not official; it stays in sources), so links is now empty.",
+   "karon-beach: changed 'never feels crowded, even in high season' to 'rarely feels crowded' (the Phuket 101 FAQ says it can get busy December-March).",
+   "karon-beach: added the TANN Beach Club hours (11:00-23:00) and the fire-show time (about 19:00). Added a warning about dark canal water that sometimes runs across the sand at the north end after rain (news 2023-2025).",
+   "kamala-beach: description corrected. The Muslim village is the old town behind the beach, not on the beachfront. Airport drive time changed to 35-45 min. Wikipedia link moved from links to sources.",
+   "surin-beach: sunbed and vendor status reworded to what visitors saw in early 2026 (no sunbeds or umbrellas; food stalls by the car park and cafes across the road). Removal timeline corrected to 2023-May 2025. feeText updated.",
+   "surin-beach: Laem Singh tip now says the rock walk is easier at mid to low tide and the boat may not run in bad weather. Added a warning about deep water and currents near shore.",
+   "mai-khao-plane-spotting: feeText now gives the Sirinat National Park fee for the Nai Yang route (200 THB per foreign adult, Thai National Parks, June 2026). Removed the unsourced 'bluest sea' claim. Added the 500 m walk. The runway tip now uses FlightRadar24 instead of the Phuket 101 page.",
+   "bangla-boxing-stadium: replaced the unsourced 'Ringside sells out first' with the official advice (seats fill faster November-April, book a day or two ahead). Walk from Bangla Road changed to 5-10 min. Shelter is now described as Illuzion's techno room.",
+   "blue-elephant-cooking-school: restaurant hours corrected. 'Lunch 11:30-14:30 / dinner 17:30-22:00' were Blue Elephant Bangkok Sathorn's hours; Phuket is daily 11:30-22:00 (Google), and the official site lists 9:00-22:30 for the venue.",
+   "blue-elephant-cooking-school: class times are now from the official booking system: 9:30-13:15 and 13:30-17:00, open every day 8-18 Jan 2027. durationHours max changed from 4.5 to 4.",
+   "blue-elephant-cooking-school: Chef VJ tip corrected to the official 1,800-2,500 THB (Oct 2026), the Kata location and 'free pickup in some areas'. Distance to Thalang Road changed to about 300 m.",
+   "renew-sauna-ice-bath: gmapsQuery changed to Google's exact name 'Renew Sauna & Ice Bath Club, Choeng Thale, Phuket'. gettingThere now gives Soi Cherngtalay-Bandon 4. coordConfidence raised from medium to high (Google and Yandex agree within 5 m).",
+   "renew-sauna-ice-bath: KEDR tip corrected. It is compact, not a 'bigger option', and the unsourced banya and salt-water claims were dropped. Oasis Spa's 'Wednesday until 15:00' was removed: it was a one-off special-hours entry, and the normal hours are daily 10:00-24:00. Added the official Instagram link and the facility details (Finnish sauna, hot pool, ice plunges, large pool)."
+  ],
+  "areas": [
+   "layan: pin moved 849 m, from the Anantara cove north of the river (OSM 'Layan Beach' way) to the public Layan Beach at 8.0283, 98.2888; Google's 'Layan Beach', the Sirinat park unit 'Hat Layan', Tan Restaurant, an OSM restaurant node and the Commons photo GPS all agree within 171 m.",
+   "layan: removed the tip that called Google's pin wrong; gmapsQuery now 'Layan Beach, Thalang, Phuket' (one Google result instead of two). Added that Anantara faces a separate cove north of the river.",
+   "layan: description fixed. Tan Restaurant & Massage is the only restaurant left and is about 800 m from the island, not 'near the island'. Added Sirinat National Park; removed the unsourced 'Phuket 20 years ago'.",
+   "layan: Daft Funk Live venue is Banana Beach Club by Sollis 2.0, from 17:00, about 10 minutes by car, not 'next door'.",
+   "kamala: the 8 Jan Pyramid Stage headliner is now announced (Argy, presale sign-up 20 Oct 18:00). Added Nicolas Masseyeff and the 14:00 start to Marco Carola (13 Jan).",
+   "kamala: Phuket FantaSea now opens only Tue, Fri and Sun (show 21:00); added Carnival Magic days (Mon, Wed, Sat). Dropped the unsourced 'shallow' from the beach text.",
+   "patong: gmapsQuery 'Patong Beach, Phuket' opened the Pa Tong subdistrict, so it is now 'Patong Beach, Patong, Phuket', which opens the beach. Shelter is a 500-capacity room, not 'small'; added the Shelter Instagram and O Beach ticket links.",
+   "surin: Tukta is one of two places still serving food, not the only one. Removed the Catch Beach Club highlight (Catch is on Bang Tao). Added the Pansea guests-only rule, the 100 THB Laem Singh boat and the 15-20 minute walk.",
+   "bang-tao: added Catch (Fri BBQ 19-22, Sun brunch 12-15) and Niky's (Tue-Sun 20:00-02:00) times and the Enthusiast Place time (Tuesdays 19:00, free). The beach-bar closures are now placed between SAii Laguna and Arinara (16 venues, mid-2026). Removed the unsourced 'narrower'.",
+   "bang-tao: the Value Plus tip lost its 'fair, not the best rates' judgement (Phuket rates are not published) and got its hours (09:00-20:00). Replaced the Phuket101 Catch link with Catch's official site and added Enthusiast Place's site.",
+   "nai-thon: 'restaurants on the sand' is now 'along the beach' because sources disagree. Banana Beach is 2 km south; named Banana Beach Club and added its official link.",
+   "nai-yang: gmapsQuery is now 'Naiyang Beach, Thalang, Phuket'. The old query returned two pins, one 2.3 km north by the runway. Added Money Shop hours.",
+   "mai-khao: coordConfidence medium to high (Wikidata Q14223640 is 108 m from the OSM midpoint). Added Splash Jungle's hours (daily 10:00-18:30, confirmed open).",
+   "kata: removed the unsourced 'busiest after Patong'. Surf season is now June-November (Phuket101). Added the night-market hours (14:00-23:00) and Koh Pu's name.",
+   "sources: updated Phuket101 URLs that redirect (catch-beach-club-phuket, boat-avenue-mall, sirinat-national-park-phuket). All links, sources and image URLs returned HTTP 200 / image/jpeg on 15 Oct 2026 (djmag and RA block bots; RA checked via its API).",
+   "All 10 descriptions trimmed to about 320 characters or less (they were 322-372).",
+   "kata-noi: 'never gets crowded' softened to 'stays calm'; lifeguard info added to the beach note (Phuket101).",
+   "nai-harn: gmapsQuery changed to 'Nai Han Beach (หาดในหาน), Phuket'. The English query lands on a locality pin 890 m NE of the sand.",
+   "nai-harn: Ao Sane highlight flagged. Phuket101 (Mar 2026) says it is closed for construction; Thai Holiday Guide (Jul 2026) says open.",
+   "rawai: Ya Nui 'shallow reef' changed to 'rocks for easy snorkelling'. Bermudos tip shortened, with RA (last event 2021) added. coordSource now Wikidata + Google.",
+   "chalong: 'inland' removed (it is on Chalong Bay); 'most island day trips' changed to 'many'; Big Buddha marked free; new tip: Soi Ta-iad is about 3.5 km north of the pin.",
+   "phuket-town: Courage claim corrected. RA shows Courage nights only from 20 Dec 2025 to 19 Feb 2026, none after. The unconfirmed Instagram handles were removed.",
+   "phuket-town: phangan.events Courage link (shows no events) replaced with SUB's RA page; 'nightlife' removed from bestFor; 'good exchange rates' removed (SuperRich partner and NC Plus publish no rates); NC Plus hours added; Walking Street end time changed to about 21:00-22:00.",
+   "kathu: 'Michelin Plate' changed to 'in the Michelin Guide' (the Michelin site shows no award level); Krua Jongjit hours added (closed Monday); tip added that the shrine is 1.4 km from the pin.",
+   "cape-panwa: beach note rewritten. Panwa (Khao Khad) Beach has dead coral, Ao Yon is the best public swim, the nicer beach further south is for Cape Panwa Hotel guests (Phuket101).",
+   "cape-panwa: Baba Nest tip updated from Chope (17:00-20:00, bookings 1 month ahead, 3,000 THB minimum spend); patongDriveMin 35 -> 40.",
+   "ao-po: Bang Rong speedboat time 30-50 -> 30-40 min (Ferryscanner); Ferryscanner link now Bang Rong -> Koh Yao Noi; COMO pool marked for hotel guests; patongDriveMin 55 -> 60; coordConfidence medium -> high.",
+   "thalang: museum hours 09:00-16:30 -> Wed-Sun 09:00-16:00 (closed Mon-Tue).",
+   "thalang: Gibbon Project is now visit-by-booking only. Elephant sanctuary tip fixed (it never offered riding; observation only, no feeding, from 1,900 THB). Enthusiast Place time changed to 'from 19:00'. Official links added.",
+   "thalang: airportDriveMin 15 -> 20 and patongDriveMin 35 -> 40 (OSRM free-flow is already 17 and 31 min).",
+   "natai: day pass hours 11:00-23:00 -> 11:00-22:00 (official page). New tip: no day passes were sold 3-24 Jan 2026 because of Circoloco.",
+   "natai: Samet Nangshe 'about 25 minutes' -> 'about 40 minutes' (OSRM 38 min free-flow); patongDriveMin 75 -> 80; coordConfidence medium -> high."
+  ],
+  "hotels": [
+   "baba-beach-club-natai: priceText rewritten. The official booking site (ihotelier) shows 8-27 Jan 2027 blocked and Google has no rates for 8-17 Jan, so no rooms can be booked for the trip; whyStay and tips now say this and point to Aleenta and Natai House.",
+   "baba-beach-club-natai: deposit tip now cites Trip.com only (Hotels.com could not be checked); added breakfast and 1,800 THB transfer from the hotel FAQ, contact email/phone, Instagram link, and the 23 Jan Circoloco date.",
+   "aleenta-phuket-phang-nga: room count corrected from 'about 67' to 87 keys (official FAQ); 'nearly all have a private pool' changed to 'most' (Ocean View Lofts share a pool).",
+   "aleenta-phuket-phang-nga: prices are Google base rates before tax (about 16% more with tax); priceText now says so and fixes the date labels (Fri 15 Jan is not a Circoloco night; Sun 10 and Fri 8 are also expensive).",
+   "aleenta-phuket-phang-nga: 12+ tip made precise (Ocean View Lofts and Pool Suites); added limited-Grab tip from the hotel FAQ; removed the Phuket 101 article from links (not an official link; kept in sources).",
+   "natai-house: description rewritten from Google review text (owner-run, shop/cafe/massage next door, one cleaning complaint); the 'insects' and 'restaurants closed at dinner' claims could not be verified and were removed.",
+   "natai-house: priceText updated (weekdays 1,700-2,400 before tax; Fri 8, Sun 10, Fri 15, Sun 17 about 5,000-6,100; Sat 9 and Sat 16 no rooms online); added the hotel's own booking link from its Facebook page.",
+   "snug-airportel: price confirmed (official 1,108 THB, Hostelworld 1,160 THB dorm); added private rooms from 3,250 THB; luggage storage tip now says it costs extra (official site).",
+   "intercontinental-phuket: the old range used one reseller without tax data; official IHG/Booking/Agoda base rates are 30,500-33,500 THB (35,300-38,600 with tax); no rooms showed for Fri 8 and Sat 9 Jan.",
+   "novotel-phuket-kamala: price band corrected to 12,500-15,200 THB before tax (14,400-17,600 with tax) and about 18,000 on Fri 8 Jan; added a tip about mixed 2026 reviews.",
+   "twinpalms-surin: price corrected from 12,700-17,000 to 19,400-29,800 THB before tax (22,700-34,700 with tax); the old low came from one reseller ('Reserving') far below the official, Expedia and Trip.com rates.",
+   "twinpalms-surin, ibis-styles-bangtao, twinpalms-tented-camp: removed Niky's Speakeasy as a 'techno club' selling point (the events check removed it: cocktail bar with DJs, 2026 operation not confirmed).",
+   "ibis-styles-bangtao: beach walk changed from 10-12 to about 8-10 min (OSRM 590-620 m); restaurant named (Carmine's); priceText adds the with-tax figure.",
+   "twinpalms-tented-camp: price kept (official base 21,400-23,800; Trip.com from 19,800) and with-tax range added; nearby notes that the coordinate is the road entrance and the Beach Tents sit on the beach; added direct-booking extras tip.",
+   "hotel-indigo-patong: price band corrected to the IHG rate 10,400-11,400 THB before tax (12,000-13,200 with tax); all facility and award claims confirmed on the official site.",
+   "holiday-inn-express-patong: room count 270 -> 277 (Oyster); breakfast is included in every stay per IHG (was 'some rates'); removed the unverified airport-transfer tip and added check-in/out times; price band corrected to 5,300-6,900 THB before tax (6,100-8,000 with tax).",
+   "lub-d-patong: dorm price updated to 960-1,170 THB (official site and Hostelworld; 1,450 on Sun 17 Jan), private double rooms from 4,800 THB; 'in the lobby' dropped from the Muay Thai ring claim (only old sources say lobby); added book-direct perks; coordConfidence medium -> high (Hostelworld 41 m).",
+   "All items: coordinates re-derived independently (Google listing, OSM via Photon/Nominatim, Trip.com, Hostelworld, IHG/Accor schema, official-site map link); no point was more than 250 m off, so no lat/lng changed. All gmapsQuery strings tested: each returns the right Google place as the top result.",
+   "All prices: Google Hotels shows tax and service (about 16-18%) apart from the nightly rate; priceTexts now give both the before-tax and with-tax figures (AED converted at 9.157 THB, USD at 33.63 THB, 15 Oct 2026).",
+   "see-sea-backpackers removed. It cannot be booked online: website down, Hostelworld and Kayak listings return 404, not found on Booking.com, and Google Hotels shows no rates for any date.",
+   "All 11 items: coordinates re-checked against Google Maps place data, official map embeds or schema, Booking.com and OSM. All are within 200 m and none were 250 m off, so no coordinates moved. Shunli confidence raised from medium to high (Booking.com point is 11 m away).",
+   "USD amounts recalculated at 33.6 THB per USD (rate on 15 Oct 2026). All prices are the lowest Google Hotels or Hostelworld rates for 1 night, checked 15 Oct 2026.",
+   "beyond-kata: price changed from 7,500-10,200 to 7,500-11,800 THB, and about 14,700 THB around 15 Jan. The 'no rate' nights are a 2-night minimum stay, not a sign the hotel is nearly full. Tip rewritten.",
+   "beyond-kata: drive to Patong changed from 15-20 to 20-25 min and to Old Town from 25 to 30 min. 'South end' of Kata Beach changed to 'southern part'. Added a tip that some reviews say rooms feel dated.",
+   "mom-tris-villa-royale: price changed from 8,400-12,200 to 8,400-15,200 THB. Sat 16 Jan is about 22,500 THB, not 25,600. The 'weekdays are much cheaper' tip was wrong (Thu 14 Jan is about 14,600 THB) and was rewritten. The unverified 'known for seafood' tip was replaced with a stairs warning (Oyster). Drive to Patong changed from 15-20 to 20-25 min. Added the 42-suite count.",
+   "sugar-marina-art-karon: price changed from 5,800-6,700 to 5,800-6,400 THB. Drive to Patong changed from 10-15 to about 15 min and to Kata from 5 to 5-10 min. Added the official 'Early Bird 60 Days' offer (10% off).",
+   "the-nai-harn: Bermudos tip removed. Google lists the Bermudos club as closed, and it is in Si Sunthon (Thalang), not Rawai. Its Nai Harn sessions on RA date from 2013. The Leading Hotels of the World claim is now attributed to the hotel. Added that mountain-view rooms exist. Drive to Patong changed from 25-30 to 35-40 min, to Old Town from 25-30 to 30-35 min, and to Kata from 15 to 15-20 min.",
+   "wyndham-grand-nai-harn: price changed from 6,700-8,900 to 6,700-8,800 THB. Drive to Patong changed from 25-30 to 30-40 min and to Old Town to about 30 min. Added facts from the official site: 353 rooms, five restaurants and bars, and a Kids' Club (new tip). Removed 'green hillside'.",
+   "roost-glamping: dorm price changed from 420 to 420-480 THB. Added the 3-bed shared tent. Drive to Patong changed from 25-30 to 30-40 min and to Old Town to about 30 min.",
+   "casa-blanca-phuket: price changed from 1,900-2,300 to 2,100-2,700 THB. Courage is at 16 Bangkok Rd, about 20 min on foot (1.4 km), not 10 min. Removed the @fake_palm and @subphuket Instagram handles because they could not be verified. Tip now points to ra.co. Drive to Patong changed to about 30 min.",
+   "memory-at-on-on: price changed from 2,900-3,600 to 2,900-3,800 THB. Courage is about 15 min on foot (1.2 km), not 6 min. Tip now says RA lists SUB and FAKE PALM nights at Courage only from Dec 2025 to Feb 2026 and gives @courage.phuket from Courage's Google listing.",
+   "shunli-hotel: Courage is about 18 min on foot, not 8 min. Drive to Patong changed from 25 to 30 min. Thalang Road is 3-5 min on foot. The truck noise is at 3-5 am. Price note now names the nights with and without rates.",
+   "milky-bay-resort: price changed from 3,400-4,700 to 3,100-3,600 THB. 'OXA every Friday' changed to 'most Fridays', with 21:00-05:00 and 500 THB from Megatix. Added a tip on getting from Phuket to Koh Phangan (Lomprayah bus + boat about 7.5 h, or fly to Koh Samui + ferry). Added the OXA Megatix link. Thong Sala Pier changed from 6 to 7 min.",
+   "slumber-party-phangan: removed 'gym', which is not listed by the official site, Cloudbeds or Hostelworld. Added the Hostelworld rule that guests are normally 18-35 only (adultsOnly set to true). Added Sept 2026 reviews about water cuts and a dirty pool. Dorm price changed from 560 to 580-800 THB. Added the Hostelworld 8.4 rating. Website changed to the official liveslumberparty.com/koh-phangan/ page."
+  ],
+  "exchanges": [
+   "Value Plus Patong: pin moved 255 m to the official Value Plus point (7.893812, 98.301816) on Phra Metta Rd, opposite Patong Hospital. The old pin was a low-confidence estimate.",
+   "SuperRich partner (Suriyadej Circle): pin moved 98 m to 7.88305, 98.38702 (official embed latitude; longitude corrected for the embed's fixed west shift), 33 m from the OSM fountain. Confidence medium -> high.",
+   "Lion Jungceylon: pin moved 113 m to the Google listing (7.890028, 98.299421). Confidence medium -> high.",
+   "Value Plus Sansabai, Laguna and Central Festival: pins set to the official API points (moved 32 m, 4 m and 77 m). Sansabai address corrected to 171/14 Rat-U-Thit 200 Pi Rd (Soi Sansabai). Porto address and phone added.",
+   "Thai bank booths: removed the 3 OSM-only booth pins (not confirmed for 2026). The brand is kept with its verified SCB and ttb rates.",
+   "Bank rate gap corrected: on 15 Oct 2026 banks paid 0.4-0.8% less than Mamy for USD and about 1-1.2% less for EUR (was '1% and 1.5%'). Fixed in the verdict, bank summary, cons and avoid list.",
+   "Money Shop: added the Central Festival office (Mon-Sun 10:00-22:00), which is where the 33.28/37.30 sample rates come from. The Bang Tao office (250 Bandon-Cherngtalay Rd) is mentioned but not mapped, because its link has no coordinates.",
+   "Money Shop: added the Nai Yang address (111/5 Sakhu) and hours (Mon-Sat 10:00-19:00) from the website. Noted that the website and Google give different hours for Rawai.",
+   "Money Shop: the beach-office rate table was last updated in June 2026 (stale). Added the website rule that amounts under 8,000 THB get a different rate.",
+   "NC Plus: rating changed great -> ok (no rate data). The Thai company register confirms the company is active (since 2005, 2025 accounts filed).",
+   "SuperRich: the 28 Aug 2026 notice was a one-day closure (29 Aug) and the branch is active. Removed the notice link and the notice banner image.",
+   "SuperRich and tips: the 'Superrich Money Exchange' on Wirat Hong Yok Rd is registered as 'Sunrich Money Exchange' (Thai company register). This replaces the unchecked 2024 report.",
+   "Mamy: the SuperRich Bangkok benchmark is now 33.43-33.45 (rates moved during the day), so the gap is 'about 0.1 THB'. Review count '>330' -> 'about 330'. Address now includes Thepkrasattri Rd (Google listing + OSM).",
+   "Lion: 'sister brand' softened to 'linked to Mamy', because Mamy's site quotes Lion's CEO but Mamy's ownership is not proven. Added the 4.7/106 rating, Facebook link and website. The March 2026 Tripadvisor reply is about GBP.",
+   "Central Festival booths (Lion, Value Plus): added a note about the Central Phuket expansion works until 2028.",
+   "Value Plus: removed 'fair but not the best' and the Bangkok-rate pro (Phuket rates are unknown). Added the late hotel booths (Deevana Patong and Deevana Plaza, 08:00-02:00) and red #FB0707 from the site CSS.",
+   "ATM: 'no cheap bank ATM any more' reworded to 'we found no cheaper bank ATM'. Added that a 2026 guide says Bangkok Bank and Krungthai also charge 250 THB. The fee text now says Visa/UnionPay 250 and Mastercard 350, since Kasikorn's table does not list JCB.",
+   "Airport: dropped the exact counter count from the summary (weak source) and marked the 3-5% gap as rough (its source also has errors). Pin confidence medium -> high.",
+   "Tips: 'pre-1996 USD often refused' replaced by Ex24's published rates for old and new USD 100s. The holiday tip now says the only January 2027 bank holiday is 1 Jan (BOT list via Thansettakij). The Revolut weekend markup is now given as about 1%.",
+   "Avoid: the Telegram line now cites Mamy's own warning (it has no Telegram account) and Money Shop's two named fake accounts.",
+   "Coordinate sources and confidence re-derived for every branch. The HomePro Chalong pin is kept, because the Value Plus API point there looks like an uncorrected map centre 230 m west."
+  ],
+  "essentials": [
+   "TDAC timing: the claim 'counting the arrival day, so 6, 7 or 8 Jan' is not in any official source. Official wording is 'within 3 days / 72 hours before arrival' (FCDO, Royal Thai Embassy Buenos Aires Feb 2026). The text now says 6 or 7 Jan, and the arrival day also works. Added the embassy how-to link.",
+   "Fake TDAC: the fee is now 'about 20-90 USD' (Scandasia and Le Petit Journal, Mar 2026). The 1-in-10 figure is confirmed (Immigration, 29 Mar 2026). THIM is described as optional only; its launch date is unclear (Aug or Oct 2026). Added the Scandasia link.",
+   "Visa: checked the full 60-country TAT list. US, Israel, Georgia and Ukraine are on it. Russia and Kazakhstan get 30 days under bilateral deals (Vialto). No text change.",
+   "Passport: replaced the unsupported 'Checks are not common' with the FCDO fact that travellers have been refused entry without proof.",
+   "NEW item 'Customs: cigarette limit': max 200 cigarettes per person, fine up to 10x the value (FCDO entry page, Oct 2026).",
+   "ETA: 'never started' changed to 'has not started (Oct 2026)'. No 2026 source shows an ETA in force.",
+   "450-baht fee: removed the speculation 'will probably not apply / starts months later', which rested on a non-official 180-day lag. The government target is Q1 2027 for air arrivals (The Star 13 Sep, VnExpress 19 Aug 2026). As of 9 Oct 2026 it still needs Cabinet approval and a Gazette notice. Added The Star link.",
+   "NEW item 'Flights via the Middle East': FCDO warning about airspace closures, delays and cancellations.",
+   "Grab fares: Patong-Old Town raised from 300-550 to 400-550 baht (the only 2026 source). 'Prices go up at night' replaced by 'busy times and heavy rain' (as the sources say).",
+   "Taxis: replaced the unsupported '30-50% more than apps' with real numbers: street 500-600 vs Grab about 250-350 baht for Patong-Kata (evephuket, Aug 2026).",
+   "Scooter: added the FCDO warning that many rental scooters are not registered.",
+   "Helmets: 2,000-baht fine confirmed (in force since 1 June 2025). Added a source.",
+   "Songthaew: added the stop (Ranong Road, near the market), 06:00-18:00 about every 30 min, and fare 30-50 baht (phuket101 and others).",
+   "Drive times: airport-Natai changed from 35-45 to 30-45 min. The unverified exact traffic window '16:00-19:00' is softened to 'late afternoon'.",
+   "Koh Phangan fly+boat: Bangkok Airways fare raised from 1,900-3,500 to about 3,000-5,000 baht (visitthailandtoday, Oct 2026: 2,980-3,700 for Oct/Nov, about 4,950 in mid-Dec). It is the only airline on the route, 6-7 flights a day. Samui airport to Phangan by Lomprayah: 500 baht to the pier or 700 to a hotel, 1-2 h (Lomprayah 2026 timetable PDF).",
+   "Lomprayah joint ticket: corrected from '09:30 departure, about 1,400 baht, 7 h' to the official 2026 timetable: hotel pickup about 07:30 (Patong/Kata/Karon/Rawai/Nai Harn) or 10:00 at the airport, arrive about 16:30, 1,600 baht to the pier or 1,800 to a hotel. A reseller copy of the same timetable (phangantransfers.com) agrees.",
+   "Cheapest Phangan route: named Phuket Bus Terminal 2, kept the times, and changed the price to 'roughly 600-900 baht'. Swapped the Seatran link for 12Go.",
+   "Party trips: added the FCDO note that the Samui/Phangan rainy season is usually November to March.",
+   "Maya Bay: added the 200-baht child fee and the no-swimming rule. The 400-baht adult fee and the 1 Aug-30 Sep closure are confirmed. Added a link.",
+   "Krabi/Ao Nang: speedboat time changed from 1h15 to 1-1.5 h. Ferries via Phi Phi take longer.",
+   "Vapes: added FCDO point that you may have to stay in Thailand until the case is finished.",
+   "NEW item 'New deportation rules': since 28 Aug 2026 foreigners can be deported without a conviction (FCDO).",
+   "Cannabis: added the 30-day prescription limit and the export fine of 30,000 baht/kg and up (FCDO, updated Jun 2026).",
+   "Alcohol: confirmed 11:00-midnight hours with the afternoon ban ended (Time Out, 29 May 2026; FCDO). Confirmed fines for drinkers up to 10,000 baht from 8 Nov 2025. Added legal drinking age 20 and two source links.",
+   "Beach smoking: added 'since 2018' and 'and/or'. The 100,000-baht / 1-year penalty is confirmed (The Nation; thaiest Apr 2026).",
+   "Drones: added NBTC registration within 30 days of arrival and the penalty of up to 100,000 baht and/or 5 years (FCDO). Fixed the TAT link, which redirects from /2026/02/ to /2026/06/.",
+   "Bangkok Hospital Phuket: link changed to bangkokhospital.com/en/phuket (the old domain redirects). The official site confirms 24/7 opening, 2/1 Hongyok Utis Rd, 076 254 425 and 1719. Official geo 7.903885, 98.376432 is within 70 m of OSM.",
+   "NEW item + number: Bangkok Hospital Siriroj. Official site: 44 Chalermprakiat Ror 9 Rd, +66 76 361 888, emergency 1719, open 24/7. Official geo 7.898016, 98.368108 is within 90 m of OSM.",
+   "Mission Hospital: added address 4/1 Thepkrasattri Rd and the 24-hour ER. Phone 076-237220 confirmed by phuket101 (Sep 2026) and Phuket Expat Guide (May 2026). OSM node at 4/1 Thep Krasattri (7.90653, 98.39099). The official site is live behind a JS check.",
+   "Vachira: phone 076 361 234 confirmed by several 2026 guides. Wikipedia confirms the official site, but it refuses connections from outside Thailand, so the link label now says Thai. OSM (7.89743, 98.38301) and Wikipedia coordinates agree within about 100 m.",
+   "NEW item + number: Patong Hospital (government). The official site lists 076-342 633-4 and was active Oct 2026. OSM node at 57 Sai Nam Yen Rd (7.89588, 98.30144).",
+   "Ambulance: added that 191 also works (FCDO). Pharmacies: added the FCDO warning about fake medicine sold on the street.",
+   "UV index: 'about 11 (extreme)' changed to 'high to extreme (about 8-11)', because sources differ (weather2travel 11, ERA5-based 8).",
+   "Weather: low changed from 24-25 to 23-25°C, rain from 30 to 30-36 mm, rain days from 4-5 to 5-6, humidity from 70 to 70-76%. These are TMD 1981-2010 normals for the Phuket city and airport stations.",
+   "Sun times: recomputed with the NOAA algorithm. Sunset range changed from 18:24-18:30 to 18:23-18:28, and 12 Jan sunset from 18:26 to 18:25.",
+   "Peak season: replaced the unsupported 'most expensive in the first two weeks of January' with 'highest over Christmas/New Year, high all month'.",
+   "ATM fees: changed from 220-250 to 250 baht (Visa) / 350 baht (Mastercard) per withdrawal. Source: the 2026 Kasikorn/SCB/Krungsri fee tables (exchanges research) and thaibudgetplanner (Aug 2026). Added a link.",
+   "Tourist Police app: 'SOS button / shares location' changed to the wording TAT uses ('SOS function', GPS). Added that it works without a Thai SIM (FCDO).",
+   "Emergency numbers: 191 relabelled as the general emergency line (FCDO). Added Immigration 1178 (thailand.go.th, Australian Embassy), Siriroj and Patong Hospital. 1196 for water accidents is confirmed (thailand.go.th).",
+   "Verified with no change: AIS prices (8d 499, 15d 699, 30d 1,199) on the AIS page; True 15d 699 / 30d 1,199 (True blog plus Oct 2026 guide); Smart Bus fares and last buses (official site, Sep 2026); airport limo 800 baht, 100-baht meter surcharge and Grab Exit 8/Exit 1 (two 2026 sources); Phi Phi ferry times and prices (Oct 2026 guide); Koh Phangan villa-raid link exists (several outlets confirm); urine tests at Koh Phangan raids (Khaosod, Oct 2025)."
+  ],
+  "late-jan:events-phuket-late-jan": [
+   "illuzion-phuket: description, genres and recurrence now say that some Friday main-room nights are NOTORIOUS hip-hop (club website 'Notorious Friday live hip-hop shows'; Oct 2026 feed: NOTORIOUS on Fri 2 and Fri 9 Oct). Guest pattern reworded (Jan 2026 guests also on Thu 8, Fri 9, Thu 15). New tip to check the poster. Martinez Brothers price now dated Thu 24 Sep 2026 (ladies 1,000 THB).",
+   "cafe-del-mar-phuket: tip '20+ only' corrected to 'Club Room nights and ticketed shows are 20+'. The Sunday day party admits children (Megatix: children 3 and under free). Last entry 00:30 is now marked as for online tickets. Zoo del Mar and Ben Böhmer sources added. The RA venue pin is about 950 m off (the guide pin is right).",
+   "courage-bar-phuket-town: removed the FAKE PALM Instagram link and @fake_palm from the tip. The account could not be confirmed anywhere, and an earlier QA pass had already dropped it. The SUB Instagram and Facebook links are kept: the dropthebass SUB profile lists both.",
+   "courage-bar-phuket-town: FAKE PALM genre 'electro' changed to 'breaks' (RA, SUB 3 Years: 'TECHNO & BREAKS curation by FAKE PALM'), and 'electro' removed from genres. Recurrence adds Framework with Sergey Sanchez (Fri 2 Jan 2026, 800 THB). FAKE ORBIT early-bird price added. coordConfidence medium -> high (Google pin = RA and Megatix address).",
+   "black-box-samui: price range corrected from 'Free to 300 THB' to 'Free to 500 THB' (RA: HACKED x Cue:Rated, 28 Nov 2025, 500 THB). Age tip corrected from '20+ (some nights 21+)' to 'RA listed 18+ to 21+' (that HACKED night was 18+). Added the Soi Reggae location and Sunday hours. @hackedsessions now confirmed via the dropthebass HACKED profile.",
+   "sound-club-samui: price and description updated with 2026 guest nights (phangan.events: Nakadia Sat 3 Oct 2026 and Essence 4 Nov 2026, 500 THB for men with 1 drink, ladies free). Instagram @sound_clubsamui added (from the club website). Hours now 22:00-06:00 (Google). The unsourced 'physical ID' tip was reworded. Noted that the RA venue pin is about 1 km off.",
+   "obeach-club-seen-samui-2027: timeText 'Other Sundays: 17 and 31 Jan' changed to 'Other Sundays in your trip: 10 and 17 Jan' (31 Jan is after the 26 Jan flight). Added the beach chic dress code, the 500 THB late fee and 'food and drinks not included' (Megatix terms).",
+   "o-beach-ibiza-barra-cuda-2027: marketing line 'home of Thailand's first pool dance floor' replaced with concrete facts (two pools and a pool dance floor, noon to midnight). After-party tickets marked as not on sale yet. 27 Jan flagged as after the trip. Bangla Road distance made concrete (400-600 m, venue site). Source barra-cuda-phuket-4 (the 8 Jan page) replaced by barra-cuda-phuket-7 (the 20 Jan page). coordConfidence medium -> high.",
+   "armania-phuket: unsupported 'big stage and shows' replaced by 'Renaissance-style interior' (club website: 'renaissance-inspired upscale nightclub', VIP & VVIP). coordConfidence medium -> high (the club website's map link is 20 m away). RA count corrected to 27 of 36 listings. Instagram @armaniaphuket (from the club website) added to the tip. Hours now confirmed by Google too.",
+   "shelter-phuket: crew-showcase tip now names a real example (Enthusiast with Cosmjn at Shelter, RA, Jun 2026). timeText notes that Google Maps lists Fri-Sat only.",
+   "boa-phuket: recurrence now includes some Sundays (phangan.events: Sunday nights on 11 Oct and 1 Nov 2026).",
+   "enthusiast-place-open-doors: drive time changed from 'about 10 minutes' to '10-15 minutes' (OSRM 10 min without traffic). Street number 89/3 added (official site).",
+   "dnb-allstars-thailand-2027: no fact changed. coordSource now cites the Google pins of the partner hotels (Hivetel about 180 m, TAVANA about 500 m) as an independent check of the plus-code pin.",
+   "circoloco-thailand-2027 and levitate-sunset-connections: all facts confirmed (Dice, Ticketmelon, Baba Beach Club, RA 2026 lineups; Megatix sessions, official JSON-LD, Google). Only verification text and coordSource were refreshed."
+  ],
+  "late-jan:phangan-full-moon-week": [
+   "jungle-experience-2027-01: happy-hour tip fixed (it is on the Nov and Dec 2026 listings, not a past event); added the 20+ age rule from Megatix; 'always the night before' changed to 'each monthly edition' (there are extra New Year nights); gate price 1,200 THB now confirmed on Megatix; link label and coord note updated.",
+   "full-moon-party-2027-01: genres 'psytrance' changed to 'trance' (sources say mostly EDM, some house, tech house, trance, techno); added the official no-presale/scam warning; full moon time re-computed (19:17 Thai time) and confirmed.",
+   "waterfall-festival-phangan: Wednesday parties ran most weeks of 2026 (Jan to Nov), not only in high season; replaced two 2026 flyers that show other dates (14 Jan, 11 Feb) with venue photos.",
+   "lighthouse-party-phangan: price text updated (Mar and Oct 2026 listings say free before 22:00; the 200/600 THB tiers are from the older guide page); dropped the Jan 2026 flyer image that shows '20 JAN'.",
+   "oxa-jungle-party: fee wording made exact (booking fee about 20-40 THB); added 18+ tip; tips split into single topics.",
+   "chill-up-phangan: removed Mon 25 Jan from dates (you should be back in Phuket that day); tip now says the DJStrich entries are weekly placeholders.",
+   "eden-garden-phangan: the Jan 2026 Sunday move no longer states a cause the organiser did not give.",
+   "sabaii-friday-beach-party-phangan: 'every Friday' changed to 'most Fridays' (phangan.events listings have gaps); genres wording 'a mix of house and techno'.",
+   "unclave-phangan: added last season's date shifts (Sat 10 Jan, Fri 23 Jan 2026) and the Unclave 1-year party on Fri 23 Jan 2026; Zorka x Hypnotica list now includes 28 Jan.",
+   "retro-mountain-phangan: 'on every day of the week' was wrong (no Wednesday night in Jan 2026); now 'spread over the week'.",
+   "seaside-pre-full-moon-haad-rin: renamed 'Seaside Beach Party (Haad Rin West)'; there were no pre-Full Moon editions in Jan or Feb 2026 (Thursday parties instead), so dates are now Thu 14 and Mon 18 Jan (both unconfirmed) and a tip warns not to count on Thu 21; added the Jan 2026 door price.",
+   "wet-pool-party-haad-rin: added Sun 24 Jan (Waterfall pre-party two days after the Full Moon, seen in most 2026 Full Moon weeks); the day after can be a karaoke night, not only a foam party.",
+   "bambu-sunday-session-haad-yuan: monsoon tip corrected (in 2025 it ran through November; the useful fact is that it ran on 11, 18 and 25 Jan 2026).",
+   "hollystone-saturday-phangan: added 20+ (Megatix); prices given with fees included (300 and 400 THB).",
+   "utopia-events-phangan: pattern stated as 2 nights before the astronomical full moon; tip now says Tue 19 or Wed 20 is a guess.",
+   "Logistics 'Plan for the week': adjusted to your trip phases (big group until Mon 18, so go Mon 18 only if they leave that morning, otherwise Tue 19).",
+   "Logistics 'Fastest way': replaced 'flight before 15:00' with the exact rule (14:15 flight or earlier; after that only the 18:30 Haad Rin Queen speedboat to Haad Rin). All 8 flight times and 4,730 THB re-checked on Google Flights.",
+   "Logistics 'Bus + boat from Phuket': added the 09:30 departure from the Lomprayah Phuket Town office (1,400 THB); the unverified 'about 900 THB, 9-11 hours' for other bus + ferry tickets changed to 'about 600-900 THB, most of the day'.",
+   "Logistics 'Backup': removed the unverified 05:30, 08:30 and 11:30 departures and 870-900 THB price (12Go could not be checked); kept the verified Lomprayah 11:00 to 18:30, 1,400 THB; taxi time to Natai added.",
+   "Logistics 'Earliest boats': the Lomprayah 07:30 boat also has a 500 THB ticket with the van to the airport (at the airport 08:30), so you do not need your own taxi.",
+   "Logistics 'Back to Phuket on Sat 23': added Circoloco hours (15:00-03:00, Baba Beach Club page); 'only 7 a day' kept (verified for 23 Jan).",
+   "Logistics 'Getting around': the '150-300 THB' range was not in the source; now 'about 200 THB per person from Thong Sala to Haad Rin' (fullmoonparty.guide).",
+   "Logistics 'Scooters': the accident-cause claim is now attributed to the scooter rental blog, and the link points to its English page.",
+   "Logistics 'Rooms': removed 'minimum stays are rare' in Ban Tai and Thong Sala (not supported); kept 'much cheaper bases'.",
+   "Logistics 'If you stay longer': removed Chill Up Mon 25 (it clashed with 'go back by Mon 25'); added Hollystone, WET and the Mon 25 Samui flights.",
+   "Logistics 'What to bring': cash-only wording made exact (OXA and the Hollystone bar) and added ID for the 20+ events."
+  ],
+  "late-jan:departure-and-solo-days": [
+   "Departure 'Power banks and liquids': rewritten to the CAAT rules reported on 4-6 Jun 2026: max 2 power banks; up to 100 Wh is fine; 100-160 Wh needs airline approval; unlabelled ones are not allowed; no use or charging on any flight; keep them in the seat pocket or under the seat. The old text (20,000-32,000 mAh at most 2, only Thai Airways and AirAsia ban use) came from AOT's 2025 page. That link was replaced by two Jun 2026 sources.",
+   "Departure 'Check-out': Proud Phuket's own booking-engine terms say check-out is 12:00, but its FAQ says 11:00. The text now tells the reader to ask at check-in, and the booking-terms link was added.",
+   "Departure 'Left luggage': the AIRPORTELs counter is on the ground floor (Thai numbering calls it '1st floor'). Added the branch page link. Exit 2, 06:00-24:00 and 150 THB per bag per 24 h are confirmed on two operator pages and the Google listing.",
+   "Departure 'VAT refund at Phuket airport': added the official rule that any item of 100,000 baht or more must also go in hand luggage. Cash (up to 30,000 baht) is paid at the VAT Refund Office. The drop box mention was removed: the drop box is only for people with no luxury goods, and it does not pay cash.",
+   "Departure 'No departure card, and e-gates': added the 120 cm minimum height and mask removal from the TAT notice of 4 Jun 2026. TM6 wording now follows TAT (not used at airports since July 2022).",
+   "Departure 'Book the ride': no source names a Grab 'calendar icon' or a Bolt 'Schedule' button. The text now uses Grab 'Advance Booking' (90 days to 75 minutes, fixed price with a 50-100 baht fee) and Bolt's own 'book up to 90 days ahead' (bolt.eu/en-th/rides, link added).",
+   "Departure 'Smart Bus': added the earlier bus from the official timetable image as the safer choice: Kata Palm 12:12, Patong 12:50, Big C Kamala 13:05, airport 14:22. The 12:47/13:20/13:35 times and the 14:52 arrival are confirmed.",
+   "Departure 'VAT refund: shopping rules': added the official tip to check your name and passport number on the P.P.10.",
+   "Departure 'Paid lounges': named the Klook product (Coral Executive Lounge, 2.5 hours).",
+   "mai-khao-plane-spotting: drive from the terminal changed from 15 to about 20 min (OSRM 19 min free-flow from the plane-spotting car park; Proud FAQ says 20 min). The flight-day tip now includes walking back to the car park.",
+   "soi-dog-foundation: terminal 15 -> 15-20 min (OSRM 17 min free-flow). The image source is now the Commons file page.",
+   "nai-yang-beach: sunset 'about 18:25' changed to '18:25-18:30' (computed 18:23 on 8 Jan to 18:31 on 26 Jan).",
+   "natural-restaurant-airport: removed the unsourced 'ponds' (official: 'tropical waterfall setting'). Distance 2.2 km became 'about 2-3 km (restaurant says 3.2 km)'. The Google listing is named 'Natural Restaurant', so the Maps tip now uses the address.",
+   "luna-hostel-phuket-airport: prices re-pulled from the Hostelworld API: 6-bed 910-1,100, 4-bed 1,160-1,400, female 1,240-1,500. Only 1 ensuite private is left (2,650-3,200), and no shared-bathroom private is offered for 23-26 Jan. Added a tip on the 200 THB cash keycard deposit. Friends Hostel 400-450 -> 400-500 THB.",
+   "atom-phuket-hotel: Back Pack room 930-1,000 -> 770-1,000 THB (current Hostelworld deal). 'Clean bathrooms' became 'clean rooms and friendly reception', as in the Google review snippets.",
+   "proud-phuket-hotel: airport 1.6 -> 1.7 km (OSRM and Phuket 101). 'A few minutes on foot from the beach' became 'about 10 minutes' (Google). Named the nearby evening market (Nai Yang Fresh Market, 16:00-19:00, about 100 m). The check-out tip gives both times. Added a tip on the 3,000 THB damage deposit and the booking-terms link.",
+   "the-slate-phuket: the adults-only pools are 14+ and open 08:00-18:00. Black Ginger is dinner only, 17:30-23:00, smart casual (official pages, now in sources).",
+   "Solo 'Social hostels': Lub d's listing has pool party nights but no pub crawls. Zostel has daily pub crawls and pool parties. Dorm price 1,100-1,400 -> 1,000-1,400 (Hostelworld, 16 Oct, with current deals).",
+   "Solo 'Find the techno people': added the SUB Instagram link (@subphuket, as in the guide's Courage Bar entry).",
+   "Solo 'Join-in boat trips': hotel pickup is not always included (many listings charge extra from Kamala or Nai Yang), and park fees may be extra.",
+   "Solo 'Drinks at parties': added a source for a party raid with urine tests (Khaosod English, Oct 2025). The UK page only covers drink spiking.",
+   "Solo 'Plan the ride home': 'about 1,000 baht' -> 'at least 1,000 baht, more for long rides'.",
+   "Solo 'Help numbers': removed 'works without a Thai SIM' (not in the TAT source). Added the in-app live chat with officers.",
+   "Solo 'Budget for a room alone': ranges now match the 16 Oct Hostelworld data: dorm 400-1,800, private room with shared bathroom 800-1,400, own bathroom 2,100-3,600."
+  ],
+  "apps": {
+   "rides-travel": [
+    "Re-checked every App Store link by iTunes lookup in the US, UK and Thai stores and every Google Play page; all titles and publishers match, none is Thai-store-only.",
+    "grab: 'only app with an official airport pickup' now says 2026 guides call it the only ride app with one (EVme and CABB taxis also have official airport listings).",
+    "grab: added 'since Mar 2025' for Phang Nga (Grab launch post) and 'do it while your home SIM works' to the SMS sign-up step.",
+    "grab: ride-type tip now matches Grab's own HKT page (adds GrabBike).",
+    "grab: fare tip widened to 600-950 (airport-Patong) and 250-380 (Patong-Kamala) to cover Eve Phuket (Aug 2026) and Phuket Travel Experience (May 2026).",
+    "grab: Travel Pass tip now says the 4 weeks start on the day you buy (Grab FAQ).",
+    "bolt: added the brief Sep 2026 service pause (The Nation, 5 Sep 2026) and reworded the licence tip.",
+    "bolt: removed 'some cancel card rides' (not in any source); kept 'many drivers prefer cash'.",
+    "bolt: 30 minutes to 90 days scheduling now sourced to the App Store text.",
+    "maxim: 'cash or card' now sourced to the App Store listing.",
+    "hkt-taxi-limo: added SUV hours (07:00-18:00), website payment options (card, PromptPay, e-wallet) and an EVme VIP taxi tip from the official HKT listing.",
+    "phuket-smart-bus: added 'every 30 minutes', Kamala travel times and the last bus from Kamala (official timetable from 16 Jan 2026); noted there is no Nai Yang stop.",
+    "phangan-taxis: 'no ride app works' softened to 'do not work reliably' (one 2026 guide says coverage is patchy); added the hotel-van ferry ticket option.",
+    "phangan-taxis: Full Moon tip now says prices go up as well as trucks running through the night.",
+    "lomprayah: 'catamaran' changed to 'fast boat' (many trips are speedboats); added the 700-baht hotel ticket and the 09:30 hotel pickup on 23 Jan.",
+    "lomprayah: removed the unverified '15:05 flight' reference; kept the 10:45 boat at the airport 11:30 (booking system).",
+    "lomprayah: 'My bookings' tip fixed (needs email plus ticket code, or a 6-digit code sent by email); contact tip now lists the LINE ID.",
+    "seatran-discovery: added the Smack One counter at Samui airport, the 670-baht hotel drop-off and the trip time.",
+    "haad-rin-queen: added that online booking closes 30 minutes before each boat; the 18:30 tip now says it is the latest boat found.",
+    "12go: cost now says ferry tickets can cost about 50-100 baht more (The Traveler, Jun 2026); removed '24/7 chat' (not in 12Go help); payment list taken from 12Go help.",
+    "bangkok-airways: lounge tip fixed (Boutique Lounge open to all, Blue Ribbon only Business Class); passport tip sourced to the 2024 CAAT rule.",
+    "Updated all verification fields with what was checked on 16 Oct 2026; removed DE from the store checks (not re-checked).",
+    "removed: kept all 6 entries; Hello Phuket reason now notes it was legal in 2024 but is gone from both stores.",
+    "corrections: all 6 re-checked; verdicts kept, 12Go correction reworded, fare and Bolt notes added to sources."
+   ],
+   "money-phone-safety": [
+    "Re-checked all 15 App Store links (plus Holafly, Saily and THIM) with apps.apple.com and the iTunes lookup API in the US, GB, TH, DE, AE and RU stores, and all 16 Google Play packages; all titles and publishers match. RU store: LINE, Airalo, TrueMoney and Saily are missing.",
+    "Wise: added card price (7 GBP, 7 EUR, 9 USD); 'UK, EEA' ATM fee changed to 'UK, Ireland' (only these pages were read); QR tip now says Wise QR does not work for US, Canada and Japan accounts.",
+    "Wise and corrections: confirmed 250/350 baht ATM fees in the Kasikorn, SCB, Krungsri and GSB PDFs myself; noted no data for Bangkok Bank and Krungthai.",
+    "Revolut: verified fees in a browser (UK help, UK and Lithuania Standard fees, UK Premium); cost now says UK and EU and drops the unconfirmed 'min 1 EUR'; weekend tip now gives Thai time (Sat 05:00 to Mon 06:00 in January); added Plus 0.5% and Premium 400 GBP ATM.",
+    "Revolut: added link to the Standard fees page.",
+    "Apple Pay / Google Wallet: 'where' reworded so it does not suggest contactless fails on Koh Phangan; removed the unverified 'shops at Phuket airport'; tip about failures now quotes Apple (symbol shown but not set up).",
+    "TAGTHAi: 'Official tourist app backed by TAT' changed to 'made with support from TAT' (TAT News wording); limits tip now names the June 2026 KBank sheet (my own copy, created 16 Jun 2026); added a low-ratings tip; 'add a card before you fly' (TAGTHAi page tip).",
+    "TrueMoney: setup now says approval takes 1-3 business days and uses the app's 'Non-Thai citizen' label; replaced the unsupported 'guides say foreign cards do not work for top-ups' with the cash top-up advice; reworded the PromptPay QR tip to the confirmed 'no transfers to bank accounts'; added RU App Store tip.",
+    "Xe: removed unverified 'Hotel and airport desks pay less'; verification now shows the numbers behind 0.5-0.9%.",
+    "Mamy Exchange: removed the Lion Exchange tip, because facebook.com/lionexchangepatong shows 'This content isn't available'; added the shop address and phone numbers from the Mamy contact page; 'best money changer we found' changed to 'a Phuket money changer with good rates'.",
+    "AIS: added 100 baht call credit, AIS and Telewiz shops, the 'Activation code' tip for one-phone users and a tip about failed passport checks (AIS site reviews).",
+    "True: added domestic arrivals counter at HKT, 'no outgoing calls or SMS' for the data-only SIM, the two conflicting THIM end dates, and a tip that the True app covers dtac numbers.",
+    "Airalo: added 'eSIM can be installed only once' tip and RU App Store tip; Holafly/Saily tip no longer fixes 19 days.",
+    "LINE: added tip that LINE is not in the Russian App Store; added Mamy as a LINE source.",
+    "WhatsApp: noted that the official FAQ did not load; live-location steps match several guides.",
+    "Google Translate: live translate tip now names the Conversation mode, as in Google Help.",
+    "Tourist Police: removed 'red' SOS button (not confirmed) and 'the app itself is in English' (a 2025 guide says it has 6 languages); setup no longer says 'test it' (pressing SOS calls the police) and now says to sign up with a Google account; i lert u tip reworded because TAT (Jul 2026) still mentions i lert u; reviews tip now based on 2025-2026 App Store reviews; added TAT Jul 2026 link.",
+    "Emergency numbers: 1155 tip now uses TAT wording (emergencies and questions) instead of the unsourced list.",
+    "Corrections: claim 2 changed from 'correct' to 'unsupported' for 'answer faster than by email or phone', with a safer sentence; claim 1 source updated to TAT Jul 2026, which names the five live-chat languages.",
+    "Removed list: fixed the Alipay reason (Alipay to PromptPay link went live 30 Oct 2025 for Chinese visitors, per The Standard); fixed TouristDigiPay date (Aug 2025, 18 months); i lert u, SuperRich, TMD and dtac reasons updated with checked facts."
+   ],
+   "food-events-bookings": [
+    "grabfood: 'where' now adds that 2026 local guides (Maratnomad, Phanganist) say Grab does not run on Koh Phangan; both added as sources.",
+    "grabfood: added two tips from the Grab TH FAQ (order from up to 4 restaurants at once; tell the rider in the chat before paying with a big note) and named the 'Order for later' tab.",
+    "line-man: 'where' no longer states Koh Samui coverage; the 77-province line is kept as LINE MAN's own claim, and Samui and Koh Phangan are marked not confirmed.",
+    "line-man: setup now says the LINE login comes from the store text; added Marketeer (2020) as the source for Phuket coverage and the English chat stickers from LMWN.",
+    "delivery-kpg: replaced the unsupported 'reviews mention long waits' with what the 2025-2026 reviews say (app bugs, orders cancelled without notice).",
+    "delivery-kpg: cancel tip adds 'not once the restaurant starts cooking' (FAQ); verification notes that the store text says card payment but the FAQ says cards are only planned.",
+    "wongnai: no content change; verification now lists the 10 storefronts checked (TH only) and the app version.",
+    "dice: removed the unsupported setup step 'open the ticket once so it is saved offline'; setup now says to use your full legal name because Dice matches it to your ID.",
+    "dice: QR timing changed to 'about 2 hours before the start' (Dice wording), not 'before doors'.",
+    "dice: rewrote the Circoloco limits tip: one listing for all three dates, max 6, no refund within 24 h of the start; dropped the confusing 'sales end 12:00 on 23 Jan' line.",
+    "dice: added a door-list tip for a lost or broken phone, and the 15:00 to 03:00 times in 'where'.",
+    "ticketmelon: added that Ticketmelon allows QR screenshots (save one as a backup); split the resale tip; payment list now tied to the Circoloco event.",
+    "megatix: removed the unverified '3.5% booking fee on DnB Allstars THB tickets'; cost now says a service fee is added at checkout (DnB official site).",
+    "megatix: 'where' adds the DnB Allstars venue and dates (Azulea, Chalong, 22 to 24 Jan).",
+    "megatix: age tip extended with Megatix page data: Jungle Experience 20+, OXA 18+.",
+    "megatix: added a Café del Mar presale tip and links to the Café del Mar, OXA and Jungle Experience presenter pages and the DnB Allstars THB page.",
+    "eventpop: door tip now says to show the e-ticket with your passport (Eventpop help); added the tip that a ticket moves to a friend's account if you enter their Eventpop email.",
+    "eventpop: cost line tied to the store text; added the official Waterfall site (links tickets to Eventpop) as a source.",
+    "entrix: fixed 'where': Phuket listings only link to other shops and Samui had no events (was 'A few Phuket and Samui events too').",
+    "entrix: 'what' now names the operator from the terms (Phangan Events Co. Ltd) instead of saying it is the phangan.events team.",
+    "entrix: added a tip that Bambu Sunday Sessions are on Sundays and the Koh Phangan days (Tue 19 to Sat 23 Jan) have none; partner tip now spells GETIN.",
+    "entrix: verification names the App Store 'ENTRIX' (id1438212764, SEGUR PARKING S.L.) that is not Entrix.",
+    "ra-guide: setup now says 'Apple account' (store text); barcode tip adds Apple Wallet; added a Shelter Phuket RA link.",
+    "ra-guide: Instagram tip rewritten with places (Shelter in Patong, Courage in Phuket Town) and the fact that SUB nights are on RA; removed the unverified 'small parties appear late'.",
+    "vibez: added a tip that Lost Jungle (9 to 11 Jan) falls in the Phuket group week, not the Koh Phangan days.",
+    "get-in: no content change; verification adds the Utopia dates on Entrix (24 Oct, 22 Dec, 31 Dec) and that no January date was found.",
+    "telegram-party-guide: added the free Phangan Life app (checked in US, GB and TH App Store and Google Play) as a tip and link; the Instagram tip now lives only in the RA item.",
+    "telegram-party-guide: setup now says to sign up at home, where the SMS code reaches your home number.",
+    "agoda: replaced the third-party blog sources with Agoda's official Terms of Use; payment option names fixed to Agoda's wording ('Pay Now', 'Book Now, Pay Later', 'Pay at Hotel').",
+    "agoda: 'Pay at Hotel' no longer claims you pay in baht at check-in; it now says the hotel may still hold your card or take a deposit (terms 15.2).",
+    "agoda: added the up-to-5% currency tip from the terms; 'what' rewritten from Wikipedia ('Southeast Asian online travel agency', Booking Holdings).",
+    "booking-com: tax tip reworded; added Booking.com's price-display docs as a source; 'what' uses the store wording 'at most properties'.",
+    "hostelworld: chat-timing tip fixed: the '14 days' text is only in the older TH App Store description; current US and Play texts call the meet-ups 'Events'.",
+    "klook: removed the unsourced claim that Kamala and Nai Yang pickups cost extra; transfer tip adds the driver's name sign; SIM tip names the True Shop in the international arrivals hall.",
+    "getyourguide: no content change; verification notes the site returns HTTP 403 to scripts.",
+    "removed: foodpanda reason now cites Delivery Hero's 23 Apr 2025 announcement; ShopeeFood reason updated (iOS TH-only in 5 stores, only a vendor page claims Phuket).",
+    "corrections: RA correction no longer contains the unverified '1-3 weeks ahead' claim; Hostelworld note fixed (Social Pass since Nov 2025, not Sep 2026)."
+   ]
+  }
+ },
+ "unverified": {
+  "events": [],
+  "places": [],
+  "areas": [],
+  "hotels": []
+ },
+ "curated": true,
+ "appsCorrections": [
+  {
+   "from": "rides-travel",
+   "claim": "Both apps [Grab and Bolt] work in Phuket and show the price first. Typical car fares: airport to Patong 600-950 baht, Patong to Kata 250-500, Patong to Old Town 400-550. Bolt is often a bit cheaper, so compare. Prices go up at busy times and in heavy rain.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://phuket-travel-experience.com/guide/grab-in-phuket/ (May 2026: airport-Patong 750-950, Patong-Kata 350-500, Patong-Old Town 400-550, rain surcharges); https://www.evephuket.com/blog/phuket-taxi-prices-2026/ (Aug 2026: airport-Patong 570-850, Patong-Kata 250-350, Bolt 5-30% cheaper); https://www.phuket101.net/getting-around-phuket/ (Sep 2026: 750-1,250 at peak). Guides differ, so keep ranges."
+  },
+  {
+   "from": "rides-travel",
+   "claim": "Grab pickup is near Exit 8 (international) or Exit 1 (domestic).",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.grab.com/global/airport-rides/phuket-international-airport/ (official steps: international via Exit 8 toward the domestic terminal; domestic via Gate 1, turn right to the Grab booth); https://www.phuket101.net/phuket-airport/ (Sep 2026)"
+  },
+  {
+   "from": "rides-travel",
+   "claim": "Install Grab and Bolt before you arrive and add a payment card. Compare both for each ride. inDrive also works in Phuket and lets you offer your own price.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.phuket101.net/getting-around-phuket/ (Sep 2026: Grab, Bolt and inDrive legal in Phuket); https://phuketexpatguide.com/blog/grab-vs-bolt-vs-indrive-phuket-2026/ (May 2026); https://www.nationthailand.com/news/policy/40067173 (DLT list, Jun 2026). Bolt's licence renewal is still pending (MGR Online, Jul 2026)."
+  },
+  {
+   "from": "rides-travel",
+   "claim": "Airport limousine taxis have fixed prices on a board, about 800 baht to Patong; metered taxis add a 100-baht airport fee.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://phuket.airportthai.co.th/service/transportation (official HKT listing: limousine Patong 800 baht; meter taxi plus 100-baht airport fee set by the Ministry of Transport); https://phuketairportlimousine.com/product/limousine-service-phuket-area-dropoff/ (Patong 800, Oct 2026); https://www.phuket101.net/phuket-airport-transfers/"
+  },
+  {
+   "from": "rides-travel",
+   "claim": "12Go: Book ferries, buses, vans and domestic flights, with e-tickets on your phone. Check the pier and pickup time carefully.",
+   "verdict": "wrong",
+   "correction": "12Go: Book ferries, buses, vans and domestic flights in one app. If the trip has an 'e-ticket' sign, the PDF on your phone is enough. If not, print the voucher and swap it for a ticket at the counter. Check the pier and pickup time carefully.",
+   "source": "https://faq.12go.asia/hc/en-us/articles/30406383847441-Do-I-have-to-print-anything ('you must often print the voucher'; phone PDF is enough only with the e-ticket sign; some operators refuse boarding without a printout)"
+  },
+  {
+   "from": "rides-travel",
+   "claim": "Phuket Smart Bus: pay by contactless card, Thai QR or cash. Live tracking on phuketsmartbus.com.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.phuketsmartbus.com/payment (contactless Visa, Mastercard, JCB, Apple Pay, Google Pay; QR with a Thai banking app; cash); https://www.phuketsmartbus.com/tracking (real-time bus positions)"
+  },
+  {
+   "from": "money-phone-safety",
+   "claim": "Thailand Tourist Police app: Official app with an SOS function that connects you to the Tourist Police (1155) and uses GPS to find you. It works without a Thai SIM. Live chat in English, Chinese, Japanese, Korean and Russian.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.tatnews.org/2026/07/trusted-thailand-is-rewriting-the-rules-of-travel-safety/ (21 Jul 2026: SOS to 1155, no Thai SIM needed, live chat in English, Chinese, Japanese, Korean and Russian); https://www.tatnews.org/2024/12/stay-connected-and-safe-in-thailand-with-the-thailand-tourist-police-app (GPS); https://www.gov.uk/foreign-travel-advice/thailand/getting-help (works without a Thai SIM). Worth adding: it needs mobile data or Wi-Fi, and 2025-2026 store reviews report failures, so keep 1155 as a normal call."
+  },
+  {
+   "from": "money-phone-safety",
+   "claim": "LINE is the main chat app in Thailand. Many hotels, drivers, tour shops and clubs answer on LINE faster than by email or phone.",
+   "verdict": "unsupported",
+   "correction": "LINE is the main chat app in Thailand. Many hotels, drivers, tour shops and clubs have a LINE account and answer messages there.",
+   "source": "https://www.lycorp.co.jp/en/company/global/ (LINE is the No. 1 messaging app in Thailand, used by over 80% of the country). Businesses with LINE contacts: https://www.illuzionphuket.com/, https://mamyexchange.com/. No source measures that they answer 'faster than by email or phone', so that part is unsupported."
+  },
+  {
+   "from": "money-phone-safety",
+   "claim": "A Wise or similar card gives a good exchange rate. In 2026 Thai bank ATMs charge foreign cards 250 baht (Visa) or 350 baht (Mastercard) per withdrawal, so take out larger amounts. Always choose to pay in baht (THB), not in your home currency.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "Official fee tables read on 16 Oct 2026: Kasikorn from 22 Sep 2026 (https://www.kasikornbank.com/th/rate/fee/chargesdoc/servicingfees_th.pdf: Visa 250, UnionPay 250, Mastercard 350), SCB from 1 Sep 2026 (Visa 250, Mastercard 350, UPI and JCB 250), Krungsri from 11 Mar 2026 (Mastercard 350, Visa, UnionPay, JCB 250), GSB (Visa 250, Mastercard 350 from 1 Apr 2026). Not found for Bangkok Bank or Krungthai, so check the fee on the ATM screen. Wise conversion to THB about 0.6-0.75% (Wise prices, 16 Oct 2026)."
+  },
+  {
+   "from": "money-phone-safety",
+   "claim": "Or buy an AIS or True eSIM online before the trip, or use an eSIM app such as Airalo. Check that your phone supports eSIM. Keep your home SIM on for bank SMS codes.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.ais.th/esim-traveller/ (AIS tourist eSIM online; passport and selfie check takes 1 to 48 hours; no refund); https://store.true.th/sims/prepaid-3/thailand-tourist-infinite-sim?family=0157301T30D (True tourist eSIM 30 days 1,199 baht); https://www.airalo.com/thailand-esim (data-only, True and AIS networks). Worth adding: the phone must be unlocked, start the AIS check a few days before the flight, and turn off data roaming on the home SIM."
+  },
+  {
+   "from": "money-phone-safety",
+   "claim": "Google Translate: download Thai for offline use. The camera mode reads menus and signs, and conversation mode helps with drivers.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://support.google.com/translate/answer/6142473 (offline download), https://support.google.com/translate/answer/6142483 (camera, also offline with downloaded languages), https://support.google.com/translate/answer/6142474 (live translate with Conversation and Face to face modes; Thai is supported)."
+  },
+  {
+   "from": "food-events-bookings",
+   "claim": "Klook and GetYourGuide: book tours, boat trips and tickets with reviews and clear prices. Check what is included (hotel pickup, park fees, lunch) and the cancellation rules.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://apps.apple.com/gb/app/id705079381 (GetYourGuide store text, 16 Oct 2026: instant confirmation, offline tickets, free cancellation up to 24 h before for most bookings) ; https://apps.apple.com/gb/app/id961850126 (Klook store text: top-rated activities, e-vouchers for offline use) ; https://www.klook.com/airport-transfers/service/hkt-phuket-international-airport/ (via search: 'All-inclusive price, no surprises', about 4.6/5 from tens of thousands of reviews)"
+  },
+  {
+   "from": "food-events-bookings",
+   "claim": "Hostelworld: book a bed through Hostelworld, and the app opens chats with people in your hostel and in Phuket 7 days before check-in. 'Linkups' are meet-ups that hostels and travellers post, from dinners to nights out.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://www.hostelworld.com/social-features ('available during your stay and from 7 days before check-in', 16 Oct 2026) ; https://www.hostelworld.com/linkups (activities by your hostel, hostels nearby and backpackers: walking tours, bar crawls, group dinners; from 14 days before). Worth adding: since Nov 2025 a Social Pass (EUR 4.99 a week, one-time) opens the chats without a booking, and newer app texts call the meet-ups 'Events': https://www.hostelworld.com/blog/hostelworld-social-pass-the-social-app-no-booking-required/"
+  },
+  {
+   "from": "food-events-bookings",
+   "claim": "Circoloco tickets: Dice says 18+, but Ticketmelon says 20+. Bring your passport.",
+   "verdict": "correct",
+   "correction": "",
+   "source": "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets ('This is an 18+ event', 16 Oct 2026) ; https://www.ticketmelon.com/circoloco/circolocoth27 (event data age_restriction 20) ; https://dicefm.zendesk.com/hc/en-gb/articles/43436840366225-Is-there-an-age-restriction-for-my-event (bring physical ID; a photo of ID will likely not be accepted)"
+  },
+  {
+   "from": "food-events-bookings",
+   "claim": "Extra (solo section, 'Find the techno people'): 'Check Resident Advisor (Phuket page) ...' with the link ra.co/events/th/phuket.",
+   "verdict": "wrong",
+   "correction": "Check Resident Advisor with the location set to Thailand, 'All': RA lists Phuket and Koh Phangan clubs there, and its 'Phuket' area is empty. For Phuket, also follow Shelter, Courage and the SUB crew on Instagram.",
+   "source": "RA GraphQL (https://ra.co/graphql), 16 Oct 2026: area 'Phuket' (id 694, urlName phuket) has 0 listings from 2024 to 2027; Café del Mar Phuket, Armania Phuket and Unclave listings sit in Thailand 'All' (id 67). Club pages to link instead: Shelter Phuket https://ra.co/clubs/160713, Café del Mar Phuket https://ra.co/clubs/137028. The earlier '1-3 weeks ahead' wording had no source and was dropped."
+  },
+  {
+   "from": "food-events-bookings",
+   "claim": "Extra (event 'Argy at Café del Mar'): link 'Tickets (Megatix)' goes to https://megatix.co.th/",
+   "verdict": "wrong",
+   "correction": "Tickets: on the Café del Mar event page, which sells through Megatix. Presale opens Tue 20 Oct 2026 at 18:00 Thai time. Megatix Thailand is megatix.in.th.",
+   "source": "http://megatix.co.th/ shows 'Domain parked by Asia Registry' and HTTPS does not connect (16 Oct 2026) ; https://phuket.cafedelmar.com/events/argy-jan2027 ('Presale goes live on 20 Oct at 6 PM', Megatix widget script from megatix.in.th, Age 20+) ; https://megatix.in.th/cafedelmarphuket (Café del Mar presenter page)"
+  }
+ ]
+}

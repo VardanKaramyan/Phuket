@@ -1728,5 +1728,165 @@
   "credit": "© The Slate",
   "license": "official site",
   "source": "https://www.theslatephuket.com/experiences/pools-and-dreamscape.html"
+ },
+ "hotels:luxurious-seaview-villa-rawai": {
+  "file": "assets/img/hotels-luxurious-seaview-villa-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 961,
+  "credit": "© Jonas & Noi",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:fantastic-seaview-villa-rawai": {
+  "file": "assets/img/hotels-fantastic-seaview-villa-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 1081,
+  "credit": "© Jonas & Noi",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/43792215?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:luxury-4br-pool-villa-rawai": {
+  "file": "assets/img/hotels-luxury-4br-pool-villa-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Benoit",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1136544214678784827?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:kata-v2-sea-view-villa": {
+  "file": "assets/img/hotels-kata-v2-sea-view-villa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 961,
+  "credit": "© Yang",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1292044049224109456?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:sawansa-34a-patong": {
+  "file": "assets/img/hotels-sawansa-34a-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 810,
+  "credit": "© Oy",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/648811354904336000?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:modern-4br-villa-laguna": {
+  "file": "assets/img/hotels-modern-4br-villa-laguna.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Debbie",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1516415222322114858?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:spacious-4br-home-bluetree": {
+  "file": "assets/img/hotels-spacious-4br-home-bluetree.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Jennifer",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/948105045915258272?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:luxpride-2-wallaya-v7": {
+  "file": "assets/img/hotels-luxpride-2-wallaya-v7.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Island Travel",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1544037797487869623?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:la-belle-pool-villa": {
+  "file": "assets/img/hotels-la-belle-pool-villa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Na",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/39211283?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:alisa-pool-villa": {
+  "file": "assets/img/hotels-alisa-pool-villa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© The Club Miracle Family",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1761484044779958433?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:brand-new-4br-villa-bangtao": {
+  "file": "assets/img/hotels-brand-new-4br-villa-bangtao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Elizaveta",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1510640953380000157?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:bangtao-3br-pool-villa-laguna": {
+  "file": "assets/img/hotels-bangtao-3br-pool-villa-laguna.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Taige",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1263013060593469053?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:laguna-park-5br-villa": {
+  "file": "assets/img/hotels-laguna-park-5br-villa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 1920,
+  "credit": "© Svetlana",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1528952959320085603?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:lux-laguna-park-5br-rooftop-pool": {
+  "file": "assets/img/hotels-lux-laguna-park-5br-rooftop-pool.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Perfect Phuket",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1582239088245163061?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:diamond-villa-278": {
+  "file": "assets/img/hotels-diamond-villa-278.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© host",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1591208483216514134?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:chill-beach-bangla-patong": {
+  "file": "assets/img/hotels-chill-beach-bangla-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1024,
+  "srcH": 683,
+  "credit": "© Chill Beach Bangla",
+  "license": "Booking.com listing photo",
+  "source": "https://www.booking.com/hotel/th/chill-beach-bangla-comfy-bed-and-pool-with-3-bedrooms.html?checkin=2027-01-08&checkout=2027-01-18&group_adults=8&group_children=0&no_rooms=1"
  }
 }

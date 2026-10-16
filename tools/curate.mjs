@@ -334,6 +334,17 @@ mergeLateJan(ROOT, log)
   }
 }
 
+// ---- hotels: the group's villa shortlist replaces the researched hotels ----
+// User, 16 Oct 2026: Airbnb and Booking.com links from the group chat, for 8 guests on 8-18 Jan. The stays are
+// hand-written in data/stays.json (price, photos, copy); edit them there, not here.
+{
+  const st = rd('stays.json')
+  const d = rd('hotels.json')
+  log.push(`hotels: replaced ${d.items.length} researched hotels with ${st.items.length} stays from data/stays.json`)
+  d.items = st.items
+  wr('hotels.json', d)
+}
+
 // ---- Google place ids (recorded by the maps reviewer): links open the exact listing ----
 {
   const g = JSON.parse(fs.readFileSync(path.join(ROOT, 'research/google-place-ids.json'), 'utf8'))
@@ -358,7 +369,9 @@ mergeLateJan(ROOT, log)
 // ---- area labels follow the map: if a pin sits clearly inside another area's outline, relabel it ----
 const geo = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/geo/areas.geojson'), 'utf8'))
 const ids = new Set(geo.features.map((f) => f.properties.id))
-const KEEP_AREA = new Set(['big-buddha', 'black-rock-viewpoint', 'money-shop/Money Shop Exchange Karon'])
+// the stays' Airbnb pins are approximate: two Laguna villas sit just inland of the Bang Tao outline, and Kata V2
+// (on the edge of Kata Beach, the listing says) just inside Kata Noi
+const KEEP_AREA = new Set(['big-buddha', 'black-rock-viewpoint', 'money-shop/Money Shop Exchange Karon', 'modern-4br-villa-laguna', 'luxpride-2-wallaya-v7', 'kata-v2-sea-view-villa'])
 const relabel = (kind, it) => {
   if (!ids.has(it.area) || !Number.isFinite(it.lat)) return
   const pt = turf.point([it.lng, it.lat])

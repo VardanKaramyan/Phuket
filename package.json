@@ -1,0 +1,27 @@
+{
+  "name": "phuket-trip-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mobile-first offline travel guide for Phuket, 8-26 Jan 2027",
+  "scripts": {
+    "data": "node tools/import.mjs research/result-final.json && node tools/curate.mjs && node tools/import-apps.mjs research/result-apps.json",
+    "photos": "python3 -I tools/collect-photos.py && node tools/images.mjs",
+    "geo": "node tools/geo.mjs",
+    "images": "node tools/images.mjs",
+    "build": "node tools/build.mjs",
+    "check": "node tools/check.mjs",
+    "test:offline": "node tools/offline-test.mjs",
+    "test:popups": "node tools/popup-test.mjs",
+    "test": "node tools/check.mjs && node tools/offline-test.mjs && node tools/popup-test.mjs",
+    "qa": "node tools/qa-shots.mjs dist/phuket-guide-offline.html qa-out",
+    "all": "npm run data && npm run build && npm test",
+    "serve": "npx --yes http-server@14.1.1 dist -p 8080 -c-1"
+  },
+  "devDependencies": {
+    "@turf/turf": "^7.2.0",
+    "leaflet": "^1.9.4",
+    "puppeteer-core": "^24.10.0",
+    "sharp": "^0.34.3"
+  }
+}

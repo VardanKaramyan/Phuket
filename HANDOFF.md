@@ -4,7 +4,7 @@
 This file is meant to be enough on its own, on any machine. Open the folder in Claude Code and say: **"Read HANDOFF.md and continue."**
 
 ---
-
+ 
 ## 1. Start here on a new machine
 
 Everything the project needs is inside this folder. The old machine's Claude Code memory and session logs do **not** move with it; what mattered from them is written down in this file.

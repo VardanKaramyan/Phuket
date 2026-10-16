@@ -1,0 +1,935 @@
+{
+ "items": [
+  {
+   "id": "khao-khad-viewpoint",
+   "name": "Khao Khad Viewpoint Tower",
+   "nameThai": "หอชมวิวเขาขาด",
+   "tier": "hidden-gem",
+   "category": "viewpoint",
+   "area": "cape-panwa",
+   "lat": 7.8347,
+   "lng": 98.3836,
+   "coordSource": "osm (viewpoint node 1957082023) + Google pin 'Kaokard Viewpoint Tower' (via Wanderlog) + Commons photo geotag, all within 20 m; thaiholidayguide pin 85 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kaokard Viewpoint Tower, Wichit, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "bestTime": "Late afternoon for clear light, or a clear early morning. Avoid midday heat.",
+   "openText": "Daily, about 06:00-21:00 (Thai Holiday Guide, Jul 2026). Another guide says until 19:00. Google lists no hours.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "On the hill road from Phuket Town to Cape Panwa (Sakdidet Road, Wichit), about 15-20 minutes from Phuket Town by car or scooter. No public transport. Park at the base, then walk up about 200 steps (10-15 minutes) to the tower.",
+   "description": "Small viewing tower on Khao Khad hill, on the road to Cape Panwa. From the top you get a 360-degree view: Chalong Bay, Phuket Town, Cape Panwa and many small islands. It is calmer than the big west-coast viewpoints. Free, with a car park, toilets and a few stalls at the bottom.",
+   "tips": [
+    "There is no shade on the stairs. Bring water and a hat.",
+    "Show the Thai name จุดชมวิวเขาขาด (or หอชมวิวเขาขาด) to drivers.",
+    "Combine with Ao Yon Beach and a seafood dinner in the Panwa area."
+   ],
+   "goodFor": [
+    "views",
+    "photos",
+    "short stop"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Kao-Khad_Views_tower_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Rom870"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kao_Khad_2.jpg/1280px-Kao_Khad_2.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Slleong (view of Chalong Bay from the Khao Khad hill road)"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/khao-khat-views-tower/",
+    "https://wanderlog.com/place/details/126251/kao-khad-views-tower",
+    "https://windowonphuket.com/khao-kad-viewpoint/",
+    "https://www.phuket101.net/panwa-beach/",
+    "https://www.openstreetmap.org/node/1957082023",
+    "https://commons.wikimedia.org/wiki/File:Kao-Khad_Views_tower_-_panoramio.jpg"
+   ],
+   "verification": "Google listing 'Kaokard Viewpoint Tower' operational, 4.5 from 1,519 reviews (via Wanderlog, 15 Oct 2026); no closure or renovation news found. Thai Holiday Guide (Jul 2026): free, about 06:00-21:00, about 200 unshaded steps, toilets and stalls at the base. OSM, Google pin and Commons geotag agree within 20 m."
+  },
+  {
+   "id": "bang-rong-mangroves",
+   "name": "Bang Rong Pier and Mangrove Walk",
+   "nameThai": "บ้านบางโรง",
+   "tier": "hidden-gem",
+   "category": "nature",
+   "area": "thalang",
+   "lat": 8.05,
+   "lng": 98.4159,
+   "coordSource": "osm (Bang Rong Pier node 485657809) + Google pin of Bang Rong Community Seafood Restaurant (via Wanderlog) + Commons harbour photo geotag + thaiholidayguide pin, all within 120 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bang Rong Pier, Pa Khlok, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "Lunch time on a weekday. Check the tide: the last part of the walkway to the floating restaurant is steep at low tide.",
+   "openText": "Community seafood restaurant daily 10:30-18:30 (Google listing). Community tourism office about 08:00-18:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free to walk. Food is paid. Community half-day tour from 2,800 THB per person (at least 2 people, book 2-3 days ahead, hotel transfer not included).",
+   "gettingThere": "North-east coast. Coming north on the Pa Khlok road, turn right at the mosque about 1 km north of the Bang Pae Waterfall entrance, and drive to the pier. About 35 km from Patong. Car or scooter. Parking is free if you only eat or look around.",
+   "description": "Small Muslim fishing village on the quiet north-east coast, with the pier for boats to Koh Yao. A wooden boardwalk goes through the mangroves to a floating community restaurant with fresh seafood and views of the boats. Kayaks can be rented to paddle into the mangrove channels; ask ahead.",
+   "tips": [
+    "No alcohol here. This is a Muslim community, so dress modestly.",
+    "The community runs half-day tours (pineapple farm, rubber tapping, coconut and cooking). Book at bangrongconnect.com 2-3 days ahead.",
+    "Kayak: old reports say about 200 THB per hour at the restaurant. A 2026 guide says to arrange kayaks and boats in advance.",
+    "Boats to Koh Yao Noi and Koh Yao Yai leave from this pier."
+   ],
+   "goodFor": [
+    "mangroves",
+    "kayaking",
+    "local seafood"
+   ],
+   "links": [
+    {
+     "label": "Bang Rong community tourism (official)",
+     "url": "https://www.bangrongconnect.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ban_Bang_Rong_harbour_-_panoramio.jpg/1280px-Ban_Bang_Rong_harbour_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Tuderna"
+    }
+   ],
+   "sources": [
+    "https://www.bangrongconnect.com/",
+    "https://www.bangrongconnect.com/product/bangrong-community-based-tourism-half-day-program/",
+    "https://www.thaiholidayguide.com/attraction/ban-bang-rong-agricultural-conservation-tourism/",
+    "https://wanderlog.com/place/details/9151970/bang-rong-community-seafood-restaurant",
+    "https://www.jamiesphuketblog.com/2017/05/bang-rong-pier-and-community.html",
+    "https://www.thaipbsworld.com/lifestyle/the-other-side-of-paradise",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-manoh-pier-koh-yao-noi-bang-rong-pier-phuket",
+    "https://www.openstreetmap.org/node/485657809"
+   ],
+   "verification": "Google: restaurant operational, daily 10:30-18:30, 4.6 from 61 reviews (via Wanderlog, 15 Oct 2026). CBT site live (2026 footer): half day from 2,800 THB, min. 2 people, book 2-3 days ahead, no transfer. Thai Holiday Guide (Jul 2026): free entry, activities arranged in advance. Ferryscanner (2026): boats to Koh Yao Noi and Yai. Directions: Jamie's Phuket Blog."
+  },
+  {
+   "id": "gibbon-rehabilitation-project",
+   "name": "Gibbon Rehabilitation Project",
+   "nameThai": "โครงการคืนชะนีสู่ป่า",
+   "tier": "hidden-gem",
+   "category": "nature",
+   "area": "thalang",
+   "lat": 8.0419,
+   "lng": 98.3938,
+   "coordSource": "Google pin 'The Gibbon Rehabilitation Project' (via Wanderlog) + osm Bang Pae car park (way 317215978), 30 m apart; osm node 2421008074 is tagged 'approx location only' and lies 115 m west",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Gibbon Rehabilitation Project, Pa Khlok, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "Morning session (10:30), when the forest is cooler.",
+   "openText": "Visits only in a learning session: 1 hour at 10:30, 12:30 or 14:00, or 2.5 hours 09:30-12:00 (booked on Airbnb). On days with no bookings there are no staff and the project is closed.",
+   "feeText": "1,100 THB adult when booked online (1,200 THB walk-in), child 5-14 650 THB, under 5 free. Plus national park fee 200 THB adult, 100 THB child, cash only at the gate.",
+   "gettingThere": "At the Bang Pae Waterfall entrance of Khao Phra Thaeo National Park, north-east Phuket, about 20 km from Phuket Town. No hotel pickup: come by car, scooter or taxi.",
+   "description": "Small charity that rescues gibbons from the tourist trade and returns them to the forest. In a one-hour session a guide explains the work at the edge of Phuket's last rainforest. Only 36 visitors a day are allowed, to keep contact with the gibbons low. A calm, honest nature stop.",
+   "tips": [
+    "Book online at least 4 hours before the session. Walk-ins may find it full, or closed if nobody booked.",
+    "Bang Pae Waterfall is a short walk away. In January it has less water than in the rainy season (June-November).",
+    "A jungle trail links Ton Sai and Bang Pae waterfalls. Do not walk it alone; ask the park rangers about a guide.",
+    "Peang Prai, a Thai restaurant at the park entrance listed in the Michelin Guide, is good for lunch."
+   ],
+   "goodFor": [
+    "wildlife",
+    "rainforest",
+    "ethical animal visit"
+   ],
+   "links": [
+    {
+     "label": "Book a visit (official)",
+     "url": "https://www.gibbonproject.org/visit-us/booking/"
+    },
+    {
+     "label": "1-hour session tickets",
+     "url": "https://gibbonprojectphuket.myshopify.com/products/1-hour-learning-about-gibbon-rehabilitation"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.gibbonproject.org/wp-content/uploads/2023/11/1-hour.png",
+     "source": "gibbonproject.org og:image (official)",
+     "license": "Official promotional image",
+     "credit": "Gibbon Rehabilitation Project"
+    }
+   ],
+   "sources": [
+    "https://www.gibbonproject.org/visit-us/booking/",
+    "https://gibbonprojectphuket.myshopify.com/products/1-hour-learning-about-gibbon-rehabilitation",
+    "https://wanderlog.com/place/details/884",
+    "https://windowonphuket.com/?p=3460",
+    "https://www.lonelyplanet.com/thailand/attractions/nam-tok-bang-pae/a/poi-sig/1162529/1324152",
+    "https://guide.michelin.com/en/phuket-region/phuket/restaurant/peang-prai",
+    "https://www.openstreetmap.org/way/317215978",
+    "https://www.openstreetmap.org/node/2421008074"
+   ],
+   "verification": "Official booking page and ticket shop (product updated 15 Oct 2026): prices, session times, 36 visitors a day, 4-hour booking cutoff, park fee 200/100 THB cash (fees updated 23 May 2025), 2.5-hour session links to Airbnb. Google listing operational, 4.5 from 557 reviews. Waterfall: lowest flow Feb-Apr (Window on Phuket), best Jun-Nov (Lonely Planet)."
+  },
+  {
+   "id": "koh-sirey",
+   "name": "Koh Sirey: Hilltop Temple and Sea Gypsy Village",
+   "nameThai": "เกาะสิเหร่",
+   "tier": "hidden-gem",
+   "category": "temple",
+   "area": "phuket-town",
+   "lat": 7.8802,
+   "lng": 98.4263,
+   "coordSource": "Google pin 'Wat Ban Koh Sirey' (via Wanderlog) + osm temple way 1548196924 + reclining Buddha node 4223066592, within 80 m; village: osm node 11027280955 at 7.8748, 98.4218",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Ban Koh Sirey, Ratsada, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 2.5
+   },
+   "bestTime": "Late afternoon for the view and soft light. Come at lunch time if you want seafood in the village.",
+   "openText": "Temple open in the daytime. The village is a living community, not an attraction.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Leave a small donation if you photograph the reclining Buddha.",
+   "gettingThere": "About 4-5 km east of Phuket Old Town, over a very short bridge, about 15 minutes by car or Grab. A small road climbs to the temple; park and walk up the last part. The Urak Lawoi village is at Laem Tukkae, below the temple to the south-west.",
+   "description": "Small island joined to Phuket Town by a short bridge. On the hilltop, Wat Ban Koh Sirey has a long golden reclining Buddha and a wide view over Phuket Town. Below is Laem Tukkae, a working village of the Urak Lawoi sea people. It is quiet compared with the beach areas. Monkeys live near the bridge.",
+   "tips": [
+    "Cover shoulders and knees in the temple.",
+    "In the village, be respectful and ask before you take photos of people.",
+    "Keep food and sunglasses away from the monkeys at the bridge.",
+    "Hilltop Cafe (a Starbucks) at Sinae Phuket hotel has a 360-degree view, 10:00-20:00. You cannot drive up: buy a 150 THB voucher at the base (it pays for one drink) and take the buggy."
+   ],
+   "goodFor": [
+    "culture",
+    "views",
+    "local life"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20200328182248/koh-sirey-phuket.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    },
+    {
+     "url": "https://images.thaiholidayguide.com/images/attractions/ko-si-re-fa83ff6e0.webp",
+     "source": "thaiholidayguide.com og:image",
+     "license": "Copyright of the website (check before reuse)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/koh-sirey/",
+    "https://www.phuket101.net/starbucks-sinae-phuket-koh-sirey-island/",
+    "https://www.thaiholidayguide.com/visit/koh-sire/",
+    "https://wanderlog.com/place/details/2105961",
+    "https://www.openstreetmap.org/way/1548196924",
+    "https://www.openstreetmap.org/node/11027280955"
+   ],
+   "verification": "phuket101 Koh Sirey page (25 May 2026): temple, donation for Buddha photos, monkeys near the bridge, sea gypsy village. phuket101 Starbucks page (28 Aug 2026): 150 THB voucher, buggy only, 10:00-20:00. Google lists the temple as 'Wat Ban Koh Sirey', operational, 4.5 from 522 reviews (via Wanderlog, 15 Oct 2026)."
+  },
+  {
+   "id": "wat-phra-thong",
+   "name": "Wat Phra Thong (Half-Buried Buddha)",
+   "nameThai": "วัดพระทอง",
+   "tier": "hidden-gem",
+   "category": "temple",
+   "area": "thalang",
+   "lat": 8.034,
+   "lng": 98.3377,
+   "coordSource": "osm (temple way 319652596) + thaiholidayguide map pin (8.03366, 98.33772), 35 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Phra Thong, Thep Krasattri, Thalang, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "bestTime": "Morning, before the heat. Good stop on the way to or from the airport.",
+   "openText": "Daily, about 08:00-17:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Donation boxes.",
+   "gettingThere": "In Thalang, central north Phuket, on a side road off Thepkrasattri Road (the main airport road) near the Thalang crossroads. Coming back from the airport, the side road is on your left; signs are poor. About 20 km from Phuket Town. Car, scooter, taxi or Grab.",
+   "description": "Old temple in Thalang with a golden Buddha that comes out of the ground only from the chest up. Local legend says people tried to dig it out but could not. A small museum shows objects from Phuket's tin-mining past. Mostly local people come to pray, so it is calm and real.",
+   "tips": [
+    "Cover shoulders and knees. Take off your shoes in the halls.",
+    "Do not touch or take anything from the ground around the buried Buddha. It is sacred.",
+    "Wat Phra Nang Sang, one of the oldest temples in Phuket, is about 1 km south-west, on the main road."
+   ],
+   "goodFor": [
+    "culture",
+    "history"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%282%29.jpg/1280px-%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%282%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "กสิณธร ราชโอรส"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%283%29.jpg/1280px-%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%283%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "กสิณธร ราชโอรส"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/wat-phra-thong/",
+    "https://www.thaiholidayguide.com/attraction/wat-phra-thong/",
+    "https://www.phuket101.net/wat-phra-nang-sang/",
+    "https://www.openstreetmap.org/way/319652596",
+    "https://www.openstreetmap.org/node/4575295522"
+   ],
+   "verification": "phuket101 (updated 19 Apr 2025) and Thai Holiday Guide agree: daily 08:00-17:30, free, dress code, museum with tin-mining-era objects. Coords: OSM way and Thai Holiday Guide pin, 35 m apart. Wat Phra Nang Sang (OSM node 4575295522) is about 1 km south-west."
+  },
+  {
+   "id": "phuket-mining-museum",
+   "name": "Phuket Mining Museum",
+   "nameThai": "พิพิธภัณฑ์เหมืองแร่ภูเก็ต",
+   "tier": "hidden-gem",
+   "category": "culture",
+   "area": "kathu",
+   "lat": 7.9333,
+   "lng": 98.3495,
+   "coordSource": "osm (museum way 1044722332) + Google pin (via Wanderlog), within 10 m; thaiholidayguide pin 100 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket Mining Museum, Kathu, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "A hot or rainy weekday. Arrive before 14:30; it closes at 16:00.",
+   "openText": "Mon-Sat 09:00-16:00. Sunday is unclear: Google lists Sun 10:00-16:00 and one 2026 guide says daily, but Phuket 101 (Mar 2026) says closed on Sunday. Call 076 322 137 before a Sunday visit.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "feeText": "Foreign adult 100 THB. Child 50-100 THB (sources differ). Thai adult 50 THB.",
+   "gettingThere": "Behind Loch Palm Golf Club, on the Kathu - Ko Kaeo road, in the hills between Patong and Phuket Town. The access road is rough in places. Car, scooter or taxi.",
+   "description": "Large air-conditioned museum about the tin mines that made Phuket rich long before tourism. It has a mine tunnel section, a big model mine with many small figures and a rebuilt old Phuket street with Chinese merchant life. Some parts look old and worn. Few foreign visitors come.",
+   "tips": [
+    "Allow 1 to 1.5 hours.",
+    "Part of the visit is outside. Bring a hat and water.",
+    "Kathu village nearby has old Chinese shrines and is a quiet, local place to walk."
+   ],
+   "goodFor": [
+    "history",
+    "rainy day",
+    "air-conditioned"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://images.thaiholidayguide.com/images/attractions/kathu-mining-museum-f84366436.webp",
+     "source": "thaiholidayguide.com og:image",
+     "license": "Copyright of the website (check before reuse)"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/kathu-mining-museum/",
+    "https://www.phuket101.net/phuket-mining-museum/",
+    "https://wanderlog.com/place/details/2190433/phuket-mining-museum",
+    "https://www.lovethailand.org/travel/-/70-Phuket/8029-Phuket-Mining-Museum.html",
+    "https://showcaves.com/english/th/mines/Kathu.html",
+    "https://www.openstreetmap.org/way/1044722332"
+   ],
+   "verification": "Google listing operational, 4.3 from 679 reviews, Mon-Sat 09:00-16:00, Sun 10:00-16:00 (via Wanderlog, 15 Oct 2026). Thai Holiday Guide (Jul 2026): daily, foreign adult 100 THB, foreign child 100 THB, air-conditioned. Phuket 101 (23 Mar 2026): closed Sunday, adult 100, child 50, 'signs of neglect'. Official museumthailand.com page was unreachable."
+  },
+  {
+   "id": "soi-dog-foundation",
+   "name": "Soi Dog Foundation Sanctuary",
+   "tier": "hidden-gem",
+   "category": "activity",
+   "area": "mai-khao",
+   "lat": 8.128,
+   "lng": 98.3132,
+   "coordSource": "Google pin on soidog.org visit page (8.12774, 98.31344) + osm (way 1195543712) + Commons photo geotag, all within 90 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Soi Dog Foundation, Soi Mai Khao 10, Mai Khao, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "Arrive by 10:30 for the morning tour or by 13:30 for the afternoon tour.",
+   "openText": "Mon-Fri 09:30-11:30 and 13:00-15:30. Free guided tours at 10:30 and 13:30 (45 minutes). Closed Saturday and Sunday.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+   ],
+   "feeText": "Free. Donations and shop purchases help the animals.",
+   "gettingThere": "Mai Khao, north Phuket, close to the airport. Address: 167/9 Moo 4, Soi Mai Khao 10. Taxi or car; the website has the address in Thai for drivers.",
+   "description": "Large shelter for street dogs and cats, run by a well-known charity. A free 45-minute guided tour explains their work and introduces some of the 1,800 animals in their care. After the tour you can spend time in the puppy area and the cat house. Tours are in English and Thai.",
+   "tips": [
+    "No booking needed, but arrive on time for the full tour. Outside tour times the tour may be shorter and skip the puppies.",
+    "You cannot walk around alone. Stay with the guide.",
+    "The puppy area or cat house can close at short notice for quarantine.",
+    "Combine with plane spotting at Mai Khao Beach, a few minutes away.",
+    "In the trip window it is open Fri 8, Mon 11 to Fri 15, and Mon 18 January."
+   ],
+   "goodFor": [
+    "animals",
+    "charity",
+    "families"
+   ],
+   "links": [
+    {
+     "label": "Visitor and tour information (official)",
+     "url": "https://www.soidog.org/content/visit-us"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Soi_Dog_Foundation_%2838880428354%29.jpg/1280px-Soi_Dog_Foundation_%2838880428354%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 2.0",
+     "credit": "Brian Johnson & Dane Kantner"
+    }
+   ],
+   "sources": [
+    "https://www.soidog.org/content/visit-us",
+    "https://www.openstreetmap.org/way/1195543712"
+   ],
+   "verification": "Official visit page checked 15 Oct 2026: Mon-Fri 09:30-11:30 and 13:00-15:30, free 45-minute tours at 10:30 and 13:30 in English and Thai, no booking, 1,800 animals, puppy area and cattery may close for quarantine. Coords from the Google pin on that page."
+  },
+  {
+   "id": "karon-temple-market",
+   "name": "Karon Temple Market",
+   "nameThai": "วัดสุวรรณคีรีเขต (วัดกะรน)",
+   "tier": "hidden-gem",
+   "category": "market",
+   "area": "karon",
+   "lat": 7.8479,
+   "lng": 98.298,
+   "coordSource": "Google pin 'Karon Night Market' (via Wanderlog, 40 m) + osm temple way 473613108, within 70 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Karon Night Market, Karon, Phuket",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Tuesday or Friday from about 16:30-17:00, before the biggest crowds.",
+   "openText": "Tuesday and Friday, 16:00-22:00.",
+   "days": [
+    "Tue",
+    "Fri"
+   ],
+   "feeText": "Free entry. Cheap street-food prices.",
+   "gettingThere": "On the grounds of Wat Karon (Wat Suwan Khiri Khet), Patak Road, about 500 m from the Karon Circle at the back of Karon Beach. Walk from Karon or take a short ride from Kata.",
+   "description": "Twice-a-week night market around Karon's old temple. Many street food stalls: pad thai, grilled skewers, chicken rice, mango sticky rice and fruit shakes. Also cheap clothes, carved soaps and souvenirs. Busy and fun, with a beautiful temple behind the stalls.",
+   "tips": [
+    "Try the pad thai from the stall at the temple entrance. It is the most famous one.",
+    "Bring small cash notes.",
+    "Parking is hard. Walk if you stay in Karon, or use the paid car park at the nearby school.",
+    "In the trip window it runs on Fri 8, Tue 12 and Fri 15 January."
+   ],
+   "goodFor": [
+    "street food",
+    "souvenirs",
+    "evening"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20170525200331/karon-temple-copy.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Karon_Tempel_-_panoramio.jpg/1280px-Karon_Tempel_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Telgaa (the temple)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/karon-temple-market/",
+    "https://wanderlog.com/place/details/1210058/karon-night-market",
+    "https://wanderlog.com/place/details/56946",
+    "https://www.openstreetmap.org/way/473613108"
+   ],
+   "verification": "phuket101 (14 Mar 2026): Tue and Fri 16:00-22:00, free entry, pad thai stall at the entrance. Google listing 'Karon Night Market' operational, Tue and Fri 16:00-22:00, 4.2 from 1,077 reviews (via Wanderlog, 15 Oct 2026). Parking tip from a Google review."
+  },
+  {
+   "id": "kruvit-raft",
+   "name": "Kruvit Raft (Floating Seafood Restaurant)",
+   "nameThai": "แพครูวิทย์",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.9348,
+   "lng": 98.4136,
+   "coordSource": "Google pin 'Khru Vit Seafood Raft' (via Wanderlog) + phuket101 map, 15 m apart; boat leaves from Laem Hin Pier (osm node 2505166441, 7.93663, 98.40999)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khru Vit Seafood Raft, Ko Kaeo, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "Late afternoon, so you see the bay in daylight. Sunset is about 18:30 in January.",
+   "openText": "Daily 10:00-22:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free boat. Most seafood is priced by weight (per 100 g); mid to upper local prices.",
+   "gettingThere": "Drive to Laem Hin Pier, about 10 km north of Phuket Town: take the airport road and turn right onto the small road to Laem Hin. Look for the Kruvit sign. A free longtail boat takes you to the raft in about 5 minutes.",
+   "description": "Big wooden raft restaurant on the sea between Phuket and Koh Maphrao, listed in the 2026 Michelin Guide. Fish, crabs, prawns and oysters live in nets under the deck. You point at what you want and they cook it. Most guests are Thai. A fun and very local seafood meal.",
+   "tips": [
+    "For directions, navigate to Laem Hin Pier (ท่าเรือแหลมหิน), not to the raft. The raft is on the water.",
+    "Ask the weight and price before they cook lobster or mantis shrimp.",
+    "Try blue crab, grilled king prawns and the sour fish soup with soybean (Pla Tom Towchiew).",
+    "Bring cash; cards do not always work on the raft. A 20-50 THB tip for the boatman on the way back is welcome.",
+    "Book for weekend evenings. Weekday lunch is usually fine without booking."
+   ],
+   "goodFor": [
+    "seafood",
+    "local food",
+    "sunset dinner"
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide listing",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kruvit-raft-ban-laem-hin"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20190123224247/phuket-floating-restaurant.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/phuket-floating-restaurant/",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kruvit-raft-ban-laem-hin",
+    "https://wanderlog.com/place/details/752596/khru-vit-seafood-raft",
+    "https://www.openstreetmap.org/node/2505166441"
+   ],
+   "verification": "Michelin page: 'Kruvit Raft (Ban Laem Hin)', daily 10:00-22:00, 5-minute longtail ride. phuket101 (26 Sep 2026): 2026 Michelin Selected, free boat, bring cash, mostly Thai guests. Google listing 'Khru Vit Seafood Raft' operational, daily 10:00-22:00, 4.4 from 762 reviews (via Wanderlog, 15 Oct 2026)."
+  },
+  {
+   "id": "summore-day-cafe",
+   "name": "Summore Day Cafe",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "rawai",
+   "lat": 7.7642,
+   "lng": 98.3062,
+   "coordSource": "phuket101 Google My Maps pin + intravel.net schema geo (same point); OSM shows it beside a car park just north of the Promthep Cape parking, on Wiset Road",
+   "coordConfidence": "high",
+   "gmapsQuery": "Summore Day, 94 Wiset Road, Rawai, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Late afternoon before sunset. Weekdays are quieter.",
+   "openText": "Daily 10:00-20:00. Last food order about 19:00. Live music on weekend afternoons from about 14:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Coffee 100-220 THB, mains 320-790 THB, cocktails 320-420 THB (2026 menu).",
+   "gettingThere": "On the coast road between Ya Nui Beach and Promthep Cape, just below the cape car park. Free parking at the entrance.",
+   "description": "Hillside cafe, restaurant and bar with terraced gardens, a koi pond and a rooftop deck over Ya Nui Beach and Koh Man island. Serious coffee from their own roast, food from breakfast to steak, and cocktails with local Chalong Bay rum. Live music on weekend afternoons.",
+   "tips": [
+    "Order and pay at the counter inside, then sit anywhere.",
+    "Use mosquito spray at dusk in the garden.",
+    "After coffee, go up to Promthep Cape for the sunset."
+   ],
+   "goodFor": [
+    "cafe with a view",
+    "sunset",
+    "coffee"
+   ],
+   "links": [
+    {
+     "label": "Facebook (official)",
+     "url": "https://www.facebook.com/summoreday"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20260711132152/Summor-Day-Cafe-Phuket-11.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/summore-day-cafe/",
+    "https://intravel.net/phuket/restaurants-cafes/summore-day"
+   ],
+   "verification": "phuket101 (28 Aug 2026): hours, menu prices, own-roast coffee, Chalong Bay rum, koi pond, address 94 Wiset Road, phone 083 509 6333, 4.6 from 1,227 Google reviews, Facebook page. Same pin on the phuket101 map and intravel."
+  },
+  {
+   "id": "view-cafe-phuket",
+   "name": "View Cafe at Phuket (Phuket View Coffee and Resort)",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "chalong",
+   "lat": 7.8701,
+   "lng": 98.3299,
+   "coordSource": "Google pin 'View Cafe at Phuket' (via Wanderlog) + osm node 5257101923 'View cafe' + phuket101 My Maps pin, all within 15 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "View Cafe at Phuket, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "A clear afternoon. Late afternoon light over Phuket Town is best.",
+   "openText": "Daily 09:00-19:30 (Google lists Fri-Sun until 20:00).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Simple Thai food, coffee and cold drinks. Prices not published.",
+   "gettingThere": "In the hills between Chalong and Kathu, above Bang Wad Reservoir, near the Phuket weather station. Address: 56 Chalong 10, Moo 5, Ban Nai Trok Road. The road is narrow, steep and winding; car or scooter only.",
+   "description": "Quiet hilltop cafe high above Bang Wad Reservoir. From terraces and small balconies you look over Phuket Town, the east coast, Chalong Bay and the islands. Simple Thai food, coffee and cold drinks. No tour buses; most guests are locals. Best on a clear day.",
+   "tips": [
+    "Take an outdoor table for the best view. There is also an air-conditioned room.",
+    "Ride slowly. The road up is steep and narrow.",
+    "It also rents a few rooms if you want to stay the night."
+   ],
+   "goodFor": [
+    "cafe with a view",
+    "quiet",
+    "photos"
+   ],
+   "links": [
+    {
+     "label": "Official website",
+     "url": "https://www.phuketviewcoffeeandresort.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20260318225151/View-Cafe-at-Phuket-6.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/view-cafe-at-phuket/",
+    "https://wanderlog.com/place/details/3250931/view-cafe-at-phuket",
+    "https://www.phuketviewcoffeeandresort.com/",
+    "https://www.openstreetmap.org/node/5257101923"
+   ],
+   "verification": "phuket101 (28 Aug 2026): address, 09:00-19:30, no tour buses, mostly locals, rooms. Google listing operational, Mon-Thu 09:00-19:30, Fri-Sun 09:00-20:00, 4.5 from 599 reviews (via Wanderlog, 15 Oct 2026). Official site live (mentions the hill near the weather station)."
+  },
+  {
+   "id": "phang-nga-bay-james-bond",
+   "name": "Phang Nga Bay: James Bond Island and sea caves",
+   "nameThai": "อ่าวพังงา เกาะเขาพิงกัน",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "phang-nga",
+   "lat": 8.27538,
+   "lng": 98.50056,
+   "coordSource": "wikipedia (Khao Phing Kan) + photon/osm islet way 23492416 + Commons Ko Tapu photo geotag, all within 90 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "James Bond Island, Phang Nga",
+   "durationLabel": "full-day",
+   "durationHours": {
+    "min": 8,
+    "max": 10
+   },
+   "description": "A calm bay full of tall limestone islands. Tours stop at James Bond Island (Khao Phing Kan and the Ko Tapu rock), take you by canoe into sea caves and hidden lagoons at Panak or Hong island, and stop for lunch at Koh Panyee, a Muslim fishing village on stilts.",
+   "feeText": "Group tour 1,400-3,500 THB per person: longtail 1,400-1,600, big boat 1,500-1,800, speedboat 1,800-2,500, catamaran or premium 2,500-3,500. Park fee 300 THB (Thai National Parks site, 2022 list) or 400 THB (Phuket 101, 2026); usually included.",
+   "openText": "Tours run daily in the dry season. The park is open in January.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Take an early tour (start 7:00-8:30). Boats crowd the islands 10:00-14:00. December to March is the busiest time.",
+   "gettingThere": "Hotel pickup, then a 45-60 min drive to Ao Po (Ao Por) Pier or Royal Phuket Marina on the east coast. Some longtail tours use Bang Rong Pier. Back at the hotel about 17:00-18:00.",
+   "goodFor": [
+    "scenery",
+    "sea canoeing",
+    "photos"
+   ],
+   "tips": [
+    "You cannot swim at James Bond Island. Tours stop to swim at other islands.",
+    "In the caves a guide paddles the canoe for you. Check that canoeing is included.",
+    "At Koh Panyee, walk past the main souvenir walkway to see real village life.",
+    "Speedboats spend less time on the water and more time at the islands.",
+    "The Hong by Starlight trip also passes James Bond Island (seen from the boat only), so you may not need both."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/james-bond-island/",
+    "https://www.thainationalparks.com/ao-phang-nga-national-park",
+    "https://www.tisland.travel/en/phuket/excursions",
+    "https://en.wikipedia.org/wiki/Khao_Phing_Kan",
+    "https://www.openstreetmap.org/way/23492416"
+   ],
+   "verification": "Prices, piers, swim rule and crowd times from Phuket 101 (updated 26 Sep 2026). Park fee conflict: thainationalparks.com (a private site) says 300 THB as of June 2022; Phuket 101 says 400 THB; no 2026 DNP notice found. Coordinates: Wikipedia, OSM and a Commons geotag agree.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Khao_Phing_Kan_and_Koh_Tapu_%28James_Bond_Island%29.jpg/1280px-Khao_Phing_Kan_and_Koh_Tapu_%28James_Bond_Island%29.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Kemal Kaya (maxmajestic)",
+     "license": "CC BY-SA 2.5"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG/1280px-Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG",
+     "source": "Wikimedia Commons",
+     "credit": "Diego Delso",
+     "license": "CC BY-SA 3.0"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Ko_Panyi_Floating_Village%2C_Phuket%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Ken Eckert",
+     "license": "CC BY-SA 4.0"
+    }
+   ]
+  },
+  {
+   "id": "hong-by-starlight",
+   "name": "Hong by Starlight: evening sea-canoe trip",
+   "nameThai": "เกาะห้อง อ่าวพังงา",
+   "tier": "day-trip",
+   "category": "activity",
+   "area": "phang-nga",
+   "lat": 8.22444,
+   "lng": 98.50056,
+   "coordSource": "wikidata (Ko Hong, Ko Yao district) + photon/osm islet way 23492452 + thaiholidayguide map link, all within 120 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Hong Island, Phang Nga Bay, Phang Nga",
+   "durationLabel": "full-day",
+   "durationHours": {
+    "min": 10.5,
+    "max": 11.5
+   },
+   "description": "John Gray's Sea Canoe runs this trip from midday into the night. You pass James Bond Island (from the boat), then guides paddle you into sea caves and hidden lagoons at Panak and Hong islands. You make a krathong (small floating offering), eat a Thai buffet at sunset, then paddle in the dark to see glowing plankton.",
+   "feeText": "From 3,950 THB per adult (official site). Hotel transfer, light lunch, buffet dinner, park fees and travel insurance are included.",
+   "openText": "Daily. Pickup about 10:20-11:15, back at the hotel about 21:00-21:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Plankton glows best on dark nights. New moon is Fri 8 Jan 2027, so book early in your trip.",
+   "gettingThere": "Hotel pickup in Phuket. The boat leaves from Ao Po (Ao Por) Pier in north-east Phuket.",
+   "goodFor": [
+    "sea canoeing",
+    "sunset",
+    "night nature"
+   ],
+   "tips": [
+    "The order of stops can change with the tide.",
+    "Bring swimwear: there is time to paddle and swim in the afternoon.",
+    "A private-charter version of the same trip is sold from 62,750 THB.",
+    "Other companies sell similar sunset canoe and plankton trips from about 3,300 THB (for example Tisland 'Shine of Andaman')."
+   ],
+   "links": [
+    {
+     "label": "Hong by Starlight (official)",
+     "url": "https://johngray-seacanoe.com/tour/hong-by-starlight/"
+    }
+   ],
+   "sources": [
+    "https://johngray-seacanoe.com/tour/hong-by-starlight/",
+    "https://www.johngray-seacanoe.com/",
+    "https://www.tisland.travel/en/phuket/excursions",
+    "https://www.openstreetmap.org/way/23492452"
+   ],
+   "verification": "Official tour page (checked 15 Oct 2026): from 3,950 THB, daily, Ao Po, pickup 10:20-11:15, hotel 21:00-21:30, includes lunch, buffet dinner, park fees, insurance; itinerary passes James Bond Island; private charter from 62,750 THB. Tisland lists 'Shine of Andaman' from 3,300 THB. New moon computed: 7 Jan 2027 20:24 UTC (8 Jan 03:24 Thai time).",
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Seacanoe.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "(WT-en) Easytraveller at English Wikivoyage",
+     "license": "Public domain"
+    },
+    {
+     "url": "https://johngray-seacanoe.com/wp-content/uploads/2017/01/jame24-1024x683.jpg",
+     "source": "johngray-seacanoe.com (og:image)",
+     "credit": "John Gray's Sea Canoe",
+     "license": "Official promotional image"
+    }
+   ]
+  },
+  {
+   "id": "phi-phi-maya-bay",
+   "name": "Phi Phi Islands and Maya Bay",
+   "nameThai": "หมู่เกาะพีพี อ่าวมาหยา",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "phi-phi",
+   "lat": 7.67695,
+   "lng": 98.766,
+   "coordSource": "osm (viewpoint node 5314772921 'Maya Bay' on the beach) + about 15 Commons photos geotagged on Maya Bay beach, within 40 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Maya Bay, Ko Phi Phi Le, Krabi",
+   "durationLabel": "full-day",
+   "durationHours": {
+    "min": 9,
+    "max": 10.5
+   },
+   "description": "The famous islands 45-60 min by speedboat from Phuket. Tours visit Maya Bay (from the film The Beach), Pileh Lagoon, Viking Cave, snorkel spots and often Bamboo Island. At Maya Bay boats stop at a pier in Loh Samah Bay and you walk in. Swimming is banned there: knee-deep wading only.",
+   "feeText": "Group speedboat tour about 1,500-3,500 THB; sunrise tours 3,500-4,500 THB. Park fee 400 THB (child 200); sometimes not included, so ask. Private speedboat 15,000-25,000 THB per boat.",
+   "openText": "Maya Bay about 07:00-18:00. Closed every year 1 Aug - 30 Sep, so it is open in January.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Choose an early-departure or sunrise tour to reach Maya Bay before the main crowds.",
+   "gettingThere": "Hotel pickup 6:30-7:30 to Rassada Pier (Phuket Town) or Royal Phuket Marina. Back about 16:00-17:00. Public ferry Rassada - Tonsai about 2 h, about 600 THB one way.",
+   "goodFor": [
+    "beaches",
+    "snorkelling",
+    "photos"
+   ],
+   "tips": [
+    "Maya Bay takes up to 375 people per hour. Expect 30-60 minutes on the beach.",
+    "Sunscreen with oxybenzone, octinoxate, 4MBC or butylparaben is banned in Thai national parks (fines up to 100,000 THB).",
+    "For seasickness, take a pill 30 minutes before and sit at the back of the boat.",
+    "If you stay a night on Phi Phi Don, the last ferry back to Phuket is about 15:30."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/best-tours-to-phi-phi-island/",
+    "https://www.tisland.travel/en/blog/maya-bay-otkryvaetsya-1-oktyabrya-2026",
+    "https://www.tisland.travel/en/phuket/excursions",
+    "https://www.openstreetmap.org/node/5314772921"
+   ],
+   "verification": "Tisland blog (28 Sep 2026): Maya Bay reopened 1 Oct 2026 after the 1 Aug - 30 Sep closure, 07:00-18:00, 375 people per hour, knee-deep wading only, Loh Samah pontoon, fee 400/200 THB, sunscreen ban. Phuket 101 (12 Apr 2026): tour, private boat and ferry prices, 30-45 min on the beach. Tisland lists Phi Phi tours from 1,900 THB (Oct 2026).",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_13.JPG/1280px-Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_13.JPG",
+     "source": "Wikimedia Commons",
+     "credit": "Diego Delso",
+     "license": "CC BY-SA 3.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Maya_Bay_of_Koh_Phi_Phi_Leh_2007-03-062%29_%28706978628%29.jpg/1280px-Maya_Bay_of_Koh_Phi_Phi_Leh_2007-03-062%29_%28706978628%29.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Vyacheslav Argenberg",
+     "license": "CC BY 2.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Bamboo_Island_P1120597.JPG/1280px-Bamboo_Island_P1120597.JPG",
+     "source": "Wikimedia Commons",
+     "credit": "Deror Avi",
+     "license": "CC BY-SA 3.0"
+    }
+   ]
+  }
+ ],
+ "removed": [
+  {
+   "id": "mai-khao-plane-spotting",
+   "name": "Plane Spotting at Mai Khao Beach",
+   "reason": "Duplicate: the same id is already in the must-see list (flagged by the original researcher), and this famous spot is not a hidden gem. Checked for the must-see copy: open beach, watching free, 20 THB motorbike from the car park (Phuket 101, 6 Aug 2026), no 2025-2026 ban found. Coords OK: OSM node 8.11179, 98.30185 plus two Commons geotags within 170 m, about 160 m west of the runway 09 threshold (8.11199, 98.3033). Fix there: in January planes usually land over the sea; the 'December to June' range is doubtful, because the wind usually turns westerly from about May."
+  }
+ ],
+ "changes": [
+  "Removed mai-khao-plane-spotting: duplicate id of the must-see item (verified facts are in the removed reason).",
+  "All items: third-party guide links (Phuket 101, Thai Holiday Guide, lovethailand, Thai PBS, thainationalparks.com, Tisland) taken out of links[] under the official/ticket-only rule; they stay in sources. Links now empty for khao-khad, koh-sirey, wat-phra-thong, mining museum, karon market, phang-nga, phi-phi.",
+  "gibbon-rehabilitation-project: coords moved 115 m to the Google pin by the Bang Pae car park (OSM node is tagged approximate); gmapsQuery set to the Google name.",
+  "gibbon-rehabilitation-project: waterfall tip corrected (January is not 'very low'; lowest flow is Feb-Apr); unverified '4 km' trail length removed; child park fee 100 THB added; walk-ins can find it closed.",
+  "khao-khad-viewpoint: gmapsQuery changed to the Google listing name 'Kaokard Viewpoint Tower'; about 200 steps added; durationHours 0.5-1; second Thai name added.",
+  "koh-sirey: gmapsQuery changed to Google name 'Wat Ban Koh Sirey'; Starbucks tip corrected (no driving up, 150 THB drink voucher and buggy); distance 4-5 km; unsourced 'few tourists' and 'little changed for decades' softened.",
+  "wat-phra-thong: Wat Phra Nang Sang is about 1 km south-west on the main road, not 'south on the same road'; access detail added (side road on the left coming from the airport); durationHours 0.5-1.",
+  "phuket-mining-museum: Sunday removed from days; openText now flags the conflict (Phuket 101 Mar 2026 says closed Sunday, Google says Sun 10:00-16:00); child fee 50-100 THB (sources differ); description now says some parts are worn.",
+  "karon-temple-market: gmapsQuery changed to Google listing 'Karon Night Market'; durationHours 1-2; parking tip added.",
+  "kruvit-raft: gmapsQuery changed to Google name 'Khru Vit Seafood Raft'; tip added to navigate to Laem Hin Pier, not the raft on the water; card payments unreliable; weekend booking tip.",
+  "view-cafe-phuket: gmapsQuery changed to Google name 'View Cafe at Phuket'; coordConfidence medium to high (Google pin, OSM node and phuket101 map agree within 15 m).",
+  "bang-rong-mangroves: kayak rental softened (2026 guide says to arrange kayaks and boats in advance; old price about 200 THB/h); tour fee now notes 2-3 days advance booking and no hotel transfer.",
+  "soi-dog-foundation: durationHours 1-1.5; tips added on shorter off-time tours and puppy/cat areas closing for quarantine.",
+  "phang-nga-bay-james-bond: durationHours 8-10, days and openText added; fee text says the 300 THB figure comes from a private site (2022), not an official DNP notice; catamaran price band added; tip that Hong by Starlight passes James Bond Island only from the boat.",
+  "hong-by-starlight: description now says the trip passes James Bond Island (from the boat); travel insurance added to inclusions; private charter price (from 62,750 THB) and source of the 3,300 THB competitor price added; days and durationHours added.",
+  "phi-phi-maya-bay: coordConfidence medium to high (Commons geotags on the beach agree within 40 m); durationHours and days added; sunscreen fine added."
+ ]
+}

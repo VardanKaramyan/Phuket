@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:banana-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-banana-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Banana_beach_Phuket_2017_-_05.jpg/1280px-Banana_beach_Phuket_2017_-_05.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Banana_beach_Phuket_2017_-_05.jpg",
+   "credit": "Anton Zelenov",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Candidate 1. Banana Beach cove at sunrise (Dec 2017): sand, surf, rocks and the wooded headland. Geotagged 8.0424, 98.2766. Sharp, no watermark. The author asks to be credited as 'Photo: Anton Zelenov'."
+  },
+  {
+   "key": "places:laem-singh-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-laem-singh-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Phuket_2015_april_-_panoramio_%2826%29.jpg/1280px-Phuket_2015_april_-_panoramio_%2826%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_2015_april_-_panoramio_(26).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Found by search. The classic view down onto the turquoise Laem Singh cove from the roadside viewpoint, with the Kamala headland behind (Apr 2015). Geotagged 7.96997, 98.27943. Natively 16:9. Better than candidate 1 (dated 2007 shot with a thin frame border). Candidate 2 was rejected: blurred through branches and probably not this beach."
+  },
+  {
+   "key": "places:ya-nui-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-ya-nui-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ya_Nui_beach.jpg/1280px-Ya_Nui_beach.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ya_Nui_beach.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1. Ya Nui cove and its rocky islet seen from the Windmill Viewpoint (Jun 2018). 4:3, with the beach mid-frame, so a centred 16:9 crop keeps it."
+  },
+  {
+   "key": "places:tri-trang-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tri-trang-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Patong_2015_april_-_panoramio_%2813%29.jpg/1280px-Patong_2015_april_-_panoramio_%2813%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Patong_2015_april_-_panoramio_(13).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Found by search. White sand and calm water on Tri Trang Beach, looking across Patong Bay (Apr 2015). Geotagged 7.88664, 98.27161, inside OSM's Tri Trang Beach outline (the file is titled 'Patong' after the photo series). Natively 16:9. Rejected: candidate 1 (construction hoarding), 2 (dark night shot), 3 (\u00a9Phuket 101 watermark, blog image)."
+  },
+  {
+   "key": "places:ao-yon-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-ao-yon-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ao_Yon_5.jpg/1280px-Ao_Yon_5.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ao_Yon_5.jpg",
+   "credit": "Slleong",
+   "license": "CC0",
+   "width": 1280,
+   "height": 720,
+   "note": "Candidate 1. Ao Yon Beach: curved sand and a calm, clear bay towards Cape Panwa (Nov 2023). Natively 16:9 and sharp."
+  },
+  {
+   "key": "places:layan-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-layan-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+   "credit": "Maleewan1wanpen2thai",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1. Horse riders on Layan Beach in the late afternoon, with the round islet at the north end (Jun 2022). 4:3, with subjects mid-frame, so it survives a 16:9 crop. Candidate 2 has a Phuket 101 watermark."
+  },
+  {
+   "key": "places:sai-kaew-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-sai-kaew-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Phuket_2015%2C_april_-_panoramio_%2824%29.jpg/1280px-Phuket_2015%2C_april_-_panoramio_%2824%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_2015,_april_-_panoramio_(24).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Weakest pick. Palms, a yellow Thai sala and the sea on the Sai Kaew beach road (Apr 2015). Geotagged 8.18473, 98.28925, about 500 m south of OSM's Sai Kaew Beach viewpoint. Taken from a moving car: slight motion blur at full size and a faint glare streak top-right, but it reads fine at card size. Rejected: candidate 1 (road), 2 (motion-blurred), 3 (large Willy Thuan watermark). Search covered Commons geo and text in English and Thai, plus Openverse; the Commons 'Sai Kaew Beach' category is the Pattaya one. The only sharp beach photo nearby shows the neighbouring Hat Pak Phra, so it was not used."
+  },
+  {
+   "key": "places:laem-krating-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-laem-krating-viewpoint.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B4%E0%B8%87_%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95.jpg/1280px-%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B4%E0%B8%87_%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B4%E0%B8%87_%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95.jpg",
+   "credit": "\u0e19\u0e32\u0e22\u0e2d\u0e0a\u0e34\u0e23\u0e30",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Found by Thai-name search. Grassy slopes of Laem Krating cape above the rocky shore and turquoise sea (Sep 2020). The file title means 'Laem Krating, Phuket'. CROPPED by me to 16:9 (rows 100-820 of the 1280x960 thumbnail) to remove a small 'Phuket Guide by Phukhao' corner logo. This is a derivative, so the credit should say 'cropped'. The candidate (thaiholidayguide.com aerial) was rejected: soft, third-party site, location and rights unverifiable."
+  },
+  {
+   "key": "places:khao-khad-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-khao-khad-viewpoint.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Kao_Khad_3.jpg/1280px-Kao_Khad_3.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kao_Khad_3.jpg",
+   "credit": "Slleong",
+   "license": "CC0",
+   "width": 1280,
+   "height": 640,
+   "note": "Found by search. View of Chalong Bay from the Kao Khad scenic viewpoint (Nov 2023). Shows the view, not the tower itself. Geotagged at the same spot as the author's photo of the 'Kao-Khad Views Point' sign. 2:1 panorama; a centred 16:9 crop (1138x640) keeps the bay. Candidate 1 is only 640x480 (2010); candidate 2 is a wider 2.6:1 panorama of the same view."
+  },
+  {
+   "key": "places:mai-khao-plane-spotting",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-mai-khao-plane-spotting.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/B-LPV_Phuket.jpg/1280px-B-LPV_Phuket.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:B-LPV_Phuket.jpg",
+   "credit": "The Cosmonaut",
+   "license": "CC BY-SA 2.5 ca",
+   "width": 1280,
+   "height": 784,
+   "note": "Candidate 1. Hong Kong Airlines A320 (B-LPV) on final approach low over Mai Khao Beach, with plane spotters on the sand (Apr 2025). Geotagged at the runway-end beach. Sharp."
+  },
+  {
+   "key": "places:bang-rong-mangroves",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bang-rong-mangroves.jpg",
+   "url": "https://www.bangrongconnect.com/wp-content/uploads/2023/04/bangrong-community-travel-tourism-phuket-drone-mangrove-forest-4-1536x864.jpg",
+   "page": "https://www.bangrongconnect.com/",
+   "credit": "\u00a9 Bang Rong Connect",
+   "license": "official site",
+   "width": 1536,
+   "height": 864,
+   "note": "From the official site (the item's website, the Bang Rong community-based tourism site). Drone view of the Bang Rong mangrove channel with fish-farm rafts and Phang Nga Bay hills behind. Natively 16:9, no watermark. The candidate (2007 Commons harbour photo by Tuderna) is sky-heavy with a thin frame, and Commons has no other Bang Rong photos."
+  }
+ ]
+}

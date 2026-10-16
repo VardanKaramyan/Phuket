@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:freedom-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-freedom-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/20221108_Freedom_Beach_auf_Phuket_%281%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:20221108_Freedom_Beach_auf_Phuket_(1).jpg",
+   "credit": "Joachim Lutz",
+   "license": "CC BY-SA 4.0",
+   "width": 1081,
+   "height": 608,
+   "note": "Elevated view through the trees onto Freedom Beach's curved white sand and turquoise bay with longtail boats. The source is a portrait 1081x1920 original (no larger thumbnail exists); it was cropped to 16:9 on the beach (crop offset y=470), so mark it as modified for CC BY-SA. Both listed candidates were rejected: (2) was flat and dull, the panoramio shot has a Thravel.net watermark."
+  },
+  {
+   "key": "places:patong-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-patong-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Patong_Beach_Phuket_November_2012.jpg/1280px-Patong_Beach_Phuket_November_2012.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Patong_Beach_Phuket_November_2012.jpg",
+   "credit": "Arnaud-Victor Monteux",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Classic Patong bay view with longtail boats, the beach and green headland behind. Picked from about 15 Commons Patong photos as brighter and more recognizable than the two listed candidates (the 2nd was overcast)."
+  },
+  {
+   "key": "places:bangla-road",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bangla-road.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg/1280px-Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bars_at_Bangla_Road,_Patong,_Thailand.jpg",
+   "credit": "Ben Reeves from Phuket, Thailand",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Bangla Road at night: neon bar signs (Kangaroo Bar etc.) and crowds on the walking street. Listed candidate 1, cropped from 1280x853 to the bottom 1280x720 to cut a small logo in the top-right corner (modified)."
+  },
+  {
+   "key": "places:khao-rang-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-khao-rang-viewpoint.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rang_Hill_Viewpoint.jpg/1280px-Rang_Hill_Viewpoint.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Rang_Hill_Viewpoint.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "The Khao Rang (Rang Hill) viewing deck with visitors, overlooking Phuket Town and the bay. The listed candidate was rejected: hazy, portrait 1200x1600, location not clearly Khao Rang. Found in Commons Category:Rang Hill."
+  },
+  {
+   "key": "places:rawai-seafood-market",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-rawai-seafood-market.jpg",
+   "url": "https://live.staticflickr.com/65535/49835407598_5cc9bdcf66_h.jpg",
+   "page": "https://www.flickr.com/photos/77742560@N06/49835407598",
+   "credit": "shankar s.",
+   "license": "CC BY 2.0",
+   "width": 1600,
+   "height": 1068,
+   "note": "Close-up of a seafood stall at the Rawai Beach fish market: scallops, squid and prawns on ice with yellow Thai price signs. Flickr CC BY 2.0; the photo description confirms the Rawai Beach fish market, Oct/Nov 2019. Commons had no photo of the market itself, only the beach and pier. The listed candidates were the beach only and a portrait of a person."
+  },
+  {
+   "key": "places:naka-weekend-market",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-naka-weekend-market.jpg",
+   "url": "https://www.phuketnakamarket.com/wp-content/uploads/2023/03/home-slide-plan.jpg",
+   "page": "https://www.phuketnakamarket.com/",
+   "credit": "\u00a9 Naka Night Market Phuket",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Night shot of the lit-up NAKA MARKET entrance gate with crowds walking in; the official homepage slider image. It beats the listed og:image (daytime gate, 1200x675), and the Commons candidate is a blurry video still. A small 'Cannabis' neon sign shows at the left of the gate. No free-licensed Naka photo exists on Commons or Openverse."
+  },
+  {
+   "key": "places:chillva-market",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-chillva-market.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chillva_Market_Stage.jpg/1280px-Chillva_Market_Stage.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chillva_Market_Stage.jpg",
+   "credit": "JULIANISME",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "The Chillva Market central stage with the big CHILLVA MARKET sign at dusk (Sept 2025). Listed candidate; it is the only Chillva photo on Commons and Openverse, and the market has no official website."
+  },
+  {
+   "key": "places:nai-yang-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-nai-yang-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg/1280px-Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach,_Phuket_(4448621322).jpg",
+   "credit": "Andy Mitchell from Glasgow, UK",
+   "license": "CC BY-SA 2.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Quiet, sunny Nai Yang Beach: casuarina trees, pale sand, turquoise water and a green headland. Listed candidate 1. Candidate 3 (Mai Khao plane banner) is only 1280x320."
+  },
+  {
+   "key": "places:bang-pae-waterfall",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bang-pae-waterfall.jpg",
+   "url": "https://live.staticflickr.com/7014/6472331561_7d65cb6a01_h.jpg",
+   "page": "https://www.flickr.com/photos/25483059@N08/6472331561",
+   "credit": "Jeff Gunn",
+   "license": "CC BY 2.0",
+   "width": 1600,
+   "height": 1200,
+   "note": "Bang Pae Waterfall itself: the cascade falling into a narrow plunge pool between mossy rocks in jungle. Flickr CC BY 2.0, from the 'Bang Pae Waterfall' album, geotagged Thalang, Phuket, taken Nov 2011. All Commons photos (the listed candidates) show only a pond and forest 'near' the falls, not the waterfall."
+  },
+  {
+   "key": "places:phuket-elephant-sanctuary",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-phuket-elephant-sanctuary.jpg",
+   "url": "https://www.phuketelephantsanctuary.org/wp-content/uploads/sites/7659/2025/01/phuketelephantsanctuary_programs_half-day-7.jpg?w=1280",
+   "page": "https://www.phuketelephantsanctuary.org/programs/half-day/",
+   "credit": "\u00a9 Phuket Elephant Sanctuary",
+   "license": "official site",
+   "width": 1280,
+   "height": 721,
+   "note": "Five elephants roaming the sanctuary forest below the thatched viewing skywalk, with visitors watching from the walkway and misty hills behind. Official half-day program gallery photo, chosen over the listed candidates as more place-specific: (4) is an aerial of the walkway with no elephants, (9) is a close-up of two elephants. The original is about 5 MB, so I used the site's ?w=1280 resize."
+  },
+  {
+   "key": "places:chalong-bay-rum",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-chalong-bay-rum.jpg",
+   "url": "https://thedistilleryphuket.com/build/assets/bg-restaurant-bar-banner-EcAMnzdL.jpg",
+   "page": "https://thedistilleryphuket.com/",
+   "credit": "\u00a9 The Distillery Phuket (Chalong Bay Rum)",
+   "license": "official site",
+   "width": 2200,
+   "height": 1457,
+   "note": "The distillery's thatched open-air bar-restaurant beside its sugarcane field, with soft-focus garden plants in front. This is the og:image of The Distillery Phuket ('Home of Chalong Bay'), the official venue site that the Chalong Bay distillery-visit page links to for booking. The listed og:image (fb.jpg) was rejected as a text-heavy bottle-and-logo promo. The chalongbayrum.com gallery images are only 496x320, and the CC photos on Flickr (2015) are dull and dated."
+  }
+ ]
+}

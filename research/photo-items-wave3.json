@@ -1,0 +1,838 @@
+[
+ {
+  "key": "places:phang-nga-bay-james-bond",
+  "kind": "day-trip / island",
+  "name": "Phang Nga Bay: James Bond Island and sea caves",
+  "where": "phang-nga",
+  "gmapsQuery": "James Bond Island, Phang Nga",
+  "website": "https://www.phuket101.net/james-bond-island/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Khao_Phing_Kan_and_Koh_Tapu_%28James_Bond_Island%29.jpg/1280px-Khao_Phing_Kan_and_Koh_Tapu_%28James_Bond_Island%29.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Kemal Kaya (maxmajestic)",
+    "license": "CC BY-SA 2.5"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG/1280px-Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG",
+    "source": "Wikimedia Commons",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Ko_Panyi_Floating_Village%2C_Phuket%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Ken Eckert",
+    "license": "CC BY-SA 4.0"
+   }
+  ]
+ },
+ {
+  "key": "places:hong-by-starlight",
+  "kind": "day-trip / activity",
+  "name": "Hong by Starlight: evening sea-canoe trip",
+  "where": "phang-nga",
+  "gmapsQuery": "Hong Island, Phang Nga Bay, Phang Nga",
+  "website": "https://johngray-seacanoe.com/tour/hong-by-starlight/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Seacanoe.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "(WT-en) Easytraveller at English Wikivoyage",
+    "license": "Public domain"
+   },
+   {
+    "url": "https://johngray-seacanoe.com/wp-content/uploads/2017/01/jame24-1024x683.jpg",
+    "source": "johngray-seacanoe.com (og:image)",
+    "credit": "John Gray's Sea Canoe",
+    "license": "Official promotional image"
+   }
+  ]
+ },
+ {
+  "key": "places:phi-phi-maya-bay",
+  "kind": "day-trip / island",
+  "name": "Phi Phi Islands and Maya Bay",
+  "where": "phi-phi",
+  "gmapsQuery": "Maya Bay, Ko Phi Phi Le, Krabi",
+  "website": "https://www.phuket101.net/best-tours-to-phi-phi-island/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_13.JPG/1280px-Playa_Maya%2C_Ko_Phi_Phi%2C_Tailandia%2C_2013-08-19%2C_DD_13.JPG",
+    "source": "Wikimedia Commons",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Maya_Bay_of_Koh_Phi_Phi_Leh_2007-03-062%29_%28706978628%29.jpg/1280px-Maya_Bay_of_Koh_Phi_Phi_Leh_2007-03-062%29_%28706978628%29.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Vyacheslav Argenberg",
+    "license": "CC BY 2.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Bamboo_Island_P1120597.JPG/1280px-Bamboo_Island_P1120597.JPG",
+    "source": "Wikimedia Commons",
+    "credit": "Deror Avi",
+    "license": "CC BY-SA 3.0"
+   }
+  ]
+ },
+ {
+  "key": "places:similan-islands",
+  "kind": "day-trip / island",
+  "name": "Similan Islands",
+  "where": "phang-nga",
+  "gmapsQuery": "Donald Duck Bay, Similan Islands, Phang Nga",
+  "website": "https://www.phuket101.net/similan-islands/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Similan_Island_01_%28MK%29.jpg/1280px-Similan_Island_01_%28MK%29.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Mathias Krumbholz",
+    "license": "CC BY-SA 3.0"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Similan_Islands_Beach.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Electrostatico",
+    "license": "CC BY-SA 2.0"
+   }
+  ]
+ },
+ {
+  "key": "places:koh-racha-yai",
+  "kind": "day-trip / island",
+  "name": "Koh Racha Yai",
+  "where": "rawai",
+  "gmapsQuery": "Racha Yai Island, Phuket",
+  "website": "https://www.phuket101.net/racha-island/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Racha_Yai_Island.jpg/1280px-Racha_Yai_Island.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "ELPHUKET",
+    "license": "CC BY-SA 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ko_Racha_Yai_Adas%C4%B1.jpg/1280px-Ko_Racha_Yai_Adas%C4%B1.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Kaylorensen",
+    "license": "CC BY-SA 4.0"
+   }
+  ]
+ },
+ {
+  "key": "places:coral-island-koh-hey",
+  "kind": "day-trip / island",
+  "name": "Coral Island (Koh Hey)",
+  "where": "rawai",
+  "gmapsQuery": "Coral Island (Koh Hey), Phuket",
+  "website": "https://www.thaiholidayguide.com/attraction/coral-island-or-ko-he/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Koh_hae%2C_Thailand.jpg/1280px-Koh_hae%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Andrzej Buryan (uploaded by Endrjuch)",
+    "license": "CC BY-SA 3.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Phuket_Yacht_-_Maiton_and_Coral_island.jpg/1280px-Phuket_Yacht_-_Maiton_and_Coral_island.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Phuket@photographer.net",
+    "license": "CC BY 2.0"
+   }
+  ]
+ },
+ {
+  "key": "places:khai-islands",
+  "kind": "day-trip / island",
+  "name": "Khai Islands (Koh Khai Nok)",
+  "where": "phang-nga",
+  "gmapsQuery": "Koh Khai Nok, Phang Nga",
+  "website": "https://www.phuket101.net/koh-khai-islands/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG",
+    "source": "Wikimedia Commons",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG",
+    "source": "Wikimedia Commons",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0"
+   }
+  ]
+ },
+ {
+  "key": "places:koh-yao-noi",
+  "kind": "day-trip / island",
+  "name": "Koh Yao Noi",
+  "where": "koh-yao",
+  "gmapsQuery": "Koh Yao Noi, Phang Nga",
+  "website": "https://www.phuket101.net/koh-yao-noi-island/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Sunrise%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Sunrise%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0"
+   }
+  ]
+ },
+ {
+  "key": "places:koh-hong-krabi",
+  "kind": "day-trip / island",
+  "name": "Koh Hong (Krabi): lagoon island",
+  "where": "krabi",
+  "gmapsQuery": "Hong Island, Krabi",
+  "website": "https://www.phuket101.net/koh-hong-island/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ko_Hong_island_beach.jpg/1280px-Ko_Hong_island_beach.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Maksym Kozlenko",
+    "license": "CC BY-SA 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Sea_Kayak_Ko_Hong.jpg/1280px-Sea_Kayak_Ko_Hong.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Steve Cornish",
+    "license": "CC BY 2.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/16.Ko_Hong_Island_-_Andaman_Sea_-_Krabi_Province%2C_Thailand.jpg/1280px-16.Ko_Hong_Island_-_Andaman_Sea_-_Krabi_Province%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Wolfgang Holzem",
+    "license": "CC BY-SA 4.0"
+   }
+  ]
+ },
+ {
+  "key": "places:railay-krabi",
+  "kind": "day-trip / beach",
+  "name": "Railay Beach (Krabi)",
+  "where": "krabi",
+  "gmapsQuery": "Railay Beach West, Krabi",
+  "website": "https://www.ferryscanner.com/en/ferry-routes/ferry-rassada-pier-phuket-railay-all-piers",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/West_Rai_Leh_%2811%29.jpg/1280px-West_Rai_Leh_%2811%29.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Krzysztof Golik",
+    "license": "CC BY-SA 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Railay_Beach_5.jpg/1280px-Railay_Beach_5.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "kallerna",
+    "license": "CC BY-SA 3.0"
+   }
+  ]
+ },
+ {
+  "key": "places:khao-sok-cheow-lan-lake",
+  "kind": "day-trip / nature",
+  "name": "Khao Sok: Cheow Lan Lake overnight",
+  "where": "other",
+  "gmapsQuery": "Ratchaprapha Dam, Ban Ta Khun, Surat Thani",
+  "website": "https://www.thainationalparks.com/khao-sok-national-park",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Cheow_Lan_Lake%2C_Solitary_tree_on_the_lake%2C_Khao_Sok%2C_Thailand.jpg/1280px-Cheow_Lan_Lake%2C_Solitary_tree_on_the_lake%2C_Khao_Sok%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Unnamed_island%2C_Cheow_Lan_Lake.jpg/1280px-Unnamed_island%2C_Cheow_Lan_Lake.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "The Cosmonaut",
+    "license": "CC BY-SA 2.5 ca"
+   }
+  ]
+ },
+ {
+  "key": "places:samet-nangshe-viewpoint",
+  "kind": "day-trip / viewpoint",
+  "name": "Samet Nangshe viewpoint (sunrise)",
+  "where": "phang-nga",
+  "gmapsQuery": "Samet Nangshe Viewpoint, Takua Thung, Phang Nga",
+  "website": "https://www.thaiholidayguide.com/attraction/samet-nangshe-viewpoint/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Samet_Nangshe_Viewpoint.jpg/1280px-Samet_Nangshe_Viewpoint.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "TomMumuPangPangEmma",
+    "license": "CC0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Samet_Nangshe.jpg/1280px-Samet_Nangshe.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Kamol2523",
+    "license": "CC BY-SA 4.0"
+   }
+  ]
+ },
+ {
+  "key": "places:koh-phangan-rave-trip",
+  "kind": "day-trip / nightlife",
+  "name": "Koh Phangan rave trip (2-3 days)",
+  "where": "koh-phangan",
+  "gmapsQuery": "Ban Tai Beach, Koh Phangan",
+  "website": "https://www.halfmoonfestival.com/halfmoonfestivaldates",
+  "candidates": [
+   {
+    "url": "https://static.wixstatic.com/media/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg/v1/fill/w_1280,h_670,al_c/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg",
+    "source": "halfmoonfestival.com (og:image)",
+    "credit": "Halfmoon Festival",
+    "license": "Official promotional image"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Phasawan_viewpoint_Ko_Pha_Ngan_1.jpg/1280px-Phasawan_viewpoint_Ko_Pha_Ngan_1.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "kallerna",
+    "license": "CC BY-SA 4.0"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Hat_Rin_from_above.jpg/1280px-Hat_Rin_from_above.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "zhaffsky (Flickr)",
+    "license": "CC BY-SA 2.0"
+   }
+  ]
+ },
+ {
+  "key": "places:one-chun",
+  "kind": "must-see / food",
+  "name": "One Chun",
+  "where": "phuket-town",
+  "gmapsQuery": "One Chun Cafe & Restaurant, Thep Krasattri Road, Phuket Town",
+  "website": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/one-chun",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/One_Chun.jpg/1280px-One_Chun.jpg",
+    "source": "Wikimedia Commons",
+    "credit": "Vano111ru",
+    "license": "CC BY-SA 4.0"
+   },
+   {
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/6795d62d7bdd423f864cb066e0abee65.jpeg?format=jpeg&w=1000&h=1000",
+    "source": "MICHELIN Guide (og:image)",
+    "credit": "MICHELIN Guide / One Chun",
+    "license": "Guide photo (personal use)"
+   }
+  ]
+ },
+ {
+  "key": "places:mee-ton-poe",
+  "kind": "must-see / food",
+  "name": "Mee Ton Poe (Hokkien noodles)",
+  "where": "phuket-town",
+  "gmapsQuery": "MeeTonPoe Phuket Town, Phuket Road",
+  "website": "https://www.phuket101.net/mee-ton-poe-hokkien-noodles-phuket/",
+  "candidates": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Hokkien_mee_1.jpg/1280px-Hokkien_mee_1.jpg",
+    "source": "Wikimedia Commons (generic dish photo, taken in Bangkok, not at Mee Ton Poe)",
+    "credit": "Vee Satayamas",
+    "license": "CC BY 2.0"
+   }
+  ]
+ },
+ {
+  "key": "places:lock-tien",
+  "kind": "hidden-gem / food",
+  "name": "Lock Tien (Phuket street dishes)",
+  "where": "phuket-town",
+  "gmapsQuery": "59/14 Bangkok Road, Talat Nuea, Phuket",
+  "website": "https://www.phuket101.net/lock-tien-food-court/",
+  "candidates": []
+ },
+ {
+  "key": "places:go-benz",
+  "kind": "hidden-gem / food",
+  "name": "Go Benz (late-night rice soup)",
+  "where": "phuket-town",
+  "gmapsQuery": "Go Benz Rice Porridge, Krabi Road, Phuket Town",
+  "website": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/go-benz",
+  "candidates": [
+   {
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/6ed352d69f8a452eb765d302d1c55a83.jpeg?format=jpeg&w=1000&h=1000",
+    "source": "MICHELIN Guide (og:image)",
+    "credit": "MICHELIN Guide / Go Benz",
+    "license": "Guide photo (personal use)"
+   }
+  ]
+ },
+ {
+  "key": "places:naam-yoi",
+  "kind": "hidden-gem / food",
+  "name": "Naam Yoi (Southern Thai curries)",
+  "where": "phuket-town",
+  "gmapsQuery": "Nam YOI Restaurant, Rumpattana Road, Ratsada, Phuket",
+  "website": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/naam-yoi",
+  "candidates": [
+   {
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/783234dfd8604c5e9207e1729dbf1e8a.jpeg?format=jpeg&w=1000&h=1000",
+    "source": "MICHELIN Guide (og:image)",
+    "credit": "MICHELIN Guide / Naam Yoi",
+    "license": "Guide photo (personal use)"
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Kaeng_som_pla_sapparot.jpg/1280px-Kaeng_som_pla_sapparot.jpg",
+    "source": "Wikimedia Commons (generic kaeng som photo, not at Naam Yoi)",
+    "credit": "Takeaway",
+    "license": "CC BY-SA 3.0"
+   }
+  ]
+ },
+ {
+  "key": "places:mor-mu-dong",
+  "kind": "hidden-gem / food",
+  "name": "Mor Mu Dong (mangrove seafood)",
+  "where": "chalong",
+  "gmapsQuery": "Mor Mu Dong Restaurant, Chalong, Phuket",
+  "website": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/mor-mu-dong",
+  "candidates": [
+   {
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/63b68a7d97d649d090e8a9982aaabb40.jpeg?format=jpeg&w=1000&h=1000",
+    "source": "MICHELIN Guide (og:image)",
+    "credit": "MICHELIN Guide / Mor Mu Dong",
+    "license": "Guide photo (personal use)"
+   }
+  ]
+ },
+ {
+  "key": "places:malin-plaza-night-market",
+  "kind": "must-see / food",
+  "name": "Malin Plaza night market (Patong)",
+  "where": "patong",
+  "gmapsQuery": "Malin Plaza, Prachanukhro Road, Patong",
+  "website": "https://www.phuket101.net/malin-plaza-night-market/",
+  "candidates": []
+ },
+ {
+  "key": "areas:patong",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Patong & Kalim",
+  "where": "patong",
+  "gmapsQuery": "Patong Beach, Phuket",
+  "website": "https://www.illuzionphuket.com/shelter/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2022_10_25_Patong_%283%29.jpg/1280px-2022_10_25_Patong_%283%29.jpg",
+    "credit": "Joachim Lutz",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_10_25_Patong_(3).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Patong_beach_at_sunset%2C_Phuket_island%2C_Thailand.jpg/1280px-Patong_beach_at_sunset%2C_Phuket_island%2C_Thailand.jpg",
+    "credit": "Phuket@photographer.net",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Patong_beach_at_sunset,_Phuket_island,_Thailand.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:kamala",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Kamala",
+  "where": "kamala",
+  "gmapsQuery": "Kamala Beach, Phuket",
+  "website": "https://phuket.cafedelmar.com/events",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tha%C3%AFlande_2010_248.jpg/1280px-Tha%C3%AFlande_2010_248.jpg",
+    "credit": "Gossipguy",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tha\u00eflande_2010_248.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kamala_beach.jpg/1280px-Kamala_beach.jpg",
+    "credit": "govertvissers",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kamala_beach.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:surin",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Surin & Pansea",
+  "where": "surin",
+  "gmapsQuery": "Surin Beach, Phuket",
+  "website": "https://www.phuket101.net/surin-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+    "credit": "Jpatokal",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Surin_Beach.JPG"
+   }
+  ]
+ },
+ {
+  "key": "areas:bang-tao",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Bang Tao, Laguna & Cherngtalay",
+  "where": "bang-tao",
+  "gmapsQuery": "Bang Tao Beach, Phuket",
+  "website": "https://www.phuket101.net/bang-tao-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Bang_Tao_Beach_%2853667853591%29.jpg/1280px-Bang_Tao_Beach_%2853667853591%29.jpg",
+    "credit": "Raita Futo from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bang_Tao_Beach_(53667853591).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Bang_Tao_Beach_%2853668069638%29.jpg/1280px-Bang_Tao_Beach_%2853668069638%29.jpg",
+    "credit": "Raita Futo from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bang_Tao_Beach_(53668069638).jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:layan",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Layan",
+  "where": "layan",
+  "gmapsQuery": "Layan Beach, Phuket",
+  "website": "https://www.phuket101.net/layan-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+    "credit": "Maleewan1wanpen2thai",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:\u0e2b\u0e32\u0e14\u0e25\u0e32\u0e22\u0e31\u0e19.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:nai-thon",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Nai Thon",
+  "where": "nai-thon",
+  "gmapsQuery": "Nai Thon Beach, Phuket",
+  "website": "https://en.wikivoyage.org/wiki/Nai_Thon_and_Nai_Yang",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Naithon-beach-wooden-bridge.jpg",
+    "credit": "Veseye7118",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Naithon-beach-wooden-bridge.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:nai-yang",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Nai Yang",
+  "where": "nai-yang",
+  "gmapsQuery": "Nai Yang Beach, Phuket",
+  "website": "https://www.phuket101.net/nai-yang-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Nai_Yang_Beach.jpg/1280px-Nai_Yang_Beach.jpg",
+    "credit": "WalkOnWater93",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nai_Yang_Beach%2C_Phuket_%284448497354%29.jpg/1280px-Nai_Yang_Beach%2C_Phuket_%284448497354%29.jpg",
+    "credit": "Andy Mitchell from Glasgow, UK",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach,_Phuket_(4448497354).jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:mai-khao",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Mai Khao",
+  "where": "mai-khao",
+  "gmapsQuery": "Mai Khao Beach, Phuket",
+  "website": "https://www.phuket101.net/mai-khao-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%B2%E0%B8%A7_%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%83%E0%B8%AA_%E0%B8%84%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%A2.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%82%E0%B8%B2%E0%B8%A7_%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%83%E0%B8%AA_%E0%B8%84%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%A2.jpg",
+    "credit": "Sarawut Hassama",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:\u0e2b\u0e32\u0e14\u0e17\u0e23\u0e32\u0e22\u0e02\u0e32\u0e27_\u0e19\u0e49\u0e33\u0e43\u0e2a_\u0e04\u0e25\u0e37\u0e48\u0e19\u0e2a\u0e27\u0e22.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mai_Khao_Beach_-_panoramio.jpg/1280px-Mai_Khao_Beach_-_panoramio.jpg",
+    "credit": "Mikhail Deynekin",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mai_Khao_Beach_-_panoramio.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:karon",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Karon",
+  "where": "karon",
+  "gmapsQuery": "Karon Beach, Phuket",
+  "website": "https://www.phuket101.net/karon-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Karon_Beach%2CPhuket_%281%29.jpg/1280px-Karon_Beach%2CPhuket_%281%29.jpg",
+    "credit": "\u0e01\u0e2a\u0e34\u0e13\u0e18\u0e23 \u0e23\u0e32\u0e0a\u0e42\u0e2d\u0e23\u0e2a",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karon_Beach,Phuket_(1).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Karon_beach_7.jpg/1280px-Karon_beach_7.jpg",
+    "credit": "HutheMeow",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karon_beach_7.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:kata",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Kata (Kata Yai)",
+  "where": "kata",
+  "gmapsQuery": "Kata Beach, Phuket",
+  "website": "https://www.phuket101.net/kata-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Kata_Beach_%285730364074%29.jpg/1280px-Kata_Beach_%285730364074%29.jpg",
+    "credit": "edwin.11",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kata_Beach_(5730364074).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Phuket_-_Kata_Beach_001.jpg/1280px-Phuket_-_Kata_Beach_001.jpg",
+    "credit": "ADwarf",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Kata_Beach_001.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:kata-noi",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Kata Noi",
+  "where": "kata-noi",
+  "gmapsQuery": "Kata Noi Beach, Phuket",
+  "website": "https://www.phuket101.net/kata-noi-beach-phuket/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+    "credit": "Jacek Lesniowski",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_-_panoramio.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kata_Noi_beach%2C_Katathani_resort_%2842174860592%29.jpg/1280px-Kata_Noi_beach%2C_Katathani_resort_%2842174860592%29.jpg",
+    "credit": "Phuket@photographer.net from Phuket, Thailand",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_beach,_Katathani_resort_(42174860592).jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:nai-harn",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Nai Harn",
+  "where": "nai-harn",
+  "gmapsQuery": "Nai Harn Beach, Phuket",
+  "website": "https://www.phuket101.net/nai-harn-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phuket_-_Nai_Harn_Beach_008.jpg/1280px-Phuket_-_Nai_Harn_Beach_008.jpg",
+    "credit": "ADwarf",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Nai_Harn_Beach_008.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:rawai",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Rawai, Ya Nui & Promthep",
+  "where": "rawai",
+  "gmapsQuery": "Rawai Beach, Phuket",
+  "website": "https://www.phuket101.net/rawai-beach/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+    "credit": "ADwarf",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_11.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+    "credit": "Phuket@photographer.net",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:chalong",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Chalong & Soi Ta-iad",
+  "where": "chalong",
+  "gmapsQuery": "Chalong roundabout Clock Tower, Phuket",
+  "website": "https://www.phuket101.net/soi-taiad/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chalong_Pier.jpg/1280px-Chalong_Pier.jpg",
+    "credit": "Christophe95",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chalong_Pier.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chalong_Bay.jpg/1280px-Chalong_Bay.jpg",
+    "credit": "Vano111ru",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chalong_Bay.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:phuket-town",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Phuket Town (Old Town)",
+  "where": "phuket-town",
+  "gmapsQuery": "Phuket Old Town, Phuket",
+  "website": "https://www.phuket101.net/phuket-town-guide/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+    "credit": "Christophe95",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road,_Old_Phuket_Town.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Thalang_Road_3.jpg/1280px-Thalang_Road_3.jpg",
+    "credit": "Slleong",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road_3.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Phangnga_Road_2.jpg/1280px-Phangnga_Road_2.jpg",
+    "credit": "Slleong",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Phangnga_Road_2.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:kathu",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Kathu",
+  "where": "kathu",
+  "gmapsQuery": "Kathu, Phuket",
+  "website": "https://www.phuket101.net/kathu/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kathu_Waterfall_%2860083096%29.jpeg/1280px-Kathu_Waterfall_%2860083096%29.jpeg",
+    "credit": "Nicolas Voitot",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kathu_Waterfall_(60083096).jpeg"
+   }
+  ]
+ },
+ {
+  "key": "areas:cape-panwa",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Cape Panwa",
+  "where": "cape-panwa",
+  "gmapsQuery": "Cape Panwa, Phuket",
+  "website": "https://www.phuket101.net/phuket-aquarium/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG/1280px-Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG",
+    "credit": "Whym",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cape_Panwa,_Phuket_sea_and_boat_2014.JPG"
+   }
+  ]
+ },
+ {
+  "key": "areas:ao-po",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Ao Po & Cape Yamu",
+  "where": "ao-po",
+  "gmapsQuery": "Ao Po Grand Marina, Phuket",
+  "website": "https://www.ferryscanner.com/en/ferry-routes/ferry-manoh-pier-koh-yao-noi-phuket-all-ports-piers",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Yachts_and_superyachts_at_Ao_Po_marina_%2831677403871%29.jpg/1280px-Yachts_and_superyachts_at_Ao_Po_marina_%2831677403871%29.jpg",
+    "credit": "Phuket@photographer.net from Phuket, Thailand",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yachts_and_superyachts_at_Ao_Po_marina_(31677403871).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG/1280px-Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Muelle_de_Ao_Por,_Phuket,_Tailandia,_2013-08-20,_DD_01.JPG"
+   }
+  ]
+ },
+ {
+  "key": "areas:thalang",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Thalang",
+  "where": "thalang",
+  "gmapsQuery": "Wat Phra Thong, Thalang, Phuket",
+  "website": "https://www.phuket101.net/thalang-museum/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg/1280px-Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg",
+    "credit": "Sry85",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thalang_National_Museum_2010_-_panoramio.jpg/1280px-Thalang_National_Museum_2010_-_panoramio.jpg",
+    "credit": "Roma Neus",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thalang_National_Museum_2010_-_panoramio.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Near_Bang_Pae_waterfall_2010_-_panoramio.jpg/1280px-Near_Bang_Pae_waterfall_2010_-_panoramio.jpg",
+    "credit": "Roma Neus",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Near_Bang_Pae_waterfall_2010_-_panoramio.jpg"
+   }
+  ]
+ },
+ {
+  "key": "areas:natai",
+  "kind": "area of Phuket (show its main beach or town)",
+  "name": "Natai & Khao Pilai (Phang Nga)",
+  "where": "natai",
+  "gmapsQuery": "Natai Beach, Phang Nga",
+  "website": "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+    "credit": "Sujeong",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Natai_Beach_-_panoramio.jpg"
+   },
+   {
+    "url": "https://www.bababeachclub.com/images/baba-beach.jpg",
+    "credit": "Baba Beach Club (official website)",
+    "license": "Copyright Baba Beach Club; personal use",
+    "source": "https://www.bababeachclub.com/"
+   }
+  ]
+ }
+]

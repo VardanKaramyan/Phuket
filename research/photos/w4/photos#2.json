@@ -1,0 +1,148 @@
+{
+ "results": [
+  {
+   "key": "hotels:beyond-kata",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-beyond-kata.jpg",
+   "url": "https://www.beyondresort.com/kata/wp-content/uploads/sites/2/2026/06/1-2.jpg",
+   "width": 1600,
+   "height": 880,
+   "credit": "\u00a9 Beyond Kata",
+   "license": "official site",
+   "page": "https://www.beyondresort.com/kata/",
+   "note": "Aerial of the resort's lagoon pool and Thai-pavilion pool bar opening onto Kata Beach (official homepage gallery). Listed candidate 10-1.jpg rejected: 600x1300 portrait, too narrow."
+  },
+  {
+   "key": "hotels:mom-tris-villa-royale",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-mom-tris-villa-royale.jpg",
+   "url": "https://www.villaroyalephuket.com/wp-content/uploads/2024/12/Mom-Tri-01.jpg",
+   "width": 1380,
+   "height": 672,
+   "credit": "\u00a9 Mom Tri's Villa Royale",
+   "license": "official site",
+   "page": "https://www.villaroyalephuket.com/",
+   "note": "Aerial of the villas on the rocky headland above Kata Noi beach, with Kata and Karon bays behind (first candidate, official site)."
+  },
+  {
+   "key": "hotels:sugar-marina-art-karon",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-sugar-marina-art-karon.webp",
+   "url": "https://www.sugarmarinahotel.com/art/wp-content/uploads/sites/3/2026/09/sugar-marina-art-pool-karon-beach-phuket.webp",
+   "width": 1440,
+   "height": 800,
+   "credit": "\u00a9 Sugar Marina Hotel ART Karon Beach",
+   "license": "official site",
+   "page": "https://www.sugarmarinahotel.com/art",
+   "note": "Aerial of the hotel's pixel-art tiled pool, mushroom splash park and white pool-access wing (official site gallery). Candidate og image rejected: mostly two fashion models posing in front of the sign."
+  },
+  {
+   "key": "hotels:the-nai-harn",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-the-nai-harn.jpg",
+   "url": "https://www.thenaiharn.com/wp-content/uploads/2026/01/og-thenaiharn.jpg",
+   "width": 1200,
+   "height": 675,
+   "credit": "\u00a9 The Nai Harn",
+   "license": "official site",
+   "page": "https://www.thenaiharn.com/",
+   "note": "Aerial of the white terraced hotel on the green hillside above Nai Harn bay (official og:image, exactly 16:9)."
+  },
+  {
+   "key": "hotels:wyndham-grand-nai-harn",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-wyndham-grand-nai-harn.jpg",
+   "url": "https://www.wyndhamhotels.com/content/dam/property-images/en-us/gr/th/others/rawai-muang/52543/52543_pool_view_20.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+   "width": 1280,
+   "height": 858,
+   "credit": "\u00a9 Wyndham Grand Nai Harn Beach Phuket",
+   "license": "official site",
+   "page": "https://www.wyndhamhotels.com/wyndham-grand/phuket-thailand/wyndham-grand-nai-harn-beach-phuket/overview",
+   "note": "Lagoon pool courtyard between the resort's residence blocks under blue sky (official property gallery, 52543_pool_view_20). Chosen over the candidate entrance-sign photo (exterior_view_1), which also passed but is less representative."
+  },
+  {
+   "key": "hotels:roost-glamping",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-roost-glamping.png",
+   "url": "https://www.roostglamping.com/images/uploads/54/1665046426tent-1.png",
+   "width": 1000,
+   "height": 640,
+   "credit": "\u00a9 Roost Glamping",
+   "license": "official site",
+   "page": "https://www.roostglamping.com/",
+   "note": "Canvas bell tent with open door and cosy interior in a sunlit tropical garden (first candidate, official site). Alternative on the same site: 1665046558tent-3.png (row of tents)."
+  },
+  {
+   "key": "hotels:casa-blanca-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-casa-blanca-phuket.jpg",
+   "url": "https://www.casablancaphuket.com/images/slide_show/casablancaphuket_01.jpg",
+   "width": 1500,
+   "height": 1000,
+   "credit": "\u00a9 Casa Blanca Boutique Hotel",
+   "license": "official site",
+   "page": "https://www.casablancaphuket.com/",
+   "note": "White Sino-Portuguese arcaded facade of the hotel (no. 26), with one guest posing at the entrance (first candidate). The other slideshow images are interiors and the small pool."
+  },
+  {
+   "key": "hotels:memory-at-on-on",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-memory-at-on-on.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg/1280px-Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg",
+   "width": 1280,
+   "height": 933,
+   "credit": "Sharon Hahn Darlin",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket,_Thailand.jpg",
+   "note": "The hotel's hanging 'The Memory at On On hotel, Phuket Old Town' signboards on Phang Nga Road, with the white colonial Kasikorn Bank building filling most of the frame. Official site has only a grainy sepia archive photo, banners with dark text overlays, and a 359px modern facade thumbnail."
+  },
+  {
+   "key": "hotels:shunli-hotel",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-shunli-hotel.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Thalang_Road_1.jpg/1280px-Thalang_Road_1.jpg",
+   "width": 1280,
+   "height": 720,
+   "credit": "Slleong (area photo: Thalang Road, Old Phuket Town)",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Thalang_Road_1.jpg",
+   "note": "AREA PHOTO, not the hotel itself: sunny Thalang Road shophouse streetscape (the continuation of Krabi Road; Shunli is at 56 Krabi Rd). No official website; the Facebook page's only public image is the red SHUNLI HOSTEL sign (803x793), which reads as a logo with a phone number in a 16:9 crop. Nothing on Commons. Candidate 1 rejected: the corner house carries another guesthouse's sign. Candidate 2 is overcast."
+  },
+  {
+   "key": "hotels:milky-bay-resort",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-milky-bay-resort.jpg",
+   "url": "https://www.milkybayresort.com/images/1929.jpg",
+   "width": 1024,
+   "height": 768,
+   "credit": "\u00a9 Milky Bay Resort",
+   "license": "official site",
+   "page": "https://www.milkybayresort.com/",
+   "note": "Beachfront pool with a large thatched sala and loungers, sea and mountains behind (official homepage gallery). Candidate 1942.jpg (white cottages in a garden) also passed but is less representative. The og-images aerial makes the resort tiny, and the Commons Ban Tai photo is overcast."
+  },
+  {
+   "key": "hotels:see-sea-backpackers",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-see-sea-backpackers.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ban_Tai_Beach_Ko_Pha_Ngan_6.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan_6.jpg",
+   "width": 1280,
+   "height": 960,
+   "credit": "Christophe95 (area photo: Ban Tai Beach)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ban_Tai_Beach_Ko_Pha_Ngan_6.jpg",
+   "note": "AREA PHOTO, not the hostel itself: Ban Tai Beach at sunset with palms (hostel is about 900 m inland). No official website or social page found and nothing on Commons. Booking.com and Agoda block scraping, and the Hostelworld listing (312348) now returns 404, so the hostel may be delisted or closed; worth re-checking. Candidate Ban_Tai_Beach_Ko_Pha_Ngan.jpg rejected as dull and overcast."
+  },
+  {
+   "key": "hotels:slumber-party-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-slumber-party-phangan.jpg",
+   "url": "https://liveslumberparty.com/wp-content/uploads/2025/06/692124669.jpg",
+   "width": 1024,
+   "height": 576,
+   "credit": "\u00a9 Slumber Party Beach Koh Phangan",
+   "license": "official site",
+   "page": "https://liveslumberparty.com/koh-phangan/",
+   "note": "Guests on pink and yellow loungers at the pool terrace in front of the hostel's lilac building. It is the og:image of the official Koh Phangan beachfront hostel page, the same photo appears in the property's Hostelworld gallery, and the lilac building is visible from the entrance. Candidate Cloudbeds 10-bed dorm photo also passed. Rejected an official 'baan tai pic 6' pool photo whose pool does not match the property's other photos."
+  }
+ ]
+}

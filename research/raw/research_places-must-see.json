@@ -1,0 +1,1445 @@
+{
+ "items": [
+  {
+   "id": "big-buddha",
+   "name": "Big Buddha",
+   "nameThai": "พระพุทธมิ่งมงคลเอกนาคคีรี",
+   "tier": "must-see",
+   "category": "temple",
+   "area": "chalong",
+   "lat": 7.8276,
+   "lng": 98.3128,
+   "coordSource": "wikipedia+osm(photon)+phuket101-map",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket Big Buddha, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Just after the 9:00 opening: cool air and few people. No sunset here, the gate closes at 18:00.",
+   "openText": "Daily 9:00-18:00, last entry 17:30. Open again since 3 March 2026.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Donations welcome. Parking, toilets and sarongs are free.",
+   "gettingThere": "Hill road from Chaofa West Road (signs from Chalong Circle). Car or scooter: about 35-45 min from Patong, 20-25 min from Kata. Grab and Bolt drive to the top; book the ride back from the car park.",
+   "description": "A 45 m white marble Buddha on top of Nakkerd Hill. It closed after a landslide in August 2024 and reopened on 3 March 2026. The terrace has wide views over Kata, Karon and Chalong Bay. It is an active temple, so dress and behave with respect.",
+   "tips": [
+    "Cover shoulders and knees. Free sarongs at the entrance.",
+    "Sunset is about 18:25 in January, after closing time. Watch it from Nak-Kerd Seaview Cafe on the road down.",
+    "The road down is steep with tight bends. Ride slowly on a scooter.",
+    "Some map apps may still show it as closed. It has been open since March 2026."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Oct 2026)",
+     "url": "https://www.phuket101.net/phuket-big-buddha/"
+    },
+    {
+     "label": "Window on Phuket visitor guide",
+     "url": "https://windowonphuket.com/big-buddha-phuket-visitor-guide/"
+    },
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Phuket_Big_Buddha"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/The_Big_Buddha%2C_Phuket.jpg/1280px-The_Big_Buddha%2C_Phuket.jpg",
+     "credit": "Subhrajyoti07",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:The_Big_Buddha,_Phuket.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Phuket_Thailand_Big-Buddha-of-Phuket-05.jpg/1280px-Phuket_Thailand_Big-Buddha-of-Phuket-05.jpg",
+     "credit": "CEphoto, Uwe Aranas",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_Thailand_Big-Buddha-of-Phuket-05.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Big_Buddha_-_Phuket.jpg/1280px-Big_Buddha_-_Phuket.jpg",
+     "credit": "Mussi Katz",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Big_Buddha_-_Phuket.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/phuket-big-buddha/",
+    "https://windowonphuket.com/big-buddha-phuket-visitor-guide/",
+    "https://en.wikipedia.org/wiki/Phuket_Big_Buddha"
+   ],
+   "verification": "Checked Oct 2026. Reopening on 3 Mar 2026 and hours 9:00-18:00 (last entry 17:30) agree in Phuket 101 (updated 13 Oct 2026) and Window on Phuket. Coordinates: Wikipedia, OSM and Phuket 101 map agree within 50 m."
+  },
+  {
+   "id": "wat-chalong",
+   "name": "Wat Chalong",
+   "nameThai": "วัดฉลอง (วัดไชยธาราราม)",
+   "tier": "must-see",
+   "category": "temple",
+   "area": "chalong",
+   "lat": 7.8468,
+   "lng": 98.3365,
+   "coordSource": "phuket101-map+osm(photon)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Chalong, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "7:00-9:00, before the heat and the tour buses.",
+   "openText": "Temple buildings daily 7:00-17:00. You can walk the grounds outside these hours.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Donations welcome. Free parking.",
+   "gettingThere": "On Chaofa West Road near Chalong Circle. Car or scooter: about 30-40 min from Patong, 15-20 min from Kata. About 10 min from the Big Buddha.",
+   "description": "Phuket's largest and most important Buddhist temple. Climb the 60 m Grand Pagoda: the lower floors have Buddha statues and murals, and the top floor holds a small bone relic of the Buddha. Loud firecrackers are normal: locals light them to give thanks when a wish comes true.",
+   "tips": [
+    "No shorts or short skirts, no sleeveless tops. Take off shoes and hats before you enter a building.",
+    "Speak quietly and do not touch the statues.",
+    "Easy to combine with the Big Buddha and Chalong Bay Rum Distillery in one trip."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Jul 2026)",
+     "url": "https://www.phuket101.net/wat-chalong/"
+    },
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Wat_Chalong"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Phuket_Thailand_Wat-Chalong-01.jpg/1280px-Phuket_Thailand_Wat-Chalong-01.jpg",
+     "credit": "CEphoto, Uwe Aranas",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_Thailand_Wat-Chalong-01.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Grand_Pagoda_-_Wat_Chalong.jpg/1280px-Grand_Pagoda_-_Wat_Chalong.jpg",
+     "credit": "Edwin Lee (derivative work: MrPanyGoff)",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Grand_Pagoda_-_Wat_Chalong.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wat_Chalong_%28Phuket%29.jpg/1280px-Wat_Chalong_%28Phuket%29.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Wat_Chalong_(Phuket).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/wat-chalong/",
+    "https://www.wat-chalong-phuket.com/faq.html",
+    "https://en.wikipedia.org/wiki/Wat_Chalong"
+   ],
+   "verification": "Checked Oct 2026. Hours 7:00-17:00 and free entry agree in Phuket 101 (updated 12 Jul 2026) and the Wat Chalong FAQ site. Coordinates: Phuket 101 map and OSM temple area within 120 m."
+  },
+  {
+   "id": "phuket-old-town",
+   "name": "Phuket Old Town",
+   "nameThai": "เมืองเก่าภูเก็ต",
+   "tier": "must-see",
+   "category": "culture",
+   "area": "phuket-town",
+   "lat": 7.8853,
+   "lng": 98.3892,
+   "coordSource": "osm(photon, Soi Romanee)+commons-photo-gps+wikipedia",
+   "coordConfidence": "high",
+   "gmapsQuery": "Soi Romanee, Phuket Old Town, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Early morning (8:00-10:00) for empty streets and soft light, or late afternoon. On Sunday, stay for the night market.",
+   "openText": "Public streets, always open. Shop and cafe hours vary.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free to walk. Thai Hua Museum: 200 THB, plus 200 THB if you want to take photos inside.",
+   "gettingThere": "Car or Grab: about 25-35 min from Patong (over Patong Hill), 30-40 min from Kata. Parking in the old streets is hard, so Grab is easier.",
+   "description": "The historic center of Phuket Town. Colorful Sino-Portuguese shophouses from the tin-mining era line Thalang, Dibuk, Krabi and Phang Nga roads. Soi Romanee is the prettiest small lane. Come for cafes, street art, Chinese shrines and local food such as Hokkien noodles.",
+   "tips": [
+    "Thai Hua Museum (28 Krabi Rd) explains Phuket's Chinese history, 9:00-17:00. Sources differ on its closed day (Monday or Wednesday), so Sunday is a safe choice.",
+    "It is hot by 11:00. Walk early, then rest in a cafe.",
+    "On Sunday 10 or 17 Jan, stay for the Lard Yai walking street market.",
+    "End the day at Khao Rang Viewpoint for sunset, about 5 min by car."
+   ],
+   "links": [
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Phuket_Old_Town"
+    },
+    {
+     "label": "Thai Hua Museum (Phuket 101, updated Sep 2026)",
+     "url": "https://www.phuket101.net/thai-hua-museum/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Soi_Rommanee%2C_Phuket_Town.jpg/1280px-Soi_Rommanee%2C_Phuket_Town.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Soi_Rommanee,_Phuket_Town.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Phuket_Town_Thailand-Houses-in-Thalang-Road-05.jpg/1280px-Phuket_Town_Thailand-Houses-in-Thalang-Road-05.jpg",
+     "credit": "CEphoto, Uwe Aranas",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_Town_Thailand-Houses-in-Thalang-Road-05.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Thalang_Road_2.jpg/1280px-Thalang_Road_2.jpg",
+     "credit": "Slleong",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road_2.jpg"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Phuket_Old_Town",
+    "https://www.phuket101.net/thai-hua-museum/",
+    "https://21sensations.com/phuket-town-night-market/"
+   ],
+   "verification": "Checked Oct 2026. Coordinates: OSM Soi Romanee way and Commons photo GPS agree within 20 m; Wikipedia Old Town point 170 m west. Thai Hua Museum fee 200 THB in two sources; closed day conflicts (Phuket 101 says Monday, a July 2026 listing says Wednesday)."
+  },
+  {
+   "id": "sunday-walking-street",
+   "name": "Sunday Walking Street Market (Lard Yai)",
+   "nameThai": "ถนนคนเดิน หลาดใหญ่",
+   "tier": "must-see",
+   "category": "market",
+   "area": "phuket-town",
+   "lat": 7.8848,
+   "lng": 98.3891,
+   "coordSource": "osm-polygon(nominatim)+commons-photo-gps",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lard Yai Walking Street, Thalang Road, Phuket Town",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Arrive 16:30-17:00. By 19:00-20:00 it is very crowded.",
+   "openText": "Sundays only, about 16:00-22:00. On your trip: Sun 10 Jan and Sun 17 Jan 2027.",
+   "days": [
+    "Sun"
+   ],
+   "feeText": "Free entry. Bring small cash notes.",
+   "gettingThere": "Grab or taxi from Patong about 25-30 min (about 300-500 THB), from Kata 30-40 min. Do not drive: parking near Thalang Road is very hard on Sundays.",
+   "description": "Every Sunday evening, Thalang Road in the Old Town closes to cars and becomes a 360 m street market. Stalls sell Phuket snacks, handmade crafts and clothes, with music and street shows. It is busy and local, and the old shophouses make a great backdrop.",
+   "tips": [
+    "Try Phuket snacks like o-tao, a-pong and Hokkien noodles.",
+    "Most stalls take cash only; some take Thai QR payment.",
+    "Walk the street in one direction and leave at the other end. Turning back in the crowd is slow.",
+    "Come earlier and see the Old Town in daylight first."
+   ],
+   "links": [
+    {
+     "label": "Window on Phuket guide",
+     "url": "https://windowonphuket.com/sunday-walking-street-market/"
+    },
+    {
+     "label": "21 Sensations visitor guide (Apr 2026)",
+     "url": "https://21sensations.com/phuket-town-night-market/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Phuket_Weekend_Market.jpg/1280px-Phuket_Weekend_Market.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_Weekend_Market.jpg (market on Thalang Road)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Thalang_Road_3.jpg/1280px-Thalang_Road_3.jpg",
+     "credit": "Slleong",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road_3.jpg (Thalang Road by day)"
+    }
+   ],
+   "sources": [
+    "https://windowonphuket.com/sunday-walking-street-market/",
+    "https://21sensations.com/phuket-town-night-market/"
+   ],
+   "verification": "Checked Oct 2026. Sunday 16:00-22:00 agrees in Window on Phuket and 21 Sensations (5 Apr 2026). Coordinates: middle of the OSM market polygon on Thalang Road; Commons photo of the market has GPS 150 m east."
+  },
+  {
+   "id": "promthep-cape",
+   "name": "Promthep Cape",
+   "nameThai": "แหลมพรหมเทพ",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "rawai",
+   "lat": 7.7619,
+   "lng": 98.3054,
+   "coordSource": "osm-viewpoint-node('Sunset viewpoint from Phromthep Cape')+osm-car-park",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Promthep Cape, Rawai, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "Sunset, about 18:25 in January. Arrive by 17:30 for parking and a good spot.",
+   "openText": "Open 24 hours.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. The small lighthouse museum is free.",
+   "gettingThere": "Southern tip of the island, past Nai Harn. Car or scooter: about 35-45 min from Patong, 15-20 min from Kata. Traffic is slow right after sunset.",
+   "description": "The southern tip of Phuket and the island's most famous sunset point. Terraces look west over the sea and small islands. Next to the white lighthouse (with a small free museum) is a Brahma shrine surrounded by hundreds of elephant statues. Expect big crowds at sunset.",
+   "tips": [
+    "Tour buses arrive around 17:00-18:00. Come early, or stay 20 min after sunset when most people leave.",
+    "A rough path goes down to the tip of the cape. Wear shoes, take water and come back before dark.",
+    "Less crowded option: Windmill Viewpoint, about 1.5 km north on the same road.",
+    "Respect the shrine and do not touch the offerings."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Aug 2026)",
+     "url": "https://www.phuket101.net/promthep-cape/"
+    },
+    {
+     "label": "Window on Phuket visitor guide",
+     "url": "https://windowonphuket.com/promthep-cape-phuket-visitor-guide/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Promthep_Cape_Phuket.jpg/1280px-Promthep_Cape_Phuket.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Promthep_Cape_Phuket.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Laem_Phromthep%2C_Phuket_03102016.jpg/1280px-Laem_Phromthep%2C_Phuket_03102016.jpg",
+     "credit": "Jeanvenotella",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Laem_Phromthep,_Phuket_03102016.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/promthep-cape/",
+    "https://windowonphuket.com/promthep-cape-phuket-visitor-guide/"
+   ],
+   "verification": "Checked Oct 2026. Open 24 h and free per Phuket 101 (updated 5 Aug 2026). Pin is the main sunset terrace (OSM viewpoint node, car park 140 m away). Google, Wikipedia and blog pins sit at the rocky tip about 350 m south-west, so confidence is medium."
+  },
+  {
+   "id": "windmill-viewpoint",
+   "name": "Windmill Viewpoint",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "nai-harn",
+   "lat": 7.7697,
+   "lng": 98.3066,
+   "coordSource": "google-maps-link(phuket101)+osm+commons-photo-gps",
+   "coordConfidence": "high",
+   "gmapsQuery": "Windmill Viewpoint, Nai Harn, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "bestTime": "Late afternoon to sunset (about 18:25 in January). Calmer than Promthep Cape.",
+   "openText": "Open hilltop by the road, no gate.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "No entrance fee reported.",
+   "gettingThere": "On the road from Nai Harn to Promthep Cape: after the lake, go up the hill to a sharp left bend and take the short dirt track. About 30-40 min from Patong, 15-20 min from Kata.",
+   "description": "A grassy hilltop next to a large wind turbine, between Nai Harn and Promthep Cape. You look down on small Ya Nui Beach and Koh Man island, with Promthep in the distance. There is a little parking, a shade pavilion and a drinks stall. A calm sunset choice.",
+   "tips": [
+    "Little shade: bring water and a hat in the daytime.",
+    "Do Karon Viewpoint, Nai Harn, Windmill and Promthep in one afternoon loop.",
+    "Local photographers use it for pre-wedding photos, so expect a few groups at golden hour."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Nov 2025)",
+     "url": "https://www.phuket101.net/windmill-viewpoint/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Panorama_from_Windmill_Viewpoint.jpg/1280px-Panorama_from_Windmill_Viewpoint.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Panorama_from_Windmill_Viewpoint.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ko_Man_from_Windmill_Viewpoint.jpg/1280px-Ko_Man_from_Windmill_Viewpoint.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Ko_Man_from_Windmill_Viewpoint.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/windmill-viewpoint/",
+    "https://www.jamiesphuketblog.com/2017/06/black-rock-viewpoint-pa-hin-dam.html"
+   ],
+   "verification": "Checked Oct 2026. Coordinates: Google Maps link, OSM viewpoint and Commons photo GPS agree within 50 m. No source mentions a fee or gate. Main source last updated Nov 2025."
+  },
+  {
+   "id": "black-rock-viewpoint",
+   "name": "Black Rock Viewpoint (Pa Hin Dam)",
+   "nameThai": "ผาหินดำ",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "nai-harn",
+   "lat": 7.783,
+   "lng": 98.2975,
+   "coordSource": "jamiesphuketblog-mymap+osm(nominatim)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Black Rock Viewpoint, Karon, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "Sunrise or late afternoon. Midday is very hot. Start down before dark.",
+   "openText": "Open hillside, no gate.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "No fee reported for the viewpoint. Nui Beach, further along the same dirt road, charges its own entry fee.",
+   "gettingThere": "From Karon Viewpoint drive toward Nai Harn and turn right at the 'Nui Beach' sign. Follow the dirt road about 1 km, keep left at the 'Pa Hin Dam' sign and park at the black rock painted 'PA HIN DUM'. Then walk up about 10 min. About 15-25 min from Kata, 40-50 min from Patong.",
+   "description": "One of the best views in south Phuket. From a rocky hilltop about 290 m high you see Nai Harn Bay, Ao Sane, Ya Nui and Promthep Cape. Getting there takes effort: a bumpy dirt road, then a short, steep forest path. Few people, no shops.",
+   "tips": [
+    "Wear sneakers, not flip-flops. The path is steep and loose in places.",
+    "A scooter handles the dirt road better than a car. Skip it after heavy rain.",
+    "Bring water; there is nothing to buy at the top.",
+    "There are no lights on the trail. Start down before it gets dark."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Feb 2025)",
+     "url": "https://www.phuket101.net/black-rock-viewpoint/"
+    },
+    {
+     "label": "Jamie's Phuket Blog with route map",
+     "url": "https://www.jamiesphuketblog.com/2017/06/black-rock-viewpoint-pa-hin-dam.html"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Panorama_of_Southern_Phuket_-_Nai_Harn%2C_Ya_Nui%2C_Ao_Sane_beach_and_Promthep_Cape._October_2019_%2848868685346%29.jpg/1280px-Panorama_of_Southern_Phuket_-_Nai_Harn%2C_Ya_Nui%2C_Ao_Sane_beach_and_Promthep_Cape._October_2019_%2848868685346%29.jpg",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Southern_Phuket_-_Nai_Harn,_Ya_Nui,_Ao_Sane_beach_and_Promthep_Cape._October_2019_(48868685346).jpg (shows the bays seen from this viewpoint; exact camera spot not confirmed)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/black-rock-viewpoint/",
+    "https://www.jamiesphuketblog.com/2017/06/black-rock-viewpoint-pa-hin-dam.html",
+    "https://boathouse-phuket.com/?p=3125"
+   ],
+   "verification": "Checked Oct 2026. Coordinates: Jamie's Phuket Blog My Map and OSM viewpoint agree within 15 m. Route agrees in three sources. No source reports a fee. Newest detailed source is Feb 2025, so road condition in 2027 is not confirmed."
+  },
+  {
+   "id": "karon-viewpoint",
+   "name": "Karon Viewpoint",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "kata-noi",
+   "lat": 7.7973,
+   "lng": 98.3022,
+   "coordSource": "osm(photon+nominatim)+jamiesphuketblog-mymap",
+   "coordConfidence": "high",
+   "gmapsQuery": "Karon Viewpoint, Karon, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.25,
+    "max": 0.5
+   },
+   "bestTime": "16:00-17:00 for warm light, or early morning for clear air. Midday light is flat.",
+   "openText": "Open 24 hours.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Free parking.",
+   "gettingThere": "On the coast road from Kata Noi to Nai Harn. About 5-10 min from Kata, 25-30 min from Patong.",
+   "description": "Phuket's classic postcard view: three bays in a row. Kata Noi is below, then Kata with little Koh Pu island, and Karon further north. A quick 15-minute stop with a large car park and small drink stalls, on the way to Nai Harn and Promthep Cape.",
+   "tips": [
+    "The car park fills in the late afternoon in high season. Arrive before 16:00.",
+    "The dirt road to Black Rock Viewpoint starts just south of here.",
+    "Drinks and snacks are sold a few steps below the platform."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Mar 2026)",
+     "url": "https://www.phuket101.net/karon-viewpoint/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Karon_View_Point_02.jpg/1280px-Karon_View_Point_02.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Karon_View_Point_02.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Three_beaches.jpg/1280px-Three_beaches.jpg",
+     "credit": "Frank Overzier",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Three_beaches.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Phuket_Aerial.jpg/1280px-Phuket_Aerial.jpg",
+     "credit": "Bennypc",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_Aerial.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/karon-viewpoint/"
+   ],
+   "verification": "Checked Oct 2026. Free, 24 h and parking per Phuket 101 (updated 23 Mar 2026). Coordinates: OSM viewpoint and Jamie's Phuket Blog map agree within 15 m."
+  },
+  {
+   "id": "kata-beach",
+   "name": "Kata Beach",
+   "nameThai": "หาดกะตะ",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "kata",
+   "lat": 7.8203,
+   "lng": 98.2978,
+   "coordSource": "phuket101-map+osm-beach(photon)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kata Beach, Karon, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 5
+   },
+   "bestTime": "Morning for a calm swim. Sunset (about 18:25) with Koh Pu island in front.",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Sunbeds and umbrellas for rent (price varies). Beach massage from about 300 THB.",
+   "gettingThere": "In Kata: walk. From Patong about 20-30 min by car, scooter or Grab.",
+   "description": "A 1.5 km bay of soft sand with Koh Pu island in front. From December to April the sea is usually calm and clear, good for swimming. It is more relaxed than Patong, with shade trees, beach restaurants and massages. The south end is the liveliest in the evening.",
+   "tips": [
+    "Always respect red flags. Rip currents can still happen.",
+    "Sunbeds use only a small part of the beach. Bring a towel if you do not want to rent.",
+    "For sunset drinks, walk to the south end, where Ska Bar sits on the rocks."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Oct 2026)",
+     "url": "https://www.phuket101.net/kata-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Kata_Beach_view.jpg/1280px-Kata_Beach_view.jpg",
+     "credit": "HutheMeow",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kata_Beach_view.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Phuket_-_Kata_Beach_001.jpg/1280px-Phuket_-_Kata_Beach_001.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Kata_Beach_001.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kata-beach/",
+    "https://en.wikipedia.org/wiki/Hat_Kata"
+   ],
+   "verification": "Checked Oct 2026. Beach facts from Phuket 101 (updated 5 Oct 2026). Coordinates: Phuket 101 map and OSM beach centre within 130 m."
+  },
+  {
+   "id": "kata-noi-beach",
+   "name": "Kata Noi Beach",
+   "nameThai": "หาดกะตะน้อย",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "kata-noi",
+   "lat": 7.8063,
+   "lng": 98.2988,
+   "coordSource": "osm-beach(photon)+jamiesphuketblog-mymap",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kata Noi Beach, Karon, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Before 10:00: easier parking and shade at both ends.",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. No public sunbed rental: sunbeds are for hotel guests only.",
+   "gettingThere": "About 5 min by car or 15 min on foot (hilly road) from Kata. 25-30 min from Patong. Small car park at the south end near Katathani, plus a few roadside spots.",
+   "description": "A small, quieter bay just south of Kata, with soft white sand and clear water. In the dry season the sea is calm and good for swimming, and lifeguards work in the daytime. Most of the beachfront belongs to one big resort, so there are few shops or bars.",
+   "tips": [
+    "Bring a towel or mat and your own shade.",
+    "The middle of the beach has no shade after mid-morning. Sit near the trees at either end.",
+    "Karon Viewpoint is 5 min up the hill."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/kata-noi-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+     "credit": "Jacek Lesniowski",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg/1280px-Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg",
+     "credit": "Tuderna",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_beach_(หาดกะตะน้อย)_-_panoramio.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kata-noi-beach/",
+    "https://www.phuket101.net/kata-beach/"
+   ],
+   "verification": "Checked Oct 2026. Sunbeds, lifeguards and parking from Phuket 101 (updated 16 Sep 2026). Coordinates: OSM beach and Jamie's Phuket Blog map within 70 m."
+  },
+  {
+   "id": "nai-harn-beach",
+   "name": "Nai Harn Beach",
+   "nameThai": "หาดในหาน",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "nai-harn",
+   "lat": 7.776,
+   "lng": 98.3057,
+   "coordSource": "phuket101-map+osm-beach(photon)+jamiesphuketblog-mymap",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nai Harn Beach, Rawai, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 5
+   },
+   "bestTime": "Morning or late afternoon. December and January can be busy.",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Beach massage about 300 THB per hour.",
+   "gettingThere": "Car or scooter: about 30-40 min from Patong, 15-20 min from Kata.",
+   "description": "A wide, natural bay in the far south of the island. The land behind the sand is protected, so there are no buildings, only tall casuarina trees. The water is clear blue in high season. Simple Thai restaurants are across the small road, and a temple and lake are behind the beach.",
+   "tips": [
+    "A stream from the lake crosses the south end of the beach. Your feet will get wet.",
+    "Good base for sunset: Windmill Viewpoint and Promthep Cape are each 5-10 min away by car.",
+    "For a sunset drink, try the rooftop bar of The Nai Harn hotel."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/nai-harn-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Nai_harn_beach_phuket_%2845%29.jpg/1280px-Nai_harn_beach_phuket_%2845%29.jpg",
+     "credit": "Wolfgang Holzem",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Nai_harn_beach_phuket_(45).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Phuket_-_Nai_Harn_Beach_004.jpg/1280px-Phuket_-_Nai_Harn_Beach_004.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Nai_Harn_Beach_004.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/nai-harn-beach/"
+   ],
+   "verification": "Checked Oct 2026. Facts from Phuket 101 (updated 15 Sep 2026). Coordinates: three map sources agree within 60 m."
+  },
+  {
+   "id": "freedom-beach",
+   "name": "Freedom Beach",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "patong",
+   "lat": 7.8749,
+   "lng": 98.2755,
+   "coordSource": "osm-beach(photon)+phuket101-map",
+   "coordConfidence": "high",
+   "gmapsQuery": "Freedom Beach, Karon, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3,
+    "max": 5
+   },
+   "bestTime": "Morning on a calm day. Boats run mainly from December to May.",
+   "openText": "Daytime only. Boat access is mainly December-May.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Longtail from Patong: about 1,200-1,500 THB return per boat. Walk-in: 200 THB per person, plus about 100 THB scooter parking.",
+   "gettingThere": "Longtail boat from the south end of Patong Beach (near Amari), about 10 min. Or drive to The Lek Sand Beach Bar on the Patong-Karon hill road and hike down 15-20 min. The trailhead is about 15 min from Patong, 25 min from Kata.",
+   "description": "A 300 m cove of soft white sand and clear water just south of Patong. You arrive by longtail boat or by a steep jungle trail, so it is much calmer than the big beaches. Snorkeling is good at both ends. A small restaurant, Barefoot Bistro, serves food and drinks and rents chairs.",
+   "tips": [
+    "Agree the boat price and pickup time before you leave Patong.",
+    "There is no pier: you step off the boat into the water. Use a dry bag.",
+    "The hike back up is hard. Sometimes a 4x4 ride up costs about 100 THB per person.",
+    "Bring snorkel gear and wear real shoes for the trail."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (2026)",
+     "url": "https://www.phuket101.net/freedom-beach/"
+    },
+    {
+     "label": "North Abroad guide",
+     "url": "https://northabroad.com/freedom-beach-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/20221108_Freedom_Beach_auf_Phuket_%282%29.jpg/1280px-20221108_Freedom_Beach_auf_Phuket_%282%29.jpg",
+     "credit": "Joachim Lutz",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:20221108_Freedom_Beach_auf_Phuket_(2).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Freedom_beach_-_Karon%2C_Phuket%2C_Thailand_-_panoramio.jpg",
+     "credit": "Bob Phillips",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Freedom_beach_-_Karon,_Phuket,_Thailand_-_panoramio.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/freedom-beach/",
+    "https://northabroad.com/freedom-beach-phuket/"
+   ],
+   "verification": "Checked Oct 2026. Boat 1,200-1,500 THB and 200 THB walk-in fee agree in Phuket 101 (2026) and North Abroad (updated 22 Sep 2026). Coordinates: OSM beach and Phuket 101 map within 45 m."
+  },
+  {
+   "id": "patong-beach",
+   "name": "Patong Beach",
+   "nameThai": "หาดป่าตอง",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "patong",
+   "lat": 7.8966,
+   "lng": 98.2957,
+   "coordSource": "osm-beach-relation(photon)+phuket101-page-geo",
+   "coordConfidence": "high",
+   "gmapsQuery": "Patong Beach, Kathu, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Morning for a calmer swim; sunset from the sand. The north end is quieter all day.",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Sunbeds and umbrellas for rent.",
+   "gettingThere": "In Patong: walk. From Kata about 20-30 min by car, scooter or Grab.",
+   "description": "Phuket's busiest and most famous beach: 3 km of sand in front of the main party town. Expect jet skis, parasailing, vendors and crowds in the center. The north end, near Novotel, has softer sand, clearer water and more shade. The south end has longtail boats to Freedom Beach.",
+   "tips": [
+    "Smoking is banned on Patong Beach. The fine can be up to 100,000 THB.",
+    "Some jet ski renters claim damage after the ride. Take photos of the jet ski before you start, or skip it.",
+    "For a quieter swim, go to the north end.",
+    "Beach clubs: Kudo and Barra Cuda in the center, Fuga at the north end."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Oct 2026)",
+     "url": "https://www.phuket101.net/patong-beach/"
+    },
+    {
+     "label": "TAT news: smoking ban on Thai beaches",
+     "url": "https://www.tatnews.org/2017/10/smoking-ban-thai-beaches-promote-clean-safe-environment/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Long-tail_boats_on_Patong_Beach_Phuket.jpg/1280px-Long-tail_boats_on_Patong_Beach_Phuket.jpg",
+     "credit": "Arnaud-Victor Monteux",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Long-tail_boats_on_Patong_Beach_Phuket.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Patong_Beach_in_Phuket.jpg/1280px-Patong_Beach_in_Phuket.jpg",
+     "credit": "Ewong17",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Patong_Beach_in_Phuket.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/patong-beach/",
+    "https://www.tatnews.org/2017/10/smoking-ban-thai-beaches-promote-clean-safe-environment/",
+    "https://en.wikipedia.org/wiki/Patong"
+   ],
+   "verification": "Checked Oct 2026. Beach facts from Phuket 101 (updated 4 Oct 2026). Smoking ban from TAT (2017 launch); no later source says it was lifted. Coordinates: OSM beach centre and Phuket 101 page geo within 100 m."
+  },
+  {
+   "id": "bangla-road",
+   "name": "Bangla Road",
+   "nameThai": "ถนนบางลา",
+   "tier": "must-see",
+   "category": "nightlife",
+   "area": "patong",
+   "lat": 7.8936,
+   "lng": 98.2968,
+   "coordSource": "phuket101-page-geo+osm-street(photon)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bangla Road, Patong, Phuket",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "19:00-21:00 to look around; after 22:00 for the full party.",
+   "openText": "Pedestrian street every night from about 18:00. Licensed venues open to 4:00; small bars often close about 2:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free to walk. Beer about 100-180 THB, cocktails 200-350 THB. Club entry varies.",
+   "gettingThere": "In Patong: walk. From Kata about 20-30 min by Grab or taxi.",
+   "description": "Patong's famous 400 m party street. Neon beer bars, go-go bars, live music bars and big clubs like Illuzion fill it every night. Loud, chaotic and worth seeing once. The music is mostly commercial EDM, hip-hop and cover bands, not underground techno.",
+   "tips": [
+    "Ignore touts with show cards. They do not work for the bars.",
+    "Check menu prices before you order.",
+    "Bangla Street Food stays open late if you are hungry after midnight.",
+    "Keep your phone and wallet in a front pocket in the crowd."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Jul 2026)",
+     "url": "https://www.phuket101.net/soi-bangla/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg/1280px-Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg",
+     "credit": "Ben Reeves from Phuket, Thailand",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bars_at_Bangla_Road,_Patong,_Thailand.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Bangla_Road_Patong_Thajsko_2018_1.jpg/1280px-Bangla_Road_Patong_Thajsko_2018_1.jpg",
+     "credit": "Karelj",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Bangla_Road_Patong_Thajsko_2018_1.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/soi-bangla/"
+   ],
+   "verification": "Checked Oct 2026. Hours and prices from Phuket 101 (updated 27 Jul 2026). Coordinates: Phuket 101 page geo and OSM Bangla Road segment within 30 m (middle of the street)."
+  },
+  {
+   "id": "khao-rang-viewpoint",
+   "name": "Khao Rang Viewpoint",
+   "nameThai": "จุดชมวิวเขารัง",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "phuket-town",
+   "lat": 7.8924,
+   "lng": 98.3802,
+   "coordSource": "osm-viewpoint(photon)+phuket101-mymap(Tunk Ka Cafe)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao Rang Viewpoint, Phuket Town",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 2
+   },
+   "bestTime": "Sunset (about 18:25 in January) and the 20 min after, when the town lights come on.",
+   "openText": "Viewing deck has no gate. Tunk Ka Cafe: daily 11:15-22:00 (Saturday from 11:00).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Tunk Ka Cafe mains about 80-180 THB.",
+   "gettingThere": "A few minutes uphill from Phuket Old Town. About 25-35 min from Patong, 30-40 min from Kata.",
+   "description": "A green hill right above Phuket Town. A viewing deck looks over the city, Chalong Bay and Cape Panwa. Hilltop restaurants such as Tunk Ka Cafe serve Thai food with the same view. A good end to an Old Town day, especially at sunset.",
+   "tips": [
+    "Book a rail-side table at Tunk Ka Cafe by phone (081 892 6315) and arrive about 18:00.",
+    "Monkeys live near the top. Do not feed them and keep food in closed bags.",
+    "Phuket Old Town is about 5 min away by car."
+   ],
+   "links": [
+    {
+     "label": "Tunk Ka Cafe (Phuket 101, updated Sep 2026)",
+     "url": "https://www.phuket101.net/tunk-ka-cafe/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/View_of_Phuket_city_from_Khao_Rang_hill.jpg",
+     "credit": "Oleg Bor",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:View_of_Phuket_city_from_Khao_Rang_hill.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/tunk-ka-cafe/",
+    "https://www.phuket101.net/khao-rang-breeze/"
+   ],
+   "verification": "Checked Oct 2026. Tunk Ka Cafe hours from Phuket 101 (updated 26 Sep 2026). Viewing deck and monkeys from Phuket 101 Khao Rang Breeze page (May 2024). Coordinates: OSM viewpoint and Phuket 101 map within 60 m."
+  },
+  {
+   "id": "rawai-seafood-market",
+   "name": "Rawai Seafood Market",
+   "nameThai": "ตลาดทะเลสด หาดราไวย์",
+   "tier": "must-see",
+   "category": "food",
+   "area": "rawai",
+   "lat": 7.7756,
+   "lng": 98.3288,
+   "coordSource": "phuket101-mymap+osm-marketplace(photon)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Rawai Seafood Market, Rawai, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 2
+   },
+   "bestTime": "Around 18:00-19:00 for dinner and a lively scene. Late morning is quietest.",
+   "openText": "Daily, about 11:00-21:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Seafood is priced per kg (large prawns up to about 1,500 THB/kg). Cooking fee about 100 THB per kg, or 50-100 THB per dish.",
+   "gettingThere": "On Wiset Road next to Rawai Pier. About 35-45 min from Patong, 15-25 min from Kata.",
+   "description": "A 100 m strip next to Rawai Pier, in an old sea gypsy fishing village. Fish stalls are on one side, restaurants on the other. You choose fish, prawns, crab or lobster, pay by weight, and a restaurant across the road cooks it your way. Fun, but no longer cheap.",
+   "tips": [
+    "Agree the price per kg before they bag it, and watch the scale.",
+    "Ask the cooking fee first: some places charge per kg, others per dish.",
+    "Bring cash for the stalls.",
+    "Mook Manee is the biggest restaurant here and is listed in the Michelin Guide."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/rawai-seafood-market/"
+    },
+    {
+     "label": "Window on Phuket guide",
+     "url": "https://windowonphuket.com/rawai-seafood-market-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_11.jpg (Rawai Beach next to the market; no free photo of the market itself found)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Fishermen_and_people_collecting_shells_and_crabs_at_low_tide._Rawai_Beach%2C_Phuket%2C_Thailand._09-27-201_%2848816874106%29.jpg",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Fishermen_and_people_collecting_shells_and_crabs_at_low_tide._Rawai_Beach,_Phuket,_Thailand._09-27-201_(48816874106).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/rawai-seafood-market/",
+    "https://windowonphuket.com/rawai-seafood-market-phuket/"
+   ],
+   "verification": "Checked Oct 2026. Hours and cooking fees from Phuket 101 (updated 21 Sep 2026); Window on Phuket confirms the daily buy-and-cook system. Coordinates: Phuket 101 map and OSM marketplace within 35 m."
+  },
+  {
+   "id": "naka-weekend-market",
+   "name": "Naka Weekend Market",
+   "tier": "must-see",
+   "category": "market",
+   "area": "phuket-town",
+   "lat": 7.8808,
+   "lng": 98.3663,
+   "coordSource": "official-site-gmaps-link+phuket101-mymap",
+   "coordConfidence": "high",
+   "gmapsQuery": "Naka Weekend Market, Wirat Hong Yok Road, Phuket",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Arrive 16:30-17:30, before the big evening crowd and the parking jam.",
+   "openText": "Saturday and Sunday 16:00-23:00 (official site; one guide says 22:00). On your trip: Sat 9, Sun 10, Sat 16 and Sun 17 Jan 2027.",
+   "days": [
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free entry.",
+   "gettingThere": "South edge of Phuket Town, near Central Phuket. About 20-30 min from Patong, 25-35 min from Kata. The car park at the back jams at night; roadside parking is often easier.",
+   "description": "Phuket's biggest weekend night market, on the south edge of Phuket Town. Hundreds of stalls sell cheap clothes, souvenirs and gadgets, plus a large street-food area. There is live music on the stage in the evening. Busy, hot and very local.",
+   "tips": [
+    "Bargain for clothes and souvenirs, but not for food.",
+    "Bring small cash notes.",
+    "Eat early, around 17:00, then shop when it cools down."
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.phuketnakamarket.com/"
+    },
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/phuket-weekend-market/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.phuketnakamarket.com/wp-content/uploads/2023/04/naka-socials.jpg",
+     "credit": "Naka Night Market (official site)",
+     "license": "Official site image (og:image)",
+     "source": "https://www.phuketnakamarket.com/"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Nene_Royal_performing_at_Naka_Market.jpg",
+     "credit": "whojarr",
+     "license": "CC BY 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Nene_Royal_performing_at_Naka_Market.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuketnakamarket.com/",
+    "https://www.phuket101.net/phuket-weekend-market/",
+    "https://windowonphuket.com/naka-weekend-market-phuket/"
+   ],
+   "verification": "Checked Oct 2026. Official site says Saturday-Sunday 16:00-23:00; Phuket 101 (updated 27 Sep 2026) says 16:00-22:00, so plan to leave by 22:00. Coordinates: official Google Maps link and Phuket 101 map within 50 m."
+  },
+  {
+   "id": "chillva-market",
+   "name": "Chillva Market",
+   "tier": "must-see",
+   "category": "market",
+   "area": "phuket-town",
+   "lat": 7.9071,
+   "lng": 98.3734,
+   "coordSource": "phuket101-page-geo+phuket101-mymap+commons-photo-gps",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chillva Market, Yaowarat Road, Phuket Town",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "18:00-19:00 for the best stalls and the start of live music. Wednesday-Thursday calmer, Friday-Saturday livelier.",
+   "openText": "Monday to Saturday, about 17:00-23:00. Closed Sunday. Tuesday adds a second-hand clothes market.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "feeText": "Free entry.",
+   "gettingThere": "141/2 Yaowarat Road, north side of Phuket Town. About 20-30 min from Patong, 30-40 min from Kata. Parking on site, busy on weekend evenings.",
+   "description": "A trendy night market in Phuket Town, popular with young Thais. Local fashion stalls and street food sit between bars built from stacked shipping containers, some with upstairs seats. A stage has live music. Smaller and more creative than Naka.",
+   "tips": [
+    "Bring cash. Some stalls take QR payment.",
+    "On Fridays, get to the container bars early for an upstairs seat.",
+    "The quieter Retro Area at the back is good for a drink."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/chillva-market/"
+    },
+    {
+     "label": "Window on Phuket guide",
+     "url": "https://windowonphuket.com/chillva-market-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chillva_Market_Stage.jpg/1280px-Chillva_Market_Stage.jpg",
+     "credit": "JULIANISME",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Chillva_Market_Stage.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/chillva-market/",
+    "https://windowonphuket.com/chillva-market-phuket/"
+   ],
+   "verification": "Checked Oct 2026. Monday-Saturday 17:00-23:00, closed Sunday agrees in Phuket 101 (updated 12 Sep 2026) and Window on Phuket. Commons photo from Sep 2025. Coordinates: three sources within 40 m."
+  },
+  {
+   "id": "nai-yang-beach",
+   "name": "Nai Yang Beach (Sirinat National Park)",
+   "nameThai": "หาดในยาง",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "nai-yang",
+   "lat": 8.09,
+   "lng": 98.2976,
+   "coordSource": "phuket101-mymap+osm-beach(photon)+commons-photo-gps",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nai Yang Beach, Sakhu, Thalang, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Late afternoon: shade, plane landings and sunset (about 18:25). Good stop before a flight.",
+   "openText": "Beach always open. Sirinat National Park office: 8:00-16:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Village part of the beach: free. Sirinat National Park fee for foreigners: 200 THB adult, 100 THB child, charged in the park area.",
+   "gettingThere": "5-10 min from Phuket Airport. About 45-60 min from Patong, 60-75 min from Kata.",
+   "description": "A quiet, shady bay inside Sirinat National Park, next to the airport. Small seafood restaurants and bars sit under the trees, and the sea is calm in high season. About 2.5 km north, at Mai Khao Beach, planes land low over the sand in the dry season.",
+   "tips": [
+    "Plane spotting: go to the south end of Mai Khao Beach, next to the runway, in the late afternoon.",
+    "Stay out of the airport safety zone under the approach path. No drones, lasers or flash: penalties are heavy.",
+    "Good last stop on departure day (Mon 18 Jan): the airport is about 10 min away.",
+    "Sea Almond and The Good View are restaurants right on the sand."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (updated Sep 2026)",
+     "url": "https://www.phuket101.net/nai-yang-beach/"
+    },
+    {
+     "label": "Sirinat National Park (Thai National Parks)",
+     "url": "https://www.thainationalparks.com/sirinat-national-park"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg/1280px-Nai_Yang_Beach%2C_Phuket_%284448621322%29.jpg",
+     "credit": "Andy Mitchell from Glasgow, UK",
+     "license": "CC BY-SA 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach,_Phuket_(4448621322).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Nai_Yang_Beach.jpg/1280px-Nai_Yang_Beach.jpg",
+     "credit": "WalkOnWater93",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Mai_Khao_Banner.jpg/1280px-Mai_Khao_Banner.jpg",
+     "credit": "Ben Reeves from Phuket, Thailand",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Mai_Khao_Banner.jpg (plane landing over Mai Khao Beach)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/nai-yang-beach/",
+    "https://www.phuket101.net/sirinat-national-park-phuket/",
+    "https://www.thainationalparks.com/sirinat-national-park",
+    "https://www.jamiesphuketblog.com/2018/05/watching-planes-at-mai-khao-beach.html"
+   ],
+   "verification": "Checked Oct 2026. Park fee 200/100 THB and office hours from Thai National Parks (checked Jun 2026). Where the fee is charged is not officially confirmed: an OSM ticket office sits about 350 m north of this pin, and reviews say the village end is free. Plane landings over the beach in high season per Phuket 101 (Jul 2026). Airport safety-zone rules date from 2019 news."
+  },
+  {
+   "id": "bang-pae-waterfall",
+   "name": "Bang Pae Waterfall (Khao Phra Thaeo)",
+   "nameThai": "น้ำตกบางแป",
+   "tier": "must-see",
+   "category": "waterfall",
+   "area": "thalang",
+   "lat": 8.0415,
+   "lng": 98.3932,
+   "coordSource": "phuket101-mymap+thaiholidayguide-geo+commons-photo-gps",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bang Pae Waterfall, Pa Khlok, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 2.5
+   },
+   "bestTime": "Weekday morning, before 10:00. In January the water is lower than in the rainy season.",
+   "openText": "Daily, daytime. Sources give different times (from 8:00 or 9:00 until 16:00-18:00), so arrive before 15:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Park fee for foreigners: 200 THB adult, 100 THB child in most sources; some 2026 sources say 400/200 THB. Same-day ticket also valid at Ton Sai Waterfall. Cash.",
+   "gettingThere": "Off Route 4027 on the east side of the island. About 40-50 min from Patong, 50-60 min from Kata. About 10 min from the Phuket Elephant Sanctuary office.",
+   "description": "The largest waterfall on Phuket, inside the Khao Phra Thaeo rainforest reserve. A 10-15 minute jungle path follows the stream to the falls and rock pools. In January the flow is getting low, so think forest walk, not big waterfall. The Gibbon Rehabilitation Project is at the entrance.",
+   "tips": [
+    "Gibbon project: visits only in booked 1-hour sessions (10:30, 12:30, 14:00). Book online first.",
+    "Wear shoes with grip. The rocks are slippery; do not jump from them.",
+    "Alcohol is not allowed in the park.",
+    "Ton Sai Waterfall (same ticket) is very small in the dry season."
+   ],
+   "links": [
+    {
+     "label": "Khao Phra Thaeo (Thai National Parks)",
+     "url": "https://www.thainationalparks.com/khao-phra-thaeo-wildlife-sanctuary"
+    },
+    {
+     "label": "Gibbon Rehabilitation Project booking",
+     "url": "https://www.gibbonproject.org/visit-us/booking/"
+    },
+    {
+     "label": "Window on Phuket guide",
+     "url": "https://windowonphuket.com/bang-pae-waterfall-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Near_Bang_Pae_waterfall_2010_-_panoramio.jpg/1280px-Near_Bang_Pae_waterfall_2010_-_panoramio.jpg",
+     "credit": "Roma Neus",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Near_Bang_Pae_waterfall_2010_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Near_Bang_Pae_waterfall_2010_-_panoramio_%281%29.jpg/1280px-Near_Bang_Pae_waterfall_2010_-_panoramio_%281%29.jpg",
+     "credit": "Roma Neus",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Near_Bang_Pae_waterfall_2010_-_panoramio_(1).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.thainationalparks.com/khao-phra-thaeo-wildlife-sanctuary",
+    "https://www.phuket101.net/phuket-waterfalls/",
+    "https://windowonphuket.com/bang-pae-waterfall-phuket/",
+    "https://www.thaiholidayguide.com/attraction/nam-tok-bang-pae/",
+    "https://www.gibbonproject.org/visit-us/booking/"
+   ],
+   "verification": "Checked Oct 2026. Fee conflict: Thai National Parks, Thai Holiday Guide and Window on Phuket say 200 THB; the Phuket 101 FAQ (Jul 2026) says 400 THB. Hours differ by source. Gibbon project booking-only rule from its own site. Pin is the entrance and car park; the falls are a 10-15 min walk."
+  },
+  {
+   "id": "phuket-elephant-sanctuary",
+   "name": "Phuket Elephant Sanctuary",
+   "tier": "must-see",
+   "category": "activity",
+   "area": "thalang",
+   "lat": 8.0258,
+   "lng": 98.4016,
+   "coordSource": "official-site-gmaps-link+osm-office(photon)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket Elephant Sanctuary, Pa Khlok, Thalang, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3.5,
+    "max": 3.5
+   },
+   "bestTime": "Morning program (about 9:30-13:00) is cooler. Book several days ahead in high season.",
+   "openText": "Half-day programs: morning about 9:30-13:00, afternoon about 13:30-17:00. Booking required, no walk-ins.",
+   "feeText": "Half day: 3,000 THB per adult (age 13+). Child prices on the booking page. Shared hotel transfer can be added. Full day from 7,000 THB.",
+   "gettingThere": "Meet at the sanctuary office in Paklok (this pin), or book the shared hotel pickup. Self-drive about 40-50 min from Patong, 45-60 min from Kata.",
+   "description": "An ethical sanctuary for rescued and retired elephants. There is no riding, no bathing and, since 1 April 2026, no feeding. You watch the elephants roam, forage and bathe freely from forest trails and a long canopy walkway. Lunch is a vegetarian Thai buffet.",
+   "tips": [
+    "Book online first. There is no public access to the sanctuary; every visit starts at the office.",
+    "Wear clothes that can get dirty. Rubber boots, raincoats and mosquito spray are provided.",
+    "The visit includes the elephant hospital, Phuket's first.",
+    "Combine with Bang Pae Waterfall, about 10 min away."
+   ],
+   "links": [
+    {
+     "label": "Official half-day program",
+     "url": "https://www.phuketelephantsanctuary.org/programs/half-day/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.phuketelephantsanctuary.org/wp-content/uploads/sites/7659/2025/01/phuketelephantsanctuary_programs_half-day-4.jpg",
+     "credit": "Phuket Elephant Sanctuary (official site)",
+     "license": "Official site image",
+     "source": "https://www.phuketelephantsanctuary.org/programs/half-day/"
+    },
+    {
+     "url": "https://www.phuketelephantsanctuary.org/wp-content/uploads/sites/7659/2025/01/phuketelephantsanctuary_programs_half-day-9.jpg",
+     "credit": "Phuket Elephant Sanctuary (official site)",
+     "license": "Official site image",
+     "source": "https://www.phuketelephantsanctuary.org/programs/half-day/"
+    }
+   ],
+   "sources": [
+    "https://www.phuketelephantsanctuary.org/programs/half-day/",
+    "https://www.phuket101.net/phuket-elephant-sanctuary/"
+   ],
+   "verification": "Checked Oct 2026 on the official site: 3,000 THB half day (age 13+), times, no public access, feeding stopped 1 Apr 2026. Pin is the Paklok office from the official Google Maps link; OSM office node within 30 m."
+  },
+  {
+   "id": "chalong-bay-rum",
+   "name": "Chalong Bay Rum Distillery",
+   "tier": "must-see",
+   "category": "activity",
+   "area": "chalong",
+   "lat": 7.8417,
+   "lng": 98.3523,
+   "coordSource": "official-site-gmaps+osm(photon)+phuket101-mymap",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chalong Bay Rum Distillery, Soi Palai 2, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2.5
+   },
+   "bestTime": "Take the 17:00 tour, then stay for dinner and cocktails in the garden.",
+   "openText": "Bar and restaurant daily 11:00-23:00. Tours daily at 13:00, 15:00, 17:00 and 19:00 (1 hour).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Distillery tour 590 THB (with a mojito and a tasting of 9 flavours). Cocktail workshops 990-1,490 THB. Booking required.",
+   "gettingThere": "14/2 Moo 2, Soi Palai 2, Chalong. About 30-40 min from Patong, 15-20 min from Kata.",
+   "description": "A craft distillery started in 2012 by two French expats. They make rum from fresh Thai sugarcane juice, plus Saneha gin and Lanna vodka. The 1-hour tour shows how it is made and ends with a tasting and a mojito. The bar and restaurant in the sugarcane garden are good for dinner.",
+   "tips": [
+    "Book on the official site before you go.",
+    "Photos are not allowed inside the distillery.",
+    "After the tasting, take Grab instead of riding a scooter.",
+    "Cocktail workshops start at 12:00 (vodka), 14:00 (rum) and 16:00 (gin)."
+   ],
+   "links": [
+    {
+     "label": "Official distillery visit page",
+     "url": "https://chalongbayrum.com/distillery-visit"
+    },
+    {
+     "label": "Official cocktail workshop page",
+     "url": "https://chalongbayrum.com/cocktail-workshop"
+    },
+    {
+     "label": "Official bar and restaurant page",
+     "url": "https://chalongbayrum.com/bar-restaurant"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://chalongbayrum.com/images/fb.jpg",
+     "credit": "Chalong Bay Rum (official site)",
+     "license": "Official site image (og:image)",
+     "source": "https://chalongbayrum.com/en/home"
+    }
+   ],
+   "sources": [
+    "https://chalongbayrum.com/distillery-visit",
+    "https://chalongbayrum.com/cocktail-workshop",
+    "https://chalongbayrum.com/bar-restaurant",
+    "https://en.wikipedia.org/wiki/The_Distillery_Phuket",
+    "https://www.phuket101.net/chalong-bay-rum-distillery/"
+   ],
+   "verification": "Checked Oct 2026 on the official site: tour 590 THB, times, workshops and bar hours. Phuket 101 (Nov 2025) still lists older prices (450 THB), so the official prices are used. Coordinates: official map, OSM and Phuket 101 map within 30 m."
+  }
+ ],
+ "notes": "22 must-see items on Phuket island, built from the previous attempt plus targeted checks on 15 Oct 2026. Drive times are OSRM free-flow times from central Patong and Kata plus 30-60% for traffic and hills; treat them as estimates. Sunset in Jan 2027 is about 18:24-18:28 (computed and checked with sunrise-sunset.org). Merged or skipped: Mai Khao plane spotting is a tip inside Nai Yang Beach, because standing in the runway approach zone is restricted by airport rules; Ton Sai Waterfall is a tip inside Bang Pae, because it is tiny in the dry season; Monkey Hill was skipped, because Phuket 101 (Mar 2026) says the top has poor views, motorbikes are banned and monkeys can bite. Open conflicts to show the reader: Khao Phra Thaeo fee (200 vs 400 THB), Naka closing time (official 23:00 vs 22:00 in Phuket 101), Thai Hua Museum closed day (Monday vs Wednesday), and where the Sirinat park fee is charged at Nai Yang. Big Buddha reopened on 3 Mar 2026 after the 2024 landslide closure and is open 9:00-18:00, so it cannot be a sunset spot. Images: all 42 Commons URLs and 4 official-site URLs returned HTTP 200 image/jpeg on 15 Oct 2026; Black Rock and Rawai use nearby-view photos, as labelled in their source fields."
+}

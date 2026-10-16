@@ -1,0 +1,602 @@
+{
+ "items": [
+  {
+   "id": "circoloco-thailand-2027",
+   "kind": "dated",
+   "name": "Circoloco Thailand 2027",
+   "type": "party",
+   "dates": [
+    "2027-01-09",
+    "2027-01-16",
+    "2027-01-23"
+   ],
+   "window": "in",
+   "venue": "Baba Beach Club Natai (Baba Beach Jungle)",
+   "island": "Phang Nga",
+   "area": "natai",
+   "lat": 8.2502954,
+   "lng": 98.2817659,
+   "coordSource": "Google Maps listing (Baba Beach Club Phuket Natai) = Ticketmelon venue; Dice venue geo 23 m away; OSM Khao Pilai Beach 230 m south",
+   "coordConfidence": "high",
+   "gmapsQuery": "Baba Beach Club Natai, Khok Kloi, Phang Nga",
+   "description": "The famous Monday party from DC-10 Ibiza, on Natai Beach about 30 minutes north of Phuket airport. Three Saturdays, 3 PM to 3 AM, from sunny afternoon to night by the sea. House, tech house and some techno. Past Thailand editions had Seth Troxler, Peggy Gou and Michael Bibi. The 2026 run sold over 20,000 tickets.",
+   "genres": [
+    "house",
+    "tech house",
+    "techno"
+   ],
+   "timeText": "Sat 9, Sat 16 and Sat 23 Jan, 3 PM - 3 AM each day",
+   "priceText": "Dice: from EUR 107.99 (Oct 2026). Also sold on Ticketmelon in THB. Limited tickets.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 3,
+   "pick": true,
+   "tips": [
+    "2027 lineup is not out yet. Watch @circolocoibiza on Instagram.",
+    "Ask your driver not to stop or wait at the main gate (venue request).",
+    "Dice says 18+, but Ticketmelon says 20+. Bring your passport.",
+    "Only 9 and 16 Jan are in your dates. 23 Jan is after you leave."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Dice)",
+     "url": "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets"
+    },
+    {
+     "label": "Tickets (Ticketmelon)",
+     "url": "https://www.ticketmelon.com/circoloco/circolocoth27"
+    },
+    {
+     "label": "Circoloco official",
+     "url": "https://circolocoibiza.com/event/phuket"
+    },
+    {
+     "label": "Baba Beach Club page",
+     "url": "https://www.bababeachclub.com/natai/circoloco-thailand/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://dice-media.imgix.net/attachments/2026-08-31/bd3c3d6c-01bc-4379-8536-f70f54b6ad52.jpg?rect=0%2C216%2C1080%2C648",
+     "source": "dice.fm event page",
+     "credit": "Circoloco",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://www.bababeachclub.com/images/circoloco-01.jpg",
+     "source": "bababeachclub.com",
+     "credit": "Baba Beach Club Natai",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://tm-prod-event-files-v3.ticketmelon.com/b07a5abaa69c11f1990801117567899b/poster/d381cdffa69c11f1990801117567899b.jpeg",
+     "source": "ticketmelon.com",
+     "credit": "Circoloco Thailand",
+     "license": "Official poster"
+    }
+   ],
+   "verification": "Dice JSON (on sale, from EUR 107.99, 18+, 9/16/23 Jan 3 PM-3 AM), Ticketmelon data (age 20, same dates), Baba Beach Club page and circolocoibiza.com (Baba Beach Jungle, 9/16/23 Jan) checked 15 Oct 2026. No 2027 lineup yet (Time Out). Past artists from EDM House Network and Time Out. Pin = Google listing; Dice 23 m away. gmapsQuery tested in Google Maps.",
+   "sources": [
+    "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets",
+    "https://www.ticketmelon.com/circoloco/circolocoth27",
+    "https://circolocoibiza.com/event/phuket",
+    "https://www.bababeachclub.com/natai/circoloco-thailand/",
+    "https://www.timeout.com/phuket/news/circoloco-phuket-thailand-090126",
+    "https://edmhousenetwork.com/circoloco-thailand-confirms-return-for-2027/"
+   ]
+  },
+  {
+   "id": "cafe-del-mar-pyramid-2027-01-08",
+   "kind": "dated",
+   "name": "Pyramid Stage: secret headliner (Café del Mar)",
+   "type": "day party",
+   "dates": [
+    "2027-01-08"
+   ],
+   "window": "in",
+   "venue": "Café del Mar Phuket, Pyramid Stage",
+   "island": "Phuket",
+   "area": "kamala",
+   "lat": 7.9610227,
+   "lng": 98.2839357,
+   "coordSource": "cafedelmar.com schema.org geo + Google listing 'Café del Mar Phuket Beach Club' (1 m) + OSM node (7 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+   "description": "Big open-air show on Café del Mar's Pyramid Stage on Friday 8 January, your arrival day. The headliner is still a secret. The venue says past Pyramid names include Carl Cox, Black Coffee, Solomun, Marco Carola and Peggy Gou. Sign up on their site to hear the name first.",
+   "genres": [
+    "house",
+    "techno"
+   ],
+   "timeText": "Fri 8 Jan, doors 2 PM, until late",
+   "priceText": "Ticket price not announced yet",
+   "status": "tba",
+   "undergroundScore": 2,
+   "pick": false,
+   "tips": [
+    "Strictly 20+. Bring ID.",
+    "Rain or storm: tickets become food and drink credit. No refunds."
+   ],
+   "links": [
+    {
+     "label": "Event page",
+     "url": "https://phuket.cafedelmar.com/events/2027-jan-08-pyramid"
+    },
+    {
+     "label": "Early access sign-up",
+     "url": "https://laylo.com/cdm/jan-27"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://cdn.prod.website-files.com/677cebd252a609f07773a974/6a8ebe5bcb6b4399076c8ff7_announcing-jan-py.jpg",
+     "source": "phuket.cafedelmar.com",
+     "credit": "Café del Mar Phuket",
+     "license": "Official promotional image"
+    }
+   ],
+   "verification": "Event page phuket.cafedelmar.com/events/2027-jan-08-pyramid checked 15 Oct 2026: Fri 8 Jan, 2 PM - late, 20+, headliner secret, rain = F&B credit. The 'free' tag on the page is a template placeholder (it also sits next to Marco Carola's 1,600 THB). Not on Megatix or RA yet. Laylo sign-up link works. Coords: venue schema.org = Google listing = OSM (within 7 m).",
+   "sources": [
+    "https://phuket.cafedelmar.com/events",
+    "https://phuket.cafedelmar.com/events/2027-jan-08-pyramid",
+    "https://laylo.com/cdm/jan-27"
+   ]
+  },
+  {
+   "id": "marco-carola-cafe-del-mar-2027",
+   "kind": "dated",
+   "name": "Marco Carola at Café del Mar",
+   "type": "day party",
+   "dates": [
+    "2027-01-13"
+   ],
+   "window": "in",
+   "venue": "Café del Mar Phuket, Pyramid Stage",
+   "island": "Phuket",
+   "area": "kamala",
+   "lat": 7.9610227,
+   "lng": 98.2839357,
+   "coordSource": "cafedelmar.com schema.org geo + Google listing 'Café del Mar Phuket Beach Club' (1 m) + OSM node (7 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+   "description": "Marco Carola, the man behind the Music On residency in Ibiza, plays one of his long sets on the open-air Pyramid Stage. Nicolas Masseyeff supports. Big beach-club crowd, tech house and techno from afternoon into the night. The biggest techno-side name in Phuket in your dates so far.",
+   "genres": [
+    "tech house",
+    "techno"
+   ],
+   "lineup": [
+    "Marco Carola",
+    "Nicolas Masseyeff"
+   ],
+   "timeText": "Wed 13 Jan, 2 PM - 10:30 PM. Clubroom after-party from 11 PM (separate ticket)",
+   "priceText": "From 1,200 THB on Megatix (lowest tier, Oct 2026). The venue site and RA show 1,600 THB.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 2,
+   "pick": true,
+   "tips": [
+    "Strictly 20+. Bring ID.",
+    "Each ticket has an entry time. Late arrival can be refused or cost a 1,000 THB fee. Come before 6 PM to avoid queues.",
+    "The main ticket is the outdoor show only. The after-party in the Clubroom (from 11 PM) needs its own ticket."
+   ],
+   "links": [
+    {
+     "label": "Event page",
+     "url": "https://phuket.cafedelmar.com/events/marco-carola-jan2027"
+    },
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/events/marco-carola-cafe-del-mar-phuket-130127"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/events/2554112"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/76126/TWowjGSlGKft0MS51aOdzSSocCEI9UIcOThvkDDX.jpg",
+     "source": "megatix.in.th",
+     "credit": "Café del Mar Phuket",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://images.ra.co/df355ea4ade0bdab9f1730d7bd86f18ffdb74088.jpg",
+     "source": "ra.co",
+     "credit": "Café del Mar Phuket",
+     "license": "Official flyer"
+    }
+   ],
+   "verification": "Venue page (Wed 13 Jan, doors 2 PM, 1,600 THB, 20+), Megatix JSON-LD (14:00-22:30, from 1,200 THB, in stock, seller Café del Mar Phuket) and RA GraphQL (venue's own promoter account: support by Nicolas Masseyeff, 1,600 THB, 20+) checked 15 Oct 2026. RA pin is ~1 km off; venue geo used.",
+   "sources": [
+    "https://phuket.cafedelmar.com/events/marco-carola-jan2027",
+    "https://megatix.in.th/events/marco-carola-cafe-del-mar-phuket-130127",
+    "https://ra.co/events/2554112"
+   ]
+  },
+  {
+   "id": "lost-jungle-parvati-2027",
+   "kind": "dated",
+   "name": "Parvati Day & Night at Lost Jungle",
+   "type": "festival",
+   "dates": [
+    "2027-01-09",
+    "2027-01-10",
+    "2027-01-11"
+   ],
+   "window": "in",
+   "venue": "Lost Jungle (new hilltop jungle site, Koh Phangan; address not public)",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "lat": 9.74,
+   "lng": 100.03,
+   "coordSource": "Island centre (wikipedia). The venue does not publish an address.",
+   "coordConfidence": "low",
+   "gmapsQuery": "Koh Phangan, Surat Thani",
+   "description": "A Parvati Records party by Sacred Moon Phangan: about 48 hours of non-stop forest and dark psytrance in the Koh Phangan jungle. It is also the opening of Lost Jungle, a new hilltop site with camping, art market and food. With Giuseppe, Atriohm, Ectogasmics, Kerlivin and more. Not techno.",
+   "genres": [
+    "psytrance",
+    "forest",
+    "darkpsy"
+   ],
+   "lineup": [
+    "Atriohm",
+    "Giuseppe",
+    "Ectogasmics",
+    "Obelisk",
+    "Weirdos",
+    "Audiofools",
+    "Ectobot",
+    "Gu",
+    "Kerlivin",
+    "KT",
+    "Aztec Dosage",
+    "Alien Trancesistor",
+    "Makumba",
+    "Kokobloko",
+    "Slate",
+    "Capodanna",
+    "Kia Goa",
+    "Manousakiz"
+   ],
+   "timeText": "Sat 9 to Mon 11 Jan, about 48 hours non-stop. Start time not final (ticket shop: Sat 4 PM; phangan.events: Sat noon)",
+   "priceText": "2,500 THB on the organiser's Vibez shop (second advance tier from 17 Oct 2026; first tier was 2,000 THB)",
+   "status": "tickets-on-sale",
+   "undergroundScore": 4,
+   "pick": true,
+   "tips": [
+    "The exact location is not public yet. Ask Sacred Moon Phangan or check phangan.events before you go. The map pin is only the island centre.",
+    "Google Maps has no 'Lost Jungle' yet. The search shows Retro Mountain club instead. Do not go there without checking.",
+    "It clashes with Circoloco on Sat 9 Jan.",
+    "From Phuket: fly to Koh Samui (about 1 h), then boat to Koh Phangan (30-60 min). There is a camping area on site."
+   ],
+   "links": [
+    {
+     "label": "Tickets (organiser shop, Vibez)",
+     "url": "https://web.vibez.io/events/a4528761-39b5-4f76-8597-0fb5e60f7e87"
+    },
+    {
+     "label": "Listing (phangan.events)",
+     "url": "https://phangan.events/events/lost-jungle-parvati-day-night/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/08/file_3983.jpg",
+     "source": "phangan.events",
+     "credit": "Lost Jungle / phangan.events",
+     "license": "Event flyer"
+    }
+   ],
+   "verification": "Organiser ticket shop on Vibez (project 'Sacred Moon Phangan'): 'Parvati Day & Night', 4th edition, 9-11 Jan 2027, 48 h non-stop, grand opening of Lost Jungle; tickets active (2,000 THB tier ends 16 Oct, then 2,500 THB). Flyer shows the Parvati Records logo and the same lineup as phangan.events. No address anywhere; a Google 'Lost Jungle' search lands on Retro Mountain Jungle Club, so the query was changed.",
+   "sources": [
+    "https://web.vibez.io/events/a4528761-39b5-4f76-8597-0fb5e60f7e87",
+    "https://phangan.events/events/lost-jungle-parvati-day-night/",
+    "https://phangan.events/wp-content/uploads/2026/08/file_3983.jpg",
+    "https://phangan.events/event-location/lost-jungle/",
+    "https://phangan.events/events/atman-begins-teaser-party-at-lost-jungle/"
+   ]
+  },
+  {
+   "id": "oxa-jungle-party-jan-2027",
+   "kind": "dated",
+   "name": "OXA Jungle Party (3 floors)",
+   "type": "party",
+   "dates": [
+    "2027-01-08",
+    "2027-01-15",
+    "2027-01-19",
+    "2027-01-29"
+   ],
+   "window": "in",
+   "venue": "OXA - Jungle Party, Ban Tai (in the hills)",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "lat": 9.7173519,
+   "lng": 100.0319453,
+   "coordSource": "Google Maps listing 'OXA - Jungle Party' (same place as the link on oxaphangan.com, now moved) + its plus code P28J+WQ (4 m); address 72/52 Moo 2 Ban Tai matches Megatix",
+   "coordConfidence": "medium",
+   "gmapsQuery": "OXA - Jungle Party, Ban Tai, Koh Phangan",
+   "description": "Koh Phangan's weekly Friday jungle party in the hills above Ban Tai. Three floors: Oasis (tech house, indie dance), Canyon (techno) and Cabin (hip-hop, R&B). Fire shows, hammocks, limited capacity. Gates 9 PM, music to 5 AM. DJs mostly TBA. Popular with tourists, not hard underground.",
+   "genres": [
+    "techno",
+    "tech house",
+    "indie dance",
+    "hip-hop"
+   ],
+   "timeText": "Fri 8, Fri 15, Tue 19, Fri 29 Jan, 9 PM - 5 AM",
+   "priceText": "500 THB on Megatix (Tue 19 Jan: 400 THB). Tickets also at the door from 9 PM.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 2,
+   "pick": false,
+   "tips": [
+    "Only one of the three floors (Canyon) is techno.",
+    "Cash only. There is no ATM at the venue.",
+    "Taxis wait at the exit until sunrise. The price is per car, so share a ride.",
+    "A party package with speedboat from Koh Samui is sold on Megatix (boat 11 PM, back 5 AM)."
+   ],
+   "links": [
+    {
+     "label": "OXA official",
+     "url": "https://oxaphangan.com/"
+    },
+    {
+     "label": "Tickets Fri 8 Jan (Megatix)",
+     "url": "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-08127"
+    },
+    {
+     "label": "Tickets Fri 15 Jan (Megatix)",
+     "url": "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-150127"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/73825/eETJyT2H4nbsPavWFyKyErnUwgRxOTCIaY6xedxE.jpg",
+     "source": "megatix.in.th",
+     "credit": "OXA Koh Phangan",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://media.megatix.com.au/e/73827/hFEllqOJth1xarq9regUgC4dM8hN1Mv7WGlIXaqH.jpg",
+     "source": "megatix.in.th",
+     "credit": "OXA Koh Phangan",
+     "license": "Official promotional image"
+    }
+   ],
+   "verification": "Four January dates on Megatix (seller OXA, 9 PM-5 AM, in stock) checked 15 Oct 2026; floor genres from the Megatix lineup block. Megatix sitemap shows OXA runs most Fridays (no 22 Jan, Full Moon night). Pin: the old site link gives the former beach spot 3.7 km away; current Google listing and plus code used. Google: 4.8 from 4,480 reviews.",
+   "sources": [
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-08127",
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-150127",
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-190127",
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-290127",
+    "https://oxaphangan.com/location/",
+    "https://fullmoonparty.guide/koh-phangan-parties",
+    "https://maps.app.goo.gl/FFVpn5n36szEMCut6"
+   ]
+  },
+  {
+   "id": "halfmoon-festival-jan-2027",
+   "kind": "dated",
+   "name": "Halfmoon Festival",
+   "type": "festival",
+   "dates": [
+    "2027-01-03",
+    "2027-01-04",
+    "2027-01-15",
+    "2027-01-16",
+    "2027-01-31"
+   ],
+   "window": "in",
+   "venue": "Halfmoon Magic Forest, Ban Tai (Day 2). Day 1 at Harmony Beach Club",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "lat": 9.7133568,
+   "lng": 100.0302665,
+   "coordSource": "halfmoonfestival.com schema.org geo + official Google Maps link ('Magical Forest by Halfmoon Festival'); OSM node and Megatix plus code are 270 m NW",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Magical Forest by Halfmoon Festival, Ban Tai, Koh Phangan",
+   "description": "Koh Phangan's big two-day jungle festival, now in its 23rd year. Day 1 is a beach party at Harmony Beach Club. Day 2 is the main night in the Magic Forest with 3 stages: psytrance, melodic techno and tech house, and hip-hop. Your edition is Fri 15 and Sat 16 Jan.",
+   "genres": [
+    "psytrance",
+    "melodic techno",
+    "tech house",
+    "afro house",
+    "hip-hop"
+   ],
+   "timeText": "Day 1 beach party 2 PM - midnight. Day 2 Magic Forest: gates 9:30 PM, all night",
+   "priceText": "Dec 2026 edition: from 1,200 THB (Megatix). January tickets not on sale yet.",
+   "status": "confirmed",
+   "undergroundScore": 2,
+   "pick": false,
+   "tips": [
+    "Other January dates: 3-4 Jan, and 31 Jan + 1 Feb.",
+    "Strictly 20+. Bring your passport or photo ID. The name must match the ticket.",
+    "Day 1 is at Harmony Beach Club, about 2.3 km west of the forest.",
+    "If online sales close, tickets are sold at the entrance."
+   ],
+   "links": [
+    {
+     "label": "Halfmoon official",
+     "url": "https://www.halfmoonfestival.com/"
+    },
+    {
+     "label": "2027 dates (official)",
+     "url": "https://www.halfmoonfestival.com/halfmoonfestivaldates"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://static.wixstatic.com/media/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg/v1/fill/w_1280,h_670,al_c/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg",
+     "source": "halfmoonfestival.com",
+     "credit": "Halfmoon Festival",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://static.wixstatic.com/media/28e9d3_70481b650dd04eea9e0ed8045e18ea9c~mv2.png/v1/fill/w_1280,h_670,al_c,q_90/AllSocail-size_2027_only_forWeb.png",
+     "source": "halfmoonfestival.com dates page",
+     "credit": "Halfmoon Festival",
+     "license": "Official 2027 date chart"
+    }
+   ],
+   "verification": "Official 2027 date chart (image on halfmoonfestival.com dates page) read directly: Jan 3+4, 15+16, 31 + Feb 1; Day 1 Harmony Beach 14:00-24:00, Day 2 Magic Forest gates 21:30, 3 stages. thaiest.com agrees. Stages, 20+ rule and 1,200 THB from Dec 2026 Megatix listings. Pin moved 267 m to the venue's own geo.",
+   "sources": [
+    "https://www.halfmoonfestival.com/halfmoonfestivaldates",
+    "https://thaiest.com/blog/half-moon-festival",
+    "https://megatix.in.th/events/halfmoon-festival-16th-17th-december-2026",
+    "https://maps.app.goo.gl/c1L7Ee7uLirKBcjt8"
+   ]
+  },
+  {
+   "id": "daft-funk-live-phuket-2027",
+   "kind": "dated",
+   "name": "Daft Funk Live (Daft Punk tribute)",
+   "type": "concert",
+   "dates": [
+    "2027-01-14"
+   ],
+   "window": "in",
+   "venue": "Banana Beach Club by Sollis 2.0",
+   "island": "Phuket",
+   "area": "layan",
+   "lat": 8.0424305,
+   "lng": 98.2770875,
+   "coordSource": "Google Maps listing 'Banana Beach Club by Sollis 2.0' + Megatix plus code 27RG+PHH and OSM Banana Beach (96 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Banana Beach Club by Sollis 2.0, Choeng Thale, Phuket",
+   "description": "A full live band plays Daft Punk songs note for note, with the helmets and a big light rig. At the new beach club on small Banana Beach, between Layan and Nai Thon (not the Banana Beach on Coral Island). A fun party night, not underground. Part of a three-city Thailand tour by Midnight Sun.",
+   "genres": [
+    "french house",
+    "disco",
+    "live band"
+   ],
+   "lineup": [
+    "Daft Funk Live"
+   ],
+   "timeText": "Thu 14 Jan, 5 PM - 3 AM",
+   "priceText": "990 / 1,400 / 1,700 / 2,000 THB tiers (Megatix). Tables from 10,000 THB.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 1,
+   "pick": false,
+   "tips": [
+    "Also on Koh Phangan: Tue 12 Jan at Ban Sabai beach bar, Ban Tai (from 990 THB).",
+    "Cheap tiers are very limited.",
+    "In Google Maps search 'Banana Beach Club by Sollis 2.0'. Do not go to Banana Beach on Coral Island (Koh Hey)."
+   ],
+   "links": [
+    {
+     "label": "Tickets Phuket (Megatix)",
+     "url": "https://megatix.in.th/events/daft-funk-live-in-phuket-14-january-thu-thailand-premier-tour-2027-tribute-show"
+    },
+    {
+     "label": "Tickets Koh Phangan 12 Jan (Megatix)",
+     "url": "https://megatix.in.th/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show"
+    },
+    {
+     "label": "Venue (Banana Beach by Sollis 2.0)",
+     "url": "https://bananabeachsollis.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/75655/MmcvyVdCuBlBI9GVhIK3nsS0JMASGv5rEt2m8ZVv.jpg",
+     "source": "megatix.in.th",
+     "credit": "Midnight Sun",
+     "license": "Official promotional image"
+    }
+   ],
+   "verification": "Megatix (seller Midnight Sun) checked 15 Oct 2026: Phuket Thu 14 Jan 5 PM-3 AM, tiers 990-2,000 THB, tables from 10,000 THB; Koh Phangan Tue 12 Jan. RA Bangkok listing also says Phuket 14 Jan. Venue exists on Google (4.7, 863 reviews) and has its own site (Banana Beach, Layan).",
+   "sources": [
+    "https://megatix.in.th/events/daft-funk-live-in-phuket-14-january-thu-thailand-premier-tour-2027-tribute-show",
+    "https://megatix.in.th/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show",
+    "https://ra.co/events/2562120",
+    "https://phangan.events/events/daft-funk-live-thailand-at-ban-sabaii/",
+    "https://bananabeachsollis.com/"
+   ]
+  },
+  {
+   "id": "o-beach-ibiza-barra-cuda-2027",
+   "kind": "dated",
+   "name": "O Beach Ibiza x Barra Cuda",
+   "type": "day party",
+   "dates": [
+    "2027-01-01",
+    "2027-01-06",
+    "2027-01-08",
+    "2027-01-13",
+    "2027-01-15",
+    "2027-01-20",
+    "2027-01-27"
+   ],
+   "window": "in",
+   "venue": "Barra Cuda Beach Club, Patong",
+   "island": "Phuket",
+   "area": "patong",
+   "lat": 7.8976887,
+   "lng": 98.296207,
+   "coordSource": "official Google Maps link on barracudaphuket.com; current Google listing 38 m away",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Barra Cuda Beach Club Phuket, Patong",
+   "description": "The Ibiza pool-party brand O Beach returns to Barra Cuda on Patong Beach, home of Thailand's first pool dance floor. Dancers, shows and commercial house by the pool, from day into night. Very touristy, but a big party if you stay in Patong. This is the 'Barra Cuda Phuket' seen on listing sites.",
+   "genres": [
+    "house",
+    "commercial"
+   ],
+   "timeText": "Fri 1, Wed 6, Fri 8, Wed 13, Fri 15, Wed 20, Wed 27 Jan. From noon into the night; after-party tickets enter from 9 PM",
+   "priceText": "From 1,000 THB (Megatix). VIP beds and tables cost extra.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 1,
+   "pick": false,
+   "tips": [
+    "Strictly 20+. Bring photo ID.",
+    "No refunds. Rain or storm: the ticket becomes food and drink credit.",
+    "Short walk from Bangla Road."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/events/o-beach-ibiza-x-barra-cuda-phuket"
+    },
+    {
+     "label": "Barra Cuda official",
+     "url": "https://www.barracudaphuket.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/75804/KBo1DkGbSsyxqbfsR6a3VEyxaHkOsnN8pA7XJhlO.jpg",
+     "source": "megatix.in.th",
+     "credit": "Barra Cuda Beach Club Phuket",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://barracuda-r2.tumwebsme.com/cms/DAY_001_FINAL_HIGHRESRecovered-copy-1024x702.webp",
+     "source": "barracudaphuket.com",
+     "credit": "Barra Cuda Beach Club",
+     "license": "Official venue photo"
+    }
+   ],
+   "verification": "Megatix (seller Barra Cuda Beach Club Phuket) checked 15 Oct 2026: dates 26 Dec, 1, 6, 8, 13, 15, 20, 27 Jan, 3 Feb; from 1,000 THB; strictly 20+; after-party entry from 9 PM. Venue open (Google 4.8, 3,440 reviews; hours to midnight). Coords from the venue's Google Maps link.",
+   "sources": [
+    "https://megatix.in.th/events/o-beach-ibiza-x-barra-cuda-phuket",
+    "https://www.barracudaphuket.com/",
+    "https://phangan.events/events/barra-cuda-phuket-4/"
+   ]
+  }
+ ],
+ "removed": [
+  {
+   "id": "o-beach-ibiza-club-seen-samui-2027",
+   "name": "O Beach Ibiza x Club SEEN Samui Sundays",
+   "reason": "Not worth it for this trip: the same O Beach Ibiza pool-party show runs in Phuket at Barra Cuda, Patong (item o-beach-ibiza-barra-cuda-2027) on 8, 13 and 15 Jan. This one is on Koh Samui (a flight away), commercial (undergroundScore 1). Facts were correct: Megatix lists Sundays 27 Dec-14 Feb, 12 PM-11 PM, from 800 THB, 18+; the venue (CLUB SEEN, ex SEEN Beach Club, Chaweng) is open."
+  }
+ ],
+ "changes": [
+  "oxa-jungle-party-jan-2027: pin moved 3.7 km to the current Google listing 'OXA - Jungle Party' (9.71735, 100.03195, plus code P28J+WQ). The old pin was the former 'OXA Beach Party' spot from a stale link.",
+  "oxa-jungle-party-jan-2027: floors corrected to Oasis tech house/indie dance, Canyon techno, Cabin hip-hop/R&B/commercial; removed 'melodic techno', 'often from Berlin' and 'jungle meets the sea'; undergroundScore 3 to 2; pick true to false; gmapsQuery set to 'OXA - Jungle Party, Ban Tai, Koh Phangan'.",
+  "lost-jungle-parvati-2027: dates corrected to 9-11 Jan (organiser flyer and ticket shop say 9. 10. 11 January, 48 h); 12 Jan removed; organiser Sacred Moon Phangan and Parvati Records confirmed; status listed to tickets-on-sale; price 2,500 THB added; Vibez ticket link added; renamed 'Parvati Day & Night at Lost Jungle'.",
+  "lost-jungle-parvati-2027: gmapsQuery changed from 'Lost Jungle, Koh Phangan' (Google shows Retro Mountain Jungle Club, not confirmed as the same place) to 'Koh Phangan, Surat Thani'; tips on the Circoloco clash and Google trap added.",
+  "halfmoon-festival-jan-2027: pin moved 267 m to the venue's own geo / Google link 'Magical Forest by Halfmoon Festival'; gmapsQuery updated; 20+ rule and Harmony Beach tip added. Dates and Day 1 2 PM start confirmed on the official 2027 chart.",
+  "daft-funk-live-phuket-2027: venue confirmed as Google listing 'Banana Beach Club by Sollis 2.0' (pin moved 96 m to it); gmapsQuery set to that exact name; added warning not to confuse with Banana Beach on Coral Island; venue website link added.",
+  "circoloco-thailand-2027: airport drive corrected from about 20 to about 30 minutes; age tip now says Ticketmelon lists 20+ (Dice 18+); added note that only 9 and 16 Jan are in the trip.",
+  "cafe-del-mar-pyramid-2027-01-08 and marco-carola-cafe-del-mar-2027: gmapsQuery set to exact Google name 'Café del Mar Phuket Beach Club, Kamala, Phuket'; Marco Carola entry-time tip clarified (6 PM is advice; late fee up to 1,000 THB).",
+  "o-beach-ibiza-barra-cuda-2027: timeText fixed (Wednesdays plus only Fri 1, 8, 15 Jan; no edition Fri 22 or 29 Jan); gmapsQuery set to Google name 'Barra Cuda Beach Club Phuket, Patong'.",
+  "o-beach-ibiza-club-seen-samui-2027: removed (same O Beach show available in Phuket at Barra Cuda; Samui version is off-island and commercial)."
+ ]
+}

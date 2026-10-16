@@ -1,0 +1,912 @@
+{
+ "items": [
+  {
+   "id": "similan-islands",
+   "name": "Similan Islands",
+   "nameThai": "หมู่เกาะสิมิลัน",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "phang-nga",
+   "lat": 8.66548,
+   "lng": 97.64784,
+   "coordSource": "osm beach 'Ao Kueak' (= Donald Duck Bay, Island 8) + google maps 'Donald Duck Bay', 24 m apart; Sail Rock viewpoint node 180 m north",
+   "coordConfidence": "high",
+   "gmapsQuery": "Donald Duck Bay, Similan Islands, Phang Nga",
+   "durationLabel": "full-day",
+   "description": "A national park of granite islands about 60 km off the Khao Lak coast, with the clearest water and best snorkelling near Phuket. You climb Sail Rock on Island 8 for the famous view of Donald Duck Bay, snorkel between islands and have lunch on Island 4. Open 15 Oct 2026 to 15 May 2027.",
+   "feeText": "Day tour from Phuket about 2,500-3,800 THB with transfer, lunch and park fee. Park fee alone: 500 THB (child 250), as an e-ticket.",
+   "openText": "Season 15 Oct 2026 - 15 May 2027. Day visits only: no overnight stays.",
+   "bestTime": "January is ideal for sea and sun but very busy. Take an early-departure tour.",
+   "gettingThere": "Long day. Hotel pickup about 06:00-07:00 (early tours 03:00-04:30), then 1-1.5 h by van to Thap Lamu Pier (Khao Lak) and 60-90 min by speedboat. Back in Phuket in the evening.",
+   "goodFor": [
+    "snorkelling",
+    "clear water",
+    "photos"
+   ],
+   "tips": [
+    "Only 3,325 day visitors (plus 525 divers) are allowed per day, shared by all tour companies. Book ahead.",
+    "Avoid the cheapest speedboats: they are crowded. Mid-range boats have shade and space.",
+    "Do not feed fish and do not stand on coral.",
+    "The ride is much shorter if you stay in Khao Lak."
+   ],
+   "links": [
+    {
+     "label": "Similan tours from Phuket (Tisland)",
+     "url": "https://www.tisland.travel/en/phuket/excursions/similan-islands"
+    },
+    {
+     "label": "National park e-ticket (DNP, official)",
+     "url": "https://e-ticket.dnp.go.th/"
+    }
+   ],
+   "sources": [
+    "https://www.naewna.com/n/?p=110660",
+    "https://www.tisland.travel/en/blog/similany-otkryvayutsya-15-oktyabrya-2026",
+    "https://www.phuket101.net/similan-islands/",
+    "https://www.tisland.travel/en/excursion/similan-7",
+    "https://www.ttgasia.com/2019/03/18/similan-islands-gets-green-light-to-limit-daily-visitor-numbers/",
+    "https://www.expedia.com/things-to-do/one-day-trip-to-similan-islands-by-speedboat-from-phuket.a50987122.activity-details"
+   ],
+   "verification": "Season 15 Oct 2026 - 15 May 2027 confirmed by Naewna (Thai news, 13 Oct 2026), Tisland blog (21 Sep 2026) and Phuket 101 (14 Oct 2026). Fee 500/250 THB and e-ticket from Tisland and Phuket 101. Quota: 3,850 total = 3,325 day visitors + 525 divers (Tisland 2026; 2018-2020 news). Prices: Tisland 2,500-3,800 THB, Expedia/Travelocity USD 83-115. Coords: OSM + Google agree (24 m).",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Similan_Island_01_%28MK%29.jpg/1280px-Similan_Island_01_%28MK%29.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Mathias Krumbholz",
+     "license": "CC BY-SA 3.0"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Similan_Islands_Beach.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Electrostatico",
+     "license": "CC BY-SA 2.0"
+    }
+   ]
+  },
+  {
+   "id": "koh-racha-yai",
+   "name": "Koh Racha Yai",
+   "nameThai": "เกาะราชาใหญ่",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "rawai",
+   "lat": 7.60779,
+   "lng": 98.36715,
+   "coordSource": "google maps 'Patok Beach' (75 m) + osm 'Pa Tok Beach' relation (50 m); The Racha resort pin 150 m east. Pin = Patok Bay beach",
+   "coordConfidence": "high",
+   "gmapsQuery": "Patok Beach, Racha Yai Island, Phuket",
+   "durationLabel": "full-day",
+   "description": "A hilly island 30-45 min by speedboat south of Phuket, with white sand and very clear water. Day boats land at Patok Bay, where you can snorkel straight from the beach. A short walk leads to quieter Siam Bay. Many tours combine Racha with Coral Island.",
+   "feeText": "Racha + Coral speedboat tour from about 1,300 THB per person with lunch. No national park fee.",
+   "bestTime": "November to April has calm sea and clear water. Day boats arrive from about 10:00. The island empties around 16:00.",
+   "gettingThere": "Hotel pickup 7:00-9:00 to Chalong Pier, then speedboat 30-45 min (big boats 60-90 min). Back at the pier about 15:30-16:30.",
+   "goodFor": [
+    "snorkelling",
+    "beaches",
+    "clear water"
+   ],
+   "tips": [
+    "Bring a towel: Patok Bay has no public sunbeds.",
+    "Bring your own mask if you have one. Rental masks often leak.",
+    "Stay a night at a Patok Bay resort to have the beach almost to yourself after 16:00.",
+    "Divers: manta rays pass Racha Noi from January to March."
+   ],
+   "links": [
+    {
+     "label": "Racha tours from Phuket (Tisland)",
+     "url": "https://www.tisland.travel/en/phuket/excursions/racha-island"
+    },
+    {
+     "label": "The Racha resort, Patok Bay (official)",
+     "url": "https://www.theracha.com/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/racha-island/",
+    "https://www.thaiholidayguide.com/attraction/ko-racha-yai/",
+    "https://www.tisland.travel/en/excursion/racha-and-coral-islands",
+    "https://www.theracha.com/"
+   ],
+   "verification": "Phuket 101 (26 Sep 2026): no public loungers at Patok, island empties about 16:00, mantas Jan-Mar, The Racha open. Tisland (Oct 2026): from 1,300 THB, pickup 07:00-09:00, arrive 10:00, back at pier 15:30-16:30. No park fee: Thai Holiday Guide (Jul 2026). Coords: Google + OSM agree; old gmapsQuery landed on the island centre 450 m away.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Racha_Yai_Island.jpg/1280px-Racha_Yai_Island.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "ELPHUKET",
+     "license": "CC BY-SA 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Ko_Racha_Yai_Adas%C4%B1.jpg/1280px-Ko_Racha_Yai_Adas%C4%B1.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Kaylorensen",
+     "license": "CC BY-SA 4.0"
+    }
+   ]
+  },
+  {
+   "id": "coral-island-koh-hey",
+   "name": "Coral Island (Koh Hey)",
+   "nameThai": "เกาะเฮ",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "rawai",
+   "lat": 7.7459,
+   "lng": 98.37376,
+   "coordSource": "osm 'Hat Yao' (Long Beach) relation centre + google maps 'Long Beach' pin, 75 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Coral Island (Koh Hey), Phuket",
+   "durationLabel": "half-day",
+   "description": "A small island only 15 min by speedboat from Chalong or Rawai. Most boats land at busy Long Beach with restaurants, sunbeds and water sports. Banana Beach, further east, is quieter and is mostly visited with its own day packages. Easy snorkelling near the shore. A short and cheap escape.",
+   "feeText": "Free entry. Speedboat tour with lunch 1,100-2,200 THB per person. Banana Beach packages from 1,900 THB. Longtail from Rawai 1,500-2,000 THB per boat. Sunbeds and water sports cost extra.",
+   "bestTime": "November to April has the calmest water. Long Beach is busiest from late morning to early afternoon.",
+   "gettingThere": "Speedboat from Chalong Pier or Rawai Beach (about 15 min), or a shared or private longtail from Rawai.",
+   "goodFor": [
+    "easy snorkelling",
+    "beach day",
+    "short trip"
+   ],
+   "tips": [
+    "For a quieter beach, book a boat or package that lands at Banana Beach.",
+    "Often sold together with Racha Yai as one full-day trip."
+   ],
+   "links": [
+    {
+     "label": "Coral Island tours from Phuket (Tisland)",
+     "url": "https://www.tisland.travel/en/phuket/excursions/coral-island"
+    },
+    {
+     "label": "Banana Beach Koh Hey (official)",
+     "url": "https://www.bananabeachkohhey.com/"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/coral-island-or-ko-he/",
+    "https://www.tisland.travel/en/phuket/excursions",
+    "https://www.bananabeachkohhey.com/"
+   ],
+   "verification": "Thai Holiday Guide (Jul 2026): free entry, 15 min crossing, tour and longtail prices, Long Beach busiest late morning. Tisland from 1,100 THB (Oct 2026). Banana Beach packages 1,900-3,300 THB on its official site (2026). No source and no OSM path confirm a walk between the beaches, so that tip was removed. Coords: OSM + Google agree.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Koh_hae%2C_Thailand.jpg/1280px-Koh_hae%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Andrzej Buryan (uploaded by Endrjuch)",
+     "license": "CC BY-SA 3.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Phuket_Yacht_-_Maiton_and_Coral_island.jpg/1280px-Phuket_Yacht_-_Maiton_and_Coral_island.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0"
+    }
+   ]
+  },
+  {
+   "id": "khai-islands",
+   "name": "Khai Islands (Koh Khai Nok)",
+   "nameThai": "เกาะไข่นอก",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "phang-nga",
+   "lat": 7.89139,
+   "lng": 98.51528,
+   "coordSource": "wikidata (Ko Khai Nok) + photon/osm + google maps 'Koh Khai Nok' (31 m), all within 120 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Koh Khai Nok, Phang Nga",
+   "durationLabel": "half-day",
+   "description": "Three tiny islands 15-20 min by speedboat from Phuket's east coast. Khai Nok has a white beach with bars and sunbeds. Khai Nai is the largest, with long, shallow sand. Khai Nui has no beach but the best reef: you snorkel from the boat. Short, easy and cheap, but always busy.",
+   "feeText": "Half-day speedboat tour about 1,100 THB (child 900), with transfer, snorkel gear and entry fees. Full day with another island about 1,250 THB. Private speedboat 2,500-5,000 THB. Sunbeds 150 THB for two, free with a food order.",
+   "bestTime": "Leave early in the morning, before the tour groups. November to April is calmest.",
+   "gettingThere": "Hotel pickup to Chalong Pier, Ao Po Pier or Royal Phuket Marina, then 15-20 min by speedboat.",
+   "goodFor": [
+    "short trip",
+    "snorkelling",
+    "beach bars"
+   ],
+   "tips": [
+    "Feeding fish is banned. Rangers give fines.",
+    "Keep your life jacket on at Khai Nui: the current can be strong.",
+    "Boats skip Khai Nui when the sea is rough."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/koh-khai-islands/",
+    "https://www.wikidata.org/wiki/Q49646688"
+   ],
+   "verification": "Phuket 101 (updated 29 Aug 2026) for prices, sunbeds, fish-feeding ban and Khai Nui current. No closure news found in English or Thai searches (Oct 2026); Google listing active (1,329 reviews). Coords: Wikidata, OSM and Google agree. The only link was a Phuket 101 guide; no official page exists.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG",
+     "source": "Wikimedia Commons",
+     "credit": "Diego Delso",
+     "license": "CC BY-SA 3.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG",
+     "source": "Wikimedia Commons",
+     "credit": "Diego Delso",
+     "license": "CC BY-SA 3.0"
+    }
+   ]
+  },
+  {
+   "id": "koh-yao-noi",
+   "name": "Koh Yao Noi",
+   "nameThai": "เกาะยาวน้อย",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "koh-yao",
+   "lat": 8.13333,
+   "lng": 98.60972,
+   "coordSource": "wikidata + osm island relation label point, 60 m apart (island centre). Google's island pin is 2.5 km south-west; Manoh Pier (arrival) is at 8.0935, 98.5872 (osm + google, 15 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Koh Yao Noi, Phang Nga",
+   "durationLabel": "full-day",
+   "description": "A quiet, green island in Phang Nga Bay, 30 min by speedboat from Phuket. Rent a scooter, ride past rice fields and small villages, swim at Pasai or Klong Jark beach and kayak to Koh Nok. Views over the limestone islands of the bay. Mostly Muslim and not a party island: a real break.",
+   "feeText": "Speedboat about 300-500 THB per person each way (price differs by seller and online). Slow longtail about 300 THB. Scooter 250-350 THB a day. Kayak about 300 THB for a few hours.",
+   "openText": "Speedboats from Bang Rong Pier about 08:40-17:00 (longtail 12:30). Boats back from Manoh Pier about 06:35-16:00: the last one is about 16:00.",
+   "bestTime": "Take the first boat (08:40). Better: stay one or two nights.",
+   "gettingThere": "Grab or taxi to Bang Rong Pier (north-east Phuket, about 22 km and 40 min from the airport). Speedboat 30-40 min, or the slow longtail at 12:30 (1 h), to Manoh Pier. Taxis and songthaews wait at the pier.",
+   "goodFor": [
+    "slow travel",
+    "scooter ride",
+    "kayaking"
+   ],
+   "tips": [
+    "Dress modestly in the villages. Not every shop sells alcohol.",
+    "Kayak to Koh Nok early, at high tide. The afternoon sea is choppy.",
+    "Koh Hong (Krabi) is about 20 min by longtail from Klong Jark Beach (about 800 THB per person in 2024).",
+    "Bring enough cash. ATMs can run out on busy weekends.",
+    "Phuket 101 says two nights is the minimum to enjoy the island."
+   ],
+   "links": [
+    {
+     "label": "Bang Rong - Manoh ferries (Ferryscanner)",
+     "url": "https://www.ferryscanner.com/en/ferry-routes/ferry-bang-rong-pier-phuket-manoh-pier-koh-yao-noi"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/koh-yao-noi-island/",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-bang-rong-pier-phuket-manoh-pier-koh-yao-noi",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-manoh-pier-koh-yao-noi-bang-rong-pier-phuket",
+    "https://www.camphadee.com/Kohyaonoi_boat_schedule.html",
+    "https://siamtickets.com/ferry-schedule-phuket-to-koh-yao-noi/",
+    "https://www.phuket101.net/koh-hong-island/"
+   ],
+   "verification": "Phuket 101 (27 Aug 2026): about 300 THB, first boat 08:40, last 17:00, longtail 12:30, scooter and kayak prices, ATM tip. Camphadee timetable (Nov 2025): speedboat 400 THB, longtail 300, last boat from Manoh 16:00. Ferryscanner (Sep 2026): Manoh departures 06:35-16:00, EUR 8.70-12.27. Siamtickets lists 400-500 THB. Drive time by OSRM.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Sunrise%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Sunrise%2C_Koh_Yao_Noi_%28island%29%2C_Phang_Nga_Bay%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0"
+    }
+   ]
+  },
+  {
+   "id": "koh-hong-krabi",
+   "name": "Koh Hong (Krabi): lagoon island",
+   "nameThai": "เกาะห้อง กระบี่",
+   "tier": "day-trip",
+   "category": "island",
+   "area": "krabi",
+   "lat": 8.07861,
+   "lng": 98.67806,
+   "coordSource": "wikidata (Ko Hong, Krabi) + google maps 'Ko Hong' island (63 m) and 'Hong Lagoon' (65 m); Commons lagoon photo GPS within 120 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Hong Island, Krabi",
+   "durationLabel": "full-day",
+   "description": "A limestone island between Koh Yao Noi and Krabi. Boats go into a shallow lagoon ringed by tall cliffs, and there are two white-sand beaches with clear water. Steep stairs lead to a viewpoint. It is part of a national park and is busy from late morning.",
+   "feeText": "Park fee 300 THB per adult, cash, paid at the floating pier. From Koh Yao Noi: longtail about 800 THB per person (2024). From Krabi or Ao Nang: group speedboat tours about 1,350-1,500 THB.",
+   "bestTime": "Go early. Tour boats from Krabi arrive in the late morning.",
+   "gettingThere": "From Phuket, some speedboat island tours include Hong (Krabi); ask for it by name. Or stay on Koh Yao Noi and take a longtail (about 20 min) from Klong Jark Beach.",
+   "goodFor": [
+    "lagoon",
+    "viewpoint",
+    "beaches"
+   ],
+   "tips": [
+    "No alcohol and no drones on the island.",
+    "Expect a long, bouncy floating pier to reach the beach.",
+    "Koh Pakbia, nearby, is a good picnic stop.",
+    "Do not mix it up with Koh Hong in Phang Nga Bay (Hong by Starlight trip)."
+   ],
+   "links": [
+    {
+     "label": "Than Bok Khorani National Park (official Facebook)",
+     "url": "https://www.facebook.com/profile.php?id=100064738237160"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/koh-hong-island/",
+    "https://www.phuket101.net/koh-yao-noi-island/",
+    "https://www.wikidata.org/wiki/Q49646593",
+    "https://www.baolau.com/en/van-tai/thai-lan/tau-thuy/ant-aonang-travel-and-tour/aonang-hong-islands-tour/",
+    "https://www.aaa.com/tripcanvas/thing-to-do/hong-island-day-tour-by-speedboat-from-krabi-5509314P5",
+    "https://ph.trip.com/things-to-do/detail/97837130"
+   ],
+   "verification": "Phuket 101 Koh Hong page (May 2024): fee 300 THB, longtail from Klong Jark about 20 min and 800 THB, no alcohol or drones, floating pier, Krabi boats in late morning. 300 THB adult fee (cash, at the pier) also in 2025-2026 tour listings. Krabi tours 1,350-1,500 THB (Baolau, AAA). A Phuket-departing tour exists (Trip.com). Coords: Wikidata + Google agree.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ko_Hong_island_beach.jpg/1280px-Ko_Hong_island_beach.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Maksym Kozlenko",
+     "license": "CC BY-SA 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Sea_Kayak_Ko_Hong.jpg/1280px-Sea_Kayak_Ko_Hong.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Steve Cornish",
+     "license": "CC BY 2.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/16.Ko_Hong_Island_-_Andaman_Sea_-_Krabi_Province%2C_Thailand.jpg/1280px-16.Ko_Hong_Island_-_Andaman_Sea_-_Krabi_Province%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Wolfgang Holzem",
+     "license": "CC BY-SA 4.0"
+    }
+   ]
+  },
+  {
+   "id": "railay-krabi",
+   "name": "Railay Beach (Krabi)",
+   "nameThai": "ไร่เลย์",
+   "tier": "day-trip",
+   "category": "beach",
+   "area": "krabi",
+   "lat": 8.01154,
+   "lng": 98.83779,
+   "coordSource": "osm West Railay beach relation centre (nominatim) + google maps 'Railay Beach' (19 m); google 'Railay West Beach' pin is 200 m north on the same beach",
+   "coordConfidence": "high",
+   "gmapsQuery": "Railay Beach West, Krabi",
+   "durationLabel": "full-day",
+   "description": "A beach area in Krabi with no roads, closed in by huge limestone cliffs, so you arrive by boat. West Railay is a beautiful sunset beach and Phra Nang Cave Beach is close by. Famous for rock climbing. A direct ferry from Phuket makes a long day trip possible, but one or two nights is better.",
+   "feeText": "Ferry Phuket - Railay about 660-1,360 THB one way (EUR 17.65-36 online, Oct 2026).",
+   "openText": "Ferries leave Rassada Pier 08:30-12:00 (1 h 20 min - 2 h 30 min). Back from Railay 12:45-15:15.",
+   "bestTime": "For a day trip take the first ferry. If you stay, watch sunset at West Railay (about 18:25 in mid-January).",
+   "gettingThere": "Ferry from Rassada Pier (Phuket Town) to Railay East floating pier, then a short walk to West Railay. Longtails link Railay with Ao Nang and Krabi Town.",
+   "goodFor": [
+    "cliffs",
+    "sunset",
+    "rock climbing"
+   ],
+   "tips": [
+    "Book the ferry early: online prices rise close to the date.",
+    "Be at the pier 60 minutes before departure.",
+    "There are no night ferries back to Phuket."
+   ],
+   "links": [
+    {
+     "label": "Phuket - Railay ferries (Ferryscanner)",
+     "url": "https://www.ferryscanner.com/en/ferry-routes/ferry-rassada-pier-phuket-railay-all-piers"
+    }
+   ],
+   "sources": [
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-rassada-pier-phuket-railay-all-piers",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-railay-all-piers-rassada-pier-phuket",
+    "https://en.wikipedia.org/wiki/Railay_Beach"
+   ],
+   "verification": "Ferryscanner (updated 8-9 Oct 2026): Rassada departures 08:30-12:00, Railay departures 12:45-15:15, EUR 17.65-36.08 = about 660-1,360 THB at 37.56 THB/EUR (15 Oct 2026). Sunset computed for 8-18 Jan 2027: 18:22-18:27 (was 18:20). Coords: OSM beach relation + Google agree.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/West_Rai_Leh_%2811%29.jpg/1280px-West_Rai_Leh_%2811%29.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Krzysztof Golik",
+     "license": "CC BY-SA 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Railay_Beach_5.jpg/1280px-Railay_Beach_5.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "kallerna",
+     "license": "CC BY-SA 3.0"
+    }
+   ]
+  },
+  {
+   "id": "khao-sok-cheow-lan-lake",
+   "name": "Khao Sok: Cheow Lan Lake overnight",
+   "nameThai": "เขื่อนเชี่ยวหลาน",
+   "tier": "day-trip",
+   "category": "nature",
+   "area": "other",
+   "lat": 8.97782,
+   "lng": 98.82025,
+   "coordSource": "google maps 'Ratchaprapha Marina' + 'Cheow Lan Pier (Ratchaprapha Pier)' + osm pier ways, within 80 m. Old pin (dam viewpoint) was 1.6 km west of the boat pier",
+   "coordConfidence": "high",
+   "gmapsQuery": "Cheow Lan Pier (Ratchaprapha Pier), Ban Ta Khun, Surat Thani",
+   "durationLabel": "multi-day",
+   "description": "A huge jungle lake with limestone cliffs in Khao Sok National Park. Longtail boats take you from the dam pier to floating raft houses. You sleep on the water, swim, and kayak in the morning mist. A 1-day tour exists but is very long (about 15 hours), so one night is better.",
+   "feeText": "1-day tour from Phuket from 3,500 THB; 2 days / 1 night from 7,900 THB (park fees included). Lake fee alone: 300 THB (child 150).",
+   "openText": "Boats run only between sunrise and sunset.",
+   "bestTime": "January to March is the dry season.",
+   "gettingThere": "Tour pickup in Phuket 05:00-06:30. The 1-day tour reaches the lake about 10:00 and is back about 19:30-20:30. The pier is about 155 km by road from Phuket Airport (about 3 h). All boats leave from Ratchaprapha Pier at the dam.",
+   "goodFor": [
+    "jungle",
+    "lake",
+    "nature"
+   ],
+   "tips": [
+    "Some raft houses are up to 1 h 20 min by boat from the pier.",
+    "Basic raft houses often have power only in the evening.",
+    "Boats are limited in high season, so book ahead.",
+    "On the lake, mobile signal works mainly on AIS."
+   ],
+   "links": [
+    {
+     "label": "Secret Lake 1-day tour (Tisland)",
+     "url": "https://www.tisland.travel/en/excursion/secret-lake"
+    },
+    {
+     "label": "Secret Lake 2 days / 1 night (Tisland)",
+     "url": "https://www.tisland.travel/en/excursion/secret-lake-2d-1n"
+    }
+   ],
+   "sources": [
+    "https://www.thainationalparks.com/khao-sok-national-park",
+    "https://www.tisland.travel/en/excursion/secret-lake",
+    "https://www.tisland.travel/en/excursion/secret-lake-2d-1n",
+    "https://www.wikidata.org/wiki/Q1071624"
+   ],
+   "verification": "thainationalparks.com (fees as of June 2026): lake 300/150 THB, boats only sunrise-sunset, raft houses up to 1 h 20 min, evening power, AIS signal, boat shortages into 2026. Tisland (Oct 2026): 1-day 3,500 THB, pickup 05:00-06:30, lake 10:00, back 19:30-20:30; 2D1N 7,900 THB. Road distance by OSRM. Pin moved to the boat pier (Google + OSM).",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Cheow_Lan_Lake%2C_Solitary_tree_on_the_lake%2C_Khao_Sok%2C_Thailand.jpg/1280px-Cheow_Lan_Lake%2C_Solitary_tree_on_the_lake%2C_Khao_Sok%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Unnamed_island%2C_Cheow_Lan_Lake.jpg/1280px-Unnamed_island%2C_Cheow_Lan_Lake.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "The Cosmonaut",
+     "license": "CC BY-SA 2.5 ca"
+    }
+   ]
+  },
+  {
+   "id": "samet-nangshe-viewpoint",
+   "name": "Samet Nangshe viewpoint (sunrise)",
+   "nameThai": "จุดชมวิวเสม็ดนางชี",
+   "tier": "day-trip",
+   "category": "viewpoint",
+   "area": "phang-nga",
+   "lat": 8.23929,
+   "lng": 98.43864,
+   "coordSource": "osm viewpoint node + Commons photo GPS (13 Apr 2026) + second google listing 'Samet Nangshe Viewpoint' (40 m). The main google listing pins the car park / truck stop 860 m south-east",
+   "coordConfidence": "high",
+   "gmapsQuery": "Samet Nangshe Viewpoint, Takua Thung, Phang Nga",
+   "durationLabel": "half-day",
+   "description": "A hilltop viewpoint over Phang Nga Bay: green mangroves and dozens of limestone islands in the morning mist. Come for sunrise. From the car park you walk up about 20 minutes or take a pickup truck. There are two viewpoints on the way up.",
+   "feeText": "30 THB on foot, 90 THB return by pickup truck (entry included). Sunrise tour from Phuket about 2,200-2,400 THB.",
+   "openText": "Opens about 05:00-05:30 every day.",
+   "bestTime": "Arrive by 05:30-06:00. Sunrise on 8-18 Jan 2027 is about 06:45; the sky gets light from about 06:20.",
+   "gettingThere": "About 50 km (1 h) by car from Phuket Airport, about 80 km (1.5-2 h) from Patong. Cross the Sarasin Bridge and drive north to Takua Thung. Sunrise tours pick up about 04:00.",
+   "goodFor": [
+    "sunrise",
+    "photos",
+    "views"
+   ],
+   "tips": [
+    "Private cars must stop at the bottom car park. Google Maps' main pin is this car park and truck stop.",
+    "Wear real shoes and bring water. The path is steep and has no shade.",
+    "Sleep at the top in a tent (about 130 THB) or a bungalow (500-700 THB) to skip the night drive.",
+    "The small platforms fill up fast on clear mornings, especially at weekends."
+   ],
+   "links": [
+    {
+     "label": "Samet Nangshe tours from Phuket (Tisland)",
+     "url": "https://www.tisland.travel/en/phuket/excursions/samet-nangshe"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/samet-nangshe-viewpoint/",
+    "https://www.phuket101.net/samet-nangshe-viewpoint/",
+    "https://www.tisland.travel/en/excursion/samet-sunrise",
+    "https://commons.wikimedia.org/wiki/File:Samet_Nangshe_Viewpoint.jpg"
+   ],
+   "verification": "Fees 30/90 THB: Thai Holiday Guide (Jul 2026) and Phuket 101 (Mar 2026) agree; opening 05:00 or 05:30. Two viewpoints about 800 m apart (Thai Holiday Guide); no source says which is better, so that claim was removed. Tour from 2,400 THB, pickup about 04:00 (Tisland, Oct 2026). Sunrise computed: 06:43-06:45. Distances by OSRM.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Samet_Nangshe_Viewpoint.jpg/1280px-Samet_Nangshe_Viewpoint.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "TomMumuPangPangEmma",
+     "license": "CC0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Samet_Nangshe.jpg/1280px-Samet_Nangshe.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Kamol2523",
+     "license": "CC BY-SA 4.0"
+    }
+   ]
+  },
+  {
+   "id": "koh-phangan-rave-trip",
+   "name": "Koh Phangan rave trip (2-3 days)",
+   "nameThai": "เกาะพะงัน",
+   "tier": "day-trip",
+   "category": "nightlife",
+   "area": "koh-phangan",
+   "lat": 9.71735,
+   "lng": 100.03195,
+   "coordSource": "google maps 'OXA - Jungle Party' (address 72/52 Moo 2 Ban Tai matches Megatix). Halfmoon Magic Forest is 480 m south-west (osm + google). Old pin was on Ban Tai beach, 2.3 km south of the party area",
+   "coordConfidence": "medium",
+   "gmapsQuery": "OXA - Jungle Party, Ban Tai, Koh Phangan",
+   "durationLabel": "multi-day",
+   "description": "Thailand's party island, in the Gulf. Most jungle raves are inland near Ban Tai. In your dates: OXA Jungle Party (techno, tech house; Fri 8 and Fri 15 Jan), Lost Jungle psytrance (Sat 9 - Tue 12 Jan) and Halfmoon Festival (Fri 15 - Sat 16 Jan). The Full Moon Party is expected on Fri 22 Jan, after your trip.",
+   "feeText": "Flight Phuket - Samui from about 2,200 THB one way, plus the boat. Bus + boat about 700-1,600 THB. Party tickets: OXA from 500 THB; Halfmoon about 1,500-3,500 THB at the gate (online often a bit less).",
+   "bestTime": "Best window: Thu 14 - Sun 17 Jan (Halfmoon beach party and OXA on Fri 15, Halfmoon main night on Sat 16). Circoloco at Baba Beach Club (Natai) is on Sat 9 and Sat 16 Jan, so choose.",
+   "gettingThere": "Fastest: Bangkok Airways Phuket - Koh Samui (about 1 h, several flights a day), then a 20-60 min boat (Lomprayah or Seatran) to Thong Sala Pier. Budget: bus + boat via Don Sak, about 6-9 h (Lomprayah 07:00-12:45 or 09:30-16:30 in Oct 2026).",
+   "goodFor": [
+    "jungle raves",
+    "techno",
+    "beach parties"
+   ],
+   "tips": [
+    "Bring cash. Party bars are cash only and OXA has no ATM.",
+    "Bring your passport: Halfmoon checks ID, and some ticket sites say 20+.",
+    "Eden Garden on Haad Yuan has deep house and techno on Saturdays. Taxi boat from Haad Rin about 400 THB.",
+    "Night taxis charge per car, so share a ride.",
+    "Small underground nights post dates only 1-3 weeks ahead. Check RA and phangan.events in December."
+   ],
+   "links": [
+    {
+     "label": "Halfmoon Festival dates (official)",
+     "url": "https://www.halfmoonfestival.com/halfmoonfestivaldates"
+    },
+    {
+     "label": "OXA Jungle Party 8 Jan (Megatix)",
+     "url": "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-08127"
+    },
+    {
+     "label": "OXA Jungle Party 15 Jan (Megatix)",
+     "url": "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-150127"
+    },
+    {
+     "label": "Lost Jungle listing (phangan.events)",
+     "url": "https://phangan.events/events/lost-jungle-parvati-day-night/"
+    }
+   ],
+   "sources": [
+    "https://www.halfmoonfestival.com/halfmoonfestivaldates",
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-08127",
+    "https://megatix.in.th/events/oxa-jungle-party-with-3-stages-150127",
+    "https://phangan.events/events/lost-jungle-parvati-day-night/",
+    "https://edmhousenetwork.com/circoloco-thailand-confirms-return-for-2027/",
+    "https://www.thaiholidayguide.com/events/half-moon-party-koh-phangan/",
+    "https://www.technoairlines.com/club/eden-garden-koh-phangan",
+    "https://www.directferries.com/phuket_town_koh_phangan_thong_sala_pier_ferry.htm",
+    "https://www.cheapflights.com.sg/flights/Phuket-City-HKT/Koh-Samui-USM.PG.ksp",
+    "https://www.directferries.com/thailand/things-to-do/itineraries/full-moon-party"
+   ],
+   "verification": "Halfmoon official 2027 chart: beach party Fri 15 Jan (14:00-24:00), main night Sat 16 Jan (from 21:30). OXA Fri 8 and Fri 15 Jan, 21:00-05:00, from 500 THB, cash only (Megatix). Lost Jungle Sat 9 12:00 - Tue 12 Jan 06:00 (phangan.events). Circoloco 9, 16, 23 Jan (EDM House Network, Aug 2026). Halfmoon prices: Thai Holiday Guide (Oct 2026). Transport: Direct Ferries and Cheapflights (Oct 2026). Full Moon 22 Jan is a projected date.",
+   "imageCandidates": [
+    {
+     "url": "https://static.wixstatic.com/media/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg/v1/fill/w_1280,h_670,al_c/94d41a_edc6224f537a4e45831f13bc5cbb3017~mv2.jpg",
+     "source": "halfmoonfestival.com (og:image)",
+     "credit": "Halfmoon Festival",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Phasawan_viewpoint_Ko_Pha_Ngan_1.jpg/1280px-Phasawan_viewpoint_Ko_Pha_Ngan_1.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "kallerna",
+     "license": "CC BY-SA 4.0"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Hat_Rin_from_above.jpg/1280px-Hat_Rin_from_above.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "zhaffsky (Flickr)",
+     "license": "CC BY-SA 2.0"
+    }
+   ]
+  },
+  {
+   "id": "one-chun",
+   "name": "One Chun",
+   "nameThai": "วันจันทร์",
+   "tier": "must-see",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.88578,
+   "lng": 98.39072,
+   "coordSource": "google maps listing (3 m) + phuket101 map link + wanderlog + Commons photo GPS, within 20 m; michelin geo 65 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "One Chun Cafe & Restaurant, Thep Krasattri Road, Phuket Town",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "description": "Phuket family recipes in an old Old Town shophouse with vintage decor. Order the crab meat yellow curry with rice noodles, moo hong (sweet braised pork belly) and fried prawns in tamarind sauce. Michelin Bib Gourmand 2026.",
+   "feeText": "Dishes about 120-390 THB (crab curry 390, moo hong 265; 2024 menu).",
+   "openText": "10:00-22:00 daily (Tue until 21:00).",
+   "bestTime": "Lunch, then walk around the Old Town.",
+   "goodFor": [
+    "Phuket dishes",
+    "lunch",
+    "dinner"
+   ],
+   "tips": [
+    "Raya, the famous older restaurant with the same Phuket dishes, is a few steps away at 48/1 Dibuk Road (Google lists 11:00-21:00). Its main rooms have no air-con, and it left the Michelin guide in 2026.",
+    "Ask for less spicy if you are not used to Thai chili."
+   ],
+   "links": [
+    {
+     "label": "One Chun (MICHELIN Guide)",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/one-chun"
+    },
+    {
+     "label": "One Chun on Instagram",
+     "url": "https://www.instagram.com/onechun_phuket"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/one-chun",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurants/bib-gourmand",
+    "https://www.phuket101.net/one-chun-restaurant/",
+    "https://www.phuket101.net/raya-house/",
+    "https://wanderlog.com/place/details/58185",
+    "https://www.openlink.co/onechunphuket"
+   ],
+   "verification": "Michelin page data says Bib Gourmand 2026; on the Phuket Bib list (15 Oct 2026). Hours: Google and Michelin agree (Tue to 21:00); Google listing active (6,708 reviews). Prices: Phuket 101 (Dec 2024). Raya: Phuket 101 (11 Sep 2026) says dropped from the 2026 guide; Google hours 11:00-21:00 (Phuket 101 says 10:00-22:00). Instagram from the restaurant's own link page.",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/One_Chun.jpg/1280px-One_Chun.jpg",
+     "source": "Wikimedia Commons",
+     "credit": "Vano111ru",
+     "license": "CC BY-SA 4.0"
+    },
+    {
+     "url": "https://prod-pics.guide.michelin.com/api/public/content/6795d62d7bdd423f864cb066e0abee65.jpeg?format=jpeg&w=1000&h=1000",
+     "source": "MICHELIN Guide (og:image)",
+     "credit": "MICHELIN Guide / One Chun",
+     "license": "Guide photo (personal use)"
+    }
+   ]
+  },
+  {
+   "id": "mee-ton-poe",
+   "name": "Mee Ton Poe (Hokkien noodles)",
+   "nameThai": "หมี่ต้นโพธิ์",
+   "tier": "must-see",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.88001,
+   "lng": 98.39209,
+   "coordSource": "google maps listing (3 m) + osm (nominatim/photon 'Mee Ton Poh') + wanderlog, within 5 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "MeeTonPoe Phuket Town, Phuket Road",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "description": "Phuket's best-known Hokkien noodle shop, cooking since 1946 at the clock tower circle in Phuket Town. The classic is mee Hokkien: thick yellow noodles fried with pork, seafood and greens in a rich gravy, topped with a soft egg. Add pork satay. Simple, fast and cheap.",
+   "feeText": "Cheap: mee Hokkien with egg about 80 THB, Phuket fish balls 80 THB, hor mok 20 THB (Wongnai review, Mar 2026).",
+   "openText": "Phuket Town shop 09:30-18:30 daily.",
+   "bestTime": "Breakfast or lunch.",
+   "goodFor": [
+    "noodles",
+    "cheap eats",
+    "breakfast"
+   ],
+   "tips": [
+    "One plate is usually enough. Order a second if you are hungry.",
+    "The shop next door serves the same noodles as a soup.",
+    "Other branches: Mee Ton Poe 2 in Kathu and Mee Ton Poe 4 on Thep Krasattri Road in Thalang (both open until about 20:00)."
+   ],
+   "links": [
+    {
+     "label": "Mee Ton Poe on Facebook",
+     "url": "https://www.facebook.com/meetonpoe"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/mee-ton-poe-hokkien-noodles-phuket/",
+    "https://www.phuket101.net/best-hokkien-noodle-restaurants-in-phuket/",
+    "https://wanderlog.com/place/details/1184106/meetonpoe-phuket-town",
+    "https://www.wongnai.com/reviews/737fd86221f9493da3d4b410e4ae4461"
+   ],
+   "verification": "Google listing active, 09:30-18:30 every day (Google data fetched 15 Oct 2026). Since 1946, dishes, next-door soup shop and branch hours: Phuket 101 (May 2024); the Kathu and Thalang branches are still listed on Google. Prices from a Wongnai review dated 18 Mar 2026 (old 35-60 THB figure replaced).",
+   "imageCandidates": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Hokkien_mee_1.jpg/1280px-Hokkien_mee_1.jpg",
+     "source": "Wikimedia Commons (generic dish photo, taken in Bangkok, not at Mee Ton Poe)",
+     "credit": "Vee Satayamas",
+     "license": "CC BY 2.0"
+    }
+   ]
+  },
+  {
+   "id": "lock-tien",
+   "name": "Lock Tien (Phuket street dishes)",
+   "nameThai": "ลกเที้ยน",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.88118,
+   "lng": 98.38644,
+   "coordSource": "google maps listing 'ลกเที้ยน original (Lock Tien Local Food Phuket)', 59/14 Bangkok Rd (0 m) + phuket101 page geo",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lock Tien Local Food Phuket, Bangkok Road",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "description": "A Phuket Town classic for local Hokkien-Chinese dishes in one place: fried Hokkien noodles, fresh spring rolls (popia sot), o-tao (taro and oyster omelette), lo ba (fried pork and tofu) and o-aew jelly dessert. It has moved from its old corner food court to a shophouse on Bangkok Road.",
+   "feeText": "Cheap local prices (dish prices not published).",
+   "openText": "09:00-19:00 daily.",
+   "bestTime": "Lunch or an afternoon snack.",
+   "goodFor": [
+    "Phuket dishes",
+    "cheap eats",
+    "snacks"
+   ],
+   "tips": [
+    "Old maps still show the closed food court on Yaowarat Road. Go to 59/14 Bangkok Road, opposite the Government Housing Bank.",
+    "Paid parking (20 THB) opposite the bank, or free spaces on Bangkok Road.",
+    "It is now one kitchen with one menu, not separate stalls. Point at the photos on the awning to order."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/lock-tien-food-court/",
+    "https://wanderlog.com/place/details/1184109/lock-tien-phuket-local-food-center"
+   ],
+   "verification": "Phuket 101 (24 Aug 2026): new shop at 59/14 Bangkok Rd, 09:00-19:00 daily, old corner permanently closed. Google now lists the new shop (4.9 stars, 124 reviews, 09:00-19:00 daily) and marks the old Yaowarat Rd listing as closed. Old gmapsQuery landed on a generic building pin; new one lands on the shop. Phuket 101 link removed (not official).",
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20250804220417/New-Locktien-3.jpg",
+     "source": "Phuket 101 (photo of the new Bangkok Road shopfront)",
+     "credit": "Phuket 101",
+     "license": "Guide photo (personal use)"
+    }
+   ]
+  },
+  {
+   "id": "go-benz",
+   "name": "Go Benz (late-night rice soup)",
+   "nameThai": "โกเบนซ์ ข้าวต้มแห้ง",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.88485,
+   "lng": 98.38255,
+   "coordSource": "google maps listing (14 m) + michelin geo + wanderlog + photon/osm, within 20 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Go Benz Rice Porridge, Krabi Road, Phuket Town",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 0.5,
+    "max": 1
+   },
+   "description": "A corner shop open at night, known for kuay jap (rolled rice noodles in peppery pork broth) and khao tom (rice soup), with crispy pork belly on the side. Open until about 1:30 at night, so it is perfect after a party. Michelin Bib Gourmand every year since 2019.",
+   "feeText": "Dishes 50-90 THB (rice soup or kuay jap 50, crispy pork 60-90). Drinks 20 THB. Cash only.",
+   "openText": "Tue-Sun 17:00-01:30. Closed Mon and on Buddhist holy days (in your dates: Fri 15 Jan).",
+   "bestTime": "Peak is 19:00-21:00 with a 20-30 min queue. Quieter after 21:30 and after midnight.",
+   "goodFor": [
+    "late night",
+    "after party",
+    "cheap eats"
+   ],
+   "tips": [
+    "Take any free seat; staff come to take your order.",
+    "The dry rice soup with crispy pork and offal often sells out.",
+    "Parking is hard. Come by Grab or taxi."
+   ],
+   "links": [
+    {
+     "label": "Go Benz (MICHELIN Guide)",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/go-benz"
+    },
+    {
+     "label": "Go Benz on Facebook",
+     "url": "https://www.facebook.com/GoBenzPhuket/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/go-benz",
+    "https://www.phuket101.net/ko-benz-phuket/",
+    "https://wanderlog.com/place/details/546716",
+    "https://calendar.kapook.com/2570/buddhistholyday"
+   ],
+   "verification": "Michelin page data: Bib Gourmand 2026, 163 Krabi Rd. Google hours (fetched 15 Oct 2026): Tue-Sun 17:00-01:30, Mon closed. Phuket 101 (11 Sep 2026): 19:00-02:00, closed on Buddhist holy days, prices, cash only, Bib Gourmand 2019-2026. Kapook calendar lists Fri 15 Jan 2027 as a Buddhist holy day.",
+   "imageCandidates": [
+    {
+     "url": "https://prod-pics.guide.michelin.com/api/public/content/6ed352d69f8a452eb765d302d1c55a83.jpeg?format=jpeg&w=1000&h=1000",
+     "source": "MICHELIN Guide (og:image)",
+     "credit": "MICHELIN Guide / Go Benz",
+     "license": "Guide photo (personal use)"
+    }
+   ]
+  },
+  {
+   "id": "naam-yoi",
+   "name": "Naam Yoi (Southern Thai curries)",
+   "nameThai": "ร้านน้ำย้อย",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.9008,
+   "lng": 98.40315,
+   "coordSource": "google maps listing (0 m) + phuket101 map link + michelin geo + wanderlog, within 5 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nam YOI Restaurant, Rumpattana Road, Ratsada, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "description": "A small, simple local place known for rich, very aromatic Southern Thai curries, cooked to order with produce bought at dawn. Try kaeng som (sour fish curry with tamarind) and kaeng pa (jungle curry). No English menu and plastic chairs, but real local flavour. Michelin Bib Gourmand 2026.",
+   "feeText": "Cheap local prices (no dish prices published). Order several dishes to share.",
+   "openText": "Daily 10:30-14:15 and 16:30-19:15 (weekends until 14:00 and 19:00).",
+   "bestTime": "Lunch.",
+   "goodFor": [
+    "curry",
+    "local food",
+    "spicy"
+   ],
+   "tips": [
+    "Hard to find: it is behind tall bushes on a small back road.",
+    "They can make dishes less spicy if you ask.",
+    "Backup: Ko Tee Sangkasi Restaurant on Yaowarat Road, about 3 km west (Tue-Sun 09:00-20:00, cash only, about 150 THB a dish) for sour curries and crab curry."
+   ],
+   "links": [
+    {
+     "label": "Naam Yoi (MICHELIN Guide)",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/naam-yoi"
+    },
+    {
+     "label": "Naam Yoi on Facebook",
+     "url": "https://www.facebook.com/NaamYoi"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/naam-yoi",
+    "https://www.phuket101.net/nam-yoi-restaurant/",
+    "https://wanderlog.com/place/details/58186",
+    "https://www.phuket101.net/ko-tee-sangkasi-restaurant/",
+    "https://wanderlog.com/place/details/2333016/ko-tee-sangkasi-restaurant"
+   ],
+   "verification": "Michelin page data: Bib Gourmand 2026, 'no English menu'. Regular hours from Google via Wanderlog (Oct 2026); Google also shows a one-off closure 15-18 Oct 2026, and the Michelin page lists only Thursday (likely a data error). Phuket 101 (14 Sep 2026): cheap, kaeng som and kaeng pa. Ko Tee: Google 262/3 Yaowarat Rd, Mon closed; Phuket 101 says 262/8, cash only.",
+   "imageCandidates": [
+    {
+     "url": "https://prod-pics.guide.michelin.com/api/public/content/783234dfd8604c5e9207e1729dbf1e8a.jpeg?format=jpeg&w=1000&h=1000",
+     "source": "MICHELIN Guide (og:image)",
+     "credit": "MICHELIN Guide / Naam Yoi",
+     "license": "Guide photo (personal use)"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Kaeng_som_pla_sapparot.jpg/1280px-Kaeng_som_pla_sapparot.jpg",
+     "source": "Wikimedia Commons (generic kaeng som photo, not at Naam Yoi)",
+     "credit": "Takeaway",
+     "license": "CC BY-SA 3.0"
+    }
+   ]
+  }
+ ],
+ "removed": [],
+ "changes": [
+  "similan-islands: quota tip corrected to 3,325 day visitors + 525 divers (3,850 total); pickup times corrected (normal tours 06:00-07:00, early tours 03:00-04:30); guide/blog links replaced by DNP e-ticket portal and a tour page; coordConfidence raised to high (OSM + Google agree).",
+  "koh-racha-yai: gmapsQuery changed to 'Patok Beach, Racha Yai Island, Phuket' (old query landed on the island centre 450 m away); unsourced crowd window 11:00-14:00 replaced with boat arrival about 10:00; 'walk over the hill' softened; Phuket 101 link replaced by tour page and The Racha official site.",
+  "coral-island-koh-hey: removed unverified tip to walk from Long Beach to Banana Beach; Banana Beach now described as reached with its own packages (from 1,900 THB); guide link replaced by tour page and Banana Beach official site.",
+  "khai-islands: Phuket 101 link removed (not official; no official page exists); feeText notes that tours include entry fees.",
+  "koh-yao-noi: speedboat fare widened to 300-500 THB (sources disagree); return times added (last boat from Manoh about 16:00); airport-to-pier distance added; Phuket 101 link removed.",
+  "koh-hong-krabi: description rewritten (unclear Maya Bay comparison removed); fee clarified as per adult, cash at the pier; Phuket 101 link replaced by the national park's official Facebook page.",
+  "railay-krabi: sunset time corrected from 18:20 to about 18:25 (computed 18:22-18:27 for the trip dates).",
+  "khao-sok-cheow-lan-lake: pin moved 1.6 km east from the dam viewpoint to the boat pier (Ratchaprapha Marina / Cheow Lan Pier); gmapsQuery changed to the pier; distance updated to about 155 km from Phuket Airport; thainationalparks.com link removed (kept as source), 2D1N tour link added.",
+  "samet-nangshe-viewpoint: sunrise corrected from 06:40 to about 06:45; unsourced claim that the upper viewpoint is better removed; distances updated (about 50 km from the airport, 80 km from Patong); coordSource corrected (Google's main pin is the truck stop 860 m south-east); guide link replaced by tour page.",
+  "koh-phangan-rave-trip: pin moved 2.3 km from Ban Tai beach to the OXA jungle venue, gmapsQuery changed to OXA; Circoloco also on Sat 9 Jan added; Halfmoon price corrected from 1,200 to about 1,500-3,500 THB; bus + boat time corrected to 6-9 h with Oct 2026 departures; flight price restated in THB; passport/ID tip added; weak sources (north-vietnam.com, flight.info) replaced.",
+  "one-chun: Raya hours corrected to Google's 11:00-21:00 and air-con wording made precise; Instagram link and Thai name added; Bib Gourmand year 2026 stated.",
+  "mee-ton-poe: price updated to about 80 THB for mee Hokkien with egg (Mar 2026 review); branch names clarified; Phuket 101 link removed.",
+  "lock-tien: gmapsQuery changed to the Google listing of the new shop; ordering tip added; image added (new shopfront); Phuket 101 link removed.",
+  "go-benz: Buddhist holy day inside the trip (Fri 15 Jan) added; cash-only and parking tips added; Facebook link and Thai name added.",
+  "naam-yoi: Ko Tee Sangkasi house number removed (Google 262/3 vs Phuket 101 262/8); Facebook link and Thai name added."
+ ]
+}

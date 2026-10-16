@@ -1,0 +1,16 @@
+{
+ "results": [
+  {
+   "key": "hotels:natai-house",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-natai-house.jpg",
+   "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1519549076852477",
+   "page": "https://www.facebook.com/photo/?fbid=1519549076852477&set=a.1519549160185802",
+   "credit": "\u00a9 Natai House",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Shows Natai House's own white garden bungalows (rooms 5 and 6) with palms and a blue sky. Comes from the hotel's official Facebook page: a professional photo set posted 3 Aug 2026 in the 'Deluxe garden view room' album. Sharp, 3:2 landscape, so a 16:9 crop loses little. The URL is the full-size og:image Facebook gives for that public photo page. It only serves the image to link-preview crawlers (downloaded with the facebookexternalhit user agent); other bots get a 960 px version. Alternative: the page's current cover photo, a night shot of the pool beside a lit stone bungalow (media_id=1345600507580669, 1996x2015 near-square, but a centred 16:9 crop works). Not chosen because the photo dates from about 2017-2022: the orange wall in it was white by a Dec 2025 photo. Other page photos are interiors, posters or older 979 px shots. Commons has nothing closer than Natai Beach, about 700 m away."
+  }
+ ]
+}

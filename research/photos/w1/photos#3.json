@@ -1,0 +1,141 @@
+{
+ "results": [
+  {
+   "key": "events:enthusiast-place-open-doors",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-enthusiast-place-open-doors.jpg",
+   "url": "https://enthusiast.place/photos/photo-7.jpg",
+   "page": "https://enthusiast.place/",
+   "credit": "\u00a9 Enthusiast Place",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Two turntables and a rotary mixer in the Enthusiast Place DJ studio under red light (the open-decks setup). Official site photo, the only landscape one there; 4032x3024 original centre-cropped to 16:9 and resized to 1920x1080. Both candidates (photo-1, photo-4) were portrait."
+  },
+  {
+   "key": "events:barra-cuda-beach-club",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-barra-cuda-beach-club.jpg",
+   "url": "https://barracuda-r2.tumwebsme.com/cms/DSC06596-scaled.jpg",
+   "page": "https://www.barracudaphuket.com/",
+   "credit": "\u00a9 Barra Cuda Beach Club",
+   "license": "official site",
+   "width": 2560,
+   "height": 1708,
+   "note": "Pool deck with daybeds, umbrellas and Barra Cuda towels, Patong Beach behind. 2560px version of candidate 1; candidate 2 is a CGI render. The site has no party photos, only square flyers."
+  },
+  {
+   "key": "events:oxa-jungle-party",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-oxa-jungle-party.jpg",
+   "url": "https://oxaphangan.com/wp-content/uploads/2025/08/Oasis-05.jpg",
+   "page": "https://oxaphangan.com/",
+   "credit": "\u00a9 OXA Koh Phangan",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Crowd at the OASIS floor of OXA Jungle with the OXA arch stage. Full-size version of candidate 1, cropped from the bottom to 16:9 so the 'OXA OASIS' corner badge is gone. Candidate 2 is OXA Beach, a different venue."
+  },
+  {
+   "key": "events:sabaii-friday-beach-party-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-sabaii-friday-beach-party-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2022/09/289078616_392713282890841_4723161362346858480_n.jpeg",
+   "page": "https://phangan.events/event-location/sabaii-bay-beach-club/",
+   "credit": "\u00a9 Sabaii Bay Beach Club",
+   "license": "venue photo via phangan.events",
+   "width": 1606,
+   "height": 1050,
+   "note": "Sunset over Ban Tai beach from the Sabaii Bay Beach Club deck (featured image of the venue page). The flyer and the dark Wikimedia beach shot were rejected."
+  },
+  {
+   "key": "events:retro-mountain-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-retro-mountain-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2025/12/IMG_1553.jpeg",
+   "page": "https://phangan.events/retro-mountain-jungle-club-2026-koh-phangan/",
+   "credit": "\u00a9 Retro Mountain / phangan.events",
+   "license": "venue photo via phangan.events",
+   "width": 1280,
+   "height": 720,
+   "note": "Night crowd at the bar under the 'Retro Mountain' graffiti mural and 'Jungle Club' neon sign. From the gallery in the phangan.events 2026 club article; 1280x960 cropped to 16:9 near the top to keep the signage. Candidates rejected: 1 has a text overlay, 2 is 654px and blurry."
+  },
+  {
+   "key": "events:lighthouse-party-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-lighthouse-party-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2025/08/Breakfast-spots.jpeg",
+   "page": "https://phangan.events/lighthouse-party-koh-phangan/",
+   "credit": "\u00a9 phangan.events",
+   "license": "listing site image (phangan.events)",
+   "width": 889,
+   "height": 500,
+   "note": "The Haad Rin lighthouse on the rocks at sunset with the Lighthouse Bungalows' red roof; same view as the venue's own flyers. Candidate 1 cropped to 16:9 above its 'Lighthouse Underground Party' text, so it is only 889px wide. No clean original or Commons photo exists; the night shots are narrow portraits and the rest are flyers."
+  },
+  {
+   "key": "events:chill-up-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-chill-up-phangan.jpg",
+   "url": "https://chillup.club/assets/bar.jpg",
+   "page": "https://chillup.club/",
+   "credit": "\u00a9 Chill Up",
+   "license": "official site",
+   "width": 1100,
+   "height": 545,
+   "note": "Chill Up at night: neon 'CHILL UP' sign and people on the upper floor, on Ban Tai main road. Official site photo, preferred over candidate 1 (a phone shot of the same building). Candidate 2 is a flyer."
+  },
+  {
+   "key": "events:eden-garden-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-eden-garden-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2023/06/1C3A6F5E-7CEA-4FDF-876E-92AE01DED7DF.jpeg",
+   "page": "https://phangan.events/event-location/eden-garden-haad-yuan/",
+   "credit": "\u00a9 Eden Garden",
+   "license": "venue photo via phangan.events",
+   "width": 1280,
+   "height": 721,
+   "note": "Aerial daytime view of the red-roofed Eden Garden bar on the boulders at Haad Yuan, with a longtail boat; the 'Eden Garden' sign is visible bottom left. Uncropped original of candidate 1 (a drone video still, slightly soft). Candidate 2 is an AI-art flyer."
+  },
+  {
+   "key": "events:unclave-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-unclave-phangan.jpg",
+   "url": "https://images.ra.co/ddc519646594ffd654bbd28e4a3c605e2f001c48.jpg",
+   "page": "https://ra.co/events/2537438",
+   "credit": "\u00a9 Groovy Tunes",
+   "license": "official event flyer (RA)",
+   "width": 1920,
+   "height": 1005,
+   "note": "Fallback: official landscape flyer for Groovy Tunes at Unclave ('6 Years', 18 Sep 2026, a past date) with the resident line-up. No venue or party photo exists anywhere reachable: RA venue page and 28 RA events (cartoon flyers only), phangan.events (placeholder), Megatix (flyers and banner), Facebook (logo), web search. A non-January flyer was chosen so its date can't be mistaken for 2027."
+  },
+  {
+   "key": "events:waterfall-festival-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-waterfall-festival-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2024/03/IMG_5775.jpeg",
+   "page": "https://phangan.events/event-location/waterfall-festival/",
+   "credit": "\u00a9 Waterfall Party Koh Phangan",
+   "license": "organiser photo via phangan.events",
+   "width": 1184,
+   "height": 666,
+   "note": "Party crowd at the main stage under the 'WATERFALL PARTY' neon sign, with blue lasers and jungle leaves. Organiser photo from the venue page, cropped to 16:9 above the organiser logo stamped at the bottom. Both candidates were text-heavy flyers."
+  },
+  {
+   "key": "events:black-box-samui",
+   "ok": false,
+   "note": "No usable photo found. Instagram-only bar. RA (venue 289732/286452, 5 events), phangan.events (placeholder plus 10+ flyers) and Drop The Bass (image null) have only portrait, text-heavy, dated flyers that don't survive a 16:9 crop. Visit Thailand Today uses Google Maps photos (not allowed). No Commons photo; the Chaweng Beach candidate doesn't show the venue."
+  },
+  {
+   "key": "events:pangea-beach-bar-lanta",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-pangea-beach-bar-lanta.jpg",
+   "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100051040035774",
+   "page": "https://www.facebook.com/pangeabeachbar",
+   "credit": "\u00a9 Pangea Beach Bar & Kitchen",
+   "license": "official Facebook page",
+   "width": 1536,
+   "height": 864,
+   "note": "Hammocks and bamboo daybeds on the sand at Pangea Beach Bar at sunset, sea behind. The venue's own Facebook profile photo (1536x1536), cropped to 16:9. The generic Wikimedia Long Beach candidate was rejected because it doesn't show the bar; the RA venue has no photo."
+  }
+ ]
+}

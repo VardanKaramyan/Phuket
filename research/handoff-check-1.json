@@ -1,0 +1,338 @@
+{
+ "dryRun": {
+  "identicalBuild": false,
+  "steps": [
+   {
+    "command": "mkdir -p .../fresh-machine && rsync -a --exclude node_modules --exclude .DS_Store --exclude qa-out /Users/mac/Documents/Phuket/ .../fresh-machine/Phuket/ && cp .../Phuket/dist/index.html .../fresh-machine/original-dist-index.html (I also saved a full snapshot as .../fresh-machine/pristine for diffing the whole tree)",
+    "ok": true,
+    "tail": "rsync exit: 0 / cp exit: 0. The copy has no research/result-apps.json and no data/apps.json, which matches HANDOFF's 'Apps research in progress'."
+   },
+   {
+    "command": "export PHUKET_WORKFLOWS_DIR=/nonexistent; npm install   (HANDOFF section 1 and README say npm install)",
+    "ok": true,
+    "tail": "added 233 packages, and audited 234 packages in 2s / 121 packages are looking for funding / 8 high severity vulnerabilities / exit 0. package-lock.json unchanged."
+   },
+   {
+    "command": "npm run all",
+    "ok": true,
+    "tail": "import-apps: research/result-apps.json not found, data/apps.json left as it is / events 40 \u00b7 places 71 \u00b7 areas 20 \u00b7 hotels 28 \u00b7 brands 8 \u00b7 images 173 / dist/index.html 1524 KB \u00b7 offline single file 8358 KB \u00b7 artifact 1377 KB \u00b7 sw 1d2bcba426 / checked: 40 events, 71 places, 20 areas, 28 hotels, 8 brands / no problems found / [plain host] PASSED / [host redirects /index.html] PASSED / OFFLINE TEST PASSED / 27 lines 'buttons ok'. Exit 0, 62 s. Every data/*.json byte-identical to the original."
+   },
+   {
+    "command": "npm run photos   (python3 -I tools/collect-photos.py && node tools/images.mjs)",
+    "ok": true,
+    "tail": "journals copied this run: none (not the machine that ran the workflows, or nothing new) / result files per wave: {'w1': 4, 'w2': 5, 'w3': 5, 'w4': 3, 'w5': 2, 'w6': 1, 'w7': 3} / 173 keys, 173 with a photo file, 0 without / without photo: [] / 173 images, 5343 KB total, avg 31 KB / contact sheets: 4. Exit 0. image-picks.json, images.json, all 173 assets/img/*.webp and the 4 contact sheets byte-identical to the originals."
+   },
+   {
+    "command": "node tools/build.mjs",
+    "ok": true,
+    "tail": "events 40 \u00b7 places 71 \u00b7 areas 20 \u00b7 hotels 28 \u00b7 brands 8 \u00b7 images 173 / dist/index.html 1524 KB \u00b7 offline single file 8358 KB \u00b7 artifact 1377 KB \u00b7 sw 1d2bcba426. Exit 0. Byte-identical to the first fresh build (deterministic)."
+   },
+   {
+    "command": "npm test",
+    "ok": true,
+    "tail": "checked: 40 events, 71 places, 20 areas, 28 hotels, 8 brands / no problems found / [plain host] cache: 172 files ... PASSED / [host redirects /index.html] ... PASSED / OFFLINE TEST PASSED / 27 x buttons ok. Exit 0, 60 s."
+   },
+   {
+    "command": "npm run qa",
+    "ok": true,
+    "tail": "events filter group: 31 cards / events filter duo: 26 cards / events filter solo: 13 cards / screenshots in .../fresh-machine/Phuket/qa-out / no errors. Exit 0. 37 PNGs. No apps.png yet: data/apps.json does not exist."
+   },
+   {
+    "command": "cmp .../fresh-machine/Phuket/dist/index.html .../fresh-machine/original-dist-index.html",
+    "ok": false,
+    "tail": "differ: char 1053963, line 2814. The only change: the fresh build drops ' It works without a Thai SIM.' (Tourist Police app, Info > Power and apps). The same one change is in dist/phuket-guide-offline.html:2809 and artifact/index.html:2796, and sw.js VERSION goes from e5c63f9659 to 1d2bcba426. With that sentence removed, all three original files are byte-identical to the fresh build. Real project mtimes: curate.mjs and data/essentials.json 15:14:16; dist/ and artifact/ 15:14:07."
+   },
+   {
+    "command": "grep -rn \"/Users/mac\" tools/ src/ data/ package.json",
+    "ok": false,
+    "tail": "tools/workflows/qa-2.js:6: const P = '/Users/mac/Documents/Phuket'   (no override) / tools/workflows/research.js:13: const PROJECT = (... args.root) || '/Users/mac/Documents/Phuket'   (args.root overrides it). 0 hits in src/, data/ (including research-log.json) and package.json. Other hits in research/ are quoted reviewer text, or research/photos paths that collect-photos.py maps to assets/raw/ (0 absolute paths left in data/image-picks.json)."
+   },
+   {
+    "command": "python3 -I .../fresh-machine/check-doc-paths.py pristine   (every path and npm script named in HANDOFF.md and README.md)",
+    "ok": true,
+    "tail": "Every named file, folder and npm script exists (tools/workflows/apps.js, tools/qa-shots.mjs, tools/chrome.mjs, data, photos, build, check, test, qa, all, serve ...). Missing, as expected: data/apps.json and research/result-apps.json (apps research pending), qa-out/* (made by npm run qa)."
+   },
+   {
+    "command": "syntax check of tools/workflows/*.js as async bodies (node)",
+    "ok": true,
+    "tail": "All 6 parse (apps, late-january, photos, qa, qa-2, research). apps.js uses agent/pipeline/phase/log, needs no args, and returns { lists, extra }, which is what import-apps.mjs reads."
+   },
+   {
+    "command": "node tools/geo.mjs   (scratch copy)",
+    "ok": true,
+    "tail": "roads: 1092 lines, 177 KB / areas: chalong 26.1km\u00b2 ... / sizes: areas 32935 land 37166 / preview written 900 x 2077. Exit 0. data/geo/ byte-identical to the original."
+   },
+   {
+    "command": "node tools/photo-items-from-raw.mjs   (scratch copy)",
+    "ok": true,
+    "tail": ".../data/photo-items.json 142 { events: 36, places: 62, areas: 20, hotels: 24 }. Exit 0. Silently overwrites data/photo-items.json (npm run data writes 144 items)."
+   },
+   {
+    "command": "node tools/shoot.mjs dist/phuket-guide-offline.html <out> light ; WIDTH=320 node tools/shoot.mjs dist/phuket-guide-offline.html <out> dark home info",
+    "ok": true,
+    "tail": "no console errors / no console errors. Both exit 0. 9 PNGs."
+   },
+   {
+    "command": "python3 -I -c \"import os,json; print(json.dumps({'img/'+f: 'artifact/img/'+f for f in sorted(os.listdir('artifact/img')) if f.endswith('.webp')}))\"   (HANDOFF section 8)",
+    "ok": true,
+    "tail": "Exit 0. 166 entries, every source file exists, and they match the 166 img/ references in artifact/index.html exactly."
+   },
+   {
+    "command": "npm run serve   (then curl, then stop)",
+    "ok": true,
+    "tail": "> npx --yes http-server dist -p 8080 -c-1 / Starting up http-server, serving dist / http-server version: 14.1.1. GET / -> 200 (identical to dist/index.html), /sw.js -> 200 application/javascript, /img/areas-ao-po.webp -> 200 image/webp. Server stopped; port 8080 free again."
+   },
+   {
+    "command": "GUIDE_DATA=$PWD/data node tools/build.mjs",
+    "ok": true,
+    "tail": "dist/index.html 1524 KB \u00b7 offline single file 8358 KB \u00b7 artifact 1377 KB \u00b7 sw 1d2bcba426. Exit 0. Byte-identical to the fresh build."
+   },
+   {
+    "command": "npm ci && node tools/build.mjs",
+    "ok": true,
+    "tail": "npm ci exit 0, package-lock.json unchanged. Build exit 0, byte-identical to the fresh build. KML, manifest and icons identical to the originals."
+   },
+   {
+    "command": "npm run all in '.../fresh-machine/space test/Phuket'   (folder name with a space)",
+    "ok": false,
+    "tail": "Exit 1: Error: ENOENT ... open '.../fresh-machine/space%20test/Phuket/data/events.json' at write (tools/import.mjs:73:28). After fixes/01-fileURLToPath.patch: all, photos, build and qa exit 0, 27 buttons ok, OFFLINE TEST PASSED, output byte-identical to the normal-path build."
+   },
+   {
+    "command": "apps path with a marked SAMPLE result (scratch copy): node tools/import-apps.mjs fixtures/result-apps.sample.json && node tools/build.mjs && npm test && npm run qa",
+    "ok": true,
+    "tail": "merged duplicate grab (money-phone-safety) / dice: dropped odd appStore link ... / 4 apps \u00b7 by priority {\"must\":2,\"useful\":1,\"optional\":1} / corrections to apply in curate.mjs (2): ... Build: apps section 1, home tile, 4 app cards. npm test exit 0 (27 ok, OFFLINE TEST PASSED). npm run qa wrote qa-out/apps.png."
+   },
+   {
+    "command": "breaking things on purpose (scratch copy): bad date in data/events.json -> node tools/check.mjs; one Places photo removed -> node tools/offline-test.mjs and npm test; 3 area photos removed -> offline-test; popup buttons blocked -> node tools/popup-test.mjs",
+    "ok": false,
+    "tail": "check.mjs: 3 problems printed, exit 0. offline-test: 'OFFLINE TEST FAILED' (imgs 71, imgsLoaded 70), exit 0, and npm test exit 0. With 3 area photos missing, offline-test says PASSED while the page says 'Saved for offline use, but 3 photos are missing'. popup-test: 27 'covered: Google Maps/Directions/Details' lines, exit 0. With fixes/03-tests-exit-codes.patch each case exits 1, and the healthy npm test still exits 0."
+   },
+   {
+    "command": "Node v20.20.2 (official nodejs.org tarball, SHA-256 OK) first on PATH: npm ci && npm run all && npm run photos && node tools/build.mjs && npm run qa",
+    "ok": true,
+    "tail": "node v20.20.2 npm 10.8.2. Every step exit 0: checked ... / no problems found / OFFLINE TEST PASSED / 27 buttons ok / 173 images / no errors. The whole tree is byte-identical to the Node 24.13.0 run."
+   },
+   {
+    "command": "python3 -I fixes/apps-result-from-journal.py <journal.jsonl> <out>   (new recovery script; sample journals and the real wf_979252ad-2ea journal, read-only)",
+    "ok": true,
+    "tail": "Complete sample: 'all lists and the critic were fact-checked'. Partial sample: 'food-events-bookings: not fact-checked; critic additions: not fact-checked'. Real journal at 15:48: items per list {'food-events-bookings': 18}, rides-travel and money-phone-safety MISSING (still running). import-apps.mjs accepts the rebuilt file."
+   },
+   {
+    "command": "patch -p0 < fixes/all-tools.patch (dry run on the original tools: exit 0), then in '.../fresh-machine/all fixes/Phuket': npm ci, npm run all, npm run photos, node tools/build.mjs, npm test, npm run qa",
+    "ok": true,
+    "tail": "All 13 files patched. Every step exit 0: checked ... no problems found / OFFLINE TEST PASSED / 27 buttons ok / no errors / 37 PNGs. The site is byte-identical to the unpatched fresh build, and nothing outside tools/ differs."
+   }
+  ],
+  "problems": [
+   {
+    "severity": "high",
+    "where": "/Users/mac/Documents/Phuket/dist/index.html:2814, dist/phuket-guide-offline.html:2809, artifact/index.html:2796 (dist/sw.js VERSION 'e5c63f9659'); source of the change: tools/curate.mjs:266",
+    "problem": "The shipped build is older than its source. tools/curate.mjs and data/essentials.json were saved at 15:14:16, but dist/ and artifact/ were built at 15:14:07. All three HTML outputs still say the Tourist Police app 'works without a Thai SIM', a claim HANDOFF section 4 says was removed (curate.mjs:266 removes it; data/essentials.json no longer has it). A fresh build differs only by that sentence, so the reproducibility check fails, and HANDOFF section 5 ('done and tested') does not describe the shipped files. The offline file meant for the phone has the removed claim, and so does artifact v4 if it was published from this artifact/index.html. The live v4 was not checked (no network calls).",
+    "fix": "In /Users/mac/Documents/Phuket run `npm run build && npm test`. The new dist/index.html should match /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/Phuket/dist/index.html (sw 1d2bcba426). Then AirDrop dist/phuket-guide-offline.html to the phone again and republish artifact/index.html as in HANDOFF section 8; update 'version 4' in HANDOFF section 1 step 5 and README. If you don't republish now, add to HANDOFF section 5: 'artifact v4 and the phone copy are older than the Tourist Police fix; rebuild and republish.' Add to HANDOFF section 6: 'After changing curate.mjs or data/, run npm run all (not only npm run data) before publishing.'"
+   },
+   {
+    "severity": "high",
+    "where": "HANDOFF.md section 4 'To finish' step 1 (and section 11, last row); workflow run wf_979252ad-2ea",
+    "problem": "The only pending task is still running. At 15:48 the apps workflow wf_979252ad-2ea had 1 of 3 researchers finished (food-events-bookings, 18 items), that list's checker had started, and research/result-apps.json did not exist. The workflow's return value goes only to the session that launched it: journal.jsonl stores each agent's result but not the final { lists, extra }. HANDOFF's only instruction is to re-run the workflow, which on a new machine repeats every researcher and checker. It doesn't mention resumeFromRunId (resume a killed run on the old machine with finished agents from cache). It also gives no way to rebuild result-apps.json from the journal if the session closes before the result is saved.",
+    "fix": "Replace step 1 of HANDOFF section 4 with: '1. If research/result-apps.json exists, go to step 2. Otherwise, on the OLD machine before you switch: wait for wf_979252ad-2ea to return and save its JSON as research/result-apps.json. If the run was killed, resume it: Workflow({ scriptPath: \"<this folder>/tools/workflows/apps.js\", resumeFromRunId: \"wf_979252ad-2ea\" }) (finished agents come back from the cache). If the session closed before the result was saved, rebuild it: python3 -I tools/apps-result-from-journal.py ~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/subagents/workflows/wf_979252ad-2ea/journal.jsonl (lists that were not fact-checked are marked in changes). To keep this option on the new machine, copy that journal.jsonl to research/journal-apps.jsonl before you move and pass that path. Only with neither: run Workflow({ scriptPath: \"<this folder>/tools/workflows/apps.js\" }) fresh (ultracode on).' Add the tested script /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/apps-result-from-journal.py as tools/apps-result-from-journal.py (it is in all-tools.patch) and list it in section 7."
+   },
+   {
+    "severity": "medium",
+    "where": "ROOT line in tools/build.mjs:11, check.mjs:7, curate.mjs:8, import.mjs:7, import-apps.mjs:8, images.mjs:7, geo.mjs:11, photo-items-from-raw.mjs:6, offline-test.mjs:10, popup-test.mjs:6, qa-shots.mjs:10",
+    "problem": "`const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')` keeps URL encoding. From a folder with a space, `npm run all` fails at once (observed: exit 1, ENOENT open '.../space%20test/Phuket/data/events.json' at tools/import.mjs:73). Non-ASCII folder names are percent-encoded too, and on Windows the pattern resolves to '\\C:\\Users\\...'; chrome.mjs and HANDOFF both claim Windows support. iCloud Drive ('~/Library/Mobile Documents/...') and many home folders have spaces.",
+    "fix": "In each of the 11 files add `import { fileURLToPath } from 'node:url'` after `import path from 'node:path'`, and change the ROOT line to `const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')`. Ready patch: `cd /Users/mac/Documents/Phuket && patch -p0 < /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/01-fileURLToPath.patch`. Tested: from the space path, all, photos, build, test and qa exit 0, and the output is byte-identical."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/check.mjs:85, tools/offline-test.mjs:64 and :72, tools/popup-test.mjs:28 and :33 (so npm test and npm run all)",
+    "problem": "Exit codes never show a failure, so `npm test` and `npm run all` exit 0 when tests fail. Observed: offline-test printed 'OFFLINE TEST FAILED' with exit 0, and npm test around it exited 0; popup-test printed 27 'covered' lines with exit 0; check.mjs printed 3 problems with exit 0. offline-test also said PASSED with 3 photos missing from dist/img, while the page said '3 photos are missing', because it only checks images in #places. Anyone (or any agent) who trusts the exit code gets a false pass.",
+    "fix": "check.mjs: after the last console.log add `process.exitCode = problems.length ? 1 : 0` and change the line-2 comment to 'exits 1 when it finds a problem'. offline-test.mjs:64: append `&& !/missing/.test(result.offlineText || '')` to `ok`; after line 72 add `process.exitCode = a && b ? 0 : 1`. popup-test.mjs: add `let failures = 0` before the size loop, `if (r !== 'buttons ok') failures++` after `out.push(...)`, and after `await b.close()` add `if (failures) console.log(failures + ' popup checks FAILED')` and `process.exitCode = failures ? 1 : 0`. Ready patch: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/03-tests-exit-codes.patch (tested: broken cases exit 1, the healthy npm test exits 0). Then add 'and it exits with code 0' to HANDOFF section 1 step 3."
+   },
+   {
+    "severity": "low",
+    "where": "tools/qa-shots.mjs:24 (open())",
+    "problem": "In tall element and full-page shots, the sticky .topbar or the fixed .tabbar is painted over the content. qa-out/info-power-apps.png hides the 12Go fact, and qa-out/apps.png, the shot HANDOFF section 4 step 5 says to review, shows the tab bar over the second app card. That looks like a layout bug that isn't really there.",
+    "fix": "In open(), right after `await page.goto('file://' + file + '#' + hash, { waitUntil: 'load' })`, add `await page.addStyleTag({ content: '.topbar,.tabbar{position:static!important}' })`. Patch: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/02-qa-shots-static-bars.patch (tested: both shots clean, no errors)."
+   },
+   {
+    "severity": "low",
+    "where": "tools/workflows/qa-2.js:6; HANDOFF.md section 7 (tools/workflows/ row)",
+    "problem": "qa-2.js hard-codes `const P = '/Users/mac/Documents/Phuket'` with no override, so on another machine its reviewers get a folder that doesn't exist. research.js:13 has the same default, but args.root overrides it (documented). Section 7 also leaves out qa.js's arguments (args.project, args.shots).",
+    "fix": "qa-2.js:6 -> `const P = (typeof args === 'object' && args && args.project) || '/Users/mac/Documents/Phuket'` (patch: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/04-qa-2-args-project.patch; it parses). In HANDOFF section 7 write 'qa.js (args.project, args.shots), qa-2.js (args.project = project folder)'."
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 1 step 2; README.md 'Setup on any machine'",
+    "problem": "'Node.js 20 or newer' is slightly too broad: sharp 0.34.3 (pinned in package-lock.json) declares engines '^18.17.0 || ^20.3.0 || >=21.0.0', so 20.0-20.2 are out. Observed: Node v20.20.2 (npm 10.8.2) and v24.13.0 both run everything and give byte-identical trees.",
+    "fix": "Write 'Node.js 20.3 or newer (tested with 20.20.2 and 24.13)' in both files."
+   },
+   {
+    "severity": "low",
+    "where": "package.json scripts.serve",
+    "problem": "`npx --yes http-server dist -p 8080 -c-1` is not pinned and not in devDependencies. npx fetched http-server 14.1.1 at run time, so the first use needs the network, and a later release could behave differently.",
+    "fix": "Use `\"serve\": \"npx --yes http-server@14.1.1 dist -p 8080 -c-1\"`, or run `npm i -D http-server@14.1.1` and use `\"serve\": \"http-server dist -p 8080 -c-1\"`."
+   },
+   {
+    "severity": "low",
+    "where": ".claude/scheduled_tasks.lock; HANDOFF.md section 1 step 1",
+    "problem": "'Copy the whole folder' also copies the old session's lock file ({\"sessionId\":\"7325013c-...\",\"pid\":98796,...}). It is gitignored and belongs to the old machine. It didn't break anything in this test.",
+    "fix": "Section 1 step 1: 'You can leave out node_modules/, qa-out/ and .claude/scheduled_tasks.lock (npm install and npm run qa recreate the first two).'"
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 7 (Files table)",
+    "problem": "Not listed: tools/workflows/handoff-check.js (added to the real project at 15:18; takes args.project and args.tmp) and research/result-provisional.json (594 KB, an older main result with 61 places; nothing uses it). tools/photo-items-from-raw.mjs silently overwrites data/photo-items.json (observed: 142 items instead of the 144 from npm run data), and the docs don't warn about it.",
+    "fix": "Add a row: '`tools/workflows/handoff-check.js`: fresh-machine handoff test (args.project, args.tmp)'. In the research/ row add: '`result-provisional.json` (older main result, 61 places; replaced by result-final.json, not used)'. After photo-items-from-raw.mjs add: '(overwrites data/photo-items.json; npm run data writes it back)'."
+   },
+   {
+    "severity": "low",
+    "where": "tools/workflows/apps.js, late-january.js, qa-2.js (and handoff-check.js in the real project)",
+    "problem": "These files are mode 600 (-rw-------), while every other project file is 644. A copy made by, or shared with, another user account can't read them.",
+    "fix": "Run `chmod 644 tools/workflows/*.js` in /Users/mac/Documents/Phuket."
+   },
+   {
+    "severity": "low",
+    "where": "tools/shoot.mjs:7; HANDOFF.md section 6 row 12",
+    "problem": "The default view list ['home','events','places','areas','stay','money','info'] has no 'apps'. Once data/apps.json exists, `node tools/shoot.mjs <html> <outdir> light` skips the new Apps page.",
+    "fix": "Add to row 12: 'add apps to the views for the Apps page, e.g. node tools/shoot.mjs dist/phuket-guide-offline.html qa-out/shoot light home apps info'."
+   }
+  ],
+  "notes": "identicalBuild is false only because the shipped dist/ and artifact/ were built 9 seconds before the last curate.mjs fix, so they still contain one removed sentence (problem 1). The build itself is reproducible: every rebuild produced a byte-identical dist/index.html. That held across two rebuilds, npm install and npm ci, Node 20.20.2 and 24.13.0, GUIDE_DATA, and (with the path fix) a folder with a space. After the full pipeline, data/, research/, assets/ (173 WebP), the KML, manifest and icons are byte-identical to the originals. PHUKET_WORKFLOWS_DIR=/nonexistent changed nothing, because the photo results are saved in research/photos/. The HANDOFF section 1 expectations were all met: the 'checked: 40 events...' line, 'no problems found', 'OFFLINE TEST PASSED' and 27 'buttons ok'. Chrome 155 was found automatically, with no CHROME_PATH. Python 3.9.6 was enough. The remaining apps work (import-apps -> build -> test -> qa/apps.png) runs end to end with a marked sample result.\n\nIn 'steps', ok = the step met its expected result. Hits, differences and failures I triggered on purpose are marked false.\n\nSandbox files (absolute paths):\n- Combined patch for 12 tool files plus the new recovery script; applies cleanly to the current tools/, tested together: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/all-tools.patch (apply from the project root with patch -p0). It was made from the 15:18 copy, so re-check it if those tool files change.\n- Single patches: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/01-fileURLToPath.patch, .../fixes/02-qa-shots-static-bars.patch, .../fixes/03-tests-exit-codes.patch, .../fixes/04-qa-2-args-project.patch, and the script /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixes/apps-result-from-journal.py\n- Command logs: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/logs/\n- Original build: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/original-dist-index.html; fresh build: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/Phuket/dist/index.html; QA shots: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/Phuket/qa-out/\n- The sample apps data (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/fixtures/result-apps.sample.json) is labelled SAMPLE and must not go into the real project.\n\nNothing in /Users/mac/Documents/Phuket or ~/.claude was changed. I only read the apps journal. Nothing was published, deployed or logged into. Network use: npm registry downloads (npm install, npm ci, npx http-server) and one official Node v20.20.2 tarball from nodejs.org (SHA-256 checked). I did not open the live artifact v4.\n\nOther observations, not counted as handoff problems: npm install reports '8 high severity vulnerabilities' (I did not run npm audit, so nothing was sent). The old machine's auto-memory index (MEMORY.md) still says 'the 8-18 Jan 2027 trip'; the trip is now 8-26 Jan. It doesn't move to the new machine, but sessions on the old one read it."
+ },
+ "review": {
+  "problems": [
+   {
+    "severity": "high",
+    "where": "HANDOFF.md section 4 'To finish' step 3 (line 81); tools/curate.mjs lines 206-275",
+    "problem": "Step 3 says to put the Apps corrections in the swap(...) block 'the trip is 8 to 26 Jan' or in the essentials .replace(...) chain. Both run BEFORE mergeLateJan(ROOT, log) at curate.mjs line 275. mergeLateJan creates the Info sections solo, departure and phangan-week, and it replaces the tips of re-checked events (TAKE includes 'tips'), Circoloco among them. Also swap() cannot edit Info facts at all, because they sit in sections[].items[].text. I tested this in a copy with `npm run data`. (1) A Circoloco swap on 'Dice says 18+' logged 'trip length: circoloco-thailand-2027.tips' (looks like success), but the final data still had the old tip, because 'late jan: updated event circoloco-thailand-2027' overwrote it. (2) A .replace on the Hostelworld 'Linkups' text (solo section) changed nothing. (3) swap('essentials.json','sections','power-apps','items',...) logged 'no match'. (4) Only main-import Info text changed ('Grab pickup is near Exit 8'). Several texts the Apps researchers must check come from the merge: solo (Hostelworld, Klook/GetYourGuide), departure (Smart Bus, Klook), phangan-week (12Go) and the Circoloco ID tip. So their fixes would be silently lost. Also, inDrive is under Info -> Power and apps, not Getting around.",
+    "fix": "Replace step 3 with: \"3. Apply the corrections in a NEW block at the end of tools/curate.mjs, right after `mergeLateJan(ROOT, log)` (line 275) and before the Google place-id block. Do not use the 'the trip is 8 to 26 Jan' block: it runs before the late-January merge, which creates the Info sections solo / departure / phangan-week and replaces the tips of re-checked events such as Circoloco. swap() cannot edit Info facts. Pattern: `{ const esd = rd('essentials.json'); for (const sec of esd.sections || []) for (const it of sec.items || []) it.text = String(it.text).replace('<old>', '<new>'); wr('essentials.json', esd); const evd = rd('events.json'); const c = evd.items.find((x) => x.id === 'circoloco-thailand-2027'); if (c) c.tips = c.tips.map((t) => t.replace('<old>', '<new>')); wr('events.json', evd); log.push('apps corrections') }`. After `npm run data`, grep data/*.json for each old sentence to confirm it is gone. Where the texts live: Info -> Getting around (Grab and Bolt fares; 'From the airport': Exit 8 / Exit 1, limousine board, Smart Bus), Info -> Power and apps (inDrive, Translate, LINE, 12Go, Klook, Wise, Tourist Police), Info -> Phone and internet (eSIM), Info -> Your solo days (Hostelworld, Klook; merge), Info -> Flight home (Smart Bus, Klook; merge), and the Circoloco card tips (merge).\""
+   },
+   {
+    "severity": "high",
+    "where": "data/extra.json beforeYouFly[1] (href '#apps'); tools/build.mjs line 417; src/app.js line 199; HANDOFF.md section 4 line 69",
+    "problem": "HANDOFF says 'The view and tile only appear once data/apps.json exists', which suggests the current half-done state is safe. But the hand-picked Before-you-fly item 'Install and set up the must-have apps...' always links to #apps. data/apps.json does not exist, so dist/index.html, dist/phuket-guide-offline.html and artifact/index.html each contain href=\"#apps\" (1 each) but no id=\"apps\" (0 each). In headless Chrome with JavaScript on, tapping that link leaves the page blank (visible views: none; main text length 0), because show() hides every view when the 'apps' element is missing. If anyone republishes (section 8) or AirDrops the offline file before the Apps research is imported, this blank page ships. Version 4 online does not have the link yet.",
+    "fix": "In tools/build.mjs line 417, change to `const beforeFly = (extra.beforeYouFly || []).length ? extra.beforeYouFly.filter((c) => c.href !== '#apps' || apps.length)` (keep the existing fallback after the colon). In src/app.js line 199, change to `if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'`. Until that is done, add to HANDOFF section 4 under 'Already done': \"Do not republish or AirDrop before data/apps.json exists: the Before-you-fly box links to #apps, and without the Apps view that link shows a blank page.\""
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md section 4 'To finish' step 1 (line 79)",
+    "problem": "Step 1 says 'Workflow({ scriptPath: \"<this folder>/tools/workflows/apps.js\" }) (with ultracode on). Save the returned JSON ({ lists, extra }) as research/result-apps.json', but not HOW to save it. It also does not explain what 'ultracode' is or how to turn it on. I checked on this machine: a finished run stores its return value under the `result` key of ~/.claude/projects/<folder path with / replaced by ->/<session id>/workflows/<run id>.json (for example wf_f72ec0b6-320.json has status 'completed' and the late-January result). import-apps.mjs (line 15) and import.mjs (line 10) read `src.result || src`, so that whole file can be used as it is. Other missing facts: apps.js reads no args; the path must be absolute; apps.js cannot resume. If the session or terminal closes mid-run, the run is lost (the old run's 3 researchers were still busy more than 20 minutes after they started).",
+    "fix": "Rewrite step 1 as: \"1. ... If not, re-run it: open Claude Code in this folder (max effort; 'ultracode' = the user's setting for running big tasks as Workflow scripts), and have Claude call the Workflow tool with { scriptPath: '<absolute path of this folder>/tools/workflows/apps.js' } and no args. Keep that session and terminal open until it finishes, because a closed session kills the run and apps.js cannot resume. To watch it: python3 -I tools/watch-workflows.py ~/.claude/projects/<slug>/<session id>/subagents/workflows/<run id>/journal.jsonl (slug = this folder's absolute path with every / replaced by -). When it finishes, save the result from the project folder: cp ~/.claude/projects/<slug>/<session id>/workflows/<run id>.json research/result-apps.json (import-apps.mjs reads its `result` key). Or ask Claude to write the returned object to that file.\""
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md section 1 (before step 1) and section 4 step 1",
+    "problem": "When HANDOFF was written, the Apps run wf_979252ad-2ea was still running on the old machine. I checked: its journal had 1 'launched' and 3 'started' entries, 0 results, and the agent transcripts were still growing at 15:22 local time. If it finishes after the folder is copied, its result exists only in ~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/workflows/wf_979252ad-2ea.json on the old machine. Nothing tells the user to bring it along, so the new machine would re-run the whole research (7+ agents).",
+    "fix": "Add to section 1, before step 1: \"0. On the old machine, if it is still on: keep the Claude Code session that started wf_979252ad-2ea open until the run finishes. Then, from the project folder: cp ~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/workflows/wf_979252ad-2ea.json research/result-apps.json, and copy the folder after that. Section 4 then starts at step 2.\""
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md line 3, section 1 step 4, section 5 Outputs (line 101) and Tests; README.md Outputs table (line 13)",
+    "problem": "The copied builds do not match the copied data or the online copy. dist/index.html, dist/phuket-guide-offline.html and artifact/index.html were written at 15:14:07; curate.mjs and data/*.json changed at 15:14:16. All three builds still contain 'It works without a Thai SIM.' (1 match each, 0 in data/essentials.json). After rebuilding from the current data, dist/index.html differs at line 2814 because of that sentence. Also, the session log shows version 4 went up at 2026-10-16T08:31:28Z (12:31 local, +04), before the Apps code and the beforeYouFly list (build.mjs and extra.json at 15:04). So the online copy still has the old Before-you-fly box, and artifact/index.html is NOT 'the online claude.ai version (version 4)'. Someone who opens or AirDrops dist/phuket-guide-offline.html straight after copying gets the older text.",
+    "fix": "Before copying the folder, run `npm run all` once more on the old machine. In HANDOFF section 5, replace line 101 with: \"`artifact/index.html`: the local build. It is newer than the online version 4 (published 16 Oct 2026, 08:31 UTC, before the Apps work and the new Before-you-fly list) and has not been republished.\" In section 1 step 4, add: \"(only after step 3: the copied dist/ can be older than the data)\". In README line 13, change 'Version published as a claude.ai artifact' to 'The claude.ai artifact build (republish it to update the online copy)'."
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md section 1 steps 1-2; the ROOT line in tools/build.mjs:11, check.mjs, curate.mjs, images.mjs, import.mjs, import-apps.mjs, offline-test.mjs, popup-test.mjs, qa-shots.mjs, geo.mjs, photo-items-from-raw.mjs",
+    "problem": "All 11 Node tools compute ROOT as path.resolve(path.dirname(new URL(import.meta.url).pathname), '..'), which keeps URL encoding. I tested from a copy at '.../space test/Phuket': `node tools/check.mjs` exited 1 (TypeError: Cannot read properties of undefined (reading 'features')), and `node tools/build.mjs` exited 1 (ENOENT .../space%20test/Phuket/node_modules/leaflet/dist/leaflet.css). Any path with a space breaks the whole pipeline, for example iCloud Drive's '~/Library/Mobile Documents/...' or a folder named 'Phuket Trip'. On Windows the same expression gives an invalid path (path.win32 gives '\\C:\\Users\\me\\Phuket'). So section 1's 'found automatically on macOS, Linux and Windows' wrongly suggests Windows works.",
+    "fix": "In each of the 11 tools, add `import { fileURLToPath } from 'node:url'` and use `path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')`. Until then, add to HANDOFF section 1 step 1: \"Put the folder at a path with no spaces or special characters (not iCloud Drive). The tools run on macOS and Linux, not Windows.\""
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md section 6 row 2 (line 116); README.md step-by-step line 30",
+    "problem": "curate.mjs edits data/*.json in place and appends tips with .concat(...), so running it twice without a fresh import duplicates them. I tested in a copy: after `npm run data`, a second `node tools/curate.mjs` changed events.json, places.json, hotels.json and exchanges.json. Argy tips went 3 to 4, Marco Carola 4 to 5, phuket-elephant-sanctuary, koh-sirey and koh-phangan-rave-trip each +1, milky-bay-resort and slumber-party-phangan 4 to 5. README lists `node tools/curate.mjs` as a standalone step, and the Apps step 3 sends people to edit curate.mjs, so testing an edit with `node tools/curate.mjs` is the natural thing to do.",
+    "fix": "Add to HANDOFF section 6 row 2 and after README line 30: \"Never run curate.mjs twice in a row: it appends to data/*.json. After editing it, run `npm run data` (import, then curate, then apps), which starts again from a fresh import.\" (Or make the .concat calls skip tips that are already there.)"
+   },
+   {
+    "severity": "medium",
+    "where": "HANDOFF.md section 7, tools/build.mjs row (line 137)",
+    "problem": "HANDOFF names only `TRIP` 'near the top' as the date logic. The dates are also hard-coded in: tools/build.mjs line 44 (TRIP_DAYS uses Date.UTC(2027, 0, 8 + i), not TRIP.start), line 376 (PLAN_PHANGAN = 19-22 Jan), and the copy at lines 430, 432, 456, 460, 640, 752 and 816; tools/import.mjs lines 27 and 49; tools/merge-late-jan.mjs lines 19 and 82; tools/check.mjs lines 59-61; tools/curate.mjs line 33. Then there are the data/extra.json texts (dayTips keys, eventsCallout, areasRecommendation, beforeYouFly). The old machine's memory recorded this ('date logic lives in TRIP ... and the inTrip checks in import/curate/check/merge-late-jan'), but it did not make it into HANDOFF, and the user has already changed the dates once. Also, the curate.mjs line 206 comment says 'solo 23-26', while TRIP and HANDOFF say Solo 24-26.",
+    "fix": "Add to section 10: \"If the trip dates change: in tools/build.mjs edit TRIP, TRIP_DAYS (line 44), PLAN_PHANGAN (line 376) and the date strings at lines 430, 432, 456, 460, 640, 752, 816. Then edit inTrip and the cut-offs in tools/import.mjs (27, 49), tools/merge-late-jan.mjs (19, 82) and tools/check.mjs (59-61), and the OXA filter in tools/curate.mjs (33). Then update data/extra.json and the date texts in curate.mjs, and run npm run all.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 7, tools/workflows/ row (line 144)",
+    "problem": "The row is incomplete or wrong for re-use. research.js also reads args.resume and args.precomputed (its resume support after a killed run, which matters because the user lost a run once). photos.js needs absolute outDir and itemsFile, batches is an array of arrays of item keys, and its agents use macOS-only `sips`. qa.js needs args.project and args.shots. qa-2.js hard-codes P = '/Users/mac/Documents/Phuket'. Both qa.js and qa-2.js still tell reviewers 'trip 8-18 Jan 2027', and qa.js's requirements lens says 'on 8-18 Jan 2027'. handoff-check.js (args.project, args.tmp) is not listed at all.",
+    "fix": "Replace the row text with: \"research.js (original 8-18 Jan research; args.root, plus args.resume / args.precomputed to resume a killed run), late-january.js (args.known), apps.js (no args), photos.js (args.outDir and args.itemsFile as absolute paths, args.batches = arrays of item keys; agents use macOS sips), qa.js (args.project, args.shots = folder of light-/dark-<view>.png), qa-2.js (hard-codes /Users/mac/Documents/Phuket), handoff-check.js (args.project, args.tmp). Before reusing qa.js or qa-2.js, change '8-18 Jan 2027' in their BRIEF to 8-26 Jan.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 6 row 4 (line 118) and section 9 step 3",
+    "problem": "The late-December re-checks may add new events that need photos, but the photo flow is not written down. collect-photos.py only reads the waves in its WAVES dict (w1-w7, line 12), so a new run saved under research/photos/w8/ is ignored until WAVES gets a 'w8' entry.",
+    "fix": "Add to row 4: \"To add photos: list the new items (key, kind, name, where, gmapsQuery, website, candidates) in research/photo-items-wave8.json. Run photos.js with absolute outDir (assets/raw) and itemsFile, and batches of keys. Save its result as research/photos/w8/photos.json, add 'w8': '<run id>' to WAVES in tools/collect-photos.py, then run npm run photos and npm run all.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 7 research/ row (line 150); tools/merge-late-jan.mjs line 161",
+    "problem": "Every `npm run data` rewrites research/photo-items-wave7.json (mergeLateJan writes the late-January items that still lack a photo). It is now '[]' (2 bytes), so the original 17-item wave-7 search list is no longer in the folder, though HANDOFF calls these files 'photo search lists'. research/result-provisional.json (594 KB) is not listed either.",
+    "fix": "In the research/ row add: \"photo-items-wave7.json is rewritten by every npm run data and lists the late-January items still without a photo (now none); result-provisional.json is an early research result, not used.\" Or in merge-late-jan.mjs line 161 write the file only when want.length > 0."
+   },
+   {
+    "severity": "low",
+    "where": "README.md 'Deploy dist/' (line 42) and 'Content edits' (line 40)",
+    "problem": "README gives deploy commands with no warning, but HANDOFF section 2 says to ask the user before any hosting (they chose 'Skip for now'). README also says 'Every other fix goes into tools/curate.mjs', while HANDOFF row 3 says Apps fixes belong in tools/import-apps.mjs.",
+    "fix": "Under '## Deploy `dist/`', add first: \"Ask the user first: they chose to skip hosting on 16 Oct 2026 (HANDOFF.md section 2).\" In line 40, change to: \"Every other fix goes into tools/curate.mjs as code (Apps page fixes go into tools/import-apps.mjs), because the import overwrites data/*.json.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 4 step 6 (line 84)",
+    "problem": "'update this file and section 2 of the README' is unclear: README has no numbered sections, and its second heading could be Outputs or Setup. The step also leaves out sending the new offline file to the phone, which section 5 requires after each rebuild.",
+    "fix": "Change to: \"6. Republish the artifact (section 8), AirDrop the new dist/phuket-guide-offline.html to the phone, then update sections 4, 5 and 11 of this file and the README Outputs table.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 7 data/extra.json row (line 146), section 9 step 2 (line 179)",
+    "problem": "HANDOFF says extra.json has 'offlineUrl (empty until hosted)', but the key is not in the file; build.mjs uses `extra.offlineUrl || ''`. The `researchedOn` key ('15-16 Oct 2026', shown in the home footer) is not listed, so a re-check would leave an old date on the page.",
+    "fix": "Change to: \"... dropImages, offlineUrl (not in the file yet: add \\\"offlineUrl\\\": \\\"https://...\\\" once hosted), researchedOn (the footer date: update it after the late-December re-checks).\""
+   },
+   {
+    "severity": "low",
+    "where": "tools/workflows/apps.js line 13; tools/import-apps.mjs line 54; HANDOFF section 4 step 1",
+    "problem": "apps.js tells its agents 'today is 16 Oct 2026', and import-apps.mjs hard-codes asOf: '16 Oct 2026', which shows as 'Checked 16 Oct 2026' on the Apps page. A re-run on another day would carry the wrong date.",
+    "fix": "Add to step 1: \"If you re-run it on a later day, first change 'today is 16 Oct 2026' in apps.js and asOf in tools/import-apps.mjs line 54 to the run date.\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 1 step 3 (expected output)",
+    "problem": "Until the Apps result is saved, `npm run all` also prints 'import-apps: research/result-apps.json not found, data/apps.json left as it is'. The expected-output list does not mention it, so a newcomer may think something is broken.",
+    "fix": "Add a bullet: \"`import-apps: research/result-apps.json not found, data/apps.json left as it is` (expected until the Apps research is saved; see section 4).\""
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 8 (line 164)",
+    "problem": "The files-map one-liner uses the relative path 'artifact/img'. It prints 166 entries from the project root, but from any other folder it fails with FileNotFoundError.",
+    "fix": "Change 'This prints the `files` map:' to 'Run this from the project folder; it prints the `files` map:'."
+   },
+   {
+    "severity": "low",
+    "where": "HANDOFF.md section 9 'Next steps'",
+    "problem": "A dated item is close and not listed: the Argy presale opens Tue 20 Oct 2026, 18:00 Thai time (4 days after this handoff; the cheapest tier is 900 THB with entry by 16:00). After that the Argy card and the Before-you-fly line ('presale from Tue 20 Oct') will be out of date.",
+    "fix": "Add at the top of section 9: \"Tue 20 Oct 2026, 18:00 Thai time: the Argy presale opens on Megatix. Remind the user. After it, update the Argy priceText in tools/curate.mjs (line 82) and the beforeYouFly ticket line in data/extra.json.\""
+   }
+  ],
+  "verified": [
+   "npm scripts in package.json match HANDOFF and README: data = import + curate + import-apps; test = check + offline-test + popup-test; all = data + build + test; photos, qa, serve, check and build exist as described.",
+   "`npm ci` with the committed package-lock.json works in a clean copy with an empty npm cache (exit 0, 233 packages). `npm install` is not needed for exact versions.",
+   "Counts from data: 40 events (16 dated, 14 recurring, 10 venues), 71 places (29 must-see, 29 hidden gems, 13 day trips, 12 food), 20 areas, 28 hotels (5 lastNights = 'Near the airport'), 8 brands, 12 Info sections, 16 phrases, 0 items without a verification note.",
+   "Photos: data/images.json has 173 entries, 166 in use (equal to the files in dist/img and artifact/img; the unused 7 are dropped events, one dropped hotel, and money:nc-plus in dropImages).",
+   "check.mjs in a clean copy prints 'checked: 40 events, 71 places, 20 areas, 28 hotels, 8 brands' and 'no problems found'.",
+   "'Google place IDs on 142 links' equals the curate log line 'place ids: 142 links now open the exact Google listing'. 144 items have a placeId; 2 money-shop branches are set by hand.",
+   "`npm run data` in a clean copy reproduces every data/*.json byte for byte, and research/photo-items-wave7.json too. No 'MISSING' or 'no match' lines in the curate log, so no hand edits would be lost.",
+   "`PHUKET_WORKFLOWS_DIR=/nonexistent python3 -I tools/collect-photos.py` reproduces data/image-picks.json byte for byte (173 keys, all with files, no absolute paths). `node tools/images.mjs` reproduces data/images.json and all 173 WebP files byte for byte.",
+   "popup-test in a clean copy: 27 lines of 'buttons ok' (390x844, 360x780, 320x640, 9 cards each), exit 0.",
+   "Artifact URL https://claude.ai/artifact/Nxy3LAarKyhwtFtf1HvZKD and 'version 4' are right: the session log shows Version 4 published 2026-10-16T08:31:28Z with label 'Trip extended to 26 Jan' and 166 files.",
+   "The Apps run wf_979252ad-2ea really was still running: journal has 1 launched, 3 started, 0 results. All other run ids in section 11 exist in the old machine's subagents/workflows folder, and the photo run ids match WAVES in tools/collect-photos.py.",
+   "apps.js reads no args, returns { lists, extra }, and has 3 researchers, a verifier for each, a completeness critic and a verifier for the critic, as HANDOFF says. late-january.js reads args.known; research.js reads args.root (default /Users/mac/Documents/Phuket); photos.js reads args.outDir, args.itemsFile and args.batches.",
+   "import-apps.mjs exits 0 and leaves data/apps.json alone when the file is missing. With a test file it merged a duplicate, dropped a non-store App Store link, stripped &hl=, defaulted a bad category and printed the corrections. It accepts both { lists, extra } and { result: {...} }.",
+   "The Apps code works end to end with test data: #apps view, the wide 'Apps to install' home tile, the link at the top of Essentials, Ready checkboxes only on 'must' cards, progress 'Ready: 0 of 2' then '1 of 2', localStorage pg:appsDone, App Store button gets .primary on an iPhone user agent, no page errors. The apps CSS block is at the end of src/styles.css.",
+   "Field and constant names named in HANDOFF exist in the code: events kind, dates, window, status, undergroundScore, pick, agendaNote, tile, placeId, extraMaps; places tier, durationLabel, days, dirLat, dirLng, dirLabel, noDirections; hotels lastNights, noRoomsOnTrip; coordConfidence 'low' gives no dot and no Directions; TAKE, AFTER, SKIP, NEW_FIX and DEAD_LINKS in merge-late-jan.mjs; TRIP in build.mjs; VIEWS (with 'apps') in app.js; __VERSION__ and __PRECACHE__ in sw.js; GUIDE_DATA, CHROME_PATH, PHUKET_WORKFLOWS_DIR, CARDS, WIDTH; POSITION and BAND in images.mjs.",
+   "curate.mjs runs in the order HANDOFF gives: duplicates, QA fixes, 8-26 Jan texts, mergeLateJan, Google place ids, area relabel.",
+   "Section 3 facts match data/events.json and data/extra.json. Circoloco: Sat 9, 16 and 23 Jan, 15:00-03:00. Argy: Fri 8 Jan 14:00-22:30, presale Tue 20 Oct 2026, 18:00 Thai time. Marco Carola: Wed 13 Jan. Lost Jungle: 9-11 Jan. Halfmoon: 15-16 Jan. OXA: Tue 19 (moved). Waterfall: 20 and 24, unconfirmed. Jungle Experience: 21, unconfirmed. Full Moon Party: Fri 22. DnB Allstars: Chalong, 22-24 Jan, no day tickets. Shelter: Fri and Sat. Courage Bar: undergroundScore 5. Zamna: 29-30 Jan (after). Carl Cox: 3 Jan (before). Samui flight 14:15 or earlier, then Thong Sala and Ban Tai. 15:05 flight on Sat 23; only 7 Samui-Phuket flights that day. Flight home Tue 26 Jan 18:20, at the airport by 15:20, last night Mon 25. Mamy (Koh Kaew) rank 1, Lion (Jungceylon) 2, SuperRich partner 3 (closed Sunday). ATMs 250-350 THB. The 450-baht entry fee is planned, not yet in force.",
+   "No user-facing data, README or HANDOFF text presents 8-18 Jan as the current trip. The only hits are the group phase and the curate fixes themselves; README's title says 8-26 Jan.",
+   "No absolute /Users/mac paths in tools/*.mjs, src/, data/*.json or package.json. Only collect-photos.py (default path, env override), research.js (default, args.root) and qa-2.js have one.",
+   "geo.mjs uses only the local OSM extracts in data/geo (no network). The Python helpers use only the standard library. This machine has Node v24.13.0, Python 3.9.6, and Chrome at the macOS default path.",
+   "The section 8 files-map one-liner prints 166 img/ entries when run from the project root."
+  ],
+  "notes": "All my writes went into /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/fresh-machine/review-agent: a clean copy in Phuket/, an npm cache, a Chrome profile, the logs and two small puppeteer scripts (apps-link-test.cjs, apps-view-test.cjs). The sibling dry run works in fresh-machine/Phuket, so I kept away from it. I did not run offline-test.mjs or `npm run qa`, because offline-test binds fixed ports 8765/8766 and the sibling may use them; its 'OFFLINE TEST PASSED' claim is for the dry run to confirm. I read ~/.claude only, to check the Apps run status, the artifact version and the memory files. I did not call any online service, so I did not compare artifact version 4's content online; the timing evidence comes from the session log. The made-up result-apps.json was used only inside my copy, then removed, and my copy's data was restored and checked byte for byte. Minor points left out of the list: `npm run serve` downloads http-server via npx the first time, so it needs internet; the project's .claude/scheduled_tasks.lock is harmless to copy (no lasting scheduled tasks exist; one ScheduleWakeup was stopped); 'dist/phuket-guide-offline.html: 8.4 MB' is the build's 8358 KB, about 8.56 MB in decimal units."
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "results": [
+  {
+   "key": "events:francis-mercier-cafe-del-mar-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-francis-mercier-cafe-del-mar-2027.jpg",
+   "url": "https://cdn.prod.website-files.com/675969a2220618a361236fac/67cff14cd8f4ff7e8d773e89_113A8208-2.jpg",
+   "page": "https://phuket.cafedelmar.com/past-events",
+   "credit": "\u00a9 Caf\u00e9 del Mar Phuket",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Night party at Caf\u00e9 del Mar Phuket: DJ booth under the mirrored, ivy-covered canopy with sparkler fountains and a packed crowd. This is the venue's own photo from its past-events page. Rejected: the phangan.events candidate is a portrait, text-heavy flyer (960x1280). The event page's no-text visual is a square artist graphic."
+  },
+  {
+   "key": "events:blondish-cafe-del-mar-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-blondish-cafe-del-mar-2027.png",
+   "url": "https://cdn.prod.website-files.com/675969a2220618a361236fac/69cb96479458d00c48b1397b_pyr.png",
+   "page": "https://phuket.cafedelmar.com/events",
+   "credit": "\u00a9 Caf\u00e9 del Mar Phuket",
+   "license": "official site",
+   "width": 1300,
+   "height": 867,
+   "note": "Pyramid Stage at Caf\u00e9 del Mar Phuket (the stage named on the BLOND:ISH page) mid-party: CO2 and flame jets over the DJ booth, crowd in front. This is the og:image of the venue's events page. Rejected: the candidate is a portrait, text-heavy flyer (1080x1440)."
+  },
+  {
+   "key": "events:dnb-allstars-thailand-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-dnb-allstars-thailand-2027.webp",
+   "url": "https://dnballstars-thailand.com/photos/wides/day-stage-1365.webp",
+   "page": "https://dnballstars-thailand.com/",
+   "credit": "\u00a9 DnB Allstars",
+   "license": "official site",
+   "width": 1365,
+   "height": 767,
+   "note": "Daytime crowd at the DnB Allstars Thailand main stage (golden carved sun-face stage, Void rig), from the official festival site, probably a past edition. The same stage appears on the site's own photo of the Azulea lawn. Rejected: both candidates are text-heavy 'Pendulum / headliner announced' graphics."
+  },
+  {
+   "key": "events:zamna-phuket-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-zamna-phuket-2027.jpg",
+   "url": "https://zamnafestival.com/storage/hero/01KYJ6K7XS9EEB3H3EGTMG91VV.jpg",
+   "page": "https://zamnafestival.com/",
+   "credit": "\u00a9 Zamna Festival",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Official Zamna homepage hero: huge night crowd in front of a smoky light-column stage. This is a past Zamna edition, not Yeden Gardens: no photo of the Phuket venue exists online. Downscaled from 4450 px. Rejected: the Ticketmelon poster is 424x601 portrait with text, and the event-page background is a generic karst lagoon."
+  },
+  {
+   "key": "events:full-moon-party-2027-01",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-full-moon-party-2027-01.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Full-Moon-Party-2015_wDSC03089.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Full-Moon-Party-2015_wDSC03089.jpg",
+   "credit": "Per Meistrup",
+   "license": "CC BY-SA 4.0",
+   "width": 1024,
+   "height": 683,
+   "note": "Full Moon Party night on Haad Rin Sunrise Beach (March 2015): UV-lit crowd, fire show and neon 'FULL MOON PARTY' sign. 1024 px is the original size, so no 1280 thumbnail exists. Rejected: Joe Stump's photo is portrait (1067x1600) and loses the sign in a 16:9 crop. Koh_Phangan01 is a small 800x600 island aerial, not the party."
+  },
+  {
+   "key": "events:jungle-experience-2027-01",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-jungle-experience-2027-01.jpg",
+   "url": "https://jungle-experience.com/wp-content/uploads/2023/12/SocialMediaSept-78.jpg",
+   "page": "https://jungle-experience.com/photo-reports/",
+   "credit": "\u00a9 Jungle Experience",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Packed night crowd at Jungle Experience in the Ban Tai jungle, neon-lit stages and decor behind, no logo stamp. From the official photo-reports gallery. Rejected: candidate 1 is a Muay Thai fighter with a JE logo stamp in the corner. Candidate 2 is a soft daytime promo still of two costumed performers."
+  },
+  {
+   "key": "events:shelter-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-shelter-phuket.jpg",
+   "url": "https://www.illuzionphuket.com/wp-content/uploads/2020/06/Shelter-Club-house-and-techno-at-Illuzion-Phuket-Club-10.jpg",
+   "page": "https://www.illuzionphuket.com/shelter/",
+   "credit": "\u00a9 Illuzion Phuket",
+   "license": "official site",
+   "width": 1280,
+   "height": 853,
+   "note": "Inside Shelter: DJ at the decks seen from behind the booth, packed dancefloor under the angular light rig. This is one of the few official gallery shots without the large 'SHELTER by Illuzion' logo stamp. Rejected: both candidates (-2, a posed shot of two guests, and -14) carry that stamp. The Bangla Road Commons photo isn't the club."
+  },
+  {
+   "key": "events:illuzion-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-illuzion-phuket.jpg",
+   "url": "https://www.illuzionphuket.com/wp-content/uploads/2024/08/Illuzion-best-club-in-thailand-and-in-asia-39.jpg",
+   "page": "https://www.illuzionphuket.com/",
+   "credit": "\u00a9 Illuzion Phuket (photo: Aidar Stepanov)",
+   "license": "official site",
+   "width": 1200,
+   "height": 800,
+   "note": "Illuzion main room in full show: triangle light sculpture, ILLUZION sign, CO2 jets and confetti over the crowd (2024 homepage gallery). A tiny '@aidar_stepanov' credit sits in the bottom-left corner. Rejected: candidate 1 (og:image) has a large ILLUZION logo stamp bottom right."
+  },
+  {
+   "key": "events:boa-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-boa-phuket.jpg",
+   "url": "https://yona.odoo.com/web/image/28099-38b9f53e/IMG_2218-Enhanced-NR.jpg",
+   "page": "https://www.boaclubphuket.com/",
+   "credit": "\u00a9 BOA Phuket",
+   "license": "official site",
+   "width": 1920,
+   "height": 1280,
+   "note": "First candidate accepted: BOA's own og:image of the club interior, with light beams, a stage with performers and the crowd. The site's other images are a marble texture and a close-up of a BOA sign."
+  },
+  {
+   "key": "events:cafe-del-mar-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-cafe-del-mar-phuket.jpg",
+   "url": "https://cdn.prod.website-files.com/675969a2220618a361236fac/698d87104b27e45ee594cb1f_cafedelmar.avif",
+   "page": "https://phuket.cafedelmar.com/daylife",
+   "credit": "\u00a9 Caf\u00e9 del Mar Phuket",
+   "license": "official site",
+   "width": 1200,
+   "height": 800,
+   "note": "Daytime view of the beach club: curved pool, daybeds, ivy-draped main building and casuarinas, sea behind. Converted from AVIF to JPEG. Rejected: candidate 1 is a soft aerial video frame of Kamala Beach where the venue can't be picked out. Alternative: the homepage og:image (wooden Caf\u00e9 del Mar sign at sunset, 1200x630)."
+  },
+  {
+   "key": "events:nikys-speakeasy-bang-tao",
+   "ok": false,
+   "note": "No acceptable photo. The site nikys-speakeasy.com is dead (serves a default TLS cert), and the Wayback Machine has only an 'under construction' page. nikys.club, the handle on its flyers, doesn't resolve. Commons, OSM and web searches found nothing. The only official images are portrait text flyers on phangan.events ('Niky Club & Lounge', 20 Soi Bang Thao 2), e.g. Phases of Bass and Ladies Night (1024x1280), which won't survive a 16:9 crop. The Bang Tao Beach candidate doesn't show the bar. Google Maps and Tripadvisor photos not used."
+  },
+  {
+   "key": "events:courage-bar-phuket-town",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-courage-bar-phuket-town.png",
+   "url": "https://images.ra.co/70ef725620c43d9712fc4e310e8e1be42d8b2483.png",
+   "page": "https://ra.co/events/2363193",
+   "credit": "\u00a9 SUB: UK Garage & Bass / Phuket (event flyer)",
+   "license": "official event flyer",
+   "width": 1920,
+   "height": 1005,
+   "note": "Flyer fallback: no photo of the bar exists in allowed sources (Commons, RA, Megatix, phangan.events placeholder, Time Out). Landscape official flyer for the SUB night at Courage Bar, Phuket Town (13 Feb 2026, Freestylers/Gardna/Poize Audio), with the venue printed on it. It's text-heavy but survives a 16:9 crop, and its Feb date won't be mistaken for a trip date. Rejected: the Megatix candidate is a square FAKE ORBIT flyer reading '17 JAN' with no year, which looks like a party on 17 Jan 2027."
+  }
+ ]
+}

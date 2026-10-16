@@ -1,0 +1,841 @@
+{
+ "items": [
+  {
+   "id": "kata-noi",
+   "name": "Kata Noi",
+   "tagline": "Small, clear bay shared by only three resorts",
+   "description": "An 850 m bay just south of Kata, behind a rocky headland. Only three resorts share it (Katathani, The Shore and Mom Tri's Villa Royale), so it stays calm. There is no town; Kata's restaurants are a short ride away. The hill road above has sunset bars with a view of the bay: After Beach Bar, The Sundeck and Fira.",
+   "bestFor": [
+    "beach",
+    "swimming",
+    "couples",
+    "quiet",
+    "sunset"
+   ],
+   "notIdealFor": [
+    "budget",
+    "nightlife",
+    "food"
+   ],
+   "beach": "From November to April the sea is flat and very clear, one of the best swims in Phuket. Lifeguards watch the beach in the day. Sunbeds are only for resort guests, so bring a towel and use the shade at either end.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 5,
+    "food": 2,
+    "quiet": 4,
+    "family": 4,
+    "value": 2
+   },
+   "priceLevel": 3,
+   "airportDriveMin": 65,
+   "patongDriveMin": 20,
+   "highlights": [
+    "Swim in flat, clear water",
+    "Sunset at After Beach Bar or The Sundeck",
+    "Fira Beach Club on the hill",
+    "Short ride to Kata for dinner"
+   ],
+   "lat": 7.8062,
+   "lng": 98.2988,
+   "coordSource": "osm-beach(relation 4235946, 17 m)+wikidata(Q13424403, 23 m)+google(Kata Noi Beach, 26 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kata Noi Beach, Phuket",
+   "stayIf": "Stay here if you want a calm, beautiful swimming beach and sunset bars, and do not need nightlife.",
+   "tips": [
+    "Parking is small; in high season arrive before 10:00 or come by Bolt or Grab."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Kata Noi",
+     "url": "https://www.phuket101.net/kata-noi-beach-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+     "credit": "Jacek Lesniowski",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Kata_Noi_beach%2C_Katathani_resort_%2842174860592%29.jpg/1280px-Kata_Noi_beach%2C_Katathani_resort_%2842174860592%29.jpg",
+     "credit": "Phuket@photographer.net from Phuket, Thailand",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kata_Noi_beach,_Katathani_resort_(42174860592).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kata-noi-beach-phuket/"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket101 Kata Noi page (updated 16 Sep 2026) confirms the 850 m beach, three resorts, the sunset bars, daytime lifeguards, no public sunbeds and small parking. Google Maps: beach 4.6 (3,017 reviews); Fira Beach Club, After Beach Bar and The Sundeck listed with current hours. Pin = OSM beach midpoint; Wikidata 23 m and Google 26 m away. OSRM free-flow: airport 53 min, Patong 15 min."
+  },
+  {
+   "id": "nai-harn",
+   "name": "Nai Harn",
+   "tagline": "Green hills, a lake and a protected beach in the south",
+   "description": "A wide, soft beach between green hills, with a lake and a temple behind it and yachts in the bay. By law nothing can be built on the land behind the sand, so there are only tall casuarina trees. No town, just scattered restaurants, cafes and villas, with many long-stay expats. Busy in Dec-Jan, but relaxed.",
+   "bestFor": [
+    "beach",
+    "swimming",
+    "nature",
+    "sunset",
+    "long-stay"
+   ],
+   "notIdealFor": [
+    "nightlife",
+    "shopping"
+   ],
+   "beach": "In January the water is clear blue and calm, one of the best swimming beaches in the south, but this is its busiest time of year.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 5,
+    "food": 3,
+    "quiet": 4,
+    "family": 4,
+    "value": 3
+   },
+   "priceLevel": 3,
+   "airportDriveMin": 70,
+   "patongDriveMin": 30,
+   "highlights": [
+    "Windmill Viewpoint over Ya Nui and Promthep",
+    "Black Rock Viewpoint (steep climb)",
+    "Ao Sane, a small snorkelling cove (one 2026 guide said it was closed for building work; check first)",
+    "Wat Nai Harn and the lake (paddle boats)",
+    "Reflections rooftop bar at The Nai Harn (17:00-22:00)"
+   ],
+   "lat": 7.7755,
+   "lng": 98.306,
+   "coordSource": "osm-beach(relation 6162518, 31 m)+google(Nai Han Beach, 78 m)+wikidata(Q14226240, 100 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nai Han Beach (หาดในหาน), Phuket",
+   "stayIf": "Stay here if you want nature, a great beach and a calm long-stay feel, and do not mind 30 minutes to Patong.",
+   "tips": [
+    "Google's English 'Nai Harn Beach' result is a locality pin almost 1 km north-east of the sand. The Thai name หาดในหาน (Google: 'Nai Han Beach') lands on the beach.",
+    "Money Shop Exchange has an office in Nai Harn (daily 10:00-19:00 on Google; OK rates, a little below Mamy Exchange)."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Nai Harn",
+     "url": "https://www.phuket101.net/nai-harn-beach/"
+    },
+    {
+     "label": "Phuket101: Windmill Viewpoint",
+     "url": "https://www.phuket101.net/windmill-viewpoint/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phuket_-_Nai_Harn_Beach_008.jpg/1280px-Phuket_-_Nai_Harn_Beach_008.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Nai_Harn_Beach_008.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/nai-harn-beach/",
+    "https://www.phuket101.net/windmill-viewpoint/",
+    "https://www.phuket101.net/ao-sane-beach/",
+    "https://www.thaiholidayguide.com/attraction/ao-sane/",
+    "https://en.wikivoyage.org/wiki/Nai_Han"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket101 Nai Harn page (updated 15 Sep 2026): protected land behind the sand, paddle boats on the lake, viewpoints, Reflections rooftop, busy in Dec-Jan. Google test: 'Nai Harn Beach, Phuket' lands on a locality pin 890 m NE; 'หาดในหาน' lands on the beach (4.6, 2,106 reviews), 78 m from the pin. Ao Sane: Phuket101 (Mar 2026) says closed for construction, Thai Holiday Guide (Jul 2026) says open, so it is flagged. Money Shop Nai Harn and Reflections hours from Google."
+  },
+  {
+   "id": "rawai",
+   "name": "Rawai, Ya Nui & Promthep",
+   "tagline": "Seafood, island boats and the famous sunset cape",
+   "description": "The working harbour at Phuket's southern tip, not a swimming beach: longtail boats line the shore. People come for the seafood market (buy fish, a restaurant cooks it), boats to Koh Bon, Coral Island and Racha, and a slow local pace with expats, cafes and Muay Thai gyms. Ya Nui and Promthep Cape are a few minutes west.",
+   "bestFor": [
+    "food",
+    "local-life",
+    "long-stay",
+    "muay-thai",
+    "sunset",
+    "snorkeling"
+   ],
+   "notIdealFor": [
+    "swimming",
+    "beach"
+   ],
+   "beach": "Rawai's own beach is for boats, not swimming. In January go 2 km west to Ya Nui, a small cove with calm water and rocks for easy snorkelling (gear, kayaks and paddleboards for rent).",
+   "scores": {
+    "nightlife": 2,
+    "beach": 1,
+    "food": 4,
+    "quiet": 3,
+    "family": 3,
+    "value": 4
+   },
+   "priceLevel": 2,
+   "airportDriveMin": 65,
+   "patongDriveMin": 30,
+   "highlights": [
+    "Rawai Seafood Market (go around 11:30, before the dinner rush)",
+    "Sunset at Promthep Cape",
+    "Kayak, paddleboard and snorkel at Ya Nui",
+    "Longtail boat to Koh Bon or Coral Island",
+    "Chao Ley sea-gypsy village by the pier"
+   ],
+   "lat": 7.7726,
+   "lng": 98.3228,
+   "coordSource": "wikidata(Q14217890, 6 m)+google(Ra Wai Beach, 141 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Rawai Beach, Phuket",
+   "stayIf": "Stay here if you want a low-cost long-stay base with seafood, gyms and island boats, and will drive to swim.",
+   "tips": [
+    "Older guides list Bermudos (house and techno) in Rawai. We found no 2025-2026 dates: its last listed party was at Shelter, Patong, on 10 May 2024, and its RA page has nothing since 2021. Check its social pages before you plan around it.",
+    "Agree the price before you hire a longtail on the beach.",
+    "Promthep Cape is very crowded at sunset; the crowd leaves minutes after the sun goes down."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Rawai",
+     "url": "https://www.phuket101.net/rawai-beach/"
+    },
+    {
+     "label": "Phuket101: Ya Nui",
+     "url": "https://www.phuket101.net/ya-nui-beach/"
+    },
+    {
+     "label": "Phuket101: Promthep Cape",
+     "url": "https://www.phuket101.net/promthep-cape/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+     "credit": "ADwarf",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_11.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/rawai-beach/",
+    "https://www.phuket101.net/ya-nui-beach/",
+    "https://www.phuket101.net/promthep-cape/",
+    "https://en.wikivoyage.org/wiki/Rawai",
+    "https://en.wikivoyage.org/wiki/Phuket",
+    "https://mixmag.asia/feature/label-focus-bermudos",
+    "https://ra.co/promoters/32305",
+    "https://phangan.events/?s=bermudos",
+    "https://www.tripadvisor.com/Attraction_Review-g297934-d12705270-Reviews-Bermudos_The_Underground_Music_Spot-Rawai_Phuket.html"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket101 Rawai page (updated 16 Sep 2026) confirms the harbour, the 11:30 market tip, the Chao Ley village, the boats and Ya Nui 2 km west; Ya Nui page: snorkel, kayak and SUP rental. Bermudos: RA promoter 'Bermudos Promo' last event 1 Jan 2021; phangan.events last lists Shelter, 10 May 2024; no RA Thailand listings May 2026-Feb 2027. Pin: Wikidata 6 m, Google 'Ra Wai Beach' 141 m; OSM beach centre is 395 m SW and the seafood market 760 m E."
+  },
+  {
+   "id": "chalong",
+   "name": "Chalong & Soi Ta-iad",
+   "tagline": "Fitness street, big temples and the island-boat pier",
+   "description": "A local area on Chalong Bay, but with no swimming beach. Soi Ta-iad is Phuket's 'fitness street': 1.5 km of Muay Thai and MMA camps (Tiger Muay Thai since 2003), gyms, healthy cafes and long-stay rooms. Wat Chalong and the Big Buddha are close, and many island trips leave from Chalong Pier. You need a scooter or Grab.",
+   "bestFor": [
+    "muay-thai",
+    "wellness",
+    "long-stay",
+    "culture",
+    "local-life"
+   ],
+   "notIdealFor": [
+    "beach",
+    "swimming",
+    "nightlife"
+   ],
+   "beach": "There is no swimming beach: Chalong Bay is a yacht anchorage and boat pier (in the January wind it is a kitesurf spot), and Kata and Nai Harn are about 15-20 minutes away.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 0,
+    "food": 3,
+    "quiet": 3,
+    "family": 3,
+    "value": 4
+   },
+   "priceLevel": 2,
+   "airportDriveMin": 60,
+   "patongDriveMin": 25,
+   "highlights": [
+    "Train at a Muay Thai camp on Soi Ta-iad",
+    "Wat Chalong's 60 m chedi (free, 07:00-17:00)",
+    "Big Buddha on Nakkerd Hill (free, 09:00-18:00, reopened 3 March 2026)",
+    "Island day trips from Chalong Pier"
+   ],
+   "lat": 7.8222,
+   "lng": 98.3408,
+   "coordSource": "osm(Chalong roundabout Clock Tower node 11096744592, 2 m)+google(Chalong roundabout Clock Tower, 7 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chalong roundabout Clock Tower, Phuket",
+   "stayIf": "Stay here if you come to train, want long-stay prices and do not need a beach at your door.",
+   "tips": [
+    "This pin is Chalong Circle. Soi Ta-iad and Wat Chalong are about 3.5 km north of it.",
+    "At Wat Chalong and the Big Buddha cover shoulders and knees.",
+    "Money Shop and Value Plus both have exchange offices in Chalong."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Soi Ta-iad",
+     "url": "https://www.phuket101.net/soi-taiad/"
+    },
+    {
+     "label": "Phuket101: Wat Chalong",
+     "url": "https://www.phuket101.net/wat-chalong/"
+    },
+    {
+     "label": "Phuket101: Big Buddha",
+     "url": "https://www.phuket101.net/phuket-big-buddha/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chalong_Pier.jpg/1280px-Chalong_Pier.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Chalong_Pier.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chalong_Bay.jpg/1280px-Chalong_Bay.jpg",
+     "credit": "Vano111ru",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Chalong_Bay.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/wat-chalong/",
+    "https://www.phuket101.net/phuket-big-buddha/",
+    "https://www.phuket101.net/soi-taiad/",
+    "https://en.wikipedia.org/wiki/Tiger_Muay_Thai",
+    "https://www.thaiholidayguide.com/soi-taied-phuket/",
+    "https://onthesoi.com/guides/first-timer/",
+    "https://en.wikivoyage.org/wiki/Phuket"
+   ],
+   "verification": "Checked 15 Oct 2026. Big Buddha reopened 3 Mar 2026 after 18 months closed; free, 09:00-18:00, last entry 17:30 (Phuket101, updated 13 Oct 2026; other sites list other hours). Wat Chalong buildings 07:00-17:00, free (Phuket101, Jul 2026). Soi Ta-iad 1.5 km (Phuket101); Tiger Muay Thai founded 2003 (Wikipedia). Kite schools on Chalong Bay (Friendship Beach) work Nov-Mar. Money Shop Chalong Lotus and Value Plus HomePro Chalong open on Google. Pin = Chalong Circle clock tower; OSM 2 m, Google 7 m."
+  },
+  {
+   "id": "phuket-town",
+   "name": "Phuket Town (Old Town)",
+   "tagline": "Old shophouses, the best food and real local life",
+   "description": "Phuket's capital, a great half-day trip. The Old Town has restored Sino-Portuguese shophouses, Chinese shrines, street art, cafes and some of the best food on the island. Hotels are cheap. Bars are small and relaxed; Courage Bar hosted underground nights in Dec 2025-Feb 2026. The coast is 20-30 minutes away.",
+   "bestFor": [
+    "culture",
+    "food",
+    "local-life",
+    "budget",
+    "shopping"
+   ],
+   "notIdealFor": [
+    "beach",
+    "swimming"
+   ],
+   "beach": "There is no beach in town. In January drive about 20 minutes to the quiet bays of Cape Panwa (Ao Yon is best for a swim) or 30-40 minutes to Patong, Karon or Kata.",
+   "scores": {
+    "nightlife": 3,
+    "beach": 0,
+    "food": 5,
+    "quiet": 2,
+    "family": 3,
+    "value": 5
+   },
+   "priceLevel": 1,
+   "airportDriveMin": 45,
+   "patongDriveMin": 30,
+   "highlights": [
+    "Sunday Walking Street on Thalang Road (Sun 10 and 17 Jan, from 16:00 to about 21:00-22:00)",
+    "Soi Romanee and Thalang Road shophouses",
+    "Courage Bar on Bangkok Rd (SUB and FAKE PALM nights in Dec 2025-Feb 2026; check RA for new dates)",
+    "Chillva Market (Mon-Sat 17:00-23:00)",
+    "Khao Rang Hill viewpoint"
+   ],
+   "lat": 7.8853,
+   "lng": 98.389,
+   "coordSource": "google(Soi Romanee, 26 m)+wikipedia(Phuket Old Town, 165 m)+google(Old Phuket Town, 165 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket Old Town, Phuket",
+   "stayIf": "Stay here if you love food, culture and low prices, and are happy to ride 30 minutes to the beach and the big clubs.",
+   "tips": [
+    "Exchange in town: the SuperRich partner at Suriyadej Circle (Mon-Sat 10:00-20:00) or NC Plus (Mon-Sat 09:00-17:00). Both are closed on Sunday and do not post their rates online.",
+    "Mamy Exchange in Koh Kaew, on the airport road, had the best rate we checked (Mon-Fri 08:00-17:00, Sat-Sun 09:00-16:30).",
+    "Walk the Old Town early or late; midday is hot and parking is hard. On Sundays Thalang Road and Soi Romanee close to cars from early afternoon."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Old Town walking guide",
+     "url": "https://www.phuket101.net/phuket-town-guide/"
+    },
+    {
+     "label": "SUB party dates (RA)",
+     "url": "https://ra.co/promoters/127822"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+     "credit": "Christophe95",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road,_Old_Phuket_Town.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Thalang_Road_3.jpg/1280px-Thalang_Road_3.jpg",
+     "credit": "Slleong",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thalang_Road_3.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Phangnga_Road_2.jpg/1280px-Phangnga_Road_2.jpg",
+     "credit": "Slleong",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Phangnga_Road_2.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/phuket-town-guide/",
+    "https://www.phuket101.net/phuket-walking-street/",
+    "https://www.phuket101.net/chillva-market/",
+    "https://www.phuket101.net/phuket-town-nightlife/",
+    "https://www.phuket101.net/phuket-weekend-market/",
+    "https://en.wikivoyage.org/wiki/Phuket_Town",
+    "https://ra.co/events/2322780",
+    "https://ra.co/events/2346269",
+    "https://ra.co/events/2363193",
+    "https://ra.co/events/2374863",
+    "https://ra.co/promoters/127822"
+   ],
+   "verification": "Checked 15 Oct 2026. RA API lists Courage events on 20 Dec 2025, 2 Jan, 17 Jan, 13 Feb and 19 Feb 2026 (SUB, FAKE PALM) and none after; SUB then used The Chill Spot (Karon, Apr) and Tempo (Chalong, May 2026). Courage is open on Google (Wed-Sun evenings). The Instagram handles in the old text could not be confirmed. Walking Street Sun 16:00-21:00 'and often beyond' (Phuket101, 30 Sep 2026; Google 16:00-22:00). Chillva Mon-Sat 17:00-23:00 (Phuket101 + Google). Exchange hours from Google listings. Pin = Soi Romanee."
+  },
+  {
+   "id": "kathu",
+   "name": "Kathu",
+   "tagline": "Local food and jungle fun between Patong and town",
+   "description": "The inland centre of the island, between Patong and Phuket Town. Most visitors drive through, but locals come for the food: Krua Jongjit is in the Michelin Guide, and dim sum breakfasts are cheap. Kathu Shrine is said to be where the Vegetarian Festival began. Golf, a water park, zip-lines and a wake park are here too.",
+   "bestFor": [
+    "local-life",
+    "food",
+    "budget",
+    "nature",
+    "long-stay"
+   ],
+   "notIdealFor": [
+    "beach",
+    "swimming",
+    "nightlife"
+   ],
+   "beach": "There is no beach here; Patong is 10 minutes over the hill, and in January the Kathu waterfall is only a trickle.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 0,
+    "food": 4,
+    "quiet": 3,
+    "family": 3,
+    "value": 5
+   },
+   "priceLevel": 1,
+   "airportDriveMin": 45,
+   "patongDriveMin": 10,
+   "highlights": [
+    "Thai food at Krua Jongjit (Michelin Guide; 11:00 to about 17:30, closed Monday)",
+    "Kathu Chinese Shrine",
+    "Flying Hanuman zip-line",
+    "Andamanda water park",
+    "Kathu fresh market"
+   ],
+   "lat": 7.9107,
+   "lng": 98.3338,
+   "coordSource": "osm(place=town node 313350828, 4 m)+google(Kathu, 4 m)+wikipedia(Kathu district, 208 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kathu, Phuket",
+   "stayIf": "Stay here if you want low prices and real local food close to Patong, and do not need a sea view.",
+   "tips": [
+    "The pin is at the Kathu market junction. The old village with the shrine and Krua Jongjit is about 1.4 km north-east, off Vichit Songkram Rd."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Kathu",
+     "url": "https://www.phuket101.net/kathu/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kathu_Waterfall_%2860083096%29.jpeg/1280px-Kathu_Waterfall_%2860083096%29.jpeg",
+     "credit": "Nicolas Voitot",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kathu_Waterfall_(60083096).jpeg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kathu/",
+    "https://guide.michelin.com/en/phuket-region/phuket/restaurant/jongjit-kitchen"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket101 Kathu page (updated 5 Oct 2026): Michelin-listed Krua Jongjit, 50 THB dim sum baskets, the shrine as the Vegetarian Festival's birthplace, golf, water park, zip-line, wake park, waterfall a trickle in high season. Michelin site lists 'Jongjit Kitchen' (closed Monday) but shows no award level, so 'Michelin Plate' was softened. Google: Phuket Wake Park, Andamanda and Flying Hanuman open. Pin: OSM town node = Google 'Kathu' (4 m), Kathu fresh market 82 m."
+  },
+  {
+   "id": "cape-panwa",
+   "name": "Cape Panwa",
+   "tagline": "Quiet south-east cape with calm bays and a rooftop sunset",
+   "description": "A green, hilly cape in the south-east, about 20 minutes from Phuket Town. It is quiet: a few resorts, small bays such as Panwa Beach and Ao Yon, small beach restaurants and almost no nightlife. Phuket Aquarium is at the tip. Sri Panwa, the group behind Baba Beach Club, has its resort and the Baba Nest rooftop bar here.",
+   "bestFor": [
+    "quiet",
+    "couples",
+    "sunset",
+    "families",
+    "nature"
+   ],
+   "notIdealFor": [
+    "nightlife",
+    "shopping",
+    "budget"
+   ],
+   "beach": "In January the sea is calm. Ao Yon is the best public swim (calm all year). The main Panwa Beach (Khao Khad) has dead coral underfoot; the nicer beach further south is for Cape Panwa Hotel guests.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 2,
+    "food": 2,
+    "quiet": 5,
+    "family": 3,
+    "value": 3
+   },
+   "priceLevel": 3,
+   "airportDriveMin": 60,
+   "patongDriveMin": 40,
+   "highlights": [
+    "Sunset at Baba Nest, Sri Panwa (book on Chope)",
+    "Phuket Aquarium (08:30-16:30, 300 THB for foreign adults)",
+    "Lunch on the sand at Ao Yon Beach",
+    "Khao Khad viewpoint tower"
+   ],
+   "lat": 7.806,
+   "lng": 98.4103,
+   "coordSource": "osm-beach(Panwa Beach way 150200012, 12 m)+thwiki(แหลมพันวา, 156 m)+google(Cape Panwa Hotel, 238 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Cape Panwa, Phuket",
+   "stayIf": "Stay here if you want peace, calm water and a short drive to Phuket Town, and do not mind an hour to the airport.",
+   "tips": [
+    "Baba Nest is small. Chope lists 17:00-20:00 (older guides say 21:00), bookings open 1 month ahead, and outside guests pay a non-refundable minimum spend of 3,000 THB per person."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Phuket Aquarium",
+     "url": "https://www.phuket101.net/phuket-aquarium/"
+    },
+    {
+     "label": "Baba Nest booking (Chope)",
+     "url": "https://www.chope.co/phuket-restaurants/restaurant/baba-nest-at-sri-panwa-phuket"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG/1280px-Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG",
+     "credit": "Whym",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Cape_Panwa,_Phuket_sea_and_boat_2014.JPG"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/phuket-aquarium/",
+    "https://www.phuket101.net/panwa-beach/",
+    "https://www.phuket101.net/cape-panwa-hotel/",
+    "https://www.phuket101.net/ao-yon-beach/",
+    "https://www.phuket101.net/baba-nest-rooftop/",
+    "https://en.wikivoyage.org/wiki/Cape_Panwa",
+    "https://www.chope.co/phuket-restaurants/restaurant/baba-nest-at-sri-panwa-phuket",
+    "https://www.tisland.travel/en/blog/plyazh-flamingo-ao-yon-phuket"
+   ],
+   "verification": "Checked 15 Oct 2026. Aquarium 08:30-16:30 daily, 300 THB for foreign adults (Phuket101 + Google). Phuket101 Panwa Beach page: the main beach has dead coral; Ao Yon swims all year and has small beach restaurants. Chope listing: Baba Nest 17:00-20:00, 3,000 THB minimum spend, booking up to 1 month ahead (Google also 17:00-20:00). Pin = OSM Panwa Beach; Thai Wikipedia 'Cape Panwa' 156 m; Google's 'Cape Panwa' result is the Cape Panwa Hotel, 238 m. OSRM free-flow to Patong 32 min."
+  },
+  {
+   "id": "ao-po",
+   "name": "Ao Po & Cape Yamu",
+   "tagline": "Marinas, luxury villas and boats to Koh Yao",
+   "description": "The quiet north-east coast, facing the limestone islands of Phang Nga Bay. Ao Po Grand Marina has yachts, charters and resort boats to Koh Yao Noi (about 40 minutes); public speedboats leave from Bang Rong Pier nearby. Cape Yamu, to the south, has luxury villas and COMO Point Yamu. Almost no shops or nightlife.",
+   "bestFor": [
+    "luxury",
+    "quiet",
+    "nature",
+    "couples"
+   ],
+   "notIdealFor": [
+    "beach",
+    "swimming",
+    "nightlife",
+    "budget",
+    "food"
+   ],
+   "beach": "This is a boat coast, not a beach area; the sea in Phang Nga Bay is calm in January, so come for the views and take a boat to Koh Yao or drive to the west coast to swim.",
+   "scores": {
+    "nightlife": 0,
+    "beach": 1,
+    "food": 2,
+    "quiet": 5,
+    "family": 2,
+    "value": 1
+   },
+   "priceLevel": 4,
+   "airportDriveMin": 30,
+   "patongDriveMin": 60,
+   "highlights": [
+    "Speedboat to Koh Yao Noi from Bang Rong Pier (30-40 min)",
+    "Yachts at Ao Po Grand Marina",
+    "Sunrise over the islands of Phang Nga Bay",
+    "Infinity pool with a bay view at COMO Point Yamu (for hotel guests)"
+   ],
+   "lat": 8.0685,
+   "lng": 98.4417,
+   "coordSource": "google(Ao Po Grand Marina, 1 m)+osm(marina slipway 59 m, Port of Call restaurant 74 m); osm marina node sits on the pontoons 337 m E",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ao Po Grand Marina, Phuket",
+   "stayIf": "Stay here if you want a private luxury villa with Phang Nga Bay views and easy boats to Koh Yao, not a beach holiday.",
+   "tips": [
+    "Operators and piers (Bang Rong or Ao Po) change by season; confirm the pier and time the day before."
+   ],
+   "links": [
+    {
+     "label": "Ferry times Bang Rong to Koh Yao Noi (Ferryscanner)",
+     "url": "https://www.ferryscanner.com/en/ferry-routes/ferry-bang-rong-pier-phuket-manoh-pier-koh-yao-noi"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Yachts_and_superyachts_at_Ao_Po_marina_%2831677403871%29.jpg/1280px-Yachts_and_superyachts_at_Ao_Po_marina_%2831677403871%29.jpg",
+     "credit": "Phuket@photographer.net from Phuket, Thailand",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yachts_and_superyachts_at_Ao_Po_marina_(31677403871).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG/1280px-Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG",
+     "credit": "Diego Delso",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Muelle_de_Ao_Por,_Phuket,_Tailandia,_2013-08-20,_DD_01.JPG"
+    }
+   ],
+   "sources": [
+    "https://media.sixsenses.com/B60H3R33/at/hqbnk2b5323zjgksqx4rjf/Transfer_schedule.pdf",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-bang-rong-pier-phuket-manoh-pier-koh-yao-noi",
+    "https://www.ferryscanner.com/en/ferry-routes/ferry-manoh-pier-koh-yao-noi-phuket-all-ports-piers",
+    "https://www.expedia.com/Bang-Rong-Pier-Pa-Klok.d6232676.Vacation-Attraction",
+    "https://www.thaiholidayguide.com/accommodation/como-point-yamu/",
+    "https://21sensations.com/ultimate-guide-ferry-phuket-koh-yao-yai/",
+    "https://aopograndmarina.com/"
+   ],
+   "verification": "Checked 15 Oct 2026. Six Senses Yao Noi transfer sheet: Ao Po Grand Marina to the resort 40 min by boat, airport to marina about 30 min. Ferryscanner (updated 25 Sep 2026): Bang Rong to Manoh Pier 30-40 min (Green Planet, Koh Yao King Marine, Supaporn). COMO Point Yamu still trading (Google 4.8, 1,494 reviews; 2026 reviews and awards). Pin = Google place for the marina, next to the OSM slipway and Port of Call restaurant; the marina website map is centred 321 m S. OSRM free-flow to Patong 48 min."
+  },
+  {
+   "id": "thalang",
+   "name": "Thalang",
+   "tagline": "Heritage town, rainforest park and the local DJ scene",
+   "description": "The inland north, the island's historic heart, near the airport. Wat Phra Thong, the Heroines Monument and the Thalang National Museum tell Phuket's history. To the east, Khao Phra Thaeo forest has Bang Pae waterfall, a gibbon project and an elephant sanctuary. Enthusiast Place, a DJ studio, is near Bang Tao.",
+   "bestFor": [
+    "culture",
+    "nature",
+    "local-life",
+    "budget",
+    "airport"
+   ],
+   "notIdealFor": [
+    "beach",
+    "swimming",
+    "nightlife"
+   ],
+   "beach": "There is no beach here; Bang Tao, Layan and Nai Thon, with calm January seas, are about 15 minutes west.",
+   "scores": {
+    "nightlife": 1,
+    "beach": 0,
+    "food": 3,
+    "quiet": 4,
+    "family": 3,
+    "value": 5
+   },
+   "priceLevel": 1,
+   "airportDriveMin": 20,
+   "patongDriveMin": 40,
+   "highlights": [
+    "Wat Phra Thong, the half-buried Buddha",
+    "Thalang National Museum (Wed-Sun 09:00-16:00, 100 THB)",
+    "Heroines Monument",
+    "Bang Pae waterfall (park fee 200 THB); Gibbon Project visits by booked session only",
+    "Enthusiast Place Open Doors (Tuesdays from 19:00, free)"
+   ],
+   "lat": 8.034,
+   "lng": 98.3377,
+   "coordSource": "osm(Wat Phra Thong way 319652596, 5 m)+google(Wat Phra Thong, 11 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Phra Thong, Thalang, Phuket",
+   "stayIf": "Stay here if you want cheap, local and close to the airport, and you will drive to the beach and to parties.",
+   "tips": [
+    "Message @enthusiast.place on Instagram or WhatsApp +66 93 138 8381 before a Tuesday visit to check the session is on (Tue 12 Jan is in your dates). It is on Srisoonthorn Rd near Bang Tao, about 6 km south of Wat Phra Thong.",
+    "Phuket Elephant Sanctuary is observation only: no riding, bathing or feeding. Book a programme online; the 90-minute Canopy Walkway Tour costs 1,900 THB.",
+    "The Gibbon Project opens only for booked learning sessions (10:30, 12:30 or 14:00). On days without bookings it is closed.",
+    "The Heroines Monument and the museum are next to each other, about 6 km south of Wat Phra Thong on route 402."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Thalang Museum",
+     "url": "https://www.phuket101.net/thalang-museum/"
+    },
+    {
+     "label": "Phuket101: Bang Pae waterfall",
+     "url": "https://www.phuket101.net/bang-pae-waterfall/"
+    },
+    {
+     "label": "Enthusiast Place",
+     "url": "https://enthusiast.place"
+    },
+    {
+     "label": "Gibbon Project: book a visit",
+     "url": "https://www.gibbonproject.org/visit-us/booking/"
+    },
+    {
+     "label": "Phuket Elephant Sanctuary",
+     "url": "https://www.phuketelephantsanctuary.org/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg/1280px-Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg",
+     "credit": "Sry85",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thao_Thep_Kasattri_and_Thao_Sri_Sunthon.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thalang_National_Museum_2010_-_panoramio.jpg/1280px-Thalang_National_Museum_2010_-_panoramio.jpg",
+     "credit": "Roma Neus",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Thalang_National_Museum_2010_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Near_Bang_Pae_waterfall_2010_-_panoramio.jpg/1280px-Near_Bang_Pae_waterfall_2010_-_panoramio.jpg",
+     "credit": "Roma Neus",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Near_Bang_Pae_waterfall_2010_-_panoramio.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/thalang-museum/",
+    "https://www.thaiholidayguide.com/attraction/thalang-national-museum/",
+    "https://www.phuket101.net/bang-pae-waterfall/",
+    "https://www.gibbonproject.org/visit-us/booking/",
+    "https://www.phuket101.net/phuket-elephant-sanctuary/",
+    "https://www.phuketelephantsanctuary.org/",
+    "https://enthusiast.place",
+    "https://ra.co/events/2410056",
+    "https://ra.co/events/2462259",
+    "https://ra.co/events/2530983"
+   ],
+   "verification": "Checked 15 Oct 2026. Museum: Google and Thai Holiday Guide say Wed-Sun 09:00-16:00 (Phuket101, Mar 2026, says 09:00-16:30), 100 THB, mostly reopened May 2025. Gibbon Project booking page (Dec 2025): visits only by booked session. Elephant sanctuary site and Phuket101 (Sep 2026): observation only, hands-off since April 2026, booked programmes from 1,900 THB; it never offered riding. Enthusiast Place site: Open Doors every Tuesday from 19:00, free; RA 'Tuesday Open Doors' 7 Apr 2026 ran 19:00-23:00; showcases on RA Jun and Sep 2026. Pin = Wat Phra Thong (OSM 5 m, Google 11 m)."
+  },
+  {
+   "id": "natai",
+   "name": "Natai & Khao Pilai (Phang Nga)",
+   "tagline": "Empty beach, Baba Beach Club and Circoloco Saturdays",
+   "description": "About 10 km of wide, pale sand on the mainland north of the Sarasin Bridge, 35 minutes from the airport. No vendors, sunbeds or jet skis, and only a few resorts, most of them luxury. Baba Beach Club has a Funktion-One sound system and hosts Circoloco on Sat 9 and Sat 16 Jan, 15:00-03:00. You need a car or Grab.",
+   "bestFor": [
+    "techno",
+    "beach-clubs",
+    "beach",
+    "quiet",
+    "luxury",
+    "couples",
+    "airport"
+   ],
+   "notIdealFor": [
+    "food",
+    "budget",
+    "shopping"
+   ],
+   "beach": "From November to April the sea is calm and the shore shelves gently, so January swimming is easy; there is a lifeguard post on the main stretch.",
+   "scores": {
+    "nightlife": 2,
+    "beach": 4,
+    "food": 1,
+    "quiet": 5,
+    "family": 3,
+    "value": 1
+   },
+   "priceLevel": 4,
+   "airportDriveMin": 35,
+   "patongDriveMin": 80,
+   "highlights": [
+    "Circoloco at Baba Beach Club (Sat 9 and Sat 16 Jan, 15:00-03:00)",
+    "Baba Beach Club day pass (minimum spend 1,500 THB, 11:00-22:00)",
+    "Long, empty beach walks at sunset",
+    "Sarasin Bridge viewpoint",
+    "Samet Nangshe viewpoint, about 40 minutes away"
+   ],
+   "lat": 8.2729,
+   "lng": 98.2765,
+   "coordSource": "google(Natai Beach public beach, 4 m)+osm(Na Tai Beach way 1026015634; Natai Pier way 518423166, 109 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Natai Beach, Phang Nga",
+   "stayIf": "Stay here if Circoloco is your main event: sleep at or near Baba Beach Club on party Saturdays, 35 minutes from the airport.",
+   "tips": [
+    "Circoloco tickets: Dice (from about EUR 108 in Oct 2026) or Ticketmelon; numbers are limited.",
+    "In January 2026 Baba Beach Club sold no day passes from 3 to 24 January because of a private event (the Circoloco period). Ask before you plan a day there in January 2027.",
+    "Baba Beach Club is on Khao Pilai Beach, the south end of the strip, about 2.5 km south of this pin.",
+    "Food outside the resorts is limited. Khok Kloi town, a few minutes inland, has cheap Thai food and a Sunday market."
+   ],
+   "links": [
+    {
+     "label": "Circoloco tickets (Dice)",
+     "url": "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets"
+    },
+    {
+     "label": "Baba Beach Club: Circoloco",
+     "url": "https://www.bababeachclub.com/natai/circoloco-thailand/"
+    },
+    {
+     "label": "Baba Beach Club: day pass",
+     "url": "https://www.bababeachclub.com/natai/day-club-natai/"
+    },
+    {
+     "label": "Phuket101: Natai",
+     "url": "https://www.phuket101.net/natai-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+     "credit": "Sujeong",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Natai_Beach_-_panoramio.jpg"
+    },
+    {
+     "url": "https://www.bababeachclub.com/images/baba-beach.jpg",
+     "credit": "Baba Beach Club (official website)",
+     "license": "Copyright Baba Beach Club; personal use",
+     "source": "https://www.bababeachclub.com/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/natai-beach/",
+    "https://www.bababeachclub.com/natai/contact-us-phuket/",
+    "https://www.bababeachclub.com/natai/circoloco-thailand/",
+    "https://www.bababeachclub.com/natai/day-club-natai/",
+    "https://www.bababeachclub.com/natai/studio-equipment/",
+    "https://dice.fm/event/mxyodw-circoloco-thailand-2027-9th-jan-baba-beach-club-natai-khok-kloi-tickets",
+    "https://circolocoibiza.com/event/phuket"
+   ],
+   "verification": "Checked 15 Oct 2026. Circoloco 2027 on Sat 9, 16 and 23 Jan, 15:00-03:00 (Baba Beach Club page, circolocoibiza.com, Dice; Dice from EUR 107.99). Funktion-One on Baba's own sound-system page. Baba day-club page: 1,500 THB minimum spend, 11:00-22:00 (bars to 23:00), no day pass 3-24 Jan 2026. Phuket101 Natai (Sep 2026): close to 10 km, no vendors or jet skis, lifeguard post, Khok Kloi Sunday market. Pin = Google public beach, on the OSM beach line, 109 m from Natai Pier; OSM Khao Pilai Beach (8.237-8.259) holds Baba Beach Club. OSRM: Samet Nangshe 38 min, Patong 68 min free-flow."
+  }
+ ],
+ "removed": [],
+ "changes": [
+  "All 10 descriptions trimmed to about 320 characters or less (they were 322-372).",
+  "kata-noi: 'never gets crowded' softened to 'stays calm'; lifeguard info added to the beach note (Phuket101).",
+  "nai-harn: gmapsQuery changed to 'Nai Han Beach (หาดในหาน), Phuket'. The English query lands on a locality pin 890 m NE of the sand.",
+  "nai-harn: Ao Sane highlight flagged. Phuket101 (Mar 2026) says it is closed for construction; Thai Holiday Guide (Jul 2026) says open.",
+  "rawai: Ya Nui 'shallow reef' changed to 'rocks for easy snorkelling'. Bermudos tip shortened, with RA (last event 2021) added. coordSource now Wikidata + Google.",
+  "chalong: 'inland' removed (it is on Chalong Bay); 'most island day trips' changed to 'many'; Big Buddha marked free; new tip: Soi Ta-iad is about 3.5 km north of the pin.",
+  "phuket-town: Courage claim corrected. RA shows Courage nights only from 20 Dec 2025 to 19 Feb 2026, none after. The unconfirmed Instagram handles were removed.",
+  "phuket-town: phangan.events Courage link (shows no events) replaced with SUB's RA page; 'nightlife' removed from bestFor; 'good exchange rates' removed (SuperRich partner and NC Plus publish no rates); NC Plus hours added; Walking Street end time changed to about 21:00-22:00.",
+  "kathu: 'Michelin Plate' changed to 'in the Michelin Guide' (the Michelin site shows no award level); Krua Jongjit hours added (closed Monday); tip added that the shrine is 1.4 km from the pin.",
+  "cape-panwa: beach note rewritten. Panwa (Khao Khad) Beach has dead coral, Ao Yon is the best public swim, the nicer beach further south is for Cape Panwa Hotel guests (Phuket101).",
+  "cape-panwa: Baba Nest tip updated from Chope (17:00-20:00, bookings 1 month ahead, 3,000 THB minimum spend); patongDriveMin 35 -> 40.",
+  "ao-po: Bang Rong speedboat time 30-50 -> 30-40 min (Ferryscanner); Ferryscanner link now Bang Rong -> Koh Yao Noi; COMO pool marked for hotel guests; patongDriveMin 55 -> 60; coordConfidence medium -> high.",
+  "thalang: museum hours 09:00-16:30 -> Wed-Sun 09:00-16:00 (closed Mon-Tue).",
+  "thalang: Gibbon Project is now visit-by-booking only. Elephant sanctuary tip fixed (it never offered riding; observation only, no feeding, from 1,900 THB). Enthusiast Place time changed to 'from 19:00'. Official links added.",
+  "thalang: airportDriveMin 15 -> 20 and patongDriveMin 35 -> 40 (OSRM free-flow is already 17 and 31 min).",
+  "natai: day pass hours 11:00-23:00 -> 11:00-22:00 (official page). New tip: no day passes were sold 3-24 Jan 2026 because of Circoloco.",
+  "natai: Samet Nangshe 'about 25 minutes' -> 'about 40 minutes' (OSRM 38 min free-flow); patongDriveMin 75 -> 80; coordConfidence medium -> high."
+ ]
+}

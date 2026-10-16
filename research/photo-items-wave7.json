@@ -1,0 +1,362 @@
+[
+ {
+  "key": "events:levitate-sunset-connections",
+  "kind": "music event / venue",
+  "name": "Sunset Connections at LEVITATE Viewpoint",
+  "where": "LEVITATE Viewpoint, Kamala-Patong hill road (Phra Barami Road), Patong, patong, Phuket",
+  "gmapsQuery": "LEVITATE Viewpoint, Kammala - Patong Rd, Phuket",
+  "website": "https://megatix.in.th/events/levitate-sunset-connections",
+  "candidates": [
+   {
+    "url": "https://levitatephuket.com/images/levitate-make-yours-final.png",
+    "source": "levitatephuket.com (og:image)",
+    "license": "\u00a9 venue (official website)",
+    "credit": "LEVITATE Viewpoint"
+   },
+   {
+    "url": "https://media.megatix.com.au/e/73169/WdKUK5suj3EGlFphdsUT23h30kezWqIqk7kEDpxp.jpg",
+    "source": "megatix.in.th (event cover, logo graphic)",
+    "license": "\u00a9 organiser",
+    "credit": "LEVITATE Viewpoint"
+   }
+  ]
+ },
+ {
+  "key": "events:armania-phuket",
+  "kind": "music event / venue",
+  "name": "Armania Phuket (house club)",
+  "where": "Armania Phuket, 11 Bangla Road, Patong, patong, Phuket",
+  "gmapsQuery": "Armania Phuket, 11 Bangla Rd, Patong",
+  "website": "https://www.barfunkphuket.com/events/",
+  "candidates": [
+   {
+    "url": "https://www.barfunkphuket.com/app/uploads/2025/04/armania-phuket-January-03-2025-20-1024x682.jpg",
+    "source": "barfunkphuket.com",
+    "license": "\u00a9 venue (official website)",
+    "credit": "Armania Phuket"
+   },
+   {
+    "url": "https://www.barfunkphuket.com/app/uploads/2025/06/64.jpg",
+    "source": "barfunkphuket.com (og:image)",
+    "license": "\u00a9 venue (official website)",
+    "credit": "Armania Phuket"
+   }
+  ]
+ },
+ {
+  "key": "events:summerset-lounge-experemint",
+  "kind": "music event / venue",
+  "name": "EXPEREMINT and Zonda nights at Summerset Bar & Lounge",
+  "where": "Summerset Bar & Lounge, 177/29 Moo 4, Srisoonthorn Road, Si Sunthon (Bang Tao side), thalang, Phuket",
+  "gmapsQuery": "Summerset Bar & Lounge, Srisoonthorn Rd, Thalang, Phuket",
+  "website": "https://www.facebook.com/summersetlounge/",
+  "candidates": [
+   {
+    "url": "https://images.ra.co/8b890b4f67213db3363cc756c55a6d66f33f8116.png",
+    "source": "ra.co (flyer: EXPEREMINT x Summerset, 11 Sep 2026)",
+    "license": "\u00a9 organiser",
+    "credit": "Enthusiast Place / Summerset"
+   }
+  ]
+ },
+ {
+  "key": "events:sound-club-samui",
+  "kind": "music event / venue",
+  "name": "Sound Club Samui",
+  "where": "Sound Club Samui, Soi Green Mango, Chaweng, koh-samui, Koh Samui",
+  "gmapsQuery": "Sound Club Samui, Soi Green Mango, Chaweng",
+  "website": "https://www.soundclubsamui.co/",
+  "candidates": [
+   {
+    "url": "https://images.squarespace-cdn.com/content/v1/65a7c73259ade31e3448e29e/119ef098-6f76-4e9b-9282-b48e6724167a/DSC_1424.jpg",
+    "source": "soundclubsamui.co (gallery)",
+    "license": "\u00a9 venue (official website)",
+    "credit": "Sound Club Samui"
+   },
+   {
+    "url": "https://images.squarespace-cdn.com/content/v1/65a7c73259ade31e3448e29e/9719cc93-8366-46c2-b94f-105f6a17a0d3/DSC07753+Large.png",
+    "source": "soundclubsamui.co (gallery)",
+    "license": "\u00a9 venue (official website)",
+    "credit": "Sound Club Samui"
+   }
+  ]
+ },
+ {
+  "key": "events:seaside-pre-full-moon-haad-rin",
+  "kind": "music event / venue",
+  "name": "Seaside Beach Party (Haad Rin West)",
+  "where": "SEASIDE SUNSET bar, Haad Rin Nai (west side of Haad Rin), Koh Phangan, koh-phangan, Koh Phangan",
+  "gmapsQuery": "SEASIDE SUNSET bar (Haad Rin West), Koh Phangan",
+  "website": "https://phangan.events/event-location/seaside-sunset-bar/",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2025/04/IMG_9103.jpeg",
+    "source": "phangan.events (Seaside venue page)",
+    "license": "\u00a9 venue",
+    "credit": "Seaside Sunset Bar"
+   },
+   {
+    "url": "https://phangan.events/wp-content/uploads/2026/09/file_4127.jpg",
+    "source": "phangan.events (flyer, 23 Sep 2026)",
+    "license": "\u00a9 organiser",
+    "credit": "Solar Conexion / Seaside"
+   }
+  ]
+ },
+ {
+  "key": "events:wet-pool-party-haad-rin",
+  "kind": "music event / venue",
+  "name": "WET! Full Moon Week Pool Parties (Haad Rin)",
+  "where": "Wet! a Pool Party Hostel by Wild & Wandering, 132 Haad Rin, Koh Phangan, koh-phangan, Koh Phangan",
+  "gmapsQuery": "Wet! a Pool Party Hostel by Wild & Wandering, Haad Rin",
+  "website": "https://phangan.events/event-location/wet-hostel/",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2024/11/IMAGE-2024-11-07-161937.jpg",
+    "source": "phangan.events (WET Hostel venue page)",
+    "license": "\u00a9 venue",
+    "credit": "WET! a Pool Party Hostel by Wild & Wandering"
+   },
+   {
+    "url": "https://phangan.events/wp-content/uploads/2026/09/file_4139.jpg",
+    "source": "phangan.events (flyer, 24 Sep 2026)",
+    "license": "\u00a9 organiser",
+    "credit": "WET! Pool Party Hostel"
+   }
+  ]
+ },
+ {
+  "key": "events:bambu-sunday-session-haad-yuan",
+  "kind": "music event / venue",
+  "name": "Bambu Sunday Session (Haad Yuan)",
+  "where": "Bambu Huts, Haad Yuan, Koh Phangan, koh-phangan, Koh Phangan",
+  "gmapsQuery": "Bambu Huts, Haad Yuan, Koh Phangan",
+  "website": "https://www.entrix.vip/event/bambu-huts-sunday-sessions",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2023/06/cropped-329545246_1643639562734252_4922360942713046504_n.jpeg",
+    "source": "phangan.events (Bambu Huts venue page)",
+    "license": "\u00a9 venue",
+    "credit": "Bambu Huts"
+   },
+   {
+    "url": "https://phangan.events/wp-content/uploads/2024/07/IMG_2016.jpeg",
+    "source": "phangan.events (Bambu Huts venue page)",
+    "license": "\u00a9 venue",
+    "credit": "Bambu Huts"
+   },
+   {
+    "url": "https://phangan.events/wp-content/uploads/2025/08/file_1196.jpg",
+    "source": "phangan.events (season poster 2025/2026)",
+    "license": "\u00a9 organiser",
+    "credit": "Bambu Jungle Lounge"
+   }
+  ]
+ },
+ {
+  "key": "events:hollystone-saturday-phangan",
+  "kind": "music event / venue",
+  "name": "Hollystone Saturday",
+  "where": "Hollystone, 12/1 Moo 5, Koh Phangan (by a lake, north of Thong Sala), koh-phangan, Koh Phangan",
+  "gmapsQuery": "Hollystone, Koh Phangan",
+  "website": "https://www.hollystonephangan.com/",
+  "candidates": [
+   {
+    "url": "https://d3rq6m369s8u39.cloudfront.net/upload/Nkcj3WiwtaQ7.jpeg",
+    "source": "hollystonephangan.com (og:image, logo)",
+    "license": "\u00a9 venue (official website)",
+    "credit": "Hollystone"
+   },
+   {
+    "url": "https://media.megatix.com.au/e/76572/7q0IBFuWnDDpvE9IkaZ33YhxHmbc8NEaiTsLzohq.jpg",
+    "source": "megatix.in.th (flyer, 24 Oct 2026)",
+    "license": "\u00a9 organiser",
+    "credit": "Hollystone"
+   }
+  ]
+ },
+ {
+  "key": "events:utopia-events-phangan",
+  "kind": "music event / venue",
+  "name": "Utopia (jungle rave, Than Sadet)",
+  "where": "Utopia site, Than Sadet-Ko Pha-Ngan National Park area, on the road to Thong Nai Pan, koh-phangan, Koh Phangan",
+  "gmapsQuery": "Utopia Events - Koh Phangan",
+  "website": "https://utopia-events.com/",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2024/11/IMG_2940.jpeg",
+    "source": "phangan.events (Utopia venue page)",
+    "license": "\u00a9 organiser",
+    "credit": "Utopia Events"
+   },
+   {
+    "url": "https://utopia-events.com/wp-content/uploads/2026/09/utopia-new-born-talamasca-koh-phangan-24-10-2026.jpg",
+    "source": "utopia-events.com (og:image, flyer 24 Oct 2026)",
+    "license": "\u00a9 organiser (official website)",
+    "credit": "Utopia Events"
+   }
+  ]
+ },
+ {
+  "key": "places:nai-thon-beach",
+  "kind": "hidden-gem / beach. Use a DIFFERENT photo from the one already used for the area card of the same name (assets/raw/areas-nai-thon.jpg).",
+  "name": "Nai Thon Beach",
+  "where": "nai-thon",
+  "gmapsQuery": "Nai Thon Beach, Sakhu, Thalang, Phuket",
+  "website": null,
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg",
+    "credit": "::::=UT=:::: (Panoramio)",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg (geotagged on the beach, 8.05586, 98.27803)"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Naiton_beach_-_panoramio.jpg/1280px-Naiton_beach_-_panoramio.jpg",
+    "credit": "::::=UT=:::: (Panoramio)",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Naiton_beach_-_panoramio.jpg (sunset, geotagged on the beach)"
+   }
+  ]
+ },
+ {
+  "key": "places:natural-restaurant-airport",
+  "kind": "hidden-gem / food",
+  "name": "Natural Restaurant (airport branch)",
+  "where": "nai-yang",
+  "gmapsQuery": "Natural Restaurant Airport, Baan Nai Yang, Sakhu, Phuket",
+  "website": "https://naturalphuket.com/",
+  "candidates": [
+   {
+    "url": "https://naturalphuket.com/images/be7ca0e47_105059_0_0.jpg",
+    "source": "official website (og:image)",
+    "license": "\u00a9 restaurant (official website)",
+    "credit": "Natural Restaurant"
+   },
+   {
+    "url": "https://naturalphuket.com/images/bd94d8e56_S_73.jpg",
+    "source": "official website (schema.org image)",
+    "license": "\u00a9 restaurant (official website)",
+    "credit": "Natural Restaurant"
+   }
+  ]
+ },
+ {
+  "key": "places:sabai-massage-airport",
+  "kind": "hidden-gem / wellness",
+  "name": "Sabai Massage & Spa (airport branch)",
+  "where": "nai-yang",
+  "gmapsQuery": "Sabai massage and spa, Phuket airport branch, Sakhu, Phuket",
+  "website": "https://sabaimassage-phuket.com/",
+  "candidates": []
+ },
+ {
+  "key": "hotels:luna-hostel-phuket-airport",
+  "kind": "hotel (hostel)",
+  "name": "The Luna Hostel Phuket Airport",
+  "where": "nai-yang",
+  "gmapsQuery": "The Luna Hostel, Soi Naiyang 16, Sakhu, Phuket",
+  "website": "https://www.hostelworld.com/hostels/p/274074/the-luna-hostel-phuket-airport/",
+  "candidates": [
+   {
+    "url": "https://a.hwstatic.com/propertyimages/2/274074/pydm3clp4ksxeldyhn2m.jpg",
+    "source": "Hostelworld listing (property photo)",
+    "license": "\u00a9 hostel (Hostelworld listing)",
+    "credit": "The Luna Hostel"
+   },
+   {
+    "url": "https://a.hwstatic.com/propertyimages/2/274074/wndqhburvt30kym8wd5n.jpg",
+    "source": "Hostelworld listing (property photo)",
+    "license": "\u00a9 hostel (Hostelworld listing)",
+    "credit": "The Luna Hostel"
+   }
+  ]
+ },
+ {
+  "key": "hotels:atom-phuket-hotel",
+  "kind": "hotel (budget)",
+  "name": "Atom Phuket Hotel",
+  "where": "nai-yang",
+  "gmapsQuery": "Atom Phuket Hotel, Sakhu, Thalang, Phuket",
+  "website": "https://www.atomphukethotel.com/",
+  "candidates": [
+   {
+    "url": "https://www.atomphukethotel.com/images/2121x1100x500.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Atom Phuket Hotel"
+   },
+   {
+    "url": "https://www.atomphukethotel.com/images/2110x1100x500.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Atom Phuket Hotel"
+   }
+  ]
+ },
+ {
+  "key": "hotels:proud-phuket-hotel",
+  "kind": "hotel (mid-range)",
+  "name": "Proud Phuket Hotel",
+  "where": "nai-yang",
+  "gmapsQuery": "Proud Phuket Hotel, Nai Yang Soi 2, Sakhu, Phuket",
+  "website": "https://www.proudphuket.com/",
+  "candidates": [
+   {
+    "url": "https://www.proudphuket.com/images/4929.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Proud Phuket"
+   },
+   {
+    "url": "https://www.proudphuket.com/images/4930.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Proud Phuket"
+   },
+   {
+    "url": "https://www.proudphuket.com/images/4927.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Proud Phuket"
+   }
+  ]
+ },
+ {
+  "key": "hotels:marriott-nai-yang",
+  "kind": "hotel (luxury)",
+  "name": "Phuket Marriott Resort and Spa, Nai Yang Beach",
+  "where": "nai-yang",
+  "gmapsQuery": "Phuket Marriott Resort and Spa, Nai Yang Beach, Sakhu, Phuket",
+  "website": "https://www.marriott.com/en-us/hotels/hktnb-phuket-marriott-resort-and-spa-nai-yang-beach/overview/",
+  "candidates": []
+ },
+ {
+  "key": "hotels:the-slate-phuket",
+  "kind": "hotel (luxury)",
+  "name": "The Slate",
+  "where": "nai-yang",
+  "gmapsQuery": "The Slate Phuket, Sakhu, Thalang, Phuket",
+  "website": "https://www.theslatephuket.com/",
+  "candidates": [
+   {
+    "url": "https://www.theslatephuket.com/assets/media/uploads/Dining/Black%20Ginger/The%20Slate%20Black-Ginger-Night%2002.jpg",
+    "source": "official website (Black Ginger)",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Slate"
+   },
+   {
+    "url": "https://www.theslatephuket.com/assets/media/uploads/Suites_Villas/One%20Bedroom%20Pool%20Villa/The%20Slate-One-Bedroom%20Private%20Pool%20Villa_DJI_0701-Pano.jpg",
+    "source": "official website (pool villas from above)",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Slate"
+   },
+   {
+    "url": "https://www.theslatephuket.com/assets/media/uploads/Suites_Villas/Pearl%20Bed%20Suite/Pearl%20Bed%20Suite-01.jpg",
+    "source": "official website (Pearl Bed Suite)",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Slate"
+   }
+  ]
+ }
+]

@@ -1,0 +1,124 @@
+{
+ "results": [
+  {
+   "key": "areas:kata-noi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-kata-noi.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kata_noi_-_panoramio.jpg/1280px-Kata_noi_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kata_noi_-_panoramio.jpg",
+   "credit": "Telgaa",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Kata Noi bay seen from the rocks at its south end: turquoise water, the curving beach with the Katathani umbrellas and the wooded headland (geotagged, in the Kata Noi beach category). Both candidates were rejected. c1 is a generic sunset with a woman's silhouette and nothing that marks it as Kata Noi; it is also the places:kata-noi-beach candidate. c2 is a night portrait of a woman on a chair. This photo came from a Commons search."
+  },
+  {
+   "key": "areas:nai-harn",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-nai-harn.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phuket_-_Nai_Harn_Beach_008.jpg/1280px-Phuket_-_Nai_Harn_Beach_008.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_-_Nai_Harn_Beach_008.jpg",
+   "credit": "ADwarf",
+   "license": "Public domain",
+   "width": 1280,
+   "height": 960,
+   "note": "Nai Harn Beach looking north to The Nai Harn hotel, terraced on the wooded hill; pale hazy sky (candidate 1, passed). A brighter blue-sky option if wanted: File:Nai harn beach phuket (63).jpg by Wolfgang Holzem, CC BY-SA 4.0."
+  },
+  {
+   "key": "areas:rawai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-rawai.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_11.jpg",
+   "credit": "ADwarf",
+   "license": "Public domain",
+   "width": 1280,
+   "height": 803,
+   "note": "Longtail boats moored off Rawai Beach under a clear sky, with the wooded headland behind (candidate 1, passed). Possible duplicate: this same file is also the first candidate for places:rawai-seafood-market. If that card uses it too, swap one of them."
+  },
+  {
+   "key": "areas:chalong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-chalong.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chalong_Pier.jpg/1280px-Chalong_Pier.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chalong_Pier.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "View from the Big Buddha hill over Chalong town, the road down to Chalong Pier and the bay full of yachts; overcast (candidate 1, passed). The pier and bay are in the upper third, so a crop that sits higher (object-position around 30%) frames it better than a centred crop. Candidate 2 was almost only open water and sky."
+  },
+  {
+   "key": "areas:phuket-town",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-phuket-town.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Thalang_Road,_Old_Phuket_Town.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Pastel Sino-Portuguese shophouses along Thalang Road in Old Phuket Town; cloudy sky, parked cars in front (candidate 1, passed). Candidate 2 (Thalang_Road_3.jpg) is also a candidate for places:sunday-walking-street, so leaving it out here avoids a duplicate."
+  },
+  {
+   "key": "areas:kathu",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-kathu.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kathu_Waterfall_%2860083096%29.jpeg/1280px-Kathu_Waterfall_%2860083096%29.jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kathu_Waterfall_(60083096).jpeg",
+   "credit": "Nicolas Voitot",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Kathu Waterfall running over granite boulders in the jungle; sharp and already 16:9 (candidate 1, passed). Saved as .jpg."
+  },
+  {
+   "key": "areas:cape-panwa",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-cape-panwa.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG/1280px-Cape_Panwa%2C_Phuket_sea_and_boat_2014.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Cape_Panwa,_Phuket_sea_and_boat_2014.JPG",
+   "credit": "Whym",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 953,
+   "note": "Clear, shallow turquoise sea at Cape Panwa with a longtail boat and the offshore islands under a blue sky (candidate 1, passed; geotagged at the cape)."
+  },
+  {
+   "key": "areas:ao-po",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-ao-po.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG/1280px-Muelle_de_Ao_Por%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_01.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Muelle_de_Ao_Por,_Phuket,_Tailandia,_2013-08-20,_DD_01.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 587,
+   "note": "Panorama of the Ao Po pier shore (boats, beacon tower, wooded hills) under big white clouds; a Commons Quality Image (candidate 2). The photo is about 2.2:1, and a centred 16:9 crop keeps the pier. Candidate 1 was rejected for a large FORUM.LINVOYAGE.COM watermark, which the other Ao Po marina yacht photos on Commons also carry."
+  },
+  {
+   "key": "areas:thalang",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-thalang.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shane_-_Wat_Pranangsang_2.jpg/1280px-Shane_-_Wat_Pranangsang_2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Shane_-_Wat_Pranangsang_2.jpg",
+   "credit": "Shane WP Wongperk",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 914,
+   "note": "Aerial view in morning light of Wat Phra Nang Sang, the historic temple in Thalang town, with the town and the Khao Phra Thaeo hills behind (Wiki Loves Monuments 2023; found by a Commons search). All three candidates were rejected. c1, the Heroines Monument at night, is a soft, grainy film scan that is mostly black. c2 shows only the museum's roof and lawn, nothing recognisable. c3 is an unrecognisable forest pond and is also the places:bang-pae-waterfall candidate. Commons has no daytime photo of the Heroines Monument."
+  },
+  {
+   "key": "areas:natai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-natai.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Natai_Beach_-_panoramio.jpg",
+   "credit": "Sujeong",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Long, empty Natai Beach with casuarina trees and surf, geotagged at Natai; grey monsoon-season sky (candidate 1, passed). Candidate 2 (bababeachclub.com) was rejected: a 700x700 generic beach shot with nothing that places it at Natai, and it would likely repeat on the Baba Beach Club hotel card. Commons searches (Natai, Khok Kloi, Phang-nga Panoramio) found no sunnier free photo."
+  }
+ ]
+}

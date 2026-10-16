@@ -1,0 +1,124 @@
+{
+ "results": [
+  {
+   "key": "areas:patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-patong.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Patong_Beach_%2812%29.jpg/1280px-Patong_Beach_%2812%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Patong_Beach_(12).jpg",
+   "credit": "Wolfgang Holzem",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Patong Bay seen from the Kalim-end rocks: turquoise water and the full sweep of Patong Beach with umbrellas, Patong Tower and the hills. Picked over candidate 1, which passed but is dominated by the paved promenade, and candidate 2, a generic sunset with a photographer watermark."
+  },
+  {
+   "key": "areas:kamala",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-kamala.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tha%C3%AFlande_2010_248.jpg/1280px-Tha%C3%AFlande_2010_248.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tha%C3%AFlande_2010_248.jpg",
+   "credit": "Gossipguy",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Candidate 1, confirmed as Kamala Beach by its file description and category: a calm turquoise bay with white sand and the forested north headland with white hillside villas. Native 16:9."
+  },
+  {
+   "key": "areas:surin",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-surin.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Surin_Beach.JPG",
+   "credit": "Jpatokal",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 851,
+   "note": "Candidate 1: north end of Surin Beach, with turquoise water, white sand and the rocky, palm-covered headland toward Pansea. Sharp, clear sky."
+  },
+  {
+   "key": "areas:bang-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-bang-tao.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Bang_Tao_Beach_%2853667853591%29.jpg/1280px-Bang_Tao_Beach_%2853667853591%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bang_Tao_Beach_(53667853591).jpg",
+   "credit": "Raita Futo from Tokyo, Japan",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Candidate 1 (2024, geotagged at Bang Tao): palms and sun loungers on white sand, with the southern headland across turquoise water."
+  },
+  {
+   "key": "areas:layan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-layan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+   "credit": "Maleewan1wanpen2thai",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1 (geotagged at Layan): three horse riders on the sand at dusk, with the small forested headland at the north end of the beach. The subject survives a 16:9 crop."
+  },
+  {
+   "key": "areas:nai-thon",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-nai-thon.jpg",
+   "url": "https://live.staticflickr.com/695/23633088076_f0e8752253_h.jpg",
+   "page": "https://www.flickr.com/photos/136686568@N04/23633088076/",
+   "credit": "tnocapital (Flickr)",
+   "license": "CC BY-NC-SA 2.0",
+   "width": 1599,
+   "height": 979,
+   "note": "Daytime Nai Thon Beach: casuarina-shaded sand, kayaks and the forested north headland under a blue sky. The location comes from the Flickr title (no geotag); the layout matches other Nai Thon photos. Candidate rejected: it carries repeated freepik stock watermarks. Commons has no good daytime shot; the free-licence fallback is the dusk photo File:Naiton_beach_-_panoramio.jpg (CC BY-SA 3.0). The NC licence is fine for a personal guide."
+  },
+  {
+   "key": "areas:nai-yang",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-nai-yang.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Nai_Yang_Beach.jpg/1280px-Nai_Yang_Beach.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Nai_Yang_Beach.jpg",
+   "credit": "WalkOnWater93",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1 (Dec 2022, geotagged at Nai Yang): a long sandy curve with the forested southern headland, longtail boats and a small islet under a blue sky."
+  },
+  {
+   "key": "areas:mai-khao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-mai-khao.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sirinat_National_Park15.jpg/1280px-Sirinat_National_Park15.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sirinat_National_Park15.jpg",
+   "credit": "Athichitra",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Mai Khao's signature view (filed in Category:Mai Khao Beach): a Thai Airways jet landing low over the long casuarina-lined beach while visitors watch, under a deep blue sky. Both candidates rejected: one is a foam close-up that could be anywhere, the other is tilted, overcast and centred on a child."
+  },
+  {
+   "key": "areas:karon",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-karon.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Tha%C3%AFlande_2010_259.jpg/1280px-Tha%C3%AFlande_2010_259.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tha%C3%AFlande_2010_259.jpg",
+   "credit": "Gossipguy",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 857,
+   "note": "Karon Beach (per its file description and category): clear turquoise shallows with a granite boulder, and the long beach with umbrellas, the hills and Karon's tall hotel tower behind. Both candidates rejected: one is a featureless sand/sea/sky shot, the other is hazy with litter on the sand."
+  },
+  {
+   "key": "areas:kata",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/areas-kata.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kata_beach_in_the_morning_%28Sth%29.jpg/1280px-Kata_beach_in_the_morning_%28Sth%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kata_beach_in_the_morning_(Sth).jpg",
+   "credit": "HutheMeow",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Kata Yai in the morning, looking south: turquoise water and surf, sand, and the tree-covered south headland with beachfront restaurants. Picked over candidate 1, which passed but is dominated by a large shadowed sand-erosion ledge, and candidate 2, which has vines across the frame and may be Kata Noi."
+  }
+ ]
+}

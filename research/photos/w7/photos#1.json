@@ -1,0 +1,76 @@
+{
+ "results": [
+  {
+   "key": "events:levitate-sunset-connections",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-levitate-sunset-connections.png",
+   "url": "https://levitatephuket.com/images/levitate-make-yours-final.png",
+   "width": 1252,
+   "height": 647,
+   "credit": "\u00a9 LEVITATE Viewpoint",
+   "license": "official site",
+   "page": "https://levitatephuket.com/",
+   "note": "Official og:image: the venue's covered hillside terrace with bean bags and guests watching the sunset over the Andaman Sea. It is a real photo with heavy color grading, and the venue's own Google profile posted the same photo. The image is wider than 16:9 (1.94:1), so a center crop only trims the sides. Rejected: the Megatix cover (neon LEVITATE logo graphic) and a second Megatix image (AI-style floating-island illustration). The other images on the site are decorative backgrounds."
+  },
+  {
+   "key": "events:armania-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-armania-phuket.jpg",
+   "url": "https://www.barfunkphuket.com/app/uploads/2025/04/armania-phuket-January-03-2025-20.jpg",
+   "width": 2000,
+   "height": 1333,
+   "credit": "\u00a9 Armania Phuket (Barfunk Phuket)",
+   "license": "official site",
+   "page": "https://www.barfunkphuket.com/armania/",
+   "note": "Roger Sanchez DJ set at Armania (Jan 2025): the arched DJ booth with the Armania logo, gold light beams and a crowd with hands up. This is the full-size original of candidate 1 (the listed URL was the 1024px resize), and it is used on the official Armania page. There is a small DJ name sign on the booth and no watermark. Candidate 2 (an aerial hoop performer) is also good but shows less of the club."
+  },
+  {
+   "key": "events:summerset-lounge-experemint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-summerset-lounge-experemint.jpg",
+   "url": "https://www.ebsmatchstaff.com/media/venue_uploads/thumbs/venue-64722-1.thumb.jpeg",
+   "width": 800,
+   "height": 600,
+   "credit": "\u00a9 Summerset Bar & Lounge",
+   "license": "venue's own photo (its EBS Matchstaff venue profile)",
+   "page": "https://www.ebsmatchstaff.com/venue-detail/64722/",
+   "note": "Inside Summerset Lounge (Wana Park, Cherngtalay) at night: the bar with its yellow sun disc, tufted leather sofas and red curtains. The venue uploaded it to its hiring profile on the European Bartender School job site, and 800x600 is the largest copy. Rejected: the RA EXPEREMINT flyer and the Zonda Vol. 1 flyer (square and text-heavy), and the profile's other image (logo pasted over the bar). Nothing found on RA (the venue has no photo), phangan.events (flyer only) or the Facebook page (login wall)."
+  },
+  {
+   "key": "events:sound-club-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-sound-club-samui.jpg",
+   "url": "https://images.squarespace-cdn.com/content/v1/65a7c73259ade31e3448e29e/27a59947-699f-43c3-b86f-24ae3ded1fcd/IMG_0980.JPG",
+   "width": 1568,
+   "height": 1046,
+   "credit": "\u00a9 Sound Club Samui",
+   "license": "official site",
+   "page": "https://www.soundclubsamui.co/",
+   "note": "Homepage hero photo, original JPEG: a wide view of the open-air club with the DJ booth framed by tropical plants, red and blue lasers, hanging light tubes and a crowd in front. No watermark. Rejected candidates: DSC_1424 (close-up of one dancing guest with a Sound Club logo watermark) and DSC07753 (dark red silhouette that doesn't show the venue). All of the roughly 590 gallery photos carry the logo watermark."
+  },
+  {
+   "key": "events:seaside-pre-full-moon-haad-rin",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-seaside-pre-full-moon-haad-rin.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2025/04/IMG_9103.jpeg",
+   "width": 716,
+   "height": 1280,
+   "credit": "\u00a9 Seaside Sunset Bar",
+   "license": "venue photo (phangan.events venue page)",
+   "page": "https://phangan.events/event-location/seaside-sunset-bar/",
+   "note": "Portrait phone photo of a Seaside beach party at night: the crowd at the DJ booth, with a fire dancer over the dark sea behind. A centered 16:9 crop (716x403, from about y=440) keeps the crowd and fire show; a crop from about y=520 also keeps the decks. This is the only real party photo found. All 110 Seaside event images on phangan.events (checked through its API) are text flyers, there is no venue website, and Commons has nothing for Haad Rin Nai. Rejected: the 23 Sep 2026 flyer (text-heavy, AI-style art)."
+  },
+  {
+   "key": "events:wet-pool-party-haad-rin",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-wet-pool-party-haad-rin.jpg",
+   "url": "https://a.hwstatic.com/image/upload/propertyimages/3/313418/qghmuk5fxwr3butpfz3x.jpg",
+   "width": 2952,
+   "height": 2260,
+   "credit": "\u00a9 WET! a Pool Party Hostel by Wild & Wandering",
+   "license": "venue's own photo (Hostelworld property listing)",
+   "page": "https://www.hostelworld.com/hostels/p/313418/wet-a-pool-party-hostel-by-wild-and-wandering/",
+   "note": "Daytime pool party at the hostel: guests in the pool with an inflatable unicorn and flamingo, a pastel ball pit, rainbow flags, and the DJ tower with the WET! banner. Wide-angle, sharp, no overlay. Rejected: the phangan.events venue photo (a big WET! logo panel is pasted over about a quarter of it) and the 24 Sep 2026 flyer. No official website was found. A packed night shot from the same listing (propertyimages/3/313418/lskfuk2aq6tp6fb7cv2o.jpg, 2667x2000) is a good alternative."
+  }
+ ]
+}

@@ -1,0 +1,1228 @@
+{
+ "items": [
+  {
+   "id": "baba-beach-club-natai",
+   "name": "Baba Beach Club Natai",
+   "area": "natai",
+   "tier": "luxury",
+   "priceText": "About 14,500-17,000 THB / night (~$430-510) for a Baba Suite (Jan 2026 rate). No Jan 2027 rate online yet. Circoloco nights cost much more.",
+   "whyStay": "This is the Circoloco venue itself. You walk from your room to the party and back. A music hotel on the beach with a Funktion-One sound system, pool suites and villas.",
+   "description": "Beach club hotel on Natai Beach in Phang Nga, run by the Sri panwa team. It has an entertainment pool, two restaurants, a beach club, suites, pool suites and pool villas. Music plays across the property, also in rooms, by design. Circoloco Thailand is here on Sat 9 and Sat 16 Jan 2027.",
+   "nearby": "Aleenta 8 min on foot. Airport about 35 min by car (25 km). Catch Beach Club (Bang Tao) about 50-60 min. Patong about 65-80 min.",
+   "tips": [
+    "Circoloco runs here on Sat 9 and Sat 16 Jan 2027, 3 PM to 3 AM. Hotels nearby cost 2-3 times more on these nights, so book early.",
+    "Not for light sleepers: music plays across the hotel, also in the rooms.",
+    "Trip.com and Hotels.com list a deposit of 3,000 THB per night."
+   ],
+   "vibe": [
+    "party",
+    "beach club",
+    "music",
+    "luxury"
+   ],
+   "beachfront": true,
+   "ratingText": "Google 4.7 (581 reviews); Trip.com 9.3/10 (49 reviews)",
+   "website": "https://www.bababeachclub.com/natai/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.bababeachclub.com/natai/"
+    },
+    {
+     "label": "Circoloco Thailand page",
+     "url": "https://www.bababeachclub.com/natai/circoloco-thailand/"
+    },
+    {
+     "label": "Book direct",
+     "url": "https://reservations.travelclick.com/102951"
+    }
+   ],
+   "sources": [
+    "https://www.bababeachclub.com/natai/",
+    "https://www.bababeachclub.com/natai/contact-us-phuket/",
+    "https://www.phuket101.net/best-hotels-in-natai-beach/",
+    "https://www.trip.com/hotels/takua-thung-hotel-detail-10842499/baba-beach-club-phuket-natai-luxury-pool-villa-hotel-by-sri-panwa/",
+    "https://kr.hotels.com/ho616396832/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.bababeachclub.com/images/baba-beach.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Baba Beach Club Natai"
+    },
+    {
+     "url": "https://www.bababeachclub.com/images/entertainment-pool.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Baba Beach Club Natai"
+    }
+   ],
+   "verification": "Open: Google reviews from mid-2026, no closure flag, official site live (checked 15 Oct 2026). Circoloco dates match Dice, Ticketmelon and the Baba page. Google showed no Jan 2027 rate for any date; price is a Hotels.com Jan 2026 listing (Baba Suite Ocean View, taxes included).",
+   "lat": 8.2502954,
+   "lng": 98.2817659,
+   "coordSource": "google-maps listing + trip.com (13 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Baba Beach Club Natai, Khok Kloi, Phang Nga"
+  },
+  {
+   "id": "aleenta-phuket-phang-nga",
+   "name": "Aleenta Phuket Phang Nga Resort & Spa",
+   "area": "natai",
+   "tier": "luxury",
+   "priceText": "About 19,400 THB / night (~$575) on weekdays. About 32,000-52,000 THB (~$950-1,540) on Circoloco weekend nights (9, 15 and 16 Jan).",
+   "whyStay": "Quiet five-star resort next to Baba Beach Club. Walk to Circoloco in 8 minutes, then sleep in a calm suite. Nearly all rooms have a private pool.",
+   "description": "All-suite resort on Natai Beach with about 67 rooms; nearly all have a private pool. There is a beachfront infinity pool, free beach cabanas, two restaurants and the Ayurah spa and wellness centre. The calm, upscale choice right next to the Circoloco venue.",
+   "nearby": "Baba Beach Club 8 min on foot (600 m). Airport about 35 min by car. Few restaurants within walking distance.",
+   "tips": [
+    "Prices jump 2-3 times on Circoloco nights. Tue 12 Jan cost about 19,400 THB.",
+    "Some room types are for guests 12+ only. Villas and residences take all ages.",
+    "Food at the hotel is expensive and there is little nearby. Plan your meals."
+   ],
+   "vibe": [
+    "quiet",
+    "luxury",
+    "wellness",
+    "beach"
+   ],
+   "beachfront": true,
+   "adultsOnly": false,
+   "ratingText": "Google 4.7 (1,049 reviews)",
+   "website": "https://www.aleenta.com/en/aleenta-phuket-phang-nga/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.aleenta.com/en/aleenta-phuket-phang-nga/"
+    },
+    {
+     "label": "Phuket 101 Natai hotels (Sep 2026)",
+     "url": "https://www.phuket101.net/best-hotels-in-natai-beach/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/best-hotels-in-natai-beach/",
+    "https://www.aleenta.com/en/aleenta-phuket-phang-nga/",
+    "https://www.openstreetmap.org/node/14077928113"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Sujeong (area photo: Natai Beach)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Natai_Beach_-_panoramio_%281%29.jpg/1280px-Natai_Beach_-_panoramio_%281%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Sujeong (area photo: Natai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Aug-Sep 2026, no closure flag. Facts from Phuket 101 (updated 20 Sep 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 15, 16 Jan 2027). Official site blocks bots, so the photos are Commons area photos of Natai Beach.",
+   "lat": 8.2544818,
+   "lng": 98.2815411,
+   "coordSource": "google-maps listing + osm node (2 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Aleenta Phuket Phang Nga Resort & Spa, Khok Kloi"
+  },
+  {
+   "id": "natai-house",
+   "name": "Natai House",
+   "area": "natai",
+   "tier": "mid-range",
+   "priceText": "About 1,700-2,600 THB / night (~$50-80). About 5,000 THB (~$150) on Fri 15 Jan; Sat 16 Jan showed no online rate.",
+   "whyStay": "Small family-run resort 2 minutes from Natai Beach and 3 minutes by car from Baba Beach Club. A good-value base for Circoloco weekends, with a pool and breakfast.",
+   "description": "Small, calm resort near Natai Beach, run by a local family. Guests praise the big clean rooms, the pool, the kind owners and the breakfast. One guest mentions insects in the room, and many nearby restaurants were closed at dinner time. A cheap, quiet base for Circoloco.",
+   "nearby": "Natai Beach 2 min on foot. Baba Beach Club 3 min by car or 22 min on foot (1.7 km). Airport about 35 min by car.",
+   "tips": [
+    "The hotel mainly uses Facebook. Booking sites are easier for reservations.",
+    "Circoloco ends at 3 AM. Arrange your ride back in advance."
+   ],
+   "vibe": [
+    "quiet",
+    "local",
+    "value"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.4 (312 reviews)",
+   "website": "https://www.facebook.com/NataiHouse/",
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/NataiHouse/"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/search/?api=1&query=Natai%20House%20Khok%20Kloi"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Natai_Beach_-_panoramio_%281%29.jpg/1280px-Natai_Beach_-_panoramio_%281%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Sujeong (area photo: Natai Beach)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Sujeong (area photo: Natai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews through Sep 2026, no closure flag. Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (12, 14, 15, 16 Jan 2027). Only one coordinate source (Google Maps). No official photos; Commons area photos of Natai Beach.",
+   "lat": 8.2653671,
+   "lng": 98.2802014,
+   "coordSource": "google-maps listing",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Natai House, Khok Kloi, Phang Nga"
+  },
+  {
+   "id": "snug-airportel",
+   "name": "The Snug Airportel",
+   "area": "nai-yang",
+   "tier": "hostel",
+   "priceText": "Dorm bed about 1,100 THB / night (~$33). Private rooms cost more.",
+   "whyStay": "Hostel and hotel 4 minutes from the airport, with dorms, private rooms and two pools. A cheap base for your first or last night, and about 35 minutes by car to Circoloco.",
+   "description": "Hotel and hostel near Phuket airport, open since 2018. It has dorms and private rooms in two wings, two pools, a restaurant and bar, luggage storage and a taxi service. Good for late arrivals, early flights, or a budget Circoloco base in the north.",
+   "nearby": "Airport 4 min by car (1.9 km). Baba Beach Club about 35 min by car (27 km). Catch Beach Club about 25-30 min. Patong about 45-55 min.",
+   "tips": [
+    "Luggage storage is available. Ask about leaving bags while you visit Koh Phangan.",
+    "The hotel taxi service costs extra. Ask at reception."
+   ],
+   "vibe": [
+    "budget",
+    "social",
+    "practical"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.6 (400 reviews)",
+   "website": "https://www.thesnugairportel.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.thesnugairportel.com/"
+    }
+   ],
+   "sources": [
+    "https://www.thesnugairportel.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://static.wixstatic.com/media/f3fda1_dfe1f08631844226ac5884cf1b26e3e8~mv2.jpeg/v1/fill/w_1280,h_960,al_c/f3fda1_dfe1f08631844226ac5884cf1b26e3e8~mv2.jpeg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "The Snug Airportel"
+    }
+   ],
+   "verification": "Open: Google reviews from 2026, no closure flag, official site live (checked 15 Oct 2026). Price: Google Hotels lowest rate, checked 15 Oct 2026 for 1 adult (12 and 16 Jan 2027).",
+   "lat": 8.099463,
+   "lng": 98.3059702,
+   "coordSource": "google-maps + osm (10 m) + official site schema (57 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Snug Airportel, Sakhu, Phuket"
+  },
+  {
+   "id": "intercontinental-phuket",
+   "name": "InterContinental Phuket Resort",
+   "area": "kamala",
+   "tier": "luxury",
+   "priceText": "About 28,500-31,500 THB / night (~$850-940).",
+   "whyStay": "Five-star resort right on Kamala Beach, 4 minutes on foot from Café del Mar. Walk home after a big show. Five pools, a spa and beach bars.",
+   "description": "Large luxury resort on Kamala Beach, between jungle hills and the sea. It has five outdoor pools, Sati Spa, a club lounge, pool villas and several bars, including Pine Beach Bar and a rooftop bar. The closest top hotel to Café del Mar.",
+   "nearby": "Café del Mar 4 min on foot (320 m). Catch Beach Club about 10 min by car. Illuzion (Patong) about 20 min. Airport about 30-35 min.",
+   "tips": [
+    "The most expensive pick in this list. Book early for January.",
+    "Club rooms include access to the club lounge."
+   ],
+   "vibe": [
+    "luxury",
+    "beach",
+    "beach club"
+   ],
+   "beachfront": true,
+   "ratingText": "Google 4.8 (3,719 reviews)",
+   "website": "https://phuket.intercontinental.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://phuket.intercontinental.com/"
+    },
+    {
+     "label": "IHG booking",
+     "url": "https://www.ihg.com/intercontinental/hotels/us/en/phuket/phukb/hoteldetail"
+    }
+   ],
+   "sources": [
+    "https://phuket.intercontinental.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phuket.intercontinental.com/sites/phuket/files/styles/banner_medium/public/homepage-slider/InterContinental-Phuket-Resort-Beach_1.jpg.webp",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "InterContinental Phuket Resort"
+    }
+   ],
+   "verification": "Open: Google reviews from 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (10, 12, 14, 16 Jan 2027).",
+   "lat": 7.9624404,
+   "lng": 98.2853194,
+   "coordSource": "google-maps + osm (79 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "InterContinental Phuket Resort, Kamala"
+  },
+  {
+   "id": "novotel-phuket-kamala",
+   "name": "Novotel Phuket Kamala Beach",
+   "area": "kamala",
+   "tier": "mid-range",
+   "priceText": "About 12,500-13,400 THB / night (~$370-400).",
+   "whyStay": "Four-star hotel with direct access to Kamala Beach, 6 minutes on foot from Café del Mar. Less than half the InterContinental price, with the same easy walk to the beach club.",
+   "description": "Beachfront four-star hotel on Kamala Beach with rooms, suites and some private villas. It has a beachfront pool, the Soul Kitchen restaurant, the On The Roof bar, a spa and a gym. It is family-friendly, so expect children around the pool.",
+   "nearby": "Café del Mar 6 min on foot (460 m). Catch Beach Club about 10 min by car. Illuzion (Patong) about 20 min by car.",
+   "tips": [
+    "Watch the sunset at On The Roof, then walk to Café del Mar.",
+    "January rates are high for a Novotel. Compare with ibis Styles Bangtao."
+   ],
+   "vibe": [
+    "beach",
+    "beach club",
+    "family"
+   ],
+   "beachfront": true,
+   "adultsOnly": false,
+   "ratingText": "Google 4.4 (3,409 reviews); Accor 4.4/5",
+   "website": "https://all.accor.com/hotel/7235/index.en.shtml",
+   "links": [
+    {
+     "label": "Official site (Accor)",
+     "url": "https://all.accor.com/hotel/7235/index.en.shtml"
+    }
+   ],
+   "sources": [
+    "https://all.accor.com/hotel/7235/index.en.shtml"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.ahstatic.com/photos/7235_ho_00_p_1024x768.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Novotel Phuket Kamala Beach"
+    }
+   ],
+   "verification": "Open: Google reviews from Aug-Sep 2026, no closure flag, Accor page live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.9639082,
+   "lng": 98.2849865,
+   "coordSource": "google-maps + osm (53 m) + accor schema (150 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Novotel Phuket Kamala Beach"
+  },
+  {
+   "id": "twinpalms-surin",
+   "name": "Twinpalms Surin Beach Phuket",
+   "area": "surin",
+   "tier": "luxury",
+   "priceText": "About 12,700-17,000 THB / night (~$375-505).",
+   "whyStay": "Stylish design hotel a short walk from Surin Beach. Same group as Catch Beach Club, 5 minutes away by car. Central for Catch, Café del Mar and Niky's techno club.",
+   "description": "Five-star design hotel built around a large lagoon pool, a short stroll from Surin Beach. It has rooms, suites and lofts; some penthouses have private pools. The Twinpalms group also runs Catch Beach Club on Bang Tao Beach.",
+   "nearby": "Surin Beach 5 min on foot. Catch Beach Club 5 min by car (26 min on foot). Café del Mar and Niky's Speakeasy about 5 min by car. Patong about 20-25 min.",
+   "tips": [
+    "Book on the Twinpalms site for direct-booking extras (2026: day cruise, 50% off airport transfers).",
+    "Baba Beach Club (Circoloco) is about 45-50 min north by car."
+   ],
+   "vibe": [
+    "design",
+    "luxury",
+    "beach club"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.7 (1,484 reviews)",
+   "website": "https://www.twinpalmshotelsresorts.com/surin-beach-phuket/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.twinpalmshotelsresorts.com/surin-beach-phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.twinpalmshotelsresorts.com/surin-beach-phuket/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://twinpalmshotelsresorts.com/surin-beach-phuket/wp-content/uploads/sites/15/2024/09/hometps.webp",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Twinpalms Surin Beach Phuket"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Jpatokal (area photo: Surin Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Aug 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.9775024,
+   "lng": 98.2806128,
+   "coordSource": "google-maps + osm (50 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Twinpalms Surin Beach Phuket"
+  },
+  {
+   "id": "ibis-styles-bangtao",
+   "name": "ibis Styles Phuket Bangtao",
+   "area": "bang-tao",
+   "tier": "mid-range",
+   "priceText": "About 7,700-7,900 THB / night (~$230-235).",
+   "whyStay": "New hotel (April 2026) with two rooftop infinity pools and a rooftop bar. 11 minutes on foot to Catch Beach Club and 3 minutes by car to Niky's techno club. Best value in the beach-club belt.",
+   "description": "Colourful new hotel next to Laguna Phuket, opened in April 2026. It has 138 rooms, two rooftop infinity pools (one for kids), the Sun Flyer rooftop bar, an Italian restaurant and a gym. Early reviews are excellent. The beach is about 10-12 minutes on foot.",
+   "nearby": "Catch Beach Club 11 min on foot (850 m). Niky's Speakeasy 3 min by car (18 min on foot). Café del Mar about 10 min by car. Airport about 25-30 min.",
+   "tips": [
+    "Good base for Catch day parties and techno nights at Niky's Speakeasy.",
+    "It is new, so reviews are few (256) but the score is very high."
+   ],
+   "vibe": [
+    "new",
+    "rooftop",
+    "value",
+    "beach club"
+   ],
+   "beachfront": false,
+   "adultsOnly": false,
+   "ratingText": "Google 4.9 (256 reviews)",
+   "website": "https://all.accor.com/hotel/C2H9/index.en.shtml",
+   "links": [
+    {
+     "label": "Official site (Accor)",
+     "url": "https://all.accor.com/hotel/C2H9/index.en.shtml"
+    }
+   ],
+   "sources": [
+    "https://all.accor.com/hotel/C2H9/index.en.shtml",
+    "https://eglobaltravelmedia.com.au/2026/04/07/ibis-styles-bangtao-brings-playful-phuket-vibes/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.ahstatic.com/photos/c2h9_ho_00_p_1024x768.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "ibis Styles Phuket Bangtao"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sunset_at_Bang_Tao_Beach.jpg/1280px-Sunset_at_Bang_Tao_Beach.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Axadem (area photo: Bang Tao Beach)"
+    }
+   ],
+   "verification": "Opened April 2026 (Accor launch release, 7 Apr 2026). Open: Google reviews from Jul 2026, no closure flag (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 10, 12, 14, 16 Jan 2027).",
+   "lat": 7.99334,
+   "lng": 98.29357,
+   "coordSource": "google-maps + osm (68 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "ibis Styles Phuket Bangtao"
+  },
+  {
+   "id": "twinpalms-tented-camp",
+   "name": "Twinpalms Tented Camp Phuket",
+   "area": "bang-tao",
+   "tier": "luxury",
+   "priceText": "About 21,400-23,700 THB / night (~$635-705).",
+   "whyStay": "Adults-only luxury tents on Bang Tao Beach, 6 minutes on foot from Catch Beach Club. The Beach Tents stand on the sand. Walk home from the party and sleep by the sea.",
+   "description": "Small adults-only glamping resort and a member of Small Luxury Hotels of the World. Air-conditioned Beach Tents stand on the sand of Bang Tao Beach. Lagoon Tents sit in a tropical garden, some with private pools or two bedrooms. Sister hotel of Twinpalms Surin and Catch Beach Club.",
+   "nearby": "Catch Beach Club 6 min on foot (460 m). Niky's Speakeasy 3 min by car (16 min on foot). Café del Mar about 10 min by car.",
+   "tips": [
+    "Adults only.",
+    "Beach Tents are right on the sand. Lagoon Tents are in the garden and some have a private pool."
+   ],
+   "vibe": [
+    "adults-only",
+    "glamping",
+    "beach club",
+    "luxury"
+   ],
+   "beachfront": true,
+   "adultsOnly": true,
+   "ratingText": "Google 4.6 (144 reviews)",
+   "website": "https://twinpalmshotelsresorts.com/tented-camp-phuket/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://twinpalmshotelsresorts.com/tented-camp-phuket/"
+    }
+   ],
+   "sources": [
+    "https://twinpalmshotelsresorts.com/tented-camp-phuket/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://twinpalmshotelsresorts.com/tented-camp-phuket/wp-content/uploads/sites/16/2024/10/0K9A6863-Enhanced-NR-scaled-1.webp",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Twinpalms Tented Camp Phuket"
+    }
+   ],
+   "verification": "Adults-only and SLH membership from the official site. Open: Google reviews from Jun 2026, no closure flag (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.9886432,
+   "lng": 98.2919154,
+   "coordSource": "official-site google-maps link + google-maps listing (same point)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Twinpalms Tented Camp Phuket, Bang Tao"
+  },
+  {
+   "id": "hotel-indigo-patong",
+   "name": "Hotel Indigo Phuket Patong",
+   "area": "patong",
+   "tier": "boutique",
+   "priceText": "About 9,500-11,400 THB / night (~$280-340).",
+   "whyStay": "Stylish boutique hotel in North Patong with a rooftop infinity pool. 12 minutes on foot to Shelter and Illuzion, so you can walk home after the club, but sleep away from Bangla Road.",
+   "description": "Five-star boutique hotel in North Patong with design inspired by local life. It has The Cloud rooftop pool bar with an infinity pool, the Butcher's Garden restaurant, a tiki bar and a gym with a Thai boxing ring. It won Best Luxury Boutique Hotel in Asia at the 2026 Haute Grandeur awards.",
+   "nearby": "Illuzion and Shelter 12 min on foot (900 m). Patong Beach 7 min on foot. Café del Mar about 15-20 min by car.",
+   "tips": [
+    "Best Patong pick for walking home from Shelter late at night.",
+    "Go to the rooftop pool bar for sunset before the club."
+   ],
+   "vibe": [
+    "boutique",
+    "rooftop",
+    "nightlife"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.7 (2,037 reviews)",
+   "website": "https://phuketpatong.hotelindigo.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://phuketpatong.hotelindigo.com/"
+    },
+    {
+     "label": "IHG booking",
+     "url": "https://www.ihg.com/hotelindigo/hotels/us/en/phuket/phupp/hoteldetail"
+    }
+   ],
+   "sources": [
+    "https://phuketpatong.hotelindigo.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phuketpatong.hotelindigo.com/wp-content/uploads/2026/03/Hotel-Indigo-Patong-Home.webp",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Hotel Indigo Phuket Patong"
+    },
+    {
+     "url": "https://phuketpatong.hotelindigo.com/wp-content/uploads/2026/03/Hotel-Indigo-Patong-Home-Mobile-1024x683.webp",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Hotel Indigo Phuket Patong"
+    }
+   ],
+   "verification": "Open: Google reviews from Jun-Aug 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.899287,
+   "lng": 98.299809,
+   "coordSource": "google-maps + osm (31 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Hotel Indigo Phuket Patong"
+  },
+  {
+   "id": "holiday-inn-express-patong",
+   "name": "Holiday Inn Express Phuket Patong Beach Central",
+   "area": "patong",
+   "tier": "mid-range",
+   "priceText": "About 4,900-6,400 THB / night (~$145-190).",
+   "whyStay": "Good-value, reliable hotel in central Patong. 5 minutes on foot to the beach and 14 minutes to Shelter and Illuzion. Some rates include breakfast.",
+   "description": "Large, simple chain hotel (about 270 rooms) in central Patong, with an outdoor pool and a kids' pool. Rooms are modern and practical. A safe mid-price base if you want the beach by day and the Bangla Road clubs at night.",
+   "nearby": "Patong Beach 5 min on foot. Illuzion and Shelter 14 min on foot (1.1 km). Café del Mar about 15-20 min by car.",
+   "tips": [
+    "Check that breakfast is included when you book.",
+    "Airport transfers cost extra."
+   ],
+   "vibe": [
+    "value",
+    "central",
+    "nightlife"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.6 (4,384 reviews)",
+   "website": "https://www.ihg.com/holidayinnexpress/hotels/us/en/phuket/phuex/hoteldetail",
+   "links": [
+    {
+     "label": "IHG booking",
+     "url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/phuket/phuex/hoteldetail"
+    }
+   ],
+   "sources": [
+    "https://www.ihg.com/holidayinnexpress/hotels/us/en/phuket/phuex/hoteldetail",
+    "https://www.expedia.com.my/Phuket-Hotels-Holiday-Inn-Express-Phuket-Patong-Beach-Central.h5411777.Hotel-Information"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pl%C3%A1%C5%BE_Patong.jpg/1280px-Pl%C3%A1%C5%BE_Patong.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Dennis Sylvester Hurd (area photo: Patong Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Sep 2026, no closure flag (checked 15 Oct 2026). Facilities from booking-site listings (IHG site blocks bots). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027). Photo is a Commons area photo.",
+   "lat": 7.89977,
+   "lng": 98.2980764,
+   "coordSource": "google-maps + osm (59 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Holiday Inn Express Phuket Patong Beach Central"
+  },
+  {
+   "id": "lub-d-patong",
+   "name": "Lub d Phuket Patong",
+   "area": "patong",
+   "tier": "hostel",
+   "priceText": "Dorm bed about 850-1,100 THB / night (~$25-33). Private rooms cost more.",
+   "whyStay": "Big, social hostel 9 minutes on foot from Shelter and Illuzion. It has a pool, a bar and a Muay Thai ring in the lobby. The cheapest good way to sleep close to Patong's clubs.",
+   "description": "Large modern hostel near Patong Beach with mixed and female-only dorms and private rooms. It has a pool, a bar and a full-size Muay Thai boxing ring in the lobby, with classes. It is easy to meet people here for a night out on Bangla Road.",
+   "nearby": "Illuzion and Shelter 9 min on foot (700 m). Patong Beach 5 min on foot. Jungceylon mall 12 min on foot.",
+   "tips": [
+    "Female-only dorms are available.",
+    "Muay Thai classes run in the lobby ring. Ask at reception for times."
+   ],
+   "vibe": [
+    "social",
+    "budget",
+    "nightlife"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.6 (4,988 reviews)",
+   "website": "https://www.lubd.com/destination/phuket-patong/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.lubd.com/destination/phuket-patong/"
+    }
+   ],
+   "sources": [
+    "https://www.lubd.com/destination/phuket-patong/",
+    "https://www.phuket101.net/best-hostels-in-phuket/",
+    "https://nomadsworld.com/thailand/lub-d-phuket-patong/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg/1280px-Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 2.0",
+     "credit": "Ben Reeves (area photo: Bangla Road)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pl%C3%A1%C5%BE_Patong.jpg/1280px-Pl%C3%A1%C5%BE_Patong.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Dennis Sylvester Hurd (area photo: Patong Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Jun-Sep 2026, no closure flag (checked 15 Oct 2026). Facilities from hostel guides (official site blocks bots). Price: Google Hotels lowest rate, checked 15 Oct 2026 for 1 adult (12, 16 Jan 2027). Photos are Commons area photos.",
+   "lat": 7.8975978,
+   "lng": 98.2984563,
+   "coordSource": "google-maps + osm unnamed hotel node (40 m)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Lub d Phuket Patong"
+  },
+  {
+   "id": "beyond-kata",
+   "name": "Beyond Kata",
+   "area": "kata",
+   "tier": "mid-range",
+   "priceText": "About 7,500-10,200 THB / night (~$225-305). Several mid-January nights showed no online rate.",
+   "whyStay": "Beachfront resort right on the sand at the south end of Kata Beach. Easy, relaxed beach days, and Patong's clubs are about 15-20 minutes away by car.",
+   "description": "Four-star family resort directly on Kata Beach, part of the Beyond Hotels group. Rooms go from Superior to Seaview Suites, and some have direct pool access. Kata is a pretty bay with a relaxed mood and sunset views.",
+   "nearby": "On Kata Beach. Illuzion (Patong) about 15-20 min by car. Nai Harn Beach about 15 min by car. Phuket Old Town about 25 min.",
+   "tips": [
+    "Google showed no rate for 12, 13, 16 and 17 Jan; it may be nearly full. Book soon.",
+    "It is a family resort, so expect children."
+   ],
+   "vibe": [
+    "beach",
+    "relaxed",
+    "family"
+   ],
+   "beachfront": true,
+   "adultsOnly": false,
+   "ratingText": "Google 4.4 (4,003 reviews)",
+   "website": "https://www.beyondresort.com/kata/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.beyondresort.com/kata/"
+    }
+   ],
+   "sources": [
+    "https://www.beyondresort.com/kata/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.beyondresort.com/kata/wp-content/uploads/sites/2/2026/06/10-1.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Beyond Kata"
+    }
+   ],
+   "verification": "Open: Google reviews from Jul-Aug 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 10, 14 Jan 2027); other dates showed no rate.",
+   "lat": 7.8158492,
+   "lng": 98.3004074,
+   "coordSource": "google-maps + osm (26-81 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Beyond Kata, Kata Beach, Phuket"
+  },
+  {
+   "id": "mom-tris-villa-royale",
+   "name": "Mom Tri's Villa Royale",
+   "area": "kata-noi",
+   "tier": "boutique",
+   "priceText": "About 8,400-12,200 THB / night (~$250-360). On Sat 16 Jan only pricier suites showed (about 25,600 THB).",
+   "whyStay": "Romantic luxury boutique hotel on the headland above Kata Noi, with a private path to the beach. Thai-style suites, sea views and calm nights. A peaceful base between party days.",
+   "description": "Small luxury boutique resort on a headland over Kata Noi Beach. It has 12 types of Thai-style suites, several with private pools, a saltwater pool in the rocks above the sea and two freshwater pools. Mom Tri's Kitchen serves food with sea views.",
+   "nearby": "Kata Noi Beach a few minutes on foot (private path). Kata Beach 18 min on foot. Illuzion (Patong) about 15-20 min by car. Nai Harn about 15 min.",
+   "tips": [
+    "Weekday nights cost much less than Saturdays.",
+    "The hotel restaurant is well known for seafood."
+   ],
+   "vibe": [
+    "romantic",
+    "quiet",
+    "luxury",
+    "sea view"
+   ],
+   "beachfront": true,
+   "ratingText": "Google 4.7 (415 reviews)",
+   "website": "https://www.villaroyalephuket.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.villaroyalephuket.com/"
+    }
+   ],
+   "sources": [
+    "https://www.villaroyalephuket.com/",
+    "https://hotelierschoice.com/de/guide/phuket/boutique/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.villaroyalephuket.com/wp-content/uploads/2024/12/Mom-Tri-01.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Mom Tri's Villa Royale"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 3.0",
+     "credit": "Jacek Lesniowski (area photo: Kata Noi)"
+    }
+   ],
+   "verification": "Open: Google reviews from May 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.810249,
+   "lng": 98.2976805,
+   "coordSource": "google-maps + osm (49 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mom Tri's Villa Royale, Kata Noi, Phuket"
+  },
+  {
+   "id": "sugar-marina-art-karon",
+   "name": "Sugar Marina Hotel ART Karon Beach",
+   "area": "karon",
+   "tier": "mid-range",
+   "priceText": "About 5,800-6,700 THB / night (~$170-200).",
+   "whyStay": "Fun, art-themed hotel 4 minutes on foot from Karon Beach, with very good reviews. Cheaper than the Kata resorts, and Patong's clubs are only about 10-15 minutes away by car.",
+   "description": "Art-themed, family-friendly hotel near Karon Beach, from the local Sugar Marina group. Rooms have art details, and some open straight onto the pool. Karon has a long, wide beach and is quieter than Patong at night.",
+   "nearby": "Karon Beach 4 min on foot (300 m). Kata Beach about 5 min by car. Illuzion (Patong) about 10-15 min by car.",
+   "tips": [
+    "Book a Premier Pool Access room to step straight into the pool.",
+    "Family-friendly, so expect children by the pool."
+   ],
+   "vibe": [
+    "value",
+    "art",
+    "beach"
+   ],
+   "beachfront": false,
+   "adultsOnly": false,
+   "ratingText": "Google 4.7 (3,621 reviews)",
+   "website": "https://www.sugarmarinahotel.com/art",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.sugarmarinahotel.com/art"
+    }
+   ],
+   "sources": [
+    "https://www.sugarmarinahotel.com/art"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.sugarmarinahotel.com/art/wp-content/uploads/sites/3/2024/07/sugarmarinahotel-art-1-1024x576.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Sugar Marina Hotel ART"
+    }
+   ],
+   "verification": "Open: Google reviews from Sep 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.8494603,
+   "lng": 98.2941594,
+   "coordSource": "google-maps + official schema (34 m) + osm (39 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sugar Marina Hotel ART Karon Beach, Phuket"
+  },
+  {
+   "id": "the-nai-harn",
+   "name": "The Nai Harn",
+   "area": "nai-harn",
+   "tier": "luxury",
+   "priceText": "About 11,400-12,300 THB / night (~$340-365).",
+   "whyStay": "Iconic white resort above Nai Harn Bay, 7 minutes on foot to Nai Harn Beach. Big sea-view terraces and a rooftop sunset bar, in the calm south of the island.",
+   "description": "Five-star resort on the hillside over Nai Harn Bay, and Phuket's only Leading Hotels of the World member. Rooms and suites have large private terraces with sea views. Reflections Rooftop Bar and the Hansha rooftop sushi bar are good at sunset.",
+   "nearby": "Nai Harn Beach 7 min on foot. Kata about 15 min by car. Illuzion (Patong) about 25-30 min. Phuket Old Town about 25-30 min.",
+   "tips": [
+    "Book a sea-view room; the big terraces are the reason to stay.",
+    "The Bermudos crew (deep tech and techno) is linked to the Rawai and Nai Harn area, but its 2027 venue is not confirmed. Check its social pages."
+   ],
+   "vibe": [
+    "luxury",
+    "sea view",
+    "relaxed"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.7 (3,057 reviews)",
+   "website": "https://www.thenaiharn.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.thenaiharn.com/"
+    }
+   ],
+   "sources": [
+    "https://www.thenaiharn.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.thenaiharn.com/wp-content/uploads/2026/01/og-thenaiharn.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "The Nai Harn"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Nai_harn_beach_phuket_%2863%29.jpg/1280px-Nai_harn_beach_phuket_%2863%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Wolfgang Holzem (area photo: Nai Harn Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Jul-Sep 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 12, 16 Jan 2027).",
+   "lat": 7.7785281,
+   "lng": 98.3032014,
+   "coordSource": "google-maps + osm (43 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Nai Harn Phuket, Nai Harn Beach"
+  },
+  {
+   "id": "wyndham-grand-nai-harn",
+   "name": "Wyndham Grand Nai Harn Beach Phuket",
+   "area": "nai-harn",
+   "tier": "luxury",
+   "priceText": "About 6,700-8,900 THB / night (~$200-265).",
+   "whyStay": "Five-star resort with 10 pools and top guest scores (4.9) at a mid-range price. Hotel shuttle or a 17-minute walk to Nai Harn Beach. Great value in the relaxed south.",
+   "description": "Large modern resort on a green hillside near Nai Harn Beach, with lagoons around it. It has 10 pools, a spa, a gym, and Thai and Western restaurants. Its Google score (4.9 from about 3,900 reviews) is very high. Cheaper than the other five-star picks in this list.",
+   "nearby": "Nai Harn Beach 17 min on foot (1.3 km) or by hotel shuttle. Illuzion (Patong) about 25-30 min by car. Phuket Old Town about 25-30 min.",
+   "tips": [
+    "Use the hotel shuttle to Nai Harn Beach."
+   ],
+   "vibe": [
+    "value",
+    "pools",
+    "relaxed"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.9 (3,911 reviews)",
+   "website": "https://www.wyndhamhotels.com/wyndham-grand/phuket-thailand/wyndham-grand-nai-harn-beach-phuket/overview",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.wyndhamhotels.com/wyndham-grand/phuket-thailand/wyndham-grand-nai-harn-beach-phuket/overview"
+    }
+   ],
+   "sources": [
+    "https://www.wyndhamhotels.com/wyndham-grand/phuket-thailand/wyndham-grand-nai-harn-beach-phuket/overview"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.wyndhamhotels.com/content/dam/property-images/en-us/gr/th/others/rawai-muang/52543/52543_exterior_view_1.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Wyndham Grand Nai Harn Beach Phuket"
+    }
+   ],
+   "verification": "Open: Google reviews through Sep 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (9, 10, 12, 14, 16 Jan 2027).",
+   "lat": 7.7831422,
+   "lng": 98.3110491,
+   "coordSource": "google-maps + official site (8 m) + osm (88 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wyndham Grand Nai Harn Beach Phuket"
+  },
+  {
+   "id": "roost-glamping",
+   "name": "Roost Glamping",
+   "area": "rawai",
+   "tier": "budget",
+   "priceText": "Dorm bed about 420 THB (~$13). Tent for two about 1,000-1,200 THB / night (~$30-35).",
+   "whyStay": "Cheap, social glamping in Rawai with tents, an 8-bed dorm and an infinity pool. 5 minutes by car to Nai Harn Beach. A fun budget base in the laid-back south.",
+   "description": "Budget glamping site in Rawai. Choose a premium tent with AC and private bathroom, a fan tent, a shared tent or an 8-bed dorm. There is an infinity pool, chilled-out music in an open-air space, and Tojo's Cafe and Bar (open 8:30-21:30).",
+   "nearby": "Nai Harn Beach 5 min by car (2.6 km) or 29 min on foot. Illuzion (Patong) about 25-30 min by car. Phuket Old Town about 25-30 min.",
+   "tips": [
+    "Choose a tent with AC and a private bathroom for more comfort.",
+    "The beach is not close on foot. Rent a scooter or use Grab."
+   ],
+   "vibe": [
+    "budget",
+    "social",
+    "glamping"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.6 (454 reviews)",
+   "website": "https://www.roostglamping.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.roostglamping.com/"
+    }
+   ],
+   "sources": [
+    "https://www.roostglamping.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.roostglamping.com/images/uploads/54/1665046426tent-1.png",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Roost Glamping"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+     "source": "Wikimedia Commons",
+     "license": "Public domain",
+     "credit": "ADwarf (area photo: Rawai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from May 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 (1 adult and 2 adults, 12 and 16 Jan 2027).",
+   "lat": 7.7760886,
+   "lng": 98.3182545,
+   "coordSource": "google-maps + osm (31 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Roost Glamping, Rawai, Phuket"
+  },
+  {
+   "id": "casa-blanca-phuket",
+   "name": "Casa Blanca Boutique Hotel",
+   "area": "phuket-town",
+   "tier": "boutique",
+   "priceText": "About 1,900-2,300 THB / night (~$57-67).",
+   "whyStay": "Restored Sino-Portuguese shophouse hotel with a pool, in the heart of the Old Town. 4 minutes on foot to Thalang Road. Cheap, charming and close to cafes and street food.",
+   "description": "Boutique hotel in restored old shophouses on Phuket Road in the Old Town. It has a garden, a coffee shop and a swimming pool. Rooms are Deluxe, Premium Deluxe and Family Suite. Good for culture, local food and the Sunday walking street.",
+   "nearby": "Thalang Road 4 min on foot. Courage Bar (local underground nights) about 10 min on foot. Patong about 25-30 min by car. Airport about 40 min.",
+   "tips": [
+    "On Sun 10 or Sun 17 Jan, visit the Lard Yai walking street on Thalang Road (16:00-22:00).",
+    "Follow @fake_palm and @subphuket on Instagram for underground parties at Courage Bar."
+   ],
+   "vibe": [
+    "culture",
+    "heritage",
+    "value"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.5 (511 reviews)",
+   "website": "https://www.casablancaphuket.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.casablancaphuket.com/"
+    }
+   ],
+   "sources": [
+    "https://www.casablancaphuket.com/",
+    "https://hotelierschoice.com/de/guide/phuket/boutique/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.casablancaphuket.com/images/slide_show/casablancaphuket_01.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Casa Blanca Boutique Hotel"
+    },
+    {
+     "url": "https://www.casablancaphuket.com/images/slide_show/casablancaphuket_06.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Casa Blanca Boutique Hotel"
+    }
+   ],
+   "verification": "Open: Google reviews from Jul-Aug 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (12 and 16 Jan 2027).",
+   "lat": 7.8839232,
+   "lng": 98.390744,
+   "coordSource": "google-maps + osm (41 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Casa Blanca Boutique Hotel Phuket, Phuket Old Town"
+  },
+  {
+   "id": "memory-at-on-on",
+   "name": "The Memory at On On Hotel",
+   "area": "phuket-town",
+   "tier": "mid-range",
+   "priceText": "About 2,900-3,600 THB / night (~$87-107).",
+   "whyStay": "Sleep in Phuket Town's first hotel, a 1927 Sino-Portuguese building on Phang Nga Road. History and style, with the Old Town's cafes, food and bars at your door.",
+   "description": "Phuket Town's first hotel, built in 1927 by craftsmen from Penang in Sino-Portuguese style, now restored as The Memory. It is a two-storey landmark on Phang Nga Road in the Old Town. You can walk everywhere in the old quarter.",
+   "nearby": "Thalang Road 6 min on foot. Courage Bar about 6 min on foot. Patong about 25-30 min by car. Airport about 40 min.",
+   "tips": [
+    "On Sun 10 or Sun 17 Jan, the Lard Yai walking street runs on Thalang Road (16:00-22:00).",
+    "Courage Bar nearby hosts FAKE PALM and SUB nights. Dates are irregular, so check their Instagram."
+   ],
+   "vibe": [
+    "heritage",
+    "culture",
+    "central"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.6 (1,491 reviews)",
+   "website": "https://www.thememoryhotel.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.thememoryhotel.com/"
+    }
+   ],
+   "sources": [
+    "https://www.thememoryhotel.com/",
+    "https://hotelierschoice.com/de/guide/phuket/boutique/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.thememoryhotel.com/upload/home/1200430823-bg-home1.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "The Memory at On On Hotel"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg/1280px-Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 2.0",
+     "credit": "Sharon Hahn Darlin"
+    }
+   ],
+   "verification": "History from the official site (built B.E. 2470 = 1927). Open: Google reviews from Sep 2026, no closure flag (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (12 and 16 Jan 2027).",
+   "lat": 7.8838119,
+   "lng": 98.3884762,
+   "coordSource": "google-maps + official site (14 m) + osm (7 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Memory at On On Hotel, Phang Nga Road, Phuket Town"
+  },
+  {
+   "id": "shunli-hotel",
+   "name": "Shunli Hotel",
+   "area": "phuket-town",
+   "tier": "budget",
+   "priceText": "About 1,400-1,600 THB / night (~$41-46). Most January dates showed no online rate.",
+   "whyStay": "Tiny owner-run hotel in the Old Town with a 5.0 Google score from 401 reviews. 10 bright rooms, breakfast included, 5 minutes on foot to Thalang Road.",
+   "description": "Small, simple hotel on Krabi Road with 10 bright rooms, free Wi-Fi and a home-cooked breakfast. Guests love the kind owners and the central Old Town location. One guest mentions noise from delivery trucks early in the morning.",
+   "nearby": "Thalang Road 5 min on foot. Courage Bar about 8 min on foot. Patong about 25 min by car.",
+   "tips": [
+    "Few online rates for January. Message the hotel on Facebook.",
+    "Light sleepers: ask for a room away from the street."
+   ],
+   "vibe": [
+    "budget",
+    "local",
+    "family-run"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 5.0 (401 reviews)",
+   "website": "https://www.facebook.com/Shunlihostelphuket",
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/Shunlihostelphuket"
+    }
+   ],
+   "sources": [
+    "https://www.facebook.com/Shunlihostelphuket"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Phuket_Town_Buildings-of-Yaowarat-Road-01.jpg/1280px-Phuket_Town_Buildings-of-Yaowarat-Road-01.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "CEphoto, Uwe Aranas (area photo: Yaowarat Road)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95 (area photo: Thalang Road)"
+    }
+   ],
+   "verification": "Open: Google reviews from Jun 2026, no closure flag (checked 15 Oct 2026). Price: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (14 Jan 2027); other dates showed no rate. Only one coordinate source (Google Maps). Photos are Commons area photos.",
+   "lat": 7.8851236,
+   "lng": 98.3861307,
+   "coordSource": "google-maps listing",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Shunli Hotel, Krabi Road, Phuket Town"
+  },
+  {
+   "id": "milky-bay-resort",
+   "name": "Milky Bay Resort",
+   "area": "koh-phangan",
+   "tier": "mid-range",
+   "priceText": "About 3,400-4,700 THB / night (~$100-140).",
+   "whyStay": "Beachfront resort on Ban Tai beach with a pool. 5 minutes on foot to Chill Up, and 6-8 minutes by car to Halfmoon and OXA. A comfortable base for a Koh Phangan rave trip.",
+   "description": "Mid-range resort on Ban Tai beach, Koh Phangan, with Cape Dutch style buildings, a garden, a beachfront pool and a beachfront restaurant. Rooms go from Urban Deluxe to an Oceanfront Pavilion. Ban Tai is the main area for the island's jungle parties.",
+   "nearby": "Chill Up 5 min on foot (400 m). Halfmoon Festival about 6 min by car. OXA about 8 min by car. Thong Sala Pier about 6 min by car.",
+   "tips": [
+    "OXA runs every Friday. Tickets for 8 and 15 Jan 2027 are on sale on Megatix.",
+    "Taxis wait at the OXA exit until sunrise. Share one to pay less."
+   ],
+   "vibe": [
+    "beach",
+    "party base",
+    "comfortable"
+   ],
+   "beachfront": true,
+   "ratingText": "Google 4.3 (1,148 reviews)",
+   "website": "https://www.milkybayresort.com/",
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.milkybayresort.com/"
+    }
+   ],
+   "sources": [
+    "https://www.milkybayresort.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.milkybayresort.com/images/1942.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Milky Bay Resort"
+    },
+    {
+     "url": "https://www.milkybayresort.com/assets/images/icon/og-images.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Milky Bay Resort"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ban_Tai_Beach_Ko_Pha_Ngan.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95 (area photo: Ban Tai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Jul 2026, no closure flag, official site live (checked 15 Oct 2026). Prices: Google Hotels lowest rate, checked 15 Oct 2026 for 2 adults (12, 14, 16 Jan 2027).",
+   "lat": 9.7031288,
+   "lng": 100.0120321,
+   "coordSource": "google-maps + osm (65 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Milky Bay Resort, Ban Tai, Koh Phangan"
+  },
+  {
+   "id": "see-sea-backpackers",
+   "name": "See Sea Backpackers",
+   "area": "koh-phangan",
+   "tier": "hostel",
+   "priceText": "Dorm beds listed from about 200-270 THB / night (~$6-8) on undated listings. Expect more in January.",
+   "whyStay": "Small, friendly hostel in Ban Tai, the closest pick to Halfmoon (4 minutes by car) and OXA (6 minutes). Top guest scores, cheap beds, and a calm place to sleep after the party.",
+   "description": "Small, highly rated hostel in Ban Tai, about 900 m from the beach. Guests praise the owners and the relaxed, quiet mood. One guest says the 10-bed dorm feels crowded. Its own website is down, so book on Booking.com or Hostelworld.",
+   "nearby": "Halfmoon Festival about 4 min by car (31 min on foot). OXA about 6 min by car. Chill Up 19 min on foot. Thong Sala Pier about 8 min by car.",
+   "tips": [
+    "Book on Booking.com or Hostelworld. The hostel website does not work.",
+    "Ride a scooter only if you are experienced. At night, party taxis are safer."
+   ],
+   "vibe": [
+    "budget",
+    "social",
+    "quiet"
+   ],
+   "beachfront": false,
+   "ratingText": "Google 4.8 (244 reviews); Hostelworld 9.1 (82 reviews)",
+   "links": [
+    {
+     "label": "Booking.com",
+     "url": "https://www.booking.com/hotel/th/see-sea-backpackers-house.html"
+    }
+   ],
+   "sources": [
+    "https://www.booking.com/hotel/th/see-sea-backpackers-house.en-gb.html",
+    "https://www.hostelz.com/nl/goedkoopste-hostels-in-koh-phangan",
+    "https://www.hostelworld.com/hostels/asia/thailand/koh-phangan/f/party/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ban_Tai_Beach_Ko_Pha_Ngan.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95 (area photo: Ban Tai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Jul 2026, no closure flag (checked 15 Oct 2026). Official site (seeseabackpackers.com) shows a Wix domain error. Google showed no Jan 2027 rate; price is from undated Hostelworld and Hostelz listings. Photo is a Commons area photo.",
+   "lat": 9.700031,
+   "lng": 100.0215365,
+   "coordSource": "google-maps + osm 'See Sea' (16 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "See Sea Backpackers, Ban Tai, Koh Phangan"
+  },
+  {
+   "id": "slumber-party-phangan",
+   "name": "Slumber Party Beach Koh Phangan",
+   "area": "koh-phangan",
+   "tier": "hostel",
+   "priceText": "Dorm bed about 560 THB / night (~$17).",
+   "whyStay": "Beachfront party hostel in Ban Tai with a pool and a beach bar. Cheap beds, beer pong and an easy crowd for going out. 5 minutes by car from Thong Sala Pier.",
+   "description": "Party hostel on Ban Tai beach with dorms, private rooms and tents. It has a pool, a beach bar and a gym. Guests praise the location and the manager. Some say it feels understaffed and the shared tent bathrooms are not always clean.",
+   "nearby": "On Ban Tai beach. Thong Sala Pier 5 min by car. Chill Up 19 min on foot. Halfmoon about 9 min and OXA about 10 min by car.",
+   "tips": [
+    "Good if you want a party crowd. Not for quiet nights.",
+    "Ask the staff about this week's jungle parties and shared taxis."
+   ],
+   "vibe": [
+    "party",
+    "social",
+    "beach",
+    "budget"
+   ],
+   "beachfront": true,
+   "ratingText": "Google 4.5 (279 reviews)",
+   "website": "https://hotels.cloudbeds.com/en/reservation/lUlKrX",
+   "links": [
+    {
+     "label": "Book direct (Cloudbeds)",
+     "url": "https://hotels.cloudbeds.com/en/reservation/lUlKrX"
+    }
+   ],
+   "sources": [
+    "https://hotels.cloudbeds.com/en/reservation/lUlKrX"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://h-img1.cloudbeds.com/uploads/309581/slumber_party_koh_phangan_-_10-bed-5~~66baf88815db1.jpg",
+     "source": "official website",
+     "license": "© hotel (official website)",
+     "credit": "Slumber Party Beach Koh Phangan"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95 (area photo: Ban Tai Beach)"
+    }
+   ],
+   "verification": "Open: Google reviews from Aug 2026, no closure flag, booking page live (checked 15 Oct 2026). Price: Google Hotels lowest rate, checked 15 Oct 2026 for 1 adult (12 and 16 Jan 2027).",
+   "lat": 9.7065904,
+   "lng": 100.0006827,
+   "coordSource": "google-maps + official booking page schema (23 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Slumber Party Beach Koh Phangan, Ban Tai"
+  }
+ ],
+ "notes": "24 hotels, resumed from the interrupted attempt and filled with targeted checks on 15 Oct 2026. Tiers: 7 luxury, 3 boutique, 8 mid-range, 2 budget, 4 hostel. Areas: Natai 3 (Baba, Aleenta, Natai House) plus the Snug Airportel near the airport as a budget Circoloco base; Kamala, Surin and Bang Tao 5; Patong 3; Kata, Kata Noi and Karon 3; Nai Harn and Rawai 3; Old Town 3; Koh Phangan (Ban Tai) 3.\n\nPRICES: Google Hotels lowest offers for 1 night, checked 15 Oct 2026. Mainly Tue 12 and Sat 16 Jan 2027, plus 9, 10, 14 and 15 Jan from the earlier pass. Hotels use 2 adults; hostels use 1 adult, which gives the bed price. Google returned AED, converted at 15 Oct 2026 rates (1 USD = 33.63 THB = 3.6725 AED). Offers may exclude tax and service charge.\n- Circoloco Saturdays (9 and 16 Jan) push Natai prices up 2-3 times. Example: Aleenta is about 19,400 THB on Tue 12 Jan and 45,000-52,000 THB on 9 and 16 Jan.\n- Baba Beach Club had no Google rate for any date. Its range comes from a Hotels.com listing for 6-7 Jan 2026 (KRW 576,733-684,581, taxes included).\n- See Sea Backpackers price is from undated Hostelworld and Hostelz listings.\n- Beyond Kata, Shunli and Natai House showed no rate for some dates. The text says \"no online rate\", not \"sold out\".\n\nOPEN CHECK: every listing has Google reviews from 2026 and no closure flag. Coco Garden (Koh Phangan) was dropped because its newest reviews are a year old. ibis Styles Bangtao opened in April 2026 (Accor launch release).\n\nCOORDINATES: Google Maps listing pins, cross-checked with OSM (Photon, Overpass or Nominatim), official-site schema data, a Google directions link on the official site (Tented Camp) or Trip.com (Baba). Medium confidence: Natai House and Shunli (Google only) and Lub d (OSM node has no name).\n\nDISTANCES: OSRM foot and car routing (routing.openstreetmap.de). Car times have a traffic buffer added and are rounded.\n- OXA distances use the events task's coordinates (9.68693, 100.04643, from OXA's official map link). The previous attempt used an inland pin about 3.8 km away, so these were recomputed.\n- Courage Bar's position is a low-confidence street estimate from the events task.\n\nVENUES:\n- \"Niky's\" is Niky's Speakeasy & Nightclub, a techno club on Soi Bang Thao 2 (7.98627, 98.29922). Google 4.5 (56 reviews), latest review about Aug 2026.\n- Bermudos' 2026/27 venue is NOT confirmed. Its Google listing in Si Sunthon has only 3-4-year-old reviews and is closed to new posts. Prior research (Tripadvisor, Mixmag) places it in Rawai/Nai Harn (New Reggae Bar). It is mentioned only as a hedged tip on The Nai Harn.\n\nIMAGES: all URLs returned HTTP 200 with an image type. Official photos where the site allowed it. Where official sites block bots or are down, credited Wikimedia Commons area photos are used, marked \"(area photo: ...)\" in credit: Aleenta, Natai House, Holiday Inn Express, Lub d, Shunli, See Sea. Partner photo URLs from Google listings were not used, because their IDs did not reliably match the property.\n\nREUSED FROM OTHER TASKS: Circoloco dates and times (Dice, Ticketmelon, Baba page), OXA Megatix dates, and Lard Yai walking street hours (Sundays 16:00-22:00).\n\nCONSIDERED, NOT INCLUDED: Sunsuri, Best Western Premier Bangtao, Santhiya Natai, The Talay, Coco Garden.\n\nFILES: build script /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/hotels2/build_hotels.py; output /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/hotels2/hotels.json."
+}

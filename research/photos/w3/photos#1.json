@@ -1,0 +1,124 @@
+{
+ "results": [
+  {
+   "key": "places:phang-nga-bay-james-bond",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-phang-nga-bay-james-bond.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG/1280px-Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_36.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Isla_Tapu,_Phuket,_Tailandia,_2013-08-20,_DD_36.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 841,
+   "note": "The classic view of the Ko Tapu rock pillar ('James Bond Island') with a longtail boat, the Khao Phing Kan cliffs, blue sky and green water. This is candidate 2. Candidate 1 was rejected: grey overcast sky and the Ko Tapu pillar is not visible."
+  },
+  {
+   "key": "places:hong-by-starlight",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-hong-by-starlight.jpg",
+   "url": "https://johngray-seacanoe.com/wp-content/uploads/2017/01/jame24.jpg",
+   "page": "https://johngray-seacanoe.com/tour/hong-by-starlight/",
+   "credit": "\u00a9 John Gray's Sea Canoe",
+   "license": "official site",
+   "width": 2048,
+   "height": 1365,
+   "note": "Official tour photo: a guided yellow John Gray 'Sea Canoe' paddling among the Phang Nga Bay limestone rocks. It is the tour page's og:image (candidate 2), saved as the full 2048px original instead of the 1024px resize. Candidate 1 was rejected: an old, soft 768px photo."
+  },
+  {
+   "key": "places:phi-phi-maya-bay",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-phi-phi-maya-bay.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Maya_Bay_enclosed_limestone_cliffs_and_turquoise_water_Ko_Phi_Phi_Le.jpg/1280px-Maya_Bay_enclosed_limestone_cliffs_and_turquoise_water_Ko_Phi_Phi_Le.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Maya_Bay_enclosed_limestone_cliffs_and_turquoise_water_Ko_Phi_Phi_Le.jpg",
+   "credit": "Nnthurber",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 959,
+   "note": "Maya Bay seen from the beach (March 2026): turquoise water between sheer cliffs, with boats moored at the mouth of the bay. Chosen over candidate 1, a sharp 2013 photo that shows longtail boats pulled up on Maya Beach. Boats can no longer land there since the 2022 reopening. Candidate 1 is a fine fallback: Diego Delso, CC BY-SA 3.0."
+  },
+  {
+   "key": "places:similan-islands",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-similan-islands.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Mu_Ko_Similan_National_Park_Phang_Nga.jpg/1280px-Mu_Ko_Similan_National_Park_Phang_Nga.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mu_Ko_Similan_National_Park_Phang_Nga.jpg",
+   "credit": "KOSIN SUKHUM",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Donald Duck Bay on Ko Similan (island #8), seen from the Sail Rock viewpoint: white beach, bright turquoise bay, granite boulders, moored yachts. Found by searching Commons. Candidate 1 was rejected: a hazy 2.4:1 panorama whose 16:9 crop cuts off the beach and half a person at the edge. Candidate 2 was rejected: a generic 1024px beach shot."
+  },
+  {
+   "key": "places:koh-racha-yai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-racha-yai.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Racha_Yai_Island.jpg/1280px-Racha_Yai_Island.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Racha_Yai_Island.jpg",
+   "credit": "ELPHUKET",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Sharp 2024 drone shot of Racha Yai's main bay (Patok Bay): white sand, turquoise water, the pier, moored boats and resort gardens. Candidate 1 accepted. Candidate 2 shows only open sea."
+  },
+  {
+   "key": "places:coral-island-koh-hey",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-coral-island-koh-hey.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ko_Hae.jpg/1280px-Ko_Hae.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ko_Hae.jpg",
+   "credit": "Kevin Poh",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Beach on Koh Hey (Coral Island): white sand, clear green water, swimmers and speedboats, with the Phuket coast across the water. The same Flickr photo is used as the Wikivoyage Coral Island banner. The source file has black letterbox bars, so the saved file is a 1280x720 centre crop of the 1280x960 thumbnail with the bars removed. Both candidates were rejected: #1 is a stormy longtail shot that could be any beach, #2 is a sunset with no island."
+  },
+  {
+   "key": "places:khai-islands",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-khai-islands.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_05.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Isla_Khai_Nok,_Tailandia,_2013-08-19,_DD_05.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Koh Khai Nok: the rocky islet with its colourful beach bar on stilts above white sand and rocks, under a bright sky. Candidate 1 accepted."
+  },
+  {
+   "key": "places:koh-yao-noi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-yao-noi.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg/1280px-Koh_Yao_Noi%2C_Limestone_formations_in_Phang_Nga_Bay%2C_Thailand.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Yao_Noi,_Limestone_formations_in_Phang_Nga_Bay,_Thailand.jpg",
+   "credit": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "The island's signature view: limestone rocks rising from calm Phang Nga Bay, seen from Koh Yao Noi on a soft, hazy day. Reads well as a 16:9 card. Candidate 1 accepted. Commons has few photos of the island itself (only hazy beach or sunrise shots)."
+  },
+  {
+   "key": "places:koh-hong-krabi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-hong-krabi.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ko_Hong_island_beach.jpg/1280px-Ko_Hong_island_beach.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ko_Hong_island_beach.jpg",
+   "credit": "Maksym Kozlenko",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 519,
+   "note": "Koh Hong (Krabi) beach: a large rock and two rock islets framing turquoise water with swimmers. It is a 2.47:1 panorama. The 16:9 centre crop (about 923px wide) keeps both rock formations and the beach. Candidate 1 accepted."
+  },
+  {
+   "key": "places:railay-krabi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-railay-krabi.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/West_Rai_Leh_%2811%29.jpg/1280px-West_Rai_Leh_%2811%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:West_Rai_Leh_(11).jpg",
+   "credit": "Krzysztof Golik",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 655,
+   "note": "Railay West beach with a row of longtail boats at the water's edge and the Railay limestone cliffs behind. The image is about 1.95:1 and survives a 16:9 crop. Candidate 1 accepted. Candidate 2 is dominated by sunbathers."
+  }
+ ]
+}

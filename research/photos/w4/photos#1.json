@@ -1,0 +1,141 @@
+{
+ "results": [
+  {
+   "key": "hotels:baba-beach-club-natai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-baba-beach-club-natai.jpg",
+   "url": "https://www.bababeachclub.com/images/slide-natai-03.jpg",
+   "page": "https://www.bababeachclub.com/natai/",
+   "credit": "\u00a9 Baba Beach Club Natai",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Signature pool with the round 'flying saucer' swim-up bar, flamingo floats, beachfront villas and the Andaman Sea behind; official Natai gallery slide (native 16:9). Preferred over the 700x700 candidate crops of the same view."
+  },
+  {
+   "key": "hotels:aleenta-phuket-phang-nga",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-aleenta-phuket-phang-nga.jpg",
+   "url": "https://web.archive.org/web/20260717210055im_/https://www.aleenta.com/wp-content/uploads/Aleenta-Phuket-Phang-Nga-Resort-Spa.jpg",
+   "page": "https://web.archive.org/web/20260717210056/https://www.aleenta.com/phuket/",
+   "credit": "\u00a9 Aleenta Phuket Phang Nga Resort & Spa",
+   "license": "official site",
+   "width": 2048,
+   "height": 1152,
+   "note": "Daylight drone view of the white beachfront pool villas on Natai Beach (native 16:9). It was the og:image of the official aleenta.com/phuket/ page; the live site (Cloudflare challenge) dropped it in the 2026 redesign, so the file came from the Wayback copy of 2026-07-17. Candidate Natai Beach area photos rejected because they don't show the resort. Live-site fallback: https://www.aleenta.com/media/gsqlejse/aleenta-phuket-phang-nga-luxury-resort-thailand-exterior-mp-l1007702.jpg?width=1920 (sunset over the resort's infinity pool)."
+  },
+  {
+   "key": "hotels:natai-house",
+   "ok": false,
+   "note": "No acceptable photo found. No official website (Facebook page only, no Wayback copy); the Facebook og:image is just the 'Natai House Resort' logo. Commons searches (Natai, Natai House, Khok Kloi, Thai name) return only Natai Beach and jetty area shots; the candidate Natai Beach panoramio photos were rejected because they don't show the hotel. Only OTA listing photos exist."
+  },
+  {
+   "key": "hotels:snug-airportel",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-snug-airportel.jpg",
+   "url": "https://static.wixstatic.com/media/f3fda1_f263463dbbdd4e2ca6993f0a63f0a93e~mv2.jpeg",
+   "page": "https://www.thesnugairportel.com/",
+   "credit": "\u00a9 The Snug Airportel",
+   "license": "official site",
+   "width": 2048,
+   "height": 1536,
+   "note": "Pool of The Snug wing, shaded by palm trees, with sun loungers (official homepage photo; the site describes the Snug pool as surrounded by palm trees). Chosen over the candidate room-interior share image."
+  },
+  {
+   "key": "hotels:intercontinental-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-intercontinental-phuket.jpg",
+   "url": "https://phuket.intercontinental.com/sites/phuket/files/homepage-slider/Hero%20IV%20LR_0.jpg",
+   "page": "https://phuket.intercontinental.com/",
+   "credit": "\u00a9 InterContinental Phuket Resort",
+   "license": "official site",
+   "width": 1920,
+   "height": 810,
+   "note": "Elevated view over the infinity pool, beach-club pavilion, umbrellas and Kamala Bay through pine trees (official homepage hero). Panorama that crops cleanly to 16:9; chosen over the candidate beach slide, which has a dark gradient baked into the bottom."
+  },
+  {
+   "key": "hotels:novotel-phuket-kamala",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-novotel-phuket-kamala.jpg",
+   "url": "https://www.ahstatic.com/photos/7235_ho_00_p_2048x1536.jpg",
+   "page": "https://all.accor.com/hotel/7235/index.en.shtml",
+   "credit": "\u00a9 Novotel Phuket Kamala Beach",
+   "license": "official site",
+   "width": 2048,
+   "height": 1536,
+   "note": "Aerial of the orange-accented hotel blocks on the white sand of north Kamala Beach in morning light; the candidate image at 2048 px from Accor's official image CDN."
+  },
+  {
+   "key": "hotels:twinpalms-surin",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-twinpalms-surin.webp",
+   "url": "https://twinpalmshotelsresorts.com/surin-beach-phuket/wp-content/uploads/sites/15/2024/09/hometps.webp",
+   "page": "https://www.twinpalmshotelsresorts.com/surin-beach-phuket/",
+   "credit": "\u00a9 Twinpalms Surin Beach Phuket",
+   "license": "official site",
+   "width": 2500,
+   "height": 2000,
+   "note": "Long palm-lined main pool leading to the A-frame lobby pavilion (official homepage image; candidate 1)."
+  },
+  {
+   "key": "hotels:ibis-styles-bangtao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-ibis-styles-bangtao.jpg",
+   "url": "https://www.ahstatic.com/photos/c2h9_ho_00_p_2048x1536.jpg",
+   "page": "https://all.accor.com/hotel/C2H9/index.en.shtml",
+   "credit": "\u00a9 ibis Styles Phuket Bangtao",
+   "license": "official site",
+   "width": 2048,
+   "height": 1536,
+   "note": "Sunset aerial of the hotel building with its rooftop infinity pool and Bang Tao Bay behind; the ibis Styles sign is part of the facade. Candidate image at 2048 px from Accor's official CDN."
+  },
+  {
+   "key": "hotels:twinpalms-tented-camp",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-twinpalms-tented-camp.webp",
+   "url": "https://twinpalmshotelsresorts.com/tented-camp-phuket/wp-content/uploads/sites/16/2024/10/0K9A6863-Enhanced-NR-scaled-1.webp",
+   "page": "https://twinpalmshotelsresorts.com/tented-camp-phuket/",
+   "credit": "\u00a9 Twinpalms Tented Camp Phuket",
+   "license": "official site",
+   "width": 2048,
+   "height": 1366,
+   "note": "Open-sided luxury safari tent with bed and swing daybed among casuarina trees, beach visible behind (official site; candidate 1)."
+  },
+  {
+   "key": "hotels:hotel-indigo-patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-hotel-indigo-patong.webp",
+   "url": "https://phuketpatong.hotelindigo.com/wp-content/uploads/2026/03/Hotel-Indigo-Patong-Home.webp",
+   "page": "https://phuketpatong.hotelindigo.com/",
+   "credit": "\u00a9 Hotel Indigo Phuket Patong",
+   "license": "official site",
+   "width": 1920,
+   "height": 1280,
+   "note": "Street facade at dusk with the Hotel Indigo sign, boat sculpture, ornate lamp posts and a large banyan tree (official homepage hero; candidate 1, desktop version; the mobile duplicate was deleted)."
+  },
+  {
+   "key": "hotels:holiday-inn-express-patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-holiday-inn-express-patong.jpg",
+   "url": "https://digital.ihg.com/is/image/ihg/holiday-inn-express-phuket-9880656485-original?wid=1920&fmt=jpg&qlt=90",
+   "page": "https://www.ihg.com/holidayinnexpress/hotels/us/en/phuket/phuex/hoteldetail",
+   "credit": "\u00a9 Holiday Inn Express Phuket Patong Beach Central",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Pool courtyard with umbrellas and the hotel's purple-framed wings in tropical greenery (native 16:9, IHG gallery image for hotel code PHUEX). ihg.com returns 403, so the image IDs came from the Wayback copy of the hotel page (2025-10-10); the file is served live by IHG's image CDN. The candidate Patong Beach area photo was rejected."
+  },
+  {
+   "key": "hotels:lub-d-patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-lub-d-patong.jpg",
+   "url": "https://web.archive.org/web/20200926012237im_/https://lubd.com/wp-content/uploads/2020/01/sliding_Patong02.jpg",
+   "page": "https://web.archive.org/web/20210726184557/https://lubd.com/destination/phuket-patong/",
+   "credit": "\u00a9 Lub d Phuket Patong",
+   "license": "official site",
+   "width": 1920,
+   "height": 1280,
+   "note": "Daytime view of the long pool beside the white hostel wings, spiral staircase and lounge area (official slider photo on the Lub d Phuket Patong page, 2020-2021). lubd.com returns 403 to every request, so the file came from the Wayback copy; the 2025 site hero shows the same pool and building. The candidate Bangla Road and Patong Beach area photos were rejected."
+  }
+ ]
+}

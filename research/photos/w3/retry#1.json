@@ -1,0 +1,16 @@
+{
+ "results": [
+  {
+   "key": "places:mee-ton-poe",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-mee-ton-poe.jpg",
+   "url": "https://scontent.fdxb5-1.fna.fbcdn.net/v/t39.30808-6/475200623_1131966465385511_5891437751272545730_n.jpg?stp=dst-jpg_tt6&cstp=mx960x730&ctp=s960x730&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=_NPk4z3QUdAQ7kNvwHosOb4&_nc_oc=AdrOMLCsmEhN8wTfZBCclSblPecni0wpXWBVX1kyT17DBp2TZR8bDGBsJ-saTJdn8aA&_nc_zt=23&_nc_ht=scontent.fdxb5-1.fna&_nc_gid=wcJKAURIrT7_pFz4r5ojgA&_nc_ss=7c20f&oh=00_AQOZzWSJ6aKktcrZlhhiEd-ET6_3qaAw3lwi2QdeXUEPGA&oe=6AD69E4E",
+   "width": 960,
+   "height": 730,
+   "credit": "\u00a9 Meetonpoe (Mee Ton Poe)",
+   "license": "official site",
+   "page": "https://www.facebook.com/photo/?fbid=578824077366422&set=a.578824040699759",
+   "note": "This is the cover photo from the restaurant's own Facebook page (facebook.com/meetonpoe, which OSM also lists as its website). It is an overhead shot of their signature Phuket Hokkien noodles: a gravy noodle bowl with egg yolk, seafood, pork and greens, served in a rooster bowl on the shop's branded paper printed with the \u6797 logo. Raw noodles, shallots, chives and pork crackling sit beside it. The photo is sharp and landscape, with no watermark. A 16:9 centre crop (960x540) keeps the whole bowl. 960 px is the largest size Facebook serves. The fbcdn link is signed and expires around 19 Oct 2026, but the file is saved locally. Rejected: the given candidate (a generic Hokkien mee photo from Bangkok, not this shop), the page's logo-only profile picture, and its 9 recent posts (portrait Vegetarian Festival procession shots). Searched with nothing usable: Wikimedia Commons (English and Thai names, Hokkien mee Phuket, and photos geotagged within 500 m of the main branch at the Surin Circle clock tower) and Openverse/Flickr CC (several spellings). Those turned up only generic Hokkien mee from other cities and shots of the clock tower. Phuket101's photos are third-party and all rights reserved, so I left them out. No official website exists (meetonpoe.com / .co.th do not resolve)."
+  }
+ ]
+}

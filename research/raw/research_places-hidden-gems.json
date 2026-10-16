@@ -1,0 +1,1424 @@
+{
+ "items": [
+  {
+   "id": "banana-beach",
+   "name": "Banana Beach",
+   "nameThai": "หาดบานาน่า",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "nai-thon",
+   "lat": 8.0419,
+   "lng": 98.2764,
+   "coordSource": "osm (beach way 479662723) + phuket101 map pin, 35 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Banana Beach, Choeng Thale, Thalang, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3,
+    "max": 5
+   },
+   "bestTime": "Weekday morning, before 10:00. The sea is calm from November to April.",
+   "openText": "Public beach, best in daylight.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Beach free. Parking 100 THB. Toilet and shower 20 THB. Sunbeds extra.",
+   "gettingThere": "Car or scooter. Take the coast road toward Nai Thon. Pass Andaman White Beach Resort. The new car park entrance is on the right, before Trisara resort. From the car park you are on the sand in one minute.",
+   "description": "Small cove with soft sand, clear water and rocks for snorkelling at both ends. Late in 2025 the old jungle path closed. Now you park at a new car park at the north end, next to a new beach club with music. The old family restaurant at the south end is still open.",
+   "tips": [
+    "Arrive before 10:00. By midday the sunbeds near the beach club are full.",
+    "Walk south to the old Banana Beach Restaurant. Simple Thai food and seafood, fair prices, no loud music.",
+    "Bring your own snorkel mask. The beach club rents gear, but it costs more.",
+    "Avoid weekends and Thai holidays. The beach is small and fills fast."
+   ],
+   "goodFor": [
+    "swimming",
+    "snorkelling",
+    "beach lunch"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Aug 2026)",
+     "url": "https://www.phuket101.net/banana-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Banana_beach_Phuket_2017_-_05.jpg/1280px-Banana_beach_Phuket_2017_-_05.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Anton Zelenov (User:Nino Verde)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Banana_beach_Phuket_2017_-_02.jpg/1280px-Banana_beach_Phuket_2017_-_02.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Anton Zelenov (User:Nino Verde)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/banana-beach/",
+    "https://www.phuket101.net/most-quiet-beaches-phuket/",
+    "https://www.openstreetmap.org/way/479662723"
+   ],
+   "verification": "phuket101 page updated 13 Aug 2026: old path closed late 2025, new car park 100 THB, toilets 20 THB, new beach club. Coordinates from OSM and the phuket101 map agree."
+  },
+  {
+   "id": "laem-singh-beach",
+   "name": "Laem Singh Beach",
+   "nameThai": "หาดแหลมสิงห์",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "surin",
+   "lat": 7.9685,
+   "lng": 98.2795,
+   "coordSource": "osm (beach relation 14010438) + phuket101 map pin, 45 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Laem Sing Beach, Choeng Thale, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3,
+    "max": 4
+   },
+   "bestTime": "Morning, when the boulders give shade. Walk in at mid or low tide.",
+   "openText": "Daylight. The boat runs only in good weather.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free if you walk. Boat 100 THB per person one way, return included. About 400 THB to charter the boat.",
+   "gettingThere": "Go to the far south end of Surin Beach. Walk past Tukta Restaurant to the rocks. The path takes 15-20 minutes, with boulders at the start. Or take the small boat from the same spot. No road access since 2017.",
+   "description": "A 300 m cove with golden sand, big granite boulders and clear water, between Surin and Kamala. The road access closed in 2017, so you come by a short boat ride or a rocky walk. Because of this it feels almost empty, even in high season. One small Thai restaurant on the rocks. No sunbeds, shops or toilets.",
+   "tips": [
+    "Wear trainers or sport sandals. The first rocks are slippery.",
+    "At high tide take the boat. Waves wash over the low part of the path.",
+    "Bring cash. The restaurant takes cash only and there is no ATM nearby.",
+    "The best snorkelling is at the south rocks, toward Kamala. Take your rubbish back with you."
+   ],
+   "goodFor": [
+    "quiet beach",
+    "snorkelling",
+    "short adventure"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Aug 2026)",
+     "url": "https://www.phuket101.net/laem-singh-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Laem_Sing_beach_-_panoramio.jpg/1280px-Laem_Sing_beach_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Tuderna"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sunset_at_Laem_Sing_Beach.jpg/1280px-Sunset_at_Laem_Sing_Beach.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Patcharapapats"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/laem-singh-beach/",
+    "https://www.phuket101.net/phuket-hidden-places/",
+    "https://www.openstreetmap.org/relation/14010438"
+   ],
+   "verification": "phuket101 page updated 4 Aug 2026: no road access, walk 15-20 min from Surin or boat 100 THB one way, one restaurant."
+  },
+  {
+   "id": "ya-nui-beach",
+   "name": "Ya Nui Beach",
+   "nameThai": "หาดยะนุ้ย",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "rawai",
+   "lat": 7.7675,
+   "lng": 98.3063,
+   "coordSource": "osm (Nominatim relation 5657696) + Google pin linked by phuket101, 25 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Yanui Beach, Rawai, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Morning, for calm water and snorkelling. Weekdays are quieter.",
+   "openText": "Public beach. Rentals and the two restaurants work in the daytime.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Snorkel set 100 THB, kayak 100 THB per hour, stand-up paddle board 300 THB per hour (prices from May 2026).",
+   "gettingThere": "On the coast road between Nai Harn and Promthep Cape, at the lowest curve of the road. Park along the road or on the small side road. About 22 km from Patong.",
+   "description": "Tiny cove split in two by a small rocky hill, with the island Koh Man in front. Clear water and rocks make it one of the easiest snorkel spots in the south. You can rent kayaks and paddle boards. Two simple Thai restaurants under the trees. It is small, so it can be busy at peak times.",
+   "tips": [
+    "In calm weather, paddle a kayak out toward Koh Man island.",
+    "Parking is limited. Come early or use a scooter.",
+    "Combine with Summore Day cafe and sunset at Promthep Cape, both a few minutes up the road."
+   ],
+   "goodFor": [
+    "snorkelling",
+    "kayaking",
+    "swimming"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (May 2026)",
+     "url": "https://www.phuket101.net/ya-nui-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ya_Nui_beach.jpg/1280px-Ya_Nui_beach.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/ya-nui-beach/",
+    "https://www.openstreetmap.org/relation/5657696"
+   ],
+   "verification": "phuket101 page updated 2 May 2026 (rental prices, two restaurants, limited parking)."
+  },
+  {
+   "id": "kata-noi-beach",
+   "name": "Kata Noi Beach",
+   "nameThai": "หาดกะตะน้อย",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "kata-noi",
+   "lat": 7.8063,
+   "lng": 98.2989,
+   "coordSource": "osm (beach relation 4235946) + Google pin linked by phuket101, 15 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kata Noi Beach, Karon, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3,
+    "max": 5
+   },
+   "bestTime": "Morning. Calm, clear sea from November to April. For sunset go up to the bars on the hill road.",
+   "openText": "Public beach, daylight.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. No public sunbed rental.",
+   "gettingThere": "About 3 minutes by scooter or Bolt from Kata Beach. Walking from Kata takes about 15 minutes on a hilly road with little pavement. Small car park at the south end near Katathani.",
+   "description": "Quiet white-sand bay just south of Kata, with very clear water in the dry season. Only three resorts share it, so there are no beach bars or long sunbed lines. Good for a long swim. The north end gets small waves. On the hill road above are sunset bars like After Beach Bar and The Sundeck.",
+   "tips": [
+    "Bring a towel. The sunbeds belong to the resorts.",
+    "Shade is only under the trees at both ends. The middle has none after mid-morning.",
+    "On busy weekends arrive before 10:00 to find parking.",
+    "Check the flags. A red flag means no swimming."
+   ],
+   "goodFor": [
+    "swimming",
+    "quiet beach",
+    "sunset drinks"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Sep 2026)",
+     "url": "https://www.phuket101.net/kata-noi-beach-phuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg/1280px-Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Tuderna"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 3.0",
+     "credit": "Jacek Lesniowski"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kata-noi-beach-phuket/",
+    "https://www.openstreetmap.org/relation/4235946"
+   ],
+   "verification": "phuket101 page updated 16 Sep 2026 (no public sunbeds, small car park, sunset bars). Same id as in the must-see working list, so it may be a duplicate."
+  },
+  {
+   "id": "tri-trang-beach",
+   "name": "Tri Trang Beach",
+   "nameThai": "หาดไตรตรัง",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "patong",
+   "lat": 7.8863,
+   "lng": 98.275,
+   "coordSource": "osm (beach way 188637338, middle) + Google pin linked by phuket101, 170 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Tri Trang Beach, Patong, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Morning, and at high tide for swimming. No sunset here, the sun goes down behind the cape.",
+   "openText": "Public beach, daylight.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Sunbeds at The HideOut are free with a food or drink order.",
+   "gettingThere": "From Patong drive south over the high bridge toward Amari Phuket and turn left just before the hotel. After Phuket Marriott Merlin Beach on the left, the main beach entrance is about 500 m further on the right. Roads are steep and winding.",
+   "description": "Quiet bay only a few kilometres south of Patong, but it feels far away. Palm trees, one row of beach chairs and the Rosewood resort behind. At low tide rocks and coral show, so swim at high tide. Good snorkelling near the rocks. Small cafes with big views sit on the hill road to Paradise Beach.",
+   "tips": [
+    "Wear water shoes. The seabed is rocky.",
+    "Blue Harbour Coffee and Sunshine View Restaurant on the hill road have wide views over the bay.",
+    "The HideOut at the north end is the only place where you eat on the sand."
+   ],
+   "goodFor": [
+    "quiet beach",
+    "snorkelling",
+    "cafe with a view"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Jun 2026)",
+     "url": "https://www.phuket101.net/tri-tra-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Patong_2015_april_-_panoramio_%2818%29.jpg/1280px-Patong_2015_april_-_panoramio_%2818%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Roma Neus (photo geotagged on Tri Trang Beach)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tri_Trang_Beach%2C_Phuket.jpg/1280px-Tri_Trang_Beach%2C_Phuket.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 2.0",
+     "credit": "Eustaquio Santimano (night photo)"
+    },
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20220404171534/tri-trang-beach-phuket-thailand.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/tri-tra-beach/",
+    "https://www.openstreetmap.org/way/188637338"
+   ],
+   "verification": "phuket101 page updated 6 Jun 2026: public entrance 500 m past Marriott Merlin, old Tri Trang Resort demolished, hill-road cafes open."
+  },
+  {
+   "id": "ao-yon-beach",
+   "name": "Ao Yon Beach",
+   "nameThai": "หาดอ่าวยน",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "cape-panwa",
+   "lat": 7.8118,
+   "lng": 98.3905,
+   "coordSource": "Google pin linked by phuket101 + phuket101 map + osm beach way 150195608, within 100 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ao Yon Beach, Wichit, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Weekdays. Some weekends locals hold dragon boat or sailing races here.",
+   "openText": "Public beach. Flamingo Beach Front Cafe until 22:00. The Cove 07:30-21:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "East coast, past Panwa Beach on the road to Cape Panwa. The entrance is easy to miss; look for small restaurant signs. Park on the main road and walk down. You need a car or scooter.",
+   "description": "Long, quiet bay on the east side of the island, near Cape Panwa. Tall palm trees, a few small beach restaurants and bars, and mostly locals and long-time residents. It still feels like old Phuket. Good for a slow walk, lunch and a swim far from the west-coast crowds.",
+   "tips": [
+    "Akoya rooftop bar at V Villas opens 17:00-23:00 and is busy. Book ahead.",
+    "The Cove, at the far end of the beach, serves Thai, Italian and seafood by the water.",
+    "Combine with the Khao Khad viewpoint tower on the hill road nearby."
+   ],
+   "goodFor": [
+    "quiet beach",
+    "local feel",
+    "lunch"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Mar 2026)",
+     "url": "https://www.phuket101.net/ao-yon-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ao_Yon_5.jpg/1280px-Ao_Yon_5.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Slleong"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ao_Yon_7.jpg/1280px-Ao_Yon_7.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Slleong"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/ao-yon-beach/",
+    "https://www.phuket101.net/most-quiet-beaches-phuket/",
+    "https://www.openstreetmap.org/relation/16057231"
+   ],
+   "verification": "phuket101 Ao Yon page updated 12 Mar 2026 and hidden-beaches list updated 15 Apr 2026 (quiet, park on the main road, restaurants open)."
+  },
+  {
+   "id": "layan-beach",
+   "name": "Layan Beach",
+   "nameThai": "หาดลายัน",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "layan",
+   "lat": 8.0283,
+   "lng": 98.289,
+   "coordSource": "phuket101 map pin + osm (Tan Restaurant node 13513898101) 40 m apart; Commons photos geotagged here",
+   "coordConfidence": "high",
+   "gmapsQuery": "Layan Beach, Choeng Thale, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Late afternoon to sunset. Weekdays are the quietest.",
+   "openText": "Public beach.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Thai massage at Tan Restaurant (old price list: about 400 THB).",
+   "gettingThere": "In Bang Tao, follow the signs to Banyan Tree. Pass the Banyan Tree gates, turn right at the T-junction and drive a few kilometres to the end of the road. Street parking only; the road is narrow.",
+   "description": "Quiet north end of Bang Tao Bay, where a small river meets the sea next to a big island. Locals and expats come for a long lunch, a swim and a massage. The small beach restaurants were removed. Tan Restaurant and Massage, at the end near the island, is the last one left.",
+   "tips": [
+    "Bring water and snacks. Food choice on the sand is very small now.",
+    "The beach faces west, so the sunset over the island is good.",
+    "For a drink with a view, the Rooftop by Anantara at Anantara Layan is close."
+   ],
+   "goodFor": [
+    "quiet beach",
+    "sunset",
+    "massage"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Aug 2026)",
+     "url": "https://www.phuket101.net/layan-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%99.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Maleewan1wanpen2thai"
+    },
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20220314222448/layan-beach-1-1.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/layan-beach/",
+    "https://www.phuket101.net/most-quiet-beaches-phuket/",
+    "https://www.openstreetmap.org/node/13513898101"
+   ],
+   "verification": "phuket101 page updated 26 Aug 2026: beach restaurants removed, Tan Restaurant and Massage still open (phone 099 483 4756)."
+  },
+  {
+   "id": "sai-kaew-beach",
+   "name": "Sai Kaew Beach",
+   "nameThai": "หาดทรายแก้ว",
+   "tier": "hidden-gem",
+   "category": "beach",
+   "area": "mai-khao",
+   "lat": 8.1895,
+   "lng": 98.2876,
+   "coordSource": "osm (node 11483237782 'Sai Kaew Beach') + phuket101 map point, 25 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sai Kaew Beach, Mai Khao, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Weekday. Late morning for lunch, or late afternoon for sunset with the Sarasin Bridge.",
+   "openText": "Public beach. The beach restaurant serves lunch; hours are not published.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "Far north of the island. Drive past the airport and keep going north, 5-10 minutes past Mai Khao. About 15 minutes from the airport. You need a car or scooter.",
+   "description": "Long, empty white-sand beach at the far north tip of Phuket, just before the Sarasin Bridge. Shallow water, small waves in the dry season and kilometres of sand to walk. Only one bamboo restaurant is left on the sand, serving Thai seafood. Leatherback turtles sometimes nest on this coast from November to February.",
+   "tips": [
+    "Order lunch around 11:30, walk the beach, and eat when you come back.",
+    "Bring water and a towel. No shops, toilets or shade outside the restaurant area.",
+    "Easy stop on the way to Natai and Phang Nga, just over the bridge.",
+    "Ta Tuay, a Michelin-listed local restaurant near the bridge, needs a booking."
+   ],
+   "goodFor": [
+    "empty beach",
+    "beach walk",
+    "sunset"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Apr 2026)",
+     "url": "https://www.phuket101.net/haad-sai-kaew-beach/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Phuket_2015_december_-_panoramio_%2825%29.jpg/1280px-Phuket_2015_december_-_panoramio_%2825%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Roma Neus (photo geotagged 95 m from this point)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Phuket_2014_December_-_panoramio_%2814%29.jpg/1280px-Phuket_2014_December_-_panoramio_%2814%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Roma Neus (photo geotagged on the beach)"
+    },
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20200327214748/000-sai-kaew-beach-north-phuket-2.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/haad-sai-kaew-beach/",
+    "https://www.phuket101.net/phuket-hidden-places/",
+    "https://www.phuket101.net/most-quiet-beaches-phuket/",
+    "https://www.openstreetmap.org/node/11483237782"
+   ],
+   "verification": "phuket101 Sai Kaew page updated 24 Apr 2026 and hidden-places page updated Jul 2026: one beach restaurant left after the clean-up of illegal buildings."
+  },
+  {
+   "id": "laem-krating-viewpoint",
+   "name": "Laem Krating Viewpoint",
+   "nameThai": "แหลมกระทิง",
+   "tier": "hidden-gem",
+   "category": "viewpoint",
+   "area": "nai-harn",
+   "lat": 7.7763,
+   "lng": 98.2892,
+   "coordSource": "osm (viewpoint node 8723519017 on Cape Krathing) + thaiholidayguide pin, 90 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Laem Krating, Nai Harn, Rawai, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Late afternoon. Start about 1.5 hours before sunset (about 18:30 in January) and walk back before dark.",
+   "openText": "Open nature area, no gate. Daylight only.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. No facilities.",
+   "gettingThere": "From Nai Harn Beach take the road past Ao Sane toward Baan Krating Phuket resort. After the resort an unmarked path goes over rock, grass and scrub to the cape, about 30-35 minutes on foot.",
+   "description": "Wild grassy cape at the south-west tip of Phuket, near Nai Harn. After a rough 30-minute walk you get open sea views, big waves on the rocks and Promthep Cape in the distance. Few people come. There are no fences, signs or facilities, so it is only for fit walkers in dry weather.",
+   "tips": [
+    "Wear real shoes with grip. Flip-flops do not work here.",
+    "Do not go alone, in rain or after dark. The cliff edges have no fence.",
+    "Bring water and a torch for the way back.",
+    "Ao Sane beach on the way had no facilities and building work in 2026. Do not count on a swim there."
+   ],
+   "goodFor": [
+    "hiking",
+    "sunset",
+    "photos"
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide: route (Jul 2026)",
+     "url": "https://www.thaiholidayguide.com/attraction/laem-krating-cape/"
+    },
+    {
+     "label": "COMO guided hike (Black Rock and Laem Krating)",
+     "url": "https://www.comohotels.com/thailand/como-point-yamu/experiences/black-rock-viewpoint-and-laem-krating-hike"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://images.thaiholidayguide.com/images/attractions/laem-krating-cape-fcde545dd.webp",
+     "source": "thaiholidayguide.com og:image",
+     "license": "Copyright of the website (check before reuse)"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/laem-krating-cape/",
+    "https://news.icstravelgroup.com/thailands-secret-sunset-viewpoint/",
+    "https://www.comohotels.com/thailand/como-point-yamu/experiences/black-rock-viewpoint-and-laem-krating-hike",
+    "https://www.phuket101.net/ao-sane-beach/",
+    "https://www.phuket-travel-secrets.com/ao-sane-beach.html",
+    "https://www.openstreetmap.org/node/8723519017"
+   ],
+   "verification": "Route from thaiholidayguide (updated Jul 2026). No 2026 report of a closure found. Baan Krating resort still takes 2026 bookings, so the road is in use. Trail is informal: check on the spot."
+  },
+  {
+   "id": "khao-khad-viewpoint",
+   "name": "Khao Khad Viewpoint Tower",
+   "nameThai": "หอชมวิวเขาขาด",
+   "tier": "hidden-gem",
+   "category": "viewpoint",
+   "area": "cape-panwa",
+   "lat": 7.8347,
+   "lng": 98.3836,
+   "coordSource": "osm (viewpoint node 1957082023) + thaiholidayguide pin + phuket101 map, within 85 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao Khad Views Tower, Wichit, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "Late afternoon for clear light, or a clear early morning. Avoid midday heat.",
+   "openText": "Daily, about 06:00-21:00 (one 2026 guide).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "On the hill road between Phuket Town and Cape Panwa (Wichit area), about 15-20 minutes from Phuket Town by car or scooter. No public transport. Car park at the base, then stairs up to the tower.",
+   "description": "Small viewing tower on a hill above Chalong Bay, on the road to Cape Panwa. From the top you get a 360-degree view: Chalong Bay, Phuket Town, Cape Panwa and many small islands. Few tourists come, so it is calm. Free, with a car park, toilets and a few stalls at the bottom.",
+   "tips": [
+    "There is no shade on the stairs. Bring water and a hat.",
+    "Show the Thai name หอชมวิวเขาขาด to drivers.",
+    "Combine with Ao Yon Beach and a seafood dinner in the Panwa area."
+   ],
+   "goodFor": [
+    "views",
+    "photos",
+    "short stop"
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide (Jul 2026)",
+     "url": "https://www.thaiholidayguide.com/attraction/khao-khat-views-tower/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Kao-Khad_Views_tower_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Rom870"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kao_Khad_2.jpg/1280px-Kao_Khad_2.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC0",
+     "credit": "Slleong (view of Chalong Bay from the Khao Khad hill road)"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/khao-khat-views-tower/",
+    "https://windowonphuket.com/khao-kad-viewpoint/",
+    "https://www.phuket101.net/panwa-beach/",
+    "https://www.openstreetmap.org/node/1957082023"
+   ],
+   "verification": "thaiholidayguide updated Jul 2026 (free, hours about 06:00-21:00, toilets and stalls). phuket101 Panwa page (Sep 2026) also lists the tower."
+  },
+  {
+   "id": "mai-khao-plane-spotting",
+   "name": "Plane Spotting at Mai Khao Beach",
+   "nameThai": "หาดไม้ขาว",
+   "tier": "hidden-gem",
+   "category": "activity",
+   "area": "mai-khao",
+   "lat": 8.1118,
+   "lng": 98.3019,
+   "coordSource": "osm (node 7139218389 'Phuket airport viewpoint') + phuket101 map, 20 m apart; runway 09 threshold from OurAirports",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket airport viewpoint, Mai Khao Beach, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Late morning to about 14:00, when more planes land. Low tide gives a wider beach.",
+   "openText": "Open beach, daylight.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Motorbike taxi from the car park 20 THB.",
+   "gettingThere": "Drive past the airport and follow the signs with a landing plane to a big car park, about 500 m from the runway end. Walk or take a 20 THB motorbike to the sand. Or walk north along the beach from Sirinat National Park (park fee).",
+   "description": "Beach at the end of Phuket airport's runway. In the dry season planes usually land from the sea and pass very low over your head. It is loud and exciting. Food and drink vendors wait at the car park and on the sand. Watching is free.",
+   "tips": [
+    "Use the FlightRadar24 app to see when the next plane lands.",
+    "Stand to the side, not in the path. Jet blast from planes taking off throws sand very hard.",
+    "From December to June planes usually land over the sea, but the wind can change it on some days.",
+    "Soi Dog Foundation is a few minutes away. Combine on a weekday."
+   ],
+   "goodFor": [
+    "photos",
+    "unusual experience"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Aug 2026)",
+     "url": "https://www.phuket101.net/plane-spotting-in-phuket/"
+    },
+    {
+     "label": "HKT arrivals (FlightRadar24)",
+     "url": "https://www.flightradar24.com/data/airports/hkt/arrivals"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/B-LPV_Phuket.jpg/1280px-B-LPV_Phuket.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 2.5 ca",
+     "credit": "The Cosmonaut"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Arrival_to_airport_Phuket_11_feb%272013_-_panoramio.jpg/1280px-Arrival_to_airport_Phuket_11_feb%272013_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "shapurma"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/plane-spotting-in-phuket/",
+    "https://www.openstreetmap.org/node/7139218389",
+    "https://davidmegginson.github.io/ourairports-data/runways.csv"
+   ],
+   "verification": "phuket101 page updated 6 Aug 2026 (free, 20 THB motorbike, best months Dec-Jun). Same id as in the must-see working list, so it may be a duplicate."
+  },
+  {
+   "id": "bang-rong-mangroves",
+   "name": "Bang Rong Pier and Mangrove Walk",
+   "nameThai": "บ้านบางโรง",
+   "tier": "hidden-gem",
+   "category": "nature",
+   "area": "thalang",
+   "lat": 8.05,
+   "lng": 98.4159,
+   "coordSource": "Google pin of the community seafood restaurant (via Wanderlog) + osm Bang Rong Pier node 485657809, 55 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bang Rong Pier, Pa Khlok, Thalang, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Lunch time on a weekday. Check the tide: the end of the boardwalk is steep at low tide.",
+   "openText": "Community seafood restaurant daily 10:30-18:30 (Google listing).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free to walk. Food and kayak rental are paid. Village tours from 2,800 THB per person (half day, at least 2 people).",
+   "gettingThere": "North-east coast. On the main road, turn right at the mosque about 1 km north of the Bang Pae Waterfall road, and drive to the pier. About 35 km from Patong. Car or scooter.",
+   "description": "Small Muslim fishing village on the quiet north-east coast, with the pier for boats to Koh Yao. A wooden boardwalk goes through the mangroves to a floating community restaurant with fresh seafood and views of the boats. You can rent a kayak and paddle into the mangrove channels.",
+   "tips": [
+    "No alcohol here. This is a Muslim community, so dress modestly.",
+    "The community runs half-day tours (pineapple farm, rubber tapping, cooking). Book at bangrongconnect.com.",
+    "Boats to Koh Yao Noi and Koh Yao Yai leave from this pier."
+   ],
+   "goodFor": [
+    "mangroves",
+    "kayaking",
+    "local seafood"
+   ],
+   "links": [
+    {
+     "label": "Bang Rong community tourism",
+     "url": "https://www.bangrongconnect.com/"
+    },
+    {
+     "label": "Thai PBS World article",
+     "url": "https://www.thaipbsworld.com/lifestyle/the-other-side-of-paradise"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Ban_Bang_Rong_harbour_-_panoramio.jpg/1280px-Ban_Bang_Rong_harbour_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Tuderna"
+    }
+   ],
+   "sources": [
+    "https://www.bangrongconnect.com/",
+    "https://www.bangrongconnect.com/product/bangrong-community-based-tourism-half-day-program/",
+    "https://www.thaipbsworld.com/lifestyle/the-other-side-of-paradise",
+    "https://www.jamiesphuketblog.com/2017/05/bang-rong-pier-and-community.html",
+    "https://wanderlog.com/place/details/9151970/bang-rong-community-seafood-restaurant",
+    "https://www.thaiholidayguide.com/attraction/ban-bang-rong-agricultural-conservation-tourism/",
+    "https://www.openstreetmap.org/node/485657809"
+   ],
+   "verification": "Restaurant marked operational, daily 10:30-18:30, in Google data (via Wanderlog, checked 15 Oct 2026). Tour price from bangrongconnect.com (page from 2024). No 2026 visitor report found."
+  },
+  {
+   "id": "gibbon-rehabilitation-project",
+   "name": "Gibbon Rehabilitation Project",
+   "nameThai": "โครงการคืนชะนีสู่ป่า",
+   "tier": "hidden-gem",
+   "category": "nature",
+   "area": "thalang",
+   "lat": 8.0412,
+   "lng": 98.3931,
+   "coordSource": "osm (node 2421008074) + Commons recordings geotagged at the project, 50 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Gibbon Rehabilitation Project, Bang Pae, Pa Khlok, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "Morning session (10:30), when the forest is cooler.",
+   "openText": "Only by booking. 1-hour sessions at 10:30, 12:30 and 14:00. A 2.5-hour session runs 09:30-12:00 (booked on Airbnb). Closed on days with no bookings.",
+   "feeText": "1,100 THB adult when booked online (1,200 THB walk-in), child 5-14 650 THB. Plus national park fee 200 THB adult, cash only at the gate.",
+   "gettingThere": "At the Bang Pae Waterfall entrance of Khao Phra Thaeo National Park, north-east Phuket, about 20 km from Phuket Town. No hotel pickup: come by car, scooter or taxi.",
+   "description": "Small charity that rescues gibbons from the tourist trade and returns them to the forest. In a one-hour session a guide explains the work at the edge of Phuket's last rainforest. Only 36 visitors a day are allowed, to keep contact with the gibbons low. A calm, honest nature stop.",
+   "tips": [
+    "Book online at least 4 hours before the session. Walk-ins may find it full.",
+    "Bang Pae Waterfall is next to the project, but in January the water is very low.",
+    "The 4 km jungle trail from Ton Sai Waterfall to Bang Pae needs a park guide; ask at the visitor centre.",
+    "Piang Prai, a local restaurant opposite the park entrance, is good for lunch."
+   ],
+   "goodFor": [
+    "wildlife",
+    "rainforest",
+    "ethical animal visit"
+   ],
+   "links": [
+    {
+     "label": "Book a visit (official)",
+     "url": "https://www.gibbonproject.org/visit-us/booking/"
+    },
+    {
+     "label": "1-hour session tickets",
+     "url": "https://gibbonprojectphuket.myshopify.com/products/1-hour-learning-about-gibbon-rehabilitation"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.gibbonproject.org/wp-content/uploads/2023/11/1-hour.png",
+     "source": "gibbonproject.org og:image (official)",
+     "license": "Official promotional image",
+     "credit": "Gibbon Rehabilitation Project"
+    }
+   ],
+   "sources": [
+    "https://www.gibbonproject.org/visit-us/booking/",
+    "https://gibbonprojectphuket.myshopify.com/products/1-hour-learning-about-gibbon-rehabilitation",
+    "https://www.phuket101.net/phuket-waterfalls/",
+    "https://www.thainationalparks.com/khao-phra-thaeo-wildlife-sanctuary",
+    "https://www.openstreetmap.org/node/2421008074"
+   ],
+   "verification": "Prices, session times and rules from the official booking pages (ticket page updated 15 Oct 2026). Park fee 200 THB per the project (fees updated 23 May 2025). Waterfall is low in the dry season (phuket101, Jul 2026)."
+  },
+  {
+   "id": "koh-sirey",
+   "name": "Koh Sirey: Hilltop Temple and Sea Gypsy Village",
+   "nameThai": "เกาะสิเหร่",
+   "tier": "hidden-gem",
+   "category": "temple",
+   "area": "phuket-town",
+   "lat": 7.8802,
+   "lng": 98.4263,
+   "coordSource": "osm (temple way 1548196924 + reclining Buddha node 4223066592) + phuket101 map, within 80 m; village: osm node 11027280955 at 7.8748, 98.4218",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Koh Sirey, Ratsada, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Late afternoon for the view and soft light. Come at lunch time if you want seafood in the village.",
+   "openText": "Temple open in the daytime. The village is a living community, not an attraction.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Leave a small donation if you photograph the reclining Buddha.",
+   "gettingThere": "About 5 km east of Phuket Old Town, over a very short bridge, about 15 minutes by car or Grab. A road climbs to the temple; park and walk the last part. The Urak Lawoi village is at Laem Tukkae, below the temple to the south-west.",
+   "description": "Small island joined to Phuket Town by a short bridge. On the hilltop, Wat Koh Sirey has a long golden reclining Buddha and a wide view over Phuket Town. Below is Laem Tukkae, a working village of the Urak Lawoi sea people, little changed for decades. Few tourists come. Monkeys live near the bridge.",
+   "tips": [
+    "Cover shoulders and knees in the temple.",
+    "In the village, be respectful and ask before you take photos of people.",
+    "Keep food and sunglasses away from the monkeys at the bridge.",
+    "Hilltop Cafe (Starbucks) at Sinae Phuket, 10:00-20:00, has a big sea view."
+   ],
+   "goodFor": [
+    "culture",
+    "views",
+    "local life"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (May 2026)",
+     "url": "https://www.phuket101.net/koh-sirey/"
+    },
+    {
+     "label": "Thai Holiday Guide: Koh Sire",
+     "url": "https://www.thaiholidayguide.com/visit/koh-sire/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20200328182248/koh-sirey-phuket.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    },
+    {
+     "url": "https://images.thaiholidayguide.com/images/attractions/ko-si-re-fa83ff6e0.webp",
+     "source": "thaiholidayguide.com og:image",
+     "license": "Copyright of the website (check before reuse)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/koh-sirey/",
+    "https://www.thaiholidayguide.com/visit/koh-sire/",
+    "https://www.openstreetmap.org/way/1548196924",
+    "https://www.openstreetmap.org/node/11027280955"
+   ],
+   "verification": "phuket101 page updated 25 May 2026; thaiholidayguide Koh Sire page. No Commons photo found, so images are site photos."
+  },
+  {
+   "id": "wat-phra-thong",
+   "name": "Wat Phra Thong (Half-Buried Buddha)",
+   "nameThai": "วัดพระทอง",
+   "tier": "hidden-gem",
+   "category": "temple",
+   "area": "thalang",
+   "lat": 8.034,
+   "lng": 98.3377,
+   "coordSource": "osm (temple way 319652596) + thaiholidayguide pin, 30 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Phra Thong, Thep Krasattri, Thalang, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "Morning, before the heat. Good stop on the way to or from the airport.",
+   "openText": "Daily, about 08:00-17:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Donation boxes.",
+   "gettingThere": "In Thalang, central north Phuket, just off Thepkrasattri Road (the main road to the airport). About 20 km from Phuket Town. Car, scooter, taxi or Grab.",
+   "description": "Old temple in Thalang with a golden Buddha that comes out of the ground only from the chest up. Local legend says people tried to dig it out but could not. A small museum shows objects from Phuket's tin-mining past. Mostly local people come to pray, so it is calm and real.",
+   "tips": [
+    "Cover shoulders and knees. Take off your shoes in the halls.",
+    "Do not touch or take anything from the ground around the buried Buddha. It is sacred.",
+    "Wat Phra Nang Sang, one of the oldest temples in Phuket, is about 1 km south on the same road."
+   ],
+   "goodFor": [
+    "culture",
+    "history"
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide",
+     "url": "https://www.thaiholidayguide.com/attraction/wat-phra-thong/"
+    },
+    {
+     "label": "Nearby: Wat Phra Nang Sang (Phuket 101)",
+     "url": "https://www.phuket101.net/wat-phra-nang-sang/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%282%29.jpg/1280px-%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%282%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "กสิณธร ราชโอรส"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%283%29.jpg/1280px-%282024%29_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%AD%E0%B8%87_%E0%B8%AD.%E0%B8%96%E0%B8%A5%E0%B8%B2%E0%B8%87_%E0%B8%88.%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95_%283%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "กสิณธร ราชโอรส"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/wat-phra-thong/",
+    "https://www.phuket101.net/wat-phra-nang-sang/",
+    "https://www.openstreetmap.org/way/319652596",
+    "https://www.openstreetmap.org/node/4575295522"
+   ],
+   "verification": "Hours, free entry and dress code from thaiholidayguide. Wat Phra Nang Sang location from OSM and its Google pin (phuket101 link)."
+  },
+  {
+   "id": "phuket-mining-museum",
+   "name": "Phuket Mining Museum",
+   "nameThai": "พิพิธภัณฑ์เหมืองแร่ภูเก็ต",
+   "tier": "hidden-gem",
+   "category": "culture",
+   "area": "kathu",
+   "lat": 7.9333,
+   "lng": 98.3495,
+   "coordSource": "osm (museum way 1044722332) + thaiholidayguide pin, 110 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phuket Mining Museum, Kathu, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "A hot or rainy day. Arrive before 14:30; it closes at 16:00.",
+   "openText": "Daily 09:00-16:00 (2026 listings). Some older listings say closed on Sunday, so check before a Sunday visit.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Foreign adult 100 THB, child 50 THB (Thai adult 50 THB).",
+   "gettingThere": "On the Kathu - Ko Kaeo road near Loch Palm Golf Club, between Patong and Phuket Town. Car, scooter or taxi.",
+   "description": "Large air-conditioned museum about the tin mines that made Phuket rich long before tourism. It has a model mine tunnel, mining dioramas and a rebuilt old Phuket street with shops and Chinese merchant life. A good escape from heat or rain, and few foreign visitors come.",
+   "tips": [
+    "Allow 1 to 1.5 hours.",
+    "Part of the visit is outside. Bring a hat and water.",
+    "Kathu village nearby has old Chinese shrines and is a quiet, local place to walk."
+   ],
+   "goodFor": [
+    "history",
+    "rainy day",
+    "air-conditioned"
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide",
+     "url": "https://www.thaiholidayguide.com/attraction/kathu-mining-museum/"
+    },
+    {
+     "label": "Love Thailand (Thai, 2026)",
+     "url": "https://www.lovethailand.org/travel/-/70-Phuket/8029-Phuket-Mining-Museum.html"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://images.thaiholidayguide.com/images/attractions/kathu-mining-museum-f84366436.webp",
+     "source": "thaiholidayguide.com og:image",
+     "license": "Copyright of the website (check before reuse)"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/kathu-mining-museum/",
+    "https://www.lovethailand.org/travel/-/70-Phuket/8029-Phuket-Mining-Museum.html",
+    "https://showcaves.com/english/th/mines/Kathu.html",
+    "https://www.openstreetmap.org/way/1044722332"
+   ],
+   "verification": "Hours and fees match on lovethailand.org (2026) and thaiholidayguide. Older listings disagree on Sunday opening and prices, so call first if it matters."
+  },
+  {
+   "id": "soi-dog-foundation",
+   "name": "Soi Dog Foundation Sanctuary",
+   "tier": "hidden-gem",
+   "category": "activity",
+   "area": "mai-khao",
+   "lat": 8.128,
+   "lng": 98.3132,
+   "coordSource": "Google pin on soidog.org visit page + osm (way 1195543712), 75 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Soi Dog Foundation, Soi Mai Khao 10, Mai Khao, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Arrive by 10:30 for the morning tour or by 13:30 for the afternoon tour.",
+   "openText": "Mon-Fri 09:30-11:30 and 13:00-15:30. Free guided tours at 10:30 and 13:30 (45 minutes). Closed Saturday and Sunday.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+   ],
+   "feeText": "Free. Donations and shop purchases help the animals.",
+   "gettingThere": "Mai Khao, north Phuket, close to the airport. Address: 167/9 Moo 4, Soi Mai Khao 10. Taxi or car; the website has the address in Thai for drivers.",
+   "description": "Large shelter for street dogs and cats, run by a well-known charity. A free 45-minute guided tour explains their work and introduces some of the 1,800 animals in their care. After the tour you can spend time in the puppy area and the cat house. Tours are in English and Thai.",
+   "tips": [
+    "No booking needed, but arrive on time for the full tour.",
+    "You cannot walk around alone. Stay with the guide.",
+    "Combine with plane spotting at Mai Khao Beach, a few minutes away.",
+    "In the trip window it is open Fri 8, Mon 11 to Fri 15, and Mon 18 January."
+   ],
+   "goodFor": [
+    "animals",
+    "charity",
+    "families"
+   ],
+   "links": [
+    {
+     "label": "Visitor and tour information (official)",
+     "url": "https://www.soidog.org/content/visit-us"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Soi_Dog_Foundation_%2838880428354%29.jpg/1280px-Soi_Dog_Foundation_%2838880428354%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 2.0",
+     "credit": "Brian Johnson & Dane Kantner"
+    }
+   ],
+   "sources": [
+    "https://www.soidog.org/content/visit-us",
+    "https://www.openstreetmap.org/way/1195543712"
+   ],
+   "verification": "Official visit page checked 15 Oct 2026: Mon-Fri only, free tours 10:30 and 13:30, no booking."
+  },
+  {
+   "id": "karon-temple-market",
+   "name": "Karon Temple Market",
+   "nameThai": "วัดสุวรรณคีรีเขต (วัดกะรน)",
+   "tier": "hidden-gem",
+   "category": "market",
+   "area": "karon",
+   "lat": 7.8479,
+   "lng": 98.298,
+   "coordSource": "Google pin linked by phuket101 + osm (temple way 473613108), 70 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Karon Temple Market, Patak Road, Karon, Phuket",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 1.5,
+    "max": 2.5
+   },
+   "bestTime": "Tuesday or Friday from about 17:00, before the biggest crowds.",
+   "openText": "Tuesday and Friday, 16:00-22:00.",
+   "days": [
+    "Tue",
+    "Fri"
+   ],
+   "feeText": "Free entry. Cheap street-food prices.",
+   "gettingThere": "On the grounds of Wat Karon (Wat Suwan Khiri Khet), Patak Road, about 500 m inland from the Karon Circle. Walk from Karon or take a short ride from Kata.",
+   "description": "Twice-a-week night market around Karon's old temple. Many street food stalls: pad thai, grilled skewers, chicken rice, mango sticky rice and fruit shakes. Also cheap clothes, carved soaps and souvenirs. Busy and fun, with a beautiful temple behind the stalls.",
+   "tips": [
+    "Try the pad thai from the stall at the temple entrance. It is the most famous one.",
+    "Bring small cash notes.",
+    "In the trip window it runs on Fri 8, Tue 12 and Fri 15 January."
+   ],
+   "goodFor": [
+    "street food",
+    "souvenirs",
+    "evening"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Mar 2026)",
+     "url": "https://www.phuket101.net/karon-temple-market/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20170525200331/karon-temple-copy.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Karon_Tempel_-_panoramio.jpg/1280px-Karon_Tempel_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Telgaa (the temple)"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/karon-temple-market/",
+    "https://www.openstreetmap.org/way/473613108"
+   ],
+   "verification": "phuket101 page updated 14 Mar 2026: Tue and Fri, 16:00-22:00, free entry."
+  },
+  {
+   "id": "kruvit-raft",
+   "name": "Kruvit Raft (Floating Seafood Restaurant)",
+   "nameThai": "แพครูวิทย์",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "phuket-town",
+   "lat": 7.9348,
+   "lng": 98.4136,
+   "coordSource": "Google pin (via Wanderlog) + phuket101 map, 15 m apart; boat leaves from Laem Hin Pier (osm node 2505166441, 7.93663, 98.40999)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kruvit Raft, Laem Hin, Ko Kaeo, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 3
+   },
+   "bestTime": "Late afternoon, so you see the bay in daylight. Sunset is about 18:30 in January.",
+   "openText": "Daily 10:00-22:00.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free boat. Most seafood is priced by weight; mid to upper local prices.",
+   "gettingThere": "Drive to Laem Hin Pier, about 10 km north of Phuket Town: take the airport road and turn right onto the small road to Laem Hin. A free longtail boat takes you to the raft in about 5 minutes.",
+   "description": "Big wooden raft restaurant on the sea between Phuket and Koh Maphrao, listed in the 2026 Michelin Guide. Fish, crabs, prawns and oysters live in nets under the deck. You point at what you want and they cook it. Most guests are Thai. A fun and very local seafood meal.",
+   "tips": [
+    "Ask the weight and price before they cook lobster or mantis shrimp.",
+    "Try blue crab, grilled king prawns and the sour fish soup with soybean (Pla Tom Towchiew).",
+    "Bring cash. A 20-50 THB tip for the boatman on the way back is welcome."
+   ],
+   "goodFor": [
+    "seafood",
+    "local food",
+    "sunset dinner"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 guide (Sep 2026)",
+     "url": "https://www.phuket101.net/phuket-floating-restaurant/"
+    },
+    {
+     "label": "Michelin Guide listing",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kruvit-raft-ban-laem-hin"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20190123224247/phuket-floating-restaurant.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/phuket-floating-restaurant/",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kruvit-raft-ban-laem-hin",
+    "https://wanderlog.com/place/details/752596/khru-vit-seafood-raft",
+    "https://www.openstreetmap.org/node/2505166441"
+   ],
+   "verification": "phuket101 page updated 26 Sep 2026 (2026 Michelin listing, 10:00-22:00, free boat). Google listing operational (via Wanderlog, 15 Oct 2026)."
+  },
+  {
+   "id": "summore-day-cafe",
+   "name": "Summore Day Cafe",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "rawai",
+   "lat": 7.7642,
+   "lng": 98.3062,
+   "coordSource": "phuket101 map pin + intravel.net schema geo (same point)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Summore Day, 94 Wiset Road, Rawai, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Late afternoon before sunset. Weekdays are quieter.",
+   "openText": "Daily 10:00-20:00. Last food order about 19:00. Live music on weekend afternoons from about 14:30.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Coffee 100-220 THB, mains 320-790 THB, cocktails 320-420 THB (2026 menu).",
+   "gettingThere": "On the coast road between Ya Nui Beach and Promthep Cape, just below the cape car park. Free parking at the entrance.",
+   "description": "New hillside cafe, restaurant and bar with terraced gardens, a koi pond and a rooftop deck over Ya Nui Beach and Koh Man island. Serious coffee from their own roast, food from breakfast to steak, and cocktails with local Chalong Bay rum. Live music on weekend afternoons.",
+   "tips": [
+    "Order and pay at the counter inside, then sit anywhere.",
+    "Use mosquito spray at dusk in the garden.",
+    "After coffee, go up to Promthep Cape for the sunset."
+   ],
+   "goodFor": [
+    "cafe with a view",
+    "sunset",
+    "coffee"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 review (Aug 2026)",
+     "url": "https://www.phuket101.net/summore-day-cafe/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/summoreday"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20260711132152/Summor-Day-Cafe-Phuket-11.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/summore-day-cafe/",
+    "https://intravel.net/phuket/restaurants-cafes/summore-day"
+   ],
+   "verification": "phuket101 page updated 28 Aug 2026 (hours, menu prices, address 94 Wiset Road, phone 083 509 6333)."
+  },
+  {
+   "id": "view-cafe-phuket",
+   "name": "View Cafe at Phuket (Phuket View Coffee and Resort)",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "chalong",
+   "lat": 7.8701,
+   "lng": 98.3299,
+   "coordSource": "Google pin (via Wanderlog); OSM reverse geocode gives Ban Nai Trok road, matching the address",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Phuket View Coffee and Resort, Ban Nai Trok Road, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "bestTime": "A clear afternoon. Late afternoon light over Phuket Town is best.",
+   "openText": "Daily 09:00-19:30 (Google lists Fri-Sun until 20:00).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Simple Thai food, coffee and cold drinks. Prices not published.",
+   "gettingThere": "In the hills between Chalong and Kathu, above Bang Wad Reservoir. Address: 56 Chalong 10, Moo 5, Ban Nai Trok Road. The road is narrow, steep and winding; car or scooter only.",
+   "description": "Quiet hilltop cafe high above Bang Wad Reservoir. From terraces and small balconies you look over Phuket Town, the east coast, Chalong Bay and the islands. Simple Thai food, coffee and cold drinks. No tour buses; most guests are locals. Best on a clear day.",
+   "tips": [
+    "Take an outdoor table for the best view.",
+    "Ride slowly. The road up is steep and narrow.",
+    "It also rents a few rooms if you want to stay the night."
+   ],
+   "goodFor": [
+    "cafe with a view",
+    "quiet",
+    "photos"
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 review (Aug 2026)",
+     "url": "https://www.phuket101.net/view-cafe-at-phuket/"
+    },
+    {
+     "label": "Official website",
+     "url": "https://www.phuketviewcoffeeandresort.com/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20260318225151/View-Cafe-at-Phuket-6.jpg",
+     "source": "phuket101.net og:image",
+     "license": "Copyright of the website (check before reuse)",
+     "credit": "Willy Thuan / phuket101.net"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/view-cafe-at-phuket/",
+    "https://wanderlog.com/place/details/3250931/view-cafe-at-phuket"
+   ],
+   "verification": "phuket101 page updated 28 Aug 2026; Google listing operational, 4.5 from about 600 reviews (via Wanderlog, 15 Oct 2026). Only one coordinate source."
+  }
+ ],
+ "notes": "21 hidden gems, built on the earlier attempt's findings plus a few targeted checks on 15 Oct 2026. DROPPED: Nui Beach (closed to visitors since 20 Jul 2026, officials guard it; minister ordered the land reclaimed in May 2026). Laem Ka Beach (access closed for building work, phuket101). Ao Sane Beach (phuket101 says closed for construction; Sep 2026 report: restaurant and bungalows demolished, no facilities, villas being built). Paradise Beach (open, 200 THB with a drink, 09:00-19:00, but it is a busy commercial beach club rated 2.9 on Google, not a hidden gem). Waterfalls (Bang Pae, Ton Sai, Kathu): only a trickle in January, so they appear only as a tip in the Gibbon Project item. Phuket Indy Market (phuket101 gives two different day lists and says it is less popular now). Laem Phan Wa: not checked in depth; the cape is mostly a hotel and the aquarium. POSSIBLE OVERLAPS: the must-see researcher's working coordinate list also has kata-noi-beach, mai-khao-plane-spotting, nai-yang-beach and bang-pae-waterfall. I kept kata-noi-beach and mai-khao-plane-spotting with the same ids so you can de-duplicate. gibbon-rehabilitation-project sits about 140 m from their bang-pae-waterfall pin. kruvit-raft may also appear in the food research. IMAGES: Wikimedia Commons where possible. For Koh Sirey, Laem Krating, the Mining Museum, Kruvit Raft and the two cafes no usable Commons photo was found, so the candidates are site og:images (phuket101, thaiholidayguide, gibbonproject) with unknown reuse rights. The two Sai Kaew Commons photos and one Tri Trang photo have generic titles and were picked by geotag; check them visually. All image URLs returned HTTP 200 with an image content type."
+}

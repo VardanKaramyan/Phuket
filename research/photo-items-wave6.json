@@ -1,0 +1,164 @@
+[
+ {
+  "key": "places:karon-beach",
+  "kind": "must-see / beach. Use a DIFFERENT photo from the one already used for the area card of the same name (assets/raw/areas-*.jpg).",
+  "name": "Karon Beach",
+  "where": "karon",
+  "gmapsQuery": "Karon Beach, Karon, Phuket",
+  "website": "",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Karon_beach_7.jpg/1280px-Karon_beach_7.jpg",
+    "credit": "HutheMeow",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karon_beach_7.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Karon_Beach_Sunset_-_panoramio.jpg/1280px-Karon_Beach_Sunset_-_panoramio.jpg",
+    "credit": "Mikhail Deynekin",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karon_Beach_Sunset_-_panoramio.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Karon_Beach%2CPhuket_%2821%29.jpg/1280px-Karon_Beach%2CPhuket_%2821%29.jpg",
+    "credit": "กสิณธร ราชโอรส",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karon_Beach,Phuket_(21).jpg"
+   }
+  ]
+ },
+ {
+  "key": "places:kamala-beach",
+  "kind": "must-see / beach. Use a DIFFERENT photo from the one already used for the area card of the same name (assets/raw/areas-*.jpg).",
+  "name": "Kamala Beach",
+  "where": "kamala",
+  "gmapsQuery": "Kamala Beach, Kamala, Phuket",
+  "website": "",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg/1280px-Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg",
+    "credit": "Tuderna",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kamala_beach_(%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2)_-_panoramio.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_%2827386088737%29.jpg/1280px-Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_%2827386088737%29.jpg",
+    "credit": "Ryan Kartzke",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_(27386088737).jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kammala%2C_Kathu_District%2C_Phuket%2C_Thailand_-_panoramio_%2814%29.jpg/1280px-Kammala%2C_Kathu_District%2C_Phuket%2C_Thailand_-_panoramio_%2814%29.jpg",
+    "credit": "mohigan",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kammala,_Kathu_District,_Phuket,_Thailand_-_panoramio_(14).jpg"
+   }
+  ]
+ },
+ {
+  "key": "places:surin-beach",
+  "kind": "must-see / beach. Use a DIFFERENT photo from the one already used for the area card of the same name (assets/raw/areas-*.jpg).",
+  "name": "Surin Beach",
+  "where": "surin",
+  "gmapsQuery": "Surin Beach, Choeng Thale, Phuket",
+  "website": "",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+    "credit": "Jpatokal",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Surin_Beach.JPG"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sunset%40Surin_Beach%2C_Phuket_-_panoramio.jpg/1280px-Sunset%40Surin_Beach%2C_Phuket_-_panoramio.jpg",
+    "credit": "::::=UT=::::",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sunset@Surin_Beach,_Phuket_-_panoramio.jpg"
+   }
+  ]
+ },
+ {
+  "key": "places:bangla-boxing-stadium",
+  "kind": "must-see / activity.",
+  "name": "Bangla Boxing Stadium (Muay Thai fight night)",
+  "where": "patong",
+  "gmapsQuery": "Bangla Boxing Stadium, Patong, Phuket",
+  "website": "https://banglaboxingstadium.com/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg/1280px-Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg",
+    "credit": "Karelj",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Bangla_Boxing_Stadium_-_panoramio.jpg/1280px-Bangla_Boxing_Stadium_-_panoramio.jpg",
+    "credit": "Jacek Lesniowski",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangla_Boxing_Stadium_-_panoramio.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Boxer_and_trainer.jpeg/1280px-Boxer_and_trainer.jpeg",
+    "credit": "USchick",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Boxer_and_trainer.jpeg (boxer before a fight at Bangla Boxing Stadium, 2013)"
+   }
+  ]
+ },
+ {
+  "key": "places:blue-elephant-cooking-school",
+  "kind": "hidden-gem / activity.",
+  "name": "Blue Elephant Cooking School (Phuket Old Town)",
+  "where": "phuket-town",
+  "gmapsQuery": "Blue Elephant Phuket Cooking School & Restaurant, Krabi Road, Phuket",
+  "website": "https://blueelephant.com/cooking-school/cooking-school-phuket/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Blue_Elephant%2C_Phuket%2C_Thailand_-_01.jpg/1280px-Blue_Elephant%2C_Phuket%2C_Thailand_-_01.jpg",
+    "credit": "Sharon Hahn Darlin",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue_Elephant,_Phuket,_Thailand_-_01.jpg"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg/1280px-Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg",
+    "credit": "Sharon Hahn Darlin",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue_Elephant,_Phuket,_Thailand_-_02.jpg"
+   },
+   {
+    "url": "https://blueelephant.com/wp-content/uploads/2025/01/Blue-Elephant-Thumbnail.webp",
+    "credit": "Blue Elephant (official site)",
+    "license": "Official site image (og:image)",
+    "source": "https://blueelephant.com/cooking-school/cooking-school-phuket/"
+   }
+  ]
+ },
+ {
+  "key": "places:renew-sauna-ice-bath",
+  "kind": "hidden-gem / wellness.",
+  "name": "Renew Sauna & Ice Bath (Bang Tao)",
+  "where": "bang-tao",
+  "gmapsQuery": "Renew Sauna & Ice Bath Club, Choeng Thale, Phuket",
+  "website": "https://renewthailand.com/",
+  "candidates": [
+   {
+    "url": "https://renewthailand.com/wp-content/uploads/2026/03/IMG_0802-1-scaled.jpg",
+    "credit": "Renew Sauna & Ice Bath (official site)",
+    "license": "Official site image",
+    "source": "https://renewthailand.com/"
+   },
+   {
+    "url": "https://renewthailand.com/wp-content/uploads/2026/03/IMG_fsg0799.jpg",
+    "credit": "Renew Sauna & Ice Bath (official site)",
+    "license": "Official site image",
+    "source": "https://renewthailand.com/"
+   },
+   {
+    "url": "https://phuket-insider.com/wp-content/uploads/2025/05/in-kkzu0efb5nzy3xlqd5mjdrssumysj.jpg",
+    "credit": "Phuket Insider",
+    "license": "Guide photo (personal use)",
+    "source": "https://phuket-insider.com/en/places/renew-sauna-ice-bath/ (og:image)"
+   }
+  ]
+ }
+]

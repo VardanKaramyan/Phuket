@@ -1,0 +1,482 @@
+[
+ {
+  "key": "hotels:baba-beach-club-natai",
+  "kind": "hotel (luxury)",
+  "name": "Baba Beach Club Natai",
+  "where": "natai",
+  "gmapsQuery": "Baba Beach Club Natai, Khok Kloi, Phang Nga",
+  "website": "https://www.bababeachclub.com/natai/",
+  "candidates": [
+   {
+    "url": "https://www.bababeachclub.com/images/baba-beach.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Baba Beach Club Natai"
+   },
+   {
+    "url": "https://www.bababeachclub.com/images/entertainment-pool.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Baba Beach Club Natai"
+   }
+  ]
+ },
+ {
+  "key": "hotels:aleenta-phuket-phang-nga",
+  "kind": "hotel (luxury)",
+  "name": "Aleenta Phuket Phang Nga Resort & Spa",
+  "where": "natai",
+  "gmapsQuery": "Aleenta Phuket Phang Nga Resort & Spa, Khok Kloi",
+  "website": "https://www.aleenta.com/en/aleenta-phuket-phang-nga/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "credit": "Sujeong (area photo: Natai Beach)"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Natai_Beach_-_panoramio_%281%29.jpg/1280px-Natai_Beach_-_panoramio_%281%29.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "credit": "Sujeong (area photo: Natai Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:natai-house",
+  "kind": "hotel (mid-range)",
+  "name": "Natai House",
+  "where": "natai",
+  "gmapsQuery": "Natai House, Khok Kloi, Phang Nga",
+  "website": "https://www.facebook.com/NataiHouse/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Natai_Beach_-_panoramio_%281%29.jpg/1280px-Natai_Beach_-_panoramio_%281%29.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "credit": "Sujeong (area photo: Natai Beach)"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Natai_Beach_-_panoramio.jpg/1280px-Natai_Beach_-_panoramio.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "credit": "Sujeong (area photo: Natai Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:snug-airportel",
+  "kind": "hotel (hostel)",
+  "name": "The Snug Airportel",
+  "where": "nai-yang",
+  "gmapsQuery": "The Snug Airportel, Sakhu, Phuket",
+  "website": "https://www.thesnugairportel.com/",
+  "candidates": [
+   {
+    "url": "https://static.wixstatic.com/media/f3fda1_dfe1f08631844226ac5884cf1b26e3e8~mv2.jpeg/v1/fill/w_1280,h_960,al_c/f3fda1_dfe1f08631844226ac5884cf1b26e3e8~mv2.jpeg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Snug Airportel"
+   }
+  ]
+ },
+ {
+  "key": "hotels:intercontinental-phuket",
+  "kind": "hotel (luxury)",
+  "name": "InterContinental Phuket Resort",
+  "where": "kamala",
+  "gmapsQuery": "InterContinental Phuket Resort, Kamala",
+  "website": "https://phuket.intercontinental.com/",
+  "candidates": [
+   {
+    "url": "https://phuket.intercontinental.com/sites/phuket/files/styles/banner_medium/public/homepage-slider/InterContinental-Phuket-Resort-Beach_1.jpg.webp",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "InterContinental Phuket Resort"
+   }
+  ]
+ },
+ {
+  "key": "hotels:novotel-phuket-kamala",
+  "kind": "hotel (mid-range)",
+  "name": "Novotel Phuket Kamala Beach",
+  "where": "kamala",
+  "gmapsQuery": "Novotel Phuket Kamala Beach",
+  "website": "https://all.accor.com/hotel/7235/index.en.shtml",
+  "candidates": [
+   {
+    "url": "https://www.ahstatic.com/photos/7235_ho_00_p_1024x768.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Novotel Phuket Kamala Beach"
+   }
+  ]
+ },
+ {
+  "key": "hotels:twinpalms-surin",
+  "kind": "hotel (luxury)",
+  "name": "Twinpalms Surin Beach Phuket",
+  "where": "surin",
+  "gmapsQuery": "Twinpalms Surin Beach Phuket",
+  "website": "https://www.twinpalmshotelsresorts.com/surin-beach-phuket/",
+  "candidates": [
+   {
+    "url": "https://twinpalmshotelsresorts.com/surin-beach-phuket/wp-content/uploads/sites/15/2024/09/hometps.webp",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Twinpalms Surin Beach Phuket"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Jpatokal (area photo: Surin Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:ibis-styles-bangtao",
+  "kind": "hotel (mid-range)",
+  "name": "ibis Styles Phuket Bangtao",
+  "where": "bang-tao",
+  "gmapsQuery": "ibis Styles Phuket Bangtao",
+  "website": "https://all.accor.com/hotel/C2H9/index.en.shtml",
+  "candidates": [
+   {
+    "url": "https://www.ahstatic.com/photos/c2h9_ho_00_p_1024x768.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "ibis Styles Phuket Bangtao"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sunset_at_Bang_Tao_Beach.jpg/1280px-Sunset_at_Bang_Tao_Beach.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Axadem (area photo: Bang Tao Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:twinpalms-tented-camp",
+  "kind": "hotel (luxury)",
+  "name": "Twinpalms Tented Camp Phuket",
+  "where": "bang-tao",
+  "gmapsQuery": "Twinpalms Tented Camp Phuket, Bang Tao",
+  "website": "https://twinpalmshotelsresorts.com/tented-camp-phuket/",
+  "candidates": [
+   {
+    "url": "https://twinpalmshotelsresorts.com/tented-camp-phuket/wp-content/uploads/sites/16/2024/10/0K9A6863-Enhanced-NR-scaled-1.webp",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Twinpalms Tented Camp Phuket"
+   }
+  ]
+ },
+ {
+  "key": "hotels:hotel-indigo-patong",
+  "kind": "hotel (boutique)",
+  "name": "Hotel Indigo Phuket Patong",
+  "where": "patong",
+  "gmapsQuery": "Hotel Indigo Phuket Patong",
+  "website": "https://phuketpatong.hotelindigo.com/",
+  "candidates": [
+   {
+    "url": "https://phuketpatong.hotelindigo.com/wp-content/uploads/2026/03/Hotel-Indigo-Patong-Home.webp",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Hotel Indigo Phuket Patong"
+   },
+   {
+    "url": "https://phuketpatong.hotelindigo.com/wp-content/uploads/2026/03/Hotel-Indigo-Patong-Home-Mobile-1024x683.webp",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Hotel Indigo Phuket Patong"
+   }
+  ]
+ },
+ {
+  "key": "hotels:holiday-inn-express-patong",
+  "kind": "hotel (mid-range)",
+  "name": "Holiday Inn Express Phuket Patong Beach Central",
+  "where": "patong",
+  "gmapsQuery": "Holiday Inn Express Phuket Patong Beach Central",
+  "website": "https://www.ihg.com/holidayinnexpress/hotels/us/en/phuket/phuex/hoteldetail",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pl%C3%A1%C5%BE_Patong.jpg/1280px-Pl%C3%A1%C5%BE_Patong.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC0",
+    "credit": "Dennis Sylvester Hurd (area photo: Patong Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:lub-d-patong",
+  "kind": "hotel (hostel)",
+  "name": "Lub d Phuket Patong",
+  "where": "patong",
+  "gmapsQuery": "Lub d Phuket Patong",
+  "website": "https://www.lubd.com/destination/phuket-patong/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg/1280px-Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "credit": "Ben Reeves (area photo: Bangla Road)"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Pl%C3%A1%C5%BE_Patong.jpg/1280px-Pl%C3%A1%C5%BE_Patong.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC0",
+    "credit": "Dennis Sylvester Hurd (area photo: Patong Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:beyond-kata",
+  "kind": "hotel (mid-range)",
+  "name": "Beyond Kata",
+  "where": "kata",
+  "gmapsQuery": "Beyond Kata, Kata Beach, Phuket",
+  "website": "https://www.beyondresort.com/kata/",
+  "candidates": [
+   {
+    "url": "https://www.beyondresort.com/kata/wp-content/uploads/sites/2/2026/06/10-1.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Beyond Kata"
+   }
+  ]
+ },
+ {
+  "key": "hotels:mom-tris-villa-royale",
+  "kind": "hotel (boutique)",
+  "name": "Mom Tri's Villa Royale",
+  "where": "kata-noi",
+  "gmapsQuery": "Mom Tri's Villa Royale, Kata Noi, Phuket",
+  "website": "https://www.villaroyalephuket.com/",
+  "candidates": [
+   {
+    "url": "https://www.villaroyalephuket.com/wp-content/uploads/2024/12/Mom-Tri-01.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Mom Tri's Villa Royale"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kata_Noi_-_panoramio.jpg/1280px-Kata_Noi_-_panoramio.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "credit": "Jacek Lesniowski (area photo: Kata Noi)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:sugar-marina-art-karon",
+  "kind": "hotel (mid-range)",
+  "name": "Sugar Marina Hotel ART Karon Beach",
+  "where": "karon",
+  "gmapsQuery": "Sugar Marina Hotel ART Karon Beach, Phuket",
+  "website": "https://www.sugarmarinahotel.com/art",
+  "candidates": [
+   {
+    "url": "https://www.sugarmarinahotel.com/art/wp-content/uploads/sites/3/2024/07/sugarmarinahotel-art-1-1024x576.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Sugar Marina Hotel ART"
+   }
+  ]
+ },
+ {
+  "key": "hotels:the-nai-harn",
+  "kind": "hotel (luxury)",
+  "name": "The Nai Harn",
+  "where": "nai-harn",
+  "gmapsQuery": "The Nai Harn Phuket, Nai Harn Beach",
+  "website": "https://www.thenaiharn.com/",
+  "candidates": [
+   {
+    "url": "https://www.thenaiharn.com/wp-content/uploads/2026/01/og-thenaiharn.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Nai Harn"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Nai_harn_beach_phuket_%2863%29.jpg/1280px-Nai_harn_beach_phuket_%2863%29.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Wolfgang Holzem (area photo: Nai Harn Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:wyndham-grand-nai-harn",
+  "kind": "hotel (luxury)",
+  "name": "Wyndham Grand Nai Harn Beach Phuket",
+  "where": "nai-harn",
+  "gmapsQuery": "Wyndham Grand Nai Harn Beach Phuket",
+  "website": "https://www.wyndhamhotels.com/wyndham-grand/phuket-thailand/wyndham-grand-nai-harn-beach-phuket/overview",
+  "candidates": [
+   {
+    "url": "https://www.wyndhamhotels.com/content/dam/property-images/en-us/gr/th/others/rawai-muang/52543/52543_exterior_view_1.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Wyndham Grand Nai Harn Beach Phuket"
+   }
+  ]
+ },
+ {
+  "key": "hotels:roost-glamping",
+  "kind": "hotel (budget)",
+  "name": "Roost Glamping",
+  "where": "rawai",
+  "gmapsQuery": "Roost Glamping, Rawai, Phuket",
+  "website": "https://www.roostglamping.com/",
+  "candidates": [
+   {
+    "url": "https://www.roostglamping.com/images/uploads/54/1665046426tent-1.png",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Roost Glamping"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Phuket_-_Rawai_Beach_11.jpg/1280px-Phuket_-_Rawai_Beach_11.jpg",
+    "source": "Wikimedia Commons",
+    "license": "Public domain",
+    "credit": "ADwarf (area photo: Rawai Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:casa-blanca-phuket",
+  "kind": "hotel (boutique)",
+  "name": "Casa Blanca Boutique Hotel",
+  "where": "phuket-town",
+  "gmapsQuery": "Casa Blanca Boutique Hotel Phuket, Phuket Old Town",
+  "website": "https://www.casablancaphuket.com/",
+  "candidates": [
+   {
+    "url": "https://www.casablancaphuket.com/images/slide_show/casablancaphuket_01.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Casa Blanca Boutique Hotel"
+   },
+   {
+    "url": "https://www.casablancaphuket.com/images/slide_show/casablancaphuket_06.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Casa Blanca Boutique Hotel"
+   }
+  ]
+ },
+ {
+  "key": "hotels:memory-at-on-on",
+  "kind": "hotel (mid-range)",
+  "name": "The Memory at On On Hotel",
+  "where": "phuket-town",
+  "gmapsQuery": "The Memory at On On Hotel, Phang Nga Road, Phuket Town",
+  "website": "https://www.thememoryhotel.com/",
+  "candidates": [
+   {
+    "url": "https://www.thememoryhotel.com/upload/home/1200430823-bg-home1.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "The Memory at On On Hotel"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg/1280px-Kasikorn_Bank_%26_The_Memory_at_On_On_Hotel._Phuket%2C_Thailand.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "credit": "Sharon Hahn Darlin"
+   }
+  ]
+ },
+ {
+  "key": "hotels:shunli-hotel",
+  "kind": "hotel (budget)",
+  "name": "Shunli Hotel",
+  "where": "phuket-town",
+  "gmapsQuery": "Shunli Hotel, Krabi Road, Phuket Town",
+  "website": "https://www.facebook.com/Shunlihostelphuket",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Phuket_Town_Buildings-of-Yaowarat-Road-01.jpg/1280px-Phuket_Town_Buildings-of-Yaowarat-Road-01.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "CEphoto, Uwe Aranas (area photo: Yaowarat Road)"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Christophe95 (area photo: Thalang Road)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:milky-bay-resort",
+  "kind": "hotel (mid-range)",
+  "name": "Milky Bay Resort",
+  "where": "koh-phangan",
+  "gmapsQuery": "Milky Bay Resort, Ban Tai, Koh Phangan",
+  "website": "https://www.milkybayresort.com/",
+  "candidates": [
+   {
+    "url": "https://www.milkybayresort.com/images/1942.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Milky Bay Resort"
+   },
+   {
+    "url": "https://www.milkybayresort.com/assets/images/icon/og-images.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Milky Bay Resort"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ban_Tai_Beach_Ko_Pha_Ngan.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Christophe95 (area photo: Ban Tai Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:see-sea-backpackers",
+  "kind": "hotel (hostel)",
+  "name": "See Sea Backpackers",
+  "where": "koh-phangan",
+  "gmapsQuery": "See Sea Backpackers, Ban Tai, Koh Phangan",
+  "website": "https://www.booking.com/hotel/th/see-sea-backpackers-house.html",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ban_Tai_Beach_Ko_Pha_Ngan.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Christophe95 (area photo: Ban Tai Beach)"
+   }
+  ]
+ },
+ {
+  "key": "hotels:slumber-party-phangan",
+  "kind": "hotel (hostel)",
+  "name": "Slumber Party Beach Koh Phangan",
+  "where": "koh-phangan",
+  "gmapsQuery": "Slumber Party Beach Koh Phangan, Ban Tai",
+  "website": "https://hotels.cloudbeds.com/en/reservation/lUlKrX",
+  "candidates": [
+   {
+    "url": "https://h-img1.cloudbeds.com/uploads/309581/slumber_party_koh_phangan_-_10-bed-5~~66baf88815db1.jpg",
+    "source": "official website",
+    "license": "\u00a9 hotel (official website)",
+    "credit": "Slumber Party Beach Koh Phangan"
+   },
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "Christophe95 (area photo: Ban Tai Beach)"
+   }
+  ]
+ }
+]

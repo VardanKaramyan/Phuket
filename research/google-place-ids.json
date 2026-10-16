@@ -1,0 +1,3723 @@
+[
+ {
+  "kind": "event",
+  "id": "shelter-phuket",
+  "name": "Shelter Phuket (small club room inside Illuzion)",
+  "q": "Shelter Phuket, 31 Bangla Rd, Patong",
+  "lat": 7.89346,
+  "lng": 98.29747,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/000.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Shelter Phuket",
+    "lat": 7.8933933,
+    "lng": 98.2976699,
+    "addr": "31 Bangla Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Night club",
+    "pid": "ChIJ38PSvC07UDARKEXHPUyhqV4",
+    "dist": 23
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "illuzion-phuket",
+  "name": "Illuzion Phuket",
+  "q": "Illuzion Phuket, Bangla Road, Patong",
+  "lat": 7.89346,
+  "lng": 98.29744,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/001.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Illuzion Phuket",
+    "lat": 7.8933933,
+    "lng": 98.2976699,
+    "addr": "31 Bangla Rd, Pa Tong, Amphoe Kathu, Phuket 83150",
+    "cat": "Night club/Disco club",
+    "pid": "ChIJA4Aqqbw6UDARcgkqgvpCe7I",
+    "dist": 26
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "boa-phuket",
+  "name": "BOA Phuket (house club)",
+  "q": "BOA Nightclub Phuket, Bangla Road, Patong",
+  "lat": 7.89373,
+  "lng": 98.29617,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/002.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "BOA Nightclub Phuket",
+    "lat": 7.893732099999999,
+    "lng": 98.2961691,
+    "addr": "9/1 Bangla Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Night club",
+    "pid": "ChIJYcnbCJc7UDARK7GEyeyNiQI",
+    "dist": 0
+   },
+   {
+    "name": "BOA Nightclub Phuket Parking",
+    "lat": 7.8945511999999995,
+    "lng": 98.29646129999999,
+    "addr": "9/1 Bangla Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Night club",
+    "pid": "ChIJA31Lfyg7UDAR7ovB4MvyX70",
+    "dist": 97
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "cafe-del-mar-phuket",
+  "name": "Café del Mar Phuket",
+  "q": "Café del Mar Phuket Beach Club, Kamala",
+  "lat": 7.96102,
+  "lng": 98.28394,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/003.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "courage-bar-phuket-town",
+  "name": "Courage Bar (FAKE PALM, SUB and Enthusiast nights)",
+  "q": "COURAGE КУРАЖ, 16 Bangkok Rd, Phuket Town",
+  "lat": 7.87917,
+  "lng": 98.38185,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/004.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "COURAGE | КУРАЖ",
+    "lat": 7.879166199999999,
+    "lng": 98.3818457,
+    "addr": "16 Bangkok Rd, Tambon Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Bar",
+    "pid": "ChIJCZGpPgAxUDARswiyIaohoLI",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "enthusiast-place-open-doors",
+  "name": "Open Doors Tuesday at Enthusiast Place",
+  "q": "Enthusiast Place, Si Sunthon, Thalang, Phuket",
+  "lat": 7.97912,
+  "lng": 98.32658,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/005.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Enthusiast Place",
+    "lat": 7.9791338,
+    "lng": 98.3265983,
+    "addr": "89 3 Srisoonthorn Rd, Si Sunthon, Thalang District, Phuket 83110",
+    "cat": "Recording studio/Art center/DJ supply store/Event management company/Music management and promotion/Music producer/Music school/Musical club",
+    "pid": "ChIJ2RhLbTE3UDARiFVwCEU8ldI",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "oxa-jungle-party",
+  "name": "OXA Jungle Party",
+  "q": "OXA - Jungle Party, Ban Tai, Koh Phangan",
+  "lat": 9.71735,
+  "lng": 100.03195,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/006.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "OXA - Jungle Party",
+    "lat": 9.717351899999999,
+    "lng": 100.03194529999999,
+    "addr": "72/52 Moo 2 Ban Tai Ko Pha-ngan, Ban Tai, Koh Phangan, Surat Thani 84280",
+    "cat": "Night club/Event venue/Festival/Tourist attraction",
+    "pid": "ChIJ_fbJtPL8VDAR8MZAPZqZo1A",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "koh-phangan-rave-trip",
+  "name": "Koh Phangan rave trip (2-3 days)",
+  "q": "OXA - Jungle Party, Ban Tai, Koh Phangan",
+  "lat": 9.71735,
+  "lng": 100.03195,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/006.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "OXA - Jungle Party",
+    "lat": 9.717351899999999,
+    "lng": 100.03194529999999,
+    "addr": "72/52 Moo 2 Ban Tai Ko Pha-ngan, Ban Tai, Koh Phangan, Surat Thani 84280",
+    "cat": "Night club/Event venue/Festival/Tourist attraction",
+    "pid": "ChIJ_fbJtPL8VDAR8MZAPZqZo1A",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "sabaii-friday-beach-party-phangan",
+  "name": "Sabaii Friday Beach Party (Ban Tai)",
+  "q": "Sabaii Bay Beach Club Koh Phangan, Ban Tai",
+  "lat": 9.70682,
+  "lng": 100.00255,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/007.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Sabaii Bay Beach Club Koh Phangan",
+    "lat": 9.7068184,
+    "lng": 100.0025545,
+    "addr": "100/56, Koh Phangan, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Beach club/Bar/Cocktail bar/Dance club/Restaurant/Swimming pool",
+    "pid": "ChIJWddVqHP9VDARVxMeFzOxJfw",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "retro-mountain-phangan",
+  "name": "Retro Mountain Jungle Club",
+  "q": "Retro Mountain Jungle Club Phangan, Ban Tai",
+  "lat": 9.72188,
+  "lng": 100.03807,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/008.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Retro Mountain Jungle Club Phangan",
+    "lat": 9.721877899999999,
+    "lng": 100.03807239999999,
+    "addr": "P2CQ+J39, Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Night club",
+    "pid": "ChIJ7U9JMQD9VDARwMZtunZFrnc",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "lighthouse-party-phangan",
+  "name": "Lighthouse Party (Haad Rin)",
+  "q": "Lighthouse Bungalows, Haad Rin, Koh Phangan",
+  "lat": 9.66689,
+  "lng": 100.07051,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/009.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Lighthouse Bungalows",
+    "lat": 9.666657899999999,
+    "lng": 100.07035599999999,
+    "addr": "84280 Koh Phangan Ko Pha-ngan, Suratthani Surat Thani 84280",
+    "cat": "Resort hotel/Hotel/Lodging",
+    "pid": "ChIJV1VVVZX9VDARfIalEgWZaUE",
+    "dist": 31
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "chill-up-phangan",
+  "name": "Chill Up: Monday Madness and Phangan Calling",
+  "q": "Chill UP club, Ban Tai, Koh Phangan",
+  "lat": 9.70559,
+  "lng": 100.01003,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/010.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Chill UP club",
+    "lat": 9.705586,
+    "lng": 100.0100246,
+    "addr": "114/2 หมู่ 1 Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Pub/Bar/Event venue/Night club/Restaurant",
+    "pid": "ChIJ3cTqOTT8VDARrX7WK1Hfnjk",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "eden-garden-phangan",
+  "name": "Eden Garden Saturday (Haad Yuan)",
+  "q": "Eden Garden, Haad Yuan, Koh Phangan",
+  "lat": 9.6933,
+  "lng": 100.07599,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/011.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Eden Garden",
+    "lat": 9.693302,
+    "lng": 100.0759891,
+    "addr": "M3VG+89H, Ban Tai, Ko Pha-ngan District, Surat Thani",
+    "cat": "Bar",
+    "pid": "ChIJTandsPL9VDARVeT9BVav2Bs",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "unclave-phangan",
+  "name": "Unclave (Groovy Tunes minimal nights)",
+  "q": "Unclave Phangan, Ban Tai, Koh Phangan",
+  "lat": 9.73006,
+  "lng": 100.04231,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/012.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Unclave Phangan",
+    "lat": 9.7300797,
+    "lng": 100.0423363,
+    "addr": "51, 26, Tambon Ban Tai, Koh Phangan, Surat Thani 84280",
+    "cat": "Night club",
+    "pid": "ChIJfUCIUWn9VDARQeb0JEYhwnI",
+    "dist": 4
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "waterfall-festival-phangan",
+  "name": "Waterfall Festival (Wednesdays)",
+  "q": "Waterfall Festival, Ban Tai, Koh Phangan",
+  "lat": 9.70588,
+  "lng": 100.04692,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/013.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Waterfall Festival",
+    "lat": 9.705696099999999,
+    "lng": 100.0469899,
+    "addr": "29, 10, Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Night club",
+    "pid": "ChIJ1WAuvfv8VDARuVGN781wAZQ",
+    "dist": 22
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "pangea-beach-bar-lanta",
+  "name": "Deep Sundays at Pangea Beach Bar (Koh Lanta)",
+  "q": "Pangeabar & kitchen, Long Beach, Koh Lanta",
+  "lat": 7.60588,
+  "lng": 99.03373,
+  "area": "koh-lanta",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/014.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Pangeabar & kitchen",
+    "lat": 7.6061657,
+    "lng": 99.0334718,
+    "addr": "36 3 Sala Dan, Ko Lanta District, Krabi 81150",
+    "cat": "Bar",
+    "pid": "ChIJ59jCtV8DTjARz_YqjkuYJSQ",
+    "dist": 43
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "circoloco-thailand-2027",
+  "name": "Circoloco Thailand 2027",
+  "q": "Baba Beach Club Natai, Khok Kloi, Phang Nga",
+  "lat": 8.2502954,
+  "lng": 98.2817659,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/015.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Baba Beach Club Phuket Natai Luxury Pool Villa Hotel by Sri panwa",
+    "lat": 8.250295399999999,
+    "lng": 98.2817659,
+    "addr": "88|8, Moo. 5, Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Resort hotel/Beach club/Villa",
+    "pid": "ChIJ4UJSgOtaUDARVE-VecBtOyE",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "baba-beach-club-natai",
+  "name": "Baba Beach Club Natai",
+  "q": "Baba Beach Club Natai, Khok Kloi, Phang Nga",
+  "lat": 8.2502954,
+  "lng": 98.2817659,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/015.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Baba Beach Club Phuket Natai Luxury Pool Villa Hotel by Sri panwa",
+    "lat": 8.250295399999999,
+    "lng": 98.2817659,
+    "addr": "88|8, Moo. 5, Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Resort hotel/Beach club/Villa",
+    "pid": "ChIJ4UJSgOtaUDARVE-VecBtOyE",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "cafe-del-mar-pyramid-2027-01-08",
+  "name": "Pyramid Stage: secret headliner (Café del Mar)",
+  "q": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+  "lat": 7.9610227,
+  "lng": 98.2839357,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/016.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "marco-carola-cafe-del-mar-2027",
+  "name": "Marco Carola at Café del Mar",
+  "q": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+  "lat": 7.9610227,
+  "lng": 98.2839357,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/016.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "carl-cox-cafe-del-mar-2027",
+  "name": "Carl Cox at Café del Mar",
+  "q": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+  "lat": 7.9610227,
+  "lng": 98.2839357,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/016.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "francis-mercier-cafe-del-mar-2027",
+  "name": "Francis Mercier at Café del Mar",
+  "q": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+  "lat": 7.9610227,
+  "lng": 98.2839357,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/016.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "blondish-cafe-del-mar-2027",
+  "name": "BLOND:ISH at Café del Mar",
+  "q": "Café del Mar Phuket Beach Club, Kamala, Phuket",
+  "lat": 7.9610227,
+  "lng": 98.2839357,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/016.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Café del Mar Phuket Beach Club",
+    "lat": 7.9610154,
+    "lng": 98.28393469999999,
+    "addr": "118, 19 Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Beach club/Bar/Event venue/Night club/Restaurant/Tourist attraction",
+    "pid": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "lost-jungle-parvati-2027",
+  "name": "Parvati Day & Night at Lost Jungle",
+  "q": "Koh Phangan, Surat Thani",
+  "lat": 9.74,
+  "lng": 100.03,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/017.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Ko Pha Ngan",
+    "lat": 9.731875299999999,
+    "lng": 100.01359289999999,
+    "addr": "Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Island",
+    "pid": "ChIJ73cD-pb9VDAR_q95XhqN_dM",
+    "dist": 2012
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "halfmoon-festival-jan-2027",
+  "name": "Halfmoon Festival",
+  "q": "Magical Forest by Halfmoon Festival, Ban Tai, Koh Phangan",
+  "lat": 9.7133568,
+  "lng": 100.0302665,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/018.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Magical Forest by Halfmoon Festival",
+    "lat": 9.7133568,
+    "lng": 100.0302665,
+    "addr": "72 39, Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Festival",
+    "pid": "ChIJocFEdaz9VDARB01YGSd97H4",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "daft-funk-live-phuket-2027",
+  "name": "Daft Funk Live (Daft Punk tribute)",
+  "q": "Banana Beach Club by Sollis 2.0, Choeng Thale, Phuket",
+  "lat": 8.0424305,
+  "lng": 98.2770875,
+  "area": "layan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/019.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Banana Beach Club by Sollis 2.0",
+    "lat": 8.0424305,
+    "lng": 98.2770875,
+    "addr": "27RG+PHH, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Beach club",
+    "pid": "ChIJqzu1OSE5UDARGefK9BMdANA",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "o-beach-ibiza-barra-cuda-2027",
+  "name": "O Beach Ibiza x Barra Cuda",
+  "q": "Barra Cuda Beach Club Phuket, Patong",
+  "lat": 7.8976887,
+  "lng": 98.296207,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/020.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Barra Cuda Beach Club Phuket",
+    "lat": 7.897521299999999,
+    "lng": 98.2965337,
+    "addr": "43 Thaweewong Road, Amphoe Kathu, Pa Tong, Patong, Phuket 83150",
+    "cat": "Beach club/Restaurant",
+    "pid": "ChIJdxcgqbs7UDARFDTBMIaGw1Y",
+    "dist": 41
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "macan-live-phuket-2027",
+  "name": "MACAN live in Phuket",
+  "q": "Lotus Arena, Cherng Talay, Phuket",
+  "lat": 7.984822,
+  "lng": 98.310065,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/021.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Lotus Arena",
+    "lat": 7.984845399999999,
+    "lng": 98.3100588,
+    "addr": "2, 1 Soi Cherng Taley 1, Tambon Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Live music venue",
+    "pid": "ChIJewS3V-U3UDARRqs5Y2tFd9E",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "spiritgust-2027",
+  "name": "Spiritgust Festival 2027",
+  "q": "Tha Sala, Nakhon Si Thammarat",
+  "lat": 8.6666667,
+  "lng": 99.9316667,
+  "area": "other",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/022.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Tha Sala",
+    "lat": 8.6639536,
+    "lng": 99.9292892,
+    "addr": "Tha Sala District, Nakhon Si Thammarat",
+    "cat": "",
+    "pid": "ChIJS4hfbjMKUzARABc4LLwjAgQ",
+    "dist": 399
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "dnb-allstars-thailand-2027",
+  "name": "DnB Allstars Thailand 2027",
+  "q": "R9R8+2RP Chalong, Phuket",
+  "lat": 7.8400875,
+  "lng": 98.3670781,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/023.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "R9R8+2RP",
+    "lat": 7.840087499999999,
+    "lng": 98.3670781,
+    "addr": "R9R8+2RP, Tambon Chalong, Amphoe Mueang Phuket, Chang Wat Phuket",
+    "cat": "",
+    "pid": "IiY6JAoKDWtNrAQV_Z-hOhALGhQKEgmzQq2zsC9QMBFAJDgsvCMCBA",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "zamna-phuket-2027",
+  "name": "Zamna Phuket 2027",
+  "q": "Yeden Gardens, Khok Kloi, Phang Nga",
+  "lat": 8.26232,
+  "lng": 98.281809,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/024.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Yeden Gardens",
+    "lat": 8.2626124,
+    "lng": 98.28158859999999,
+    "addr": "777J+2JW หมู่ 5 Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Tourist attraction",
+    "pid": "ChIJ3eqrbQBbUDARQOow3dqYxjQ",
+    "dist": 41
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "full-moon-party-2027-01",
+  "name": "Full Moon Party",
+  "q": "Haad Rin Nok Beach, Koh Phangan",
+  "lat": 9.6767778,
+  "lng": 100.0680833,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/025.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Rin Nok Beach",
+    "lat": 9.6769113,
+    "lng": 100.0680525,
+    "addr": "Ban Tai, Ko Pha-ngan District, Surat Thani",
+    "cat": "Beach",
+    "pid": "ChIJtzGnuLr8VDARBX3NrCIC2Wk",
+    "dist": 15
+   }
+  ]
+ },
+ {
+  "kind": "event",
+  "id": "jungle-experience-2027-01",
+  "name": "Jungle Experience",
+  "q": "Jungle Experience, Ban Tai, Koh Phangan",
+  "lat": 9.715354,
+  "lng": 100.0299359,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/026.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Jungle Experience",
+    "lat": 9.715354,
+    "lng": 100.0299359,
+    "addr": "Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Event venue",
+    "pid": "ChIJzQVE0qv9VDARerIg-zO4ljQ",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "big-buddha",
+  "name": "Big Buddha",
+  "q": "Phuket Big Buddha, Chalong, Phuket",
+  "lat": 7.8276,
+  "lng": 98.3128,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/027.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Phuket Big Buddha",
+    "lat": 7.8275763,
+    "lng": 98.3128423,
+    "addr": "Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Buddhist temple/Place of worship/Tourist attraction",
+    "pid": "ChIJOSmXz2AvUDARXCxlBBs7y38",
+    "dist": 5
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "wat-chalong",
+  "name": "Wat Chalong",
+  "q": "Wat Chalong, Chalong, Phuket",
+  "lat": 7.8468,
+  "lng": 98.3365,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/028.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Wat Chalong",
+    "lat": 7.846838399999999,
+    "lng": 98.3369048,
+    "addr": "70 หมู่ที่ 6 Chao Fah Tawan Tok Rd, Chalong, Mueang Phuket District, Phuket 83000",
+    "cat": "Buddhist temple/Place of worship",
+    "pid": "ChIJYSMtg7svUDARhklKwhnTa48",
+    "dist": 45
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "phuket-old-town",
+  "name": "Phuket Old Town",
+  "q": "Soi Rommani, Phuket Old Town",
+  "lat": 7.8853,
+  "lng": 98.3892,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/029.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Soi Rommani",
+    "lat": 7.8853763,
+    "lng": 98.3891718,
+    "addr": "Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "",
+    "pid": "ChIJ3b_FcfoxUDARXaBcM_4ysys",
+    "dist": 9
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "sunday-walking-street",
+  "name": "Sunday Walking Street Market (Lard Yai)",
+  "q": "Lard Yai Sunday Night Market, Thalang Road, Phuket Town",
+  "lat": 7.8848,
+  "lng": 98.3891,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/030.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Lard Yai Sunday Night Market",
+    "lat": 7.8847222,
+    "lng": 98.39007079999999,
+    "addr": "53 Thalang Rd Old Phuket Town, Tambon Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "Night market",
+    "pid": "ChIJQwdCFvoxUDAR4XNViLYibc4",
+    "dist": 107
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "promthep-cape",
+  "name": "Promthep Cape",
+  "q": "Promthep Cape, Rawai, Phuket",
+  "lat": 7.7619,
+  "lng": 98.3054,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/031.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Promthep Cape",
+    "lat": 7.7615308,
+    "lng": 98.3062617,
+    "addr": "Rawai, Mueang Phuket District, Phuket",
+    "cat": "",
+    "pid": "ChIJZ3aEXSYmUDARbSkKdsDzYMo",
+    "dist": 103
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "windmill-viewpoint",
+  "name": "Windmill Viewpoint",
+  "q": "Windmill Viewpoint, Nai Harn, Phuket",
+  "lat": 7.7697,
+  "lng": 98.3066,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/032.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Windmill Viewpoint",
+    "lat": 7.769662299999999,
+    "lng": 98.3063541,
+    "addr": "Q894+VG9, Ya Nui, Rawai, Mueang Phuket District, Phuket 83100",
+    "cat": "Scenic spot/Tourist attraction",
+    "pid": "ChIJ2fW0mh8mUDARF9QBYA9rLks",
+    "dist": 27
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "black-rock-viewpoint",
+  "name": "Black Rock Viewpoint (Pa Hin Dam)",
+  "q": "Black Rock Viewpoint, Karon, Phuket",
+  "lat": 7.783,
+  "lng": 98.2975,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/033.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Black Rock Viewpoint",
+    "lat": 7.7829239999999995,
+    "lng": 98.2976154,
+    "addr": "Q7MX+529, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Scenic spot/Observation deck",
+    "pid": "ChIJ-Xrkew8mUDARqMTDzurMDPo",
+    "dist": 15
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "karon-viewpoint",
+  "name": "Karon Viewpoint",
+  "q": "Karon Viewpoint, Karon, Phuket",
+  "lat": 7.7973,
+  "lng": 98.3022,
+  "area": "kata-noi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/034.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Karon Viewpoint Phuket",
+    "lat": 7.797317499999999,
+    "lng": 98.30214869999999,
+    "addr": "4233 Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Scenic spot/Tourist attraction/Vista point",
+    "pid": "ChIJdRDx6fslUDARr6N6xhGdgyg",
+    "dist": 6
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "kata-beach",
+  "name": "Kata Beach",
+  "q": "Kata Beach, Karon, Phuket",
+  "lat": 7.8203,
+  "lng": 98.2978,
+  "area": "kata",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/035.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kata Beach",
+    "lat": 7.820694499999999,
+    "lng": 98.2976473,
+    "addr": "Karon, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJAdUTdI0lUDAR-EN1U6iZIY0",
+    "dist": 47
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "kata-noi-beach",
+  "name": "Kata Noi Beach",
+  "q": "Kata Noi Beach, Karon, Phuket",
+  "lat": 7.8063,
+  "lng": 98.2988,
+  "area": "kata-noi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/036.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kata Noi Beach",
+    "lat": 7.806316799999999,
+    "lng": 98.2990071,
+    "addr": "Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJR-hNwPElUDARgnRTnE7du3E",
+    "dist": 23
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "nai-harn-beach",
+  "name": "Nai Harn Beach",
+  "q": "Nai Han Beach หาดในหาน, Rawai, Phuket",
+  "lat": 7.776,
+  "lng": 98.3057,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/037.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Nai Han Beach",
+    "lat": 7.7761751,
+    "lng": 98.3058073,
+    "addr": "Nai Harn Beach, Rawai, Mueang Phuket District, Phuket 83100",
+    "cat": "ชายหาด",
+    "pid": "ChIJ1TrmSxwmUDARyXz7aKZdziw",
+    "dist": 23
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "freedom-beach",
+  "name": "Freedom Beach",
+  "q": "Freedom Beach, Karon, Phuket",
+  "lat": 7.8749,
+  "lng": 98.2755,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/038.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Freedom Beach",
+    "lat": 7.8752559,
+    "lng": 98.2758228,
+    "addr": "ถนนศิริราช Pa Tong, Kathu District, Phuket 83100",
+    "cat": "Tourist attraction",
+    "pid": "ChIJBVMebEolUDARduwCCVdlNxE",
+    "dist": 53
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "patong-beach",
+  "name": "Patong Beach",
+  "q": "Patong Beach, Patong, Phuket",
+  "lat": 7.8966,
+  "lng": 98.2957,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/039.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Patong Beach",
+    "lat": 7.8961957,
+    "lng": 98.2954147,
+    "addr": "Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Beach",
+    "pid": "ChIJZ7ELyL06UDARbRcj60k3Dfg",
+    "dist": 55
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "patong",
+  "name": "Patong & Kalim",
+  "q": "Patong Beach, Patong, Phuket",
+  "lat": 7.8962,
+  "lng": 98.2953,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/039.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Patong Beach",
+    "lat": 7.8961957,
+    "lng": 98.2954147,
+    "addr": "Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Beach",
+    "pid": "ChIJZ7ELyL06UDARbRcj60k3Dfg",
+    "dist": 13
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "bangla-road",
+  "name": "Bangla Road",
+  "q": "Bangla Road, Patong, Phuket",
+  "lat": 7.8936,
+  "lng": 98.2968,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/040.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Bangla Rd",
+    "lat": 7.8935457,
+    "lng": 98.2968022,
+    "addr": "Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Notable street",
+    "pid": "ChIJSW3vo7w6UDAR_yQ3zm92Xqo",
+    "dist": 6
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "khao-rang-viewpoint",
+  "name": "Khao Rang Viewpoint",
+  "q": "Khao Rang Viewpoint, Phuket Town",
+  "lat": 7.8924,
+  "lng": 98.3802,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/041.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Khao Rang Viewpoint",
+    "lat": 7.8923602,
+    "lng": 98.38006279999999,
+    "addr": "145/5 Patiphat Rd Rang Hill, Tambon Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Tourist attraction/Park",
+    "pid": "ChIJ36TUGOsxUDAR7hcbGCJ8tlc",
+    "dist": 16
+   },
+   {
+    "name": "จุดชมวิวหอพระยารัษฎานุประดิษฐ์ Phuket City View Point",
+    "lat": 7.8927122999999995,
+    "lng": 98.3801446,
+    "addr": "V9VJ+33J, Rang Hill, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Scenic spot",
+    "pid": "ChIJVUll9esxUDARN-c5N_UeqGs",
+    "dist": 35
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "rawai-seafood-market",
+  "name": "Rawai Seafood Market",
+  "q": "Rawai Seafood Market, Rawai, Phuket",
+  "lat": 7.7756,
+  "lng": 98.3288,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/042.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Rawai Seafood Market",
+    "lat": 7.7757444,
+    "lng": 98.32892269999999,
+    "addr": "ตลาดปลาริมหาดราไวย์,หมู่ที่2,บ้านชาวเล,ท่าเทียบเรือราไวย์ Wiset Rd, Rawai, Mueang Phuket District, Phuket 83100",
+    "cat": "Seafood market",
+    "pid": "ChIJ62Ma6bgoUDARnQb8WjP71rY",
+    "dist": 21
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "naka-weekend-market",
+  "name": "Naka Weekend Market",
+  "q": "Naka Weekend Market, Wirat Hong Yok Road, Phuket",
+  "lat": 7.8808,
+  "lng": 98.3663,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/043.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Naka Weekend Market",
+    "lat": 7.880704799999999,
+    "lng": 98.36572869999999,
+    "addr": "Wirat Hong Yok Rd, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Night market",
+    "pid": "ChIJ02EC1NsxUDAR9ou27HphtVM",
+    "dist": 64
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "chillva-market",
+  "name": "Chillva Market",
+  "q": "Chillva Market, Yaowarat Road, Phuket Town",
+  "lat": 7.9071,
+  "lng": 98.3734,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/044.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Chillva Market",
+    "lat": 7.9070421,
+    "lng": 98.3732872,
+    "addr": "Ratsada, Mueang Phuket District, Phuket 83000",
+    "cat": "Night market/Flea market",
+    "pid": "ChIJbQQ1Rr0xUDARwb-3w3Va9FY",
+    "dist": 14
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "nai-yang-beach",
+  "name": "Nai Yang Beach (Sirinat National Park)",
+  "q": "Nai Yang Beach, Sakhu, Thalang, Phuket",
+  "lat": 8.09,
+  "lng": 98.2976,
+  "area": "nai-yang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/045.txt",
+  "n": 5,
+  "top": [
+   {
+    "name": "Naiyang Beach",
+    "lat": 8.0898576,
+    "lng": 98.2974795,
+    "addr": "Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJZSDNBDJGUDARyAZDFkNErio",
+    "dist": 21
+   },
+   {
+    "name": "Nai Yang Beach Resort & Spa",
+    "lat": 8.0882963,
+    "lng": 98.297945,
+    "addr": "65/23-24,Nai Yang Beach Road Sakhu, Thalang District, Phuket 83110",
+    "cat": "Resort hotel",
+    "pid": "ChIJe74pHNJHUDARmp8Kz2aURUU",
+    "dist": 193
+   },
+   {
+    "name": "Naiyang Beach Hotel",
+    "lat": 8.0923103,
+    "lng": 98.3020579,
+    "addr": "80 30 38 Sakhu, Thalang District, Phuket 83110",
+    "cat": "Hotel",
+    "pid": "ChIJdSVX4M1HUDAR47i0sKDRUzE",
+    "dist": 554
+   },
+   {
+    "name": "Nai Yang Beach",
+    "lat": 8.089387,
+    "lng": 98.29728829999999,
+    "addr": "65/23- 83120, ถนน เทพกระษัตรี-ในยาง - ซอย สาคู 3, Sakhu, Thalang District, Phuket 83110",
+    "cat": "Tourist attraction",
+    "pid": "ChIJyYIKjs1HUDARoBH30mA6YyM",
+    "dist": 76
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "bang-pae-waterfall",
+  "name": "Bang Pae Waterfall (Khao Phra Thaeo)",
+  "q": "Bang Pae Waterfall, Pa Khlok, Thalang, Phuket",
+  "lat": 8.0415,
+  "lng": 98.3932,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/046.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Bang Pae Waterfall",
+    "lat": 8.0392798,
+    "lng": 98.3913003,
+    "addr": "Bangpae waterfall, Pakhlok, Phuket 83110",
+    "cat": "Tourist attraction",
+    "pid": "ChIJlyok0wY2UDARz8X2fl5Wt8s",
+    "dist": 324
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "phuket-elephant-sanctuary",
+  "name": "Phuket Elephant Sanctuary",
+  "q": "Phuket Elephant Sanctuary, Pa Khlok, Thalang, Phuket",
+  "lat": 8.0258,
+  "lng": 98.4016,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/047.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Phuket Elephant Sanctuary",
+    "lat": 8.0206992,
+    "lng": 98.3984419,
+    "addr": "100, 9, Pakhlok, Thalang District, Chang Wat Phuket 83110",
+    "cat": "Tourist attraction/Animal rescue service/Ecological park",
+    "pid": "ChIJe5gBglZIUDARbzpRlCqfeMA",
+    "dist": 665
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "chalong-bay-rum",
+  "name": "Chalong Bay Rum Distillery (The Distillery Phuket)",
+  "q": "The Distillery Phuket - Home of Chalong Bay, Chalong, Phuket",
+  "lat": 7.8417,
+  "lng": 98.3523,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/048.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "The Distillery Phuket - Home of Chalong Bay",
+    "lat": 7.8416099,
+    "lng": 98.3524025,
+    "addr": "14, 2 Soi Palai, Chalong, Amphur Muang, Phuket 83130",
+    "cat": "Bar/Cocktail bar/Distillery/Restaurant/Tourist attraction",
+    "pid": "ChIJqXwFLq0vUDARp9TfcnPRUx0",
+    "dist": 15
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "banana-beach",
+  "name": "Banana Beach",
+  "q": "Banana Beach, Choeng Thale, Thalang, Phuket",
+  "lat": 8.0419,
+  "lng": 98.2764,
+  "area": "nai-thon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/049.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Banana Beach",
+    "lat": 8.0418057,
+    "lng": 98.2764706,
+    "addr": "27RG+PHH, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Public beach",
+    "pid": "ChIJxXL8iHA4UDAR37a5-sTpop0",
+    "dist": 13
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "laem-singh-beach",
+  "name": "Laem Singh Beach",
+  "q": "Haad Laem Sing, Kamala, Phuket",
+  "lat": 7.9685,
+  "lng": 98.2795,
+  "area": "surin",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/050.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Haad Laem Sing",
+    "lat": 7.9687744,
+    "lng": 98.2794421,
+    "addr": "Kamala, Kathu District, Phuket 83120",
+    "cat": "Beach",
+    "pid": "ChIJFw_8MYk5UDAREduspCNeIlk",
+    "dist": 31
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "ya-nui-beach",
+  "name": "Ya Nui Beach",
+  "q": "Yanui Beach, Rawai, Phuket",
+  "lat": 7.7675,
+  "lng": 98.3063,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/051.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "ํYanui Beach",
+    "lat": 7.7677553999999995,
+    "lng": 98.3063724,
+    "addr": "Mueang Phuket District, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJ3XHRMyAmUDAR19euzBFgvLQ",
+    "dist": 29
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "tri-trang-beach",
+  "name": "Tri Trang Beach",
+  "q": "Tri Trang Beach, Patong, Phuket",
+  "lat": 7.8863,
+  "lng": 98.275,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/052.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Tri Trang Beach",
+    "lat": 7.886530199999999,
+    "lng": 98.273384,
+    "addr": "Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Beach",
+    "pid": "ChIJY7L_2c86UDAR-wnwyKXdo7E",
+    "dist": 180
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "ao-yon-beach",
+  "name": "Ao Yon Beach",
+  "q": "Ao Yon Beach, Wichit, Phuket",
+  "lat": 7.8118,
+  "lng": 98.3905,
+  "area": "cape-panwa",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/053.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Ao Yon Beach",
+    "lat": 7.812793699999999,
+    "lng": 98.3916081,
+    "addr": "5/13 Soi Ao-Yon Khaokhad Cape Panwa, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Beach",
+    "pid": "ChIJTTc2L58uUDAR2RhIMgwRAP8",
+    "dist": 165
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "layan-beach",
+  "name": "Layan Beach",
+  "q": "Layan Beach, Choeng Thale, Thalang, Phuket",
+  "lat": 8.0283,
+  "lng": 98.289,
+  "area": "layan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/054.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Layan Beach",
+    "lat": 8.026868,
+    "lng": 98.2893756,
+    "addr": "27GQ+PQ, Bang Tao Beach, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Beach pavillion",
+    "pid": "ChIJyc2rEQA5UDARgyZlcM6VzfA",
+    "dist": 165
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "sai-kaew-beach",
+  "name": "Sai Kaew Beach",
+  "q": "Sai Kaew Beach, Mai Khao, Thalang, Phuket",
+  "lat": 8.1895,
+  "lng": 98.2876,
+  "area": "mai-khao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/055.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Sai Kaew Beach",
+    "lat": 8.187261,
+    "lng": 98.28800509999999,
+    "addr": "Mai Khao, Thalang District, Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJhz2FPXNFUDARITHnMQ82ss4",
+    "dist": 253
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "laem-krating-viewpoint",
+  "name": "Laem Krating Viewpoint",
+  "q": "Cape Krathing, Phuket",
+  "lat": 7.7763,
+  "lng": 98.2892,
+  "area": "kata-noi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/056.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Cape Krathing",
+    "lat": 7.776103999999999,
+    "lng": 98.288687,
+    "addr": "Q7GQ+CFV, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Tourist attraction",
+    "pid": "ChIJs-2ubBMmUDAR050SeeI17nk",
+    "dist": 61
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "khao-khad-viewpoint",
+  "name": "Khao Khad Viewpoint Tower",
+  "q": "Kaokard Viewpoint Tower, Wichit, Phuket",
+  "lat": 7.8347,
+  "lng": 98.3836,
+  "area": "cape-panwa",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/057.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kaokard Viewpoint Tower",
+    "lat": 7.8347055999999995,
+    "lng": 98.3836127,
+    "addr": "R9MM+VCQ, Cape Panwa, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Observation deck/Scenic spot/Tourist attraction",
+    "pid": "ChIJ-d6AIGMuUDARj2sAa0yw_Ik",
+    "dist": 2
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "bang-rong-mangroves",
+  "name": "Bang Rong Pier and Mangrove Walk",
+  "q": "Bang Rong Pier, Pa Khlok, Thalang, Phuket",
+  "lat": 8.05,
+  "lng": 98.4159,
+  "area": "ao-po",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/058.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Bang Rong Pier",
+    "lat": 8.0494658,
+    "lng": 98.41591389999999,
+    "addr": "2CX8+Q9M, Soi Mukthalang, Thep Krasatti, Thalang District, Phuket 83110",
+    "cat": "Marina",
+    "pid": "ChIJ8-Er_wpKUDARTOQacfdjjDg",
+    "dist": 59
+   },
+   {
+    "name": "Bang Rong Pier Phuket",
+    "lat": 8.049515999999999,
+    "lng": 98.41588,
+    "addr": "Pakhlok, Thalang District, Phuket 83110",
+    "cat": "Ferry terminal",
+    "pid": "ChIJoTnJ-QpKUDARNFySh8Jk5lM",
+    "dist": 54
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "gibbon-rehabilitation-project",
+  "name": "Gibbon Rehabilitation Project",
+  "q": "The Gibbon Rehabilitation Project, Pa Khlok, Thalang, Phuket",
+  "lat": 8.0419,
+  "lng": 98.3938,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/059.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "The Gibbon Rehabilitation Project : โครงการคืนชะนีสู่ป่า",
+    "lat": 8.041948,
+    "lng": 98.393824,
+    "addr": "104/3 Moo 3, Paklock, Talang, Phuket 83100",
+    "cat": "Animal protection organization",
+    "pid": "ChIJg0M0KAc2UDARhJsB5CAeLFw",
+    "dist": 6
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "koh-sirey",
+  "name": "Koh Sirey: Hilltop Temple and Sea Gypsy Village",
+  "q": "Wat Ban Koh Sirey, Ratsada, Phuket",
+  "lat": 7.8802,
+  "lng": 98.4263,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/060.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Wat Ban Koh Sirey",
+    "lat": 7.8806287,
+    "lng": 98.4269374,
+    "addr": "VCJG+7Q3, Ratsada, Mueang Phuket District, Phuket 83000",
+    "cat": "Buddhist temple/Tourist attraction",
+    "pid": "ChIJk1qn-3AyUDARgDYDaNQo9Dc",
+    "dist": 85
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "wat-phra-thong",
+  "name": "Wat Phra Thong (Half-Buried Buddha)",
+  "q": "Wat Phra Thong, Thep Krasattri, Thalang, Phuket",
+  "lat": 8.034,
+  "lng": 98.3377,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/061.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Wat Phra Thong",
+    "lat": 8.033902399999999,
+    "lng": 98.3377144,
+    "addr": "172/2​ Nanai Rd, Thalang District, Phuket 83110",
+    "cat": "Buddhist temple",
+    "pid": "ChIJfRT7FcQ3UDARh2ZVydADqls",
+    "dist": 11
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "phuket-mining-museum",
+  "name": "Phuket Mining Museum",
+  "q": "Phuket Mining Museum, Kathu, Phuket",
+  "lat": 7.9333,
+  "lng": 98.3495,
+  "area": "kathu",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/062.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Phuket Mining Museum",
+    "lat": 7.9333287,
+    "lng": 98.349487,
+    "addr": "W8MX+8QQ, Kathu, Kathu District, Phuket 83120",
+    "cat": "Museum/Tourist attraction",
+    "pid": "ChIJPb2l_FwwUDAR9KgcHP_s_1s",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "soi-dog-foundation",
+  "name": "Soi Dog Foundation Sanctuary",
+  "q": "Soi Dog Foundation, Soi Mai Khao 10, Mai Khao, Phuket",
+  "lat": 8.128,
+  "lng": 98.3132,
+  "area": "mai-khao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/063.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Soi Dog Foundation",
+    "lat": 8.127901,
+    "lng": 98.3133928,
+    "addr": "167, 9, Mai Khao, Thalang District, Phuket 83110",
+    "cat": "Non-profit organization/Tourist attraction",
+    "pid": "ChIJTSrvL6lIUDARNNt2x4ruZDE",
+    "dist": 24
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "karon-temple-market",
+  "name": "Karon Temple Market",
+  "q": "Karon Night Market, Karon, Phuket",
+  "lat": 7.8479,
+  "lng": 98.298,
+  "area": "karon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/064.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Karon Night Market",
+    "lat": 7.8478201,
+    "lng": 98.2976396,
+    "addr": "456, Karon Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Market",
+    "pid": "ChIJBZ-Q32slUDARORcjOkGa_Xc",
+    "dist": 41
+   },
+   {
+    "name": "Karon Beach Night Market",
+    "lat": 7.8503647,
+    "lng": 98.2927066,
+    "addr": "556 Patak Rd Karon Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Night market",
+    "pid": "ChIJc62sKgAlUDARPBRrlzzJXnM",
+    "dist": 644
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "kruvit-raft",
+  "name": "Kruvit Raft (Floating Seafood Restaurant)",
+  "q": "Khru Vit Seafood Raft, Ko Kaeo, Phuket",
+  "lat": 7.9348,
+  "lng": 98.4136,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/065.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Khru Vit Seafood Raft",
+    "lat": 7.9347810999999995,
+    "lng": 98.41357789999999,
+    "addr": "TH ภูเก็ต เมือง เกาะแก้ว Front of Maphro Island M.6 Koh Khaow ,Muang 83000",
+    "cat": "Seafood restaurant",
+    "pid": "ChIJfdtDW8EzUDARNE49exp11-k",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "summore-day-cafe",
+  "name": "Summore Day Cafe",
+  "q": "Summore Day, 94 Wiset Road, Rawai, Phuket",
+  "lat": 7.7642,
+  "lng": 98.3062,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/066.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Summore Day Cafe",
+    "lat": 7.7642096,
+    "lng": 98.30616789999999,
+    "addr": "94 ถ.วิเศษ Promthep Cape, Rawai, อ.เมือง, Phuket 83130",
+    "cat": "Coffee shop/Cafe",
+    "pid": "ChIJ6YzzCOgnUDARmSc0TSNcCoo",
+    "dist": 4
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "view-cafe-phuket",
+  "name": "View Cafe at Phuket (Phuket View Coffee and Resort)",
+  "q": "View Cafe at Phuket, Chalong, Phuket",
+  "lat": 7.8701,
+  "lng": 98.3299,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/067.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "View Cafe at Phuket",
+    "lat": 7.8701324999999995,
+    "lng": 98.3299053,
+    "addr": "56 ฉลอง 10 หมู่ที่ 5 ถนนบ้านในตรอก Tambon Chalong, Mueang Phuket District, Phuket 83130",
+    "cat": "Coffee shop/Cafe/Restaurant",
+    "pid": "ChIJ0eAbRecvUDARQuI-6O-zQFw",
+    "dist": 4
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "phang-nga-bay-james-bond",
+  "name": "Phang Nga Bay: James Bond Island and sea caves",
+  "q": "James Bond Island, Phang Nga",
+  "lat": 8.27538,
+  "lng": 98.50056,
+  "area": "phang-nga",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/068.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Khao Phing Kan",
+    "lat": 8.2745231,
+    "lng": 98.50122619999999,
+    "addr": "Phang Nga",
+    "cat": "Island",
+    "pid": "ChIJ8QtsYcOsUTARY16P2GPh_RM",
+    "dist": 120
+   },
+   {
+    "name": "James Bond Island",
+    "lat": 8.2746365,
+    "lng": 98.5005949,
+    "addr": "7GF2+V65, Krasom Subdistrict, Takua Thung District, Phang Nga 82130",
+    "cat": "Tourist attraction",
+    "pid": "ChIJyYjUToytUTARY3Ai0843JWk",
+    "dist": 83
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "hong-by-starlight",
+  "name": "Hong by Starlight: evening sea-canoe trip",
+  "q": "Hong Island, Phang Nga Bay, Phang Nga",
+  "lat": 8.22444,
+  "lng": 98.50056,
+  "area": "phang-nga",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/069.txt",
+  "n": 8,
+  "top": [
+   {
+    "name": "Ko Hong, Phang-nga Province",
+    "lat": 8.2244444,
+    "lng": 98.5005556,
+    "addr": "Krasom, Ko Yao District, Phang Nga 82160",
+    "cat": "Island",
+    "pid": "ChIJzz8D_1utUTARsguPV-cIWKU",
+    "dist": 1
+   },
+   {
+    "name": "Ko Hong",
+    "lat": 8.2244063,
+    "lng": 98.5005963,
+    "addr": "6GF2+Q69, Krasom, Ko Yao District, Phang Nga 82160",
+    "cat": "National park",
+    "pid": "ChIJVX2n_1utUTARveajd9TX8Cc",
+    "dist": 5
+   },
+   {
+    "name": "Phang Nga Bay",
+    "lat": 8.2445516,
+    "lng": 98.56350619999999,
+    "addr": "",
+    "cat": "Bay",
+    "pid": "ChIJVawJox-uUTARyqkHbtpiR34",
+    "dist": 7279
+   },
+   {
+    "name": "View Point Hong Island",
+    "lat": 8.0794939,
+    "lng": 98.68260149999999,
+    "addr": "Nong Thale, Mueang Krabi District, Krabi",
+    "cat": "Scenic spot",
+    "pid": "ChIJoaQ1VIy5UTAReqNX9VqF91w",
+    "dist": 25715
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "phi-phi-maya-bay",
+  "name": "Phi Phi Islands and Maya Bay",
+  "q": "Maya Bay, Ko Phi Phi Le, Krabi",
+  "lat": 7.67695,
+  "lng": 98.766,
+  "area": "phi-phi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/070.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Maya Bay",
+    "lat": 7.6781764,
+    "lng": 98.76567159999999,
+    "addr": "",
+    "cat": "Bay",
+    "pid": "ChIJYzP3lL4gTjART5nPhbv1pIU",
+    "dist": 141
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "similan-islands",
+  "name": "Similan Islands",
+  "q": "Donald Duck Bay, Similan Islands, Phang Nga",
+  "lat": 8.66548,
+  "lng": 97.64784,
+  "area": "phang-nga",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/071.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Donald Duck Bay",
+    "lat": 8.6654689,
+    "lng": 97.6480608,
+    "addr": "MJ8X+56M, Lam Kaen, Khura Buri District, Phang Nga",
+    "cat": "Tourist attraction",
+    "pid": "ChIJUYBwGIRxWjAR2_kuDgsWLas",
+    "dist": 24
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "koh-racha-yai",
+  "name": "Koh Racha Yai",
+  "q": "Patok Beach, Racha Yai Island, Phuket",
+  "lat": 7.60779,
+  "lng": 98.36715,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/072.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Patok Beach",
+    "lat": 7.6075785,
+    "lng": 98.36784399999999,
+    "addr": "Rawai Mueang Phuket District, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJWVlovjDRTzARz2-olYnDJAU",
+    "dist": 80
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "coral-island-koh-hey",
+  "name": "Coral Island (Koh Hey)",
+  "q": "Coral Island (Koh Hey), Phuket",
+  "lat": 7.7459,
+  "lng": 98.37376,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/073.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Coral Island",
+    "lat": 7.745161899999999,
+    "lng": 98.3756325,
+    "addr": "Unnamed Rd Tambon Rawai Amphoe Mueang Phuket Chang Wat Phuket 83100泰国 Koh He, Tambon Rawai, Amphoe Mueang Phuket, Chang Wat Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJZQNX6Z8pUDAR7KPbWiU-12c",
+    "dist": 222
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "khai-islands",
+  "name": "Khai Islands (Koh Khai Nok)",
+  "q": "Koh Khai Nok, Phang Nga",
+  "lat": 7.89139,
+  "lng": 98.51528,
+  "area": "phang-nga",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/074.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Koh Khai Nok",
+    "lat": 7.891182499999999,
+    "lng": 98.5154646,
+    "addr": "Phru Nai, Phang Nga",
+    "cat": "Island",
+    "pid": "ChIJd138qG3NUTARP7FtBaZHJOQ",
+    "dist": 31
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "koh-yao-noi",
+  "name": "Koh Yao Noi",
+  "q": "Koh Yao Noi, Phang Nga",
+  "lat": 8.13333,
+  "lng": 98.60972,
+  "area": "koh-yao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/075.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Ko Yao Noi",
+    "lat": 8.1172984,
+    "lng": 98.5931966,
+    "addr": "Ko Yao District, Phang Nga",
+    "cat": "",
+    "pid": "ChIJkbW4lzOxUTARogXzAMmYt3k",
+    "dist": 2547
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "koh-hong-krabi",
+  "name": "Koh Hong (Krabi): lagoon island",
+  "q": "Hong Island, Krabi",
+  "lat": 8.07861,
+  "lng": 98.67806,
+  "area": "krabi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/076.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Ko Hong",
+    "lat": 8.078091299999999,
+    "lng": 98.67828109999999,
+    "addr": "Mueang Krabi District, Krabi",
+    "cat": "Island",
+    "pid": "ChIJAUqh8za4UTARK1VenHfVB6M",
+    "dist": 63
+   },
+   {
+    "name": "Koh Hong",
+    "lat": 8.079063,
+    "lng": 98.68060299999999,
+    "addr": "3MHJ+J6H, Nong Thale, Mueang Krabi District, Krabi 81110",
+    "cat": "Tourist attraction",
+    "pid": "ChIJva02XE25UTARncDmJp3MwBs",
+    "dist": 284
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "railay-krabi",
+  "name": "Railay Beach (Krabi)",
+  "q": "Railay Beach West, Krabi",
+  "lat": 8.01154,
+  "lng": 98.83779,
+  "area": "krabi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/077.txt",
+  "n": 3,
+  "top": [
+   {
+    "name": "Railay West Beach",
+    "lat": 8.0132105,
+    "lng": 98.8370889,
+    "addr": "2R7P+7RP, Ao Nang, Mueang Krabi District, Krabi 81000",
+    "cat": "Public beach",
+    "pid": "ChIJXZgcI57qUTARPwbNwHp5zYg",
+    "dist": 201
+   },
+   {
+    "name": "Railay Beach",
+    "lat": 8.011711,
+    "lng": 98.83777599999999,
+    "addr": "Ao Nang, Krabi",
+    "cat": "Beach",
+    "pid": "ChIJi-WSB57qUTARgVAhfLGL2GE",
+    "dist": 19
+   },
+   {
+    "name": "Railay West",
+    "lat": 8.0111543,
+    "lng": 98.8377917,
+    "addr": "Ao Nang, Mueang Krabi District, Krabi",
+    "cat": "Ferry terminal",
+    "pid": "ChIJ0-XI3Z3qUTARrYVudgDTGKg",
+    "dist": 43
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "khao-sok-cheow-lan-lake",
+  "name": "Khao Sok: Cheow Lan Lake overnight",
+  "q": "Cheow Lan Pier (Ratchaprapha Pier), Ban Ta Khun, Surat Thani",
+  "lat": 8.97782,
+  "lng": 98.82025,
+  "area": "other",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/078.txt",
+  "n": 3,
+  "top": [
+   {
+    "name": "Cheow Lan Pier (Ratchaprapha Pier)",
+    "lat": 8.9771424,
+    "lng": 98.8203759,
+    "addr": "XRGC+V52 Unnamed Rd Khao Phang, Ban Ta Khun District, Surat Thani 84230",
+    "cat": "",
+    "pid": "ChIJgeiQmhY2UTARatiGGEd0xdg",
+    "dist": 77
+   },
+   {
+    "name": "Ratchaprapha Marina",
+    "lat": 8.9778514,
+    "lng": 98.8201952,
+    "addr": "XRGC+W5R เขื่อนรัชชประภา, Unnamed Rd Khao Wong, Ban Ta Khun District, Surat Thani 84230",
+    "cat": "Marina",
+    "pid": "ChIJlTSsmRY2UTAR8ICQS0Bg6mA",
+    "dist": 7
+   },
+   {
+    "name": "Cheow Lan Lake View Point",
+    "lat": 8.9737823,
+    "lng": 98.8104293,
+    "addr": "XRF6+G57, Khao Phang, Ban Ta Khun District, Surat Thani 84230",
+    "cat": "Tourist attraction",
+    "pid": "ChIJIai3crI3UTARekMt8D8ZbCk",
+    "dist": 1168
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "samet-nangshe-viewpoint",
+  "name": "Samet Nangshe viewpoint (sunrise)",
+  "q": "Samet Nangshe Viewpoint, Takua Thung, Phang Nga",
+  "lat": 8.23929,
+  "lng": 98.43864,
+  "area": "phang-nga",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/079.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Samet Nangshe Viewpoint",
+    "lat": 8.2350935,
+    "lng": 98.44524779999999,
+    "addr": "93 Khlong Khian, Takua Thung District, Phang Nga 82130",
+    "cat": "Scenic spot/Tourist attraction",
+    "pid": "ChIJA1_2nYtSUDARCg5_WOqe-7E",
+    "dist": 864
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "one-chun",
+  "name": "One Chun",
+  "q": "One Chun Cafe & Restaurant, Thep Krasattri Road, Phuket Town",
+  "lat": 7.88578,
+  "lng": 98.39072,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/080.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "One Chun Cafe & Restaurant",
+    "lat": 7.8858087999999995,
+    "lng": 98.39071229999999,
+    "addr": "48, 1 Thep Krasattri Rd, Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "Thai restaurant/Restaurant",
+    "pid": "ChIJifk2AfoxUDAR9AvSboEvBPM",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "mee-ton-poe",
+  "name": "Mee Ton Poe (Hokkien noodles)",
+  "q": "MeeTonPoe Phuket Town, Phuket Road",
+  "lat": 7.88001,
+  "lng": 98.39209,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/081.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "MeeTonPoe Phuket Town",
+    "lat": 7.8800408,
+    "lng": 98.39209269999999,
+    "addr": "214, 7-8 Phuket Rd, Tambon Talat Yai, Muang, Phuket 83000",
+    "cat": "Chinese noodle restaurant",
+    "pid": "ChIJ1Rnku8YvUDARr519jlyux_0",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "lock-tien",
+  "name": "Lock Tien (Phuket street dishes)",
+  "q": "Lock Tien Local Food Phuket, Bangkok Road",
+  "lat": 7.88118,
+  "lng": 98.38644,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/082.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "ลกเที้ยน original (Lock Tien Local Food Phuket)",
+    "lat": 7.8811778,
+    "lng": 98.3864399,
+    "addr": "59 14 Bangkok Rd, Tambon Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Nyonya restaurant",
+    "pid": "ChIJWXqWTp8xUDARcePlOipzJwE",
+    "dist": 0
+   },
+   {
+    "name": "Lock Tien - Phuket local food center",
+    "lat": 7.8861624,
+    "lng": 98.387514,
+    "addr": "173 Yaowarad Rd Old Phuket Town, Tambon Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Food court",
+    "pid": "ChIJ81HEefAxUDARXOQtOTCdG3A",
+    "dist": 567
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "go-benz",
+  "name": "Go Benz (late-night rice soup)",
+  "q": "Go Benz Rice Porridge, Krabi Road, Phuket Town",
+  "lat": 7.88485,
+  "lng": 98.38255,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/083.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Go Benz Rice Porridge Phuket",
+    "lat": 7.884732799999999,
+    "lng": 98.3825828,
+    "addr": "V9MM+V2W, Krabi, Tambon Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Porridge restaurant/Restaurant",
+    "pid": "ChIJRcVtkOUxUDARpHiTV6ScAww",
+    "dist": 14
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "naam-yoi",
+  "name": "Naam Yoi (Southern Thai curries)",
+  "q": "Nam YOI Restaurant, Rumpattana Road, Ratsada, Phuket",
+  "lat": 7.9008,
+  "lng": 98.40315,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/084.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Nam Yoi",
+    "lat": 7.900798999999999,
+    "lng": 98.4031459,
+    "addr": "63 250 Rumpattana Rd, Ratsada, Mueang Phuket District, Phuket 83000",
+    "cat": "Thai restaurant/Restaurant",
+    "pid": "ChIJ07zU6yMyUDARY5jlODvcNQg",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "mor-mu-dong",
+  "name": "Mor Mu Dong (mangrove seafood)",
+  "q": "Mor Mu Dong Restaurant, Chalong, Phuket",
+  "lat": 7.84313,
+  "lng": 98.37198,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/085.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Mor Mu Dong Restaurant",
+    "lat": 7.843090999999999,
+    "lng": 98.37201239999999,
+    "addr": "9/4 หมู่ที่ 3 ซอย ป่าหล่าย ถนน เจ้าฟ้า Chalong, อำเภอ เมืองภูเก็ต Phuket 83130",
+    "cat": "Restaurant",
+    "pid": "ChIJn6VtJkMuUDARtfC37s0hXuE",
+    "dist": 6
+   }
+  ]
+ },
+ {
+  "kind": "place",
+  "id": "malin-plaza-night-market",
+  "name": "Malin Plaza night market (Patong)",
+  "q": "Malin Plaza, Prachanukhro Rd, Patong, Phuket",
+  "lat": 7.88264,
+  "lng": 98.29318,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/086.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Malin Plaza",
+    "lat": 7.882640899999999,
+    "lng": 98.2931814,
+    "addr": "162, 51-52 Prachanukhro Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Night market/Tourist attraction",
+    "pid": "ChIJCVYWcbE6UDARt7lWAulfnaY",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "kamala",
+  "name": "Kamala",
+  "q": "Kamala Beach, Phuket",
+  "lat": 7.9563,
+  "lng": 98.283,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/087.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kamala Beach",
+    "lat": 7.9569221,
+    "lng": 98.28309829999999,
+    "addr": "Kamala Beach, Kamala, Phuket 83120",
+    "cat": "Beach",
+    "pid": "ChIJp7FFZjs6UDAR2F4cpzJ894o",
+    "dist": 70
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "surin",
+  "name": "Surin & Pansea",
+  "q": "Surin Beach, Phuket",
+  "lat": 7.9758,
+  "lng": 98.2784,
+  "area": "surin",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/088.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Surin Beach",
+    "lat": 7.975473099999999,
+    "lng": 98.2784667,
+    "addr": "Choeng Thale, Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJr2Wvw5A5UDARQ0TrH1TJFaE",
+    "dist": 37
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "bang-tao",
+  "name": "Bang Tao, Laguna & Cherngtalay",
+  "q": "Bang Tao Beach, Phuket",
+  "lat": 8.0085,
+  "lng": 98.2924,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/089.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Bang Tao Beach",
+    "lat": 8.002546299999999,
+    "lng": 98.2926317,
+    "addr": "Bang Tao Beach, Thalang District, Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJWzEBFTU4UDAR-BbzsaTYXe8",
+    "dist": 663
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "layan",
+  "name": "Layan",
+  "q": "Layan Beach, Thalang, Phuket",
+  "lat": 8.0283,
+  "lng": 98.2888,
+  "area": "layan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/090.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Layan Beach",
+    "lat": 8.026868,
+    "lng": 98.2893756,
+    "addr": "27GQ+PQ, Bang Tao Beach, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Beach pavillion",
+    "pid": "ChIJyc2rEQA5UDARgyZlcM6VzfA",
+    "dist": 171
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "nai-thon",
+  "name": "Nai Thon",
+  "q": "Nai Thon Beach, Phuket",
+  "lat": 8.0579,
+  "lng": 98.2777,
+  "area": "nai-thon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/091.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Nai Thon Beach",
+    "lat": 8.0605514,
+    "lng": 98.2771992,
+    "addr": "Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJvQg3EpBHUDARYXDXDvUKZN8",
+    "dist": 300
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "nai-yang",
+  "name": "Nai Yang",
+  "q": "Naiyang Beach, Thalang, Phuket",
+  "lat": 8.0902,
+  "lng": 98.2977,
+  "area": "nai-yang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/092.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Naiyang Beach",
+    "lat": 8.0898576,
+    "lng": 98.2974795,
+    "addr": "Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJZSDNBDJGUDARyAZDFkNErio",
+    "dist": 45
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "mai-khao",
+  "name": "Mai Khao",
+  "q": "Mai Khao Beach, Phuket",
+  "lat": 8.1457,
+  "lng": 98.2972,
+  "area": "mai-khao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/093.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Mai Khao Beach",
+    "lat": 8.1344748,
+    "lng": 98.2989307,
+    "addr": "Phuket 83110",
+    "cat": "Beach",
+    "pid": "ChIJZVhLxuVFUDARuj0jud8jRe0",
+    "dist": 1263
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "karon",
+  "name": "Karon",
+  "q": "Karon Beach, Phuket",
+  "lat": 7.8441,
+  "lng": 98.2935,
+  "area": "karon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/094.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Karon Beach",
+    "lat": 7.8438991,
+    "lng": 98.2936186,
+    "addr": "Karon Beach, Karon, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJ1SemHHIlUDARH2WofLMBaOQ",
+    "dist": 26
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "kata",
+  "name": "Kata (Kata Yai)",
+  "q": "Kata Beach, Phuket",
+  "lat": 7.8195,
+  "lng": 98.2979,
+  "area": "kata",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/095.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kata Beach",
+    "lat": 7.820694499999999,
+    "lng": 98.2976473,
+    "addr": "Karon, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJAdUTdI0lUDAR-EN1U6iZIY0",
+    "dist": 136
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "kata-noi",
+  "name": "Kata Noi",
+  "q": "Kata Noi Beach, Phuket",
+  "lat": 7.8062,
+  "lng": 98.2988,
+  "area": "kata-noi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/096.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kata Noi Beach",
+    "lat": 7.806316799999999,
+    "lng": 98.2990071,
+    "addr": "Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Beach",
+    "pid": "ChIJR-hNwPElUDARgnRTnE7du3E",
+    "dist": 26
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "nai-harn",
+  "name": "Nai Harn",
+  "q": "Nai Han Beach (หาดในหาน), Phuket",
+  "lat": 7.7755,
+  "lng": 98.306,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/097.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Nai Han Beach",
+    "lat": 7.7761751,
+    "lng": 98.3058073,
+    "addr": "Nai Harn Beach, Rawai, Mueang Phuket District, Phuket 83100",
+    "cat": "ชายหาด",
+    "pid": "ChIJ1TrmSxwmUDARyXz7aKZdziw",
+    "dist": 78
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "rawai",
+  "name": "Rawai, Ya Nui & Promthep",
+  "q": "Rawai Beach, Phuket",
+  "lat": 7.7726,
+  "lng": 98.3228,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/098.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Ra Wai Beach",
+    "lat": 7.771886899999999,
+    "lng": 98.3217411,
+    "addr": "Phuket",
+    "cat": "Beach",
+    "pid": "ChIJlz7j37woUDARfDrLfKWxSi4",
+    "dist": 141
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "chalong",
+  "name": "Chalong & Soi Ta-iad",
+  "q": "Chalong roundabout Clock Tower, Phuket",
+  "lat": 7.8222,
+  "lng": 98.3408,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/099.txt",
+  "n": 3,
+  "top": [
+   {
+    "name": "Chalong roundabout Clock Tower",
+    "lat": 7.8221615,
+    "lng": 98.3408462,
+    "addr": "R8CR+V89, Chalong, Mueang Phuket District, Phuket 83100",
+    "cat": "Tourist attraction",
+    "pid": "ChIJ4Rr8rfwvUDARw3wGGuV7v9k",
+    "dist": 7
+   },
+   {
+    "name": "Chalong Roundabout Clock Tower",
+    "lat": 7.82217,
+    "lng": 98.34089,
+    "addr": "Chalong, Mueang Phuket District, Phuket 83100",
+    "cat": "Bus stop",
+    "pid": "ChIJ62VtHRAvUDARelhD-AP3H_Y",
+    "dist": 10
+   },
+   {
+    "name": "Chalong Roundabout Clock Tower",
+    "lat": 7.822279999999999,
+    "lng": 98.34071,
+    "addr": "Chalong, Mueang Phuket District, Phuket 83100",
+    "cat": "Bus stop",
+    "pid": "ChIJySB84g8vUDARCKTHTsq-XQs",
+    "dist": 13
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "phuket-town",
+  "name": "Phuket Town (Old Town)",
+  "q": "Phuket Old Town, Phuket",
+  "lat": 7.8853,
+  "lng": 98.389,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/100.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Old Phuket Town",
+    "lat": 7.8858652,
+    "lng": 98.3876197,
+    "addr": "Mueang Phuket District, Phuket 83000",
+    "cat": "",
+    "pid": "ChIJyXu3hvoxUDAR86GPJxPu9G8",
+    "dist": 165
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "kathu",
+  "name": "Kathu",
+  "q": "Kathu, Phuket",
+  "lat": 7.9107,
+  "lng": 98.3338,
+  "area": "kathu",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/101.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Kathu",
+    "lat": 7.9107391,
+    "lng": 98.3337983,
+    "addr": "Kathu District, Phuket",
+    "cat": "",
+    "pid": "ChIJ_RMmHVswUDARcCQ4LLwjAgQ",
+    "dist": 4
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "cape-panwa",
+  "name": "Cape Panwa",
+  "q": "Cape Panwa, Phuket",
+  "lat": 7.806,
+  "lng": 98.4103,
+  "area": "cape-panwa",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/102.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Cape Panwa Hotel",
+    "lat": 7.807826299999999,
+    "lng": 98.40916759999999,
+    "addr": "27 27/2 Mu 8 Cape Panwa, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Hotel/Massage spa/Resort hotel/Restaurant",
+    "pid": "ChIJAxNMChcsUDARYHnB6TnkGKw",
+    "dist": 238
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "ao-po",
+  "name": "Ao Po & Cape Yamu",
+  "q": "Ao Po Grand Marina, Phuket",
+  "lat": 8.0685,
+  "lng": 98.4417,
+  "area": "ao-po",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/103.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Ao Po Grand Marina",
+    "lat": 8.068493799999999,
+    "lng": 98.4416952,
+    "addr": "113 Pakhlok, Thalang District, Phuket 83110",
+    "cat": "Port operating company",
+    "pid": "ChIJg8bsHIU2UDARaviaGgDjIzc",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "thalang",
+  "name": "Thalang",
+  "q": "Wat Phra Thong, Thalang, Phuket",
+  "lat": 8.034,
+  "lng": 98.3377,
+  "area": "thalang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/104.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Wat Phra Thong",
+    "lat": 8.033902399999999,
+    "lng": 98.3377144,
+    "addr": "172/2​ Nanai Rd, Thalang District, Phuket 83110",
+    "cat": "Buddhist temple",
+    "pid": "ChIJfRT7FcQ3UDARh2ZVydADqls",
+    "dist": 11
+   }
+  ]
+ },
+ {
+  "kind": "area",
+  "id": "natai",
+  "name": "Natai & Khao Pilai (Phang Nga)",
+  "q": "Natai Beach, Phang Nga",
+  "lat": 8.2729,
+  "lng": 98.2765,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/105.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Natai Beach",
+    "lat": 8.2728941,
+    "lng": 98.2765392,
+    "addr": "77FG+5J3, Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Public beach",
+    "pid": "ChIJ1zT8EFpaUDARABCZtIENktg",
+    "dist": 4
+   },
+   {
+    "name": "Natai Beach Resort",
+    "lat": 8.2876014,
+    "lng": 98.27457509999999,
+    "addr": "55 Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Resort hotel",
+    "pid": "ChIJva5G8lhaUDARdRdWpc01gSk",
+    "dist": 1648
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "aleenta-phuket-phang-nga",
+  "name": "Aleenta Phuket Phang Nga Resort & Spa",
+  "q": "Aleenta Phuket Phang Nga Resort & Spa, Khok Kloi",
+  "lat": 8.2544818,
+  "lng": 98.2815411,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/106.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Aleenta Phuket–Phang Nga Resort & Spa",
+    "lat": 8.254481799999999,
+    "lng": 98.2815411,
+    "addr": "33, Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Resort hotel/Hotel/Wedding venue/Wellness hotel",
+    "pid": "ChIJR9VeEvJaUDARAqs-I-7RGCo",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "natai-house",
+  "name": "Natai House",
+  "q": "Natai House, Khok Kloi, Phang Nga",
+  "lat": 8.2653671,
+  "lng": 98.2802014,
+  "area": "natai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/107.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Natai House",
+    "lat": 8.265367099999999,
+    "lng": 98.2802014,
+    "addr": "23 Khok Kloi, Takua Thung District, Phang Nga 82140",
+    "cat": "Resort hotel",
+    "pid": "ChIJhSY1D_ZaUDARWI2_lHQ7iXk",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "snug-airportel",
+  "name": "The Snug Airportel",
+  "q": "The Snug Airportel, Sakhu, Phuket",
+  "lat": 8.099463,
+  "lng": 98.3059702,
+  "area": "nai-yang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/108.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "The Snug Airportel",
+    "lat": 8.099463,
+    "lng": 98.30597019999999,
+    "addr": "22 3 Sakhu, Thalang District, Phuket 83110",
+    "cat": "Hostel/Coffee shop/Hotel/Laundry service/Luggage storage facility/Public bath/Restaurant/Scooter rental service",
+    "pid": "ChIJM8CUigBHUDARbTsN7DrPbYc",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "intercontinental-phuket",
+  "name": "InterContinental Phuket Resort",
+  "q": "InterContinental Phuket Resort, Kamala",
+  "lat": 7.9624404,
+  "lng": 98.2853194,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/109.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "InterContinental Phuket Resort by IHG",
+    "lat": 7.962440399999999,
+    "lng": 98.28531939999999,
+    "addr": "333,333/3, Moo 3, Kamala, Kathu District, Phuket 83150",
+    "cat": "Hotel/Conference center/Convention center/Event venue/Massage spa/Resort hotel/Restaurant/Spa/Wedding venue",
+    "pid": "ChIJ2bNbHvM7UDARt0ScuDroPEs",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "novotel-phuket-kamala",
+  "name": "Novotel Phuket Kamala Beach",
+  "q": "Novotel Phuket Kamala Beach",
+  "lat": 7.9639082,
+  "lng": 98.2849865,
+  "area": "kamala",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/110.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Novotel Phuket Kamala Beach",
+    "lat": 7.9639082,
+    "lng": 98.2849865,
+    "addr": "118 16 Kamala Beach, Kamala, Kathu District, Phuket 83150",
+    "cat": "Resort hotel",
+    "pid": "ChIJX6RkeiA6UDARBoEAg3kCYAA",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "twinpalms-surin",
+  "name": "Twinpalms Surin Beach Phuket",
+  "q": "Twinpalms Surin Beach Phuket",
+  "lat": 7.9775024,
+  "lng": 98.2806128,
+  "area": "surin",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/111.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Twinpalms Surin Beach Phuket",
+    "lat": 7.9775024,
+    "lng": 98.2806128,
+    "addr": "106, 46 Moo3 Surin Beach Road, Choeng Thale, Thalang District, Chang Wat Phuket 83110",
+    "cat": "Resort hotel",
+    "pid": "ChIJA0L7dJE5UDARY7pPbjjEs1U",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "ibis-styles-bangtao",
+  "name": "ibis Styles Phuket Bangtao",
+  "q": "ibis Styles Phuket Bangtao",
+  "lat": 7.99334,
+  "lng": 98.29357,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/112.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "ibis Styles Phuket Bangtao",
+    "lat": 7.99334,
+    "lng": 98.29357,
+    "addr": "199, Bang Tao Beach, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Hotel",
+    "pid": "ChIJ8XUdjSA5UDARKUkMhdhfp6o",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "twinpalms-tented-camp",
+  "name": "Twinpalms Tented Camp Phuket",
+  "q": "Twinpalms Tented Camp Phuket, Bang Tao",
+  "lat": 7.9886432,
+  "lng": 98.2919154,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/113.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Twinpalms Tented Camp Phuket",
+    "lat": 7.988643199999999,
+    "lng": 98.2919154,
+    "addr": "202 88 Bang Tao Beach, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Hotel",
+    "pid": "ChIJuYm7LAA5UDAREEO3P3g9dK8",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "hotel-indigo-patong",
+  "name": "Hotel Indigo Phuket Patong",
+  "q": "Hotel Indigo Phuket Patong",
+  "lat": 7.899287,
+  "lng": 98.299809,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/114.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Hotel Indigo Phuket Patong by IHG",
+    "lat": 7.899286999999999,
+    "lng": 98.299809,
+    "addr": "124 Rat Uthit Song Roi Pi Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Hotel/Bar/Conference center/Restaurant/Wedding venue",
+    "pid": "ChIJf6Yyi5Q7UDAREHCHXOoRx90",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "holiday-inn-express-patong",
+  "name": "Holiday Inn Express Phuket Patong Beach Central",
+  "q": "Holiday Inn Express Phuket Patong Beach Central",
+  "lat": 7.89977,
+  "lng": 98.2980764,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/115.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Holiday Inn Express Phuket Patong Beach Central",
+    "lat": 7.899769999999999,
+    "lng": 98.2980764,
+    "addr": "8 Hatpatong Rd, Kathu, Kathu District, Phuket 83150",
+    "cat": "Hotel",
+    "pid": "ChIJKbD2G-A7UDARFtNFXGXbeO0",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "lub-d-patong",
+  "name": "Lub d Phuket Patong",
+  "q": "Lub d Phuket Patong",
+  "lat": 7.8975978,
+  "lng": 98.2984563,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/116.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Lub d Phuket Patong",
+    "lat": 7.8975978,
+    "lng": 98.2984563,
+    "addr": "5, 5 Sawatdirak Rd, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Hostel",
+    "pid": "ChIJ44KZtqI6UDARxtarnfkYjew",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "beyond-kata",
+  "name": "Beyond Kata",
+  "q": "Beyond Kata, Kata Beach, Phuket",
+  "lat": 7.8158492,
+  "lng": 98.3004074,
+  "area": "kata",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/117.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Beyond Kata",
+    "lat": 7.8158492,
+    "lng": 98.3004074,
+    "addr": "1 ถนน ปากบาง Kata Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Resort hotel/Hotel",
+    "pid": "ChIJIxgXvZgxUDAR-oQ9Oj5nAD4",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "mom-tris-villa-royale",
+  "name": "Mom Tri's Villa Royale",
+  "q": "Mom Tri's Villa Royale, Kata Noi, Phuket",
+  "lat": 7.810249,
+  "lng": 98.2976805,
+  "area": "kata-noi",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/118.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Mom Tri's Villa Royale",
+    "lat": 7.810249,
+    "lng": 98.2976805,
+    "addr": "12 Kata Noi Rd, Tambon Karon, Kata, Phuket 83100",
+    "cat": "Hotel",
+    "pid": "ChIJ4WmxIfIlUDAR-JtcfRSYMtM",
+    "dist": 0
+   },
+   {
+    "name": "Mom Tri's Villa Ocean Wing",
+    "lat": 7.8114702,
+    "lng": 98.2973643,
+    "addr": "Kata Noi, Tambon Karon, Phuket, 83100",
+    "cat": "Hotel",
+    "pid": "ChIJbwvcB-4lUDARe9VZbNdd20o",
+    "dist": 140
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "sugar-marina-art-karon",
+  "name": "Sugar Marina Hotel ART Karon Beach",
+  "q": "Sugar Marina Hotel ART Karon Beach, Phuket",
+  "lat": 7.8494603,
+  "lng": 98.2941594,
+  "area": "karon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/119.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Sugar Marina Hotel -ART- Karon Beach",
+    "lat": 7.8494603,
+    "lng": 98.2941594,
+    "addr": "15 Patak Rd Karon Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Hotel",
+    "pid": "ChIJ4eD9wG4lUDARpAbJ1ruk6Bo",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "the-nai-harn",
+  "name": "The Nai Harn",
+  "q": "The Nai Harn Phuket, Nai Harn Beach",
+  "lat": 7.7785281,
+  "lng": 98.3032014,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/120.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "The Nai Harn, Phuket",
+    "lat": 7.7785281,
+    "lng": 98.30320139999999,
+    "addr": "23/3 Moo1, Vises Road, Rawai, Muang District, Muang, Phuket 83100",
+    "cat": "Hotel",
+    "pid": "ChIJF3SmmRwmUDAR5WyWdG_NRDk",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "wyndham-grand-nai-harn",
+  "name": "Wyndham Grand Nai Harn Beach Phuket",
+  "q": "Wyndham Grand Nai Harn Beach Phuket",
+  "lat": 7.7831422,
+  "lng": 98.3110491,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/121.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Wyndham Grand Nai Harn Beach Phuket",
+    "lat": 7.7831421999999995,
+    "lng": 98.31104909999999,
+    "addr": "15, 328 Soi Naya Moo.1, Rawai, Mueang Phuket District, Phuket 83130",
+    "cat": "Hotel/Inn",
+    "pid": "ChIJLeR7pakoUDARxAvSO7e_gpA",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "roost-glamping",
+  "name": "Roost Glamping",
+  "q": "Roost Glamping, Rawai, Phuket",
+  "lat": 7.7760886,
+  "lng": 98.3182545,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/122.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Roost Glamping",
+    "lat": 7.7760886,
+    "lng": 98.3182545,
+    "addr": "Roostglamping 87/70 Rawai, Mueang Phuket District, 83130",
+    "cat": "Hotel",
+    "pid": "ChIJV3imkNQpUDARIa5Om7WJv2M",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "casa-blanca-phuket",
+  "name": "Casa Blanca Boutique Hotel",
+  "q": "Casa Blanca Boutique Hotel Phuket, Phuket Old Town",
+  "lat": 7.8839232,
+  "lng": 98.390744,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/123.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Casa Blanca Boutique Hotel Phuket",
+    "lat": 7.8839232,
+    "lng": 98.390744,
+    "addr": "24 26 28 เมือง Phuket 83000",
+    "cat": "Hotel",
+    "pid": "ChIJASwaJvoxUDARpKDLS3GI_OY",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "memory-at-on-on",
+  "name": "The Memory at On On Hotel",
+  "q": "The Memory at On On Hotel, Phang Nga Road, Phuket Town",
+  "lat": 7.8838119,
+  "lng": 98.3884762,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/124.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "The Memory at On On Hotel",
+    "lat": 7.8838118999999995,
+    "lng": 98.3884762,
+    "addr": "19 Phangnga Rd, Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "Hotel",
+    "pid": "ChIJKTJZUPoxUDARamKdNzTMUs8",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "shunli-hotel",
+  "name": "Shunli Hotel",
+  "q": "Shunli Hotel, Krabi Road, Phuket Town",
+  "lat": 7.8851236,
+  "lng": 98.3861307,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/125.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Shunli Hotel",
+    "lat": 7.8851236,
+    "lng": 98.3861307,
+    "addr": "56 Krabi Old Phuket Town, Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Hotel",
+    "pid": "ChIJaxQ1t_oxUDARPH8wNoPUKmU",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "milky-bay-resort",
+  "name": "Milky Bay Resort",
+  "q": "Milky Bay Resort, Ban Tai, Koh Phangan",
+  "lat": 9.7031288,
+  "lng": 100.0120321,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/126.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Milky Bay Resort",
+    "lat": 9.7031288,
+    "lng": 100.0120321,
+    "addr": "103 4, Ban Tai, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Resort hotel/Inn/Restaurant",
+    "pid": "ChIJZWgcVpX9VDARyb5aHc9iK1A",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "hotel",
+  "id": "slumber-party-phangan",
+  "name": "Slumber Party Beach Koh Phangan",
+  "q": "Slumber Party Beach Koh Phangan, Ban Tai",
+  "lat": 9.7065904,
+  "lng": 100.0006827,
+  "area": "koh-phangan",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/127.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Slumber Party Beach Koh Phangan",
+    "lat": 9.7065904,
+    "lng": 100.0006827,
+    "addr": "101 2, Ban Tai, Koh Phangan, Ko Pha-ngan District, Surat Thani 84280",
+    "cat": "Hostel",
+    "pid": "ChIJa083c0r9VDARhfDLg-EunQk",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "mamy-exchange#0",
+  "name": "Mamy Exchange Phuket (Koh Kaew)",
+  "q": "Mamy Exchange Phuket, Ko Kaeo, Phuket",
+  "lat": 7.964143,
+  "lng": 98.377564,
+  "area": "koh-kaew",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/128.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Mamy Exchange Phuket(Best Rates for Currency Exchange)",
+    "lat": 7.9641392,
+    "lng": 98.37755899999999,
+    "addr": "9, 10 Moo. 4 Thepkrasastri Road, Koh Kaew, Muang, Phuket 83000",
+    "cat": "Currency exchange service/Financial consultant/Loan agency/Money order service/Money transfer service",
+    "pid": "ChIJxTr15XQxUDAR9uKj5URPQP8",
+    "dist": 1
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "lion-currency-exchange#0",
+  "name": "Lion Currency Exchange Patong (Jungceylon)",
+  "q": "Lion Currency Exchange Patong, Jungceylon, Phuket",
+  "lat": 7.890028,
+  "lng": 98.299421,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/129.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Lion Currency Exchange Patong",
+    "lat": 7.890028,
+    "lng": 98.29942109999999,
+    "addr": "GC4118 Big C Entrance, Opposite of Arena Swimwear shop, 177 Jungceylon Shopping Center G Floor. Room No, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJzTKOL1I7UDAR4QVzq0JuDvw",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "lion-currency-exchange#1",
+  "name": "Lion Currency Exchange (Central Phuket Festival flagship)",
+  "q": "Lion Currency Exchange, Central Phuket Festival",
+  "lat": 7.891691,
+  "lng": 98.367244,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/130.txt",
+  "n": 3,
+  "top": [
+   {
+    "name": "Lion Currency Exchange @ Central Phuket",
+    "lat": 7.8905825,
+    "lng": 98.36784639999999,
+    "addr": "หมู่ที่ 5, ห้องเลขที่ K403/3 ชั้น 4 ที่อยู่ 74,75 Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJA-YTZMExUDARkKq0I9qr5nM",
+    "dist": 140
+   },
+   {
+    "name": "Value Plus Currency Exchange (Central Phuket)",
+    "lat": 7.891242999999999,
+    "lng": 98.36746319999999,
+    "addr": "Central Festival Phuket, 4th floor, Financial Zone 74-75 Vichitsongkram Rd, Wichit, Muang Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJvR8_GcQxUDARUv5y7zfetIM",
+    "dist": 55
+   },
+   {
+    "name": "Lion Currency Exchange Patong",
+    "lat": 7.890028,
+    "lng": 98.29942109999999,
+    "addr": "GC4118 Big C Entrance, Opposite of Arena Swimwear shop, 177 Jungceylon Shopping Center G Floor. Room No, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJzTKOL1I7UDAR4QVzq0JuDvw",
+    "dist": 7472
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "superrich-1965-phuket#0",
+  "name": "SuperRich Exchange @ Phuket, Suriyadej Circle (Partner)",
+  "q": "SuperRich Exchange @ Phuket, Downtown Market Fountain Roundabout",
+  "lat": 7.88305,
+  "lng": 98.38702,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/131.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "SuperRich Exchange @ Phuket , Suriyadej Circle (SuperRich Partner)",
+    "lat": 7.883045,
+    "lng": 98.38740659999999,
+    "addr": "วงเวียนน้ำพุตลาดสดดาวน์ทาวน์ เลขที่ 4 Ratsada Rd, Tambon Talat Nuea, Mueang Phuket District, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJbwd7ivYxUDARFMvNpjLGLG0",
+    "dist": 43
+   },
+   {
+    "name": "Money exchange",
+    "lat": 7.8848683,
+    "lng": 98.38881789999999,
+    "addr": "57, Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJlYhk7E8xUDAR8xVK-nx9Vxg",
+    "dist": 283
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "nc-plus#0",
+  "name": "NC PLUS (Thailand) Co., Ltd.",
+  "q": "NC PLUS (Thailand) Co.,Ltd., Tilok Uthit 2 Road, Phuket",
+  "lat": 7.87892,
+  "lng": 98.395469,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/132.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "NC PLUS (Thailand) Co.,Ltd. (แลกเปลี่ยนเงินตราต่างประเทศ)",
+    "lat": 7.8789282,
+    "lng": 98.3954473,
+    "addr": "46 ถ. ติลกอุทิศ 2 Tambon Talat Yai, Mueang Phuket District, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJgUgHav8xUDARLbxKBNTy9OA",
+    "dist": 3
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#0",
+  "name": "Value Plus Currency Exchange (Patong)",
+  "q": "Value Plus Currency Exchange (Patong Phuket)",
+  "lat": 7.893812,
+  "lng": 98.301816,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/133.txt",
+  "n": 5,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Patong Phuket)",
+    "lat": 7.8938101,
+    "lng": 98.30182579999999,
+    "addr": "Urban Hotel, 188/2, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJFZt-kqM6UDARuTNjebPcGGo",
+    "dist": 1
+   },
+   {
+    "name": "Value Plus Currency Exchange (Deevana Plaza Patong)",
+    "lat": 7.885669399999999,
+    "lng": 98.2940579,
+    "addr": "239 14 Ratutit 200 Pee Rd, Pa Tong, Aumpor Kathu, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJ42AQAEo7UDARw6MjSs86mzw",
+    "dist": 1245
+   },
+   {
+    "name": "Value Plus Currency Exchange (Central Phuket)",
+    "lat": 7.891242999999999,
+    "lng": 98.36746319999999,
+    "addr": "Central Festival Phuket, 4th floor, Financial Zone 74-75 Vichitsongkram Rd, Wichit, Muang Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJvR8_GcQxUDARUv5y7zfetIM",
+    "dist": 7236
+   },
+   {
+    "name": "Value Plus Currency Exchange (Novotel Patong Phuket)",
+    "lat": 7.899382999999999,
+    "lng": 98.300204,
+    "addr": "89, Rat U tit 200 Pee, Patong, Kathu, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJcTX1ZJg6UDARvbKAl4EeufE",
+    "dist": 644
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#1",
+  "name": "Value Plus Currency Exchange (Soi Sansabai, Patong)",
+  "q": "Value Plus Currency Exchange (Sansabai Patong Phuket)",
+  "lat": 7.89279,
+  "lng": 98.299473,
+  "area": "patong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/134.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Patong Phuket)",
+    "lat": 7.8938101,
+    "lng": 98.30182579999999,
+    "addr": "Urban Hotel, 188/2, Pa Tong, Kathu District, Phuket 83150",
+    "cat": "Currency exchange service",
+    "pid": "ChIJFZt-kqM6UDARuTNjebPcGGo",
+    "dist": 283
+   },
+   {
+    "name": "Value Plus Currency Exchange (Big C Phuket)",
+    "lat": 7.895930099999999,
+    "lng": 98.36784139999999,
+    "addr": "G floor, 72, Big C Supermarket, Wichit, Amphoe Mueang, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJwXmeqKQ6UDARpQqvLAcQmEo",
+    "dist": 7538
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#2",
+  "name": "Value Plus Currency Exchange (Laguna / Boat Avenue)",
+  "q": "Value Plus Currency Exchange (Laguna Phuket)",
+  "lat": 7.994777,
+  "lng": 98.305652,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/135.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Laguna Phuket)",
+    "lat": 7.9946025999999994,
+    "lng": 98.3059478,
+    "addr": "Laguna Tumbon ChengTaLay, 32/22 Lagoon Rd Bang Tao Beach, Tambon Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Currency exchange service",
+    "pid": "ChIJbZ9Yztk5UDARPW_unL6SQb4",
+    "dist": 38
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#3",
+  "name": "Value Plus Currency Exchange (Porto de Phuket)",
+  "q": "Value Plus Currency Exchange, Porto de Phuket",
+  "lat": 7.991827,
+  "lng": 98.30531,
+  "area": "bang-tao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/136.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Central Porto De)",
+    "lat": 7.992042199999999,
+    "lng": 98.30528129999999,
+    "addr": "19, Central Porto De, 1-6 Bandon-Cherngtalay Rd Bang Tao Beach, Choeng Thale, Thalang District, Phuket 83110",
+    "cat": "Currency exchange service",
+    "pid": "ChIJcXkMACg5UDAR7w7_y3FpMr0",
+    "dist": 24
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#4",
+  "name": "Value Plus Currency Exchange (Central Phuket Festival)",
+  "q": "Value Plus Currency Exchange (Central Phuket)",
+  "lat": 7.891519,
+  "lng": 98.36793,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/137.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Central Phuket)",
+    "lat": 7.891242999999999,
+    "lng": 98.36746319999999,
+    "addr": "Central Festival Phuket, 4th floor, Financial Zone 74-75 Vichitsongkram Rd, Wichit, Muang Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJvR8_GcQxUDARUv5y7zfetIM",
+    "dist": 60
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "value-plus#5",
+  "name": "Value Plus Currency Exchange (HomePro Chalong)",
+  "q": "Value Plus Currency Exchange (Homepro Chalong), Phuket",
+  "lat": 7.824758,
+  "lng": 98.338988,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/138.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Value Plus Currency Exchange (Homepro Chalong)",
+    "lat": 7.824314599999999,
+    "lng": 98.33948939999999,
+    "addr": "61/10 Moo 10, Chalong, Phuket, 83130",
+    "cat": "Currency exchange service",
+    "pid": "ChIJo1CUpQ8vUDARuQmJbyBt57Y",
+    "dist": 74
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#0",
+  "name": "Money Shop Exchange Kata",
+  "q": "Money Shop Exchange Kata, Phuket",
+  "lat": 7.81947,
+  "lng": 98.300501,
+  "area": "kata",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/139.txt",
+  "n": 7,
+  "top": [
+   {
+    "name": "Money Shop Exchange Kata",
+    "lat": 7.819469499999999,
+    "lng": 98.3005005,
+    "addr": "64, 5 Kata Rd Kata Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service",
+    "pid": "ChIJV-MmMbolUDARWBkJrDnFWZs",
+    "dist": 0
+   },
+   {
+    "name": "Ex24.pro Лицензированный сервис обмена валют Exchange 24 Обмен рублей, долларов, евро | Phuket | Ката | Kata",
+    "lat": 7.8220529,
+    "lng": 98.299084,
+    "addr": "Kata, Kata Beach, Tambon Karon, Phuket, 83100",
+    "cat": "Currency exchange service",
+    "pid": "ChIJL3C_akQlUDARXWLKMgo39dg",
+    "dist": 327
+   },
+   {
+    "name": "Money Club Exchange (Лицензированный обменник)",
+    "lat": 7.8237904,
+    "lng": 98.29806169999999,
+    "addr": "96, 9 Kata Rd Kata Beach, Tambon Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service",
+    "pid": "ChIJV73fy6wlUDARGBc-j58YAlw",
+    "dist": 550
+   },
+   {
+    "name": "Senate Exchange - обмен валют | Kata | Phuket",
+    "lat": 7.824284199999999,
+    "lng": 98.2977875,
+    "addr": "102/9, Kata road, Karon subdistrict, Mueang Phuket District, Karon, Phuket, 83100",
+    "cat": "Currency exchange service",
+    "pid": "ChIJCSPZ-HclUDARhdhF6VHbjEQ",
+    "dist": 613
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#1",
+  "name": "Money Shop Exchange Karon",
+  "q": "Money Shop Exchange Karon, Phuket",
+  "lat": 7.829886,
+  "lng": 98.295213,
+  "area": "karon",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/140.txt",
+  "n": 20,
+  "top": [
+   {
+    "name": "EXFM (Fast Money) — Обмен валюты | Currency Exchange | Karon",
+    "lat": 7.8266649,
+    "lng": 98.29689309999999,
+    "addr": "4 Karon Rd, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service/Money order service",
+    "pid": "ChIJoxHhxtolUDARuhtyd49GYkk",
+    "dist": 403
+   },
+   {
+    "name": "ARBI Exchange - лицензированный обмен валют",
+    "lat": 7.8509180999999995,
+    "lng": 98.2937528,
+    "addr": "Karon Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service/ATM/Crypto ATM/Money order service/Money transfer service",
+    "pid": "ChIJn5FO_LolUDARStxuJ-uprdY",
+    "dist": 2344
+   },
+   {
+    "name": "Smart Fx Currency Exchange-Makro Karon",
+    "lat": 7.8262149,
+    "lng": 98.2966335,
+    "addr": "199 Makro Food Service 1 Patak Rd, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service",
+    "pid": "ChIJ7at1Y38lUDARMzPt307l-ww",
+    "dist": 437
+   },
+   {
+    "name": "Ex24.pro | Glow Карон | Лицензированный сервис обмена валют Exchange 24 Обмен рублей, долларов, евро | Phuket | GLOW",
+    "lat": 7.8508726,
+    "lng": 98.2947574,
+    "addr": "558/3 Patak Rd Karon Beach, Karon, Mueang Phuket District, Phuket 83100",
+    "cat": "Currency exchange service/Estate appraiser/Money transfer service/Payment terminal/Real estate consultant",
+    "pid": "ChIJDXnBTV4lUDAR_geohyXyENI",
+    "dist": 2334
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#2",
+  "name": "Money Shop Rawai",
+  "q": "Money Shop Rawai, Phuket",
+  "lat": 7.770813,
+  "lng": 98.31935,
+  "area": "rawai",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/141.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Money Shop Rawai.",
+    "lat": 7.7708108,
+    "lng": 98.31935059999999,
+    "addr": "57 62 Rawai, Mueang Phuket District, Phuket 83130",
+    "cat": "Currency exchange service",
+    "pid": "ChIJYQPBuz0pUDARVQYEM99JebI",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#3",
+  "name": "Money Shop Exchange Nai Harn",
+  "q": "Money Shop Exchange Nai Harn, Phuket",
+  "lat": 7.783255,
+  "lng": 98.317447,
+  "area": "nai-harn",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/142.txt",
+  "n": 3,
+  "top": [
+   {
+    "name": "Money Shop Exchange Nai Harn",
+    "lat": 7.783255199999999,
+    "lng": 98.317447,
+    "addr": "90, 58, Rawai, Mueang, Phuket 83130",
+    "cat": "Currency exchange service",
+    "pid": "ChIJfxYu_f8pUDARW9C51faHfBA",
+    "dist": 0
+   },
+   {
+    "name": "Ex24.pro Лицензированный сервис обмена валют Exchange 24 Обмен рублей, долларов, евро | Phuket | Nai Harn | Раваи | Rawai",
+    "lat": 7.781709299999999,
+    "lng": 98.3110473,
+    "addr": "15/166-167, Rawai, Mueang Phuket District, Phuket 83130",
+    "cat": "Currency exchange service/Event ticket seller/Money transfer service",
+    "pid": "ChIJu_29WOQpUDAR7W1r0GrSjeM",
+    "dist": 726
+   },
+   {
+    "name": "Money Shop Rawai.",
+    "lat": 7.7708108,
+    "lng": 98.31935059999999,
+    "addr": "57 62 Rawai, Mueang Phuket District, Phuket 83130",
+    "cat": "Currency exchange service",
+    "pid": "ChIJYQPBuz0pUDARVQYEM99JebI",
+    "dist": 1400
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#4",
+  "name": "Money Shop Chalong (Lotus's)",
+  "q": "Money Shop Chalong Lotus, Phuket",
+  "lat": 7.839961,
+  "lng": 98.33387,
+  "area": "chalong",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/143.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Money Shop Chalong Lotus",
+    "lat": 7.8399611,
+    "lng": 98.3338699,
+    "addr": "21 10 Chao Fah Tawan Tok Rd, Chalong, Mueang Phuket District, Phuket 83000",
+    "cat": "Currency exchange service",
+    "pid": "ChIJfxpUPgkvUDAR0yq9LHlaIyc",
+    "dist": 0
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#5",
+  "name": "Money Shop Exchange Nai Yang",
+  "q": "Money Shop Exchange Nai Yang, Phuket",
+  "lat": 8.086658,
+  "lng": 98.30066,
+  "area": "nai-yang",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/144.txt",
+  "n": 2,
+  "top": [
+   {
+    "name": "Money Shop Exchange Nai Yang",
+    "lat": 8.0866579,
+    "lng": 98.3006599,
+    "addr": "111 5, ต.สาคู, Thalang District, Phuket 83110",
+    "cat": "Currency exchange service",
+    "pid": "ChIJOSwsQVhHUDARjtJD915iFg0",
+    "dist": 0
+   },
+   {
+    "name": "Smart Fx Currency Exchange Naiyang",
+    "lat": 8.088661,
+    "lng": 98.2976947,
+    "addr": "Coco Beach Restaurant Naiyang Sakhu, Thalang District, Phuket 83110",
+    "cat": "Currency exchange service",
+    "pid": "ChIJnxh3FRJHUDAR8sjNQn5kFIk",
+    "dist": 395
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "money-shop#6",
+  "name": "Money Shop Exchange (Central Phuket Festival)",
+  "q": "Central Phuket Festival, Wichit, Phuket",
+  "lat": 7.891691,
+  "lng": 98.367244,
+  "area": "phuket-town",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/145.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Central Phuket",
+    "lat": 7.891598699999999,
+    "lng": 98.3677616,
+    "addr": "74, 75 หมู่ที่ 5 Vichitsongkram Rd, Wichit, Mueang Phuket District, Phuket 83000",
+    "cat": "Shopping mall/Food court/Research foundation/Restaurant",
+    "pid": "ChIJRZ0Fp8YxUDARkWRjR4GpCeM",
+    "dist": 58
+   }
+  ]
+ },
+ {
+  "kind": "money",
+  "id": "phuket-airport-counters#0",
+  "name": "Phuket International Airport, international terminal arrivals",
+  "q": "Phuket International Airport International Terminal",
+  "lat": 8.105882,
+  "lng": 98.305702,
+  "area": "mai-khao",
+  "file": "/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gm/146.txt",
+  "n": 1,
+  "top": [
+   {
+    "name": "Phuket International Airport",
+    "lat": 8.105340199999999,
+    "lng": 98.30542899999999,
+    "addr": "222 หมู่ที่ 6, Mai Khao, Thalang District, Phuket 83110",
+    "cat": "International airport/Airport",
+    "pid": "ChIJCQ93jJhIUDAR0DDUaWtBtOU",
+    "dist": 67
+   }
+  ]
+ }
+]

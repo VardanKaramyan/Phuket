@@ -1,0 +1,76 @@
+{
+ "results": [
+  {
+   "key": "places:karon-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-karon-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Phuket%2C_Karon_Beach%2C_Sea_surf_-_panoramio.jpg/1280px-Phuket%2C_Karon_Beach%2C_Sea_surf_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket,_Karon_Beach,_Sea_surf_-_panoramio.jpg",
+   "credit": "\u0410\u0439\u0440\u0430\u0442 \u0425\u0430\u0439\u0440\u0443\u043b\u043b\u0438\u043d",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 852,
+   "note": "Found by searching Commons. All 3 candidates were rejected: #1 is hazy with litter on the sand, #2 is a sunset that could be any beach, #3 is overcast and dull. This photo shows surf sweeping up Karon's long beach under a blue sky with clouds, with swimmers, the green headland and Karon's tall white tower. It is a different photo and composition from the area card (Thailande 2010 259, the boulder shot). Sharp; the 16:9 crop only trims sky and sand."
+  },
+  {
+   "key": "places:kamala-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-kamala-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Kamala_Beach_-_panoramio.jpg/1280px-Kamala_Beach_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kamala_Beach_-_panoramio.jpg",
+   "credit": "Ralf Schmidt",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 661,
+   "note": "Found in the Commons category 'Kamala beach'. All 3 candidates were rejected: #1 is mostly sky with distant boats and a thin frame border, #2 is a generic top-down drone shot of longtail boats, #3 is a gloomy dusk scene with a tiki torch. This photo shows surf breaking on Kamala Beach under a deep blue sky, with the conical green hill and its hillside villas behind the bay. It is clearly different from the area card (Thailande 2010 248, the calm headland). Wide 1.94:1 image, so the 16:9 crop only trims the sides."
+  },
+  {
+   "key": "places:surin-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-surin-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C.jpg/1280px-%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C.jpg",
+   "credit": "Maleewan1wanpen2thai",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 965,
+   "note": "Skipped candidate 1 (Surin_Beach.JPG) because the areas:surin card already uses it. Rejected candidate 2, a portrait sunset with a red flag that could be any beach. Found this one by searching Commons for the Thai name: 'Mittraphap thi Hat Surin' (Friendship at Surin Beach), a Wiki Loves Earth 2022 upload. It shows Surin's wide sunny beach with swimmers, surf and the wooded headland with hotels under a blue sky, a different end and view from the area card. Phone photo with mild HDR; there is a small red flag mid-beach."
+  },
+  {
+   "key": "places:bangla-boxing-stadium",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bangla-boxing-stadium.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg/1280px-Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg",
+   "credit": "Karelj",
+   "license": "CC BY 4.0",
+   "width": 1280,
+   "height": 744,
+   "note": "Candidate 1: the stadium's sunny daytime front with its big 'BANGLA BOXING STADIUM / THAI BOXING STADIUM / REAL FIGHT' sign and boxer statues. The sign stays readable in a 16:9 crop at card size; there are vehicles at the bottom edges. Commons has only these 3 files. The official site has only a composited hero graphic and text-heavy fight posters. #2 is a duller front view under grey sky, and #3 (a boxer with his trainer) does not show it is Bangla."
+  },
+  {
+   "key": "places:blue-elephant-cooking-school",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-blue-elephant-cooking-school.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg/1280px-Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Blue_Elephant,_Phuket,_Thailand_-_02.jpg",
+   "credit": "Sharon Hahn Darlin",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 813,
+   "note": "Candidate 2: a sharp, close view of the yellow Sino-Portuguese mansion on Krabi Road that houses the Blue Elephant restaurant and cooking school. 'BLUE ELEPHANT' is lettered over the door, with traveller's palms and a lawn in front. #1 is the same building far across the lawn under grey sky; #3 is just the logo."
+  },
+  {
+   "key": "places:renew-sauna-ice-bath",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-renew-sauna-ice-bath.jpg",
+   "url": "https://renewthailand.com/wp-content/uploads/2026/03/IMG_0802-1-scaled.jpg",
+   "page": "https://renewthailand.com/",
+   "credit": "\u00a9 Renew Sauna & Ice Bath",
+   "license": "official site",
+   "width": 2560,
+   "height": 2477,
+   "note": "Candidate 1, from the official homepage: the indoor ice bath and hot tub, with '12\u00b0 Ice Tub' and '43\u00b0 Hot tub' signs, hanging plants and a timber-look ceiling. The image is nearly square, but I checked that a centred 16:9 crop keeps both pools and the signs. The site confirms its single location near Boat Avenue in Bangtao. #2 shows the caf\u00e9 bar, not the sauna; the site's other images are square sauna, lounge or model shots; #3 is a portrait shot from a third-party guide site."
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "items": [
+  {
+   "id": "mor-mu-dong",
+   "name": "Mor Mu Dong (mangrove seafood)",
+   "nameThai": "หมอมูดง",
+   "tier": "hidden-gem",
+   "category": "food",
+   "area": "chalong",
+   "lat": 7.84313,
+   "lng": 98.37198,
+   "coordSource": "google maps place pin (7.84309, 98.37201) + michelin page geo + osm node, all within 10 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mor Mu Dong Restaurant, Chalong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1.5,
+    "max": 2
+   },
+   "description": "Southern Thai food in open wooden huts over a mangrove canal near Chalong, about 10 km from Phuket Town. Mostly local diners. Live seafood waits in tanks by the open kitchen. Try stuffed mackerel, salt-fried pork, sea grape salad, lime squid and salt-crusted fish. Michelin Bib Gourmand.",
+   "feeText": "Most dishes 100-200 THB; whole fish by weight. About 300-500 THB per person. Cards are listed as accepted, but bring cash as backup.",
+   "openText": "Daily 10:00-21:00. Closed on the 15th of every month (on your trip: Fri 15 Jan).",
+   "bestTime": "Weekdays are calmer. On weekends arrive before 12:00: the car park fills and you take a queue number. High tide gives the best view (check a tide app). At low tide you see mud and small red crabs.",
+   "gettingThere": "Car, scooter or Grab. About 20-25 min from Phuket Town (10 km), 25-30 min from Kata (11 km) and 35-45 min from Patong (20 km). It is at the end of a small road in the mangroves. Google Maps finds it easily.",
+   "goodFor": [
+    "seafood",
+    "local food",
+    "groups"
+   ],
+   "tips": [
+    "Order the salt-crusted fish (pla pao) first. It takes about 30 minutes.",
+    "No reservations. On busy days you take a number and wait. Ask for a hut over the water.",
+    "In the huts you sit on the floor at a low table. Some bigger huts, and the tables under the trees, have chairs.",
+    "The menu has photos of every dish, so you can point.",
+    "Backup on the 15th or when it is full: Chaiyo Seafood Restaurant (daily 10:30-21:30). It is across the canal, but about 10 km by road."
+   ],
+   "links": [
+    {
+     "label": "Mor Mu Dong (MICHELIN Guide)",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/mor-mu-dong"
+    },
+    {
+     "label": "Mor Mu Dong (Facebook)",
+     "url": "https://www.facebook.com/268869256550303"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/mor-mu-dong",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurants/bib-gourmand",
+    "https://www.phuket101.net/mor-mu-dong-restaurant/",
+    "https://www.phuket101.net/best-local-restaurants-phuket/",
+    "https://www.wongnai.com/restaurants/mormudong",
+    "https://maps.google.com/?cid=16239454474701631669",
+    "https://wanderlog.com/place/details/470288"
+   ],
+   "verification": "Checked 15 Oct 2026. Google Maps 'Mor Mu Dong Restaurant': operating, daily 10:00-21:00, 3,753 reviews. Michelin site: same hours, and its Phuket Bib Gourmand list (18 places) includes it. Closed on the 15th: Phuket 101 (30 Sep 2026) and Wongnai agree. Coords: Google pin, Michelin geo and OSM node within 10 m. Chaiyo: Google/OSM pin 480 m north across the canal, 9.6 km by road (OSRM).",
+   "imageCandidates": [
+    {
+     "url": "https://prod-pics.guide.michelin.com/api/public/content/63b68a7d97d649d090e8a9982aaabb40.jpeg?format=jpeg&w=1000&h=1000",
+     "source": "MICHELIN Guide (og:image)",
+     "credit": "MICHELIN Guide / Mor Mu Dong",
+     "license": "Guide photo (personal use)"
+    }
+   ]
+  },
+  {
+   "id": "malin-plaza-night-market",
+   "name": "Malin Plaza night market (Patong)",
+   "nameThai": "มาลิน พลาซ่า",
+   "tier": "must-see",
+   "category": "food",
+   "area": "patong",
+   "lat": 7.88264,
+   "lng": 98.29318,
+   "coordSource": "google maps place pin (7.88264, 98.29318) + osm marketplace polygon (edited Sep 2026), 80 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Malin Plaza, Prachanukhro Rd, Patong, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 1.5
+   },
+   "description": "A big covered night market at the south end of Patong. The front half is food: grills, seafood on ice that they cook for you, pad thai, fruit, pancakes and mango sticky rice, with shared tables. The back half sells clothes and souvenirs. Touristy and warm (no air-con), but cheap for Patong.",
+   "feeText": "Free entry. Street dishes about 80-120 THB (pad thai 80, pad kra pao 100-120). Seafood is by weight: ask the total before they cook it.",
+   "openText": "Daily 11:00-23:00. Almost empty until late afternoon.",
+   "bestTime": "18:00-19:00: stalls are ready and tables are free. Busiest 20:00-22:00, peak around 21:00.",
+   "gettingThere": "South end of Patong on Prachanukhro Road, 1.6 km from Bangla Road (about 20 minutes on foot). Tuk-tuk from central or north Patong about 200 THB, or use Grab. Parking is hard: a scooter is fine, a car is not.",
+   "goodFor": [
+    "street food",
+    "dinner before a party",
+    "cheap eats"
+   ],
+   "tips": [
+    "Bargain for souvenirs, not for food. A cap offered at 250 THB sold for 70 THB.",
+    "Look at a few food stalls first: a few charge more than the others.",
+    "Halal food: several stalls show it on the sign. Check each stall.",
+    "Some sellers in the shopping half are pushy. A smile and a 'no' works."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/malin-plaza-night-market/",
+    "https://maps.google.com/?cid=12005857636010867127",
+    "https://www.openstreetmap.org/way/562157775",
+    "https://wanderlog.com/place/details/58739"
+   ],
+   "verification": "Checked 15 Oct 2026. Google Maps 'Malin Plaza' (night market): operating, daily 11:00-23:00, 8,997 reviews. Phuket 101 (12 Aug 2026): same hours, free entry, 2025-2026 prices, layout, tuk-tuk 200 THB, 1.6 km from Bangla Road. No closure news in English or Thai search. Coords: Google pin; OSM marketplace polygon 80 m away. Bangla Road to market 1.5 km by road (OSRM).",
+   "imageCandidates": [
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20170918212222/malin-plaza-night-market3.jpg",
+     "source": "Phuket 101 (og:image of the Malin Plaza guide)",
+     "credit": "Phuket 101",
+     "license": "Guide photo (personal use)"
+    },
+    {
+     "url": "https://content.phuket101.net/wp-content/uploads/20170306213520/malin-plaza-fish-market-1024x682.jpg",
+     "source": "Phuket 101 (seafood stalls photo in the Malin Plaza guide)",
+     "credit": "Phuket 101",
+     "license": "Guide photo (personal use)"
+    }
+   ]
+  }
+ ],
+ "removed": [
+  {
+   "id": "rawai-seafood-market-2",
+   "name": "Rawai Seafood Market (buy and they cook)",
+   "reason": "Duplicate of 'rawai-seafood-market' in the must-see list. It is the same place (Google pin 7.77574, 98.32892; both items are within 20 m of it) with the same Phuket 101 source. Re-checked facts for the kept item: operating (Google 4.4 from 4,717 reviews); stalls 09:00-21:00 on Google, 11:00-21:00 on Phuket 101; the restaurants that cook are open daily (Mook Manee 11:30-22:00, Khun Pha 11:00-22:00). Phuket 101 says the tour buses have already left by 19:00. Quieter option: Salaloy Seafood, 350 m west, closed on Thursdays."
+  }
+ ],
+ "changes": [
+  "rawai-seafood-market-2: removed as a duplicate of rawai-seafood-market (must-see list, same place and source).",
+  "mor-mu-dong: Chaiyo tip corrected. It is 480 m away across the canal but 9.6 km by road (OSRM), so it is not 'opposite'. The claim that it is cheaper had no source.",
+  "mor-mu-dong: feeText now says most dishes are 100-200 THB and whole fish is by weight (Phuket 101 FAQ). Michelin and Wongnai list credit cards, so the cash advice is softened to 'bring cash as backup'.",
+  "mor-mu-dong: the closure on the 15th of each month is now backed by Wongnai as well as Phuket 101. Google shows only the regular daily hours.",
+  "mor-mu-dong: added gettingThere (OSRM drive times plus a traffic margin) and tips on queue numbers, floor seating and the photo menu. bestTime now adds high-tide advice.",
+  "mor-mu-dong: links. Added the official Facebook page (it is linked from the Google listing). Phuket 101 moved to sources only, because it is not an official link.",
+  "mor-mu-dong: description changed from '10 km south of Phuket Town' to 'about 10 km from Phuket Town' (9.6 km by road).",
+  "malin-plaza-night-market: description no longer says 'near Patong nightlife', because it is 1.6 km from Bangla Road. 'Cheap' changed to 'cheap for Patong' (Phuket 101).",
+  "malin-plaza-night-market: added gettingThere (1.6 km from Bangla Road, tuk-tuk about 200 THB, parking is hard) and 'free entry' in feeText.",
+  "malin-plaza-night-market: added 2 imageCandidates (Phuket 101 photos, both return image/jpeg). Commons has no photo of the market.",
+  "malin-plaza-night-market: links. The Phuket 101 guide moved to sources, because no official site exists. nameThai set to Google's form 'มาลิน พลาซ่า'.",
+  "Coordinates for mor-mu-dong and malin-plaza-night-market were re-derived (Google pin plus Michelin or OSM). They are within 10 m and 80 m of the given points, so they are unchanged."
+ ]
+}

@@ -1,0 +1,367 @@
+{
+ "items": [
+  {
+   "id": "chill-up-phangan",
+   "kind": "recurring",
+   "name": "Chill Up: Monday Madness and Phangan Calling",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Chill UP club, 114/2 Moo 1, Ban Tai main road, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 3,
+   "lat": 9.70559,
+   "lng": 100.01003,
+   "coordSource": "google-maps-listing+osm+pluscode P246+62 (within 6 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chill UP club, Ban Tai, Koh Phangan",
+   "description": "Free-entry bar and mini club on Ban Tai main road, Koh Phangan, open since 2015. Monday Madness plays progressive house, minimal and techno. Thursday Phangan Calling plays indie dance, tech house and techno (some editions are called Techno Rebellion). Music runs until 02:00. A good warm-up spot. Closed on Wednesdays.",
+   "genres": [
+    "techno",
+    "minimal",
+    "progressive house",
+    "tech house",
+    "indie dance"
+   ],
+   "dates": [
+    "2027-01-11",
+    "2027-01-14",
+    "2027-01-18"
+   ],
+   "recurrence": "Mondays (Monday Madness) and Thursdays (Phangan Calling), music from about 20:00 or 21:00 to 02:00. Bar open 19:00-02:00, closed Wednesdays.",
+   "timeText": "Mon and Thu, about 20:00-02:00",
+   "priceText": "Free entry.",
+   "tips": [
+    "Opposite Mini Big C, before Lavella Spa on the road to Haad Rin.",
+    "Start here, then go on to a later party. Chill Up closes at 02:00."
+   ],
+   "links": [
+    {
+     "label": "Website and weekly schedule",
+     "url": "https://chillup.club/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/chill_up_phangan/"
+    }
+   ],
+   "sources": [
+    "https://chillup.club/",
+    "https://phangan.events/events/monday-madness-at-chill-up/",
+    "https://phangan.events/events/phangan-calling/",
+    "https://djstrich.de/en/club/chillup"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2022/08/chillup_phangan-e1721980956228.jpg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Chill Up"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/08/IMG_3873.jpeg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Chill Up"
+    }
+   ],
+   "verification": "Official site chillup.club (15 Oct 2026): Monday Madness on Mon, Phangan Calling on Thu, free entry, open 19:00-02:00, closed Wed. phangan.events lists Monday Madness every Monday to Mar 2027 (21:00-02:00) and Phangan Calling on 15 Oct (20:00-02:00). DJStrich lists Monday Madness on 11 and 18 Jan 2027 (20:00), Phangan Calling on 14 Jan 2027, and Techno Rebellion editions on 22 Oct, 26 Nov and 17 Dec 2026. Google Maps 'Chill UP club': 4.4 (509 reviews), with reviews from this week. Coords: Google listing, OSM and plus code agree within 6 m."
+  },
+  {
+   "id": "eden-garden-phangan",
+   "kind": "recurring",
+   "name": "Eden Garden Saturday (Haad Yuan)",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Eden Garden, Haad Yuan Beach, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 4,
+   "lat": 9.6933,
+   "lng": 100.07599,
+   "coordSource": "google-maps-listing (from the listing's own map link)+pluscode M3VG+89H+osm (within 46 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Eden Garden, Haad Yuan, Koh Phangan",
+   "description": "Long-running free Saturday party on the rocks at Haad Yuan, a small beach north of Haad Rin. Mostly house and tech house, with some progressive and techno, from 21:00 until late Sunday morning. Go by taxi boat from Haad Rin or by 4x4 taxi truck from Ban Tai. Both run all night and leave when full.",
+   "genres": [
+    "house",
+    "deep house",
+    "tech house",
+    "progressive house",
+    "techno"
+   ],
+   "dates": [
+    "2027-01-09",
+    "2027-01-16"
+   ],
+   "recurrence": "Every Saturday, 21:00 to late Sunday morning",
+   "timeText": "Sat 21:00 to Sun about 12:00",
+   "priceText": "Free entry (2026 listings). Cash bar.",
+   "tips": [
+    "Taxi trucks leave from the 7-Eleven in Ban Tai. Taxi boats leave from Haad Rin beach. They run all night and go when full.",
+    "No videos, no drones, no shoes on the dance floor. Do not climb on the rocks.",
+    "Bring cash and a small torch. Keep your phone and power bank safe from water."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/eden-garden-haad-yuan/"
+    },
+    {
+     "label": "Weekly listing with transport info",
+     "url": "https://phangan.events/events/eden-garden-saturday/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/event-location/eden-garden-haad-yuan/",
+    "https://phangan.events/events/eden-garden-saturday/",
+    "https://phangan.events/events/sabrina-david-chong-peter-g-papa-joe/",
+    "https://www.technoairlines.com/club/eden-garden-koh-phangan"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2023/06/cropped-1C3A6F5E-7CEA-4FDF-876E-92AE01DED7DF.jpeg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Eden Garden"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/10/1792057972053-fzxf4uljw09.jpg",
+     "source": "phangan.events (flyer)",
+     "license": "© organiser",
+     "credit": "Eden Garden"
+    }
+   ],
+   "verification": "phangan.events 'Eden Garden Saturday' series (updated 7 Oct 2026) lists every Saturday, including 9 and 16 Jan 2027, 21:00-12:00, free entry, with taxi boat and truck info and house rules. A lineup for 17 Oct 2026 was posted on 15 Oct. Google Maps 'Eden Garden' (the place in the listing's own map link): 4.5 (464 reviews), not marked closed. Coords: Google point = plus code (2 m); OSM node is 46 m away."
+  },
+  {
+   "id": "unclave-phangan",
+   "kind": "venue",
+   "name": "Unclave (Groovy Tunes minimal nights)",
+   "type": "club",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Unclave, Ban Tai hills, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 5,
+   "lat": 9.73006,
+   "lng": 100.04231,
+   "coordSource": "google-maps-listing 'Unclave Phangan'+pluscode P2JR+2W (4 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Unclave Phangan, Ban Tai, Koh Phangan",
+   "description": "Underground club in the jungle hills above Ban Tai, Koh Phangan (RA lists room for 500). Home of Groovy Tunes, a minimal and deep house party about every second Friday from 22:00 to sunrise. It books guests like Cosmjn and Direkt from Romania (30 Oct 2026). In high season other crews play on other nights.",
+   "genres": [
+    "minimal",
+    "rominimal",
+    "deep house",
+    "organic house",
+    "progressive"
+   ],
+   "recurrence": "Groovy Tunes about every second Friday (2026 season: every two weeks from 24 Jul, all Fridays); other crews on other nights in high season",
+   "timeText": "Groovy Tunes 22:00 to sunrise (2026 season)",
+   "priceText": "Groovy Tunes presale on Megatix: 400-600 THB (16 Oct 2026); 500-900 THB for the 30 Oct special.",
+   "tips": [
+    "If the two-week pattern holds, Groovy Tunes falls on Fri 8 Jan 2027 (your arrival day) and next on about Fri 22 Jan (after your trip). Check @groovytunes__ in December.",
+    "Last season the New Year party moved the dates (10 Jan 2026 was a Saturday), so a date during your trip is possible.",
+    "Buy early on Megatix. The price goes up with each release."
+   ],
+   "links": [
+    {
+     "label": "Unclave on Instagram",
+     "url": "https://www.instagram.com/unclave.phangan/"
+    },
+    {
+     "label": "Groovy Tunes on Instagram",
+     "url": "https://www.instagram.com/groovytunes__/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/274256"
+    }
+   ],
+   "sources": [
+    "https://ra.co/clubs/274256",
+    "https://ra.co/events/2558578",
+    "https://megatix.in.th/events/groovy-tunes-clockwork",
+    "https://megatix.in.th/events/groovy-tunes-experiween",
+    "https://phangan.events/event-location/unclave/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/76793/reQQTfvnA2FbcDR3vL9NGjgif4wJawPipmB5Hz4G.jpg",
+     "source": "megatix.in.th (event flyer)",
+     "license": "© organiser",
+     "credit": "Groovy Tunes"
+    },
+    {
+     "url": "https://media.megatix.com.au/e/76793/Fv1CYBbjM1VS6SLIPXXtZLVvuzFEoVTI663PH2vx.jpg",
+     "source": "megatix.in.th",
+     "license": "© organiser",
+     "credit": "Groovy Tunes"
+    }
+   ],
+   "verification": "RA (GraphQL, 15 Oct 2026): Groovy Tunes on Fridays every two weeks since 24 Jul 2026 (2 Oct and 16 Oct, 22:00-07:00). Venue capacity 500, not marked closed. Megatix: 16 Oct presale 400/600 THB; 30 Oct 'Experiween w Cosmjn, Direkt' at 500/700/900 THB. Jan 2026 also had Izhevski (12 Jan) and Zorka x Hypnotica (15 and 21 Jan); KONTUR afters was on 8 Feb 2026, not in January. No Jan 2027 dates posted yet. Google Maps 'Unclave Phangan': 4.7 (61 reviews)."
+  },
+  {
+   "id": "waterfall-festival-phangan",
+   "kind": "recurring",
+   "name": "Waterfall Festival (Wednesdays)",
+   "type": "party",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Waterfall Festival site, Ban Tai, Koh Phangan",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 9.70588,
+   "lng": 100.04692,
+   "coordSource": "osm 'Waterfall Party'+google-maps-listing 'Waterfall Festival' (22 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Waterfall Festival, Ban Tai, Koh Phangan",
+   "description": "Big jungle party next to a waterfall in Ban Tai, Koh Phangan, with five stages. The main stage plays house and melodic techno with lasers. Other stages play hip-hop, psytrance and afrobeat. Now it runs 2 days before and 2 days after each Full Moon Party. In Jan-Feb 2026 it also ran on Wednesdays. Very touristy.",
+   "genres": [
+    "house",
+    "melodic techno",
+    "progressive house",
+    "psytrance",
+    "hip-hop",
+    "afrobeat"
+   ],
+   "dates": [
+    "2027-01-13"
+   ],
+   "recurrence": "2 days before and 2 days after each Full Moon Party, plus special nights; in Jan-Feb 2026 also most Wednesdays. 21:00 to sunrise.",
+   "timeText": "21:00 to sunrise",
+   "priceText": "Oct 2026: 1,100 THB early bird online, 1,300 online, 1,500 at the door (one beer included). VIP 2,500 online, 2,800 at the door.",
+   "tips": [
+    "Wed 13 Jan 2027 is only expected. The January Full Moon Party is expected on Fri 22 Jan 2027, so the Full Moon dates fall after your trip. Check again in December.",
+    "Buy online early. It is cheaper than the door.",
+    "The festival has no taxi service. Shared taxis go from Thong Sala, Haad Rin and Srithanu."
+   ],
+   "links": [
+    {
+     "label": "Official website",
+     "url": "https://waterfallpartykohphangan.com/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/waterfallfestivalphangan/"
+    },
+    {
+     "label": "Dates and tickets (phangan.events)",
+     "url": "https://phangan.events/waterfall-festival-koh-phangan-lineup-tickets/"
+    }
+   ],
+   "sources": [
+    "https://waterfallpartykohphangan.com/",
+    "https://api.waterfallpartykohphangan.com/events",
+    "https://phangan.events/waterfall-festival-koh-phangan-lineup-tickets/",
+    "https://phangan.events/events/waterfall-festival-14-january-2026/",
+    "https://phangan.events/events/waterfall-festival-3/",
+    "https://www.instagram.com/waterfallfestivalphangan/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/11/IMG_2374.jpeg",
+     "source": "phangan.events",
+     "license": "© organiser",
+     "credit": "Waterfall Festival"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/01/file_2526.jpg",
+     "source": "phangan.events (flyer)",
+     "license": "© organiser",
+     "credit": "Waterfall Festival"
+    }
+   ],
+   "verification": "Official site API (waterfallpartykohphangan.com, 15 Oct 2026) lists only 25 and 29 Oct 2026. Instagram bio says '2 Days Before and After the full moon' and '5 stages'. phangan.events shows Wednesday parties on 14 and 21 Jan and every Wednesday in Feb 2026, Oct 2026 prices, and next dates on 11, 22 and 26 Nov 2026. No 2027 dates yet. The Jan 2027 Full Moon Party is projected for 22 Jan (not official). Google Maps 'Waterfall Festival': 4.1 (677 reviews)."
+  },
+  {
+   "id": "pangea-beach-bar-lanta",
+   "kind": "recurring",
+   "name": "Deep Sundays at Pangea Beach Bar (Koh Lanta)",
+   "type": "weekly night",
+   "island": "Koh Lanta",
+   "area": "koh-lanta",
+   "venue": "Pangea Beach Bar & Kitchen, Long Beach (Phra Ae), Koh Lanta",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 3,
+   "lat": 7.60588,
+   "lng": 99.03373,
+   "coordSource": "wikidata+google-maps-listing 'Pangeabar & kitchen'+osm (within 64 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pangeabar & kitchen, Long Beach, Koh Lanta",
+   "description": "Beach bar on Long Beach, Koh Lanta, known for deep and minimal house since 2012. It booked Ian Pooley, Clive Henry and Nakadia in past years. In high season it runs 'Deep Sundays' from 18:00 with sunset DJ sets, last seen in March 2026. Small (about 300 people). Only worth it if you stay on Koh Lanta.",
+   "genres": [
+    "deep house",
+    "minimal",
+    "tech house"
+   ],
+   "dates": [
+    "2027-01-10",
+    "2027-01-17"
+   ],
+   "recurrence": "Sundays in high season from 18:00 (seen 15 and 29 Mar 2026)",
+   "timeText": "Sundays from 18:00 to about midnight",
+   "priceText": "Not listed.",
+   "tips": [
+    "Check facebook.com/pangeabeachbar before you go. The 2027 season is not announced.",
+    "On Google Maps it is called 'Pangeabar & kitchen'. It is closed on Wednesdays.",
+    "Koh Lanta is a ferry trip from Phuket. Plan at least one night there."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/pangeabeachbar/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/101580"
+    }
+   ],
+   "sources": [
+    "https://ra.co/events/2462341",
+    "https://ra.co/events/2410915",
+    "https://ra.co/clubs/101580",
+    "https://www.wikidata.org/wiki/Q60178765",
+    "https://www.facebook.com/pangeabeachbar/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Long_Beach_-_panoramio_%283%29.jpg/1280px-Long_Beach_-_panoramio_%283%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Luděk Chmurovský"
+    }
+   ],
+   "verification": "RA (GraphQL): Deep Sundays on 15 Mar 2026 (18:00-02:00) and 29 Mar 2026 (18:00-00:00). Past nights with Ian Pooley (2018), Clive Henry (2019) and Nakadia (2020); 6th anniversary in Feb 2018; capacity 300. Google Maps 'Pangeabar & kitchen' is open, 4.4 (374 reviews), Sun 16:00-24:00, Wed closed. The Facebook page (now 'Pangea Beach Bar & Kitchen') works. Coords: Wikidata = given point; Google pin 43 m away, OSM 64 m. No Jan 2027 dates yet."
+  }
+ ],
+ "removed": [
+  {
+   "id": "black-box-samui",
+   "name": "Black Box (Koh Samui)",
+   "reason": "No events listed since 17 Apr 2026 (HACKED, 'final session of the season'). Last season the SECTOR nights started on 6 Sep 2025, but on 15 Oct 2026 RA and phangan.events show nothing for 2026/27. It is a small DJ bar on Samui, far from Phuket, and the music was mostly melodic/organic house and drum and bass. Not worth a slot without confirmed dates. Venue (Google 9.52673, 100.0569) and Instagram @blackboxbar.samui still exist."
+  }
+ ],
+ "changes": [
+  "Removed black-box-samui: no events since 17 Apr 2026 and no 2026/27 season on RA or phangan.events (last season had started by 6 Sep 2025).",
+  "No coordinates changed: Google, OSM, plus codes and Wikidata put all 5 surviving points within 64 m of the given lat/lng.",
+  "chill-up-phangan: Monday Madness start corrected to about 20:00 or 21:00 (DJStrich lists 20:00 from Nov 2026, phangan.events 21:00) and bar hours 19:00-02:00 added. gmapsQuery set to the Google name 'Chill UP club'. Verification updated (nights listed into Jan 2027, Techno Rebellion dates).",
+  "eden-garden-phangan: gmapsQuery changed to 'Eden Garden, Haad Yuan, Koh Phangan' (Google now lists 'Eden Garden', not 'Eden Bar'). Description now says it is mostly house. Added house rules (no videos, drones or shoes), the Ban Tai 7-Eleven truck pickup, a 'deep house' genre and a second link.",
+  "unclave-phangan: pick changed to false. The likely Groovy Tunes dates are Fri 8 Jan (arrival day) and about 22 Jan (after the trip), nothing is posted for Jan 2027, and the music is minimal, not techno.",
+  "unclave-phangan: price corrected to 400-600 THB (regular) and 500-900 THB (30 Oct special). Removed the unverified 'cheaper than the door' tip and added a New Year date-shift caveat. Genres corrected ('techno' removed; rominimal, organic and progressive added). Verification fixed: KONTUR afters was 8 Feb 2026, not January. Capacity 500 confirmed on RA.",
+  "waterfall-festival-phangan: 'four stages' corrected to five (official site and Instagram). The schedule is now 2 days before and after each Full Moon Party; the Jan 2027 Full Moon Party is expected on 22 Jan, after the trip. Prices updated to Oct 2026 (early bird 1,100 THB; VIP 2,500/2,800).",
+  "waterfall-festival-phangan: replaced the near-empty phangan.events/waterfall-festival/ link with the official site, Instagram and the phangan.events dates/tickets page. gmapsQuery set to the Google name 'Waterfall Festival'. Added a transport tip and hip-hop/afrobeat genres.",
+  "pangea-beach-bar-lanta: undergroundScore 4 -> 3 (sunset deep-house sessions at a beach bar). Venue renamed 'Pangea Beach Bar & Kitchen' (Google: 'Pangeabar & kitchen') and gmapsQuery updated. End time added (about midnight; Google Sunday hours 16:00-24:00). Capacity 300 confirmed on RA."
+ ]
+}

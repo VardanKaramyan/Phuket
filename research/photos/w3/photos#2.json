@@ -1,0 +1,117 @@
+{
+ "results": [
+  {
+   "key": "places:khao-sok-cheow-lan-lake",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-khao-sok-cheow-lan-lake.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Unnamed_island%2C_Cheow_Lan_Lake.jpg/1280px-Unnamed_island%2C_Cheow_Lan_Lake.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Unnamed_island,_Cheow_Lan_Lake.jpg",
+   "credit": "The Cosmonaut",
+   "license": "CC BY-SA 2.5 ca",
+   "width": 1280,
+   "height": 961,
+   "note": "Limestone karst island rising out of Cheow Lan Lake's teal water under a blue sky, with a longtail boat. This is candidate 2. I picked it over candidate 1 (a lone dead tree in the lake) because it is more recognizable. The island fits a centered 16:9 crop."
+  },
+  {
+   "key": "places:samet-nangshe-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-samet-nangshe-viewpoint.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Samed_Nangchee_Sunrise.jpg/1280px-Samed_Nangchee_Sunrise.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Samed_Nangchee_Sunrise.jpg",
+   "credit": "Yothind",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 854,
+   "note": "Golden sunrise over Phang Nga Bay's karst islands seen from the Samet Nangshe viewpoint (2018-04-14, 06:19, Wiki Loves Earth). It fits the sunrise visit. Both candidates were rejected: c1 is portrait with the bay in the lower third, and c2 has a heavy painterly filter."
+  },
+  {
+   "key": "places:koh-phangan-rave-trip",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-phangan-rave-trip.jpg",
+   "url": "https://static.wixstatic.com/media/94d41a_ebec3ce32620447e81613f8a69e1a5b8~mv2.jpg/v1/fit/w_1600,h_1600,q_85/94d41a_ebec3ce32620447e81613f8a69e1a5b8~mv2.jpg",
+   "page": "https://www.halfmoonfestival.com/halfmoonfestivaldates",
+   "credit": "\u00a9 Halfmoon Festival",
+   "license": "official site",
+   "width": 1600,
+   "height": 1066,
+   "note": "Official party photo of Halfmoon Festival's jungle stage at Ban Tai at night: psychedelic decor, lasers and a big crowd. A small Halfmoon logo sits in the top ~6%, so a centered 16:9 crop removes it. Rejected: candidate 1 (a text-heavy 2026 date-calendar graphic), and Phasawan viewpoint and the Hat Rin aerial (no party). It differs from the Full Moon Party event photo."
+  },
+  {
+   "key": "places:one-chun",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-one-chun.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/One_Chun.jpg/1280px-One_Chun.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:One_Chun.jpg",
+   "credit": "Vano111ru",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 1072,
+   "note": "Candidate 1: One Chun's restored Sino-Portuguese shophouse at night, with its 'One Chun' sign, green shutters and diners at the door. Sharp. A centered 16:9 crop keeps the sign and entrance. The Michelin candidate shows only a dish."
+  },
+  {
+   "key": "places:mee-ton-poe",
+   "ok": false,
+   "note": "No acceptable photo exists. The only candidate is a generic dry Hokkien mee from a Bangkok restaurant: not this place, not Phuket style. Searched: Commons (English and Thai names, Hokkien mee category, geosearch around the Surin Circle clock tower; the two circle photos don't show the shop), Openverse, and Flickr (7 photos, none CC). It is not in the current Michelin selection (404, not in the Phuket list), has no official website (meetonpoe.com doesn't resolve), and its Facebook page needs login. TAT and gov sites gave nothing; only Wongnai and other review-site user photos exist."
+  },
+  {
+   "key": "places:lock-tien",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-lock-tien.jpg",
+   "url": "https://live.staticflickr.com/65535/51372505890_932145734d_h.jpg",
+   "page": "https://www.flickr.com/photos/150596023@N08/51372505890",
+   "credit": "Streets of Food (www.streetsoffood.com), via Flickr",
+   "license": "CC BY 2.0",
+   "width": 1600,
+   "height": 1057,
+   "note": "Sharp shot of por pia sod (fresh Phuket spring rolls in sweet sauce) at Lock Tien food court. The Flickr caption confirms the venue, and the owner asks for credit to 'Streets of Food and www.streetsoffood.com'. It was taken at the old Yaowarat/Dibuk corner before the 2025 move to Bangkok Road; it shows only the dish, so it isn't misleading. No candidates were given; Commons has no Lock Tien photos, and Openverse and Flickr have only this one."
+  },
+  {
+   "key": "places:go-benz",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-go-benz.jpg",
+   "url": "https://live.staticflickr.com/65535/51758207843_56f5aafea7_h.jpg",
+   "page": "https://www.flickr.com/photos/judy19740108/51758207843/",
+   "credit": "lin Judy (\u5feb\u6a02\u96f2), via Flickr",
+   "license": "CC BY-NC-ND 2.0",
+   "width": 1600,
+   "height": 1200,
+   "note": "Go Benz at night (2021-12-03 20:11): red 'Go Benz rice soup Phuket Original' signboard, cooks at the counter, busy tables, Michelin 2019 sticker. I picked it over the Michelin og:image (a rice-soup bowl) because it shows the place. The license is non-commercial and no-derivatives: fine for this personal guide shown with CSS crop or resize, but don't save an edited copy. If a non-ND image is needed, use https://prod-pics.guide.michelin.com/api/public/content/6ed352d69f8a452eb765d302d1c55a83.jpeg?format=jpeg&w=1000&h=1000"
+  },
+  {
+   "key": "places:naam-yoi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-naam-yoi.jpg",
+   "url": "https://prod-pics.guide.michelin.com/api/public/content/783234dfd8604c5e9207e1729dbf1e8a.jpeg?format=jpeg&w=1000&h=1000",
+   "page": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/naam-yoi",
+   "credit": "\u00a9 MICHELIN Guide",
+   "license": "MICHELIN Guide photo (personal use)",
+   "width": 1000,
+   "height": 1000,
+   "note": "Candidate 1, the Michelin og:image: Southern Thai prawns with sator beans and chilli in red curry sauce at Naam Yoi. Sharp; the square format keeps the dish in a centered 16:9 crop. The other two gallery shots are an overhead spread (crops badly) and an empty dining room. No CC photos on Commons, Flickr or Openverse. The Commons kaeng som candidate is generic."
+  },
+  {
+   "key": "places:mor-mu-dong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-mor-mu-dong.jpg",
+   "url": "https://prod-pics.guide.michelin.com/api/public/content/e544856bc9b64130867f09045ad1148c.jpeg",
+   "page": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/mor-mu-dong",
+   "credit": "\u00a9 MICHELIN Guide",
+   "license": "MICHELIN Guide photo (personal use)",
+   "width": 1000,
+   "height": 1000,
+   "note": "Clam soup with holy basil and shallots, from Mor Mu Dong's own Michelin gallery. I chose it over the og:image candidate (fried pork belly) to suit a mangrove seafood restaurant. Sharp; the square format keeps the bowl's centre in 16:9. All 6 gallery images are dishes; no venue (mangrove huts) photo exists there or as CC on Commons, Flickr or Openverse."
+  },
+  {
+   "key": "places:malin-plaza-night-market",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-malin-plaza-night-market.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Phuket_Malin_Night_Market.jpg/1280px-Phuket_Malin_Night_Market.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_Malin_Night_Market.jpg",
+   "credit": "JULIANISME",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Entrance to Malin Plaza night market on Prachanukhro Road at night (2025-09-03): lit food stalls, string lights, signboard. The upload title says Malin night market and its geotag is ~110 m from the market. The top third is dark sky, so a bottom-weighted 16:9 crop is best. No candidates were given; found by Commons geosearch. Flickr's Malin Plaza photos aren't CC, and the CC 'Patong night market' photos are Banzaan, not Malin."
+  }
+ ]
+}

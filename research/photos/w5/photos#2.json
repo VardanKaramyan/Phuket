@@ -1,0 +1,88 @@
+{
+ "results": [
+  {
+   "key": "money:lion-currency-exchange",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-lion-currency-exchange.jpg",
+   "url": "https://www.jungceylon.com/uploads/FF_44004_6_D3_EE_73_32_A9565_afb88d4f4b.jpg",
+   "page": "https://www.jungceylon.com/en/directory/lion-currency-exchange-botanica",
+   "credit": "\u00a9 Jungceylon Shopping Center",
+   "license": "official site",
+   "width": 1479,
+   "height": 1109,
+   "note": "The actual Lion Currency Exchange booth at Jungceylon, Patong (The Botanica Zone, GF unit GC4118): lit CURRENCY EXCHANGE sign, LION logo and a rate screen. Sharp, no watermark. Taken from Jungceylon's official mall directory page for Lion. Lion's own Facebook page shows 'content isn't available' when logged out, and Commons has nothing for it."
+  },
+  {
+   "key": "money:superrich-1965-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-superrich-1965-phuket.webp",
+   "url": "https://media.superrich1965.com/spr-upload-public/branches/phuket-suriyadej-circle-superrich-partner-gmap.webp",
+   "page": "https://www.superrich1965.com/en/branch",
+   "credit": "\u00a9 SuperRich Currency Exchange (1965) Co., Ltd.",
+   "license": "official site",
+   "width": 1000,
+   "height": 750,
+   "note": "Shopfront of the 'SuperRich Partner Phuket' branch on Ratsada Rd at Suriyadej Circle: orange EXCHANGE sign and SPR 'Currency Exchange' standee. This is the branch's featured image in the official superrich1965.com branch data (record phuket-suriyadej-circle-superrich-partner). The filename ends in '-gmap', so SuperRich probably took it from the branch's Google Maps listing; swap it if that matters. 4:3, so the top of the sign gets tight in a centered 16:9 crop; top-aligned works better. Fallback: Commons 'SuperRich currency exchange in Dusit Central Park (2026).jpg' (CC BY 4.0), but that is a Bangkok branch."
+  },
+  {
+   "key": "money:nc-plus",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-nc-plus.jpg",
+   "url": "https://storage13.openstreetcam.org/files/photo/2021/1/8/proc/3360661_e2f191597f1e9146284c2b5aa53eda39.jpg",
+   "page": "https://kartaview.org/details/3360661/766/track-info",
+   "credit": "KartaView contributor (sequence 3360661)",
+   "license": "CC BY-SA 4.0",
+   "width": 2200,
+   "height": 1237,
+   "note": "STREET PHOTO, not the office. No photo of NC Plus exists in open or official sources: it has no website, I found no reachable Facebook page, and Commons searches (English, Thai, and a geosearch along the road) found nothing. This shows Thilok Uthit 2 Rd (OSM 'Tilokuthit 2 Road') looking north toward Khao Rang hill, about 190 m north of the office (OSM node 5520221423 'NC'). It is a Jan 2021 KartaView street-level frame that I cropped to 16:9 to remove the car dashboard and windscreen pillar. CC BY-SA 4.0 requires saying it was modified. Plates are privacy-blurred."
+  },
+  {
+   "key": "money:value-plus",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-value-plus.jpg",
+   "url": "https://valueplusexchange.com/assets/img/about-img.jpg",
+   "page": "https://valueplusexchange.com/#/about",
+   "credit": "\u00a9 Value Plus Exchange",
+   "license": "official site",
+   "width": 1195,
+   "height": 807,
+   "note": "Official photo of a Value Plus booth: lit Value+Plus sign, red CURRENCY EXCHANGE counter and a rate screen. Sharp, professional. The photo does not say which branch it is (probably a mall branch). The site's branch API confirms this is the same chain as the Phuket booths (Patong, Laguna, Central Festival Phuket and others)."
+  },
+  {
+   "key": "money:money-shop",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-money-shop.png",
+   "url": "https://static.tildacdn.com/tild6165-3832-4763-a633-356134386331/2024-11-13_13-33-29.png",
+   "page": "https://moneyshopphuket.com/en/",
+   "credit": "\u00a9 Money Shop Phuket",
+   "license": "official site",
+   "width": 1174,
+   "height": 782,
+   "note": "Money Shop's Kata office (64/5 Kata Rd): yellow and black CURRENCY EXCHANGE / MONEY SHOP shopfront with a pole sign. Sharp, professional, no watermark. I matched it to the Kata entry using the layout positions in the official site's office list. Some signage is in Russian. The site also has photos of the Rawai, Nai Harn and Chalong Lotus's offices."
+  },
+  {
+   "key": "money:thai-bank-booths",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-thai-bank-booths.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Thailand_%E2%80%94_Suvarnabhumi_Airport_%28Bureau_de_change_of_Siam_Commercial_Bank%29_%E2%80%94_Mattes_2007-01-31.jpg/1280px-Thailand_%E2%80%94_Suvarnabhumi_Airport_%28Bureau_de_change_of_Siam_Commercial_Bank%29_%E2%80%94_Mattes_2007-01-31.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Thailand_%E2%80%94_Suvarnabhumi_Airport_(Bureau_de_change_of_Siam_Commercial_Bank)_%E2%80%94_Mattes_2007-01-31.jpg",
+   "credit": "Mattes",
+   "license": "Public domain",
+   "width": 1280,
+   "height": 960,
+   "note": "Generic image: a purple Siam Commercial Bank 'Currency Exchange' booth with an electronic rate board and tourists queuing (Suvarnabhumi Airport, Bangkok, 2007). An older compact-camera shot, slightly soft but fine at card size. Phuket alternative: Commons 'File:Bank of Ayudhya Phuket.jpg' (public domain, a Krungsri branch exchange window in Rawai, 2010, no rate board visible)."
+  },
+  {
+   "key": "money:phuket-airport-counters",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/money-phuket-airport-counters.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Phuket-Thailand_Internationaler-Airport-ATM-01.jpg/1280px-Phuket-Thailand_Internationaler-Airport-ATM-01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket-Thailand_Internationaler-Airport-ATM-01.jpg",
+   "credit": "CEphoto, Uwe Aranas",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 720,
+   "note": "A row of six Thai bank ATMs (TMB, SCB, Krungthai, Bangkok Bank, Krungsri, Thanachart) inside Phuket International Airport, April 2017. Sharp, 16:9. This shows ATMs, not the exchange counters: Commons has no photo of the HKT exchange counters (I checked the airport's category tree for 2016-2025 and searched in English and Thai). The official AOT site lists the counters but shows no photos. This is the most money-related terminal shot available."
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+[
+ {
+  "key": "events:courage-bar-phuket-town",
+  "kind": "bar / club venue. NEED the bar itself: interior, exterior or a crowd at a party there. Do NOT use a flyer with dates or line-ups (the current photo is a SUB flyer saying 13 FEB).",
+  "name": "Courage Bar",
+  "where": "16 Bangkok Rd, Phuket Old Town",
+  "gmapsQuery": "Courage Bar, Bangkok Rd, Phuket Town",
+  "website": "https://www.instagram.com/",
+  "candidates": []
+ },
+ {
+  "key": "events:unclave-phangan",
+  "kind": "club venue on Koh Phangan (Groovy Tunes minimal nights). NEED a venue or party photo, not a dated flyer (the current one says 18 SEP).",
+  "name": "Unclave",
+  "where": "Koh Phangan",
+  "gmapsQuery": "Unclave, Koh Phangan",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "places:karon-temple-market",
+  "kind": "evening market in the grounds of Wat Karon (Tue and Fri). The current photo has a burned-in '©WillyThuan' watermark: find one without a watermark.",
+  "name": "Karon Temple Market",
+  "where": "Wat Karon, Karon, Phuket",
+  "gmapsQuery": "Karon Temple Market, Karon, Phuket",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "places:koh-sirey",
+  "kind": "hidden gem: Koh Sirey island next to Phuket Town (sea-gypsy village, hilltop temple with a reclining Buddha). The current photo has a '©WillyThuan' watermark: find one without a watermark.",
+  "name": "Koh Sirey",
+  "where": "Ratsada, Phuket Town",
+  "gmapsQuery": "Koh Sirey, Phuket",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "places:summore-day-cafe",
+  "kind": "cafe with a view in Rawai. The current photo has a '© Phuket 101' watermark: use the cafe's own photo (website, Facebook or Instagram og:image) or a free-licensed one.",
+  "name": "Summore Day Cafe",
+  "where": "Rawai, Phuket",
+  "gmapsQuery": "Summore Day Cafe, Rawai, Phuket",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "hotels:shunli-hotel",
+  "kind": "budget hotel in Phuket Old Town. NEED the hotel itself (facade, lobby or room), not a generic street photo.",
+  "name": "Shunli Hotel",
+  "where": "Phuket Old Town",
+  "gmapsQuery": "Shunli Hotel, Phuket Town",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "money:mamy-exchange",
+  "kind": "money changer shop. NEED the shopfront / sign (or its logo only as a last resort). Website mamyexchange.com; Google listing in Koh Kaew on Thepkrasattri Rd (route 402).",
+  "name": "Mamy Exchange",
+  "where": "Koh Kaew, Phuket",
+  "gmapsQuery": "Mamy Exchange Phuket",
+  "website": "https://mamyexchange.com/",
+  "candidates": []
+ },
+ {
+  "key": "money:lion-currency-exchange",
+  "kind": "money changer booth in Jungceylon mall, Patong. NEED the booth / sign, or the brand logo as a last resort.",
+  "name": "Lion Currency Exchange",
+  "where": "Jungceylon, Patong",
+  "gmapsQuery": "Lion Currency Exchange Jungceylon Patong",
+  "website": "https://www.facebook.com/lionexchangepatong",
+  "candidates": []
+ },
+ {
+  "key": "money:superrich-1965-phuket",
+  "kind": "official SuperRich 1965 (orange brand) partner shop at Suriyadej Circle, Phuket Old Town. NEED the shopfront / sign (the superrich1965.com branch page may have a photo).",
+  "name": "SuperRich 1965 Partner (Phuket Old Town)",
+  "where": "Suriyadej Circle, Phuket Town",
+  "gmapsQuery": "SuperRich Exchange Phuket Suriyadej Circle",
+  "website": "https://www.superrich1965.com/",
+  "candidates": []
+ },
+ {
+  "key": "money:nc-plus",
+  "kind": "small money exchange office NC PLUS on Thilok Uthit 2 Rd, Phuket Town. NEED the office / sign; if nothing exists, a photo of that street is acceptable (say so in the note).",
+  "name": "NC Plus (Thailand)",
+  "where": "Thilok Uthit 2 Rd, Phuket Town",
+  "gmapsQuery": "NC PLUS Thailand, Phuket Town",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "money:value-plus",
+  "kind": "chain of money changer booths (Patong, Laguna, Central Festival). NEED a booth / sign photo or the brand logo as a last resort.",
+  "name": "Value Plus Currency Exchange",
+  "where": "Patong, Phuket",
+  "gmapsQuery": "Value Plus Currency Exchange Patong",
+  "website": "https://valueplusexchange.com/",
+  "candidates": []
+ },
+ {
+  "key": "money:money-shop",
+  "kind": "small chain of money changer offices (Kata, Karon, Rawai, Nai Harn, Chalong). NEED a shopfront / sign photo or the brand logo as a last resort.",
+  "name": "Money Shop Exchange",
+  "where": "Kata, Phuket",
+  "gmapsQuery": "Money Shop Exchange Kata",
+  "website": "https://moneyshopphuket.com/en/",
+  "candidates": []
+ },
+ {
+  "key": "money:thai-bank-booths",
+  "kind": "generic: a Thai bank's currency exchange booth with a rate board (e.g. Kasikornbank green or SCB purple). Wikimedia Commons is the best source.",
+  "name": "Thai bank exchange booths",
+  "where": "Thailand",
+  "gmapsQuery": "bank currency exchange booth",
+  "website": "",
+  "candidates": []
+ },
+ {
+  "key": "money:phuket-airport-counters",
+  "kind": "exchange counters in the international arrivals hall of Phuket airport (HKT), or the terminal interior. Wikimedia Commons is the best source.",
+  "name": "Phuket Airport exchange counters",
+  "where": "Phuket International Airport",
+  "gmapsQuery": "Phuket International Airport",
+  "website": "",
+  "candidates": []
+ }
+]

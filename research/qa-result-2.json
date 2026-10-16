@@ -1,0 +1,312 @@
+{
+ "recheck:code-offline": {
+  "summary": "Re-check of the 21 first-round 'review:code-offline' findings against the current build (sw 51fd676db9, built 18:07 from the 17:21-17:26 sources; nothing changed during the run). 18 are fixed and 3 are only partly fixed, so they count as NOT FIXED. The fixes also introduced 3 new medium and 6 new low problems.\n\nFirst-round high and medium findings:\n- High, redirect to / breaks offline launch: FIXED. With a host sending 308 /index.html to / and the server shut down, /, /index.html and /?utm=x#events all open the app. The cached entry has redirected=false.\n- offline-test.mjs not really offline: FIXED. It now stops the server and runs two host styles; it PASSED.\n- Service worker answering every page with index.html: FIXED. /phuket-guide-offline.html now returns the single-file build, and the KML downloads.\n- Saved tiles not shown offline, opaque storage cost: FIXED. Tiles are cached as CORS responses (18 tiles added about 0.2 MB), and offline the map opens on the saved tiles.\n- Automatic map-style choices saved: FIXED. pg:base stays unset through an offline and online cycle.\n- Links landing on filtered-out cards: FIXED. Filters and search are cleared and the card lands at 152 px.\n- iOS storage / save warnings: NOT FIXED. The hotel form still says 'Hotel added' when the save fails; the rest of the fix is done.\n- Map legend vs pins: FIXED.\n- Stale 'today' on resume: FIXED. The day rolls over when the app comes back.\n- Contrast: FIXED. All four first-round failures now pass.\n- Offline status text: NOT FIXED. Without JavaScript it still says 'Checking…', and the artifact message is still a dead end.\n\nFirst-round low findings:\n- 'Show all days' label: FIXED.\n- Map colours on theme change: FIXED, but road lines were missed (new low issue).\n- Theme flash: FIXED. data-theme is set before the body is created.\n- Silent updates: FIXED. A toast with a Reload button appears, and Reload loads the new version.\n- Accessibility: stars FIXED; day strip NOT FIXED.\n- Converter label: FIXED.\n- Reduced motion: FIXED, except the fit button's pan (new low issue).\n- Precache waste: FIXED. 156 entries, 6.04 MB, no unreferenced images, and every listed file exists.\n- Stale build: FIXED. No placeholders left.\n- Artifact size and blocking Leaflet: FIXED. 1.27 MB, 150 image files, Leaflet deferred. The map starts whether #areas is opened directly or later, and an early 'On map' tap is kept.\n\nNew problems from the fixes:\n1. Offline gaps in saved street tiles never fall back to the vector map.\n2. In the artifact, the 'map could not load' note is missing when Areas is opened after the page has loaded.\n3. One failed precache request leaves 'Checking…' on screen forever.\n\nTool results:\n- offline-test.mjs: PASSED on both host styles.\n- check.mjs: no problems found.\n- shoot.mjs: no console errors, nothing covering the tab bar and no horizontal overflow, on all three builds, light and dark, and at 360 px.\n- Truly offline (server stopped, DNS blocked): 150/150 photos, the map, the manifest, the icons and the KML all load.\n- Hosting in a sub-folder works.\n\nScripts and screenshots are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/.",
+  "fixedCount": 18,
+  "notFixedCount": 3,
+  "issues": [
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:226-232 (tile error fallback), :222 (land layer removed in streets mode), :312-315 (offline start on saved tiles)",
+    "problem": "New since the tile fix. Offline, the map now switches to saved street tiles when more than 10 are cached. But the 'no tiles' fallback only fires if the first 4 tiles fail and none has ever loaded (bad === 4 && ok === 0). Once any saved tile has loaded, zooming or panning to a part not viewed online shows no land, no roads and no mainland, only the area outlines on the sea colour. 'Streets' stays selected and there is no message. Before this fix, the offline vector map covered the whole island.",
+    "evidence": "tiles.mjs: the Chrome profile is kept, then Chrome is relaunched with every host unresolvable and the server stopped. After viewing the map online, 18 tiles are cached as type 'cors'. Offline, the map opens on 'streets' with 6 of 6 tiles drawn. After 3 zoom-ins: 9 tile images, 0 loaded, Streets still pressed, no toast, 0 land paths. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/tiles-offline-zoomed.png",
+    "fix": "While offline, keep the vector land (and roads) under the tiles: put landPane and roadsPane below the tile pane (for example zIndex 150 and 160; tiles are 200) and leave them on in streets mode, so tiles cover them where they exist and fill the gaps elsewhere. Also reset ok/bad on 'movestart'/'zoomstart', so 4 failures in a new view still switch to the offline map with the toast."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:256-266 (initMap waits for window 'load'); /Users/mac/Documents/Phuket/src/styles.css:271 (.js .staticmap hidden)",
+    "problem": "New since the deferred-Leaflet change, artifact build. When Leaflet cannot load from cdnjs, the 'map could not load' note only appears if Areas was opened before the page finished loading. initMap() adds a window 'load' listener, which never fires once the page has already loaded. Most visits start on Home, so the common path leaves an empty sea-coloured box with zoom, fit and locate buttons that do nothing, and no explanation. The locate button is meant to be hidden in the artifact, but that only happens inside initMap. The static SVG map is already in the page but stays hidden by '.js .staticmap'. With a working CDN both paths work: opening #areas directly and opening it later both start the map, and an 'On map' tap made before Leaflet arrives opens the right popup.",
+    "evidence": "artifact.mjs serves the artifact wrapped in a document skeleton over HTTP and allows only same-origin and cdnjs requests. CDN ok + #areas direct: map drawn at 766 ms. CDN ok + Home, then Areas after 4 s: map drawn. CDN delayed 5 s + 'On map' tapped early: popup 'Lighthouse Party (Haad Rin)' opens. CDN blocked + #areas direct: note shown. CDN blocked + Areas opened after load: mapPaths 0, note false. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/art-blocked-later.png",
+    "fix": "In initMap, if document.readyState === 'complete' and L is still undefined, run the failure path at once. Otherwise wait for 'load', or use onload/onerror on the Leaflet script tag. In the failure path, hide .mapbox and un-hide .staticmap (it already has the outlined map with labels), then add the note."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/sw.js:17-27 (all-or-nothing install); /Users/mac/Documents/Phuket/src/app.js:453-459 (status only set when ready resolves)",
+    "problem": "The install is all-or-nothing over 156 requests (6.04 MB). One failed request (a flaky hotel or airport connection, or a file the host didn't serve) makes the whole install fail. The page gets no signal: navigator.serviceWorker.ready never resolves, so the Offline box says 'Checking…' forever. Nothing tells the user that offline saving failed or that they should open the guide again. The current precache list is complete (all 156 files exist in dist/), so a full deploy on a good connection installs fine.",
+    "evidence": "sw.mjs case D (host returns 404 for img/places-big-buddha.webp and phuket-areas.kml): after 4 s the text is still 'Checking…', with no active, installing or waiting worker. A partly filled 'guide-51fd676db9' cache is left behind. retry.mjs: on the next launch with the file restored, the install succeeds and the iPhone message appears. So the only recovery is an unprompted second online visit.",
+    "fix": "In app.js, keep the registration and watch reg.installing. On statechange to 'redundant', or after about 30 s without ready, show 'Could not save for offline use. Open the guide again on good Wi-Fi.' Optionally make the install tolerant: require './', the manifest and the icons, cache the photos one by one with catch, and fill in missing ones on a later activate or launch."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:425",
+    "problem": "First-round storage finding, partly fixed (NOT FIXED). Done: the Safari 7-day message, navigator.storage.persist(), the star warning and 'Copy my hotels as text'. Still wrong: adding a hotel says 'Hotel added' when the save failed. saveOrWarn() shows the warning and toast('Hotel added') replaces it straight away. The hotel appears in the list from memory and is gone on the next launch, together with the booking number the user typed in.",
+    "evidence": "storage.mjs, run with localStorage.setItem throwing (full or blocked) and with localStorage access throwing (cookies blocked). Starring an item shows 'Could not save on this device (private mode or full storage).' Adding a hotel shows 'Hotel added' and lists 1 hotel.",
+    "fix": "Have saveOrWarn return store.set's result and only toast 'Hotel added' when it is true. Otherwise keep a warning, for example 'Shown here, but this device could not save it. Use Copy my hotels as text.'"
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:405 (static 'Checking…'); /Users/mac/Documents/Phuket/src/app.js:465-467; /Users/mac/Documents/Phuket/data/extra.json (no offlineUrl)",
+    "problem": "First-round offline-status finding, partly fixed (NOT FIXED). The single file with JavaScript now says 'This file works offline as it is.' Two parts remain. (a) The static text is still 'Checking…' in all three builds, so the single-file backup opened without JavaScript (iOS Files or Quick Look, the reason it renders as static HTML) shows 'Checking…' forever. (b) The artifact still ends at 'This copy needs internet. Use the offline version of the guide for the trip.' with no link and no hint, because data/extra.json has no offlineUrl.",
+    "evidence": "nojs.mjs (JavaScript off, 11 routes): every view and deep link routes correctly, but #offline-state reads 'Checking…' on all of them. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/nojs-offline-box.png. offmsg.mjs on the artifact: 'This copy needs internet. Use the offline version of the guide for the trip.' and nothing else. extra.json has no offlineUrl key.",
+    "fix": "The build knows the target, so render the final text per build in build.mjs. single: 'This file works offline as it is. Keep it on your phone or laptop.' standalone: 'Open it once with internet to save it for offline use.' artifact: 'This copy needs internet.' app.js then only refines it. Set offlineUrl in data/extra.json as soon as dist/ is hosted (handoff step 4); until then, say in plain words where the offline version is."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:370 (day strip) and :478 (#map)",
+    "problem": "First-round accessibility finding, partly fixed (NOT FIXED for the day strip). The day strip is still <a> links with aria-pressed, so screen readers hear 'link, FRI 8' and never which day is selected. #map is now named but is still a focusable generic element, which many screen readers ignore. Fixed: star buttons now have a fixed label 'Save <name>' and only aria-pressed changes.",
+    "evidence": "a11y.mjs (Chrome accessibility tree): selected day is role link, name 'FRI 8', no pressed state. #map is role generic, name 'Map of Phuket areas', tabindex 0. a11y2.mjs: star is role button, 'Save Lighthouse Party (Haad Rin)', pressed false then true; 122 stars have 122 distinct labels.",
+    "fix": "In app.js, set role='button' on each .day-btn when JavaScript runs, so aria-pressed is announced; the href stays for the no-JS version. Give #map role='region' so its name is read as a landmark."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:201-206 (restyleMap) and :276 (roads style)",
+    "problem": "restyleMap() now repaints land, pins and tile dimming on a theme change, but not the offline map's road lines. After a system or button theme switch the roads keep the old colour, for example bright #d9d1bf beige lines on dark land instead of #3d5658.",
+    "evidence": "ui.mjs d): after the OS switched to dark, land is #1b2f2f (matches CSS), but road stroke is #d9d1bf while CSS --map-road is #3d5658. Same after the theme button. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/roads-after-theme.png",
+    "fix": "In restyleMap add: if (layers.roads) layers.roads.setStyle({ color: cssVar('--map-road') })."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:66 and :90-91",
+    "problem": "New since the today fix. The resume handler re-selects today every time the app becomes visible, even when the date hasn't changed. If the user tapped 'Show all days' and switches to Maps or a chat and back, the agenda collapses to one day and the page jumps under them.",
+    "evidence": "today.mjs (clock faked to 10 Jan 23:30 Bangkok time): on resume the day rolls over correctly ('Day 3 of 11' to 'Day 4 of 11'; ring and selection move to 11 Jan). After 'Show all days' (11 days shown), one more visibilitychange brings it back to 1 day and the button reads 'Show all days' again.",
+    "fix": "In refreshToday, remember the last todayISO and call selectDay only when it changed (or on the first run), and never while #agenda-all is pressed."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:241-253 (declutterLabels); /Users/mac/Documents/Phuket/tools/build.mjs:591 (rank = km2)",
+    "problem": "The label de-clutter works (no overlapping labels at 390 or 360 px), but it ranks labels by area size. At the default zoom it hides Patong, the main nightlife area with Shelter and Illuzion, along with Karon, Kata Noi, Ao Po and Nai Harn, in favour of bigger areas like Kathu and Thalang.",
+    "evidence": "labels.mjs at default zoom: hidden 'Karon, Kata Noi, Ao Po, Patong, Nai Harn'; visible labels have 0 overlaps. Patong appears after one zoom-in. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2/labels-390-default.png",
+    "fix": "Rank by how much the guide uses the area, for example the number of events, places and hotels in it, or an explicit labelRank in data/areas.json with Patong, Kata, Karon, Kamala and Phuket Town first. Keep km2 as the tie-break."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:92 (.status-pill) and :69 with :259 (link inside .callout.alert)",
+    "problem": "Two small teal texts in light mode are just under 4.5:1. The 'Read the essentials' link on the pink 'Before you fly' box is 4.39:1 at 14.5px. The top-bar status pill ('85 days to go') is 4.46:1 at 12px. All four first-round contrast failures now pass.",
+    "evidence": "contrast.mjs over all seven views. Light: a #0a7480 on #f8e1d9 = 4.39; span.status-pill #0a7480 on #d4ecee = 4.46. Dark: the only failures are the brand-coloured sign replicas, which are aria-hidden logos and exempt.",
+    "fix": "Use a slightly darker teal for text on soft fills, for example #086a75 (5.04:1 on the pink box, 5.12:1 on the pill background), or use --ink for links inside .callout.alert."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:323 (map-fit button)",
+    "problem": "Reduced motion is now respected for JS scrolls, area jumps, focusPoint and the map's zoom animations. The 'Show all of Phuket' (fit) button still animates a pan when the zoom doesn't change, because its fitBounds call has no animate option.",
+    "evidence": "motion.mjs with prefers-reduced-motion: reduce. JS scrolls use behavior 'auto', and 'Show on map' runs no zoom animation. Fit after a keyboard pan: 5 different map-pane transforms over about 240 ms (translate3d -80px to -1.39px).",
+    "fix": "map.fitBounds(home, { padding: [8, 8], animate: !reduceMotion })."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:210-226 (durText vs the data-dur filter bucket)",
+    "problem": "durText() now shows the researched hours, but the 'Time needed' filter still uses the label's bucket. Two beaches show '2–4 h' on the card but are listed under 'Up to 3 hours'.",
+    "evidence": "tiles-text.mjs (durText and recurrenceTile copied verbatim from build.mjs and run on data/*.json): tri-trang-beach and layan-beach have label 2-3h and hours {min 2, max 4}, show '2–4 h' and sit in bucket 'short'. No other duration mismatches. Weekday tiles read correctly for all 15 recurring events.",
+    "fix": "Base data-dur on durationHours.max when it is set (more than 3 h goes to 'half'), or cap the shown range at the label's range."
+   }
+  ]
+ },
+ "recheck:content": {
+  "summary": "Content re-check of data/*.json and the built outputs. dist/index.html, the offline single file and artifact/index.html carry the same text.\n\n**First-round high/medium findings in this lens: 12 of 13 are FIXED.**\n- Accuracy #1, Argy card: FIXED (name, line-up, links, presale). Its price line is out of date again; see the issues.\n- Accuracy #2, Shelter in the agenda: FIXED. It now shows on 8, 9, 15 and 16 Jan.\n- Accuracy #3, durations: FIXED (15–30 min, 30 min–1 h).\n- Accuracy #4, placeholder pins: FIXED. No Directions or On map buttons, \"Exact place not public yet\", left out of the KML and map data, and the agenda says \"Nakhon Si Thammarat\" instead of \"Other\".\n- Maps-links #1, Kruvit Raft (high): FIXED. Directions go to Laem Hin Pier, 11 m from a road.\n- Maps-links #2, Value Plus Sansabai (high): FIXED. The coordinate query drops a pin at the booth.\n- Maps-links #3 (Money Shop Karon), #4 (pier Directions; Khai and Koh Hong have none), #5 (Samet Nangshe car park), #7 (Halfmoon Day 1 button), #8 (placeholder pins) and #9 (My hotels uses \", Thailand\"): FIXED.\n- Maps-links #6, Elephant Sanctuary Google Maps button: NOT FIXED. Only the Directions label changed.\n- The first-round lows are fixed too: Waterfall label, rainy season, one area plan, Koh Sirey on the basemap, Banana Beach area, place IDs. The rainy-season fix left a missing space.\n\n**Checked and correct:**\n- **The 7 critic places**, against official pages and Phuket 101:\n  - Bangla Boxing: 1,600 or 2,000 THB, doors 20:00, first bout 21:00, MMA on Wednesday and Saturday, founded 22 Apr 2004.\n  - Blue Elephant: 3,800 THB for the 9:30 and 13:30 classes, 8,300 THB private.\n  - Renew: 465 THB a day, 16+.\n  - Plane spotting: free, 20 THB motorbike ride, \"December to June\", late morning to about 14:00.\n  - Karon, Kamala and Surin beaches: the facts match.\n  - Drive times all agree with OSRM.\n- **Waterfall Festival:** the official API lists only 25 and 29 Oct 2026. The Full Moon Party site gives 22 Jan 2027 with a 20–24 Jan range, so 20 and 24 Jan hold; 13 Jan is correctly marked unconfirmed.\n- **Shelter:** 23:30–04:00 and 500 THB are right, but the club's feed shows it on only about 6 in 10 Fri/Sat nights.\n- **Circoloco:** 9, 16 and 23 Jan, 15:00–03:00 (Baba page).\n- **Google Maps:** I ran 16 searches live, centred on Phuket and on Dubai, including the 10 you asked for: Shelter, Courage, Lighthouse, Natai House, Mamy, SuperRich, Renew, Blue Elephant, plane spotting and Surin. Each one opens the stored place 0–43 m from the pin, except the Elephant Sanctuary (665 m).\n- **Directions targets:** five pier targets (Chalong, Rassada, Ao Po, Thap Lamu, Bang Rong), plus Laem Hin and the Samet Nangshe car park, all make sense on OSM and OSRM.\n- **Mamy and Lion:** the text descriptions match the photos; only the small colour chips are off.\n\n**New errors:**\n- The Marco Carola price is wrong. On Megatix, 1,200 THB is the after-party ticket; the cheapest show ticket on sale is 3,000 THB.\n- Argy's ticket tiers are already published on Megatix.\n- The guide gives two different Koh Phangan windows.\n- Three cards still tell the traveller to sleep in Natai on Circoloco nights.\n\nProbe scripts and photo crops are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa2 (gspot.mjs, piers.mjs, mgx.cjs, money-sheet.png).",
+  "fixedCount": 12,
+  "notFixedCount": 1,
+  "issues": [
+   {
+    "severity": "high",
+    "where": "data/events.json:1295 (marco-carola-cafe-del-mar-2027.priceText) and :255 (cafe-del-mar-phuket.priceText 'Marco Carola tickets from 1,600 THB')",
+    "problem": "The price for a top-pick event in the plan is wrong. 'From 1,200 THB on Megatix (lowest tier)' is the Clubroom after-party-only ticket, not the show, and it is sold out. The two cheaper show tiers are sold out too, so the cheapest show ticket on sale is 3,000 THB. The venue card's 'from 1,600 THB' is out of date. The first-round accuracy check passed this price, so the error slipped through.",
+    "evidence": "https://megatix.in.th/events/marco-carola-cafe-del-mar-phuket-130127, rendered in Chrome on 15 Oct 2026: 'Early Bird [4pm Entry] ฿1,900 Sold Out · 1st Release [6pm Entry] ฿2,500 Sold Out · Final Release [6pm Entry] ฿3,000 · Anytime Entry [1 GA Drink Included] ฿5,000 · Stage Access & After Party ฿10,000 · After Party [11PM Entry] ฿1,200, Don't miss the After Party in the Clubroom, Sold Out'. The Megatix API (/api/v3/events/76126) gives 14:00–22:30, on sale since 5 Oct 18:00. The research used the JSON-LD 'price: 1200', which is the cheapest ticket of any type.",
+    "fix": "Set priceText to: 'Megatix, 15 Oct 2026: Early Bird 1,900 and 1st Release 2,500 THB sold out. Final Release 3,000 THB (entry by 18:00), Anytime Entry 5,000 THB with 1 drink. The Clubroom after-party from 23:00 is a separate 1,200 THB ticket (sold out).' Put the same wording on the Café del Mar venue card, and add a tip that tiers sell out, so buy now."
+   },
+   {
+    "severity": "medium",
+    "where": "data/events.json:1230-1231 (cafe-del-mar-pyramid-2027-01-08 timeText, priceText, tips, links), :255 (venue card 'Argy presale opens 20 Oct 2026; price not published yet'), data/areas.json:131 (Kamala highlight 'presale sign-up opens 20 Oct, 18:00')",
+    "problem": "The Argy card says 'Price not published yet', but Megatix already lists the tiers. The cheap tiers have timed entry (by 16:00 or by 18:00, 500 THB late fee), which matters on the arrival day. The card has no Megatix link, only the Laylo sign-up. 'Until late' hides that the outdoor show ends at 22:30 and the Clubroom after-party needs its own ticket. The rest of the card matches the venue page: Pyramid Stage, Fri 8 Jan, doors 2 PM, 20+, presale 20 Oct 6 PM, Argy only.",
+    "evidence": "https://megatix.in.th/events/argy-cafe-del-mar-phuket-080127 (15 Oct 2026) lists: 'Limited Presale [4pm Entry] ฿900 · 1st Release [6pm Entry] ฿1,700 · Anytime Entry [1 GA Drink Included] ฿2,500 · Stage Access & After Party ฿6,000 · After Party [11PM Entry] ฿800 … ON SALE DATE: 06:00PM, TUE 20TH OCT'. Its terms say: 'Timed Entry… Late arrival may be denied or incur a 500 THB late fee'. The API (/api/v3/events/76811) gives 2027-01-08 14:00 to 22:30, on sale 2026-10-20 18:00. Venue page: https://phuket.cafedelmar.com/events/argy-jan2027. Marco Carola's two cheap tiers sold out within 10 days of going on sale.",
+    "fix": "Set priceText to: 'On sale Tue 20 Oct 2026, 18:00 Thai time on Megatix: Limited Presale 900 THB (entry by 16:00), 1st Release 1,700 THB (entry by 18:00), Anytime Entry 2,500 THB with 1 drink. Clubroom after-party from 23:00: 800 THB.' Set timeText to 'Fri 8 Jan, 14:00–22:30 on the Pyramid Stage; Clubroom after-party from 23:00'. Add the tip 'Each ticket has an entry time; late entry can be refused or cost 500 THB' and a 'Tickets (Megatix)' link. Use the same wording on the venue card and in the Kamala highlight ('sale opens 20 Oct, 18:00 on Megatix')."
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json:3432-3434 (koh-phangan-rave-trip description, feeText, bestTime)",
+    "problem": "The Places card 'Koh Phangan rave trip' gives a different Koh Phangan window from the plan used everywhere else. Its 'Best window: Thu 14 - Sun 17 Jan' clashes with the night plan, the area recommendation and the day tips: they all put Koh Phangan on Sun 10 to Wed 13 Jan, with Shelter (Fri 15) and Circoloco (Sat 16) in Phuket. The same card dates Lost Jungle 'Sat 9 - Tue 12 Jan', but the event card says 'Sat 9 to Mon 11 Jan' and the plan says 'runs until 11 Jan'. Its flight price, 'from about 2,200 THB one way', also differs from Essentials ('about 3,000-5,000 baht one way').",
+    "evidence": "places.json:3434 bestTime. extra.json eventsCallout: 'Sun 10 to Wed 13 Jan (morning): Koh Phangan…'. areasRecommendation: 'Koh Phangan 10 to 13 Jan'. Day tips for 10–13 Jan. The Lost Jungle event card's timeText says 'Sat 9 to Mon 11 Jan'. Sources disagree on the end: phangan.events lists 2027/01/09 12:00 PM to 2027/01/12 6:00 AM (https://phangan.events/events/lost-jungle-parvati-day-night/); the Vibez shop says 48 h from Sat 16:00. essentials.json:226 gives the flight price.",
+    "fix": "Set bestTime to: 'This guide's plan: Sun 10 to Wed 13 Jan (Lost Jungle until 11–12 Jan, Chill Up Mon 11, Lighthouse Tue 12). Going for Halfmoon (Fri 15 and Sat 16) means missing Shelter and the second Circoloco.' In the description, write 'Lost Jungle psytrance (Sat 9 to Mon 11, or early Tue 12 per phangan.events)', and add phangan.events' Tue 12, 06:00 end to the event card. Use one flight price range in both places."
+   },
+   {
+    "severity": "medium",
+    "where": "data/areas.json:1580 (natai.stayIf), data/hotels.json:9 (baba-beach-club-natai.whyStay), data/hotels.json:143 (natai-house.whyStay)",
+    "problem": "Three cards still tell the traveller to sleep in Natai on Circoloco nights, which contradicts the plan and the guide's own availability data. The plan says to base in Kamala with a driver, because Baba has no rooms, Natai House showed none for 9 and 16 Jan, and Aleenta costs 45,000-52,000 THB. Yet the Natai area card says 'sleep at or near Baba Beach Club on party Saturdays'. The Baba card says 'Sleep at Aleenta or Natai House nearby'. The Natai House card calls itself 'A good-value base for Circoloco weekends', while its own price line says 'Sat 9 and Sat 16 Jan: no rooms online'. The Stay list also opens with these three Natai hotels.",
+    "evidence": "extra.json areasRecommendation[1]: 'Sleeping in Natai is hard on those nights: Baba Beach Club has no rooms on sale for 8 to 27 Jan, Natai House showed no rooms online for 9 and 16 Jan, and Aleenta costs about 45,000 to 52,000 THB'. areasIntro: 'the best base is Kamala, with a driver'. Rendered Stay view order: Aleenta, Natai House, Baba.",
+    "fix": "Natai stayIf: 'Rooms here are scarce on Circoloco Saturdays (9 and 16 Jan). This guide suggests Kamala plus a driver; if you find a room, Aleenta is a walk away and Natai House a short ride.' Baba whyStay: '…for this trip it is your party venue. Stay in Kamala and book a driver (Aleenta has rooms at 45,000-52,000 THB on those nights).' Natai House whyStay: 'Good value on Fridays and Sundays; Sat 9 and 16 Jan showed no rooms online.'"
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json:1262 (phuket-elephant-sanctuary gmapsQuery, placeId ChIJe5gBglZIUDARbzpRlCqfeMA); tools/curate.mjs:107",
+    "problem": "First-round maps-links #6 is NOT FIXED. The Google Maps button still opens a listing 665 m from the meeting office. The fix only relabelled Directions to 'Directions to the office', and that button already pointed there. The card still says 'Meet at the sanctuary office in Paklok (this pin)' and does not warn that the two buttons go to places 665 m apart.",
+    "evidence": "Google map search on 15 Oct 2026, centred on Phuket and on Dubai: the query plus place ID returns 'Phuket Elephant Sanctuary' at 8.020699,98.398442 ('100, 9, Pakhlok'), 665 m from the pin. The sanctuary's own map link, https://maps.app.goo.gl/DtNw8YtDawHMaSYi9 (from phuketelephantsanctuary.org/faq/), opens the same place (ftid 0x305048568201987b:0xc0789f2a94513a6f) at !3d8.0257893!4d98.4016433, which is the office. OSM node 5945513052 'Phuket Elephant Sanctuary office' (100 Moo 2) is at 8.02601,98.40153. So Google has moved the listing's pin away from the office.",
+    "fix": "Set gmapsQuery to '8.026009,98.401535', remove the placeId and set placeIdLocked. Or keep the listing and add the tip: 'Google's pin for the sanctuary is about 650 m from the meeting office; use Directions to the office.'"
+   },
+   {
+    "severity": "low",
+    "where": "tools/build.mjs:376 (agenda label 'club night'); data/events.json:27 (shelter-phuket.recurrence)",
+    "problem": "The day agenda lists Shelter on Fri 8, Sat 9, Fri 15 and Sat 16 as 'club night · top pick', with no 'usually' or 'check the line-up'. The club's feed shows whole weekends with no Shelter night, and start times range from 21:00 to 23:30. Only the card's When line hedges.",
+    "evidence": "Illuzion events feed (https://www.illuzionphuket.com/wp-json/tribe/events/v1/events, 15 Oct 2026): Shelter is on 17 of 28 Fri/Sat nights from 17 Jul to 17 Oct 2026. There is no Shelter night on 31 Jul–1 Aug, 7–8 Aug, 28–29 Aug or 2–3 Oct, and only one night on 24–25 Jul, 4–5 Sep and 18–19 Sep. Start times were 21:00 on 11, 19 and 24 Sep, 23:00 on 12 Sep and 10 Oct, and 23:30 otherwise. Entry was 500 THB.",
+    "fix": "In dayAgenda, label venue items 'most weekends, check line-up' instead of 'club night'. Change the recurrence to 'Most Fridays and Saturdays, usually 23:30-04:00. Check the line-up first.'"
+   },
+   {
+    "severity": "low",
+    "where": "tools/build.mjs:188-200 (recurrenceTile); data/events.json waterfall-festival-phangan.recurrence",
+    "problem": "The Waterfall card's date tile reads 'Often Wed', which suggests a regular Wednesday party. The schedule follows the Full Moon Party, not a weekday, and 13 Jan is a guess. The tile says 'Often' only because the recurrence text contains the word 'most'.",
+    "evidence": "The rendered tile reads 'Often Wed / In dates', next to an 'Unconfirmed' pill. The official API (https://api.waterfallpartykohphangan.com/events) lists only 25 and 29 Oct 2026. phangan.events states '2 days before and 2 days after the Full Moon Party + special events'; its only Wednesday is 11 Nov, and its 14 Jan 2026 page calls that night 'Waterfall Festival's third consecutive night'. The Full Moon Party site gives January 22nd 2027 with a 20–24 Jan range.",
+    "fix": "For unconfirmed items, show a tile like 'Maybe / Wed 13' or 'TBA'. Reword the recurrence: '…In Jan 2026 it also ran some extra nights in a row, so 13 Jan is possible but not announced.'"
+   },
+   {
+    "severity": "low",
+    "where": "data/extra.json:5 (eventsCallout.title)",
+    "problem": "The Music page plan is titled 'A plan for your 11 nights'. Fri 8 to Mon 18 Jan is 10 nights (11 days), and the plan's last line is 'Mon 18 Jan: fly home'.",
+    "fix": "Retitle it 'A plan for your 10 nights' or 'Night-by-night plan'."
+   },
+   {
+    "severity": "low",
+    "where": "data/extra.json:32 (dayTips 2027-01-08) and :61 (dayTips 2027-01-18)",
+    "problem": "Two day tips assume a Patong or Old Town base, not the guide's Kamala base. The 8 Jan tip calls Mamy 'on the road from the airport', but for Kamala it is a detour of about 13 km and 16 minutes. The 18 Jan tip gives airport times only 'from Patong or Kata'.",
+    "evidence": "OSRM: airport to Kamala Beach is 25.7 km, 30 min; airport to Mamy (7.964143,98.377564) to Kamala is 38.5 km, 46 min. The Kamala area card gives about 35 min to the airport; the Kamala Beach card says 35-45 min.",
+    "fix": "8 Jan: 'Mamy Exchange in Koh Kaew has the best rate (weekdays until 17:00); it adds about 15-20 minutes on the way to Kamala.' 18 Jan: 'Allow 40-60 minutes from Kamala (50-90 from Patong or Kata).'"
+   },
+   {
+    "severity": "low",
+    "where": "data/places.json:1148 (nai-yang-beach tips)",
+    "problem": "The Nai Yang card says to go plane spotting 'in the late afternoon'. The new plane-spotting card and its source say late morning to about 14:00.",
+    "evidence": "mai-khao-plane-spotting.bestTime: 'Late morning to about 14:00, when more planes land'. https://www.phuket101.net/plane-spotting-in-phuket/: 'There tend to be more arrivals from late morning through to about 2 pm.'",
+    "fix": "'Plane spotting: south end of Mai Khao Beach, best from late morning to about 14:00 (see its card).'"
+   },
+   {
+    "severity": "low",
+    "where": "data/essentials.json:268 (Island hopping > 'Party trips: book early'), written by tools/curate.mjs:163",
+    "problem": "The text reads 'check the last boat back.Koh Phangan's rainy season…' with no space after the full stop. The [^.]* in curate.mjs's regex also eats the leading space. It shows in all three outputs.",
+    "fix": "Start the replacement string with a space (\" Koh Phangan's rainy season…\"), then re-run curate.mjs and build.mjs."
+   },
+   {
+    "severity": "low",
+    "where": "data/exchanges.json:26-31 (Mamy branding), :125-131 (Lion branding); tools/build.mjs:303-306 (signColors)",
+    "problem": "The Mamy and Lion text descriptions match their photos, but the colour chips do not. The Mamy chip shows dark letters on green, because white on #1A9A4B is only 3.64:1, below signColors' 4:1 rule; the real sign has white letters. The Lion chip shows 'LION Exchange' in gold on navy. The real booth has a royal-blue 'LION' over 'Currency Exchange' on a white marble counter in a navy frame, and the lion logo is lemon yellow, not gold #F2C230. Also minor: Jungceylon's directory gives Lion's hours as 09.00-22.00, while the card says 09:00-21:00.",
+    "evidence": "assets/img/money-mamy-exchange.webp: green sign with white 'Mamy Exchange' letters; the right panel is white with green 'CURRENCY EXCHANGE / ОБМЕН ВАЛЮТ / 外币兑换'. The Mamy website green is #16A14A. assets/img/money-lion-currency-exchange.webp, sampled colours: frame #102040, logo #D0D000–#E0E000, 'LION' #2010F0; a white lit 'CURRENCY EXCHANGE' is above. Chips seen in research/qa-shots-2/light-390-money.png. https://www.jungceylon.com/en/directory/lion-currency-exchange-botanica: 'THE BOTANICA ZONE, GF, Room GC4118, 09.00 - 22.00'.",
+    "fix": "Mamy: set primaryColor to '#178C43' (white text at 4.31:1, so the chip keeps white letters), or add an explicit ink colour. Lion: logoText 'LION Currency Exchange', secondaryColor about '#E2DC2A', and howToRecognize 'white marble counter in a navy frame, yellow lion-head logo, blue LION lettering, white lit CURRENCY EXCHANGE sign above; ground floor, Botanica zone (Big C side)'."
+   },
+   {
+    "severity": "low",
+    "where": "assets/img/money-superrich-1965-phuket.webp vs data/exchanges.json superrich-1965-phuket hoursText and day tips (extra.json, 10 and 17 Jan)",
+    "problem": "The SuperRich card photo shows a light box reading 'OPEN DAILY … → 08:00 PM'. The card and the Sunday day tips say the shop is closed on Sundays. The official record supports the text, but a reader may trust the old sign in the photo.",
+    "evidence": "https://www.superrich1965.com/spr/front/branches/105 (JSON): openingHours 'Monday - Saturday 10:00 - 20:00 *Closed on Sundays', phone 093-399-8949.",
+    "fix": "Add to the card: 'The sign in the photo says open daily; the official branch page (Sep 2026) says closed on Sundays.'"
+   },
+   {
+    "severity": "low",
+    "where": "data/areas.json:321 (bang-tao links)",
+    "problem": "The Bang Tao area card still links 'Niky's Speakeasy on Google Maps', but the Music footer says Niky's 'could not be confirmed for 2026'. curate.mjs removed Niky's from the area texts and highlights but not from the links.",
+    "fix": "In curate.mjs's Niky's pass, also drop entries in x.links whose label or URL matches /Niky/."
+   },
+   {
+    "severity": "low",
+    "where": "assets/img/places-renew-sauna-ice-bath.webp (images.json places:renew-sauna-ice-bath)",
+    "problem": "The photo for the new Renew card shows only a wood-panelled ceiling with hanging plants. There is no sauna, ice bath or pool in it, so it does not help anyone recognise the place. It is a 640x360 crop of a nearly square 2560x2477 source.",
+    "fix": "Crop lower in the same image, or use the second official image (renewthailand.com …/IMG_fsg0799.jpg)."
+   },
+   {
+    "severity": "low",
+    "where": "assets/img/money-nc-plus.webp; data/exchanges.json:381 (value-plus howToRecognize, primaryColor)",
+    "problem": "Two other money cards don't match their photos. The NC Plus photo is a KartaView street shot of shuttered shops and a parked car, with no 'NC PLUS' sign visible. The Value Plus card still says 'Red is the main color of its website; we did not check the booth colors' and uses a plain red chip, while its photo shows a navy sign with white 'Value+ Plus' letters, red trim and a red 'CURRENCY EXCHANGE' counter.",
+    "fix": "Value Plus: describe 'navy sign with white Value+ Plus letters and red trim; red CURRENCY EXCHANGE counter', and make the chip navy with red. NC Plus: use a photo where the sign is visible, or drop the photo."
+   }
+  ]
+ },
+ "recheck:phone-ux": {
+  "summary": "Phone UX re-check of the new build: 19 of the 22 first-round high/medium findings in my lens are fixed and 3 are not. I also found one new high regression on the map.\n\nHow I checked:\n- Read all 18 screenshots in research/qa-shots-2 as full-resolution slices. The Info phrases sit below the 5200 px screenshot cap, so I captured them myself.\n- Made contact sheets of the 21 replaced or new photos, and opened the raw originals for the doubtful ones.\n- Drove dist/ over HTTP with puppeteer-core at 390x844, 360x780 and 320x640, light and dark, using real touch taps on tabs, map layer chips, \"Show all days\", single days, filters, the star and the Saved list, \"On map\" on all 127 cards, map popup buttons, area labels, the theme button, search and the converter.\n- Rendered the artifact inside a document wrapper with external tiles blocked, and the single file with JavaScript on and off.\n- The project tools all pass: check.mjs found no problems, offline-test.mjs passed on both host styles, and shoot.mjs at 360 and 320 reported no console errors and a clear tab bar. No horizontal overflow at any width; all 156 images load.\n\nFirst-round phone-ux findings:\n1. Map covering the tab bar and header (high): FIXED. Every tab icon hits its own tab at scroll 0, 150, 300 and 600, the header stays clear, at all sizes and in both themes.\n2. Wrong weekdays on weekly tiles (high): FIXED. Chill Up Mon Thu, Sabaii Fri, OXA Often Fri, Eden Sat, Courage Often Fri Sat, Unclave Often Fri.\n3. Legend colors (medium): FIXED. Chip dots match the pin fills, and the dark pins are distinct.\n4. Layer chips under the tab bar (medium): FIXED. Hotels and Money now start off-screen (issue 6).\n5. Areas off/on burying pins (medium): FIXED. 45 of 96 pins are on top before and after; none end up under area shapes.\n6. Southern label collisions (medium): FIXED, but the new declutter hides Patong (issue 3).\n7. Phrase table (medium): FIXED. Phrases are stacked cards now.\n8. Dated flyers for Courage Bar and Unclave (medium): FIXED. Both use venue photos.\n9. Made-up teal shop signs (medium): FIXED. Plain outlined badges instead.\n10. Spiritgust shown as \"Other\" (medium): FIXED. It reads \"Nakhon Si Thammarat\".\n11. Narrow-phone top bar and trip pass (medium): FIXED, except the day dots (issue 7).\n12. Two durations per place (medium): FIXED. None of the 68 cards disagree.\n\nFirst-round requirements findings:\n13. Offline version not delivered (high): NOT FIXED (issue 2).\n14. Agenda missing club nights (medium): FIXED. Shelter is first on 8, 9, 15 and 16 Jan, and Phuket items come before the islands.\n15. Trip plans contradicting each other (medium): FIXED. There is one Kamala plan; \"Full notes\" and the price claim are gone.\n16. Pyramid \"secret headliner\" (medium): FIXED. It now says Argy.\n17. Niky's still in Areas (medium): FIXED, except one link (issue 11).\n18. No exchange photos (medium): FIXED. All 8 have one, though 2 are stand-ins (issue 9).\n19. Contradictory place durations (medium): FIXED.\n20. Cards taller than a phone screen (medium): NOT FIXED (issue 5).\n21. Artifact areas on a bare coastline (medium): FIXED. Roads and labels are drawn now.\n22. Sleep-in-Natai advice and Baba listed first (medium): NOT FIXED in the Natai area card (issue 4). Baba is now third.\n\nThe first-round low findings are mostly fixed: watermarks, Shunli, Black Rock, contrast, music-card credits, most tap sizes, sample rates, the bank-booth map button, plane spotting, the single-file offline message, and Directions on approximate pins.\n\nNew regression (high): the first \"On map\" works, but later ones often leave the popup under the map's own controls. On Shelter, a real tap on \"Directions\" opened openstreetmap.org/copyright, and \"Google Maps\" and \"Details\" did nothing.\n\nScreenshots, test scripts and photo sheets are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/. The puppeteer scripts and screenshots are in its pp folder, the photo sheets in sheets, and the screenshot slices in slices.",
+  "fixedCount": 19,
+  "notFixedCount": 3,
+  "issues": [
+   {
+    "severity": "high",
+    "where": "Areas map, 'On map' flow: /Users/mac/Documents/Phuket/src/app.js:338-348 (focusPoint), :292 (bindPopup has no autoPan padding or maxWidth); /Users/mac/Documents/Phuket/src/styles.css:288 (.leaflet-popup-content min-width 200px), :273 / :278 / :280 / :294 (layer chips, zoom buttons, style switch, attribution). Same code in all three outputs.",
+    "problem": "NEW REGRESSION. The first 'On map' tap works. After that, the pin often ends up near the top or bottom edge of the map instead of the centre. focusPoint() calls setView with animate:true, which forces a 250 ms animated pan even across the island. It then opens the popup on a fixed 150 ms timer, and the popup's auto-pan cuts the pan short, so the map stops off target.\n\nThe popup then sits under the map's own overlays:\n- Near the top, the title is under the Streets/Satellite/Offline switch and the right side is under the zoom buttons.\n- Near the bottom, the buttons are under the layer chips and the OSM attribution.\n\nTaps go to whatever is on top. On Shelter, the guide's top techno pick, 'Google Maps' and 'Details' do nothing and 'Directions' opens openstreetmap.org/copyright. At 320 px the popup is 331 px wide, wider than the screen, and 'Details' sits under the zoom buttons.",
+    "evidence": "Sweep of all 127 'On map' buttons at 390x844, each tapped for real from its own list after the previous one (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/t-popups2.mjs):\n- 31 popups have the title at least 50% hidden by the style switch, and 20 more partly.\n- 23 popups have a button whose centre is covered (layer chips or attribution).\n- At 360x780: 58 titles hidden and 24 with covered buttons. At 320x640: 83 and 60.\n\nTwo-step flows (t-flow2.mjs): the second popup was obstructed in 5 of 5.\n- Circoloco then Shelter: Shelter's popup sits at y 547-721 in a map that ends at 746. The 'Google Maps' centre hits DIV.layerbar; 'Directions' and 'Details' hit the attribution.\n- A real touchscreen tap on Shelter's 'Directions' opened https://www.openstreetmap.org/copyright (t-misc.mjs).\n\nLeaflet trace (t-why.mjs): setView to 7.8935 at t=4719 ms, moveend at 7.9397 (the pan stopped short), auto-pan to 7.9133. The Shelter pin ends at y=478 in a 490 px map.\n\nScreenshots:\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/flow2-390-ev-shelter-phuket.png\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/flow2-390-ev-circoloco-thailand-2027.png\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/onmap-320-ev-shelter-phuket.png",
+    "fix": "In focusPoint, open the popup on map.once('moveend', ...) instead of setTimeout(150). Use animate:false (or flyTo) when the target is off screen.\n\nBind every popup with autoPanPaddingTopLeft L.point(10, 64) and autoPanPaddingBottomRight L.point(56, 84), so it stays clear of the style switch, the zoom column, the chips and the attribution.\n\nCap the width with maxWidth: Math.min(300, map width - 80), and drop the 200px min-width below 360 px."
+   },
+   {
+    "severity": "high",
+    "where": "artifact/index.html Home > Offline use (/Users/mac/Documents/Phuket/src/app.js:465-467); /Users/mac/Documents/Phuket/data/extra.json has no offlineUrl; dist/ is not hosted",
+    "problem": "First-round requirements high: NOT FIXED. The claude.ai artifact still says 'This copy needs internet. Use the offline version of the guide for the trip.' with no link, no URL and no download. data/extra.json has no offlineUrl, so the link branch never renders, and dist/ is not deployed anywhere. HANDOFF lists hosting as still open: it needs the user's choice of host and a login.",
+    "evidence": "Wrapped artifact render with external hosts blocked (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/t-artifact.mjs): #offline-state has exactly that text, there is no link element after it, and there is no KML link. clientData offlineUrl is ''.",
+    "fix": "Host dist/, or at least publish dist/phuket-guide-offline.html as a file next to the artifact. Then set offlineUrl in extra.json and rebuild, so the artifact links to it together with the Add to Home Screen steps."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas map default view: /Users/mac/Documents/Phuket/src/app.js:241-253 (declutterLabels keeps the higher-rank label), /Users/mac/Documents/Phuket/tools/build.mjs:591 (rank = area km2), /Users/mac/Documents/Phuket/src/app.js:316-317 (fitBounds padding [8,8]), :319 (labels hidden below zoom 9.75), /Users/mac/Documents/Phuket/src/styles.css:280 (style switch)",
+    "problem": "Regression from the label-collision fix: labels are now ranked by area size, so big inland or rural areas win.\n- At 390 and 360 px, 'Patong' (the party town, home of Shelter and Illuzion) is dropped in favour of 'Kathu', and 'Karon' in favour of 'Chalong'. The map shows Kathu but no Patong.\n- The 'Natai' label (the Circoloco area) sits under the Streets/Satellite/Offline switch. A tap where it would be hits 'Satellite'.\n- fitBounds ignores the overlays, so pins load under the layer chips, the attribution and the switch.\n- At 320x640 the fitted zoom is 9.50, so every area label is hidden on load.",
+    "evidence": "Label checks:\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/t-labels.mjs at 390x844 and 360x780: 'Patong(23.5) hidden by Kathu(38.3)' and 'Karon(10.7) hidden by Chalong(26.1)'. At 414 px Patong shows.\n- t-map.mjs, labels covered by controls: Natai at 390; Natai, 'Rawai, Ya Nui' and Cape Panwa at 360. At 320 all 20 labels are hidden (class z-low).\n\nPins under controls on load (t-misc.mjs):\n- 390: 5 under the chips, 1 under the zoom buttons.\n- 360: 11 under the chips, 2 under the switch, 1 under the attribution.\n- 320: 11 under the chips, 4 under the attribution, 3 under the switch, 1 under the zoom buttons.\n\nVisible in research/qa-shots-2/light-390-areas.png and dark-390-areas.png (no Patong or Natai label), and in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/map-320x640-light.png.",
+    "fix": "Rank labels with a priority list (Patong, Kata, Karon, Kamala, Bang Tao, Natai and Phuket Town first) instead of km2.\n\nFit the home bounds with paddingTopLeft [10, 60] and paddingBottomRight [10, 70].\n\nAt 320 px, either lower the label-hiding zoom threshold or let the fit snap to at least zoom 9.75."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/data/areas.json:1580 (natai stayIf); /Users/mac/Documents/Phuket/tools/build.mjs:273-275 (ZONES order puts Natai first in Stay)",
+    "problem": "First-round requirements item ('sleep in Natai' advice versus availability): NOT FIXED in this card.\n\nThe Best-bases box now says sleeping in Natai on 9 and 16 Jan is hard: Baba has no rooms, Natai House none online, and Aleenta costs 45,000-52,000 THB. The Natai area card still says 'Stay here if Circoloco is your main event: sleep at or near Baba Beach Club on party Saturdays', while Baba's own card carries a 'No rooms 8-27 Jan' pill.\n\n'Hotels picked for you' also still opens with the three Natai hotels (Aleenta, Natai House, Baba) before any Kamala hotel, although Kamala is the recommended base.",
+    "evidence": "dist/index.html #ar-natai text quoted above; extra.json areasRecommendation[1]; hotel order visible in research/qa-shots-2/dark-390-stay.png and light-390-stay.png.",
+    "fix": "Rewrite the Natai stayIf to match the plan, e.g. 'Come for Circoloco by car; rooms on 9 and 16 Jan are sold out or very expensive.' List the Kamala/west zone first in Stay, or at least the zone the plan recommends."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs areaCard (:241-260), brandCard (:310-341), eventCard (:153-183)",
+    "problem": "First-round requirements finding (every card taller than a phone screen; works against 'simple'): NOT FIXED.\n\nPlace cards got shorter. Area cards, money cards and most event cards are still taller than one screen, and money cards grew with the new photos.",
+    "evidence": "390x844 (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/t-audit.mjs):\n- Average card heights: events 869 px (22 of 31 taller than 844 px), places 787 (14 of 68), areas 1034 (20 of 20), money 1477 with a maximum of 2000 (8 of 8).\n- Page heights: places 54,993 px (65 screens, was 72), events 28,919 (34), areas 22,412 (27).\n- At 320x640 every card in every list is taller than the screen; the Places page is 97 screens long.",
+    "fix": "Keep the photo, a 1-2 line description, the key fact and the Google Maps button visible on each card. Move the rest behind one 'More' toggle: the area score bars and fact rows, and the money pros/cons, sample rates and branch list."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:273 (.layerbar), /Users/mac/Documents/Phuket/tools/build.mjs:481-488 (chip order)",
+    "problem": "Left over from first-round item 4. The chips are no longer under the tab bar, but Hotels and Money, both off by default, start beyond the right edge. At 390 px only 7 px of 'Hotels' shows, and nothing suggests that the row scrolls. The sideways swipe itself works and does not pan the map.",
+    "evidence": "t-map.mjs: the Hotels chip is at x=383 and Money at x=469 on a 390 px screen; both are fully off-screen at 360 and 320. A swipe moves scrollLeft from 0 to 169, after which both chips toggle pins (97 to 120 to 139).",
+    "fix": "Put Hotels and Money before Hidden gems, wrap the chips onto two rows, or add a fade or arrow at the right edge."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:226-231 (.days 11 columns, .day-btn .dots)",
+    "problem": "The part of the first-round narrow-phone finding that is still open. With 3 music dots plus a market dot, the dot row is 26 px wide, wider than a day cell (24 px at 360, 20 px at 320). Neighbouring days' dots merge into one line and spill outside the selected-day pill. Each day is still only 26, 24 or 20 px wide to tap.",
+    "evidence": "t-interact.mjs: dot row wider than its cell on 8, 9, 13, 15 and 16 Jan (26 > 24 px at 360, 26 > 20 px at 320). Crops:\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/crop-360-days2.png\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/crop-320-days.png",
+    "fix": "Under about 400 px, show at most 2 dots plus the market dot, or a small count. Alternatively, make the strip scroll sideways with cells of at least 40 px."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/images.mjs:24 (sharp attention crop), /Users/mac/Documents/Phuket/data/image-picks.json:1863 (places:renew-sauna-ice-bath)",
+    "problem": "The new Renew Sauna & Ice Bath photo is cropped to the timber ceiling and beams, with no pools or water. The pick note says a centred 16:9 crop keeps both pools and the signs, but the pick has no 'position', so images.mjs falls back to sharp's attention crop and keeps the top band.",
+    "evidence": "The raw photo shows the plunge pools in its lower half (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/raw-renew.png). The card shows only the ceiling (/private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/v-390-dark-pl-renew-sauna-ice-bath.png and sheets/sheet-4.png in the same folder).",
+    "fix": "Add \"position\": \"centre\" (or \"bottom\") to that pick, then rerun images.mjs and build.mjs."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/data/images.json entries money:nc-plus, money:phuket-airport-counters, places:koh-sirey",
+    "problem": "Three of the replaced photos don't show the subject, and nothing on the image says so.\n- NC Plus: a street of shuttered shops with no NC PLUS sign; its own pick note says 'STREET PHOTO, not the office'. That undercuts the point of exchange photos, which is to recognise the shop.\n- Airport exchange counters: shows a row of ATMs.\n- Koh Sirey ('Hilltop Temple and Sea Gypsy Village'): shows macaques on a littered mangrove mudflat, with no temple or village.",
+    "evidence": "Contact sheets 1-3 in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/sheets/. Card screenshots in that folder's pp/ subfolder: v-320-light-mx-nc-plus.png, v-390-dark-mx-phuket-airport-counters.png and v-390-dark-pl-koh-sirey.png. The pick notes in data/image-picks.json describe the stand-ins.",
+    "fix": "Label stand-ins on the image ('Street near the office', 'Airport ATMs', 'Monkey viewpoint'), or drop the NC Plus photo and keep just the plain name badge and the 'Look for' line."
+   },
+   {
+    "severity": "low",
+    "where": "Map popups: Leaflet's `.leaflet-container a { color: #0078A8 }` overrides `.btn` (/Users/mac/Documents/Phuket/src/styles.css:174-178, :292)",
+    "problem": "In dark mode, the popup's secondary buttons ('Directions', 'Details', and 'Google Maps' in area popups) use Leaflet's default link blue on the dark surface, which fails contrast for 13 px text.",
+    "evidence": "t-misc.mjs: dark rgb(0,120,168) on rgb(16,34,42) = 3.31:1; light = 4.94:1.",
+    "fix": "Add `.leaflet-popup-content .btn:not(.primary) { color: var(--ink); }`."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/data/areas.json:321 (bang-tao links); /Users/mac/Documents/Phuket/tools/curate.mjs:129-135",
+    "problem": "Left over from first-round item 17. Bang Tao's Highlights still links 'Niky's Speakeasy on Google Maps', the venue the Music footer says could not be confirmed for 2026. curate.mjs strips Niky's from text fields and highlights but not from links. Layan's tips also mention it, but tips are not rendered.",
+    "evidence": "There are 2 'Niky' hits in dist/index.html: the footer note and this link.",
+    "fix": "Also filter a.links (and the tips) in the dropNikys step."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:220 (data-dur comes from durationLabel) vs :210-218 (durText from durationHours)",
+    "problem": "Tri Trang Beach and Layan Beach show '2–4 h' on the photo badge and in the Time row, but the 'Up to 3 hours' filter includes them.",
+    "evidence": "Built HTML: pl-tri-trang-beach and pl-layan-beach have data-dur=\"short\" with the badge reading 2–4 h.",
+    "fix": "Derive the filter bucket from durationHours.max when it is set."
+   },
+   {
+    "severity": "low",
+    "where": "Areas map tiles (Leaflet tile layer, /Users/mac/Documents/Phuket/src/styles.css map section)",
+    "problem": "Faint hairline seams between map tiles: a light line across the whole map at 390 px, and a grid of lines at 320 px (fractional zoom 9.5).",
+    "evidence": "research/qa-shots-2/light-390-areas.png and dark-390-areas.png show a 1-device-pixel line across the map at CSS y≈475; a sampled pixel is rgb(11,15,15) between rows of rgb(30,46,63) in dark. The grid shows in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/r2/pp/map-320x640-light.png.",
+    "fix": "Use the usual Leaflet workaround `.leaflet-tile-container img { width: 256.5px !important; height: 256.5px !important; }`, and keep the fitted zoom whole."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:91 (.brand-text small ellipsis), :403 (brand text hidden only below 370 px)",
+    "problem": "At 390 px, the most common iPhone width, the header subtitle is cut to '8–18 Jan 2…' on every screen.",
+    "evidence": "Top bar of every 390 screenshot in research/qa-shots-2, e.g. light-390-home.png.",
+    "fix": "Show '8–18 Jan' without the year, or hide the subtitle below about 400 px, as already happens below 370 px."
+   }
+  ]
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "results": [
+  {
+   "key": "events:nikys-speakeasy-bang-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-nikys-speakeasy-bang-tao.jpg",
+   "url": "https://cdn.phuket.net/bucket/directory/media/2023/05/202305290635_PzZb_004.jpeg",
+   "page": "https://www.phuket.net/directory/profile/niky-s-speakeasy/",
+   "credit": "\u00a9 Niky's Speakeasy / Muse Photographer (musephotographer.com), via Phuket.Net",
+   "license": "Phuket.Net venue listing photo, all rights reserved",
+   "width": 750,
+   "height": 500,
+   "note": "Real venue photo from Niky's Phuket.Net directory listing. The listing has the same address (3/20 Bangtao Soi 2) and phone (095 853 6986) as the club. It shows the glass-roofed terrace with the moon lamp, starry-light ceiling and fairy-lit trees, with a DJ playing and guests at tables. Professional shot by Muse Photographer (per Exif), May 2023, from the 'Speakeasy Lounge & Wine' era. It's the same glass building seen in the club's official 2024 promo video. 3:2 at 750 px, the true original size (the CDN only upscales); a 16:9 crop from the center keeps the DJ and moon lamp. Rejected: nikys-speakeasy.com is still dead and Wayback has no captures. The Facebook og:image is logo-only. Frames from the official YouTube channel (@NikysPhuket) have a rotate-phone icon burned into every frame or are vertical Shorts. No Commons or Openverse photos exist."
+  },
+  {
+   "key": "events:black-box-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-black-box-samui.jpg",
+   "url": "https://i.ytimg.com/vi/Ujtp_W82HnE/maxres3.jpg",
+   "page": "https://www.youtube.com/watch?v=Ujtp_W82HnE",
+   "credit": "\u00a9 Blackbox Samui (official YouTube channel @BlackboxSamui)",
+   "license": "official site (venue's YouTube channel)",
+   "width": 1280,
+   "height": 720,
+   "note": "Real party photo inside Black Box, from the venue's own YouTube channel: a still of the Dec 19, 2025 night (Gera Dzhio b2b David Chong). It shows the DJ at the decks with candles and red club lights, with dancers on both sides. 16:9 at 1280x720 with no overlays. The small screens showing the DJ names are part of the room. It's a 360-camera frame, so the bottom strip (the floor) is warped red. Rejected: RA and phangan.events have only portrait text flyers. Thai2Night and Instagram og:images are the logo, and Facebook needs a login. HACKED promoter video frames have a big text overlay or are face close-ups, and the Radio Samui stream frames have heavy overlays. Commons only has 2013-2015 Panoramio street shots from before the venue opened."
+  }
+ ]
+}

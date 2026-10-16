@@ -1,0 +1,76 @@
+{
+ "results": [
+  {
+   "key": "events:bambu-sunday-session-haad-yuan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-bambu-sunday-session-haad-yuan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2023/06/cropped-329545246_1643639562734252_4922360942713046504_n.jpeg",
+   "page": "https://phangan.events/event-location/bambu-huts-haad-yuan-ko-phangan/",
+   "credit": "\u00a9 Bambu Huts",
+   "license": "venue photo via phangan.events",
+   "width": 1439,
+   "height": 756,
+   "note": "The sea-view deck of Bambu Huts (Bambu Jungle Lounge), where the Sunday Session is held, above Haad Yuan: guests at low wooden tables under red umbrellas, with granite rocks and the bay behind. This is candidate 1, the venue's header photo on phangan.events (it is a wide crop of a 1440x1080 Facebook original). Rejected: candidate 2 (portrait, only 729 px wide, shows the beach rather than the venue) and candidate 3 (a season poster covered in text). Also searched: the entrix.vip event page (posters and a logo only), all 28 phangan.events Bambu event images (all text posters), and Commons and Openverse (nothing for Bambu Huts)."
+  },
+  {
+   "key": "events:hollystone-saturday-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-hollystone-saturday-phangan.jpg",
+   "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1391555694299022",
+   "page": "https://www.facebook.com/HollystonePhangan/photos/a.1005381922916403/1391555694299022/",
+   "credit": "\u00a9 Hollystone Phangan (official Facebook page)",
+   "license": "official site (venue's Facebook)",
+   "width": 1586,
+   "height": 892,
+   "note": "A Saturday-night crowd dancing with arms raised under string lights inside Hollystone. Hollystone Phangan posted it on its own Facebook page. I cropped the 1586x1055 original to 16:9 (rows 40-932) to cut off a 'HOLLYSTONE' logo badge at the bottom. It is a little soft at the edges but fine at card size. Both candidates were rejected: one is a logo, the other a text flyer. No venue photos were found on the official site (only square record-label covers), RA (no venue photo, 21 flyers), phangan.events (24 event images, all flyers), Megatix, Beatportal, SoundCloud or YouTube (all flyers, logos or title cards). Backup if wanted: a sharper photo of the DJ booth under its thatched roof, https://www.welove-kohphangan.com/wp-content/uploads/2020/01/327310897_830640868036202_6058009428823177000_n.jpg (1440x959). It comes from a third-party listing and probably originated on Hollystone's Facebook, but I could not confirm that."
+  },
+  {
+   "key": "events:utopia-events-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-utopia-events-phangan.jpg",
+   "url": "https://utopia-events.com/wp-content/uploads/2026/08/hero-hd-poster.jpg",
+   "page": "https://utopia-events.com/",
+   "credit": "\u00a9 Utopia Events",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "An aerial night shot of the Utopia jungle rave: the arched-truss stage, green lasers and smoke over a packed crowd, with the rock wall and jungle behind. It is the still frame of the hero video on the official homepage, already 16:9. The stage matches the daytime venue photo. Candidate 1 (a daytime venue shot from phangan.events, 1280x589) also passes but is softer and less striking. Candidate 2 is a flyer covered in text."
+  },
+  {
+   "key": "places:nai-thon-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-nai-thon-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg/1280px-%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%99_-_panoramio.jpg",
+   "credit": "::::=UT=:::: (Panoramio)",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Nai Thon Beach by day: wide golden sand, a row of umbrellas and loungers, turquoise sea and the forested north headland under a blue sky. The photo is geotagged on the beach. This is candidate 1 (the 1280x1707 portrait thumbnail), cropped to 16:9 (rows 800-1520) so the beach fills the card instead of empty sky. The crop is a modification under CC BY-SA. It is a different photo from the area card (the Flickr tnocapital shot taken from the casuarina shade with kayaks). Candidate 2 (pink dusk with rocks) is a good backup. Rejected: File:Naithon-beach-wooden-bridge.jpg, which carries repeated freepik stock watermarks. I also looked at Flickr CC photos through Openverse: one has a photographer's signature watermark and the rest are weaker. A Commons geosearch found no other beach photos."
+  },
+  {
+   "key": "places:natural-restaurant-airport",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-natural-restaurant-airport.jpg",
+   "url": "https://naturalphuket.com/images/be7ca0e47_105059_0_0.jpg",
+   "page": "https://naturalphuket.com/",
+   "credit": "\u00a9 Natural Restaurant (\u0e04\u0e23\u0e31\u0e27\u0e18\u0e23\u0e23\u0e21\u0e0a\u0e32\u0e15\u0e34)",
+   "license": "official site",
+   "width": 1024,
+   "height": 683,
+   "note": "Inside the airport branch: a rock waterfall wall with the green 'NATURAL Restaurant' sign, boat-shaped wooden booths around a pond, and plants everywhere. This is candidate 1, the site's og:image. naturalphuket.com is the airport branch's own site ('Natural Restaurant Airport', Sakhu, 5 minutes from the airport, 'tropical waterfall setting'). I compared all 30 photos on the site; the largest size is 1024 px and this is the clearest view of the place. Candidate 2 is a portrait close-up of food."
+  },
+  {
+   "key": "places:sabai-massage-airport",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-sabai-massage-airport.jpg",
+   "url": "https://sabaimassage-phuket.com/",
+   "page": "https://sabaimassage-phuket.com/",
+   "credit": "\u00a9 Sabai Massage & Spa Phuket",
+   "license": "official site",
+   "width": 1349,
+   "height": 900,
+   "note": "The shop front, with the 'Sabai Phuket MASSAGE - Phuket Airport' sign and the number 18/18, which matches the branch address (18/18 Moo 1, Sakhu). This is the og:image of the official site, which describes itself as 'Sabai Massage & Spa Phuket Airport Branch'. The site embeds all its images inside the page as base64 data, so the url field is the page; there is no separate file URL. There were no candidates. Backup: the reception photo on the same page (gold reception desk and rose-petal foot baths, 1499x1000, alt text 'Sabai Massage and Spa Phuket Airport reception')."
+  }
+ ]
+}

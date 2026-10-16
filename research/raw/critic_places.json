@@ -1,0 +1,550 @@
+{
+ "items": [
+  {
+   "id": "karon-beach",
+   "name": "Karon Beach",
+   "nameThai": "หาดกะรน",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "karon",
+   "lat": 7.8439,
+   "lng": 98.2936,
+   "coordSource": "google-maps-place (cid 16458406708627662111) + osm-beach-way-134394729 midpoint (17 m); Wikipedia point is 1.9 km north, not used",
+   "coordConfidence": "high",
+   "gmapsQuery": "Karon Beach, Karon, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Morning for calm water and space. Late afternoon for a long walk and sunset (about 18:25).",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "In Karon you walk to the sand. From Patong about 15 min over the hill road, from Kamala about 30-40 min, by car, scooter or Grab. Kata is next door to the south.",
+   "description": "A wide 3 km beach of soft, pale sand between Patong and Kata. Most hotels are across the beach road, so the sand never feels crowded, even in high season. From December to April the sea is usually calm for swimming. The dry sand squeaks under your feet. Good for long walks at sunset.",
+   "tips": [
+    "Always check the flags. Rip currents are mainly a May-October problem, but they can still happen.",
+    "The north end is the quietest part. The south end, near Kata, has TANN Beach Club with a fire show every night.",
+    "Karon Temple Market runs Tuesday and Friday, 16:00-22:00, about 10 minutes on foot from the middle of the beach.",
+    "Jet skis and parasailing work off the sand in high season. Swim away from them."
+   ],
+   "goodFor": [
+    "long beach walk",
+    "swimming",
+    "sunset"
+   ],
+   "links": [
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Karon_Beach"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Karon_beach_7.jpg/1280px-Karon_beach_7.jpg",
+     "credit": "HutheMeow",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Karon_beach_7.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Karon_Beach_Sunset_-_panoramio.jpg/1280px-Karon_Beach_Sunset_-_panoramio.jpg",
+     "credit": "Mikhail Deynekin",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Karon_Beach_Sunset_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Karon_Beach%2CPhuket_%2821%29.jpg/1280px-Karon_Beach%2CPhuket_%2821%29.jpg",
+     "credit": "กสิณธร ราชโอรส",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Karon_Beach,Phuket_(21).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/karon-beach/",
+    "https://en.wikipedia.org/wiki/Karon_Beach",
+    "https://www.openstreetmap.org/way/134394729",
+    "https://maps.google.com/?cid=16458406708627662111",
+    "https://maps.google.com/?cid=9391704622293734844"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket 101 Karon page (updated 5 Oct 2026): 3 km of white sand that never feels crowded, only two hotels on the sand (the rest across the road), swimming season December-May, serious rip currents May-October, jet skis and parasailing in high season, TANN Beach Club with a nightly fire show at the south end. Google: Karon Beach 4.6 (9,315 reviews), 'singing sand' review topic; TANN Beach Club active (11:00-23:00). Karon Temple Market days from the existing item. Pin = Google beach pin, 17 m from the midpoint of OSM beach way 134394729. Sunset 18:24-18:29 for 8-18 Jan 2027 (computed)."
+  },
+  {
+   "id": "kamala-beach",
+   "name": "Kamala Beach",
+   "nameThai": "หาดกมลา",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "kamala",
+   "lat": 7.9569,
+   "lng": 98.2831,
+   "coordSource": "google-maps-place (cid 10013608853475450584) + wikipedia/wikidata Q10542974 (40 m) + inside osm-beach-relation-6892478",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kamala Beach, Kamala, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Morning swim at the north or central part. Sunset (about 18:25) at a bar on the sand.",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free.",
+   "gettingThere": "In Kamala you walk to the sand. From Patong about 15 min over the hill road, from the airport about 35 min, by car or Grab.",
+   "description": "About 2 km of soft, pale sand with shade trees, in front of a quiet Muslim fishing village. It is the base suggested in this guide. In the high season the sea is shallow, calm and clear, one of the easiest swims on the island. Small Thai restaurants and bamboo bars sit right on the sand, good for sunset.",
+   "tips": [
+    "Swim at the north or central part. At the south end, streams bring brown water and fishing boats park.",
+    "For sunset, sit at one of the small bamboo bars in the middle of the beach, or at Pine Beach Bar (8:00-23:00) on the sand below the InterContinental at the north end.",
+    "Smile Bar on the beach (13:00-22:00) is a classic Kamala meal: grilled chicken, sticky rice and som tam.",
+    "Café del Mar is at the north end of the beach. See Events for its January shows.",
+    "Rip currents are a June-November problem. In January the sea is usually calm, but check the flags."
+   ],
+   "goodFor": [
+    "easy swim",
+    "beach restaurants",
+    "sunset drinks"
+   ],
+   "links": [
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Kamala_Beach"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg/1280px-Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg",
+     "credit": "Tuderna",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kamala_beach_(%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2)_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_%2827386088737%29.jpg/1280px-Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_%2827386088737%29.jpg",
+     "credit": "Ryan Kartzke",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Long_Tail_Boats_Tied_up_for_Low_Tide_-_Drone_(27386088737).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kammala%2C_Kathu_District%2C_Phuket%2C_Thailand_-_panoramio_%2814%29.jpg/1280px-Kammala%2C_Kathu_District%2C_Phuket%2C_Thailand_-_panoramio_%2814%29.jpg",
+     "credit": "mohigan",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kammala,_Kathu_District,_Phuket,_Thailand_-_panoramio_(14).jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kamala-beach/",
+    "https://en.wikipedia.org/wiki/Kamala_Beach",
+    "https://www.openstreetmap.org/relation/6892478",
+    "https://maps.google.com/?cid=10013608853475450584",
+    "https://maps.google.com/?cid=17026084107277307400",
+    "https://maps.google.com/?cid=371333296233410458"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket 101 Kamala page (updated 5 Oct 2026): long, wide beach of soft pale sand with casuarina and coconut trees, shallow and clear in high season, north and central parts nicest (brown streams and fishing boats at the south end), small bamboo bars in the middle for sunset cocktails, Pine Beach Bar at the north end below the InterContinental, Smile Bar for grilled chicken, rough sea and rips June-November. Google: Kamala Beach 4.4 (3,939 reviews); Smile Bar 4.8 (11,584), 13:00-22:00; Pine Beach Bar 4.7, 8:00-23:00. '2 km' and 'easiest swims' match the Kamala area card. Pin = Google beach pin, 40 m from the Wikipedia point, on the OSM sand polygon (relation 6892478). There was no place item in Kamala, the base suggested in the guide."
+  },
+  {
+   "id": "surin-beach",
+   "name": "Surin Beach",
+   "nameThai": "หาดสุรินทร์",
+   "tier": "must-see",
+   "category": "beach",
+   "area": "surin",
+   "lat": 7.9755,
+   "lng": 98.2785,
+   "coordSource": "google-maps-place (cid 11607404977767269443) + osm-beach-relation-14010442 centroid (30 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Surin Beach, Choeng Thale, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 2,
+    "max": 4
+   },
+   "bestTime": "Morning, for the clearest water and shade under the trees. Or late afternoon for sunset (about 18:25).",
+   "openText": "Always open.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. No sunbeds or umbrellas for rent (removed in May 2025).",
+   "gettingThere": "About 5-10 min north of Kamala by car, scooter or Grab. About 20 min from Patong.",
+   "description": "An 800 m bay of soft, pale sand with casuarina trees for shade, 5-10 minutes north of Kamala. In May 2025 all food stalls, sunbeds and beach massages were removed, so it looks natural again. From December to April the water is often very clear and calm: some of the best swimming on the island.",
+   "tips": [
+    "Bring water, snacks and a towel. There are no sunbeds or vendors on the sand now.",
+    "Eat at Tukta Food & Drink, on the rocks at the south end (10:30-21:00). The stairs to the upper floors are hidden, but the view is worth it.",
+    "From the south end, walk 15-20 min over the rocks, or take the 100 THB boat, to Laem Singh Beach.",
+    "In the low season (May-October) the sea can be rough. In January it is usually calm."
+   ],
+   "goodFor": [
+    "clear-water swim",
+    "quiet beach",
+    "sunset"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Surin_Beach.JPG/1280px-Surin_Beach.JPG",
+     "credit": "Jpatokal",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Surin_Beach.JPG"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sunset%40Surin_Beach%2C_Phuket_-_panoramio.jpg/1280px-Sunset%40Surin_Beach%2C_Phuket_-_panoramio.jpg",
+     "credit": "::::=UT=::::",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Sunset@Surin_Beach,_Phuket_-_panoramio.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/surin-beach/",
+    "https://www.openstreetmap.org/relation/14010442",
+    "https://maps.google.com/?cid=11607404977767269443",
+    "https://maps.google.com/?cid=7136054388643810530"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket 101 Surin page (updated 16 Sep 2026): 800 m of soft pale sand, casuarina and coconut shade, all food vendors, chairs, umbrellas and beach massages removed since May 2025 (second clear-out after 2016), Tukta on the rocks still open with a hidden staircase to the upper floors, excellent swimming December-April, rough sea in low season. Google: Surin Beach 4.5 (3,162 reviews); Tukta Food & Drink active, 10:30-21:00. Laem Singh walk and 100 THB boat match the existing Laem Singh item (Phuket 101, Aug 2026). Pin = Google beach pin, 30 m from the OSM relation centroid; two Commons geotags within 90 m. Both Commons photos are older (2008-2016), from before the 2025 clear-out."
+  },
+  {
+   "id": "mai-khao-plane-spotting",
+   "name": "Plane spotting at Mai Khao Beach",
+   "nameThai": "จุดชมวิวเครื่องบิน หาดไม้ขาว",
+   "tier": "must-see",
+   "category": "activity",
+   "area": "mai-khao",
+   "lat": 8.1119,
+   "lng": 98.302,
+   "coordSource": "google-maps-place 'Mai Khao Beach - Airport viewpoint' (cid 16722485722951104661) + osm-node-7139218389 'Phuket airport viewpoint' (21 m); 141 m west of the runway 09 threshold (OSM node 11460274152)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mai Khao Beach - Airport viewpoint, Thalang, Phuket",
+   "durationLabel": "1-2h",
+   "durationHours": {
+    "min": 1,
+    "max": 2
+   },
+   "bestTime": "Late morning to about 14:00: more landings and the bluest sea. Low tide gives a wider beach for photos. December to June most planes land over the sea.",
+   "openText": "Open beach. Planes land all day.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Free. Motorbike ride from the car park to the runway end: 20 THB. A national park fee applies only if you walk in from the Nai Yang side.",
+   "gettingThere": "Drive north past the airport and follow the signs with a plane picture to the car park by the beach. Walk south on the sand to the end of the runway, or take a 20 THB motorbike ride. About 15 min from the terminal (the road goes around the runway), 40-50 min from Kamala, about 60 min from Patong.",
+   "description": "At the south end of Mai Khao Beach, planes pass very low over your head just before they land at Phuket Airport. In the high season the wind comes from the east, so most planes come in over the sea and the sand. It is loud, a little crazy and free. Drink and food stalls wait at the car park and the runway end.",
+   "tips": [
+    "Open the FlightRadar24 app to see when the next plane lands.",
+    "Watch from the side. Standing in the landing path is not allowed, and jet blast from planes waiting to take off throws sand hard.",
+    "If the wind is from the west, planes land from the other side and only take-offs pass over the beach. The Phuket 101 plane-spotting page shows the runway in use.",
+    "Do not fly a drone. The beach is next to the runway, in the airport no-fly zone.",
+    "Bring a cap and water. There is no shade on the sand.",
+    "Good last stop on Mon 18 Jan: the terminal is about 15 minutes away by car."
+   ],
+   "goodFor": [
+    "plane spotting",
+    "photos",
+    "last stop before a flight"
+   ],
+   "links": [],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/B-LPV_Phuket.jpg/1280px-B-LPV_Phuket.jpg",
+     "credit": "The Cosmonaut",
+     "license": "CC BY-SA 2.5 ca",
+     "source": "https://commons.wikimedia.org/wiki/File:B-LPV_Phuket.jpg (landing, geotagged 150 m from the spot)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Arrival_to_airport_Phuket_11_feb%272013_-_panoramio.jpg/1280px-Arrival_to_airport_Phuket_11_feb%272013_-_panoramio.jpg",
+     "credit": "shapurma",
+     "license": "CC BY 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Arrival_to_airport_Phuket_11_feb%272013_-_panoramio.jpg (geotagged 90 m from the spot)"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/B-LPV_Phuket1.jpg/1280px-B-LPV_Phuket1.jpg",
+     "credit": "The Cosmonaut",
+     "license": "CC BY-SA 2.5 ca",
+     "source": "https://commons.wikimedia.org/wiki/File:B-LPV_Phuket1.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/plane-spotting-in-phuket/",
+    "https://www.phuket101.net/mai-khao-beach/",
+    "https://www.openstreetmap.org/node/7139218389",
+    "https://maps.google.com/?cid=16722485722951104661"
+   ],
+   "verification": "Checked 15 Oct 2026. Phuket 101 plane-spotting page (updated 6 Aug 2026): spot on the sand at the runway end, planes land into an east wind in high season so they come over the sea and the beach, best months December-June, more arrivals from late morning to about 14:00, low tide gives a wider beach, watching is free, 20 THB motorbike from the signposted car park, shops and vendors at both ends, standing in the landing path is not allowed, jet blast warning. Google: 'Mai Khao Beach - Airport viewpoint' 4.6 (1,856 reviews). Drone rule: Thai CAAT bans drone flights near airports. Note: an item with this id was removed earlier as a 'duplicate of the must-see copy', but no such copy is in the current list; only the Nai Yang item mentions plane spotting in one sentence and one tip."
+  },
+  {
+   "id": "bangla-boxing-stadium",
+   "name": "Bangla Boxing Stadium (Muay Thai fight night)",
+   "nameThai": "สนามมวยบางลา",
+   "tier": "must-see",
+   "category": "activity",
+   "area": "patong",
+   "lat": 7.8915,
+   "lng": 98.3012,
+   "coordSource": "official site schema.org geo (7.89156, 98.30119) + google-maps-place (cid 3364025033711815035) + osm-way-473870666, all within 7 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bangla Boxing Stadium, Patong, Phuket",
+   "durationLabel": "evening",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "Arrive by about 20:45 to get your T-shirt and seat before the first bout at 21:00. The strongest fights are at the end of the card.",
+   "openText": "Every night. Doors 20:00, first bout 21:00, ends about midnight.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Stadium seat 1,600 THB, Ringside 2,000 THB, the same online or at the gate (official site, Oct 2026). A free T-shirt is included. Drinks are extra.",
+   "gettingThere": "155/16 Phang Muang Sai Kor Road, Patong, behind Jungceylon mall and opposite Banzaan Fresh Market. About 10 min on foot from Bangla Road. From Kamala about 15-25 min by car or Grab.",
+   "description": "Patong's Muay Thai stadium, open since 2004, with fights every night. A card has about 8 bouts, from teenagers up to the main fights, with live traditional music and the Wai Kru dance before each bout. An English commentator explains the action. It is for tourists and not cheap, but a fun first look at Thai boxing.",
+   "tips": [
+    "Book online or pay at the gate: the price is the same. Ringside sells out first in high season.",
+    "Stadium seats are raised, so you see the whole ring. At Ringside you look up through the ropes.",
+    "The first bouts are young teenagers. The best fighters come at the end.",
+    "Wednesday and Saturday cards also have MMA bouts.",
+    "Shelter at Illuzion is about 10 minutes away on foot, so you can go on after the last fight."
+   ],
+   "goodFor": [
+    "Thai culture",
+    "Muay Thai",
+    "night out"
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://banglaboxingstadium.com/"
+    },
+    {
+     "label": "Tickets and fight dates (official)",
+     "url": "https://banglaboxingstadium.com/product/bangla-boxing-stadium-tickets/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg/1280px-Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg",
+     "credit": "Karelj",
+     "license": "CC BY 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bangla_Boxing_Stadium_Patong_Thajsko_2018_2.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Bangla_Boxing_Stadium_-_panoramio.jpg/1280px-Bangla_Boxing_Stadium_-_panoramio.jpg",
+     "credit": "Jacek Lesniowski",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bangla_Boxing_Stadium_-_panoramio.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Boxer_and_trainer.jpeg/1280px-Boxer_and_trainer.jpeg",
+     "credit": "USchick",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Boxer_and_trainer.jpeg (boxer before a fight at Bangla Boxing Stadium, 2013)"
+    }
+   ],
+   "sources": [
+    "https://banglaboxingstadium.com/product/bangla-boxing-stadium-tickets/",
+    "https://banglaboxingstadium.com/about/",
+    "https://banglaboxingstadium.com/blog/muay-thai-cost/",
+    "https://www.phuket101.net/bangla-boxing-stadium/",
+    "https://www.openstreetmap.org/way/473870666",
+    "https://maps.google.com/?cid=3364025033711815035"
+   ],
+   "verification": "Checked 15 Oct 2026. Official ticket page: Muay Thai every night, doors 20:00, first bout 21:00, 8 bouts to about midnight, MMA on Wednesday and Saturday, Stadium 1,600 THB and Ringside 2,000 THB with a free T-shirt, same price online or at the gate; the date picker lists every night of 8-18 Jan 2027. About page: open since 22 April 2004, moved from Bangla Road to Phang Muang Sai Kor Road, open-air arena for about 900, behind Jungceylon and opposite Banzaan Fresh Market. Phuket 101 (updated 12 Sep 2026): same prices and times, fighters from about 12 years old in the first bouts, 'popular but expensive', the only Patong stadium open on Sundays. Google 4.1 (641 reviews). Illuzion is 465 m away in a straight line (events data)."
+  },
+  {
+   "id": "blue-elephant-cooking-school",
+   "name": "Blue Elephant Cooking School (Phuket Old Town)",
+   "tier": "hidden-gem",
+   "category": "activity",
+   "area": "phuket-town",
+   "lat": 7.8856,
+   "lng": 98.3848,
+   "coordSource": "google-maps-place (cid 17905886336366556401) + official booking system location (7.88603, 98.38474; 48 m) + osm-node-4728587890 (57 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Blue Elephant Phuket Cooking School & Restaurant, Krabi Road, Phuket",
+   "durationLabel": "half-day",
+   "durationHours": {
+    "min": 3.5,
+    "max": 4.5
+   },
+   "bestTime": "The morning class, because it includes the market visit. Book ahead online.",
+   "openText": "Classes every day: a morning class with a market visit and an afternoon class with an extra Thai dessert. Booking sites list starts at about 9:30 and 13:30. Restaurant: lunch 11:30-14:30, dinner 17:30-22:00 (last orders).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Group class 3,800 THB per person. Private teacher, half day: 8,300 THB (official booking system, Oct 2026).",
+   "gettingThere": "96 Krabi Road, Phuket Old Town. From Patong about 30 min, from Kamala about 40-45 min, by car or Grab.",
+   "description": "A Thai cooking class in a restored governor's mansion, more than 100 years old, in Phuket Old Town. You cook 4-5 dishes in half a day, then eat them in the restaurant. The morning class starts with a visit to a local market. The afternoon class adds a Thai dessert. The dishes change every day.",
+   "tips": [
+    "Ask about the day's menu when you book: each weekday has different dishes.",
+    "Classes are taught in English, Thai, French, Dutch or Chinese.",
+    "You get an apron, the recipes, a certificate and a bag of Blue Elephant products.",
+    "Cheaper, more casual option near the beaches: Phuket Thai Cooking Class by VJ in Karon, 2,000-2,300 THB, with free transport from Kata, Karon and Patong (Phuket 101, Sep 2026).",
+    "Thalang Road and the Old Town shophouses are about 500 m away, an easy walk after class."
+   ],
+   "goodFor": [
+    "Thai food",
+    "culture",
+    "rainy day"
+   ],
+   "links": [
+    {
+     "label": "Cooking school (official)",
+     "url": "https://blueelephant.com/cooking-school/cooking-school-phuket/"
+    },
+    {
+     "label": "Restaurant (official)",
+     "url": "https://blueelephant.com/restaurant/phuket-restaurant/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Blue_Elephant%2C_Phuket%2C_Thailand_-_01.jpg/1280px-Blue_Elephant%2C_Phuket%2C_Thailand_-_01.jpg",
+     "credit": "Sharon Hahn Darlin",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Blue_Elephant,_Phuket,_Thailand_-_01.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg/1280px-Blue_Elephant%2C_Phuket%2C_Thailand_-_02.jpg",
+     "credit": "Sharon Hahn Darlin",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Blue_Elephant,_Phuket,_Thailand_-_02.jpg"
+    },
+    {
+     "url": "https://blueelephant.com/wp-content/uploads/2025/01/Blue-Elephant-Thumbnail.webp",
+     "credit": "Blue Elephant (official site)",
+     "license": "Official site image (og:image)",
+     "source": "https://blueelephant.com/cooking-school/cooking-school-phuket/"
+    }
+   ],
+   "sources": [
+    "https://blueelephant.com/cooking-school/cooking-school-phuket/",
+    "https://blueelephant.com/restaurant/phuket-restaurant/",
+    "https://blueelephant.com/newsletter/blue-elephant-phuket-michelin-guide-thailand-2025/",
+    "https://www.phuket101.net/phuket-best-thai-cooking-classes/",
+    "https://www.openstreetmap.org/node/4728587890",
+    "https://maps.google.com/?cid=17905886336366556401"
+   ],
+   "verification": "Checked 15 Oct 2026. Official cooking-school page (updated Feb 2026): 4-5 recipes in half a day, menu for each weekday Monday-Sunday, market visit only in the morning session, Thai dessert in the afternoon session, apron, recipes, certificate and product bag, classes in 5 languages, students eat their dishes in the restaurant. Official booking system (read 15 Oct 2026): Phuket group class, morning or afternoon, 3,800 THB (3 h 45 / 3 h 30); private teacher half day 8,300 THB. The 9:30 and 13:30 start times come from booking sites (Expedia, Cookly), not from the official page. Restaurant page: restored Phra Pitak Chinpracha governor's house; lunch 11:30-14:30 and dinner 17:30-22:00 (last orders). Blue Elephant says it kept its place in the MICHELIN Guide Thailand 2025. Phuket 101 (28 Sep 2026) lists it with an older 3,296 THB price, and VJ's Karon class at 2,000-2,300 THB. Google 4.7 (3,343 reviews)."
+  },
+  {
+   "id": "renew-sauna-ice-bath",
+   "name": "Renew Sauna & Ice Bath (Bang Tao)",
+   "tier": "hidden-gem",
+   "category": "wellness",
+   "area": "bang-tao",
+   "lat": 7.9926,
+   "lng": 98.3082,
+   "coordSource": "google-maps-place (cid 13762581260670293142); same pin in a 2025 Google link on Phuket Insider; not in OSM",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Renew Sauna & Ice Bath, Choeng Thale, Phuket",
+   "durationLabel": "2-3h",
+   "durationHours": {
+    "min": 2,
+    "max": 3
+   },
+   "bestTime": "A slow afternoon on a recovery day. It is open until 23:00, so it also works after dinner.",
+   "openText": "Daily 10:00-23:00 (Google). Ages 16 and over only.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "feeText": "Day ticket 465 THB (official price list, Oct 2026). Food and drinks are extra.",
+   "gettingThere": "On Bandon-Cherngtalay Road near Boat Avenue, Bang Tao. From Kamala about 10-15 min, from Patong about 30-35 min, by car, scooter or Grab.",
+   "description": "A modern sauna and ice-bath club near Boat Avenue in Bang Tao, about 15 minutes from Kamala. It has saunas, steam rooms, hot and cold tubs and an outdoor pool, plus a cafe with healthy food. Hot-cold rounds are a good way to recover the day after a party. Only for guests aged 16 and over.",
+   "tips": [
+    "Do 3-4 rounds: sauna or steam, then the cold tub, then rest. Drink a lot of water.",
+    "Do not go with alcohol still in your body. Heat and ice water are hard on the heart.",
+    "Bigger option: KEDR Spa & Sauna in Thalang, with a Russian-style banya, salt-water barrels and a rain room. Daily 9:00-24:00, ages 14+, price not published online.",
+    "For a Thai massage near Kamala: Oasis Spa Turquoise Cove, daily 10:00-24:00 (Wednesday until 15:00).",
+    "Questions: Instagram @renew.sauna."
+   ],
+   "goodFor": [
+    "recovery day",
+    "sauna",
+    "ice bath"
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://renewthailand.com/"
+    },
+    {
+     "label": "Prices (official)",
+     "url": "https://renewthailand.com/pricing/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://renewthailand.com/wp-content/uploads/2026/03/IMG_0802-1-scaled.jpg",
+     "credit": "Renew Sauna & Ice Bath (official site)",
+     "license": "Official site image",
+     "source": "https://renewthailand.com/"
+    },
+    {
+     "url": "https://renewthailand.com/wp-content/uploads/2026/03/IMG_fsg0799.jpg",
+     "credit": "Renew Sauna & Ice Bath (official site)",
+     "license": "Official site image",
+     "source": "https://renewthailand.com/"
+    },
+    {
+     "url": "https://phuket-insider.com/wp-content/uploads/2025/05/in-kkzu0efb5nzy3xlqd5mjdrssumysj.jpg",
+     "credit": "Phuket Insider",
+     "license": "Guide photo (personal use)",
+     "source": "https://phuket-insider.com/en/places/renew-sauna-ice-bath/ (og:image)"
+    }
+   ],
+   "sources": [
+    "https://renewthailand.com/",
+    "https://renewthailand.com/pricing/",
+    "https://renewthailand.com/about-us/",
+    "https://phuket-insider.com/en/places/renew-sauna-ice-bath/",
+    "https://maps.google.com/?cid=13762581260670293142",
+    "https://phuket-insider.com/en/places/kedr-spa-sauna/",
+    "https://getyourphuket.com/en/guide/wellness_spa/",
+    "https://maps.google.com/?cid=11922178054519152498",
+    "https://maps.google.com/?cid=14499447831625814562",
+    "https://www.phuket101.net/phuket-spas-massages/"
+   ],
+   "verification": "Checked 15 Oct 2026. Official site (updated Mar 2026): near Boat Avenue on Bandon-Cherngtalay Rd, saunas, steam rooms, hot and cold tubs (cold plunge), outdoor pool, cafe and bar, ages 16+ only; pricing page (updated 11 Mar 2026): 1 day 465 THB, 1 month 3,500 THB. Phuket Insider (updated 3 Feb 2026): single entry 445 THB with towel, new and very clean, big car park, Go Fresh cafe. Google: 4.9 (381 reviews), daily 10:00-23:00. KEDR: Google 4.7 (1,196 reviews), 9:00-24:00, 'kids 14+ only'; facilities from Get Your Phuket and Phuket Insider (Feb 2026). Oasis Spa Kamala: Google 4.9 (2,302), 10:00-24:00, Wednesday to 15:00; Phuket 101 spa guide (Sep 2026) also says Kamala runs to midnight. The wellness category had no items before."
+  }
+ ],
+ "notes": "I checked the list on 15 Oct 2026 and added 7 places, not 10. The other candidates I looked at were weaker, duplicates, impractical or unconfirmed. What the 7 fill:\n- Karon, Kamala and Surin beaches: big classic beaches with no place card. Kamala is the base the guide suggests, and it had no place items.\n- Plane spotting at Mai Khao: an earlier pass removed it as a 'duplicate of the must-see copy', but no such copy is in the current list. Only the Nai Yang item mentions it, in one sentence and one tip, so I restored it with fresh checks. The Nai Yang item gives late afternoon as the best time for landings. Phuket 101 (6 Aug 2026) says there are more arrivals from late morning to about 14:00.\n- Bangla Boxing Stadium: the classic Muay Thai night. The official ticket calendar lists every night of 8-18 Jan 2027.\n- Blue Elephant cooking class: in a historic Old Town mansion. The prices come from the official booking system. The start times come only from booking sites.\n- Renew Sauna & Ice Bath: the first item in the wellness category, for recovery days. Its coordinates come from Google only, so coordConfidence is medium. The two Renew site images were not viewed, so check them in the image step.\n\nConsidered and left out:\n- Bang Tao Beach: the area card and the Layan item cover it.\n- Krabi inland trip (Emerald Pool about 400 THB, Hot Spring Waterfall about 200 THB, Tiger Cave Temple): every tour I found starts in Krabi or Ao Nang, so it only works with a night in Krabi.\n- Ao Sane: the sources conflict. Phuket 101 says it is closed for building work, but Thai Holiday Guide (Jun 2026) describes it with no closure.\n- Paradise Beach: 200 THB entry and commercial full-moon bucket parties.\n- Carnival Magic, Phuket FantaSea, Simon Cabaret: tourist shows, already in the area cards.\n- Monkey Hill: dropped in an earlier pass. Thalang National Museum is already in the Thalang area card.\n- Phuket Indy Night Market (Wed-Fri 16:00-22:30): too close in style to Chillva.\n- Green Heart Garden (hilltop restaurant above Kata): Google has no opening hours for it.\n- Koh Bon: a minor Rawai longtail trip, already in the Rawai area card.\n- KEDR Spa & Sauna, DOPA and Oasis Spa: added as tips in the Renew item instead of separate items."
+}

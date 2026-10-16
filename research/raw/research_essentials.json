@@ -1,0 +1,844 @@
+{
+ "asOf": "2026-10-15",
+ "sections": [
+  {
+   "id": "entry",
+   "title": "Entry and visa",
+   "items": [
+    {
+     "title": "TDAC arrival card: required",
+     "critical": true,
+     "text": "Every foreign visitor must fill in the free Thailand Digital Arrival Card online before landing. It opens 3 days before arrival, counting the arrival day: for 8 Jan, do it on 6, 7 or 8 Jan. Have your flight number and hotel address ready. Save the confirmation on your phone.",
+     "links": [
+      {
+       "label": "Official TDAC website",
+       "url": "https://tdac.immigration.go.th"
+      },
+      {
+       "label": "Royal Thai Embassy: TDAC rules",
+       "url": "https://abuja.thaiembassy.org/en/content/thailand-digital-arrival-card-tdac"
+      }
+     ]
+    },
+    {
+     "title": "Fake TDAC websites",
+     "critical": true,
+     "text": "Use only tdac.immigration.go.th or the official THIM app (optional). Fake sites look official, charge up to about 90 USD and steal passport data. In March 2026 Immigration said about 10% of arrivals had used a fake site. The real TDAC is always free. Report fakes to the Cyber Police on 1441.",
+     "links": [
+      {
+       "label": "Tourism Ministry warning (Oct 2025)",
+       "url": "https://www.mots.go.th/mots_en/news/3764"
+      },
+      {
+       "label": "TAT: official THIM app",
+       "url": "https://www.tatnews.org/2026/06/thailand-immigration-management-application-introduced-to-streamline-foreign-traveller-registration/"
+      }
+     ]
+    },
+    {
+     "title": "Visa-free stay is now 30 days",
+     "text": "Since 15 Sep 2026 the visa-free stay is 30 days (not 60) and for tourism only. It covers 60 countries, including all EU states, the UK, US, Israel, Georgia and Ukraine. Russia and Kazakhstan also get 30 days under bilateral deals. Your 8-18 Jan trip fits. Check your passport on the Thai e-Visa site.",
+     "links": [
+      {
+       "label": "TAT: new visa exemption rules",
+       "url": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/"
+      },
+      {
+       "label": "Thai e-Visa (official)",
+       "url": "https://www.thaievisa.go.th"
+      }
+     ]
+    },
+    {
+     "title": "Passport, ticket and money",
+     "text": "Your passport must be valid at least 6 months after arrival and have a free page. Officers may ask for a ticket out of Thailand within 30 days, your hotel booking and proof of money (10,000-20,000 baht per person; sources differ). Checks are not common, but keep the documents on your phone.",
+     "links": [
+      {
+       "label": "UK travel advice: entry rules",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements"
+      },
+      {
+       "label": "Royal Thai Embassy London: visa exemption",
+       "url": "https://london.thaiembassy.org/en/page/exemp-visa"
+      }
+     ]
+    },
+    {
+     "title": "No ETA needed",
+     "text": "The planned Electronic Travel Authorisation (ETA) never started. Thailand replaced the plan with the TDAC. If your passport is visa-exempt, the TDAC is the only online form you need before the trip.",
+     "links": [
+      {
+       "label": "ETA replaced by TDAC (Fragomen, Jul 2025)",
+       "url": "https://www.fragomen.com/insights/thailand-electronic-travel-authorization-requirement-for-visa-exempt-nationals-forthcoming.html"
+      }
+     ]
+    },
+    {
+     "title": "Tourist entry fee: not yet",
+     "text": "A 450-baht entry fee for foreign visitors is planned but not in force (Oct 2026). It still needs Cabinet approval and publication in the Royal Gazette, and collection would start months later. It will probably not apply to your trip, but check the news in early January.",
+     "links": [
+      {
+       "label": "News: Khaosod English, 9 Oct 2026",
+       "url": "https://www.khaosodenglish.com/politics/2026/10/09/thailand-moves-ahead-with-450-baht-tourist-entry-fee-eyes-film-incentives/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "getting-around",
+   "title": "Getting around",
+   "items": [
+    {
+     "title": "Grab and Bolt",
+     "text": "Both apps work in Phuket and show the price first. Typical car fares: airport to Patong 600-950 baht, Patong to Kata 250-500, Patong to Old Town 300-550. Bolt is often a bit cheaper, so compare. Prices go up at night, in rain and at busy times. If pickup is hard, walk to the main road.",
+     "links": [
+      {
+       "label": "Grab Thailand",
+       "url": "https://www.grab.com/th/en/"
+      },
+      {
+       "label": "Bolt in Phuket",
+       "url": "https://bolt.eu/en/cities/phuket/"
+      }
+     ]
+    },
+    {
+     "title": "From the airport",
+     "text": "Grab pickup is near Exit 8 (international) or Exit 1 (domestic). Airport limousine taxis have fixed prices on a board, about 800 baht to Patong; metered taxis add a 100-baht airport fee. Cheapest: Smart Bus (100 baht) to the west-coast beaches, or the Airport Bus (100 baht) to Phuket Town.",
+     "links": [
+      {
+       "label": "Phuket airport transfers guide (2026)",
+       "url": "https://www.phuket101.net/phuket-airport-transfers/"
+      }
+     ]
+    },
+    {
+     "title": "Taxis and tuk-tuks: agree the price first",
+     "text": "Street taxis and tuk-tuks almost never use the meter. They quote fixed prices, often 30-50% more than the apps (Patong to Kata about 500-600 baht). Agree the price before you get in and show the app price to bargain. Carry small notes. If a driver cheats you, call the Tourist Police on 1155.",
+     "links": [
+      {
+       "label": "Phuket taxi prices 2026 (guide)",
+       "url": "https://www.evephuket.com/blog/phuket-taxi-prices-2026/"
+      }
+     ]
+    },
+    {
+     "title": "Scooter rental: licence and insurance",
+     "text": "To ride legally you need a motorcycle licence from home plus an International Driving Permit that covers motorcycles. Without them, insurance usually pays nothing after a crash. Police checkpoints are common, for example around Patong and Chalong Circle. Do not leave your passport as a deposit.",
+     "links": [
+      {
+       "label": "TAT: driving rules for tourists",
+       "url": "https://www.tatnews.org/2024/11/driving-in-thailand-essential-guidelines-for-tourists-and-foreigners/"
+      },
+      {
+       "label": "UK travel advice: road safety",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Helmets and road safety",
+     "text": "Rider and passenger must wear a helmet; the fine is up to 2,000 baht. Thailand drives on the left. Phuket roads are steep, curvy and busy. Do not ride after drinking. After a party, Grab or a taxi is the safer choice.",
+     "links": [
+      {
+       "label": "TAT: driving rules for tourists",
+       "url": "https://www.tatnews.org/2024/11/driving-in-thailand-essential-guidelines-for-tourists-and-foreigners/"
+      }
+     ]
+    },
+    {
+     "title": "Phuket Smart Bus",
+     "text": "Route 1: Airport - Patong - Karon - Kata - Rawai, flat 100 baht. Route 2: Bus Terminal 2 - Phuket Town - Patong, 50 baht. The Dragon Line in Old Town is free. Pay by contactless card, Thai QR or cash. Last bus from the airport 23:30; last bus from Rawai to the airport 19:30.",
+     "links": [
+      {
+       "label": "Smart Bus timetable and live tracking",
+       "url": "https://www.phuketsmartbus.com/timetable"
+      },
+      {
+       "label": "Smart Bus fares and payment",
+       "url": "https://www.phuketsmartbus.com/payment"
+      },
+      {
+       "label": "Smart Bus last bus times",
+       "url": "https://www.phuketsmartbus.com/blog/last-bus-times-phuket-smart-bus"
+      }
+     ]
+    },
+    {
+     "title": "Local songthaew buses",
+     "text": "Open-sided songthaew buses run in the daytime from Phuket Town (Ranong Road) to the main beaches. They are very cheap (from about 30 baht) but slow, and they do not run late in the evening."
+    },
+    {
+     "title": "Typical drive times",
+     "text": "From the airport: Patong 50-90 min, Kata 60-90 min, Old Town 40-60 min, Natai (Phang Nga) 35-45 min. Patong to Kata 20-30 min, Patong to Old Town 30-45 min. Traffic is worst from 16:00 to 19:00, so leave early for flights."
+    }
+   ]
+  },
+  {
+   "id": "island-hopping",
+   "title": "Island hopping",
+   "items": [
+    {
+     "title": "Koh Phangan: fastest (fly + boat)",
+     "text": "There is no direct boat from Phuket. Fly to Koh Samui with Bangkok Airways: about 55 min, several flights a day, about 1,900-3,500 baht one way. Then take a Lomprayah van + boat to Thong Sala on Koh Phangan (about 400-700 baht, 1.5-3 hours). Door to door about 5 hours.",
+     "links": [
+      {
+       "label": "Bangkok Airways",
+       "url": "https://www.bangkokair.com"
+      },
+      {
+       "label": "Lomprayah (official)",
+       "url": "https://www.lomprayah.com"
+      }
+     ]
+    },
+    {
+     "title": "Koh Phangan: one bus + boat ticket",
+     "text": "Lomprayah sells one ticket for a bus to Don Sak pier plus a fast catamaran. It leaves Phuket about 09:30 and arrives on Koh Phangan about 16:30 (7 hours). About 1,400 baht, or 1,600-1,800 baht with hotel pickup. Book a few days ahead.",
+     "links": [
+      {
+       "label": "Lomprayah (official)",
+       "url": "https://www.lomprayah.com"
+      },
+      {
+       "label": "12Go: Phuket to Koh Phangan",
+       "url": "https://12go.asia/en/travel/phuket/koh-phangan"
+      }
+     ]
+    },
+    {
+     "title": "Koh Phangan: cheapest and slowest",
+     "text": "Public bus from Phuket to Surat Thani (about 4 hours), van to Don Sak pier (about 1 hour), then a Seatran or Raja ferry (about 2.5 hours). Total about 8-9 hours and about 550-900 baht. Only worth it on a tight budget.",
+     "links": [
+      {
+       "label": "Seatran Discovery (official)",
+       "url": "https://www.seatrandiscovery.com"
+      }
+     ]
+    },
+    {
+     "title": "Party trips: book early",
+     "text": "Flights, boats and rooms on Koh Phangan sell out around big party dates. Book early and check the time of the last boat back. Wind and waves can delay boats, so do not plan a tight connection to a flight home."
+    },
+    {
+     "title": "Phi Phi ferries from Rassada Pier",
+     "text": "Big ferries leave Rassada Pier (near Phuket Town) at about 08:30, 11:00, 13:30 and 15:00. They take about 2 hours and cost about 500-700 baht. Speedboats take about 1 hour for 750-850 baht. Pay the 20-baht island fee in cash at Tonsai pier.",
+     "links": [
+      {
+       "label": "Andaman Wave Master (ferry)",
+       "url": "https://www.andamanwavemaster.com"
+      },
+      {
+       "label": "Phuket to Phi Phi guide (Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phuket-to-phi-phi"
+      }
+     ]
+    },
+    {
+     "title": "Maya Bay and park fee",
+     "text": "Trips to Maya Bay and Phi Phi Le pay a national park fee: 400 baht for foreign adults in most 2026 reports. Some tours include it, others collect cash on the day. Maya Bay closes every year from 1 Aug to 30 Sep, so it is open in January."
+    },
+    {
+     "title": "Krabi and Ao Nang",
+     "text": "Boats also run from Rassada Pier to Ao Nang in Krabi. A speedboat takes about 1 hour 15 minutes; slower ferries take 2.5 hours or more. Schedules change by season, so check times on 12Go.",
+     "links": [
+      {
+       "label": "12Go (ferries, buses, flights)",
+       "url": "https://12go.asia/en"
+      }
+     ]
+    },
+    {
+     "title": "Day tours: Chalong and Ao Po piers",
+     "text": "Many speedboat day tours (Phi Phi, Racha, Coral Island) leave from Chalong Pier in the south. Some boats leave from Ao Po Grand Marina in the north-east. Most tours include hotel pickup. Ask which pier before you book."
+    },
+    {
+     "title": "How to book boats",
+     "text": "Book on 12Go or on the official sites (Lomprayah, Seatran, Bangkok Airways). Save e-tickets offline. Arrive at the pier 30-45 minutes early to swap the e-ticket for a boarding pass.",
+     "links": [
+      {
+       "label": "12Go",
+       "url": "https://12go.asia/en"
+      },
+      {
+       "label": "Lomprayah",
+       "url": "https://www.lomprayah.com"
+      },
+      {
+       "label": "Seatran Discovery",
+       "url": "https://www.seatrandiscovery.com"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "connectivity",
+   "title": "SIM, eSIM and Wi-Fi",
+   "items": [
+    {
+     "title": "Tourist SIM or eSIM",
+     "text": "AIS and True sell tourist plans with unlimited 5G/4G data. AIS 2026 prices: 8 days 499 baht, 15 days 699 baht. True: 15 days 699, 30 days 1,199. For 8-18 Jan (11 days) the 15-day plan fits. You need your passport to register.",
+     "links": [
+      {
+       "label": "AIS tourist plans",
+       "url": "https://www.ais.th/en/consumers/package/international/tourist-plan"
+      },
+      {
+       "label": "True tourist SIM",
+       "url": "https://www.true.th/en/prepaid/sim/tourist"
+      }
+     ]
+    },
+    {
+     "title": "Airport counter or eSIM before you fly",
+     "text": "AIS and True counters are in the international arrivals hall at Phuket airport. Or buy an AIS or True eSIM online before the trip, or use an eSIM app such as Airalo. Check that your phone supports eSIM. Keep your home SIM on for bank SMS codes."
+    },
+    {
+     "title": "Wi-Fi",
+     "text": "Most hotels, cafes and malls have free Wi-Fi. AIS tourist plans include AIS Super WiFi hotspots. Signal can be weak on boats and small islands, so download maps and tickets before you go."
+    }
+   ]
+  },
+  {
+   "id": "safety-law",
+   "title": "Safety and law",
+   "items": [
+    {
+     "title": "Vapes and e-cigarettes are illegal",
+     "critical": true,
+     "text": "It is illegal to bring, own or use any vape, e-cigarette, pod, e-liquid or heated-tobacco device (like IQOS). There are no exceptions for tourists. Customs and police check. Penalties: confiscation, fines of about 5,000-30,000 baht, detention and court. Leave it at home.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Drugs: very strict laws",
+     "critical": true,
+     "text": "Even small amounts of drugs can mean heavy fines, prison, deportation and a ban from Thailand. Police raid parties and villas, also on Koh Phangan, and do urine tests; a positive test can lead to charges. Serious cases can mean life in prison or the death penalty. Never carry anything for others.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      },
+      {
+       "label": "News: Koh Phangan villa raid (Jan 2026)",
+       "url": "https://www.khaosodenglish.com/news/2026/01/12/luxury-villa-raid-busts-israeli-drug-ring-on-koh-phangan/"
+      }
+     ]
+    },
+    {
+     "title": "Cannabis: medical use only",
+     "text": "Since June 2025 cannabis may only be sold with a Thai medical prescription. Recreational use is illegal, even though you still see shops. Do not smoke in public. Taking cannabis out of Thailand is a crime, with fines and an immigration watchlist.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Drink spiking and fake alcohol",
+     "text": "At parties, never leave your drink alone and do not accept open drinks from strangers. Methanol in fake or cheap spirits can kill; get help fast if someone has blurred vision or feels very sick after drinking. Plan your ride home before you go out.",
+     "links": [
+      {
+       "label": "UK travel advice: safety",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Alcohol sale hours",
+     "text": "Shops and most bars may sell alcohol from 11:00 to midnight. The old afternoon ban (14:00-17:00) has ended. Licensed hotels, clubs and airports may serve outside these hours. Since Nov 2025, drinkers can also be fined up to 10,000 baht for drinking at banned times or places.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "No smoking on the beach",
+     "text": "Smoking is banned on Patong Beach and other listed Thai beaches: fine up to 100,000 baht or up to 1 year in jail. Use the marked smoking zones away from the sand and never leave cigarette butts. Smoking in many public places can also bring a fine of up to 5,000 baht.",
+     "links": [
+      {
+       "label": "The Nation: Patong beach smoking ban",
+       "url": "https://www.nationthailand.com/in-focus/30331584"
+      }
+     ]
+    },
+    {
+     "title": "Jet-ski scams",
+     "text": "Some jet-ski operators blame tourists for old damage and ask for big money. Never leave your passport as a deposit. Film the jet ski from all sides before you ride. If there is a dispute, stay calm and call the Tourist Police on 1155.",
+     "links": [
+      {
+       "label": "UK travel advice: safety",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Rip currents and flags",
+     "text": "In January the west-coast sea is usually calm, but rip currents still happen. Swim near lifeguards and never swim at a red flag. If a current pulls you out, do not fight it: swim parallel to the beach, then back in. Do not swim drunk or at night.",
+     "links": [
+      {
+       "label": "UK travel advice: swimming",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Drones need permits",
+     "text": "All drones must be registered with the NBTC, and camera drones also with CAAT; registration needs a Thai SIM. You also need 1 million baht third-party insurance and CAAT flight approval at least 3 days ahead. No flying within 9 km of an airport. Penalties include jail and big fines.",
+     "links": [
+      {
+       "label": "TAT: drone guide for tourists (2026)",
+       "url": "https://www.tatnews.org/2026/02/flying-a-drone-in-thailand-updated-guide-for-tourists/"
+      },
+      {
+       "label": "CAAT drone portal",
+       "url": "https://uasportal.caat.or.th"
+      },
+      {
+       "label": "NBTC drone registration",
+       "url": "https://anyregis.nbtc.go.th"
+      }
+     ]
+    },
+    {
+     "title": "Carry ID",
+     "text": "Police can ask to see your passport. Carry it, or at least a copy of the photo page and entry stamp. A copy is usually fine, but you may have to show the original at a police station within 24 hours.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "title": "Health",
+   "items": [
+    {
+     "title": "Bangkok Hospital Phuket (private)",
+     "text": "Large private hospital in Phuket Town (2/1 Hongyok Utis Road) with English-speaking staff and emergency care. Emergency: 1719 from a Thai number, or +66 76 254 425. It is expensive, so have travel insurance.",
+     "links": [
+      {
+       "label": "Bangkok Hospital Phuket",
+       "url": "https://www.phukethospital.com/en/"
+      }
+     ]
+    },
+    {
+     "title": "Mission Hospital Phuket (private)",
+     "text": "Mid-size private hospital on Thepkrasattri Road in Phuket Town. Usually cheaper than the big private hospitals. Phone +66 76 237 220.",
+     "links": [
+      {
+       "label": "Mission Hospital Phuket",
+       "url": "https://www.missionhospitalphuket.com"
+      }
+     ]
+    },
+    {
+     "title": "Vachira Phuket Hospital (government)",
+     "text": "Phuket's main government hospital (353 Yaowarat Road, Phuket Town) with a 24-hour emergency and trauma centre. Cheaper, but waits can be long and English can be limited. Phone +66 76 361 234.",
+     "links": [
+      {
+       "label": "Vachira Phuket Hospital",
+       "url": "https://www.vachiraphuket.go.th"
+      }
+     ]
+    },
+    {
+     "title": "Ambulance and insurance",
+     "text": "Call 1669 for an ambulance. Hospitals ask for a payment guarantee or insurance before treatment. Get travel insurance that covers hospital, evacuation and your activities (boats, diving, scooter only with a valid licence). Save the insurer's phone number.",
+     "links": [
+      {
+       "label": "UK travel advice: health",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/health"
+      }
+     ]
+    },
+    {
+     "title": "Pharmacies",
+     "text": "Pharmacies are everywhere, including Boots and Watsons in malls. Many basic medicines are sold without a prescription. Bring your own medicines in the original packs with a copy of the prescription."
+    },
+    {
+     "title": "Sun and heat",
+     "text": "The UV index in January is about 11 (extreme). Use high-SPF sunscreen, a hat and sunglasses, and stay in the shade around midday. Drink plenty of water, especially at parties. Heat stroke can be deadly.",
+     "links": [
+      {
+       "label": "CDC: Thailand travel health",
+       "url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/thailand"
+      }
+     ]
+    },
+    {
+     "title": "Mosquitoes and dengue",
+     "text": "Dengue fever exists in Thailand. The mosquitoes bite mostly in the daytime. Use repellent with 20% or more DEET and sleep in air-con or screened rooms. See a doctor if you get a high fever. Ask your doctor about vaccines such as hepatitis A before the trip.",
+     "links": [
+      {
+       "label": "CDC: Thailand travel health",
+       "url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/thailand"
+      }
+     ]
+    },
+    {
+     "title": "Tap water and animals",
+     "text": "Do not drink tap water; drink bottled or filtered water. Keep away from stray dogs and monkeys, as rabies exists. If an animal bites or scratches you, wash the wound with soap and water and see a doctor the same day.",
+     "links": [
+      {
+       "label": "CDC: Thailand travel health",
+       "url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/thailand"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "title": "Weather in January",
+   "items": [
+    {
+     "title": "Dry, hot and sunny",
+     "text": "January is one of the driest months in Phuket. The average high is about 32-33°C and the low about 24-25°C. Rain is about 30 mm in the whole month, on about 4-5 days, and a brief shower is always possible. Humidity is around 70%.",
+     "links": [
+      {
+       "label": "Thai Meteorological Department",
+       "url": "https://www.tmd.go.th/en"
+      }
+     ]
+    },
+    {
+     "title": "Sea conditions",
+     "text": "On the west coast (Patong, Karon, Kata, Bang Tao) the Andaman Sea is usually calm and clear in January. The water is about 28°C. It is the best season for swimming, snorkelling and boat trips, but still check the beach flags."
+    },
+    {
+     "title": "Sunrise and sunset",
+     "text": "On 12 Jan 2027: sunrise about 06:43, sunset about 18:26. During your trip, sunrise is 06:42-06:45 and sunset 18:24-18:30. It is dark about 20 minutes after sunset. West-coast beaches face the sunset."
+    },
+    {
+     "title": "Peak season",
+     "text": "January is peak season. Hotels cost the most in the first two weeks of January, and popular tours and boats fill up fast. Book the important things early."
+    }
+   ]
+  },
+  {
+   "id": "etiquette",
+   "title": "Etiquette",
+   "items": [
+    {
+     "title": "Temples: dress code",
+     "text": "Cover shoulders and knees: no tank tops, short shorts or short skirts. Take off your shoes before you enter a temple building. Do not point your feet at a Buddha image. Some temples lend sarongs at the entrance."
+    },
+    {
+     "title": "Royal family: show respect",
+     "text": "Never criticise or joke about the King or the royal family, also not online. It is a crime with long prison terms. Stand when the royal anthem plays, for example in cinemas before the film. Do not step on money, because it shows the King.",
+     "links": [
+      {
+       "label": "UK travel advice: local laws",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Shoes, head and feet",
+     "text": "Take off your shoes when you enter homes, temples, massage rooms and some shops; if you see shoes at the door, do the same. Do not touch people's heads. Do not point your feet at people or put them on tables."
+    },
+    {
+     "title": "The wai",
+     "text": "The wai is the Thai greeting: palms together at the chest and a small bow. Return a wai from adults. You do not need to wai staff or children; a smile and sawasdee krap or ka is fine. Women should not touch monks."
+    },
+    {
+     "title": "Tipping",
+     "text": "Tipping is not required but welcome. Many hotels and restaurants add a 10% service charge, so check the bill. Round up taxi fares. Leave about 50-100 baht for a massage or a good guide."
+    },
+    {
+     "title": "Haggling",
+     "text": "Bargain at markets, with tuk-tuks and for tours sold on the street. Do not bargain in malls, 7-Eleven, restaurants or shops with fixed prices. Smile and stay calm; anger and shouting do not work in Thailand."
+    }
+   ]
+  },
+  {
+   "id": "power-apps",
+   "title": "Power and apps",
+   "items": [
+    {
+     "title": "Plugs and voltage",
+     "text": "Thailand uses 220-230 V, 50 Hz. Most sockets take flat US-style pins (type A/B) and round two-pin European plugs (type C). UK and Australian plugs need an adapter. Phone and laptop chargers marked 100-240 V work fine."
+    },
+    {
+     "title": "Grab, Bolt and inDrive",
+     "text": "Install Grab and Bolt before you arrive and add a payment card. Compare both for each ride. inDrive also works in Phuket and lets you offer your own price.",
+     "links": [
+      {
+       "label": "Grab Thailand",
+       "url": "https://www.grab.com/th/en/"
+      },
+      {
+       "label": "Bolt in Phuket",
+       "url": "https://bolt.eu/en/cities/phuket/"
+      }
+     ]
+    },
+    {
+     "title": "Google Translate with offline Thai",
+     "text": "Download Thai for offline use in Google Translate. The camera mode reads menus and signs, and conversation mode helps with drivers.",
+     "links": [
+      {
+       "label": "How to translate offline",
+       "url": "https://support.google.com/translate/answer/6142473"
+      }
+     ]
+    },
+    {
+     "title": "Google Maps offline area",
+     "text": "Download offline maps of Phuket and Phang Nga (and Koh Phangan if you go). Save your hotel and favourite places. Show the map to drivers to explain where you want to go.",
+     "links": [
+      {
+       "label": "How to download offline maps",
+       "url": "https://support.google.com/maps/answer/6291838"
+      }
+     ]
+    },
+    {
+     "title": "LINE",
+     "text": "LINE is the main chat app in Thailand. Many hotels, drivers, tour shops and clubs answer on LINE faster than by email or phone.",
+     "links": [
+      {
+       "label": "LINE",
+       "url": "https://line.me/en/"
+      }
+     ]
+    },
+    {
+     "title": "12Go",
+     "text": "Book ferries, buses, vans and domestic flights, with e-tickets on your phone. Check the pier and pickup time carefully.",
+     "links": [
+      {
+       "label": "12Go",
+       "url": "https://12go.asia/en"
+      }
+     ]
+    },
+    {
+     "title": "Klook and GetYourGuide",
+     "text": "Book tours, boat trips and tickets with reviews and clear prices. Check what is included (hotel pickup, park fees, lunch) and the cancellation rules.",
+     "links": [
+      {
+       "label": "Klook",
+       "url": "https://www.klook.com"
+      },
+      {
+       "label": "GetYourGuide",
+       "url": "https://www.getyourguide.com"
+      }
+     ]
+    },
+    {
+     "title": "Wise and ATMs",
+     "text": "A Wise or similar card gives a good exchange rate. Thai ATMs charge foreign cards about 220-250 baht per withdrawal, so take out larger amounts. Always choose to pay in baht (THB), not in your home currency.",
+     "links": [
+      {
+       "label": "Wise",
+       "url": "https://wise.com"
+      }
+     ]
+    },
+    {
+     "title": "Thailand Tourist Police app",
+     "text": "Official app with an SOS button that connects you to the Tourist Police (1155) and shares your location. Live chat in English, Chinese, Japanese, Korean and Russian.",
+     "links": [
+      {
+       "label": "TAT: Tourist Police app",
+       "url": "https://www.tatnews.org/2024/12/stay-connected-and-safe-in-thailand-with-the-thailand-tourist-police-app/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "emergencyNumbers": [
+  {
+   "label": "Tourist Police (English, 24 hours)",
+   "number": "1155",
+   "note": "Scams, theft, disputes. Also via the SOS button in the Thailand Tourist Police app."
+  },
+  {
+   "label": "Ambulance / medical emergency",
+   "number": "1669",
+   "note": "National emergency medical service."
+  },
+  {
+   "label": "Police",
+   "number": "191"
+  },
+  {
+   "label": "Fire",
+   "number": "199"
+  },
+  {
+   "label": "Water and boat accidents",
+   "number": "1196"
+  },
+  {
+   "label": "TAT tourist hotline",
+   "number": "1672",
+   "note": "Tourist information and help."
+  },
+  {
+   "label": "Cyber Police",
+   "number": "1441",
+   "note": "Online scams, fake TDAC websites."
+  },
+  {
+   "label": "Bangkok Hospital Phuket emergency",
+   "number": "1719",
+   "note": "From Thai numbers. From any phone: +66 76 254 425."
+  },
+  {
+   "label": "Vachira Phuket Hospital (government)",
+   "number": "+66 76 361 234"
+  },
+  {
+   "label": "Mission Hospital Phuket",
+   "number": "+66 76 237 220"
+  }
+ ],
+ "phrases": [
+  {
+   "en": "Polite ending for most sentences (man / woman)",
+   "thai": "ครับ / ค่ะ",
+   "say": "krap / ka"
+  },
+  {
+   "en": "Hello / Goodbye",
+   "thai": "สวัสดี ครับ / ค่ะ",
+   "say": "sa-wat-dee krap / ka"
+  },
+  {
+   "en": "Thank you",
+   "thai": "ขอบคุณ ครับ / ค่ะ",
+   "say": "kop-kun krap / ka"
+  },
+  {
+   "en": "Sorry / Excuse me",
+   "thai": "ขอโทษ ครับ / ค่ะ",
+   "say": "kor-tote krap / ka"
+  },
+  {
+   "en": "No problem / Never mind",
+   "thai": "ไม่เป็นไร",
+   "say": "mai pen rai"
+  },
+  {
+   "en": "How much is it?",
+   "thai": "เท่าไหร่ ครับ / คะ",
+   "say": "tao-rai krap / ka?"
+  },
+  {
+   "en": "Can you lower the price?",
+   "thai": "ลดได้ไหม ครับ / คะ",
+   "say": "lot dai mai krap / ka?"
+  },
+  {
+   "en": "No, thank you (I do not want it)",
+   "thai": "ไม่เอา ครับ / ค่ะ",
+   "say": "mai ao krap / ka"
+  },
+  {
+   "en": "Not spicy, please",
+   "thai": "ไม่เผ็ด ครับ / ค่ะ",
+   "say": "mai pet krap / ka"
+  },
+  {
+   "en": "Delicious",
+   "thai": "อร่อย",
+   "say": "a-roy"
+  },
+  {
+   "en": "The bill, please",
+   "thai": "เช็คบิล ครับ / ค่ะ",
+   "say": "check bin krap / ka"
+  },
+  {
+   "en": "Where is the toilet?",
+   "thai": "ห้องน้ำอยู่ที่ไหน ครับ / คะ",
+   "say": "hong-nam yoo tee-nai krap / ka?"
+  },
+  {
+   "en": "Stop here, please",
+   "thai": "จอดที่นี่ ครับ / ค่ะ",
+   "say": "jot tee-nee krap / ka"
+  },
+  {
+   "en": "I do not understand",
+   "thai": "ไม่เข้าใจ ครับ / ค่ะ",
+   "say": "mai kao-jai krap / ka"
+  },
+  {
+   "en": "Help",
+   "thai": "ช่วยด้วย",
+   "say": "chuay duay"
+  },
+  {
+   "en": "Please take me to the hospital",
+   "thai": "ไปโรงพยาบาล ครับ / ค่ะ",
+   "say": "pai rong-pa-ya-baan krap / ka"
+  }
+ ],
+ "sources": [
+  "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+  "https://vialtopartners.com/regional-alerts/thailand-immigration-changes-to-visa-exemption-scheme-effective-15-september-2026",
+  "https://london.thaiembassy.org/en/page/exemp-visa",
+  "https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements",
+  "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security",
+  "https://www.gov.uk/foreign-travel-advice/thailand/health",
+  "https://tdac.immigration.go.th",
+  "https://abuja.thaiembassy.org/en/content/thailand-digital-arrival-card-tdac",
+  "https://www.mots.go.th/mots_en/news/3764",
+  "https://www.khaosodenglish.com/tourism/2026/03/29/10-of-foreign-arrivals-used-fake-tdac-sites-immigration-warns/",
+  "https://www.tatnews.org/2026/06/thailand-immigration-management-application-introduced-to-streamline-foreign-traveller-registration/",
+  "https://www.fragomen.com/insights/thailand-electronic-travel-authorization-requirement-for-visa-exempt-nationals-forthcoming.html",
+  "https://www.khaosodenglish.com/politics/2026/10/09/thailand-moves-ahead-with-450-baht-tourist-entry-fee-eyes-film-incentives/",
+  "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/13/thailand-weighs-flat-450-baht-entry-fee-for-foreign-visitors-by-2027",
+  "https://www.paidaidmc.com/journal/thailand-450-baht-tourist-fee",
+  "https://phuket-travel-experience.com/guide/grab-in-phuket/",
+  "https://www.phuket101.net/phuket-airport-transfers/",
+  "https://www.evephuket.com/blog/phuket-taxi-prices-2026/",
+  "https://www.phuketsmartbus.com/timetable",
+  "https://www.phuketsmartbus.com/payment",
+  "https://www.phuketsmartbus.com/blog/last-bus-times-phuket-smart-bus",
+  "https://bolt.eu/en/cities/phuket/",
+  "https://www.tatnews.org/2024/11/driving-in-thailand-essential-guidelines-for-tourists-and-foreigners/",
+  "https://www.visitthailandtoday.com/guides/phuket-to-koh-samui",
+  "https://phangantransfers.com/ferry-timetable.html",
+  "https://www.insidesamui.com/getting-here/phuket-to-koh-phangan-ferry-price/",
+  "https://www.visitthailandtoday.com/guides/phuket-to-phi-phi",
+  "https://www.ais.th/en/consumers/package/international/tourist-plan",
+  "https://www.true.th/en/prepaid/sim/tourist",
+  "https://thailandesim.com/airports-sim-card/phuket-hkt/",
+  "https://www.timeout.com/bangkok/news/alcohol-rules-052926",
+  "https://scandasia.com/thailand-introduces-fines-for-late-night-drinking/",
+  "https://thaiest.com/blog/smoking-ban-on-thailand-beaches",
+  "https://www.nationthailand.com/in-focus/30331584",
+  "https://www.tatnews.org/2026/02/flying-a-drone-in-thailand-updated-guide-for-tourists/",
+  "https://www.khaosodenglish.com/news/2026/01/12/luxury-villa-raid-busts-israeli-drug-ring-on-koh-phangan/",
+  "https://www.khaosodenglish.com/news/2025/10/14/israeli-soldiers-face-drug-charges-after-noisy-cease-fire-party-on-koh-phangan/",
+  "https://www.phukethospital.com/en/",
+  "https://www.phuket101.net/phuket-hospitals/",
+  "https://wwwnc.cdc.gov/travel/destinations/traveler/none/thailand",
+  "https://en.wikipedia.org/wiki/Phuket_province (Thai Meteorological Department climate normals 1981-2010)",
+  "https://phuket101.net/phuket-weather-in-january",
+  "https://api.sunrise-sunset.org (sun times, cross-checked with a NOAA solar calculation)",
+  "https://www.tatnews.org/2024/12/stay-connected-and-safe-in-thailand-with-the-thailand-tourist-police-app/",
+  "https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets",
+  "Research note: the web-search quota ran out near the end of research. Etiquette and tipping tips are general guidance and were not checked against a single official source. The Immigration hotline number could not be verified, so it was left out."
+ ]
+}

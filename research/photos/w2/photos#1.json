@@ -1,0 +1,129 @@
+{
+ "results": [
+  {
+   "key": "places:big-buddha",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-big-buddha.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/The_Big_Buddha%2C_Phuket.jpg/1280px-The_Big_Buddha%2C_Phuket.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Big_Buddha,_Phuket.jpg",
+   "credit": "Subhrajyoti07",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 851,
+   "note": "Candidate 1. The white marble Big Buddha against a blue sky, with visitors on the stairs. Sharp, centred, and the statue survives a 16:9 crop."
+  },
+  {
+   "key": "places:wat-chalong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-wat-chalong.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Phuket_Thailand_Wat-Chalong-01.jpg/1280px-Phuket_Thailand_Wat-Chalong-01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_Thailand_Wat-Chalong-01.jpg",
+   "credit": "CEphoto, Uwe Aranas",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 989,
+   "note": "Candidate 1. The main ordination hall with its red and gold tiered roofs, under an overcast sky. A centre 16:9 crop cuts only the very tip of the spire. Candidate 2 is portrait and would not survive the crop."
+  },
+  {
+   "key": "places:phuket-old-town",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-phuket-old-town.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Soi_Rommanee%2C_Phuket_Town.jpg/1280px-Soi_Rommanee%2C_Phuket_Town.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Soi_Rommanee,_Phuket_Town.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1. Soi Rommanee, with pink and pastel Sino-Portuguese shophouses and red lanterns. It is not one of the photos listed for areas:phuket-town."
+  },
+  {
+   "key": "places:sunday-walking-street",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-sunday-walking-street.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Phuket_Weekend_Market.jpg/1280px-Phuket_Weekend_Market.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_Weekend_Market.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 1. Thalang Road closed to traffic, with food stalls and crowds between the shophouses. Taken on a Sunday afternoon (3 Jun 2018), so it is daylight, before the lights come on. It is the best of the four shots in the same Commons series. Commons has no evening photo of the market."
+  },
+  {
+   "key": "places:promthep-cape",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-promthep-cape.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Laem_Phromthep_in_Phuket_%285733622568%29.jpg/1280px-Laem_Phromthep_in_Phuket_%285733622568%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Laem_Phromthep_in_Phuket_(5733622568).jpg",
+   "credit": "edwin.11",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 851,
+   "note": "Found by Commons search. Sugar palms on the cape headland running down into turquoise sea, on a sunny day. Candidate 1 is generic rocks and sea. Candidate 2 is a palm-silhouette sunset that does not show the cape, and it is also listed for areas:rawai."
+  },
+  {
+   "key": "places:windmill-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-windmill-viewpoint.jpg",
+   "url": "https://live.staticflickr.com/65535/49835492633_38940771ac_k.jpg",
+   "page": "https://www.flickr.com/photos/77742560@N06/49835492633",
+   "credit": "shankar s. (Flickr)",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 854,
+   "note": "The classic view from the viewpoint on a sunny day: Ya Nui Beach, its rock islet, Ko Man island and the road to Promthep. Flickr CC photo found through Openverse; the 2048px original was downscaled to 1280px wide. Candidate 1 is a stormy 2.9:1 panorama, only about 784px wide after a 16:9 crop. Candidate 2 shows only Ko Man. The Commons 'Ya Nui beach.jpg' is already the photo for places:ya-nui-beach, so it was not used."
+  },
+  {
+   "key": "places:black-rock-viewpoint",
+   "ok": false,
+   "note": "No acceptable photo. The candidate panorama was taken from the south side of Nai Harn bay looking toward the Black Rock hill (The Nai Harn hotel is visible). It is not from the viewpoint and does not show the black rocks. Searched Commons (English and Thai names, Pa Hin Dam, Ao Sane, Nai Harn and Laem Mum Nok, plus a geosearch within 1.5 km of the OSM point 7.7830,98.2976). Also searched Openverse and Flickr CC, and the web for an official page (none exists, only blogs and booking sites). The only nearby photos are aerials from a flight. The closest one shows Nai Harn beach and lagoon from above (File:Phuket_2014_february_-_panoramio_(31).jpg, Roma Neus, CC BY 3.0). It was not kept because it was not taken at the viewpoint."
+  },
+  {
+   "key": "places:karon-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-karon-viewpoint.jpg",
+   "url": "https://live.staticflickr.com/65535/49835496868_99289ad652_k.jpg",
+   "page": "https://www.flickr.com/photos/77742560@N06/49835496868",
+   "credit": "shankar s. (Flickr)",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 854,
+   "note": "The three bays (Kata Noi, Kata, Karon) from the viewpoint in clear weather, with palm fronds in the foreground. Flickr CC photo; the 2048px original was downscaled to 1280px wide. Candidate 1 is hazy and half banana leaves. Candidate 2 is a dark panorama. Candidate 3 carries a '\u00a9 Benny Chirvanich' watermark."
+  },
+  {
+   "key": "places:kata-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-kata-beach.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Kata_Beach_November_2011_-_panoramio.jpg/1280px-Kata_Beach_November_2011_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kata_Beach_November_2011_-_panoramio.jpg",
+   "credit": "Jacek Lesniowski",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 850,
+   "note": "Found by Commons search. Kata Beach with turquoise surf and Ko Pu island under a deep blue sky; sharp DSLR shot. Candidate 1 is overcast and mostly sand. Candidate 2 is blocked by hanging vines and is also listed for areas:kata."
+  },
+  {
+   "key": "places:kata-noi-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-kata-noi-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg/1280px-Kata_Noi_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%29_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kata_Noi_beach_(%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2)_-_panoramio.jpg",
+   "credit": "Tuderna",
+   "license": "CC BY 3.0",
+   "width": 1272,
+   "height": 845,
+   "note": "Candidate 2. A longtail boat moored in turquoise water off Kata Noi, with Ko Pu and the headland behind; the Panoramio geotag is on Kata Noi beach. I trimmed 4px from each edge to remove a thin picture frame. Candidate 1 is a generic sunset silhouette and is also listed for areas:kata-noi and Mom Tri's. The better beach-level shot (Telgaa, 'Kata noi - panoramio') is already saved as areas-kata-noi.jpg, so I did not use it here."
+  },
+  {
+   "key": "places:nai-harn-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-nai-harn-beach.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Phuket_-_Nai_Harn_Beach_004.jpg/1280px-Phuket_-_Nai_Harn_Beach_004.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_-_Nai_Harn_Beach_004.jpg",
+   "credit": "ADwarf",
+   "license": "Public domain",
+   "width": 1280,
+   "height": 960,
+   "note": "Candidate 2. The long sandy beach with swimmers, clear water and the wind-turbine headland behind. Candidate 1 is hazy, shows only the rocky north corner and has a prominent bather in the centre. Neither matches the photos used for areas:nai-harn or The Nai Harn hotel."
+  }
+ ]
+}

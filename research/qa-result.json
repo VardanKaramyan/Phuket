@@ -1,0 +1,580 @@
+{
+ "review:requirements": {
+  "summary": "Requirement-by-requirement check of the built site (dist/index.html, dist/phuket-guide-offline.html and artifact/index.html, all built at 16:21) and data/*.json. All five sections the user asked for are there and filled in: 31 music events; 61 places (24 must-see, 24 hidden gems, 13 day trips, each with a duration); 20 areas, each with a description and best-for tags, drawn as polygons on a Leaflet map with a Google Maps button; 23 hotels plus a \"My hotels\" form; 8 exchange brands with a clear verdict that Mamy Exchange is best. The music section carries over almost everything from prior-events-research.md. Of the three Phuket weekly nights in the earlier research, Bermudos (closed) and Niky's (unconfirmed) were dropped without telling the user.\n\nGaps, most serious first:\n1. Offline is not delivered in a usable form. The claude.ai artifact says \"Use the offline version\" but gives no link, and dist/ is not hosted anywhere.\n2. Exchange cards have no images at all, and part of the branding shown is made up.\n3. The Home \"Day by day\" agenda never shows Shelter or the other club nights, and leads with Koh Phangan parties.\n4. The trip plans contradict each other.\n5. Some content is stale or inconsistent: the Pyramid \"secret headliner\" card vs Argy, and Niky's is still promoted in Areas.\n6. Places show contradictory durations (\"1–2 h · 0.3 h–0.5 h on site\").\n7. Every card is taller than a phone screen; the Places tab is about 72 screens long. That works against \"simple\".\n8. The artifact draws the areas on a bare coastline outline, not a real map.\n\nSmaller gaps:\n- Natai is outside the default map view.\n- The map layer chips sit under the tab bar.\n- The Thai bank booths card has no map or Google Maps button.\n- Black Rock still shows a placeholder: images.json was fixed at 16:31 but the outputs were not rebuilt.\n- Plane Spotting at Mai Khao was deleted as a \"duplicate\" of an item that never existed.\n- The single-file build shows the wrong offline message.\n- Lost Jungle and Spiritgust offer Directions to approximate pins.\n\nScreenshots and probes I made are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa (artifact-areas.png, black-rock.png, day8.png, bank-booths.png, superrich.png).",
+  "issues": [
+   {
+    "severity": "high",
+    "where": "artifact/index.html Home > Offline use box (src/app.js:399); project deploy state",
+    "problem": "The user asked for a site they can use offline, and the shipped versions don't provide that out of the box. The claude.ai artifact says \"This copy needs internet. Use the offline version for the trip.\" but gives no link or URL to that version. dist/ (the service-worker build) is not hosted anywhere: there is no .vercel/.netlify config, and the README asks the user to run `npx vercel login` / `netlify-cli` / `surge` themselves.",
+    "evidence": "In probe2, the rendered artifact's #offline-state reads 'This copy needs internet. Use the offline version for the trip.' grep finds no 'phuket-guide-offline' link in artifact/index.html, and the KML/download note is only emitted for the standalone build (tools/build.mjs:434). `ls -a /Users/mac/Documents/Phuket` shows no deploy config.",
+    "fix": "Deploy dist/ to an HTTPS host. Put that URL, plus a download link to phuket-guide-offline.html (e.g. published as a file next to the artifact), in the artifact's Offline box, with the one-line Add to Home Screen steps."
+   },
+   {
+    "severity": "medium",
+    "where": "Home > Day by day agenda (tools/build.mjs:319-323)",
+    "problem": "The day-by-day agenda, the main daily view on the trip, drops every club night and leads with parties the traveler can't reach. dayAgenda() leaves out kind 'venue', so Shelter, Retro Mountain, Courage Bar, Unclave, Illuzion, BOA and the Café del Mar venue never appear. The night plan, however, sends the user to Shelter on Fri 8 and Fri 15. Sorting by pick and then undergroundScore pushes Koh Phangan items to the top on days the plan has the user in Phuket.",
+    "evidence": "Built agenda for Fri 8 (arrival in Phuket): 7 music items. The first is 'Lighthouse Party (Haad Rin) · Koh Phangan · weekly · top pick'; 3 are on Koh Phangan, plus 'Spiritgust Festival 2027 · Other' (mainland, location shown as 'Other'); no Shelter, although extra.json:7 says 'Fri 8 Jan: arrive, then Shelter at Illuzion'. Sat 9: 'Parvati Day & Night at Lost Jungle · Koh Phangan · top pick' sits above Circoloco, even though its own card says 'Not techno'. Fri 15: 4 of 5 music items are on Koh Phangan, and Shelter is missing although the plan says 'Fri 15 Jan: Shelter again'. Screenshot: scratchpad/qa/day8.png.",
+    "fix": "Add recurring venues on their open nights (Shelter Fri/Sat 23:30, etc.), group or sort Phuket & Natai items before far-off islands, show the plan's pick for each day at the top, and replace the 'Other' label with the event's island or venue."
+   },
+   {
+    "severity": "medium",
+    "where": "Music plan vs Areas 'Best bases' and 'Full notes' (data/extra.json:7, :38; data/areas.json:1613)",
+    "problem": "The trip plans contradict each other. The Areas split stay claims it \"fits the night plan\" but puts the user in Natai on 8–10 Jan, while the night plan sends them to Shelter in Patong on Fri 8 (65–80 min each way, home at 04:00). The 'Full notes' expander gives a third plan with no Koh Phangan leg (Kamala/Bang Tao 10–16 with Enthusiast on Tue 12). It also repeats 'hotels cost the most in the first two weeks', a claim the research log removed as unsupported.",
+    "evidence": "extra.json:7 'Fri 8 Jan: arrive, then Shelter at Illuzion in Patong'. extra.json:38 'Split stay that fits the night plan: Natai 8 to 10 Jan, Koh Phangan 10 to 13 Jan…'. hotels.json Baba 'Nearby': 'Patong about 65-80 min'. areas.json:1613 'Split-stay idea: Fri 8 - Sun 10 Natai … Sun 10 - Sat 16 Kamala or Bang Tao (… Enthusiast open doors Tue 12 …)' and '…hotels cost the most in the first two weeks, so book early'. research-log removed[essentials] 'hotels-first-two-weeks-jan'.",
+    "fix": "Keep one plan and make the others match it: either change the Fri 8 suggestion or start the split stay in Kamala/Patong. Rewrite or remove areas.json `recommendation` so 'Full notes' doesn't contradict 'Best bases', and drop the unsupported price claim."
+   },
+   {
+    "severity": "medium",
+    "where": "Music > 'Pyramid Stage: secret headliner (Café del Mar)' card and Home Fri 8 agenda (data/events.json:1189-1237)",
+    "problem": "Two cards in the music section disagree about the same in-trip show. The dated event card for Fri 8 Jan says the headliner is still secret, with no price. The Café del Mar venue card and the Kamala area say the headliner is Argy, with presale opening 20 Oct. The research log confirms Argy was announced.",
+    "evidence": "events.json:1191 name 'Pyramid Stage: secret headliner (Café del Mar)'; :1205 'The headliner is still a secret'; status 'tba', priceText 'Ticket price not announced yet'. events.json:259 link 'Argy, Fri 8 Jan 2027' and :302 lineup 'Argy (Fri 8 Jan)' on cafe-del-mar-phuket. Kamala highlights: 'Argy on the Café del Mar Pyramid Stage, Fri 8 Jan from 14:00 (presale sign-up opens 20 Oct, 18:00)'. research-log changes[areas]: 'the 8 Jan Pyramid Stage headliner is now announced (Argy…)'. The Home Fri 8 agenda shows 'secret headliner'.",
+    "fix": "Update the dated item: rename it 'Argy at Café del Mar', add the lineup, the presale date (20 Oct 18:00) and the Megatix/event link, and set status to listed/tickets."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas > Bang Tao, Kamala, Layan cards and Full notes (data/areas.json:141, 267-268, 294, 303, 319, 398, 1613); Music section",
+    "problem": "Niky's Speakeasy was removed from Music because its 2026 operation could not be confirmed, yet Areas still sells it in 9 places, including the Bang Tao tagline, opening hours and a Google Maps link. Separately, two of the three Phuket weekly nights from the earlier research (Bermudos, every Friday; Niky's) disappear from Music with no note. The user will look for them and not know why they're gone.",
+    "evidence": "research-log removed[events]: 'nikys-speakeasy-bang-tao … 2026 operation cannot be confirmed: website fails (SSL error, then 404)…'. areas.json:267 tagline 'Long beach, top restaurants, beach clubs and Niky's'; :294 'Niky's Speakeasy & Nightclub: house and techno, Tue-Sun 20:00-02:00'; :303 'Niky's nearby'; :141 Kamala 'Shelter, Niky's and Enthusiast Place within about 20 minutes'. The build has 9 visible 'Niky' mentions and 0 'Bermudos' mentions. prior-events-research.md:828-829 lists Bermudos (Fri Jan 8 & 15) and Niky's as Phuket weekly nights.",
+    "fix": "Remove Niky's from the Areas tagline, stayIf and highlights, or mark it 'unconfirmed, check before going'. Add one line to the Music footer saying what changed since the earlier research: Bermudos closed, Niky's unconfirmed, OXA downgraded."
+   },
+   {
+    "severity": "medium",
+    "where": "Money section, all 8 exchange cards (tools/build.mjs:281-301; data/exchanges.json:224)",
+    "problem": "The user asked for an image on every item and branding for exchanges, but no exchange card has an image. brandCard() never calls imgTag, and the image pipeline has no exchange entries. The SuperRich card even says 'The official branch photo is in the image links', but brandCard never renders b.links, so the photo isn't reachable.",
+    "evidence": "Card audit of dist/index.html: mx-mamy-exchange, mx-lion-currency-exchange, mx-superrich-1965-phuket, mx-nc-plus, mx-value-plus, mx-money-shop, mx-thai-bank-booths and mx-phuket-airport-counters have no <img>. image-picks.json key counts: places 62, events 36, hotels 24, areas 20, money 0. exchanges.json imageCandidates include the official 'phuket-suriyadej-circle-superrich-partner-gmap.webp' branch photo, the Mamy, Value Plus and Money Shop logos, and Commons photos of Jungceylon and HKT arrivals, all unused. Screenshot: scratchpad/qa/superrich.png.",
+    "fix": "Add exchange photos (shopfront or logo) to image-picks and render imgTag in brandCard. Render b.links, or remove the 'in the image links' sentence."
+   },
+   {
+    "severity": "medium",
+    "where": "Places cards: duration pill and Time row (data/places.json:349-352, :464-467; tools/build.mjs:193, :206)",
+    "problem": "The user asked how long each place takes, and several cards answer twice with conflicting numbers. The photo pill and the '1–3 hours' filter come from durationLabel ('1–2 h'), while the Time row also prints durationHours, which is shorter. 0.25 h is printed as '0.3 h'.",
+    "evidence": "Built output: pl-karon-viewpoint pill '1–2 h', Time '1–2 h · 0.3 h–0.5 h on site'. Pill 1–2 h with '0.5 h–1 h on site' on pl-windmill-viewpoint, pl-khao-khad-viewpoint, pl-wat-phra-thong, pl-mee-ton-poe, pl-lock-tien and pl-go-benz. Data: karon-viewpoint durationLabel '1-2h' with durationHours {min 0.25, max 0.5}.",
+    "fix": "Derive the pill and filter bucket from durationHours where present, show times under 1 h in minutes ('15–30 min'), and print one duration, not two."
+   },
+   {
+    "severity": "medium",
+    "where": "All list views, card layout (tools/build.mjs eventCard/placeCard/areaCard/brandCard)",
+    "problem": "The user asked for a simple site with a short description per item. Each card stacks a description, 3–5 fact rows, tags, tips and 3–4 buttons, so every card is taller than one phone screen. The image, short description and Google Maps button sit far apart, and the lists take dozens of screens to scroll.",
+    "evidence": "Measured with puppeteer at 390x844 on dist/index.html. Average card height: events 906 px, places 975 px, areas 1023 px, money 1221 px (max 1744 px), against an 844 px screen. Page heights: Places ≈60,821 px (~72 screens), Events ≈29,911 px (~35), Areas ≈22,328 px (~26). Example: the Big Buddha card shows Time, Best time, Open, Cost and Getting there before the buttons (light-places-01 screenshot).",
+    "fix": "Keep the image, a 1–2 line description, the key fact (time or date) and the Google Maps button visible. Collapse the other facts and tips under one 'More' toggle, and consider a compact list mode."
+   },
+   {
+    "severity": "medium",
+    "where": "artifact/index.html > Areas map (src/app.js:262-265; tools/build.mjs:434)",
+    "problem": "In the claude.ai artifact the areas are not drawn on a real map. Tiles are disabled (canTiles false), the Streets/Satellite switch is hidden, and the polygons sit on a bare coastline outline with no roads, towns or imagery. The 'areas in Google Maps' KML download is only built into the standalone version.",
+    "evidence": "probe2 on artifact/index.html with tile hosts blocked: basebar hidden=true, 0 .leaflet-tile elements, base 'simple'. Screenshot scratchpad/qa/artifact-areas.png shows only the land outline and coloured polygons. build.mjs:434 `kmlNote = opts.kml ? …` with kml only for 'standalone'.",
+    "fix": "In the artifact, put a pre-rendered static basemap image (e.g. Esri/OSM tiles of Phuket baked into one image) under the polygons, or link to the hosted dist/ map and to a shared Google My Maps map built from phuket-areas.kml."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas 'Best bases' + Stay list (data/extra.json:37; data/hotels.json:4-8, :80, :139)",
+    "problem": "The site tells the user to sleep in Natai on the Circoloco Saturdays and names Aleenta and Natai House. Its own hotel cards show Natai House has no rooms online on Sat 9 or Sat 16, Aleenta costs about 45,000–52,000 THB/night those nights, and Baba Beach Club has no rooms for the whole trip. Baba is still the first card under 'Hotels picked for you'.",
+    "evidence": "extra.json:37 'For the Circoloco Saturdays (9 and 16 Jan) sleep in Natai… Aleenta and Natai House are a few minutes away.' hotels.json:139 Natai House 'Sat 9 and Sat 16 Jan: no rooms online'. hotels.json:80 Aleenta 'Circoloco Saturdays (9 and 16 Jan) about 45,000-52,000 before tax'. hotels.json:8 Baba 'No rooms on sale for 8-27 Jan 2027'. Stay screenshot light-stay-01: Baba is the first picked hotel.",
+    "fix": "State the availability and price problem in the recommendation, add bookable mid-range options near Natai/Khok Kloi, or make 'Kamala + pre-booked driver' the default. Move Baba out of first place, or present it as the venue rather than a hotel."
+   },
+   {
+    "severity": "low",
+    "where": "Money brand 'sign' badges (tools/build.mjs:274-280)",
+    "problem": "When a brand has no colour data, signColors() falls back to the site's own teal, so Lion, NC Plus, the Thai bank booths and the airport counters show a teal 'logo' that is not their branding. The bank card's own text says Kasikorn is green, SCB purple and Krungsri yellow. The Mamy, Value Plus and Money Shop badge colours come from their websites, and the cards say the shop signs were not checked.",
+    "evidence": "Computed badge backgrounds: Lion rgb(10,116,128), NC PLUS rgb(10,116,128), bank booths rgb(10,116,128), airport rgb(10,116,128); #0a7480 is the site theme colour. Mamy branding: 'We did not check the colors of the shop sign.'",
+    "fix": "Use a neutral outlined name badge when no verified colour exists, and rely on real photos (see the exchange image issue) for recognition."
+   },
+   {
+    "severity": "low",
+    "where": "Money > Thai bank exchange booths card (data/exchanges.json:649)",
+    "problem": "This card breaks the 'every item has a map location and Google Maps button' requirement. It has no branches, so its only button is 'Today's rates', with no map location, Google Maps or On map button.",
+    "evidence": "The card audit shows mx-thai-bank-booths with no google.com/maps link; .actions innerText is just 'Today’s rates'. Screenshot: scratchpad/qa/bank-booths.png.",
+    "fix": "Add a Google Maps search button (e.g. 'bank exchange booth near me' or one per main area), or map a few verified booths."
+   },
+   {
+    "severity": "low",
+    "where": "Areas map layer chips (src/styles.css:262, :269, :377)",
+    "problem": "On first view the map's layer chips (Areas, Music, Places, Hotels, Money) sit under the fixed tab bar, so a tap hits the tab bar. Hotels and Money are off by default, which makes it hard to show exchange and hotel locations on the map.",
+    "evidence": "At 390x844: .mapbox spans 227–818 px, chips 776–807 px, .tabbar 789–844 px. document.elementFromPoint at each chip's centre returns the tab bar for all 5 chips.",
+    "fix": "Lift .layerbar above the tab bar (bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom))) or cap .mapbox height at 100vh minus header and tab bar."
+   },
+   {
+    "severity": "low",
+    "where": "Areas map default view (src/app.js:266)",
+    "problem": "Natai, the second recommended base and the Circoloco venue, is outside the default map view. The start bounds stop at latitude 8.21, while Natai sits at about 8.25–8.28.",
+    "evidence": "`const home = L.latLngBounds([[7.75, 98.25], [8.21, 98.47]])`. In the probe, the 'Natai' area label is 96 px above the map's top edge (inView false); Mai Khao is the northernmost visible label.",
+    "fix": "Extend the home bounds north to about 8.30 so Natai's polygon is visible on load."
+   },
+   {
+    "severity": "low",
+    "where": "Places > Black Rock Viewpoint (data/places.json:398); dist/ and artifact/ built 16:21",
+    "problem": "All three outputs show the diamond placeholder instead of a photo for Black Rock Viewpoint. data/images.json gained 'places:black-rock-viewpoint' at 16:31 and assets/img/places-black-rock-viewpoint.webp exists, but the outputs were never rebuilt.",
+    "evidence": "pl-black-rock-viewpoint renders <span class=\"ph\"> (scratchpad/qa/black-rock.png). dist/index.html has 0 references to img/places-black-rock-viewpoint.webp. Timestamps: data/images.json 16:31:45, dist/index.html 16:21:23.",
+    "fix": "Rerun `node tools/build.mjs` (and the offline test) so dist/, the single file and the artifact pick up the image."
+   },
+   {
+    "severity": "low",
+    "where": "Places list (data/research-log.json:22-24)",
+    "problem": "'Plane Spotting at Mai Khao Beach', a well-known Phuket sight, was deleted as a duplicate of a must-see entry that never existed. It is gone from the guide, and its processed image is unused.",
+    "evidence": "research-log removed reason: 'Duplicate: the same id is already in the must-see list'. research/raw/research_places-must-see.json has no mai-khao-plane-spotting; the only copy was in research_places-hidden-gems.json. data/places.json has 0 matches. images.json still has 'places:mai-khao-plane-spotting'.",
+    "fix": "Restore the item (as must-see or hidden gem) with the verified facts kept in the removal note, including the January landing-direction caveat."
+   },
+   {
+    "severity": "low",
+    "where": "dist/phuket-guide-offline.html > Home Offline box (src/app.js:399)",
+    "problem": "The single-file offline copy, which is the backup for no-internet use, tells the reader to 'Open this guide from its web address once to save it for offline use.' That's wrong: the file is already self-contained, with all 134 images inlined.",
+    "evidence": "probe2 on the single file: #offline-state = 'Open this guide from its web address once to save it for offline use.' The else branch at app.js:399 covers D.build 'single'.",
+    "fix": "Add a 'single' branch, e.g. 'This file works offline. Keep it on your phone.'"
+   },
+   {
+    "severity": "low",
+    "where": "Music > Lost Jungle and Spiritgust cards (data/events.json:1316)",
+    "problem": "These two cards show the normal 'Google Maps' and 'Directions' buttons, but their pins are only approximate: Lost Jungle uses the island centre and Spiritgust the Tha Sala district centre. The warning is hidden inside the collapsed 'Tips & links', so tapping Directions could route the user to a random hillside.",
+    "evidence": "lost-jungle-parvati-2027: lat/lng 9.74, 100.03, coordConfidence 'low', gmapsQuery 'Koh Phangan, Surat Thani'; tip 'The map pin is only the island centre.' spiritgust-2027: coordConfidence 'low', 'Exact site not published yet.'",
+    "fix": "For low-confidence pins, hide Directions or label the buttons 'Approximate area', and show the 'exact location not public yet' note next to them."
+   }
+  ]
+ },
+ "review:code-offline": {
+  "summary": "I found 21 problems: 1 high, 10 medium, 10 low. The code is solid overall: none of the three builds throws a page error, every localStorage access is guarded, and the no-JS fallback (CSS-only section switching) works for every view. Photos are right-sized (640x360 WebP, about 33 KB each). With the server actually shut down, the hosted build works fully offline: 0 of 134 photos broken and the offline vector map drawn. The serious problems are in the service worker and map tiles. (1) If the host redirects /index.html to / (Cloudflare Pages does this by default), the guide says \"Saved for offline use on this phone\" but every offline launch shows \"This site can't be reached\". (2) tools/offline-test.mjs doesn't really test offline, because Puppeteer's offline mode doesn't stop the service worker reaching the server. (3) The service worker answers every page request with index.html, so the single-file backup can't be fetched from the host. (4) Saved map tiles are never shown offline, and Chrome counts each one as about 10.6 MB of storage. (5) One offline visit permanently switches the map to the plain offline style. (6) Links from Home, Saved and map popups land on nothing when a list filter is active. Other medium issues: iOS Safari may wipe offline data after a week without a visit, the map legend doesn't match the pins (in dark mode, music and hidden-gem pins are the same colour), \"today\" goes stale when the app resumes from memory, two small labels fail contrast, and the offline status text is wrong in the single-file and artifact builds. Note: dist/ was built at 16:21, but the Black Rock Viewpoint photo was added at 16:31, so it needs a rebuild. Test scripts are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/ (sw-redirect-down.mjs, sw-redirect.mjs, sw-nav.mjs, tiles.mjs, ui.mjs, theme2.mjs, fouc2.mjs, a11y.mjs, real-offline.mjs).",
+  "issues": [
+   {
+    "severity": "high",
+    "where": "/Users/mac/Documents/Phuket/src/sw.js:11 and :37 (precache list at /Users/mac/Documents/Phuket/tools/build.mjs:660)",
+    "problem": "The install step saves 'index.html' with addAll, which follows redirects. If the host redirects /index.html to / (Cloudflare Pages does by default; Vercel, Netlify and Firebase do when clean or pretty URLs are on), the cached copy is stored as a redirected response. Every page open is answered with that copy, and browsers refuse a redirected response for a page load. The page still says 'Saved for offline use on this phone.', but no offline launch ever works. Online, the first relaunch also fails, then fixes itself through the background refresh.",
+    "evidence": "Ran sw-redirect-down.mjs with the server sending 308 /index.html -> /. The cached index.html has redirected=true. The first visit shows 'Saved for offline use on this phone.' With the server shut down, launches 1, 2 and 3 all show Chrome's 'This site can't be reached'. In sw-redirect.mjs (online), launch 1 is an error page and launch 2 works.",
+    "fix": "Precache only './' and match './' when answering page loads (drop 'index.html' from the precache list). Fetch precache entries with new Request(u, {cache:'reload'}). If a cached response has .redirected set, rewrap it before serving: new Response(await r.blob(), {headers: r.headers}). Store the background-refreshed copy under './' too."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/tools/offline-test.mjs:37",
+    "problem": "page.setOfflineMode(true) only cuts the page's network, not the service worker's. The service worker still reaches the local server, so the test cannot catch precache misses or anything the service worker fetches from the network. 'OFFLINE TEST PASSED' doesn't prove the guide works offline, and it would not catch the high-severity redirect bug above.",
+    "evidence": "In sw-redirect-down.mjs, the server still logged 'GET /' (the service worker's background refresh) after setOfflineMode(true) plus a reload. Under setOfflineMode the redirect bug fixes itself; with the server really down it never recovers.",
+    "fix": "After the service worker installs, close the HTTP server (server.close() and destroy open sockets) before reloading. Add a variant where the host redirects /index.html. I checked the current build on a normal host with the server truly down: 0 of 134 photos broken, 124 map paths drawn."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/sw.js:33-41",
+    "problem": "Every same-origin page load is answered with the cached index.html, whatever the URL. Once the app has been opened, https://host/phuket-guide-offline.html (the single-file backup the README says to keep on the phone) and a directly opened phuket-areas.kml both return the app page. A user saving the 'backup' actually gets index.html, which loads photos from relative img/ paths and shows none when opened from Files.",
+    "evidence": "In sw-nav.mjs, navigating to /phuket-guide-offline.html loaded a page with build 'standalone' (index.html), even though the server logged the real request. Navigating to /phuket-areas.kml returned text/html starting '<!doctype html>'. The <a download> KML link itself still downloads the correct file in Chrome.",
+    "fix": "Serve index.html only for the app's own path: when req.mode==='navigate' and the pathname ends with '/' or '/index.html'. For other pages, use caches.match(req) or fetch(req). Consider linking the backup file from the Offline box."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/sw.js:48-61 (TILE_MAX at line 7); /Users/mac/Documents/Phuket/src/app.js:208 and :265",
+    "problem": "Saved map tiles are almost never shown offline. When navigator.onLine is false, initMap forces the 'simple' vector map, so streets you viewed are not displayed. That breaks the promise in sw.js that 'areas you looked at stay visible offline'. The tiles are also stored as opaque responses, because L.tileLayer has no crossOrigin option, and Chrome counts each opaque response as about 10.6 MB of storage. TILE_MAX = 1500 allows about 16 GB of counted usage.",
+    "evidence": "In tiles.mjs, navigator.storage.estimate() went from 7.3 MB to 103.1 MB after 9 cached tiles (type 'opaque', tile <img> elements have no crossorigin attribute). After an offline reload the map was on 'simple' with 0 tile images. curl shows server.arcgisonline.com sends 'Access-Control-Allow-Origin: *', so CORS tile requests would work.",
+    "fix": "Set crossOrigin: true on L.tileLayer and cache only responses with res.ok (drop the opaque branch). Lower TILE_MAX to about 300-500. When offline and the guide-tiles cache has entries, start on 'streets' and rely on the existing tile-error fallback. Call navigator.storage.persist() after install."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:212, :220, :265",
+    "problem": "setBase() always saves the chosen map style, including choices the app makes on its own: the offline default when the map opens, and the fallback after 4 failed tiles. Opening the Areas tab once while offline (plane, boat, dead zone) leaves the map on the plain 'Offline' style with no streets, even once back online, until the user notices and taps Streets.",
+    "evidence": "tiles.mjs: online the saved style (pg:base) is 'streets'. After an offline reload it is 'simple'. After reloading back online, navigator.onLine is true but pg:base is still 'simple', the Offline button is selected and 0 tiles load.",
+    "fix": "Save the style only when the user taps a Streets/Satellite/Offline button (pass a flag from that click handler). Keep automatic choices in memory only."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:155-177 (show/route) with :123-129 (apply)",
+    "problem": "Links that jump to a card (Home agenda, Saved list, map popup 'Details' and 'About this area') don't clear the active filters or search. If the target card is filtered out, scrollIntoView on a hidden element does nothing. The user lands in the right tab at a random scroll position with no card in view.",
+    "evidence": "ui.mjs: filtered Events to 'Koh Phangan', went Home, tapped the agenda link #ev-cafe-del-mar-pyramid-2027-01-08. The events view showed, but the target card had hidden=true and height 0.",
+    "fix": "In route(), if the target card is hidden by its list, reset that list's filter chips to 'all', clear its search box, run apply(), then scroll to the card."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:392-407 and :10",
+    "problem": "In a normal Safari tab, the Offline box says 'Saved for offline use on this phone.' But Safari deletes all of a site's script-written storage (service worker, Cache API, localStorage) after 7 days of Safari use without visiting it, and the trip is 85 days away. Stars and 'My hotels' (with booking numbers) live only in localStorage with no export. On iOS they don't carry over into the Home Screen app, which has its own storage. When storage is blocked, the 'Saved' and 'Hotel added' toasts still appear but nothing is kept.",
+    "evidence": "app.js:396 sets the green 'Saved' text as soon as serviceWorker.ready resolves, whether or not the app is installed. navigator.storage.persist() is never called. store.set silently swallows errors (line 10). WebKit's '7-Day Cap on All Script-Writeable Storage' (WebKit blog, March 2020) exempts only Home Screen apps.",
+    "fix": "On iOS outside the installed app, replace the green text with 'Add to Home Screen to keep it offline. Safari may clear it if you don't open it for a week.' Call navigator.storage.persist(). Make store.set report failure and show a toast when a save fails. Add a copy/share button for My hotels."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:442-444; /Users/mac/Documents/Phuket/src/app.js:189; /Users/mac/Documents/Phuket/src/styles.css:43 and :46",
+    "problem": "The map legend doesn't match the pins. Regular places are drawn in --sea (teal), but the Places chip shows an --orchid dot. The Areas chip shows teal, though areas are multi-coloured outlines. In dark mode --orchid and --pulse are both #ff6f9c, so music pins and hidden-gem pins look identical.",
+    "evidence": "/Users/mac/Documents/Phuket/research/qa-shots/dark-areas.png (crop at /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/dark-areas-map.png): parties and gems are the same pink; the legend reads Areas=teal, Music=pink, Places=pink. The dark CSS sets '--orchid: #ff6f9c' (line 43) and '--pulse: #ff6f9c' (line 46).",
+    "fix": "Legend: show a teal dot for Places plus a separate orchid dot for 'Hidden gems', and an outlined swatch for Areas. Give dark-mode --orchid its own colour (for example #d77bff, 6.2:1 on --night), or draw gems with a different marker shape."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:41-54 and :64-70",
+    "problem": "'Today' is worked out once, at page load. iOS and Android resume an installed web app from memory without reloading, so the status pill ('Day 3 of 11'), the today ring and the default agenda day stay on the day the app was opened. During the trip, Home can present yesterday's parties as today's.",
+    "evidence": "todayISO and the pill text are set only at startup. A grep of app.js finds no visibilitychange or pageshow listener.",
+    "fix": "Move the status and today logic into a function and re-run it on visibilitychange (when the page becomes visible) and on pageshow. Re-select today unless the user has picked a day."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:139, :143, :144, :281",
+    "problem": "Small text fails WCAG AA contrast (4.5:1 needed below about 18px bold). The 'Hidden gem' pill in dark mode (white on #ff6f9c) is 2.62:1. The 'OK' exchange-rating pill in light mode (#c98414 on #f7e7c6) is 2.53:1, and it appears on 4 of the 8 money brands. The 'Best rates'/'Very good' pill in light mode is 4.06:1, and the green 'Saved for offline use' text is 3.99:1.",
+    "evidence": "Computed contrast ratios. Element screenshots: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/light-ok-pill.png (faint 'OK' under NC Plus) and /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/dark-gem-pill.png.",
+    "fix": "In dark mode, use color: var(--on-pulse) on .pill.gem (7.3:1). In light mode, use #7a4f00 text on .pill.warn (5.8:1), and #1b6b41 on .pill.good and .offline-state.good (about 5.3:1)."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:398-400; /Users/mac/Documents/Phuket/tools/build.mjs:365",
+    "problem": "The offline status text is wrong outside the hosted build. The single-file backup, which already works offline with photos built in, tells the user 'Open this guide from its web address once to save it for offline use.' The artifact says 'Use the offline version for the trip.' with no link or hint where that version is, which is a dead end on the copy the user is most likely to open first. Without JavaScript (an iOS Files/Quick Look preview of the backup), the text stays on 'Checking…' forever.",
+    "evidence": "Single-file Home screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/single-home-bottom.png. The single-file build (D.build 'single') falls into the else branch at app.js:399.",
+    "fix": "Add a 'single' case ('This file works offline as it is'). Make the artifact message link to, or explain how to get, the hosted URL or the offline file. Change the static default text from 'Checking…' to something neutral."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:58-62 and :71-78",
+    "problem": "After tapping 'Show all days' and then a single day, the button still reads 'Show one day' while one day is shown. Tapping it then shows all 11 days.",
+    "evidence": "ui.mjs: after 'Show all', the button reads 'Show one day' (pressed, 11 days shown). After tapping a day, it still reads 'Show one day' (not pressed, 1 day shown). Tapping it again shows 11 days.",
+    "fix": "In selectDay(), also reset the button's text to 'Show all days'."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:183-188 and :219",
+    "problem": "Map colours are copied from the CSS when the map is first built and refreshed only by the in-app theme button. If the phone switches to dark mode automatically at sunset while the app is open, the land stays bright cream, pins keep their light-mode colours and street tiles aren't dimmed until the page reloads.",
+    "evidence": "theme2.mjs: after switching the system to dark, the land fill stays #f4f3ec (CSS now says #1b2f2f) and marker strokes stay #ffffff. Screenshot: /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/qa/theme-switch-map.png.",
+    "fix": "Add matchMedia('(prefers-color-scheme: dark)').addEventListener('change', restyleMap), and make restyleMap also toggle the dim-tiles class."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:26-27 (runs at the end of a 1.1 MB document)",
+    "problem": "A theme picked in the app is applied only when app.js runs at the end of the page, after the first paint. Users whose choice differs from the system theme see a flash of the wrong theme on every launch, for example a white flash at night.",
+    "evidence": "fouc2.mjs, served from the service worker with 4x CPU throttling: first paint at 240-300 ms, page parsed (which is when app.js runs) at 537-838 ms.",
+    "fix": "Read pg:theme in the boot script in <head> that already adds the 'js' class (wrapped in try/catch) and set data-theme there."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/sw.js:11 and :35-39; /Users/mac/Documents/Phuket/src/app.js:395",
+    "problem": "Updates are silent and show up only on the second launch after a redeploy, with no 'updated, tap to reload' prompt. Precache requests go through the HTTP cache, so a host with max-age can precache a stale index.html.",
+    "evidence": "sw-update.mjs: after a redeploy, launch 1 still shows the old title and launch 2 shows the new one. There is no updatefound or controllerchange handling in app.js.",
+    "fix": "Listen for controllerchange and show a toast with a reload action. Precache with {cache:'reload'}."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:329 and :103; /Users/mac/Documents/Phuket/src/app.js:87 and :248",
+    "problem": "Screen-reader and keyboard gaps. The day strip uses <a> links with aria-pressed, so the selected day is never announced. None of the 112 map pins can be reached by keyboard, and the map is a focusable unnamed 'generic' element. The 140 star buttons are all labelled 'Save' with no item name, and they change both their label and aria-pressed when toggled.",
+    "evidence": "Chrome's accessibility tree (a11y.mjs): selected day button is role 'link', name 'FRI 8', with no pressed state. Focusable map pins: 0 of 112. #map is a focusable 'generic' element.",
+    "fix": "Render the day strip as <button>s (keep the link only for the no-JS version) or give them role='button'. Use a fixed label such as aria-label='Save <name>' with aria-pressed only. The map pins are acceptable if the cards stay the accessible path; consider role='application' or aria-hidden plus a note."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:334-338",
+    "problem": "The direction-swap button's accessible label keeps the old currency after the user changes currency.",
+    "evidence": "ui.mjs: after selecting EUR, the label still reads 'Switch to baht → USD'.",
+    "fix": "Call label() in the currency select's input handler."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:398; /Users/mac/Documents/Phuket/src/app.js:314",
+    "problem": "The reduce-motion CSS doesn't cover smooth scrolling started from JavaScript (window.scrollTo with behavior 'smooth' in the 'Show on map' handler), or Leaflet's pan and zoom animations.",
+    "evidence": "An explicit behavior:'smooth' overrides CSS scroll-behavior. setView and fitBounds animate by default.",
+    "fix": "Check matchMedia('(prefers-reduced-motion: reduce)'): use behavior 'auto' and pass {animate:false} to setView and fitBounds, or create the map with zoomAnimation:false."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/tools/build.mjs:645 and :660",
+    "problem": "Wasted precache download. index.html (1.17 MB) is cached twice, as './' and 'index.html'. dist/img is never cleaned, so 7 images from removed items (about 200 KB) are still precached.",
+    "evidence": "Unreferenced files: events-barra-cuda-beach-club, events-black-box-samui, events-nikys-speakeasy-bang-tao, events-o-beach-ibiza-club-seen-samui-2027, events-oxa-jungle-party-jan-2027, hotels-see-sea-backpackers, places-mai-khao-plane-spotting (.webp). The precache totals 148 entries, 7.13 MB.",
+    "fix": "Empty dist/img before copying. Build the precache list from images the page actually references. Keep a single copy of the HTML (see the high-severity fix)."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/dist/index.html (built 16:21) vs /Users/mac/Documents/Phuket/data/images.json (16:31)",
+    "problem": "The built output is stale. Black Rock Viewpoint shows a placeholder diamond instead of a photo, although its photo now exists.",
+    "evidence": "1 of 143 cards in dist has class 'ph' (pl-black-rock-viewpoint). assets/img/places-black-rock-viewpoint.webp was created at 16:31, after the build.",
+    "fix": "Run node tools/build.mjs again."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/artifact/index.html; /Users/mac/Documents/Phuket/tools/build.mjs:586-588",
+    "problem": "The artifact is 6.8 MB (4.8 MB gzipped) because all photos are embedded in the page, and with no service worker it re-downloads on every open over mobile data. Leaflet loads as a blocking script from cdnjs before app.js, so a slow CDN also delays routing (all views stay stacked until it runs).",
+    "evidence": "Measured sizes: artifact/index.html is 6779 KB raw and 4800 KB gzipped. The Leaflet <script src> comes before the inline app script.",
+    "fix": "Upload the photos as artifact files or assets and reference them by URL. Load Leaflet with defer and start the map from its load event."
+   }
+  ]
+ },
+ "review:phone-ux": {
+  "summary": "Phone UX / visual review of the Phuket guide. I read all 14 QA screenshots (as 102 full-resolution slices) and contact sheets of all 141 shipped photos. I also ran puppeteer checks against a local copy of dist/ at 390, 360 and 320px in both themes: hit-tests, real taps, contrast and tap-target sizes, image loading, horizontal overflow, and JS-off and artifact renders.\n\nWhat works: no horizontal page overflow at 390, 360 or 320px. All 134 card images load once scrolled, and the service worker precaches all 141. The JS-off fallback (single-file preview) and the artifact build both render.\n\nTwo things about the QA screenshots themselves. The grey empty photo boxes in research/qa-shots (Circoloco, Marco Carola, Kamala, Surin and others) are not broken images: tools/shoot.mjs never scrolls, so the `loading=\"lazy\"` images below the fold never load. It also caps each capture at 5200 CSS px, so most of each long list (places is about 60,800px tall) is not in the QA shots at all.\n\nThe serious problems are all on the Areas map. The map's z-indexes are not contained in its box (`.mapbox` is not a stacking context). As a result:\n- Leaflet's attribution covers the tab bar. A tap on the Areas tab icon opens openstreetmap.org/copyright; taps on the Stay and Money icons do nothing.\n- Once the page scrolls, the map covers the sticky header.\n\nAlso on the map:\n- The layer toggles sit behind the tab bar when the page loads.\n- The legend colors are wrong, and in dark mode Music and Places pins are the same color.\n- Turning the Areas layer off and on buries 52 of 54 visible pins under the area shapes, so tapping a pin opens the area popup instead.\n- Three southern area labels collide at the default zoom.\n\nWrong info: the big \"Every …\" date tile on weekly event cards shows wrong weekdays. A day-name match picks up \"sun\" in \"sunset\"/\"sunrise\" and \"Wed\" in \"closed Wednesdays\", so Chill Up says Wednesday, the day it is closed, and Sabaii Friday says Sunday.\n\nSmaller issues:\n- The phrase table squeezes the pronunciation column.\n- Two weekly venues use dated flyers (\"13 FEB\", \"18 SEP\") as their photo.\n- Four exchanges get a made-up teal \"sign\".\n- The Spiritgust location shows as \"Other\".\n- The trip pill overlaps the brand text at 360px.\n- Some places show two different durations in their Time row.\n- Three photos carry watermarks, one hotel shows a street instead of the hotel, and Black Rock Viewpoint has no photo.\n- Some labels have low contrast, and photo credits on event cards are hidden under the flyer gradient.\n- Several tap targets are under 40px.\n\nEvidence screenshots are in /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/vp/ (for example light-areas-top.png, light-map-over-topbar.png, light-info-phrases.png, w360-home.png, w320-home.png, dark-areas-top.png).",
+  "issues": [
+   {
+    "severity": "high",
+    "where": "Areas view map: /Users/mac/Documents/Phuket/src/styles.css:262 (.mapbox), :77 (.topbar z-index 50), :377 (.tabbar z-index 900); same in dist/index.html, phuket-guide-offline.html and artifact/index.html",
+    "problem": "The map's z-indexes are not contained in the map box. `.mapbox` is `position: relative` with no z-index or isolation, so it does not create a stacking context. Leaflet's layers (map panes z-index 400, controls 600, bottom control container 1000) therefore compete with the page's top bar (50) and tab bar (900).\n(1) When the Areas view first loads, the attribution '© OpenStreetMap, Tiles © Esri & contributors' is drawn on top of the tab bar and catches taps. Tapping the AREAS tab icon opens openstreetmap.org/copyright in a new tab, and tapping the STAY or MONEY icons does nothing.\n(2) After scrolling the Areas page about 150px or more, the map slides OVER the sticky header. The HKT brand, the trip pill and the info and theme buttons disappear, and the zoom buttons sit where the theme button was.",
+    "evidence": "elementFromPoint at the tab icon centers with scrollY=0: Areas (228,810) hits <a href=openstreetmap.org/copyright>; Stay (293,810) and Money (358,810) hit DIV.leaflet-control-attribution.\nA real touchscreen tap at the OSM link opened a third tab: https://www.openstreetmap.org/copyright.\nA tap on the Money icon left location.hash at #areas.\nAt scrollY 220–500 the top-bar hit points return map paths and BUTTON.icon-btn (the map zoom controls).\nScreenshots: scratchpad/vp/light-areas-top.png (attribution text over the AREAS/STAY/MONEY icons), vp/light-map-over-topbar.png (header fully covered by the map), vp/light-areas-map-scrolled.png.\nThe same attribution overlap shows in research/qa-shots/light-areas.png and in the artifact render (vp/artifact-light-areas.png).",
+    "fix": "Contain the map's stacking: `.mapbox { isolation: isolate; }` (or `z-index: 0`). Optionally also keep the attribution out of the tab bar's way, e.g. `.leaflet-bottom { bottom: var(--tabbar-h) }`, or the height fix in the separate layer-toggle issue."
+   },
+   {
+    "severity": "high",
+    "where": "Music cards, date tile: /Users/mac/Documents/Phuket/tools/build.mjs:175 (shortRecurrence)",
+    "problem": "The big 'Every …' date tile on weekly events and venues shows wrong weekdays. The regex `\\b + 'Sun'` matches 'sunset' and 'sunrise', and 'Wed' matches 'closed Wednesdays'.\n- Chill Up: 'Every Mon Wed Thu', although its recurrence says it is closed on Wednesdays.\n- Sabaii Friday Beach Party: 'Every Fri Sun'.\n- OXA Jungle Party: 'Every Tue Fri Sun'.\n- Waterfall Party: 'Every Wed Sun'.\n- Eden Garden: 'Every Sat Sun' (it is a Saturday party).\nIt also says 'Every' for irregular nights: Courage Bar 'Every Fri Sat' for 'irregular parties', and Unclave 'Every Fri' for 'about every second Friday'. The tile is the most prominent element of the card and contradicts the date chips right below it (Sabaii chips: Fri 8, Fri 15).",
+    "evidence": "Rendered tiles vs data/events.json recurrence text:\n- sabaii: 'Every Friday: sunset session from 17:00…' → tile 'Fri Sun'\n- oxa: '…21:00 to sunrise…' → 'Tue Fri Sun'\n- chill-up: '…closed Wednesdays.' → 'Mon Wed Thu'\n- waterfall: '…to sunrise.' → 'Wed Sun'\n- eden: '…to late Sunday morning' → 'Sat Sun'\n- courage-bar: 'Irregular parties… mostly on Fridays or Saturdays' → 'Every Fri Sat'\n- unclave: 'about every second Friday' → 'Every Fri'",
+    "fix": "Derive the tile from the event's in-trip `dates` weekdays first. Otherwise match whole day names, (`/\\b(mon|tues?|wed(nes)?|thu(rs)?|fri|sat(ur)?|sun)(day)?s?\\b/i`), excluding 'sunset'/'sunrise' and any day preceded by 'closed'. Use 'Most'/'Often' instead of 'Every' when the recurrence says most/about/irregular/every second."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas map layer chips: /Users/mac/Documents/Phuket/tools/build.mjs:442-446; /Users/mac/Documents/Phuket/src/app.js:189 (DOT); /Users/mac/Documents/Phuket/src/styles.css:43,46,53,56 (dark --orchid equals --pulse)",
+    "problem": "The map legend is wrong.\n- The 'Areas' chip dot is teal (--sea), but teal is the color of most PLACE pins (must-see, day trips, food: DOT.place = --sea).\n- The 'Places' chip dot is orchid, which only hidden-gem pins use (24 of 61 places).\n- In dark mode --orchid and --pulse are both #ff6f9c. The Music and Places chips get the same dot, and hidden-gem pins cannot be told apart from music pins. That is bad for a techno fan scanning the map for raves.",
+    "evidence": "Computed chip dot colors, dark: Music rgb(255,111,156), Places rgb(255,111,156); light: Areas rgb(10,116,128), the same teal as the place pins.\nvp/dark-areas-top.png and research/qa-shots/dark-areas.png show only pink and teal pins.\nclientData gives kind 'place' (teal) to 37 places and 'gem' to 24.",
+    "fix": "Make the Places chip dot var(--sea) and add a separate 'Hidden gems' dot (orchid), or color all place pins one way. Give dark mode a distinct --orchid (e.g. a violet or magenta well away from #ff6f9c), and use a neutral or outline swatch for the Areas chip."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas map: /Users/mac/Documents/Phuket/src/styles.css:262 (.mapbox height: min(70vh, 640px)), :269 (.layerbar at bottom)",
+    "problem": "At page load the map's layer toggles (Areas / Music / Places / Hotels / Money) sit behind the fixed tab bar. Only the top few pixels of the chips peek out. Hotels and Money are off by default, so a user who wants to see hotels or exchanges on the map cannot find the switch. Dragging on the map pans it rather than scrolling the page, so the only way to reveal the chips is to drag the ~170px intro strip above the map.",
+    "evidence": "At 390x844: mapbox top 227, height 591 → bottom 817; layerbar 766–817; tab bar top 788.5.\nVisible in vp/light-areas-top.png and research/qa-shots/light-areas.png: the chip tops show just above the tab bar.",
+    "fix": "Size the map to the visible area, e.g. `height: min(calc(100svh - var(--tabbar-h) - 240px), 640px)`, or move the layer bar to the top of the map under the style switch. Combine with the stacking fix."
+   },
+   {
+    "severity": "medium",
+    "where": "/Users/mac/Documents/Phuket/src/app.js:254-260 (layer chip toggle), :235-244 (area polygons in default overlay pane)",
+    "problem": "Turning the 'Areas' layer off and back on re-appends the area polygons above every pin, since they share the overlay SVG. After that, tapping a music, place or hotel pin hits the area polygon and opens the area popup instead of the pin's popup.",
+    "evidence": "Hit-test of the 54 pins visible in the map viewport. Initially 38 are on top (16 are only covered by neighbouring pins). After clicking the Areas chip twice, 2 are on top and 52 are covered by area paths (stroke-width 1.4 = area polygons).",
+    "fix": "Put the area polygons in their own pane below the markers (e.g. `map.createPane('areasPane').style.zIndex = 350` and pass `pane: 'areasPane'` to the area GeoJSON), or call `bringToBack()` on each area layer after re-adding it."
+   },
+   {
+    "severity": "medium",
+    "where": "Areas map labels: /Users/mac/Documents/Phuket/src/app.js:242; /Users/mac/Documents/Phuket/src/styles.css:293-294",
+    "problem": "At the default fitted zoom the labels of the three southern areas overlap into one unreadable cluster. 'Kata Noi' and 'Rawai, Ya Nui' print on top of each other ('KatRawai, Ya Nui'), with 'Nai Harn' jammed underneath. These are the Kata / Nai Harn hotel areas the guide recommends.",
+    "evidence": "Label bounding boxes overlap: 'Kata Noi <> Nai Harn', 'Kata Noi <> Rawai, Ya Nui', 'Nai Harn <> Rawai, Ya Nui' (both themes).\nVisible in vp/light-areas-top.png, vp/dark-areas-top.png, research/qa-shots/light-areas.png and the artifact render.",
+    "fix": "Hide small-area labels below zoom about 11 (per-area minZoom), use leader offsets for Kata Noi and Nai Harn, or run a simple collision pass that drops overlapping labels."
+   },
+   {
+    "severity": "medium",
+    "where": "Essentials > Useful Thai table: /Users/mac/Documents/Phuket/src/styles.css:361 (.phrases td.th { white-space: nowrap })",
+    "problem": "The Thai column cannot wrap, so the 'Say' column (the romanization the traveler reads aloud) is squeezed to about 70px. 'sa-wat-dee krap / ka' breaks into five lines, 'kop-kun krap / ka' and 'kor-tote krap / ka' into four. The most useful column is the hardest to read.",
+    "evidence": "vp/light-info-phrases.png: the English and Thai columns are wide, while 'Say' wraps word by word ('sa- / wat- / dee / krap / / ka').",
+    "fix": "Drop `white-space: nowrap` on td.th, or give the 'Say' column a min-width (e.g. 8em). Better for phones: stack Thai and 'Say' under each English phrase."
+   },
+   {
+    "severity": "medium",
+    "where": "Music cards Courage Bar and Unclave: /Users/mac/Documents/Phuket/data/images.json:352 (events:courage-bar-phuket-town), :82 (events:unclave-phangan)",
+    "problem": "Two weekly or irregular venue cards use a flyer for one specific past night as their photo.\n- Courage Bar shows a 'SUB … 13 FEB, Friday, start 21:00' flyer with that night's lineup (Freestylers, Gardna).\n- Unclave shows a Groovy Tunes 'Friday 18 SEP … 6 years' flyer.\nThe trip is 8–18 Jan, so the image advertises dates and lineups that do not apply.",
+    "evidence": "Contact sheet scratchpad/sheets/sheet-01.png (events-courage-bar-phuket-town) and sheet-02.png (events-unclave-phangan). Sources: ra.co/events/2363193 and ra.co/events/2537438.",
+    "fix": "Use a venue photo (interior or exterior) for venue-type cards, or crop the flyer to artwork without dates."
+   },
+   {
+    "severity": "medium",
+    "where": "Money cards 'sign' badge: /Users/mac/Documents/Phuket/tools/build.mjs:275 (signColors fallback '#0a7480'), :292",
+    "problem": "The colored 'sign' badge is meant to show each exchange's branding so the shop can be spotted on the street. Four of the eight (Lion Currency Exchange, NC Plus, Thai bank booths, Airport counters) have no brand color, so they get the app's own teal and look like a teal shop sign that does not exist. Mamy's badge is painted blue and green although its own card says 'We did not check the colors of the shop sign'.",
+    "evidence": "data/exchanges.json: primaryColor is null for lion, nc-plus, thai-bank-booths and phuket-airport-counters.\nScreenshots: vp/light-ok-pill.png (NC PLUS teal slab), vp/money-mx-thai-bank-booths.png and vp/money-mx-phuket-airport-counters.png (teal slabs).",
+    "fix": "Only draw a filled 'sign' when the brand colors are verified. Otherwise show a neutral outlined name badge, and keep the 'Look for:' text as the recognition cue."
+   },
+   {
+    "severity": "medium",
+    "where": "Home agenda and event card subtitle: /Users/mac/Documents/Phuket/tools/build.mjs:51-52 (OFF_ISLAND.other = '' falls through to cap('other')), :156, :335",
+    "problem": "Spiritgust Festival's area is 'other'. The empty string in OFF_ISLAND is falsy, so areaName() returns 'Other', and the intended `|| e.island` fallback ('Nakhon Si Thammarat') never runs. The Fri 8 Jan agenda on the home screen reads 'Spiritgust Festival 2027 · Other', which gives no clue that it is on the mainland several hours away. The card subtitle ends in '· Other' too.",
+    "evidence": "dist/index.html: '<a href=\"#ev-spiritgust-2027\">Spiritgust Festival 2027</a> <span>· Other' and the subtitle '… (exact site TBA) · Other'.\nVisible in research/qa-shots/light-home.png (Fri 8 Jan list).",
+    "fix": "Make areaName return '' for 'other' (e.g. `if (id === 'other') return ''`) so callers fall back to e.island."
+   },
+   {
+    "severity": "medium",
+    "where": "Top bar and trip pass at narrower phones: /Users/mac/Documents/Phuket/src/styles.css:83 (.brand min-width:0), :87 (.brand-text small nowrap), :214 (.pass-code 58px), :222 (11-column day grid)",
+    "problem": "At 360px wide (a very common Android width) the '85 DAYS TO GO' pill overlaps the brand subtitle: '8–18 Jan 2027' is cut off under the pill. At 320px the pill covers most of 'Phuket 8–18 Jan 2027'. The 58px 'HKT' runs into '8–18 Jan 2027 · 11 days', the weekday labels merge ('SATSUNMONTUE WEDTHU'), and the event dots of neighbouring days run together.",
+    "evidence": "vp/w360-home.png (subtitle under the pill) and vp/w320-home.png (pill over the brand, HKT over the dates, merged weekday labels). No horizontal page overflow, so the automated overflow check passes; these are internal overlaps.",
+    "fix": "Let the brand truncate (`.brand-text small { overflow: hidden; text-overflow: ellipsis }`, `.brand { overflow: hidden }`), or hide the subtitle under about 380px. Scale .pass-code with clamp() (e.g. `clamp(40px, 14vw, 58px)`), and shorten the weekday labels to one letter under 360px."
+   },
+   {
+    "severity": "medium",
+    "where": "Places cards 'Time' row: /Users/mac/Documents/Phuket/tools/build.mjs:193, :201 (and the photo badge at :197)",
+    "problem": "'How long each takes' (a core thing the user asked for) shows two different numbers on many cards.\n- Six cards (Windmill Viewpoint, Khao Khad Viewpoint, Wat Phra Thong, Mee Ton Poe, Lock Tien, Go Benz) show '1–2 h' on the photo badge and '1–2 h · 0.5 h–1 h on site' in the Time row.\n- Five 2–3 h cards say '2–3 h · 1.5 h–3 h on site' or '2–3 h · 1.5 h–2.5 h on site'.\n- Other cards repeat themselves: '2–3 h · 2 h–3 h on site', '1–2 h · 1 h–2 h on site'.",
+    "evidence": "All 61 Time rows checked in dist/index.html: 11 contradict the badge bucket and 5 are exact duplicates. Visible in research/qa-shots/light-places.png (Big Buddha: '1–2 h · 1 h–2 h on site'; Wat Chalong: '1–2 h · 1 h–1.5 h on site').",
+    "fix": "Show one duration. Use durationHours ('0.5–1 h on site') in both the badge and the Time row, keeping the bucket only for the filter chip; or drop the bucket label from the Time row."
+   },
+   {
+    "severity": "low",
+    "where": "Place photos: /Users/mac/Documents/Phuket/data/images.json:412 (places:karon-temple-market), :372 (places:koh-sirey), :432 (places:summore-day-cafe)",
+    "problem": "Three place photos carry burned-in watermarks: '©WillyThuan' on Karon Temple Market and Koh Sirey (Golden Buddha), and '© Phuket 101' on Summore Day Cafe. Their credit line also prints '© phuket101.net (third-party site, all rights reserved)' over the photo.",
+    "evidence": "scratchpad/grid-b.png (full-size crops) and sheets/sheet-05.png and sheet-07.png show the watermarks at the bottom corners.",
+    "fix": "Swap in Wikimedia or venue photos, or crop the watermark out (all three have room to crop at 16:9)."
+   },
+   {
+    "severity": "low",
+    "where": "Shunli Hotel card (/Users/mac/Documents/Phuket/data/images.json:1382) and Black Rock Viewpoint card (tools/build.mjs:90 placeholder)",
+    "problem": "Two cards break the 'every item has an image' rule.\n- Shunli Hotel shows a generic Thalang Road street photo full of parked cars. A user would read it as the hotel's exterior; only the truncated credit says 'area photo'.\n- Black Rock Viewpoint (a hidden gem) has no image at all: a grey box with a faint '◆' glyph (1.6:1 contrast). It is the only one of 134 cards without a photo.",
+    "evidence": "vp/light-shunli.png; vp/dark-blackrock.png. A dist/index.html scan finds exactly one '<span class=\"ph\"' placeholder: pl-black-rock-viewpoint.",
+    "fix": "Add a real Shunli Hotel photo and a Black Rock / Pa Hin Dam viewpoint photo. If none is available, label the stand-in clearly on the image (e.g. a 'Nearby: Thalang Road' pill)."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:144 (.pill.warn), :139 (.pill.gem), :101 + :306 (eyebrow inside .reco)",
+    "problem": "Some labels fail contrast:\n- The light-mode 'OK' exchange rating pill: amber #c98414 on #f7e7c6 = 2.53:1. This is the label that ranks the exchanges.\n- The dark-mode 'Hidden gem' pill: white on #ff6f9c = 2.62:1.\n- The 'For you' eyebrow on the 'Best bases' box: 1.85:1 in dark, 2.96:1 in light.",
+    "evidence": "Contrast audit in both themes. Visible in vp/light-ok-pill.png ('OK' badge), vp/dark-gem.png and vp/dark-reco.png ('FOR YOU' nearly invisible).",
+    "fix": "Light .pill.warn text: a darker amber such as #8a5a00. Dark .pill.gem: use color var(--on-pulse). .reco .eyebrow: `color: inherit; opacity: .75`."
+   },
+   {
+    "severity": "low",
+    "where": "Music card photos: /Users/mac/Documents/Phuket/src/styles.css:193 (.flyer .media::after) over :133 (.media .credit)",
+    "problem": "On all 31 music cards the photo credit and license sits under the dark flyer gradient. The ::after overlay comes after .credit in the DOM and neither has a z-index, so the attribution is barely visible. Some photos are CC BY-SA, which requires visible credit.",
+    "evidence": "research/qa-shots/light-events.png and vp/light-events-chips.png: '© phangan.events · listing site image…' is faint grey on near-black, while place and hotel cards show readable white-on-black credits.",
+    "fix": "`.media .credit { z-index: 1 }`, or start the gradient above the credit."
+   },
+   {
+    "severity": "low",
+    "where": "/Users/mac/Documents/Phuket/src/styles.css:222-223 (.days/.day-btn), :161 (details.more summary), :114-118 (.chip), :276 (.basebar button), :271 (.layerbar .chip), :335 (.branches .btn), :287 (popup .btn)",
+    "problem": "Several tap targets are under about 40px:\n- Trip-pass day buttons: 26px wide (11 across), easy to hit the neighbouring day.\n- 'Tips & links' / 'More' / 'Highlights' expanders: 22px tall (115 of them).\n- Filter chips: 34px.\n- Map style buttons: 30px; map layer chips: 31px.\n- Branch 'Map' buttons: 36px; map popup buttons: 34px.\n- Top-bar icon buttons: 38px.",
+    "evidence": "Measured getBoundingClientRect at 390px. Examples: a.day-btn 26x63 (11), summary 324x22 (31 on events, 61 on places, 23 on stay, 21 on areas), button.chip 34px tall, basebar 30px, a.btn 'Map' 72x36 (19).",
+    "fix": "Raise chip and summary padding to reach 44px height (e.g. summary `padding-block: 11px`, chip `padding: 12px 14px`), basebar and layer chips to 40px. For the day strip, consider a horizontally scrollable strip with wider cells."
+   },
+   {
+    "severity": "low",
+    "where": "Money > Thai bank booths card: /Users/mac/Documents/Phuket/tools/build.mjs:285 (sample rates line)",
+    "problem": "'Sample buy rates' lists two USD and two EUR values with no bank names ('USD 33.07 (2026-10-15) · EUR 36.92 (2026-10-15) · USD 33.22 (2026-10-15) · EUR 36.97 (2026-10-15)'), so the reader cannot tell which bank pays which. The date also repeats after every figure.",
+    "evidence": "vp/money-mx-thai-bank-booths.png.",
+    "fix": "Prefix each sample with its source (e.g. 'SCB: USD 33.07 · EUR 36.92; ttb: USD 33.22 · EUR 36.97') and print the date once."
+   }
+  ]
+ },
+ "review:maps-links": {
+  "summary": "I sent all 147 unique gmapsQuery values (154 items) to Google's map-search endpoint twice: once with the map centred on Phuket (or on Koh Phangan for items there), once from far away (Dubai). I also checked every Directions pin with OSRM (nearest road a car can drive to) and Nominatim (what is at that spot), tested each pin against its area outline with no tolerance, and rendered the offline map with puppeteer.\n\nThe queries are in good shape. For 147 of 154 items, Google's first result is within 400 m of the stored pin, and the 7 exceptions are explained below (2 are area cards, which have no Directions button). Nothing is misspelled, and every query names its province or island. check.mjs reports only Koh Sirey, and that warning is wrong about the pin: the pin is correct, but the offline map does not draw the island. The KML export is fine (134 points, coordinates in the right order, colours correct).\n\nThe real problems are in three places:\n1. Directions buttons that point somewhere you cannot drive: the Kruvit Raft, 10 island day trips, the Samet Nangshe hilltop, and 2 events whose pins are only placeholders.\n2. A few currency-exchange branches whose Map button opens a different shop.\n3. The \"My hotels\" fallback, which adds \" Phuket\" to the name and so breaks Koh Phangan hotels.\n\nEvery replacement query or coordinate below was tested and opens the right single place from both map positions. Evidence files:\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gresults.json (Phuket-centred results, with a Google place_id for every item)\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/gneutral.json\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/osrm.json\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/map-koh-sirey.png\n- /private/tmp/claude-501/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/scratchpad/map-kruvit.png",
+  "issues": [
+   {
+    "severity": "high",
+    "where": "data/places.json:2414-2415 (kruvit-raft lat/lng), used by tools/build.mjs:100 gdir() and src/app.js:197",
+    "problem": "Kruvit Raft's Directions button goes to the raft's spot in the sea, next to Koh Maphrao, not to Laem Hin Pier where the free boat leaves. The card's own tip says to do the opposite.",
+    "evidence": "The pin 7.9348,98.4136 is in the water: 181 m from the Koh Maphrao coast and 527 m from the Phuket coast (checked against data/geo/land.geojson). The nearest road a car can reach, per OSRM, is at 7.9378,98.4154, which is on Koh Maphrao, an island with no bridge. The card's tip reads: 'For directions, navigate to Laem Hin Pier, not to the raft. The raft is on the water.' The offline render (map-kruvit.png) shows the pin in the channel.",
+    "fix": "Add a Directions-only destination (e.g. dirLat/dirLng, used by actionRow and the map popup) of 7.934983,98.407818. That is Google's 'Laem Hin Pier' listing: the query 'Laem Hin Pier, Ko Kaeo, Phuket' returns that one place from both map positions, and OSRM puts a road 11 m away. Keep gmapsQuery 'Khru Vit Seafood Raft, Ko Kaeo, Phuket', which opens the right listing 3 m from the pin."
+   },
+   {
+    "severity": "high",
+    "where": "data/exchanges.json:398 (value-plus branch #1, Soi Sansabai)",
+    "problem": "The Map button for the late-night Value Plus booth (09:00-04:00) opens a different branch on Phra Metta Rd that closes at 19:00. Google has no listing for the Sansabai booth at all.",
+    "evidence": "The query 'Value Plus Currency Exchange (Sansabai Patong Phuket)' returns 2 results. #1 is 'Value Plus Currency Exchange (Patong Phuket)' at Urban Hotel, 188/2, 283 m from the pin: that is the 10:00-19:00 branch. #2 is the Big C Phuket branch, 7.5 km away. Three other queries also failed to find the booth: 'Value Plus Currency Exchange Sansabai', 'Value Plus Soi Sansabai Patong' and 'Value Plus Currency Exchange, 171/14 Rat-U-Thit 200 Pi Rd, Patong'. The brand summary sells this booth as the reason to use Value Plus late at night.",
+    "fix": "Set gmapsQuery to '7.892790,98.299473'. Google treats a lat,lng query as a dropped pin at the booth. Keep the street address in the branch notes."
+   },
+   {
+    "severity": "medium",
+    "where": "data/exchanges.json:533 (money-shop branch #1, Karon)",
+    "problem": "The Map button for Money Shop Karon opens a list of 20 other exchange shops, with the competitor EXFM (Fast Money) first. Money Shop's own office is listed on Google only under the plain name 'Exchange'.",
+    "evidence": "The query 'Money Shop Exchange Karon, Phuket' returns 20 results. #1 is 'EXFM (Fast Money)', 403 m away. Result #11, 'Exchange' at 100 Karon Rd, sits 0 m from the pin and matches the branch address (place_id ChIJw0EoZAAlUDARmp-Rwqi4JLw). 'Money Shop Karon' does not find it either; Marketcoin comes first.",
+    "fix": "Use gmapsQuery 'Exchange, 100 Karon Rd, Karon, Phuket'. That still returns a list of 13, but the right shop is #1 from both map positions. Better still, add &query_place_id=ChIJw0EoZAAlUDARmp-Rwqi4JLw so Google opens it directly."
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json day trips: phang-nga-bay-james-bond (2595), hong-by-starlight (2668), phi-phi-maya-bay (2738), similan-islands (2809), koh-racha-yai (2873), coral-island-koh-hey (2934), khai-islands (2992), koh-yao-noi (3041), koh-hong-krabi (3102), railay-krabi (3167); tools/build.mjs:100",
+    "problem": "The Directions button on 10 island and boat-only day trips points at an islet or a spot in the sea with no road, so a driving route cannot work. Each card's own 'Getting there' names the pier to go to instead.",
+    "evidence": "OSRM distance from each pin to the nearest drivable road:\n- James Bond Island: 5.6 km\n- Hong by Starlight (Ko Hong, Phang Nga): 4.9 km\n- Maya Bay: 6.1 km\n- Similan: 63.6 km\n- Khai Nok: 7.4 km\n- Koh Hong (Krabi): 6.6 km, and that road is on Koh Yao Noi\n- Coral Island: 5.5 km\n- Racha Yai: 166 m, but that road is on Racha Yai itself\n- Railay: the card itself says 'no roads, so you arrive by boat'\n- Koh Yao Noi: the pin is the island's centre, 2.5 km from Google's island pin",
+    "fix": "Point Directions at the departure pier (all checked: a road within 110 m of each):\n- Racha Yai and Coral Island: Chalong Pier 7.820855,98.344423 (Google listing 'ท่าเรือฉลอง'). Do NOT use the query 'Chalong Pier, Phuket': it opens a ferry-route line at sea (7.7525,98.5990).\n- Phi Phi and Railay: Rassada Pier Terminal 7.872544,98.414305.\n- Hong by Starlight and James Bond: Aopor Pier 8.060937,98.432937.\n- Similan: Thap Lamu Pier 8.570130,98.223243.\n- Koh Yao Noi: Bang Rong Pier 8.049466,98.415914.\n- Khai Islands and Koh Hong (Krabi): the pier depends on the tour, so hide Directions.\nKeep the current gmapsQuery values; they all open the right island."
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json:3291 (samet-nangshe-viewpoint lat 8.23929 / lng 98.43864)",
+    "problem": "Directions sends a private car past the car park and up to the hilltop viewpoint, but the card's tip says private cars must stop at the bottom car park. This is a 04:00 sunrise drive in the dark.",
+    "evidence": "The Google Maps button opens Google's main listing 'Samet Nangshe Viewpoint' at 8.235093,98.445248, which the tip identifies as the car park and truck stop, 864 m from the Directions pin. OSRM finds a 1.23 km drivable road from that car park to within 92 m of the hilltop pin, so a satnav will keep driving uphill.",
+    "fix": "Set the Directions destination to 8.235093,98.445248, or use destination_place_id=ChIJA1_2nYtSUDARCg5_WOqe-7E. Keep the hilltop point for the map dot. The gmapsQuery is already correct."
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json:1243-1249 (phuket-elephant-sanctuary)",
+    "problem": "The Google Maps button opens a listing 665 m from the office where every visit starts. The card says the sanctuary itself has no public access.",
+    "evidence": "The card says 'Meet at the sanctuary office in Paklok (this pin)' and 'There is no public access to the sanctuary; every visit starts at the office.' The stored pin 8.0258,98.4016 matches OSM node 5945513052, named 'Phuket Elephant Sanctuary office' (8.02601,98.40153). The query, and an '...office...' variant, only find Google's 'Phuket Elephant Sanctuary' at 8.020699,98.398442, 665 m away. Google has no separate office listing. Directions (lat/lng) and the Google Maps button therefore send people to different places.",
+    "fix": "Set gmapsQuery to '8.026009,98.401535' (the office node), or keep the listing and add a line that Google's pin is not the meeting point."
+   },
+   {
+    "severity": "medium",
+    "where": "data/events.json:1418 (halfmoon-festival-jan-2027 gmapsQuery) and the lat/lng below it",
+    "problem": "Both map buttons only lead to the Day 2 venue, the Magic Forest. Day 1, Fri 15 Jan from 14:00 to midnight, is at Harmony Beach Club about 2.3 km west, and the card's date tile shows FRI 15 first.",
+    "evidence": "gmapsQuery 'Magical Forest by Halfmoon Festival, Ban Tai, Koh Phangan' returns the Day 2 venue (0 m from the pin). The venue field and a tip say Day 1 is at Harmony Beach Club. 'Harmony Beach Club, Ban Tai, Koh Phangan' returns a single result at 9.702164,100.012809, 2.28 km from the forest pin.",
+    "fix": "Add a second map action labelled 'Day 1: Harmony Beach Club' with gmapsQuery 'Harmony Beach Club, Ban Tai, Koh Phangan' and Directions to 9.702164,100.012809. Keep the existing pair for Day 2."
+   },
+   {
+    "severity": "medium",
+    "where": "data/events.json:1329 (lost-jungle-parvati-2027, 9.74,100.03) and :1677 (spiritgust-2027, 8.6666667,99.9316667); tools/build.mjs:100 and :532; dist/phuket-areas.kml",
+    "problem": "Two placeholder pins (coordConfidence 'low') get a real Directions button, a map dot and a KML pin, so they look like actual venue locations. Both events fall in the trip dates.",
+    "evidence": "Lost Jungle: the pin is just the island centre. OSRM puts the nearest drivable road 1.1 km away, and Nominatim's nearest feature is Ban Thong Nang village, 2.4 km away, so this is jungle interior. Spiritgust: the pin reverse-geocodes to the Tha Sala government office on the main road, not a beach site. The cards' tips admit both locations are not known yet.",
+    "fix": "In actionRow and clientData (and the KML writer), skip Directions and the map dot when coordConfidence === 'low', and show 'Location TBA' instead. Keep the queries 'Koh Phangan, Surat Thani' and 'Tha Sala, Nakhon Si Thammarat', which correctly open the island and the district. Do not switch to 'Lost Jungle, Koh Phangan': that returns Jungle Experience and Retro Mountain."
+   },
+   {
+    "severity": "medium",
+    "where": "src/app.js:360 (My hotels fallback gmaps(h.name + ' Phuket'))",
+    "problem": "When the traveler adds a booked hotel without a link (the link field is optional, tools/build.mjs:467), the app adds ' Phuket' to the name. That breaks the guide's own Koh Phangan picks.",
+    "evidence": "'Milky Bay Resort Phuket' returns one result: 'Wyndham Grand Phuket Kalim Bay', 275 km from Milky Bay. 'Slumber Party Phuket' returns 'Slumber Party Surf Kata Phuket'. Both hotels are in data/hotels.json under Koh Phangan.",
+    "fix": "Use gmaps(h.name + ', Thailand'). 'Milky Bay Resort, Thailand' and 'Baba Beach Club Natai, Thailand' each return the correct single place."
+   },
+   {
+    "severity": "low",
+    "where": "data/exchanges.json:590 (money-shop branch #6, Central Phuket Festival)",
+    "problem": "The Map button opens the shopping mall, not the Money Shop booth, even though the booth has its own Google listing.",
+    "evidence": "'Central Phuket Festival, Wichit, Phuket' opens the 'Central Phuket' mall. 'Money Shop Exchange Central Phuket' finds 'Money Shop Exchange Central' at 7.891581,98.367357 (place_id ChIJFz-fz-IxUDARphiV2OFNfAU).",
+    "fix": "Use gmapsQuery 'Money Shop Exchange Central, Wichit, Phuket'. It returns a list of 5 with the right booth first, so also add &query_place_id=ChIJFz-fz-IxUDARphiV2OFNfAU."
+   },
+   {
+    "severity": "low",
+    "where": "data/areas.json:1304 (cape-panwa) and :1455 (thalang)",
+    "problem": "Two area cards' Google Maps buttons open a business instead of the area: Cape Panwa opens a hotel, Thalang opens a temple.",
+    "evidence": "'Cape Panwa, Phuket' returns a single result, 'Cape Panwa Hotel' (hotel). 'Wat Phra Thong, Thalang, Phuket' opens the temple, not the district.",
+    "fix": "Cape Panwa: 'Cape Panwa, Wichit, Phuket' (returns the place 'Cape Panwa' itself). Thalang: 'Thalang District, Phuket' (returns the district). Both are single results from both map positions."
+   },
+   {
+    "severity": "low",
+    "where": "data/places.json:2358 (karon-temple-market), :3554 (lock-tien); data/exchanges.json:422 (value-plus branch #3, Porto de Phuket)",
+    "problem": "Three queries can easily land on the wrong place. Two return a list whose second entry is a look-alike. The third only works when the phone is in Phuket.",
+    "evidence": "- Karon Temple Market: #2 is 'Karon Beach Night Market', a different market 644 m away.\n- Lock Tien: #2 is the closed old 'Lock Tien - Phuket local food center' on Yaowarat Rd, which the card's tip warns about.\n- Value Plus Porto de Phuket: from far away, #1 is the Central Phuket booth 13 km off. Google names the branch 'Value Plus Currency Exchange (Central Porto De)'.",
+    "fix": "- Karon Temple Market: 'Karon Temple Market, Karon, Phuket' (single result: 'Wat Karon', marked as a market, 9 m from the pin).\n- Lock Tien: 'ลกเที้ยน original, 59/14 Bangkok Rd, Phuket' (single, correct).\n- Value Plus Porto de Phuket: 'Value Plus Currency Exchange (Central Porto De), Cherngtalay, Phuket' (single result from both map positions)."
+   },
+   {
+    "severity": "low",
+    "where": "tools/build.mjs:43 and src/app.js:13 (gmaps() sends only a text query)",
+    "problem": "22 of 154 links return a list of results instead of opening one place, which adds a tap and a chance to pick the wrong entry.",
+    "evidence": "Multi-result queries include BOA, Mom Tri's Villa Royale, SuperRich, Lion at Central, Money Shop Kata/Nai Harn/Nai Yang, Value Plus Patong, Khao Rang, Nai Yang Beach, Bang Rong Pier, Khao Phing Kan, Ko Hong (both), Railay and Cheow Lan Pier. The top result is correct for all except the two exchange branches reported above.",
+    "fix": "Add an optional placeId field and build the link as ...&query=<gmapsQuery>&query_place_id=<placeId>. A place_id for every item is recorded in gresults.json (top[0].pid) at the scratchpad path in the summary."
+   },
+   {
+    "severity": "low",
+    "where": "data/geo/land.geojson (no Ko Sire feature); data/places.json:2100 (koh-sirey)",
+    "problem": "Koh Sirey is not drawn on the offline basemap. The offline map is what the artifact always shows and what the app shows offline, so the hidden-gem pin floats in open sea east of Phuket Town.",
+    "evidence": "check.mjs reports 'in the sea 1.07 km from Phuket coast'. land.geojson has 12 features and none of them is Ko Sire. The offline render (map-koh-sirey.png) shows the dot in open water. The pin itself is right: Google's 'Wat Ban Koh Sirey' is 85 m away.",
+    "fix": "Add the Ko Sire coastline in tools/geo.mjs (OSM island polygon) and extend the phuket-town area outline to cover it. The pin and query need no change."
+   },
+   {
+    "severity": "low",
+    "where": "data/places.json:1380 (banana-beach area 'nai-thon') vs data/events.json:1481 (daft-funk-live at the same beach, area 'layan'); tools/check.mjs:41",
+    "problem": "Two cards for the same beach show different area names: Nai Thon on the place card, Layan on the event card. check.mjs does not catch this because it allows points up to 1 km outside their area.",
+    "evidence": "The banana-beach pin 8.0419,98.2764 falls inside the Layan outline, 0.64 km outside Nai Thon. The other mismatches from a zero-tolerance test are reasonable boundary cases, all within 0.53 km: Big Buddha, Windmill, Black Rock, Freedom Beach, Laem Singh.",
+    "fix": "Set banana-beach to area 'layan' (or set both cards to 'nai-thon'), and lower the check.mjs tolerance to about 0.3 km."
+   }
+  ]
+ },
+ "review:accuracy": {
+  "summary": "I checked 26 items against official pages, ticket and booking APIs, and OpenStreetMap (Photon and Nominatim). That was 11 events including all 7 top picks, 9 places, 6 hotels and 4 money-changer brands/branches. Almost all the facts are right. Errors are below; the checks that passed are:\n- **Events:** Circoloco is 9/16/23 Jan, 15:00-03:00, from €107.99 on Dice, 18+. Marco Carola is Wed 13 Jan: 1,200 THB on Megatix, 1,600 THB on the venue site and RA, 20+, 1,000 THB late fee, Nicolas Masseyeff on RA. Shelter's feed shows 23:30-04:00 at 500 THB. Parvati's Vibez shop has 2,000 THB until 16 Oct, then 2,500 THB, running 9 Jan 16:00 to 11 Jan 16:00. Lighthouse prices are right. Halfmoon matches the official 2027 chart (3+4, 15+16, 31 Jan). The Full Moon Party is 22 Jan, and the full moon computes to 19:17 Thai time. New moon is Fri 8 Jan. Sunrise and sunset times are right. Courage's address (16 Bangkok Rd) is on RA, and its pin sits on Bangkok Road.\n- **Places:** Big Buddha reopened 3 Mar 2026 and is open 9-18. Gibbon prices match its Shopify store: 1,100 / 1,200 / 650 THB, plus a 200/100 THB park fee. Soi Dog, Elephant Sanctuary (3,000 THB, no feeding since 1 Apr 2026), Chillva, Mor Mu Dong (closed on the 15th) and Hong by Starlight (from 3,950 THB) all match. Go Benz's holy-day claim matches the Kapook calendar (holy days 1, 7, 15, 22, 30 Jan).\n- **Hotels:** Baba (FAQ facts), The Memory (1927, 2 storeys), Twinpalms Tented Camp, Indigo, Mom Tri's (42 suites) and ibis Styles (199 Moo 5, Choeng Thale) all match.\n- **Money:** Mamy's live API reads 33.35 USD / 37.35 EUR, and its hours and address match. The SuperRich branch record (Mon-Sat 10-20, phone 093-399-8949), Value Plus hours from its API, and Lion's shop GC4118 and flagship all match.\n- **Coordinates:** every sampled pin is within about 10-150 m of the matching OSM feature, and every plus code in the data decodes to the stored point.\n\nThe real problems are an out-of-date event card, gaps and labels in the day-by-day agenda, a misleading duration badge, Directions buttons on placeholder pins, and one weather error.",
+  "issues": [
+   {
+    "severity": "medium",
+    "where": "data/events.json:1189-1226 (id cafe-del-mar-pyramid-2027-01-08: name line 1191, description 1205, priceText 1211, links 1222/1226); conflicts with events.json:237 (Café del Mar venue card); shown on Home > Day by day > Fri 8 Jan (research/qa-shots/light-home.png)",
+    "problem": "The dated card for the user's arrival day still says 'Pyramid Stage: secret headliner… The headliner is still a secret', with 'Ticket price not announced yet'. Café del Mar has announced ARGY for this show: Pyramid Stage, Fri 8 Jan 2027, doors 2 PM, presale 20 Oct at 6 PM. The same show is now listed twice with conflicting information. The venue card and the Kamala area card say 'Argy on Fri 8 Jan', while the dated card in Music and in the Fri 8 agenda says the headliner is secret. The dated card also misses the 20 Oct presale (5 days from now).",
+    "fix": "Rename the card to 'Argy at Café del Mar (Pyramid Stage)'. Add lineup ['Argy']. Set priceText to 'Presale opens Tue 20 Oct 2026, 18:00 Thai time; price not published yet'. Point the links to https://phuket.cafedelmar.com/events/argy-jan2027 and https://laylo.com/cdm/argy-jan8. Remove the 'still a secret' sentence.",
+    "evidence": "https://phuket.cafedelmar.com/events/argy-jan2027 says: 'ARGY (PRESALE SIGN UP) Jan 8 | 2:00 pm … 📍 Pyramid Stage, Café del Mar Phuket 🕙 Doors open 2 PM 📌 Presale goes live on 20 Oct at 6 PM.' The listing https://phuket.cafedelmar.com/events shows 8 Jan 2027 'PYRAMID' and 'ARGY (PRESALE SIGN UP)', both at 2:00 pm, Pool Cover. The teaser page https://phuket.cafedelmar.com/events/2027-jan-08-pyramid only says 'We are not saying yet, but you will know soon.' The built dist/index.html contains both 'In your trip: Argy on Fri 8 Jan' and 'Pyramid Stage: secret headliner (Café del Mar)'."
+   },
+   {
+    "severity": "medium",
+    "where": "tools/build.mjs:320 (dayAgenda filters e.kind !== 'venue'); data/events.json shelter-phuket ('dates': []); visible in research/qa-shots/light-home.png (Fri 8 Jan list)",
+    "problem": "The Day-by-day agenda leaves out every venue-type item, including the top pick Shelter ('Usually Fri and Sat 23:30-04:00') and Retro Mountain. The guide's own 11-night plan (extra.json eventsCallout) says 'Fri 8 Jan: arrive, then Shelter at Illuzion' and 'Fri 15 Jan: Shelter again'. On those days the agenda shows Koh Phangan parties and Café del Mar's 'secret headliner', but not Shelter. A techno fan reading the day view would think nothing underground is on in Phuket that night.",
+    "fix": "Add Shelter's in-trip Fridays and Saturdays to its dates (2027-01-08, 09, 15, 16), labelled 'usually; check the line-up'. Or change dayAgenda to include venue items whose recurrence lists that weekday, labelled 'weekly'.",
+    "evidence": "build.mjs:320: events.filter((e) => e.kind !== 'venue' && (e.dates || []).includes(iso)). Extracted agenda for Fri 8 Jan: Lighthouse, Spiritgust, OXA, Sabaii, 'Pyramid Stage: secret headliner', O Beach, MACAN, Chillva, Karon Temple Market. No Shelter. The Illuzion events feed (https://www.illuzionphuket.com/wp-json/tribe/events/v1/events) has Shelter nights every Fri/Sat at 23:30, 500 THB, for example 16 and 17 Oct 2026."
+   },
+   {
+    "severity": "medium",
+    "where": "data/places.json:454-467 (karon-viewpoint: durationLabel '1-2h', durationHours 0.25-0.5); tools/build.mjs:184 (DUR has no bucket under 1 h), rendered at build.mjs:193/197/201",
+    "problem": "The user asked how long each place takes. Karon Viewpoint's clock badge says '1–2 h', and the Time row reads '1–2 h · 0.3 h–0.5 h on site'. The card's own description calls it 'A quick 15-minute stop'. Six more places with 0.5-1 h visits also carry a '1–2 h' badge: Windmill Viewpoint, Khao Khad tower, Wat Phra Thong, Mee Ton Poe, Lock Tien and Go Benz. So the badge overstates short stops, and the badge and the hours contradict each other on the same card.",
+    "fix": "Add an under-1-hour bucket to DUR, for example 'short': ['< 1 h', 'short']. Set karon-viewpoint to that bucket, and use it for the 0.5-1 h items, or relabel those '30–60 min'. Also show 0.25 h as '15 min' instead of rounding it to '0.3 h'.",
+    "evidence": "dist/index.html, card pl-karon-viewpoint: 'Must-see | 1–2 h | … A quick 15-minute stop … Time | 1–2 h · 0.3 h–0.5 h on site'. The others render '1–2 h · 0.5 h–1 h on site'."
+   },
+   {
+    "severity": "medium",
+    "where": "data/events.json:1316-1330 (lost-jungle-parvati-2027, lat 9.74 / lng 100.03, coordConfidence 'low'); events.json:1663-1678 (spiritgust-2027, 8.6666667 / 99.9316667); tools/build.mjs:100 (Directions button rendered for any lat/lng; coordConfidence is never read)",
+    "problem": "Lost Jungle is a top pick, but its pin is a placeholder for the island centre. On OSM it lands on the 'Kao Ra Trail', a mountain hiking path. The card still shows a working 'Directions' button and an 'On map' pin there, and the only warning is inside the collapsed 'Tips & links'. Someone tapping Directions at night would be sent up a jungle trail. The organiser has not published any address. Spiritgust has the same problem: its pin is the Tha Sala district office, the official site says the venue is 'Not yet published', and the agenda labels it only 'Other', which hides that it is about 4 hours away.",
+    "fix": "When coordConfidence is 'low', hide the Directions and On-map buttons, or relabel them 'Approximate area – venue not published'. Put the 'location not public yet' note in the visible facts row. Use the island or province name for the Spiritgust agenda label instead of 'Other'.",
+    "evidence": "Nominatim reverse of 9.74,100.03 → 'Phangan, Kao Ra Trail, Ko Pha-ngan' (information node). https://phangan.events/event-location/lost-jungle/ gives only 'Koh Phangan, Thailand 84280'. The Vibez event JSON (web.vibez.io/events/a4528761-…) gives location 'LOST JUNGLE Grand Opening' and no address. https://spiritgustfestival.com/data/festival-content.json says: location.venue = 'Not yet published', 'Exact venue name, street address, and map pin not yet published'."
+   },
+   {
+    "severity": "low",
+    "where": "data/events.json:968-994 (waterfall-festival-phangan, dates ['2027-01-13']); shown as 'Waterfall Festival (Wednesdays) · Koh Phangan · weekly' in the Wed 13 Jan agenda",
+    "problem": "The Wed 13 Jan date is a guess, but the agenda presents it as a weekly party. The current schedule is '2 days before and 2 days after the Full Moon Party + special events'. With the Full Moon Party on 22 Jan, that means Wed 20 and Sun 24 Jan, both after the trip. No weekly Wednesday party is listed; the only Wednesday on the schedule is a one-off on 11 Nov.",
+    "fix": "Remove 2027-01-13 from dates, or keep it with an 'unconfirmed' label in the agenda instead of 'weekly'. Note that the expected January dates are 20 and 24 Jan.",
+    "evidence": "https://phangan.events/waterfall-festival-koh-phangan-lineup-tickets/ says '2 days before and 2 days after the Full Moon Party + special events'. Upcoming dates listed: Sun 25 Oct, Thu 29 Oct, Wed 11 Nov, Sun 22 Nov, Thu 26 Nov. Full Moon Party dates are at https://fullmoonparty-thailand.com/schedules/ (January 22nd 2027)."
+   },
+   {
+    "severity": "low",
+    "where": "data/essentials.json:268 (Island hopping > 'Party trips: book early')",
+    "problem": "'Koh Phangan's rainy season is usually November to March' is wrong. On the Gulf islands the wet season runs from about October to December, with November the wettest month. February is the driest month of the year, and March is not rainy season. January does get more rain there than in Phuket, so that half of the sentence is fine.",
+    "fix": "Change it to: 'Koh Phangan's rainy season is roughly October to December. January still gets some showers (about 130 mm on 8-9 days, against about 30 mm in Phuket), so rain and choppy seas are more likely there than in Phuket.'",
+    "evidence": "Ko Samui climate table, WMO 1991-2020 normals (https://en.wikipedia.org/wiki/Ko_Samui): Oct 294.9 mm, Nov 444.6 mm, Dec 263.1 mm; Jan 126.8 mm (8.5 days), Feb 64.3 mm, Mar 115.8 mm."
+   },
+   {
+    "severity": "low",
+    "where": "data/areas.json:1613 ('recommendation', rendered as 'Full notes' on the Areas page via tools/build.mjs:450) vs data/extra.json:38 (areasRecommendation) and extra.json eventsCallout",
+    "problem": "The Areas page shows two split-stay plans that conflict. The main text says 'Natai 8 to 10 Jan, Koh Phangan 10 to 13 Jan, Kamala 13 to 16 Jan', which matches the Music page plan (Koh Phangan Sun 10 to Tue 12, Lighthouse on Tuesday). The 'Full notes' right below say 'Sun 10 - Sat 16 Kamala or Bang Tao (Old Town Sunday market Sun 10, Enthusiast open doors Tue 12…)'. The user cannot tell which plan the guide recommends for 10-12 Jan.",
+    "fix": "Make areas.json 'recommendation' match the Phangan split (10-13 Jan). Or label it clearly as an alternative 'Phuket-only plan (skip Koh Phangan)'.",
+    "evidence": "areas.json recommendation: 'Split-stay idea: Fri 8 - Sun 10 Natai … Sun 10 - Sat 16 Kamala or Bang Tao (Old Town Sunday market Sun 10, Enthusiast open doors Tue 12, Marco Carola Wed 13, Shelter Fri 15)'. extra.json:38: 'Natai 8 to 10 Jan, Koh Phangan 10 to 13 Jan, Kamala 13 to 16 Jan, Natai 16 to 18 Jan'. eventsCallout: 'Sun 10 to Tue 12 Jan: Koh Phangan … the Lighthouse Party on Tuesday.'"
+   }
+  ]
+ }
+}

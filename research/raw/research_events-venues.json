@@ -1,0 +1,1206 @@
+{
+ "items": [
+  {
+   "id": "shelter-phuket",
+   "kind": "venue",
+   "name": "Shelter (techno room inside Illuzion)",
+   "type": "club",
+   "island": "Phuket",
+   "area": "patong",
+   "venue": "Shelter Phuket, 31 Bangla Road, Patong",
+   "window": "in",
+   "status": "recurring",
+   "pick": true,
+   "undergroundScore": 4,
+   "lat": 7.89346,
+   "lng": 98.29747,
+   "coordSource": "ra-venue+osm(Illuzion node)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Shelter Phuket, Illuzion, Bangla Road, Patong",
+   "description": "Small club room inside Illuzion on Bangla Road, for about 500 people, with a Funktion-One sound system. Local and guest DJs play techno, house and minimal. It is the most serious techno room in Phuket. Nights usually start at 23:30. Underground crews like Enthusiast also hold showcases here.",
+   "genres": [
+    "techno",
+    "house",
+    "minimal",
+    "tech house"
+   ],
+   "recurrence": "Most Fridays and Saturdays",
+   "timeText": "Usually Fri and Sat from 23:30 until late",
+   "priceText": "About 500 THB (ticket price on illuzionphuket.com, Oct 2026). VIP tables cost extra.",
+   "tips": [
+    "You enter through Illuzion. Bring your passport or ID (20+). No flip-flops or beachwear.",
+    "Check the line-up on illuzionphuket.com/events or Instagram @shelter_phuket before you go."
+   ],
+   "links": [
+    {
+     "label": "Shelter page",
+     "url": "https://www.illuzionphuket.com/shelter/"
+    },
+    {
+     "label": "Events and tickets",
+     "url": "https://www.illuzionphuket.com/events/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/160713"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/shelter_phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.illuzionphuket.com/shelter/",
+    "https://www.illuzionphuket.com/events/",
+    "https://ra.co/clubs/160713",
+    "https://phangan.events/event-location/shelter-phuket/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.illuzionphuket.com/wp-content/uploads/2020/06/Shelter-Club-house-and-techno-at-Illuzion-Phuket-Club-2-1024x683.jpg",
+     "source": "illuzionphuket.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Illuzion Phuket"
+    },
+    {
+     "url": "https://www.illuzionphuket.com/wp-content/uploads/2020/06/Shelter-Club-house-and-techno-at-Illuzion-Phuket-Club-14-1024x682.jpg",
+     "source": "illuzionphuket.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Illuzion Phuket"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Bangla_Road_Patong_Thajsko_2018_5.jpg/1280px-Bangla_Road_Patong_Thajsko_2018_5.jpg",
+     "source": "Wikimedia Commons",
+     "license": "Public domain",
+     "credit": "Karelj"
+    }
+   ],
+   "verification": "Operating: Shelter nights listed on illuzionphuket.com for 16-17 Oct 2026 (500 THB) and on phangan.events (Fri/Sat nights Sep-Oct 2026). RA shows events in Jan and Jun 2026. Jan 2027 line-ups not out yet."
+  },
+  {
+   "id": "illuzion-phuket",
+   "kind": "venue",
+   "name": "Illuzion Phuket",
+   "type": "club",
+   "island": "Phuket",
+   "area": "patong",
+   "venue": "Illuzion, 31 Bangla Road, Patong",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 7.89346,
+   "lng": 98.29744,
+   "coordSource": "osm+ra",
+   "coordConfidence": "high",
+   "gmapsQuery": "Illuzion Phuket, Bangla Road, Patong",
+   "description": "Phuket's biggest club, on Bangla Road. DJ Mag Top 100 Clubs 2026 lists it at number 9. The main room is big and commercial: house, tech house and EDM with famous guests, LED screens and stage shows. Good for one big night out. For deeper techno, go to Shelter in the same building.",
+   "genres": [
+    "house",
+    "tech house",
+    "EDM"
+   ],
+   "recurrence": "Big guest DJ nights mostly Thursday to Saturday",
+   "timeText": "From 21:00 until late",
+   "priceText": "From about 500 THB (Oct 2026 listings). Big names can cost more.",
+   "tips": [
+    "Bring your passport or ID (20+). Smart casual, no beachwear.",
+    "Check illuzionphuket.com/events for the January line-ups."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.illuzionphuket.com/"
+    },
+    {
+     "label": "Events and tickets",
+     "url": "https://www.illuzionphuket.com/events/"
+    },
+    {
+     "label": "DJ Mag Top 100 Clubs 2026",
+     "url": "https://djmag.com/top100clubs/2026/9/illuzion-phuket"
+    }
+   ],
+   "sources": [
+    "https://www.illuzionphuket.com/events/",
+    "https://djmag.com/top100clubs/2026/9/illuzion-phuket",
+    "https://ra.co/clubs/162517",
+    "https://phangan.events/event-location/illuzion-phuket/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://www.illuzionphuket.com/wp-content/uploads/2020/06/Illuzion-Club-Phuket-Party-Events-1.jpg",
+     "source": "illuzionphuket.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Illuzion Phuket"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg/1280px-Bars_at_Bangla_Road%2C_Patong%2C_Thailand.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 2.0",
+     "credit": "Ben Reeves"
+    }
+   ],
+   "verification": "Operating: events listed on illuzionphuket.com for Oct-Dec 2026 (James Poole, Wildealer, MK, TSHA). In Jan 2026 it hosted Defected, Blackchild, Skream, Fisher and Glitterbox."
+  },
+  {
+   "id": "boa-phuket",
+   "kind": "venue",
+   "name": "BOA Phuket (house club)",
+   "type": "club",
+   "island": "Phuket",
+   "area": "patong",
+   "venue": "BOA Phuket, 9/1 Bangla Road (Soi Gonzo), Patong",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 7.89373,
+   "lng": 98.29617,
+   "coordSource": "google-maps-listing (9/1 Bangla Rd)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "BOA Nightclub Phuket, Bangla Road, Patong",
+   "description": "House music club on Bangla Road, in Soi Gonzo near Illuzion. It has several levels around one big dance floor and an Adamson sound system. Resident and guest DJs play house, tech house and afro house. Normal nights are often free. More stylish than underground, but a good house option in Patong on most nights.",
+   "genres": [
+    "house",
+    "tech house",
+    "afro house"
+   ],
+   "recurrence": "Open most nights from 21:00; guest DJ nights mostly at weekends",
+   "timeText": "21:00 to about 04:00 (Google Maps lists Wednesday as closed; the club says it opens daily)",
+   "priceText": "Free entry on many normal nights (club posts, 2026). Guest nights about 300 THB (Time Out, Sep 2026). Tables cost extra.",
+   "tips": [
+    "The entrance is small and easy to miss. Look for Soi Gonzo on Bangla Road.",
+    "Some reviews say busy nights also mix in hip-hop and party hits. Check the line-up on Facebook @boaclubphuket first."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.boaclubphuket.com/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/boaclubphuket"
+    },
+    {
+     "label": "Events (phangan.events)",
+     "url": "https://phangan.events/event-location/boa-phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.boaclubphuket.com/",
+    "https://phangan.events/event-location/boa-phuket/",
+    "https://www.timeout.com/phuket/things-to-do/catch-nibz-and-matt-davies-at-boa-x-banjuka",
+    "https://www.timeout.com/phuket/things-to-do/join-claudine-is-back-to-make-waves-at-boa-nightclub"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://yona.odoo.com/web/image/28099-38b9f53e/IMG_2218-Enhanced-NR.jpg",
+     "source": "boaclubphuket.com (og:image)",
+     "license": "© venue / organiser (official website)",
+     "credit": "BOA Phuket"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Bangla_Road_Patong_Thajsko_2018_6.jpg/1280px-Bangla_Road_Patong_Thajsko_2018_6.jpg",
+     "source": "Wikimedia Commons",
+     "license": "Public domain",
+     "credit": "Karelj"
+    }
+   ],
+   "verification": "Operating: Google Maps reviews from 2-5 months ago (checked 15 Oct 2026); phangan.events lists BOA nights on 17, 30 and 31 Oct 2026 (MOOJO, The Boneyard); Time Out listed a guest night on 18 Sep 2026 (300 THB). Website live in Oct 2026."
+  },
+  {
+   "id": "cafe-del-mar-phuket",
+   "kind": "venue",
+   "name": "Café del Mar Phuket",
+   "type": "beach club",
+   "island": "Phuket",
+   "area": "kamala",
+   "venue": "Café del Mar Phuket, north end of Kamala Beach",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 7.96102,
+   "lng": 98.28394,
+   "coordSource": "official-site+pluscode+osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Café del Mar Phuket, Kamala",
+   "description": "Ibiza beach club at the north end of Kamala Beach. The 2026/27 season opens on 9 Dec with Artbat. In high season it books big house and techno DJs for afternoon-to-night shows on the pool stage. The indoor Club Room has DJ nights Wednesday to Saturday from 22:00. Stylish and expensive, not underground.",
+   "genres": [
+    "house",
+    "tech house",
+    "melodic techno",
+    "afro house",
+    "techno"
+   ],
+   "recurrence": "Open daily; Club Room Wed-Sat from 22:00; big pool shows several days a week in season",
+   "timeText": "Daily 11:00 to late. Big pool shows often start at 14:00.",
+   "priceText": "Club Room nights are often free entry. Big pool shows need tickets (price depends on the artist).",
+   "tips": [
+    "For big shows, buy tickets and book a sunbed or table early on phuket.cafedelmar.com.",
+    "Come before sunset (about 18:30 in January)."
+   ],
+   "links": [
+    {
+     "label": "Events and tickets",
+     "url": "https://phuket.cafedelmar.com/events"
+    },
+    {
+     "label": "Website",
+     "url": "https://phuket.cafedelmar.com/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/137028"
+    }
+   ],
+   "sources": [
+    "https://phuket.cafedelmar.com/",
+    "https://phuket.cafedelmar.com/events",
+    "https://ra.co/clubs/137028"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://cdn.prod.website-files.com/675969a2220618a361236fac%2F6ac9edb9cd48a4a1e3be1092_Cafe_del_mar_phuket_video_web_poster.0000000.jpg",
+     "source": "phuket.cafedelmar.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Café del Mar Phuket"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg/1280px-Kamala_beach_%28%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2%29_-_panoramio.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Tuderna"
+    }
+   ],
+   "verification": "Operating: official events page (Oct 2026) lists Club Room nights and the season opening on 9 Dec 2026; RA lists Carl Cox 3 Jan and Marco Carola 13 Jan 2027. Hours from the official site."
+  },
+  {
+   "id": "nikys-speakeasy-bang-tao",
+   "kind": "venue",
+   "name": "Niky's Speakeasy & Nightclub",
+   "type": "bar",
+   "island": "Phuket",
+   "area": "bang-tao",
+   "venue": "Niky's Speakeasy & Nightclub, 20 Soi Bang Thao 2, Choeng Thale",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 7.98627,
+   "lng": 98.29922,
+   "coordSource": "google-maps-listing+osm (node 'NiKy's speakeasy 2.0', 15 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Niky's Speakeasy & Nightclub, Soi Bang Thao 2, Bang Tao, Phuket",
+   "description": "Small cocktail bar and late-night club in Bang Tao, on Soi Bang Thao 2. DJs play house and techno, and it stays open until about 02:00. It is a stylish bar, not a rave club. Good for a late drink with house music if you stay in Bang Tao or Laguna.",
+   "genres": [
+    "house",
+    "techno"
+   ],
+   "recurrence": "Tuesday to Sunday, 20:00-02:00; closed Mondays",
+   "timeText": "Tue-Sun 20:00-02:00 (Google Maps hours)",
+   "priceText": "No cover charge (club website 2025, Nomado nightlife guide 2026).",
+   "tips": [
+    "Its website was offline in Oct 2026. Call +66 95 853 6986 or read the newest Google reviews before you go.",
+    "Easy to reach by Grab or Bolt from Bang Tao Beach and Laguna hotels."
+   ],
+   "links": [
+    {
+     "label": "Google Maps",
+     "url": "https://www.google.com/maps/search/?api=1&query=Niky%27s%20Speakeasy%20%26%20Nightclub%20Bang%20Tao%20Phuket"
+    },
+    {
+     "label": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attraction_Review-g26838146-d33249110-Reviews-Niky_s_Speakeasy_Nightclub-Bang_Thao_Nok_Choeng_Thale_Thalang_District_Phuket.html"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/search/?api=1&query=Niky%27s%20Speakeasy%20%26%20Nightclub%20Bang%20Tao%20Phuket",
+    "https://www.openstreetmap.org/node/11617026896",
+    "https://www.nomadotravel.app/en/guides/phuket-nightlife-guide"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sunset_at_Bang_Tao_Beach.jpg/1280px-Sunset_at_Bang_Tao_Beach.jpg",
+     "source": "Wikimedia Commons (Bang Tao Beach, not the bar)",
+     "license": "CC BY-SA 4.0",
+     "credit": "Axadem"
+    }
+   ],
+   "verification": "Google Maps listing is active (no closed flag), with a review from about Aug 2026 and Tue-Sun hours. OSM lists it as 'NiKy's speakeasy 2.0'. Its website returned 404 on 15 Oct 2026 and no 2026 social posts were found, so status is unconfirmed."
+  },
+  {
+   "id": "courage-bar-phuket-town",
+   "kind": "venue",
+   "name": "Courage Bar (FAKE PALM, SUB and Enthusiast nights)",
+   "type": "bar",
+   "island": "Phuket",
+   "area": "phuket-town",
+   "venue": "Courage Bar, 16 Bangkok Road, Phuket Old Town",
+   "window": "in",
+   "status": "tba",
+   "pick": true,
+   "undergroundScore": 5,
+   "lat": 7.87917,
+   "lng": 98.38185,
+   "coordSource": "google-maps-listing (COURAGE, 16 Bangkok Rd, plus code V9HJ+MP)+nominatim-reverse (on Bangkok Road)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "COURAGE bar, 16 Bangkok Road, Talat Nuea, Phuket Town",
+   "description": "Small bar in Phuket Old Town and the home of Phuket's real underground nights. Local crews threw parties here from Dec 2025 to Jun 2026: FAKE PALM (techno, electro, breaks), SUB (UK garage, bass, jungle) and Enthusiast x WAV.e (minimal, house). Parties are not weekly. Watch the crews on Instagram for dates.",
+   "genres": [
+    "techno",
+    "electro",
+    "breakbeat",
+    "minimal",
+    "UK garage",
+    "drum and bass"
+   ],
+   "recurrence": "Irregular parties in high season, often on Fridays or Saturdays",
+   "timeText": "Bar open Wed-Sun from 19:00 (Sat from 15:00), closed Mon-Tue (Google Maps). Party nights in 2026 ran from 20:00-22:00 until 02:00-04:00.",
+   "priceText": "300-400 THB at 2026 parties.",
+   "tips": [
+    "Follow Instagram @fake_palm, @subphuket and @courage.phuket for January dates.",
+    "Phuket Town is about 30 minutes by car from Patong. Use Grab or Bolt to get home."
+   ],
+   "links": [
+    {
+     "label": "Courage on Instagram",
+     "url": "https://instagram.com/courage.phuket"
+    },
+    {
+     "label": "FAKE PALM on Instagram",
+     "url": "https://www.instagram.com/fake_palm/"
+    },
+    {
+     "label": "SUB on Instagram",
+     "url": "https://www.instagram.com/subphuket/"
+    },
+    {
+     "label": "SUB on Facebook",
+     "url": "https://www.facebook.com/subphuket"
+    },
+    {
+     "label": "SUB on Resident Advisor",
+     "url": "https://ra.co/promoters/127822"
+    }
+   ],
+   "sources": [
+    "https://ra.co/events/2346269",
+    "https://ra.co/events/2374863",
+    "https://phangan.events/event-location/courage-bar-phuket/",
+    "https://www.timeout.com/phuket/things-to-do/relive-your-garage-and-bass-era-with-sub-featuring-stanton-warriors-and-friends"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/62381/spgK150kxQaCQ2AOISRF3Flhi3rtsKmmVhCNghDB.jpg",
+     "source": "megatix.in.th (event flyer)",
+     "license": "© organiser",
+     "credit": "Framework Phuket / Megatix"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Thalang_Road%2C_Old_Phuket_Town.jpg/1280px-Thalang_Road%2C_Old_Phuket_Town.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    }
+   ],
+   "verification": "Parties confirmed on RA and phangan.events: 20 Dec 2025, 2 and 17 Jan, 13 and 19 Feb, and 12 Jun 2026. No 2026/27 dates yet. Bar is open: Google Maps listing has reviews from 7-12 months ago and opening hours. Pin from the Google listing (checked 15 Oct 2026)."
+  },
+  {
+   "id": "enthusiast-place-open-doors",
+   "kind": "recurring",
+   "name": "Open Doors Tuesday at Enthusiast Place",
+   "type": "weekly night",
+   "island": "Phuket",
+   "area": "thalang",
+   "venue": "Enthusiast Place, Si Sunthon, Thalang",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 4,
+   "lat": 7.97912,
+   "lng": 98.32658,
+   "coordSource": "official-gmaps-link+google-maps-listing (5 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Enthusiast Place, Si Sunthon, Thalang, Phuket",
+   "description": "DJ studio and music space of the Enthusiast crew (minimal, deep tech house). On Tuesday evenings it opens its doors: people play what they like on CDJs, vinyl and modular synths. It is a meeting place, not a club. Go there to meet Phuket's underground DJs and hear about parties.",
+   "genres": [
+    "minimal",
+    "deep tech house",
+    "house",
+    "techno"
+   ],
+   "dates": [
+    "2027-01-12"
+   ],
+   "recurrence": "Every Tuesday, 19:00-23:00 (April 2026 listing)",
+   "timeText": "Tuesday 19:00-23:00",
+   "priceText": "Free (RA listing, 2026).",
+   "tips": [
+    "Send a message to @enthusiast.place before you go to check the session is on.",
+    "About 15 minutes by car from Bang Tao."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://enthusiast.place"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/enthusiast.place/"
+    }
+   ],
+   "sources": [
+    "https://enthusiast.place",
+    "https://ra.co/events/2410056",
+    "https://ra.co/events/2462259"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://enthusiast.place/photos/photo-1.jpg",
+     "source": "enthusiast.place",
+     "license": "© venue / organiser (official website)",
+     "credit": "Enthusiast Place"
+    },
+    {
+     "url": "https://enthusiast.place/photos/photo-4.jpg",
+     "source": "enthusiast.place",
+     "license": "© venue / organiser (official website)",
+     "credit": "Enthusiast Place"
+    }
+   ],
+   "verification": "Website (2026) lists the Tuesday Open Doors session; RA listed it on 7 Apr 2026. The crew held events at Shelter (Jun 2026) and Summerset Lounge (Sep 2026). Jan 2027 sessions not confirmed."
+  },
+  {
+   "id": "barra-cuda-beach-club",
+   "kind": "venue",
+   "name": "Barra Cuda Beach Club",
+   "type": "beach club",
+   "island": "Phuket",
+   "area": "patong",
+   "venue": "Barra Cuda, 43 Thaweewong (Beach) Road, Patong",
+   "window": "in",
+   "status": "listed",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.89769,
+   "lng": 98.29621,
+   "coordSource": "official-gmaps-link",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Barra Cuda Beach Club, Patong, Phuket",
+   "description": "Large beach club on Patong Beach Road, about 500 m from Bangla Road, with a pool dance floor. House music day and night parties. For January 2027 it lists O Beach Ibiza pool nights on Wednesdays and Fridays. In 2026 it also ran house day parties on Saturdays and Sundays. Glamorous and commercial, not underground.",
+   "genres": [
+    "house",
+    "afro house",
+    "organic house"
+   ],
+   "dates": [
+    "2027-01-08",
+    "2027-01-13",
+    "2027-01-15"
+   ],
+   "recurrence": "O Beach Ibiza nights Wed and Fri, 21:00-02:00 (listed for Jan 2027)",
+   "timeText": "Night events 21:00-02:00; day parties from 14:00",
+   "priceText": "Not published yet. Book beds or tables on barracudaphuket.com.",
+   "tips": [
+    "Good if you stay in Patong and want a pool party with house music.",
+    "Book a day bed early for event days."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.barracudaphuket.com/"
+    },
+    {
+     "label": "Listing (phangan.events)",
+     "url": "https://phangan.events/event-location/barra-cuda/"
+    }
+   ],
+   "sources": [
+    "https://www.barracudaphuket.com/",
+    "https://phangan.events/events/barra-cuda-phuket-4/",
+    "https://www.timeout.com/phuket/things-to-do/make-sundays-sacred-at-the-house-of-paradise"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://barracuda-r2.tumwebsme.com/cms/DSC06596-1024x683.jpg",
+     "source": "barracudaphuket.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Barra Cuda Beach Club"
+    },
+    {
+     "url": "https://barracuda-r2.tumwebsme.com/cms/DAY_001_FINAL_HIGHRESRecovered-copy-1024x702.webp",
+     "source": "barracudaphuket.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "Barra Cuda Beach Club"
+    }
+   ],
+   "verification": "phangan.events lists 'Barra Cuda Phuket' with O Beach Ibiza on 6, 8, 13, 15 and 20 Jan 2027 (21:00-02:00). Website live in Oct 2026."
+  },
+  {
+   "id": "oxa-jungle-party",
+   "kind": "recurring",
+   "name": "OXA Jungle Party",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "OXA, Ban Tai, Koh Phangan",
+   "window": "in",
+   "status": "tickets-on-sale",
+   "pick": false,
+   "undergroundScore": 3,
+   "lat": 9.68693,
+   "lng": 100.04643,
+   "coordSource": "official-gmaps-link",
+   "coordConfidence": "medium",
+   "gmapsQuery": "OXA Beach Party Koh Phangan, Ban Tai",
+   "description": "Weekly jungle party in Ban Tai, Koh Phangan, with three dance floors (Oasis, Canyon, Cabin), fire shows and a beach in front. Different floors play house, techno and hip-hop. The venue says many Berlin DJs play here. Busy and touristy. Tickets for 8 and 15 Jan 2027 are already on sale.",
+   "genres": [
+    "techno",
+    "house",
+    "melodic techno",
+    "hip-hop"
+   ],
+   "dates": [
+    "2027-01-08",
+    "2027-01-15"
+   ],
+   "recurrence": "Every Friday, 21:00 to about 05:00",
+   "timeText": "Gates 21:00, music until about 05:00",
+   "priceText": "From 500 THB on Megatix (8 and 15 Jan 2027).",
+   "tips": [
+    "Bring cash. One guide says there is no ATM at the venue.",
+    "Taxis wait at the exit until sunrise. Share one with other people to pay less."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/oxa"
+    },
+    {
+     "label": "Website",
+     "url": "https://oxaphangan.com/"
+    },
+    {
+     "label": "How to get there",
+     "url": "https://oxaphangan.com/location/"
+    }
+   ],
+   "sources": [
+    "https://megatix.in.th/oxa",
+    "https://oxaphangan.com/what-is-oxa/",
+    "https://fullmoonparty.guide/oxa-jungle-party-koh-phangan"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://oxaphangan.com/wp-content/uploads/2025/08/Oasis-05-1024x683.jpg",
+     "source": "oxaphangan.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "OXA Koh Phangan"
+    },
+    {
+     "url": "https://oxaphangan.com/wp-content/uploads/2023/12/OXA-BEACH.jpg",
+     "source": "oxaphangan.com",
+     "license": "© venue / organiser (official website)",
+     "credit": "OXA Koh Phangan"
+    }
+   ],
+   "verification": "Megatix (checked 15 Oct 2026) sells tickets for Fri 8 Jan and Fri 15 Jan 2027 (from 500 THB), plus Tue 19 Jan. Weekly Friday parties confirmed on the official site."
+  },
+  {
+   "id": "sabaii-friday-beach-party-phangan",
+   "kind": "recurring",
+   "name": "Sabaii Friday Beach Party (Ban Tai)",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Sabaii Bay Beach Club, Ban Tai Beach, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 9.70682,
+   "lng": 100.00255,
+   "coordSource": "google-maps (venue's own map link)+osm (Sabaii Bay Resort, 46 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sabaii Bay Beach Club Koh Phangan, Ban Tai",
+   "description": "Free weekly beach party at Sabaii Bay Beach Club on Ban Tai Beach, Koh Phangan. A sunset session starts at 17:00 and the main party at 20:00. Several local DJs play a mix of electronic styles, including techno. Relaxed and social, not a hard rave. A good warm-up before OXA or Lighthouse on the same Friday.",
+   "genres": [
+    "house",
+    "techno"
+   ],
+   "dates": [
+    "2027-01-08",
+    "2027-01-15"
+   ],
+   "recurrence": "Every Friday: sunset session from 17:00, main party from 20:00",
+   "timeText": "Fri from 17:00. End time was 23:00-02:00 in 2026 listings.",
+   "priceText": "Free entry (2026 listings).",
+   "tips": [
+    "In Jan 2026 there was a happy hour from 18:00 to 20:00.",
+    "OXA is about 5 km east. Take a taxi when you move on."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/sabaii-bay-beach-club/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/208006"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/events/sabaii-friday-beach-party-13/",
+    "https://phangan.events/events/beach-party-sabaii-bay-beach-club/",
+    "https://ra.co/events/2369876",
+    "https://ra.co/events/2369877"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2022/09/289078616_392713282890841_4723161362346858480_n.jpeg",
+     "source": "phangan.events (venue photo)",
+     "license": "© venue",
+     "credit": "Sabaii Bay Beach Club"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/10/1791791624211-la7q6onfmo.jpg",
+     "source": "phangan.events (flyer, 16 Oct 2026)",
+     "license": "© organiser",
+     "credit": "Sabaii Bay Beach Club"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg/1280px-Ban_Tai_Beach_Ko_Pha_Ngan_2.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    }
+   ],
+   "verification": "phangan.events lists the Sabaii Friday Beach Party on 16 Oct 2026 (free, sunset session 17:00, main party 20:00). In Jan 2026 it ran every Friday. Jan 2027 line-ups not posted yet. The old sabaiibay.com domain now leads to an unrelated site, so it is not linked."
+  },
+  {
+   "id": "retro-mountain-phangan",
+   "kind": "venue",
+   "name": "Retro Mountain Jungle Club",
+   "type": "club",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Retro Mountain, Ban Tai, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": true,
+   "undergroundScore": 4,
+   "lat": 9.72188,
+   "lng": 100.03807,
+   "coordSource": "official-gmaps-link+osm+pluscode",
+   "coordConfidence": "high",
+   "gmapsQuery": "Retro Mountain Jungle Club Phangan, Ban Tai",
+   "description": "Jungle club on a hill in Ban Tai, Koh Phangan, with two stages and a rain-proof dance floor. In high season it has 2-3 parties a week from different crews: hard techno 'Secret Rave' nights by Hardtechno KPG, Kovër Crëw techno nights, and guests like Nakadia. The best place on the islands for dark, hard techno nights.",
+   "genres": [
+    "techno",
+    "hard techno",
+    "house",
+    "psytrance"
+   ],
+   "recurrence": "2-3 party nights a week in high season; nights change every week",
+   "timeText": "Usually 21:00 to 05:00-06:00",
+   "priceText": "Depends on the party. Check the event page.",
+   "tips": [
+    "Check phangan.events or the 'Phangan Party Guide' Telegram channel for the week's parties.",
+    "It is on a hill. Go by taxi or by scooter only if you are a confident rider."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://retromountainphangan.com/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/Retromountainphangan/"
+    },
+    {
+     "label": "Events (phangan.events)",
+     "url": "https://phangan.events/event-location/retro-mountain-phangan/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/186817"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/retro-mountain-jungle-club-2026-koh-phangan/",
+    "https://ra.co/clubs/186817",
+    "https://retromountainphangan.com/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/12/Breakfast-spots-1-1024x575.jpeg",
+     "source": "phangan.events",
+     "license": "© phangan.events",
+     "credit": "phangan.events"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2022/11/cropped-17489_image_313419841_659910042435035_6937468553488645930_n.jpg",
+     "source": "phangan.events",
+     "license": "© phangan.events",
+     "credit": "Retro Mountain"
+    }
+   ],
+   "verification": "Operating: Halloween Hard Techno Rave on 28 Oct 2026 listed. In Jan 2026 it ran Stella Bossi & Nakadia (4 Jan), Superfreq (5 Jan), Secret Rave (15 Jan) and Kontur Fest (27 Jan). Jan 2027 nights not announced yet."
+  },
+  {
+   "id": "lighthouse-party-phangan",
+   "kind": "recurring",
+   "name": "Lighthouse Party (Haad Rin)",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Lighthouse Bungalows, Haad Rin, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": true,
+   "undergroundScore": 4,
+   "lat": 9.66689,
+   "lng": 100.07051,
+   "coordSource": "osm(nominatim+photon)+google-maps (Lighthouse Bungalows, 31 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lighthouse Bungalows, Haad Rin, Koh Phangan",
+   "description": "Techno party on the rocks at the end of Leela Beach, Haad Rin. You walk along the beach and over a bridge above the sea. Local and international DJs play deep house, techno and progressive until sunrise. Tuesdays all year, Fridays too in high season. Smaller and more underground than the Full Moon Party.",
+   "genres": [
+    "techno",
+    "deep house",
+    "progressive house"
+   ],
+   "dates": [
+    "2027-01-08",
+    "2027-01-12",
+    "2027-01-15"
+   ],
+   "recurrence": "Every Tuesday, plus Fridays in high season, 21:00 to sunrise",
+   "timeText": "21:00 to sunrise",
+   "priceText": "Often free before 21:00-22:00, then about 200-600 THB (2026 prices).",
+   "tips": [
+    "Wear shoes with grip. The path and rocks can be wet and dark.",
+    "Shared taxis run from about 20:00 from all main beaches. Just say 'Lighthouse'."
+   ],
+   "links": [
+    {
+     "label": "Party info (phangan.events)",
+     "url": "https://phangan.events/lighthouse-party-koh-phangan/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/lighthouse-party-koh-phangan/",
+    "https://phangan.events/events/lighthouse-tuesday-party/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/08/Breakfast-spots.jpeg",
+     "source": "phangan.events",
+     "license": "© phangan.events",
+     "credit": "phangan.events"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/01/file_2523.jpg",
+     "source": "phangan.events (flyer)",
+     "license": "© organiser",
+     "credit": "Lighthouse Party"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Hat_Rin_from_above.jpg/1280px-Hat_Rin_from_above.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 2.0",
+     "credit": "zhaffsky (Flickr)"
+    }
+   ],
+   "verification": "Tuesday parties listed every week through 13 Oct 2026. In Jan 2026 there were parties every Tuesday and Friday. Friday dates for Jan 2027 are expected, not yet posted."
+  },
+  {
+   "id": "chill-up-phangan",
+   "kind": "recurring",
+   "name": "Chill Up: Monday Madness and Phangan Calling",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Chill Up, Ban Tai main road, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 3,
+   "lat": 9.70559,
+   "lng": 100.01003,
+   "coordSource": "pluscode+osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chill Up, Ban Tai, Koh Phangan",
+   "description": "Free-entry bar and small club on Ban Tai main road, Koh Phangan, open since 2015. Monday Madness plays progressive house, minimal and techno. Thursday Phangan Calling plays indie dance, tech house and techno (some editions are called Techno Rebellion). A good warm-up spot. Closed on Wednesdays.",
+   "genres": [
+    "techno",
+    "minimal",
+    "progressive house",
+    "tech house",
+    "indie dance"
+   ],
+   "dates": [
+    "2027-01-11",
+    "2027-01-14",
+    "2027-01-18"
+   ],
+   "recurrence": "Mondays (Monday Madness) 21:00-02:00; Thursdays (Phangan Calling) 20:00-02:00",
+   "timeText": "Mon 21:00-02:00, Thu 20:00-02:00",
+   "priceText": "Free entry.",
+   "tips": [
+    "Opposite Mini Big C, before Lavella Spa on the road to Haad Rin.",
+    "Start here, then go on to a jungle party later in the night."
+   ],
+   "links": [
+    {
+     "label": "Website and weekly schedule",
+     "url": "https://chillup.club/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/chill_up_phangan/"
+    }
+   ],
+   "sources": [
+    "https://chillup.club/",
+    "https://phangan.events/events/monday-madness-at-chill-up/",
+    "https://djstrich.de/en/club/chillup"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2022/08/chillup_phangan-e1721980956228.jpg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Chill Up"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/08/IMG_3873.jpeg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Chill Up"
+    }
+   ],
+   "verification": "Official site (Oct 2026) shows the weekly schedule and free entry; DJStrich calendar lists Monday Madness and Phangan Calling into Nov 2026."
+  },
+  {
+   "id": "eden-garden-phangan",
+   "kind": "recurring",
+   "name": "Eden Garden Saturday (Haad Yuan)",
+   "type": "weekly night",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Eden Garden (Eden Bar), Haad Yuan Beach",
+   "window": "in",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 4,
+   "lat": 9.6933,
+   "lng": 100.07599,
+   "coordSource": "gmaps-link+pluscode+osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Eden Bar, Haad Yuan, Koh Phangan",
+   "description": "Long-running Saturday party at Haad Yuan, a small beach just north of Haad Rin. Free entry. Funky house, tech house, progressive and techno from 21:00 until Sunday midday. You arrive by taxi boat from Haad Rin or by 4x4 taxi truck from Ban Tai. Both run all night.",
+   "genres": [
+    "house",
+    "tech house",
+    "progressive house",
+    "techno"
+   ],
+   "dates": [
+    "2027-01-09",
+    "2027-01-16"
+   ],
+   "recurrence": "Every Saturday, 21:00 to Sunday noon",
+   "timeText": "Sat 21:00 to Sun about 12:00",
+   "priceText": "Free entry (2026 listing).",
+   "tips": [
+    "Taxi boats from Haad Rin beach and taxi trucks from Ban Tai run all night.",
+    "Bring cash and a small torch."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/eden-garden-haad-yuan/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/event-location/eden-garden-haad-yuan/",
+    "https://phangan.events/events/sabrina-david-chong-peter-g-papa-joe/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2023/06/cropped-1C3A6F5E-7CEA-4FDF-876E-92AE01DED7DF.jpeg",
+     "source": "phangan.events",
+     "license": "© venue",
+     "credit": "Eden Garden"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/10/1792057972053-fzxf4uljw09.jpg",
+     "source": "phangan.events (flyer)",
+     "license": "© organiser",
+     "credit": "Eden Garden"
+    }
+   ],
+   "verification": "Weekly 'Eden Garden Saturday' listed every Saturday through Nov 2026. Entry, hours and transport from the 2026 listings."
+  },
+  {
+   "id": "unclave-phangan",
+   "kind": "venue",
+   "name": "Unclave (Groovy Tunes minimal nights)",
+   "type": "club",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Unclave, Ban Tai hills, Koh Phangan",
+   "window": "in",
+   "status": "recurring",
+   "pick": true,
+   "undergroundScore": 5,
+   "lat": 9.73006,
+   "lng": 100.04231,
+   "coordSource": "pluscode (phangan.events)+google-maps-listing (3 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Unclave Phangan, Ban Tai, Koh Phangan",
+   "description": "Small underground club in the jungle hills above Ban Tai, Koh Phangan, for about 500 people. Home of Groovy Tunes, a minimal and deep house party about every second Friday from 22:00 to sunrise. It books minimal guests like Cosmjn and Direkt from Romania (30 Oct 2026). The best pick on the islands for minimal fans.",
+   "genres": [
+    "minimal",
+    "deep house",
+    "house",
+    "techno"
+   ],
+   "recurrence": "Groovy Tunes about every second Friday (sometimes Saturday); other crews on other nights",
+   "timeText": "Usually 22:00 to sunrise",
+   "priceText": "Groovy Tunes presale 400-600 THB (Oct 2026).",
+   "tips": [
+    "If the two-week pattern holds, Groovy Tunes falls on Fri 8 Jan 2027. Check @groovytunes__ first.",
+    "Buy the presale on Megatix; it is cheaper than the door."
+   ],
+   "links": [
+    {
+     "label": "Unclave on Instagram",
+     "url": "https://www.instagram.com/unclave.phangan/"
+    },
+    {
+     "label": "Groovy Tunes on Instagram",
+     "url": "https://www.instagram.com/groovytunes__/"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/274256"
+    }
+   ],
+   "sources": [
+    "https://ra.co/clubs/274256",
+    "https://megatix.in.th/events/groovy-tunes-clockwork",
+    "https://phangan.events/event-location/unclave/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/76793/reQQTfvnA2FbcDR3vL9NGjgif4wJawPipmB5Hz4G.jpg",
+     "source": "megatix.in.th (event flyer)",
+     "license": "© organiser",
+     "credit": "Groovy Tunes"
+    },
+    {
+     "url": "https://media.megatix.com.au/e/76793/Fv1CYBbjM1VS6SLIPXXtZLVvuzFEoVTI663PH2vx.jpg",
+     "source": "megatix.in.th",
+     "license": "© organiser",
+     "credit": "Groovy Tunes"
+    }
+   ],
+   "verification": "Groovy Tunes has run every two weeks at Unclave since 24 Jul 2026 (2 Oct, 16 Oct, next 30 Oct). In Jan 2026 Unclave also hosted Zorka x Hypnotica and Kontur afters. No Jan 2027 dates posted yet."
+  },
+  {
+   "id": "waterfall-festival-phangan",
+   "kind": "recurring",
+   "name": "Waterfall Festival (Wednesdays)",
+   "type": "party",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Waterfall Party site, Ban Tai, Koh Phangan",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 2,
+   "lat": 9.70588,
+   "lng": 100.04692,
+   "coordSource": "osm+google-maps-listing (22 m apart)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Waterfall Party, Ban Tai, Koh Phangan",
+   "description": "Big jungle party next to a waterfall in Ban Tai, Koh Phangan, with four stages. The main stage plays house and melodic techno with lasers. Other stages play psytrance, hip-hop and afrobeat. In early 2026 it ran on most Wednesdays. Very touristy and big. 2027 dates are not out yet.",
+   "genres": [
+    "house",
+    "melodic techno",
+    "psytrance",
+    "progressive"
+   ],
+   "dates": [
+    "2027-01-13"
+   ],
+   "recurrence": "Weekly on Wednesdays in high season (2026 pattern), 21:00 to sunrise",
+   "timeText": "21:00 to sunrise",
+   "priceText": "In 2026: 1,000 THB early bird online, 1,300 online, 1,500 at the door (one beer included).",
+   "tips": [
+    "Wed 13 Jan 2027 is only expected. Check phangan.events in December.",
+    "Buy online early; it is cheaper."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/waterfall-festival/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/events/waterfall-festival-14-january-2026/",
+    "https://phangan.events/events/waterfall-festival-3/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/11/IMG_2374.jpeg",
+     "source": "phangan.events",
+     "license": "© organiser",
+     "credit": "Waterfall Festival"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/01/file_2526.jpg",
+     "source": "phangan.events (flyer)",
+     "license": "© organiser",
+     "credit": "Waterfall Festival"
+    }
+   ],
+   "verification": "Ran on 14 and 21 Jan and every Wednesday in Feb 2026 ('weekly Wednesday ritual'). No 2027 schedule found on 15 Oct 2026, so the 13 Jan date is an expectation only."
+  },
+  {
+   "id": "black-box-samui",
+   "kind": "venue",
+   "name": "Black Box (Koh Samui)",
+   "type": "bar",
+   "island": "Koh Samui",
+   "area": "koh-samui",
+   "venue": "Black Box, 3/191 Laem Din Road, Chaweng (Bo Phut), Koh Samui",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 3,
+   "lat": 9.52673,
+   "lng": 100.0569,
+   "coordSource": "google-maps-listing (address matches RA and phangan.events)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Black Box bar, Chaweng, Koh Samui",
+   "description": "Small DJ bar in Chaweng, Koh Samui. In the 2025/26 season, crews held weekend nights here from about 20:00 to 02:00: SECTOR with techno, tech house and progressive guest DJs from abroad, and HACKED with drum and bass. New season dates are not out yet. Only worth it if you sleep on Samui on the way to Koh Phangan.",
+   "genres": [
+    "techno",
+    "tech house",
+    "progressive house",
+    "drum and bass"
+   ],
+   "recurrence": "Weekend DJ nights in high season (Oct 2025 to Apr 2026 pattern)",
+   "timeText": "Party nights about 20:00-02:00 (2025/26 listings)",
+   "priceText": "Not published for 2026/27.",
+   "tips": [
+    "Check Instagram @blackboxbar.samui for the new season's dates.",
+    "Samui airport is a short taxi ride from Chaweng."
+   ],
+   "links": [
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/blackboxbar.samui/"
+    },
+    {
+     "label": "Past night on RA",
+     "url": "https://ra.co/events/2416219"
+    }
+   ],
+   "sources": [
+    "https://ra.co/events/2307573",
+    "https://ra.co/events/2338040",
+    "https://ra.co/events/2416219",
+    "https://phangan.events/events/underground-electronic-music-showcase/",
+    "https://phangan.events/events/sector-evgeny-sviridov/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/11/file_2091.jpg",
+     "source": "phangan.events (flyer, SECTOR night Dec 2025)",
+     "license": "© organiser",
+     "credit": "SECTOR / Black Box"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/01/file_2457.jpg",
+     "source": "phangan.events (flyer, Jan 2026)",
+     "license": "© organiser",
+     "credit": "Black Box"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Chaweng_Beach%2C_Koh_Samui_%2827953535942%29.jpg/1280px-Chaweng_Beach%2C_Koh_Samui_%2827953535942%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 2.0",
+     "credit": "Damian Moore"
+    }
+   ],
+   "verification": "RA and phangan.events list weekend nights from Oct 2025 to 17 Apr 2026 (SECTOR, Black Box Night, HACKED 'final session of the season'). Google Maps reviews are from late 2025. No 2026/27 dates found on 15 Oct 2026."
+  },
+  {
+   "id": "pangea-beach-bar-lanta",
+   "kind": "recurring",
+   "name": "Deep Sundays at Pangea Beach Bar (Koh Lanta)",
+   "type": "weekly night",
+   "island": "Koh Lanta",
+   "area": "koh-lanta",
+   "venue": "Pangea Beach Bar, Long Beach, Koh Lanta",
+   "window": "in",
+   "status": "unconfirmed",
+   "pick": false,
+   "undergroundScore": 4,
+   "lat": 7.60588,
+   "lng": 99.03373,
+   "coordSource": "wikidata+osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pangea Beach Bar, Long Beach, Koh Lanta",
+   "description": "Beach bar on Long Beach, Koh Lanta, known for deep and minimal house since 2012. Past guests include Ian Pooley, Clive Henry and Nakadia. In high season it runs 'Deep Sundays' from 18:00 with sunset DJ sets, last seen in March 2026. Small (about 300 people). Only worth it if you stay on Koh Lanta.",
+   "genres": [
+    "deep house",
+    "minimal",
+    "tech house"
+   ],
+   "dates": [
+    "2027-01-10",
+    "2027-01-17"
+   ],
+   "recurrence": "Sundays in high season from 18:00 (seen March 2026)",
+   "timeText": "Sundays from 18:00",
+   "priceText": "Not listed.",
+   "tips": [
+    "Check facebook.com/pangeabeachbar before you go; the 2027 season is not announced.",
+    "Koh Lanta is a ferry trip from Phuket; plan at least one night there."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/pangeabeachbar"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/clubs/101580"
+    }
+   ],
+   "sources": [
+    "https://ra.co/events/2462341",
+    "https://ra.co/events/2410915",
+    "https://ra.co/clubs/101580",
+    "https://www.wikidata.org/wiki/Q60178765"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Long_Beach_-_panoramio_%283%29.jpg/1280px-Long_Beach_-_panoramio_%283%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 3.0",
+     "credit": "Luděk Chmurovský"
+    }
+   ],
+   "verification": "RA lists Deep Sundays on 15 and 29 Mar 2026 (18:00 start). OSM data updated May 2025. No Jan 2027 dates yet, so status is unconfirmed."
+  }
+ ],
+ "notes": "Checked on 15 Oct 2026. Most January 2027 line-ups are not out yet, so check each link again in December. Changes from the earlier draft: the Courage Bar pin now uses its Google Maps listing at 16 Bangkok Rd (the old street estimate was about 550 m off). Four pins (Enthusiast Place, Lighthouse, Unclave, Waterfall) were cross-checked on Google Maps and are now high confidence. Added BOA Phuket, Niky's Speakeasy (unconfirmed: website offline, latest Google review about Aug 2026), the Sabaii Friday Beach Party and Black Box Samui (2026/27 season not announced). Checked and left out: Bermudos (Rawai / Nai Harn Friday nights): no sign of activity after about 2023 was found. Its Google Maps place is now at the address of Summerset Bar & Lounge in Si Sunthon, a cocktail and shisha lounge with only occasional DJ nights (Enthusiast, 11 Sep 2026). Catch Beach Club (Bang Tao) is open daily but is a dining and day-pass beach club with no regular DJ programme found. YONA is a floating beach club day trip (14:00-21:30; check-in at Patong Boat Pier from 16 Nov 2026 to 4 Apr 2027) with a resident DJ and some afro house guest days. XANA (Angsana Laguna) is listed as a restaurant, bar and live music spot, with no house or techno events on RA or phangan.events. KUDO (Patong) hosts day pool parties (for example Sabrosa, Oct 2026), not techno nights. Armania and Barfunk (11 Bangla Rd) is an upscale VIP club with house and tech house guests most Fridays and Saturdays, 22:00-04:00 (RA, Oct 2026). Maya Beach Club (Bang Tao): Time Out marks it closed and its last listed events were in April 2026. Jungle Experience (Koh Phangan) runs the night before the Full Moon Party (22 Jan 2027), so about 21 Jan, after the trip. Koh Samui's other clubs (Elephant Beach Club Saturdays, SEEN, 79 Beach Club, W Woobar) are commercial or one-off. Krabi: no regular techno or house nights found. Bass music: District 1 (drum and bass at FLY-O Patong and Mamba, Bang Tao) and SUB (UK garage, at Courage, The Chill Spot Karon and Tempo Chalong) also throw parties in Phuket, with no Jan 2027 dates yet. Dated one-off events (Circoloco, Carl Cox, Marco Carola, Halfmoon and others) are left to the events list."
+}

@@ -1,0 +1,64 @@
+{
+ "results": [
+  {
+   "key": "hotels:luna-hostel-phuket-airport",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-luna-hostel-phuket-airport.jpg",
+   "url": "https://a.hwstatic.com/propertyimages/2/274074/pydm3clp4ksxeldyhn2m.jpg",
+   "page": "https://www.hostelworld.com/hostels/p/274074/the-luna-hostel-phuket-airport/",
+   "credit": "\u00a9 The Luna Hostel Phuket Airport",
+   "license": "property photo (Hostelworld listing)",
+   "width": 4032,
+   "height": 3024,
+   "note": "Three white loungers under two thatched umbrellas next to the hostel's pool, in daylight. This is candidate 1, accepted. It comes from the hostel's own Hostelworld gallery (I checked all 30 photos there). The gallery also has a sunset shot of the whole pool and building (zrpxrbpmxmdm313wo2me), but the pipeline's 16:9 attention crop keeps only the sky and umbrellas and cuts the pool out. Candidate 2 is a rooftop pool table. The file is the 4032x3024 iPhone original with EXIF and GPS data; tools/images.mjs does not keep metadata, so the WebP will not carry it."
+  },
+  {
+   "key": "hotels:atom-phuket-hotel",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-atom-phuket-hotel.jpg",
+   "url": "https://www.atomphukethotel.com/images/2121.jpg",
+   "page": "https://www.atomphukethotel.com/",
+   "credit": "\u00a9 Atom Phuket Hotel",
+   "license": "official site",
+   "width": 1896,
+   "height": 864,
+   "note": "Tiled pool in front of the white hotel block, with palms and the garden on the right. This is the full-size original of candidate 1 (2121x1100x500.jpg is the same photo made smaller). It is a phone panorama of about 2.2:1, so the 16:9 crop trims the sides; I checked the crop and it still shows the pool and building. Candidate 2 (a room) is soft. The other site photos are rooms, the lobby, a street view with power lines, and a building-and-garden shot (2122.jpg) as a backup."
+  },
+  {
+   "key": "hotels:proud-phuket-hotel",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-proud-phuket-hotel.jpg",
+   "url": "https://www.proudphuket.com/images/4929.jpg",
+   "page": "https://www.proudphuket.com/",
+   "credit": "\u00a9 Proud Phuket",
+   "license": "official site",
+   "width": 2000,
+   "height": 1333,
+   "note": "Long pool with orange umbrellas and loungers, the hotel block behind it, and one guest sitting at the pool edge. This is candidate 1, accepted: a sharp professional photo used on the official homepage. Candidate 2 is the entrance with the logo sign, and candidate 3 is the lobby."
+  },
+  {
+   "key": "hotels:marriott-nai-yang",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-marriott-nai-yang.jpg",
+   "url": "https://cache.marriott.com/content/dam/marriott-renditions/HKTNB/hktnb-pool-0082-hor-wide.jpg?output-quality=85&interpolation=progressive-bilinear&downsize=1920px:*",
+   "page": "https://www.marriott.com/en-us/hotels/hktnb-phuket-marriott-resort-and-spa-nai-yang-beach/photos/",
+   "credit": "\u00a9 Phuket Marriott Resort and Spa, Nai Yang Beach",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Main pool with palms, looking straight out to Nai Yang Beach and the sea. It comes from the official Marriott photo gallery; the page metadata names it 'Main Pool' and credits Phuket Marriott Resort and Spa, Nai Yang Beach. The file is already exactly 16:9; remove the query string from the URL to get the 4000x2250 original. No candidates were given. I found nothing on Commons or Openverse, and the 2016 PR Newswire photo is a collage with a computer render. The Marriott overview page blocks scripts (403), but the /photos/ page loads. Backups from the same gallery: hktnb-pool-0083 (pool with loungers) and hktnb-pool-0079 (pool and buildings)."
+  },
+  {
+   "key": "hotels:the-slate-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/hotels-the-slate-phuket.jpg",
+   "url": "https://www.theslatephuket.com/assets/media/uploads/Swimming%20Pools/Pulley%20Pool/Pulley%20Pool%20%26%20Bar%20Overlooking%20to%20Pulley%20Bar%20Left.jpg",
+   "page": "https://www.theslatephuket.com/experiences/pools-and-dreamscape.html",
+   "credit": "\u00a9 The Slate",
+   "license": "official site",
+   "width": 1500,
+   "height": 1000,
+   "note": "Pulley Pool & Bar in daylight: a dark-wood Thai pavilion bar over a green-tiled pool, with palms and The Slate's tyre sculptures. It comes from the official pools page. I chose it over candidate 1 because that one shows the Black Ginger restaurant at night (a dining venue, with a guide rope across the middle of the frame). Candidates 2 and 3 (pool villas from above, a suite balcony) show less of the resort. Backup: the dusk version of the same pool, Pulley-Pool-Bar---Cover.jpg."
+  }
+ ]
+}

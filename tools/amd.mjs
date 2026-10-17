@@ -4,6 +4,7 @@
 //   inside brackets it follows a comma instead: 'Smart Bus (100 baht)' -> 'Smart Bus (100 baht, ≈1,100 AMD)'
 // It takes whole numbers, ranges (300-800, 250 to 350), lists (990 / 1,400 THB), "450-baht" and "฿500".
 // Decimal amounts are left alone: in this guide they are all exchange rates (33.35 THB per USD).
+// An element with a data-noamd attribute shows its own dram amount (amount()), so html() leaves its inside alone.
 const NUM = String.raw`\d{1,3}(?:,\d{3})+|\d+`
 const AMT = String.raw`(?:${NUM})(?:\s?(?:-|–|/)\s?(?:${NUM})|\sto\s(?:${NUM}))*(?:\smillion)?`
 const DONE = String.raw`(?!\s?\(≈|,\s?≈|\s?<span class="amd">)`
@@ -40,19 +41,21 @@ export function makeAmd(amdPerThb) {
   }
   return {
     rate: amdPerThb,
+    amount: (thb) => drams(Number(thb).toLocaleString('en-US')),
     text: (s) => add(String(s), (x, nested) => (nested ? ', ' + x : ' (' + x + ')')),
     // page text between tags; tags, attributes and the inside of SKIP elements stay as they are
     // (dram amounts already there are taken out first, so running it twice changes nothing)
     html: (s) => {
-      let skip = null, depth = 0
+      let skip = null, open = 0, depth = 0 // skip: the element being left alone, open: how deep inside it
       const wrap = (x, nested) => (nested ? '<span class="amd">, ' + x + '</span>' : ' <span class="amd">(' + x + ')</span>')
       return String(s).replace(/ ?<span class="amd">[^<]*<\/span>/g, '').split(/(<[^>]*>)/).map((part, i) => {
         if (i % 2) {
           const m = part.match(/^<(\/?)([a-zA-Z][\w-]*)/)
           if (m) {
             const name = m[2].toLowerCase()
-            if (!m[1] && !skip && SKIP.has(name)) skip = name
-            else if (m[1] && name === skip) skip = null
+            if (!m[1] && !skip && (SKIP.has(name) || /\sdata-noamd[\s=>]/.test(part))) { skip = name; open = 1 }
+            else if (!m[1] && name === skip) open++
+            else if (m[1] && name === skip && --open === 0) skip = null
             if (!INLINE.has(name)) depth = 0
           }
           return part

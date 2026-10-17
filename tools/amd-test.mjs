@@ -54,6 +54,10 @@ eq('html text and skips',
 eq('html entities', amd.html('<li>Ben &amp; Jerry&#39;s 120 THB</li>'), '<li>Ben &amp; Jerry&#39;s 120 THB <span class="amd">(≈1,300 AMD)</span></li>')
 eq('html brackets across a link', amd.html('<p>(see <a href="#x">this</a> 500 THB)</p><p>200 THB</p>'),
   '<p>(see <a href="#x">this</a> 500 THB<span class="amd">, ≈5,400 AMD</span>)</p><p>200 THB <span class="amd">(≈2,200 AMD)</span></p>')
+// a block marked data-noamd shows its own dram amount (the villa price box), so nothing inside it changes
+eq('html data-noamd', amd.html('<div class="price" data-noamd><b>241,500 THB</b><div><span>3,020 THB</span></div></div><p>500 THB</p>'),
+  '<div class="price" data-noamd><b>241,500 THB</b><div><span>3,020 THB</span></div></div><p>500 THB <span class="amd">(≈5,400 AMD)</span></p>')
+eq('amount', amd.amount(241500), '≈2,610,000 AMD')
 eq('html already done', amd.html('<p>500 THB <span class="amd">(≈5,400 AMD)</span></p>'), '<p>500 THB <span class="amd">(≈5,400 AMD)</span></p>')
 
 // ---- the built page ----
@@ -61,7 +65,12 @@ const file = path.resolve(process.argv[2] || path.join(ROOT, 'dist/index.html'))
 const h = fs.readFileSync(file, 'utf8')
 // the page text (the artifact build has no <body> tag: then it starts at the top; styles and scripts are cut out below)
 const body = h.slice(Math.max(0, h.indexOf('<body')), h.indexOf('<script type="application/json"'))
-const text = body.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
+// the villa price boxes (data-noamd) write their own dram amounts: check those apart (the text part, up to its
+// </div>), then leave them out
+const boxes = body.match(/<div class="price-box" data-noamd><div>[\s\S]*?<\/div>/g) || []
+const boxMissing = boxes.filter((x) => (x.match(/THB/g) || []).length !== (x.match(/AMD/g) || []).length)
+if (!boxes.length || boxMissing.length) { failed++; console.log(`  FAIL villa price boxes: ${boxMissing.length} of ${boxes.length} without a dram amount for each baht amount`) }
+const text = body.replace(/<div class="price-box" data-noamd><div>[\s\S]*?<\/div>/g, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
 const missed = []
 // (a number right after a / is part of a web address, like pattayamail.com/news/2000-baht-helmet-fine)
 for (const m of text.matchAll(/(?<![\d.,:/])\d[\d,]*(?:-|\s)(?:THB|baht|Baht)\b(?!\s\(≈|,\s≈)/g)) missed.push(text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 15).replace(/\s+/g, ' '))
@@ -69,11 +78,12 @@ const notes = (body.match(/class="amd"/g) || []).length
 if (missed.length) { failed++; console.log(`  FAIL ${path.basename(file)}: ${missed.length} baht prices without a dram amount`); missed.slice(0, 10).forEach((s) => console.log('    | ' + s)) }
 if (notes < 300) { failed++; console.log(`  FAIL ${path.basename(file)}: only ${notes} dram amounts`) }
 const data = JSON.parse(h.match(/<script type="application\/json" id="guide-data">([\s\S]*?)<\/script>/)[1])
-const pops = data.points.filter((p) => /\d (THB|baht)/.test(p.sub || ''))
-const popMissed = pops.filter((p) => !/AMD/.test(p.sub))
+// popup lines with a price, and the villa popups' own price (price + priceAmd)
+const pops = data.points.filter((p) => /\d (THB|baht)/.test(p.sub || '') || p.price)
+const popMissed = pops.filter((p) => (p.price ? !/AMD/.test(p.priceAmd || '') : !/AMD/.test(p.sub)))
 if (!pops.length || popMissed.length) { failed++; console.log(`  FAIL map popups: ${popMissed.length} of ${pops.length} prices without a dram amount`) }
 if (!(data.rates && data.rates.mid && data.rates.mid.AMD)) { failed++; console.log('  FAIL converter: no AMD rate') }
 
-console.log(`${T.length + 4} rule checks; ${path.basename(file)}: ${notes} dram amounts, ${pops.length} map popups with prices`)
+console.log(`${T.length + 6} rule checks; ${path.basename(file)}: ${notes} dram amounts, ${boxes.length} villa price boxes, ${pops.length} map popups with prices`)
 console.log(failed ? `AMD TEST FAILED: ${failed}` : 'AMD TEST PASSED')
 process.exitCode = failed ? 1 : 0

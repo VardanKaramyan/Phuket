@@ -188,6 +188,45 @@ details.more ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 5px; 
 .fav[aria-pressed="true"] svg { fill: currentColor; }
 html:not(.js) .js-only { display: none !important; }
 
+/* villa price: the trip total, big and bold, with On map next to it */
+.price-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 12px; padding: 12px 14px; border-radius: 12px; background: var(--sea-soft); }
+.price-box > div { display: grid; gap: 2px; min-width: 0; flex: 1 1 175px; }
+.price-label { font: 600 11px/1.3 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--sea-text); }
+.price-total { font: 700 27px/1.1 var(--font-display); letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
+.price-amd { font-size: 15.5px; font-weight: 600; color: var(--ink-2); }
+.price-pp { font-size: 13.5px; color: var(--ink-2); }
+.price-box .btn { flex: none; }
+.price-box.none { background: var(--alert-soft); }
+.price-box.none .price-total { font-size: 20px; color: var(--alert); white-space: normal; }
+
+/* Like / Skip: the group's votes */
+.votes { display: grid; gap: 6px; }
+.vote-btns { display: flex; gap: 8px; }
+.vote-btns .btn { flex: 1 1 0; }
+.vote b { font-weight: 700; min-width: 1ch; }
+.vote[data-vote-btn="like"][aria-pressed="true"] { background: var(--leaf-soft); border-color: var(--leaf); color: var(--ink); }
+.vote[data-vote-btn="skip"][aria-pressed="true"] { background: var(--alert-soft); border-color: var(--alert); color: var(--ink); }
+.voters { font-size: 13.5px; color: var(--ink-2); margin: 0; }
+.voters:empty { display: none; }
+.flyer .voters { color: var(--night-muted); }
+.flyer .vote[aria-pressed="true"] { color: var(--ink); }
+.picks { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.picks li { padding-left: 2px; }
+.picks a { font-weight: 700; }
+.picks span { color: var(--ink-2); }
+.picks small { display: block; color: var(--ink-2); font-size: 13px; }
+.vote-dialog { border: 0; border-radius: var(--radius); padding: 18px; width: min(360px, calc(100vw - 32px)); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.vote-dialog::backdrop { background: rgb(0 0 0 / 0.45); }
+.vote-dialog form { display: grid; gap: 10px; }
+.vote-dialog h2 { font-size: 20px; }
+.vote-dialog .vote-what { margin: 0; font-weight: 600; }
+.vote-dialog label { display: grid; gap: 4px; font-size: 14px; color: var(--ink-2); }
+.vote-dialog input { font: inherit; font-size: 16px; color: var(--ink); padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); }
+
+/* from a map popup to the card: the way back */
+.back-to-map { position: fixed; z-index: 920; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + 14px + env(safe-area-inset-bottom, 0px)); display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--ink); color: var(--bg); font: 600 14.5px/1 var(--font-body); box-shadow: var(--shadow); cursor: pointer; }
+.back-to-map svg { width: 18px; height: 18px; }
+
 /* ---------- flyer cards (music events) ---------- */
 .flyer { background: var(--night); color: var(--night-ink); box-shadow: none; border: 1px solid var(--night-line); }
 .flyer .subtitle, .flyer .meta, .flyer .facts dt { color: var(--night-muted); }
@@ -314,6 +353,10 @@ html.map-full, html.map-full body { overflow: hidden; }
 .leaflet-popup-content { margin: 12px 14px; font-size: 14px; line-height: 1.4; }
 .leaflet-popup-content h4 { font-size: 16px; margin-bottom: 3px; }
 .leaflet-popup-content p { color: var(--ink-2); margin: 0 0 8px; }
+.leaflet-popup-content .pop-thumb { display: block; width: 100%; height: 88px; object-fit: cover; border-radius: 8px; margin-bottom: 8px; }
+.leaflet-popup-content .pop-price { color: var(--ink); }
+.leaflet-popup-content .pop-price b { font: 700 19px/1.2 var(--font-display); }
+.leaflet-popup-content .pop-price span { display: block; color: var(--ink-2); font-weight: 600; }
 .leaflet-popup-content .actions { gap: 6px; }
 .leaflet-popup-content .btn { min-height: 40px; padding: 0 11px; font-size: 13px; }
 .leaflet-popup-close-button { color: var(--ink-2) !important; }

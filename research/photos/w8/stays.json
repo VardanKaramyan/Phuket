@@ -191,6 +191,42 @@
    "width": 1024,
    "height": 683,
    "note": "Listing photo, chosen by eye from the listing gallery (16 Oct 2026)."
+  },
+  {
+   "key": "hotels:light-hope-laguna-6br-villa",
+   "ok": true,
+   "file": "assets/raw/hotels-light-hope-laguna-6br-villa.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-40922608/original/847b4850-35be-4144-9de5-ab8e2984c7f6.jpeg",
+   "page": "https://www.airbnb.com/rooms/40922608?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© 继辉",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 960,
+   "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:mouana-breeze-mai-khao",
+   "ok": true,
+   "file": "assets/raw/hotels-mouana-breeze-mai-khao.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMTIwMTU3NzMxMjE0NDQxNg==/original/f7304868-7aca-4a85-8ef5-1ff3e9258a6e.jpeg",
+   "page": "https://www.airbnb.com/rooms/1401201577312144416?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Lijing",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 958,
+   "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:patong-villa-5br-game-room",
+   "ok": true,
+   "file": "assets/raw/hotels-patong-villa-5br-game-room.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1262796170798445334/original/add8f9c2-18c9-44ab-bb40-9416f743de41.jpeg",
+   "page": "https://www.airbnb.com/rooms/1262796170798445334?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Mike",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 960,
+   "note": "Listing cover photo (the house at night), checked by eye (17 Oct 2026)."
   }
  ]
 }

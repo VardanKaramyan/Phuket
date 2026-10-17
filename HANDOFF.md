@@ -148,7 +148,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 
 ## 5. Where everything stands (done and tested)
 
-- **Content:** 40 music items (dated events, weekly nights, clubs), 71 places (must-see, hidden gems, day trips, food), 20 areas, 16 villas for the group (the user's own Airbnb and Booking.com shortlist for 8 guests, 8-18 Jan, which replaced the 28 researched hotels on 16 Oct 2026), 8 money-changer brands, 12 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
+- **Content:** 40 music items (dated events, weekly nights, clubs), 71 places (must-see, hidden gems, day trips, food), 20 areas, 19 villas for the group (the user's own Airbnb and Booking.com shortlist for 8 guests, 8-18 Jan, which replaced the 28 researched hotels on 16 Oct 2026; 3 more added and every price re-checked on 17 Oct 2026), 8 money-changer brands, 12 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
 - **Photos:** 173 photos, 166 in use. Each was looked at by an agent and cropped to 640×360 WebP. Sources are Wikimedia Commons (with author and license) or the venue's own site or social accounts, for personal use only.
 - **Site:**
   - Hash-routed and works with JavaScript off (CSS `:target`); light and dark themes.
@@ -156,6 +156,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - An 18-night plan grouped by phase, phase and place filters, favourites, "My hotels", Hide / Show again on the villa cards, a converter.
   - Google place IDs on 142 links; Directions go to piers or car parks where the pin is in the sea or uphill.
   - Map popups use short texts so they fit a 320×640 phone.
+  - Villas and votes (17 Oct 2026): each villa card shows the trip total big and bold (with drams and the price per person a night) next to an On map button; every villa is on the map by default, and its popup shows the photo, the total, See villa and the listing. See villa (or Details on any pin) leaves a Back to map button on the card. Villa, event and place cards have Like / Skip votes by name, shared by everyone on the website (`api/votes.js` + Upstash), with Group picks at the top of the villa list.
   - Dram prices (17 Oct 2026): every baht price shows its Armenian dram amount, `500 THB (≈5,400 AMD)`, on the page (424), in the map popups and in the KML; AMD is first in the converter (it opens at 10,000 AMD). Section 10 has the rules.
   - Map (17 Oct 2026): wheel and trackpad zoom glide instead of jumping in 0.25 steps; a full-screen button (top of the map buttons; Esc or the same button exits); Satellite works offline with the EOxCloudless tiles (section 10).
 - **Outputs:**
@@ -168,7 +169,9 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - `offline-test`: both host styles, including Satellite with the server stopped.
   - `popup-test`: 27/27.
   - `map-test`: 9/9 on `dist/index.html` and on the single file.
-  - `amd-test`: 30 rule checks, and no baht price without a dram amount on all three builds.
+  - `amd-test`: 32 rule checks, the villa price boxes, and no baht price without a dram amount on all three builds.
+  - `votes-test`: 20/20 (the server rules, two phones voting, taking a vote back, Group picks, a failed save).
+  - `map-test`: 14/14, now with every villa pin, the villa popup, See villa, Back to map and On map.
   - Screenshots in light and dark at 390 and 320 px: no console errors, no sideways scroll, tab bar not covered.
 
 ---
@@ -190,6 +193,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 | 10 | `node tools/popup-test.mjs` | Taps "On map" on 9 cards in a row at 390, 360 and 320 px; every popup button must be tappable. |
 | 10b | `node tools/map-test.mjs [html]` | Trackpad-style wheel zoom must glide (15+ small zoom changes, no jump over 0.3); full screen must fill the screen, keep popups tappable, and exit with the button and Esc; with Esri blocked, Satellite must show offline tiles over the whole map at zoom 11, 16 and in Krabi at 13. |
 | 10c | `node tools/amd-test.mjs [html]` | The dram rules in `tools/amd.mjs` on 30 sample texts, then the built page: every whole-baht price must have its dram amount, and the popups and the converter must have them too. |
+| 10d | `node tools/votes-test.mjs` | Runs `api/votes.js` against a stand-in for Upstash (any variable prefix, one vote per name, taking back, bad input refused), then two browsers on `dist/` vote, see each other's votes, take a vote back, and check Group picks, Cancel and a failed save. |
 | 11 | `node tools/qa-shots.mjs [html] [outdir]` | Screenshots: pass at 390 light / 320 dark, every agenda day, phase-filter counts, every Info section, the Apps view, chosen cards (`CARDS=id,id`). The sticky bars are made static so they do not cover content; the Apps view is saved in slices (`apps-1.png`, …). Exits 1 if it found problems. |
 | 12 | `node tools/shoot.mjs <html> <outdir> light\|dark [views…]` | Full-view phone screenshots (`WIDTH=320` for small phones; default views include `apps`, skipped while it is not built); reports console errors, overflow, covered tab bar, and exits 1 if it found any. |
 
@@ -209,6 +213,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`,
 | `tools/merge-late-jan.mjs` | The 19-26 Jan research merge: `TAKE` (fields a re-checked copy replaces), `AFTER` (keeps facts the researchers lacked), `SKIP` (left out on purpose), `NEW_FIX`, `DEAD_LINKS`. |
 | `tools/import.mjs`, `tools/import-apps.mjs` | Research result → data. |
 | `tools/apps-result-from-journal.py` | Rebuilds `research/result-apps.json` from the apps workflow's `journal.jsonl` (section 1, step 0). |
+| `api/votes.js` | The vote server (Vercel function at `/api/votes`): GET all votes, POST `{ item, name, vote }` with `like`, `skip` or `null`. One Redis hash `guide:votes`, field `<item>␟<name in lower case>`. Finds the Upstash database from any `*_REST_API_URL` / `*_REST_API_TOKEN` pair or a `rediss://` URL. |
 | `tools/amd.mjs` | Adds the dram amount after each baht price: `text()` for plain text (popups, KML), `html()` for the page text (tags, attributes, scripts and select options stay as they are). |
 | `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/map-test.mjs`, `tools/amd-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
 | `tools/images.mjs`, `tools/collect-photos.py`, `tools/photo-items-from-raw.mjs`, `tools/geo.mjs` | Photos and map geometry. `photo-items-from-raw.mjs` overwrites `data/photo-items.json` (142 items instead of 144; `npm run data` writes it back). |
@@ -266,7 +271,8 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
      ```
    - Set `researchedOn` in `data/extra.json`, then run `npm run all`, republish, and send the new offline file to the phone.
 4. Optional (needs the user's Google account and consent): import `dist/phuket-areas.kml` into Google My Maps.
-5. The artifact (section 8) still has the old map: republish it so it gets the smooth zoom and the full-screen button (it has no satellite there, as before). Ask first.
+5. Votes: after the user connected Upstash (17 Oct 2026, prefix `STORAGE`), open `<site>/api/votes`: it should answer `{"votes":{}}`, not 503. The user pasted the database token in the chat, so suggest resetting it in the Upstash console (Vercel picks up the new one when the store is reconnected).
+6. The artifact (section 8) still has the old map: republish it so it gets the smooth zoom and the full-screen button (it has no satellite there, as before). Ask first.
 6. Known, not fixed: thin light lines along the Esri tile edges on the satellite and street maps (dark lines in dark mode). They were there before 17 Oct 2026; a 1 px tile overlap and whole zoom levels did not remove them, and the offline EOX tiles alone do not show them.
 
 ## 10. Decisions worth knowing
@@ -288,6 +294,8 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
   - The single file is the backup kept on the phone. iOS Files previews show it without JavaScript, which is why every section renders as static HTML and routes with CSS `:target`.
 - **Map tiles:** CARTO now returns "API KEY REQUIRED" tiles, and OSM's own tiles label Phuket in Thai, so streets and satellite come from Esri. Offline, the map falls back to the bundled vector land, roads and area outlines.
 - **Offline satellite (17 Oct 2026):** Esri's World Imagery page says the layer is not meant for exporting tiles offline (only ArcGIS apps with an org account), so its tiles are not downloaded in advance. The bundled layer is EOxCloudless 2025 (Sentinel-2): CC BY-NC-SA 4.0, free for non-commercial use with the credit shown on the map; 10 m per pixel, so sharp to zoom 14 and blurry past 15. 2025 was picked over 2023 (haze over the sea). Coverage: the whole trip region at zoom 8-10, the Andaman day trips and Koh Phangan / Samui at 11-12, Phuket and the bay islands at 13, Phuket island and Koh Phangan at 14 (769 tiles, 3.6 MB). It sits under the Esri layer, so it also shows while Esri tiles load. A tile missing at one zoom is drawn from the nearest lower zoom.
+- **Votes (17 Oct 2026):** the user chose Vercel + Upstash, Like or Skip with names, on villas, events and places. No accounts: anyone with the link can vote under any name, one vote per name and item (names match without case). A name is asked in a dialog each time (pre-filled from the last vote), so a vote is never one stray tap. Votes reload when the page comes back to the front and every 30 s; offline the last votes show and voting says it needs internet. The service worker never answers `/api/`.
+- **Villa prices (17 Oct 2026):** all re-read from the booking boxes with headless Chrome (the page text, not an AI summary: an AI extraction said 210,000 for a villa whose box said 199,136). Two had changed (LuxPride 261,723 → 261,410; Chill Beach on Booking.com 223,230 → 187,569). Airbnb's map point for every villa matched the guide's pin.
 - **Dram prices (17 Oct 2026):** the user asked for AMD next to every price. The build converts the finished page text, so every field with a price gets it (fees, tickets, villa prices, Info, Apps, Money, day tips). Rules: a whole number (or range `300-800`, `250 to 350`, list `990 / 1,400`, `450-baht`, `฿500`, `1 million baht`) right before THB or baht; rounded to 10 below 1,000 AMD, 100 below 100,000, then 1,000 and 10,000. Decimals are skipped (all of them are exchange rates). Inside brackets the dram amount follows a comma, so there are no brackets in brackets. Not covered: a number that relies on a currency named earlier, such as "Patong to Kata 250-500" after "600-950 baht". The rate is fixed at build time (10.8, the mid-market rate from two sources on 17 Oct 2026); only the converter refreshes it online.
 - **Wheel zoom (17 Oct 2026):** the user found the map "slow" and "clicky". A benchmark (phone size, CPU slowed 4×) showed touch drag and pinch already at 60 fps; the cause was Leaflet's wheel zoom (40 ms bursts, rounded up to a 0.25 step, each animated: about 2 s of trackpad scrolling for 2 zoom levels). `smoothWheel` moves the map every frame like pinch zoom: 120 px of scrolling per zoom level, ctrl + wheel (a trackpad pinch) at a factor of e per 100 px.
 - **Areas** follow official subdistricts (tambon) clipped to the coastline:

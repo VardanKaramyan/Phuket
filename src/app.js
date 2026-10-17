@@ -231,6 +231,7 @@
   let current = null
   function show(view, focusEl) {
     if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
+    syncBack(view)
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
@@ -279,7 +280,18 @@
     return { maxWidth: Math.min(300, w - 112), minWidth: Math.min(200, w - 140), autoPanPaddingTopLeft: L.point(10, 64), autoPanPaddingBottomRight: L.point(60, 16) }
   }
   function popupHtml(p) {
-    const card = p.card ? '<a class="btn" href="#' + p.card + '">Details</a>' : ''
+    const villa = p.t === 'hotel'
+    // the card link remembers the pin, so the card can offer Back to map
+    const card = p.card ? '<a class="btn' + (villa ? ' primary' : '') + '" href="#' + p.card + '" data-from-map="' + esc(p.t + ':' + p.id) + '">' + (villa ? 'See villa' : 'Details') + '</a>' : ''
+    if (villa) {
+      // the card's photo (when the map is tall enough for it), the trip total in bold and the listing; the pins are
+      // approximate, so no Google Maps button
+      const img = p.card && map && map.getSize().y >= 440 && document.querySelector('#' + p.card + ' .media img')
+      const thumb = img ? '<img class="pop-thumb" src="' + esc(img.getAttribute('src')) + '" alt="">' : ''
+      const price = p.price ? '<p class="pop-price"><b>' + esc(p.price) + '</b> ' + esc(p.priceNote || '') + (p.priceAmd ? '<span>' + esc(p.priceAmd) + '</span>' : '') + '</p>' : ''
+      const web = p.web ? '<a class="btn" target="_blank" rel="noopener" href="' + esc(p.web) + '">' + esc(p.webLabel) + '</a>' : ''
+      return thumb + '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') + price + '<div class="actions">' + card + web + '</div>'
+    }
     const dir = p.nodir ? '' : '<a class="btn" target="_blank" rel="noopener" href="' + gdir(p.dlat ?? p.lat, p.dlng ?? p.lng) + '">' + esc(p.dlabel || 'Directions') + '</a>'
     return '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') +
       '<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="' + gmaps(p.q, p.pid) + '">Google Maps</a>' + dir + card + '</div>'
@@ -445,9 +457,10 @@
       },
     })
     ;['event', 'place', 'gem', 'hotel', 'money'].forEach((t) => { layers[t] = L.layerGroup() })
-    ;['event', 'place', 'gem'].forEach((t) => layers[t].addTo(map))
+    ;['event', 'place', 'gem', 'hotel'].forEach((t) => layers[t].addTo(map))
     D.points.forEach((p) => {
-      const m = L.circleMarker([p.lat, p.lng], dotStyle(p.k)).bindPopup(popupHtml(p), popupOpts())
+      // the popup is built when it opens, so it fits the map's size at that moment (full screen or not)
+      const m = L.circleMarker([p.lat, p.lng], dotStyle(p.k)).bindPopup(() => popupHtml(p), popupOpts())
       m.kind = p.k
       m.bindTooltip(esc(p.name), { direction: 'top', offset: [0, -6] })
       layers[p.k === 'gem' ? 'gem' : p.t].addLayer(m)
@@ -549,10 +562,23 @@
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-on-map]'); if (!b) return
     e.preventDefault()
-    const key = b.dataset.onMap
+    openOnMap(b.dataset.onMap)
+  })
+  function openOnMap(key) {
     if (location.hash !== '#areas') { pendingFocus = key; location.hash = 'areas' } else if (map) focusPoint(key)
     setTimeout(() => { if (map && pendingFocus) { focusPoint(pendingFocus); pendingFocus = null } }, 120)
-  })
+  }
+  // from a map popup to its card and back: the card's view shows Back to map, which reopens the same popup;
+  // going anywhere else drops it
+  let backTo = null
+  const backBtn = $('#back-to-map')
+  document.addEventListener('click', (e) => { const a = e.target.closest('[data-from-map]'); if (a) backTo = { key: a.dataset.fromMap, view: null } }, true)
+  backBtn?.addEventListener('click', () => { const k = backTo && backTo.key; backTo = null; backBtn.hidden = true; if (k) openOnMap(k) })
+  function syncBack(view) {
+    if (backTo && backTo.view === null) backTo.view = view
+    if (backTo && (view !== backTo.view || view === 'areas')) backTo = null
+    if (backBtn) backBtn.hidden = !backTo
+  }
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-area-map]'); if (!b) return
     e.preventDefault()
@@ -695,6 +721,87 @@
     installTip.hidden = false
     $('#install-ios').hidden = !ios
     $('#install-android').hidden = ios
+  }
+
+  /* ---------- shared votes: Like / Skip by name, on the website (api/votes) ---------- */
+  const voteBars = $$('[data-vote-item]')
+  const dlg = $('#vote-dialog')
+  const VOTE = { like: 'Like', skip: 'Skip' }
+  const canVote = !!D.votes && /^https?:$/.test(location.protocol) && !!dlg
+  let votes = canVote ? store.get('votes', null) : null // the last votes loaded, also shown offline
+  let voteFor = null // what the open dialog is about: { item, v, remove }
+  const voterName = () => store.get('voterName', '')
+  const same = (a, b) => a.toLowerCase() === b.toLowerCase()
+  const mineOf = (it) => { const me = voterName(); return !me ? null : it.like.some((n) => same(n, me)) ? 'like' : it.skip.some((n) => same(n, me)) ? 'skip' : null }
+  const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's')
+  function renderVotes() {
+    if (!votes) return
+    voteBars.forEach((bar) => {
+      const it = votes[bar.dataset.voteItem] || { like: [], skip: [] }
+      const mine = mineOf(it)
+      bar.hidden = false
+      ;['like', 'skip'].forEach((v) => {
+        const b = $('[data-vote-btn="' + v + '"]', bar)
+        $('b', b).textContent = it[v].length
+        b.setAttribute('aria-pressed', String(mine === v))
+      })
+      $('.voters', bar).textContent = [it.like.length ? 'Like: ' + it.like.join(', ') : '', it.skip.length ? 'Skip: ' + it.skip.join(', ') : ''].filter(Boolean).join(' · ')
+    })
+    // Group picks: the villas with likes, most first (fewer skips breaks a tie)
+    const box = $('#group-picks-box'), list = $('#group-picks')
+    if (!box || !list) return
+    const rows = Object.entries(votes).filter(([k, it]) => k.startsWith('ht:') && it.like.length)
+      .map(([k, it]) => ({ it, card: document.getElementById('ht-' + k.slice(3)) })).filter((r) => r.card)
+      .sort((a, b) => b.it.like.length - a.it.like.length || a.it.skip.length - b.it.skip.length)
+    box.hidden = !rows.length
+    list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
+      (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
+  }
+  async function loadVotes() {
+    if (!canVote || !navigator.onLine) return
+    try {
+      const r = await fetch(D.votes, { cache: 'no-store' })
+      if (!r.ok) throw new Error('votes ' + r.status)
+      votes = (await r.json()).votes || {}
+      store.set('votes', votes); renderVotes()
+    } catch { /* offline, or voting not set up yet: keep the last votes */ }
+  }
+  if (canVote) {
+    document.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-vote-btn]'); if (!b) return
+      const bar = b.closest('[data-vote-item]'), v = b.dataset.voteBtn
+      voteFor = { item: bar.dataset.voteItem, v, remove: b.getAttribute('aria-pressed') === 'true' }
+      $('#vote-title').textContent = voteFor.remove ? 'Take back your ' + VOTE[v] : VOTE[v]
+      $('#vote-what').textContent = bar.dataset.voteName
+      $('#vote-name').value = voterName()
+      $('[data-vote-save]', dlg).textContent = voteFor.remove ? 'Take back' : 'Save vote'
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '')
+      ;(voterName() ? $('[data-vote-save]', dlg) : $('#vote-name')).focus()
+    })
+    $('[data-vote-cancel]', dlg).addEventListener('click', () => { voteFor = null; dlg.close() })
+    $('#vote-form').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const name = $('#vote-name').value.replace(/\s+/g, ' ').trim()
+      if (!name || !voteFor) return
+      // a different name is a different person: for them it is a new vote, not taking one back
+      const vote = voteFor.remove && same(name, voterName()) ? null : voteFor.v
+      const item = voteFor.item
+      store.set('voterName', name)
+      voteFor = null; dlg.close()
+      try {
+        const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ item, name, vote }) })
+        if (!r.ok) throw new Error('vote ' + r.status)
+        votes = (await r.json()).votes || {}
+        store.set('votes', votes); renderVotes()
+        toast(vote ? VOTE[vote] + ' saved for ' + name : 'Vote taken back')
+      } catch { toast(navigator.onLine ? 'Could not save the vote. Try again in a minute.' : 'Voting needs internet.') }
+    })
+    renderVotes()
+    loadVotes()
+    // other people's votes: when the guide comes back to the front, and every 30 s while it is open
+    window.addEventListener('focus', loadVotes)
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
+    setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 30000)
   }
 
   syncHiddenStays()

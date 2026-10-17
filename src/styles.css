@@ -246,7 +246,15 @@ details.note-add summary svg { width: 16px; height: 16px; }
 .notes-label svg { width: 16px; height: 16px; }
 /* a villa with no notes: no label and no empty list, just Add a note */
 .card .notes.empty .notes-label, .card .notes.empty .notes-list { display: none; }
-.notes-all .block-title h2 { display: flex; align-items: center; gap: 8px; }
+.notes-all .block-title h2, #villa-notes-box .block-title h2 { display: flex; align-items: center; gap: 8px; }
+#villa-notes-box .block-title svg { width: 20px; height: 20px; }
+/* the Notes tab: each villa's notes under its name (a link to the villa) */
+#villa-notes { display: grid; gap: 14px; }
+.villa-notes h3 { margin: 0 0 6px; font: 600 16px/1.3 var(--font-display); }
+.villa-notes h3 a { color: var(--ink); text-decoration: none; }
+.villa-notes h3 a::after { content: " ›"; color: var(--sea); }
+.villa-notes .notes-list { margin: 0; }
+.info-tiles { margin-bottom: 6px; }
 .notes-all .block-title svg { width: 20px; height: 20px; }
 /* Stats: visits and activity */
 #stats-body { display: grid; gap: 14px; }

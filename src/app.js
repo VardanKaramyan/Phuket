@@ -4,7 +4,7 @@
   const D = JSON.parse(document.getElementById('guide-data').textContent)
   const $ = (s, el = document) => el.querySelector(s)
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
-  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'stats']
+  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'stats']
   // kept for this tab only (it survives a refresh): where you were on the page and on the map
   const session = {
     get(k) { try { return JSON.parse(sessionStorage.getItem('pg:' + k) || 'null') } catch { return null } },
@@ -865,7 +865,8 @@
     if (!fresh.length || (first && !hadSeen)) return // a first visit: no flood of old news
     const r = fresh[0], c = cardOf(r.x)
     const text = (first ? 'Since your last visit: ' : '') + describe(r) + (fresh.length > 1 ? ' (+' + (fresh.length - 1) + ' more)' : '')
-    toast(text, c ? { label: 'Show', run: () => { $('#toast').hidden = true; location.hash = c.id } } : undefined)
+    const to = c ? c.id : r.x === 'all' && document.getElementById('notes') ? 'notes' : '' // a group note: the Notes tab
+    toast(text, to ? { label: 'Show', run: () => { $('#toast').hidden = true; location.hash = to } } : undefined)
   }
   // what people do in the guide, for the Stats page: sent in small batches (and when the page is closed)
   const queue = []
@@ -1035,16 +1036,27 @@
   function renderNotes() {
     if (!notes) return
     const me = voterName()
+    const noteLi = (x) => '<li><p>' + esc(x.text).replace(/\n/g, '<br>') + '</p><small>' + esc(x.by) + ' · ' + esc(when(x.t)) + '</small>' +
+      (me && same(x.by, me) ? '<button class="note-del" type="button" data-note-del="' + esc(x.id) + '" aria-label="Delete this note">' + '×' + '</button>' : '') + '</li>'
     $$('[data-notes]').forEach((box) => {
       const list = notes[box.dataset.notes] || []
       box.hidden = false
       const n = $('.notes-n', box); if (n) n.textContent = list.length ? '(' + list.length + ')' : ''
       // a villa with no notes shows just Add a note; Group notes says there are none yet
       box.classList.toggle('empty', !list.length)
-      $('.notes-list', box).innerHTML = list.length ? list.map((x) => '<li><p>' + esc(x.text).replace(/\n/g, '<br>') + '</p><small>' + esc(x.by) + ' · ' + esc(when(x.t)) + '</small>' +
-        (me && same(x.by, me) ? '<button class="note-del" type="button" data-note-del="' + esc(x.id) + '" aria-label="Delete this note">' + '×' + '</button>' : '') + '</li>').join('')
-        : '<li class="quiet">No notes yet.</li>'
+      $('.notes-list', box).innerHTML = list.length ? list.map(noteLi).join('') : '<li class="quiet">No notes yet.</li>'
     })
+    // the Notes tab: every villa's notes in one list, the villa with the newest note first
+    const vbox = $('#villa-notes')
+    if (!vbox) return
+    const rows = Object.entries(notes).filter(([k, l]) => k.startsWith('ht:') && l.length && document.getElementById('ht-' + k.slice(3)))
+      .sort((a, b) => Math.max(...b[1].map((x) => x.t || 0)) - Math.max(...a[1].map((x) => x.t || 0)))
+    const count = rows.reduce((a, [, l]) => a + l.length, 0)
+    $('#villa-notes-n').textContent = rows.length ? count + (count === 1 ? ' note' : ' notes') + ' on ' + rows.length + (rows.length === 1 ? ' villa' : ' villas') : ''
+    vbox.innerHTML = rows.length ? rows.map(([k, l]) => {
+      const card = document.getElementById('ht-' + k.slice(3))
+      return '<div class="villa-notes"><h3><a href="#' + card.id + '">' + esc(card.dataset.name) + '</a></h3><ul class="notes-list">' + l.map(noteLi).join('') + '</ul></div>'
+    }).join('') : '<p class="note">No notes on villas yet. Add one from a villa’s card on the Stay tab.</p>'
   }
   async function post(body) {
     const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ device, ...body }) })
@@ -1151,7 +1163,7 @@
   const SAID = { visit: 'opened the guide', view: 'opened', card: 'looked at', map: 'opened the map of', share: 'shared', photos: 'browsed the photos of', ...DID }
   function itemLabel(e, x) {
     if (e === 'visit') return ''
-    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Info', apps: 'Apps', stats: 'Stats' }[x] || x) + ' tab'
+    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Essentials', apps: 'Apps', notes: 'Notes', stats: 'Stats' }[x] || x) + ' tab'
     const id = String(x || '').replace(/^mini:/, '').replace(/^(ht|ev|pl|mx):/, '$1-').replace(/^(hotel|event|place|money):/, (m, k) => ({ hotel: 'ht-', event: 'ev-', place: 'pl-', money: 'mx-' }[k]))
     const el = document.getElementById(id)
     return x === 'all' ? 'Group notes' : el ? el.dataset.name || el.querySelector('h2, h3')?.textContent || id : String(x || '')

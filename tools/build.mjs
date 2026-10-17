@@ -542,7 +542,6 @@ function homeView(mode) {
 <div class="pass-bottom">${dayRows}
 <div class="pass-legend"><span><i></i>Music</span><span><i class="sun"></i>Market</span><span><i class="plane"></i>Flight home</span></div></div>
 </div>
-<div class="stack js-only notes notes-all" id="group-notes" data-notes="all" hidden><div class="block-title"><h2>${icon('note')}Group notes</h2></div><p class="note">Notes for the whole group: anyone can add one, everyone sees them.</p>${notesInner('all')}</div>
 <div class="block-title"><h2>Day by day</h2><button class="chip js-only" type="button" id="agenda-all" aria-pressed="false">Show all days</button></div>
 <div class="agenda" id="agenda">${agenda}</div>
 <div class="tiles">${tiles}</div>
@@ -556,6 +555,15 @@ ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${be
 }
 
 // ---------- views ----------
+// Notes (website only): the group's notes for the whole trip, and every villa's notes in one list (src/app.js fills it)
+function notesView() {
+  if (buildName !== 'standalone') return ''
+  return `<section class="view" id="notes" aria-labelledby="notes-title">
+<div class="view-head"><span class="eyebrow">Shared with the group</span><h1 class="view-title" id="notes-title">Notes</h1><p class="lede">Notes for the whole trip, and every note on the villas. Anyone can add one, everyone sees them.</p></div>
+<div class="stack js-only notes notes-all" id="group-notes" data-notes="all" hidden><div class="block-title"><h2>${icon('note')}Group notes</h2></div>${notesInner('all')}</div>
+<div class="stack js-only" id="villa-notes-box"><div class="block-title"><h2>${icon('stay')}On the villas</h2><small id="villa-notes-n"></small></div><div id="villa-notes"><p class="note">Add a note on a villa from its card on the Stay tab.</p></div></div>
+</section>`
+}
 // Stats: filled in by src/app.js from the vote server (website only)
 function statsView() {
   return `<section class="view" id="stats" aria-labelledby="stats-title">
@@ -689,7 +697,7 @@ function moneyView(mode) {
   const listBlock = (title, arr, cls = '') => (arr || []).filter(has).length ? `<div class="callout ${cls}"><h3>${esc(title)}</h3><ul>${arr.filter(has).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''
   const atm = money.atm || {}
   return `<section class="view" id="money" aria-labelledby="money-title">
-<div class="view-head"><span class="eyebrow">Baht ฿ · exchange · ATMs</span><h1 class="view-title" id="money-title">Money</h1><p class="lede">${esc(extra.moneyIntro || 'Cash is king at markets, taxis and small bars. Change cash at a money changer, not at the airport or your hotel.')}</p></div>
+<div class="view-head"><span class="eyebrow"><a href="#info">Essentials</a> · Baht ฿ · exchange · ATMs</span><h1 class="view-title" id="money-title">Money</h1><p class="lede">${esc(extra.moneyIntro || 'Cash is king at markets, taxis and small bars. Change cash at a money changer, not at the airport or your hotel.')}</p></div>
 ${best ? `<div class="verdict"><span class="eyebrow">Best place to change money</span><div class="brand-row"><span class="sign${has(best.branding && best.branding.primaryColor) ? '' : ' plain'}" style="${has(best.branding && best.branding.primaryColor) ? signColors(best.branding) : ''}" aria-hidden="true">${esc(best.branding?.logoText || best.name)}</span><h3>${esc(best.name)}</h3></div><p>${esc(money.verdict)}</p><p><a href="#mx-${esc(best.id)}">Branches and details</a></p></div>` : ''}
 ${mid.length ? `<div class="converter js-only" id="converter"><span class="eyebrow">Quick converter</span>
 <label class="note" for="conv-amount" id="conv-from-label">You give</label>
@@ -710,7 +718,8 @@ function infoView() {
   const secs = (info.sections || []).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''} id="info-${esc(s.id)}"><summary>${esc(s.title)}</summary><div class="acc-body">${(s.items || []).map((it) => `<div class="fact"><h4>${esc(it.title)}${it.critical ? ' <span class="pill bad">Must know</span>' : ''}</h4><p>${esc(it.text)}</p>${linksHtml(it.links)}</div>`).join('')}</div></details>`).join('')
   const phrases = (info.phrases || []).map((p) => `<div class="phrase"><b>${esc(p.en)}</b><span class="say">${esc(p.say)}</span><span class="th" lang="th">${esc(p.thai)}</span></div>`).join('')
   return `<section class="view" id="info" aria-labelledby="info-title">
-<div class="view-head"><span class="eyebrow">Checked ${esc(info.asOf || 'Oct 2026')}</span><h1 class="view-title" id="info-title">Essentials</h1><p class="lede">Entry rules, getting around, safety and a few words of Thai.</p>${apps.length ? `<p><a class="btn" href="#apps">${icon('apps')}Apps to install</a></p>` : ''}</div>
+<div class="view-head"><span class="eyebrow">Checked ${esc(info.asOf || 'Oct 2026')}</span><h1 class="view-title" id="info-title">Essentials</h1><p class="lede">Money, entry rules, getting around, safety and a few words of Thai.</p></div>
+<div class="tiles info-tiles"><a class="tile" href="#money">${icon('money')}<b>Money</b><span>${esc(brands[0] ? "Best rates: " + brands[0].name : "Exchange & ATMs")} · converter</span></a>${apps.length ? `<a class="tile" href="#apps">${icon('apps')}<b>Apps to install</b><span>${esc(plural(apps.filter((a) => a.priority === 'must').length, 'app') + ' before you fly')}</span></a>` : ''}</div>
 ${nums ? `<h2 class="block-title">Emergency numbers</h2><div class="sos">${nums}</div>` : ''}
 <div class="stack">${secs}</div>
 ${phrases ? `<h2 class="block-title">Useful Thai <small>men end with “krap”, women with “ka”</small></h2><div class="phrases">${phrases}</div>` : ''}
@@ -780,7 +789,7 @@ function chrome(body) {
 <div class="actions"><button class="btn primary" type="submit" data-vote-save>Save vote</button><button class="btn" type="button" data-vote-cancel>Cancel</button></div>
 </form></dialog>
 <nav class="tabbar" aria-label="Sections"><ul>
-${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places', 'places', 'Places')}${tab('areas', 'areas', 'Areas')}${tab('stay', 'stay', 'Stay')}${tab('money', 'money', 'Money')}
+${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places', 'places', 'Places')}${tab('areas', 'areas', 'Areas')}${tab('stay', 'stay', 'Stay')}${buildName === 'standalone' ? tab('notes', 'note', 'Notes') : tab('money', 'money', 'Money')}
 </ul></nav>`
 }
 
@@ -890,7 +899,7 @@ const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 function page(build) {
   buildName = build
   const mode = build === 'single' ? 'inline' : 'file'
-  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), statsView()].join('\n')))
+  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), statsView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
   const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
   const leaflet = build === 'artifact'

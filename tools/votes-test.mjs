@@ -383,12 +383,30 @@ await A.p.evaluate(() => {
 }); await sleep(900)
 const aNote = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, box: document.querySelector('#ht-alisa-pool-villa .note-form textarea').value, folded: !document.querySelector('#ht-alisa-pool-villa details.note-add').open }))
 check('a villa note is added at once, the box empties and folds away', /Ask if the pool is heated/.test(aNote.list) && /Ani/.test(aNote.list) && aNote.n === '(1)' && aNote.box === '' && aNote.folded, JSON.stringify(aNote))
-await A.p.evaluate(() => { location.hash = 'home' }); await sleep(300)
+await A.p.evaluate(() => { location.hash = 'notes' }); await sleep(300)
 await A.p.evaluate(() => { const g = document.getElementById('group-notes'); g.querySelector('textarea').value = 'Meet at the airport\nexit 2'; g.querySelector('.note-form button[type="submit"]').click() }); await sleep(900)
 await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
 // the notes show without opening anything (innerText: only what is on screen)
 const bNotes = await B.p.evaluate(() => ({ villa: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, all: document.querySelector('#group-notes .notes-list').innerHTML, mine: document.querySelectorAll('#ht-alisa-pool-villa [data-note-del]').length }))
 check('another phone sees the villa note (shown open, with its count) and the group note', /pool is heated/.test(bNotes.villa) && bNotes.n === '(1)' && /Meet at the airport<br>exit 2/.test(bNotes.all) && bNotes.mine === 0, JSON.stringify(bNotes).slice(0, 220))
+// the Notes tab (in place of Money on the website): group notes and every villa's notes, each under a link to its villa
+await B.p.evaluate(() => { location.hash = 'notes' }); await sleep(400)
+const nTab = await B.p.evaluate(() => ({
+  tabs: [...document.querySelectorAll('.tabbar a')].map((a) => a.getAttribute('href')).join(' '),
+  current: document.querySelector('.tabbar a[aria-current="page"]')?.getAttribute('href'),
+  group: document.querySelector('#notes #group-notes .notes-list')?.innerText || '',
+  villas: document.getElementById('villa-notes')?.innerText || '', link: !!document.querySelector('#villa-notes a[href="#ht-alisa-pool-villa"]'),
+  count: document.getElementById('villa-notes-n')?.textContent, onTrip: !!document.querySelector('#home [data-notes]'),
+}))
+check('website: a Notes tab instead of Money, with the group notes and the villa notes', /#notes/.test(nTab.tabs) && !/#money/.test(nTab.tabs) && nTab.current === '#notes' &&
+  /Meet at the airport/.test(nTab.group) && /Alisa Pool Villa/.test(nTab.villas) && /pool is heated/.test(nTab.villas) && nTab.link && nTab.count === '1 note on 1 villa' && !nTab.onTrip, JSON.stringify(nTab).slice(0, 300))
+await B.p.evaluate(() => document.querySelector('#villa-notes a[href="#ht-alisa-pool-villa"]').click()); await sleep(600)
+const fromNotes = await B.p.evaluate(() => ({ hash: location.hash, stay: !document.getElementById('stay').hidden, top: Math.round(document.getElementById('ht-alisa-pool-villa').getBoundingClientRect().top) }))
+check('a villa name on the Notes tab opens that villa', fromNotes.hash === '#ht-alisa-pool-villa' && fromNotes.stay && fromNotes.top < 200, JSON.stringify(fromNotes))
+const money = await B.p.evaluate(() => { location.hash = 'info'; return !!document.querySelector('#info .info-tiles a[href="#money"]') })
+check('Money is reached from the Essentials page', money, String(money))
+const single = fs.readFileSync(path.join(DIST, 'phuket-guide-offline.html'), 'utf8').match(/<nav class="tabbar"[\s\S]*?<\/nav>/)?.[0] || ''
+check('the offline file (no shared notes) keeps the Money tab', /href="#money"/.test(single) && !/href="#notes"/.test(single), single.length + ' chars')
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa [data-note-del]').click()); await sleep(900)
 const gone = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').textContent, empty: document.querySelector('#ht-alisa-pool-villa .notes').classList.contains('empty'), label: getComputedStyle(document.querySelector('#ht-alisa-pool-villa .notes-label')).display }))

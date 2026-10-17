@@ -1,9 +1,12 @@
-// Shared votes for the guide: Like or Skip on a villa (ht:), event (ev:) or place (pl:), by name, saved in Upstash
-// Redis (connected to the Vercel project under Storage). Vercel runs this file as /api/votes; no packages needed.
-//   GET  /api/votes                                   -> { votes: { 'ht:<id>': { like: ['Ani'], skip: [] }, ... } }
+// Shared votes for the guide: Like or Skip on a villa (ht:), event (ev:) or place (pl:), by name, and villas hidden for
+// everyone; saved in Upstash Redis (connected to the Vercel project under Storage). Vercel runs this file as
+// /api/votes; no packages needed.
+//   GET  /api/votes  -> { votes: { 'ht:<id>': { like: ['Ani'], skip: [] }, ... }, hidden: { 'ht:<id>': { by: 'Gor', t } } }
 //   POST /api/votes { item, name, vote: 'like' | 'skip' | null }  -> the same, after the change (null takes it back)
+//   POST /api/votes { item: 'ht:<id>', name, hide: true | false } -> hides the villa for everyone, or shows it again
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
+const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -41,12 +44,19 @@ async function allVotes(db) {
 }
 const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type' }
 const reply = (status, body) => new Response(JSON.stringify(body), { status, headers: HEADERS })
+async function hiddenVillas(db) {
+  const flat = (await redis(db, ['HGETALL', HIDDEN])) || []
+  const hidden = {}
+  for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); hidden[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
+  return hidden
+}
+const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db) })
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 
 export async function GET() {
   const db = storage()
   if (!db) return NO_DB()
-  try { return reply(200, { votes: await allVotes(db) }) } catch (e) { return reply(502, { error: e.message }) }
+  try { return reply(200, await everything(db)) } catch (e) { return reply(502, { error: e.message }) }
 }
 
 export async function POST(request) {
@@ -60,6 +70,14 @@ export async function POST(request) {
   const vote = body?.vote ?? null
   if (!ITEM.test(item)) return reply(400, { error: 'Unknown item' })
   if (!name || name.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+  if (body && 'hide' in body) {
+    if (!item.startsWith('ht:')) return reply(400, { error: 'Only villas can be hidden' })
+    try {
+      if (body.hide) await redis(db, ['HSET', HIDDEN, item, JSON.stringify({ n: name, t: Date.now() })])
+      else await redis(db, ['HDEL', HIDDEN, item])
+      return reply(200, await everything(db))
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
   if (vote !== null && vote !== 'like' && vote !== 'skip') return reply(400, { error: 'The vote is like, skip or null' })
   const field = item + SEP + name.toLowerCase()
   try {
@@ -68,7 +86,7 @@ export async function POST(request) {
       if ((await redis(db, ['HLEN', KEY])) >= MAX_VOTES) return reply(507, { error: 'Too many votes saved' })
       await redis(db, ['HSET', KEY, field, JSON.stringify({ v: vote, n: name, t: Date.now() })])
     }
-    return reply(200, { votes: await allVotes(db) })
+    return reply(200, await everything(db))
   } catch (e) { return reply(502, { error: e.message }) }
 }
 

@@ -1759,16 +1759,6 @@
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1136544214678784827?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  },
- "hotels:kata-v2-sea-view-villa": {
-  "file": "assets/img/hotels-kata-v2-sea-view-villa.webp",
-  "w": 640,
-  "h": 360,
-  "srcW": 1440,
-  "srcH": 961,
-  "credit": "© Yang",
-  "license": "Airbnb listing photo",
-  "source": "https://www.airbnb.com/rooms/1292044049224109456?check_in=2027-01-08&check_out=2027-01-18&adults=8"
- },
  "hotels:sawansa-34a-patong": {
   "file": "assets/img/hotels-sawansa-34a-patong.webp",
   "w": 640,

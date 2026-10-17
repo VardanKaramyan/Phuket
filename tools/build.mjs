@@ -627,7 +627,7 @@ ${chipRow('stay', 'beds', [['all', 'Any beds'], ...BED_CHIPS.filter(([k]) => hot
 <div class="list" data-list="stay">${hotelsSorted.map((h) => hotelCard(h, mode)).join('\n')}</div>
 <p class="empty" data-empty="stay" hidden>No villas match these filters.</p>
 <div class="stack js-only" id="hidden-stays" hidden><h2 class="block-title">Hidden villas <small id="hidden-stays-n"></small></h2>
-<p class="note">Hidden on this phone only. Tap Show again to put a villa back on the list and the map.</p>
+<p class="note">${buildName === 'standalone' ? 'Hidden for the whole group. Tap Show again to bring a villa back on the list and the map for everyone.' : 'Hidden on this phone only. Tap Show again to put a villa back on the list and the map.'}</p>
 <div class="mine" id="hidden-stays-list"></div></div>
 </section>`
 }
@@ -724,7 +724,7 @@ function chrome(body) {
 <dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
 <h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
 <label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
-<p class="note">Everyone with the guide sees the names. One vote per name.</p>
+<p class="note" id="vote-note">Everyone with the guide sees the names. One vote per name.</p>
 <div class="actions"><button class="btn primary" type="submit" data-vote-save>Save vote</button><button class="btn" type="button" data-vote-cancel>Cancel</button></div>
 </form></dialog>
 <nav class="tabbar" aria-label="Sections"><ul>

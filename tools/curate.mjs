@@ -369,9 +369,8 @@ mergeLateJan(ROOT, log)
 // ---- area labels follow the map: if a pin sits clearly inside another area's outline, relabel it ----
 const geo = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/geo/areas.geojson'), 'utf8'))
 const ids = new Set(geo.features.map((f) => f.properties.id))
-// the stays' Airbnb pins are approximate: two Laguna villas sit just inland of the Bang Tao outline, and Kata V2
-// (on the edge of Kata Beach, the listing says) just inside Kata Noi
-const KEEP_AREA = new Set(['big-buddha', 'black-rock-viewpoint', 'money-shop/Money Shop Exchange Karon', 'modern-4br-villa-laguna', 'luxpride-2-wallaya-v7', 'kata-v2-sea-view-villa'])
+// the stays' Airbnb pins are approximate: two Laguna villas sit just inland of the Bang Tao outline
+const KEEP_AREA = new Set(['big-buddha', 'black-rock-viewpoint', 'money-shop/Money Shop Exchange Karon', 'modern-4br-villa-laguna', 'luxpride-2-wallaya-v7'])
 const relabel = (kind, it) => {
   if (!ids.has(it.area) || !Number.isFinite(it.lat)) return
   const pt = turf.point([it.lng, it.lat])

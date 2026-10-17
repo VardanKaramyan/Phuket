@@ -950,7 +950,7 @@
     })
     document.addEventListener('click', async (e) => {
       const b = e.target.closest('[data-note-del]'); if (!b) return
-      try { applyShared(await post({ name: voterName(), deleteNote: b.dataset.noteDel })); toast('Note deleted') } catch { failed() }
+      try { applyShared(await post({ name: voterName(), deleteNote: b.dataset.noteDel })); toast('Note deleted') } catch { toast(navigator.onLine ? 'Could not delete it. Try again in a minute.' : 'This needs internet.') }
     })
     // Move up / down: one tap once the guide knows your name (the first time it asks, like a vote)
     document.addEventListener('click', (e) => {

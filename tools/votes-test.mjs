@@ -28,6 +28,7 @@ const upstash = http.createServer((req, res) => {
     else if (cmd === 'HSET') { h.set(a[0], a[1]); result = 1 }
     else if (cmd === 'HDEL') result = h.delete(a[0]) ? 1 : 0
     else if (cmd === 'HLEN') result = h.size
+    else if (cmd === 'HGET') result = h.has(a[0]) ? h.get(a[0]) : null
     else { res.writeHead(400); return res.end(JSON.stringify({ error: 'unknown command ' + cmd })) }
     res.writeHead(200, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ result }))
   })
@@ -106,8 +107,12 @@ const api = await import(mod + '?store')
   check('a villa note is saved with its author', r.status === 200 && n1?.text === 'Ask about the\ndeposit' && n1.by === 'Ani' && !!n1.id, JSON.stringify(r.json.notes))
   r = await call(api, 'POST', { name: 'Vardan', note: { item: 'all', text: 'Flights land 14:05' } })
   check('a note for the whole trip is saved', r.json.notes?.all?.[0]?.text === 'Flights land 14:05', JSON.stringify(r.json.notes?.all))
+  r = await call(api, 'POST', { name: 'Vardan', deleteNote: n1.id })
+  check('refused: deleting someone else\'s note', r.status === 403, String(r.status))
+  r = await call(api, 'POST', { name: 'ani', deleteNote: n1.id })
+  check('the author can delete their note (any capitals)', r.status === 200 && !r.json.notes['ht:mouana-breeze-mai-khao'], JSON.stringify(r.json.notes))
   r = await call(api, 'POST', { name: 'Ani', deleteNote: n1.id })
-  check('a note can be deleted', r.status === 200 && !r.json.notes['ht:mouana-breeze-mai-khao'], JSON.stringify(r.json.notes))
+  check('a note that is gone: 404', r.status === 404, String(r.status))
   for (const [body, why] of [[{ name: 'V', note: { item: 'all', text: '   ' } }, 'an empty note'], [{ name: 'V', note: { item: 'all', text: 'x'.repeat(501) } }, 'a note over 500 characters'], [{ name: 'V', note: { item: 'zz:x', text: 'hi' } }, 'a note on an unknown item'], [{ name: '', note: { item: 'all', text: 'hi' } }, 'a note with no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }

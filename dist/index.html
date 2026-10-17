@@ -4562,6 +4562,12 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     requestAnimationFrame(() => d.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }))
   })
 
+  // Add a note: opening it puts the cursor in the box (on a phone the keyboard comes up, as it is your tap)
+  document.addEventListener('toggle', (e) => {
+    const d = e.target
+    if (d instanceof HTMLDetailsElement && d.open && d.matches('details.note-add')) $('textarea', d)?.focus()
+  }, true)
+
   /* ---------- a villa's own small map, in its Show on map accordion ---------- */
   // drawn the first time it opens, with the same picture as the big map: street or satellite tiles online, the saved
   // satellite tiles offline (or the plain land map); a soft circle says the pin is approximate

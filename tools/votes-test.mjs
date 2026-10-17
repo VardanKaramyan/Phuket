@@ -23,6 +23,7 @@ const upstash = http.createServer((req, res) => {
     if (req.headers.authorization !== 'Bearer test-token') { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })) }
     const [cmd, key, ...a] = JSON.parse(body)
     let result
+    if (cmd === 'EXPIRE') { res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result: 1 })) }
     if (['GET', 'SET', 'INCR'].includes(cmd)) {
       if (cmd === 'GET') result = strings.has(key) ? strings.get(key) : null
       else if (cmd === 'SET') { strings.set(key, String(a[0])); result = 'OK' }
@@ -174,12 +175,23 @@ const api = await import(mod + '?store')
   const withKey = await api.GET(new Request('http://x/api/votes?stats=1&key=trip-secret'))
   check('STATS_KEY: no key → 401, the right key → the stats', noKey.status === 401 && withKey.status === 200, noKey.status + ' / ' + withKey.status)
   delete process.env.STATS_KEY
-  // a full visitor list drops the phone seen longest ago, instead of refusing new ones
+  // a full visitor list: only phones idle for 14 days or more make room; recent ones are never pushed out
   const vis = hashes.get('guide:visitors')
-  for (let i = 0; i < 2000; i++) vis.set('fill' + String(i).padStart(8, '0'), JSON.stringify({ first: i, last: i, visits: 1 }))
+  const day = 86400000, now0 = Date.now()
+  for (let i = 0; i < 2000; i++) vis.set('fill' + String(i).padStart(8, '0'), JSON.stringify({ first: now0, last: now0 - (i < 5 ? 20 * day : 1000), visits: 1 }))
   r = await call(api, 'POST', { device: 'devnew000001', track: [{ e: 'visit', x: '#home' }] })
-  check('a full visitor list makes room for a new phone', r.status === 200 && vis.has('devnew000001') && !vis.has('fill00000000') && vis.size <= 2000, r.status + ' size ' + vis.size)
+  check('a full list makes room only from phones idle for 14+ days', r.status === 200 && vis.has('devnew000001') && !vis.has('fill00000000') && vis.has('fill00000005') && vis.size <= 2000, r.status + ' size ' + vis.size)
+  for (let i = 0; i < 5; i++) vis.set('fillnew' + i + 'aaaa', JSON.stringify({ first: now0, last: now0, visits: 1 })) // full again, all recent
+  while (vis.size > 2000) vis.delete([...vis.keys()].find((k) => k.startsWith('fill0')))
+  r = await call(api, 'POST', { device: 'devnew000002', track: [{ e: 'visit', x: '#home' }] })
+  check('a full list of recent phones does not push anyone out', r.status === 507 && !vis.has('devnew000002'), String(r.status))
   for (const k of [...vis.keys()]) if (k.startsWith('fill')) vis.delete(k)
+  // one connection can add at most 20 new phones an hour
+  const ipCall = (dev) => api.POST(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-forwarded-for': '203.0.113.9' }, body: JSON.stringify({ device: dev, track: [{ e: 'visit', x: '#home' }] }) }))
+  let lastStatus = 0
+  for (let i = 0; i < 21; i++) lastStatus = (await ipCall('devip' + String(i).padStart(7, '0'))).status
+  check('refused: more than 20 new phones an hour from one connection', lastStatus === 429, String(lastStatus))
+  for (const k of [...vis.keys()]) if (k.startsWith('devip')) vis.delete(k)
   for (const [body, why] of [[{ device: 'devani000001', track: [{ e: 'hack', x: '' }] }, 'an unknown action'], [{ device: 'bad device!', track: [{ e: 'visit' }] }, 'a bad device id'], [{ device: 'devani000001', track: Array.from({ length: 31 }, () => ({ e: 'view', x: 'home' })) }, 'too many actions at once']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }

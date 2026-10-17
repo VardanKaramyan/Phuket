@@ -252,6 +252,7 @@
     if (focusEl) {
       // a link to a card that the current filters hide: clear that list's filters first
       if (focusEl.hidden) { const l = lists.find((x) => x.el.contains(focusEl)); if (l) l.reset() }
+      holdAnchor(focusEl)
       requestAnimationFrame(() => {
         focusEl.scrollIntoView({ block: 'start' })
         focusEl.classList.remove('flash'); void focusEl.offsetWidth; focusEl.classList.add('flash')
@@ -260,6 +261,12 @@
     current = view
     if (view === 'areas' && map) setTimeout(() => map.invalidateSize(), 50)
   }
+  // a link to a card (a shared villa link, a card from the map) keeps the card at the top of the screen while parts
+  // above it appear a moment later (votes, notes, move buttons), until you scroll or tap yourself
+  let anchorEl = null, anchorUntil = 0
+  function holdAnchor(el) { anchorEl = el; anchorUntil = Date.now() + 6000 }
+  ;['touchstart', 'wheel', 'keydown', 'mousedown'].forEach((ev) => addEventListener(ev, () => { anchorEl = null }, { passive: true }))
+  function reanchor() { if (anchorEl && Date.now() < anchorUntil && anchorEl.offsetParent) anchorEl.scrollIntoView({ block: 'start' }) }
   function route() {
     const id = decodeURIComponent(location.hash.slice(1))
     if (!id || VIEWS.includes(id)) return show(id || 'home')
@@ -918,6 +925,7 @@
       syncHiddenStays()
     }
     renderVotes()
+    requestAnimationFrame(reanchor)
   }
   const NOTE_VOTE = 'Everyone with the guide sees the names. One vote per name.'
   // shared notes: on each villa (its Notes accordion) and for the whole trip (Group notes on the Trip page)
@@ -1031,14 +1039,12 @@
   document.addEventListener('click', async (e) => {
     const b = e.target.closest('[data-share-stay]'); if (!b) return
     const card = b.closest('.card')
-    const guide = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : ''
-    const listing = b.dataset.listing || ''
-    const price = [$('.price-total', card)?.textContent, $('.price-label', card)?.textContent].filter(Boolean)
-    const lines = [card.dataset.name, price.length ? price[0] + ' (' + price[1].toLowerCase() + ')' + ($('.price-amd', card) ? ', ' + $('.price-amd', card).textContent : '') : '',
-      $('.beds-row span:last-child', card)?.textContent || '', listing && guide ? listing : ''].filter(Boolean)
-    const url = guide || listing
-    if (navigator.share) { try { await navigator.share({ title: card.dataset.name, text: lines.join('\n'), url }) } catch { /* closed */ } return }
-    try { await navigator.clipboard.writeText(lines.concat(url ? [url] : []).join('\n')); toast('Copied: paste it in a chat') } catch { toast('Sharing is not available here') }
+    // just the link to this villa in the guide (it opens the guide on the villa); the single file has no web address,
+    // so there it is the listing's link
+    const url = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : b.dataset.listing || ''
+    if (!url) return
+    if (navigator.share) { try { await navigator.share({ title: card.dataset.name, url }) } catch { /* closed */ } return }
+    try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
   })
 
   // the Map button on a villa card: opens its Show on map accordion and brings the map on screen

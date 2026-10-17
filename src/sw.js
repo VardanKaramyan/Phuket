@@ -71,7 +71,9 @@ self.addEventListener('fetch', (event) => {
     // other files (photos, satellite tiles, icons, the KML, the single-file backup): cache first, then the network;
     // a photo or tile that is missing from the cache is saved when it loads
     event.respondWith((async () => {
-      const hit = await caches.match(req, { ignoreSearch: true })
+      // the guide's own cache first, by exact address (fast); only then without the ?query (slow: it reads every entry)
+      const c0 = await caches.open(CACHE)
+      const hit = (await c0.match(req)) || (new URL(req.url).search ? await c0.match(req, { ignoreSearch: true }) : null)
       if (hit) return hit
       const res = await fetch(req)
       if (res.ok && /\/(img|sat)\//.test(url.pathname)) { const c = await caches.open(CACHE); c.put(req, res.clone()) }

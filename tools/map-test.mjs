@@ -115,7 +115,7 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   const r = await p.evaluate(() => ({
     base: document.querySelector('.basebar [aria-pressed="true"]')?.dataset.base,
     satTiles: offlineTiles(), cover: offlineCover(),
-    attribution: document.querySelector('.leaflet-control-attribution')?.textContent || '',
+    attribution: document.getElementById('map-credit')?.textContent || '',
   }))
   check('offline satellite tiles show', r.base === 'satellite' && r.satTiles >= 4 && r.cover >= 0.99, `base ${r.base}, ${r.satTiles} offline tiles loaded, ${Math.round(r.cover * 100)}% of the map covered`)
   check('offline satellite credit shown', /EOX/.test(r.attribution), r.attribution.slice(0, 120))
@@ -185,13 +185,11 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.close()
 }
 
-// the test switch: ?nocredit hides the map credit line (only that page load); without it the credit shows
+// the map credits are not on the map: a line under it names what is showing (online satellite: Esri; plus OpenStreetMap)
 {
-  const p = await b.newPage()
-  await p.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true })
-  const credit = async (q) => { await p.goto(pathToFileURL(file).href + q + '#areas', { waitUntil: 'load' }); await sleep(1200); return p.evaluate(() => { const a = document.querySelector('#map .leaflet-control-attribution'); return !!a && getComputedStyle(a).display !== 'none' }) }
-  const normal = await credit(''), hidden = await credit('?nocredit')
-  check('?nocredit hides the map credit line, normally it shows', normal && !hidden, JSON.stringify({ normal, hidden }))
+  const { p } = await open()
+  const r = await p.evaluate(() => ({ onMap: document.querySelectorAll('.leaflet-control-attribution').length, under: document.getElementById('map-credit')?.textContent || '' }))
+  check('no credit box on the map; the credit line is under it', r.onMap === 0 && /Esri/.test(r.under) && /OpenStreetMap/.test(r.under) && !/EOX/.test(r.under), JSON.stringify(r))
   await p.close()
 }
 

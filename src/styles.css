@@ -410,7 +410,10 @@ html.map-full, html.map-full body { overflow: hidden; }
 .mapbox.popup-open .layerbar, .mapbox.popup-open .leaflet-control-attribution { visibility: hidden; }
 .leaflet-control-attribution { font-size: 10px; background: color-mix(in srgb, var(--surface) 80%, transparent) !important; color: var(--ink-2); }
 .leaflet-control-attribution a { color: var(--ink-2); }
-.no-credit .leaflet-control-attribution { display: none !important; }
+/* the map credits, in a small line under the map (not on it) */
+.map-credit { margin: 6px 0 0; font-size: 11px; line-height: 1.4; color: var(--ink-2); }
+.map-credit:empty { display: none; }
+.map-credit a { color: inherit; }
 .leaflet-bar a { background: var(--surface); color: var(--ink); border-color: var(--line); }
 .area-label { pointer-events: none; }
 .area-label span { position: absolute; transform: translate(-50%, -50%); font: 600 10.5px/1 var(--font-display); letter-spacing: 0.04em; color: var(--ink); text-shadow: 0 0 3px var(--map-land), 0 0 3px var(--map-land), 0 0 2px var(--map-land); white-space: nowrap; }

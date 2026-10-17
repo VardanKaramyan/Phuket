@@ -35,9 +35,6 @@
 
   /* ---------- theme (the saved choice is applied in <head> before first paint) ---------- */
   const root = document.documentElement
-  // ?nocredit in the address hides the map credit line on this page load only, for testing on your own screen; the
-  // public pages keep it (the Esri and EOX licences ask for it)
-  if (/[?&]nocredit\b/.test(location.search)) root.classList.add('no-credit')
   const isDark = () => root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches)
   const themeBtn = $('#theme-btn')
   if (themeBtn) {
@@ -321,8 +318,10 @@
     // the vector land and roads sit under the tile pane: real tiles cover them, and they fill any gaps offline
     if (name !== 'simple') {
       const t = name === 'satellite' ? D.tiles.satellite : D.tiles.streets
-      // satellite: the saved offline tiles sit under the Esri ones, so they show at once and stand in for them offline
+      // satellite: the saved offline tiles stand in for Esri's when there is no internet (offline now, or Esri's tiles do
+      // not load); online the map shows Esri's alone, so the credit line under it names only what is showing
       const pack = name === 'satellite' ? satPack : null
+      const usePack = () => { if (pack && !map.hasLayer(pack)) { pack.addTo(map); pack.bringToBack() } }
       let ok = 0, bad = 0, told = false
       const layer = L.tileLayer(t.url, { attribution: t.attr, maxZoom: 19, maxNativeZoom: t.maxNative || 19, crossOrigin: true })
       const reset = () => { ok = 0; bad = 0 }
@@ -331,14 +330,13 @@
         bad++
         if (bad !== 4 || ok !== 0) return
         if (!pack) { setBase('simple'); toast('No map tiles here right now. Showing the offline map.') }
-        else if (!told) { told = true; toast('No internet: showing the saved satellite map. It is less sharp up close.') }
+        else { usePack(); if (!told) { told = true; toast('No internet: showing the saved satellite map. It is less sharp up close.') } }
       })
       map.on('movestart', reset)
       layer.on('remove', () => map.off('movestart', reset))
-      if (pack) pack.addTo(map)
       bases[name] = layer.addTo(map)
       layer.bringToBack()
-      if (pack) pack.bringToBack()
+      if (!navigator.onLine) usePack()
     }
     $$('.basebar button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.base === base)))
     // street tiles only come in a light style; invert them for dark mode
@@ -400,6 +398,21 @@
   // The offline satellite layer (EOxCloudless tiles saved with the guide, up to zoom 14). Where this zoom has no saved
   // tile, the nearest lower-zoom tile is shown enlarged, so the whole trip area has a picture at every zoom.
   let satInline = null // the single file's tiles, read once (the big map and the villa maps share them)
+  // the map credits (OpenStreetMap, Esri, EOX) go in a line under the map, not in a box on it: the credits of the layers
+  // on the map right now, so it only names what is showing (worked out once per frame, as layers come and go)
+  const OSM_CREDIT = '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+  function creditsUnder(m, el) {
+    if (!el) return
+    let queued = false
+    const update = () => {
+      queued = false
+      const seen = new Set()
+      m.eachLayer((l) => { const a = l.getAttribution && l.getAttribution(); if (a) seen.add(a) })
+      el.innerHTML = [...seen].join(' · ')
+    }
+    m.on('layeradd layerremove', () => { if (!queued) { queued = true; requestAnimationFrame(update) } })
+    update()
+  }
   function makeSatPack() {
     const o = D.tiles && D.tiles.offline
     if (!o) return null
@@ -452,15 +465,14 @@
       return
     }
     const anim = !reduceMotion
-    map = L.map('map', { zoomControl: false, attributionControl: true, scrollWheelZoom: false, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: 8, maxZoom: 18, maxBounds: [[6.9, 97.6], [10.3, 100.6]], zoomAnimation: anim, fadeAnimation: anim, markerZoomAnimation: anim })
-    map.attributionControl.setPrefix(false)
+    map = L.map('map', { zoomControl: false, attributionControl: false, scrollWheelZoom: false, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: 8, maxZoom: 18, maxBounds: [[6.9, 97.6], [10.3, 100.6]], zoomAnimation: anim, fadeAnimation: anim, markerZoomAnimation: anim })
     smoothWheel(map)
     satPack = makeSatPack()
-    map.attributionControl.addAttribution('© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>')
+    creditsUnder(map, $('#map-credit'))
     map.createPane('landPane').style.zIndex = 150 // under the tile pane (200)
     map.createPane('roadsPane').style.zIndex = 160
     map.createPane('areasPane').style.zIndex = 350 // below the pins in the overlay pane (400)
-    layers.land = L.geoJSON(D.land, { pane: 'landPane', interactive: false, style: { fillColor: cssVar('--map-land'), fillOpacity: 1, color: cssVar('--map-line'), weight: 1 } }).addTo(map)
+    layers.land = L.geoJSON(D.land, { pane: 'landPane', interactive: false, attribution: OSM_CREDIT, style: { fillColor: cssVar('--map-land'), fillOpacity: 1, color: cssVar('--map-line'), weight: 1 } }).addTo(map)
     if (D.roads) layers.roads = L.geoJSON(D.roads, { pane: 'roadsPane', interactive: false, style: (f) => ({ color: cssVar('--map-road'), weight: f.properties.k === 'trunk' ? 2.2 : f.properties.k === 'primary' ? 1.6 : 1, opacity: 0.9 }) }).addTo(map)
     const areaById = Object.fromEntries(D.areas.map((a) => [a.id, a]))
     layers.areas = L.layerGroup().addTo(map)
@@ -505,6 +517,8 @@
       // offline but street tiles were saved while browsing: use them, the error fallback covers gaps
       caches.open('guide-tiles').then((c) => c.keys()).then((k) => { if (k.length > 10) setBase('streets') }).catch(() => {})
     }
+    // the connection drops while the map is on Satellite: put the saved satellite tiles under it at once
+    addEventListener('offline', () => { if (base === 'satellite' && satPack && !map.hasLayer(satPack)) { satPack.addTo(map); satPack.bringToBack() } })
     const home = L.latLngBounds([[7.75, 98.25], [8.30, 98.47]])
     const fitHome = (anim2) => map.fitBounds(home, { paddingTopLeft: [10, 58], paddingBottomRight: [10, 64], animate: anim2 })
     // after a refresh in the same tab the map comes back where it was, otherwise it shows all of Phuket
@@ -1032,18 +1046,18 @@
     if (!box || typeof L === 'undefined') return
     if (box.leafletMap) { box.leafletMap.invalidateSize(); return }
     const ll = [Number(d.dataset.lat), Number(d.dataset.lng)]
-    const m = L.map(box, { zoomControl: true, attributionControl: true, scrollWheelZoom: false, zoomSnap: 0.5, minZoom: 8, maxZoom: 18 }).setView(ll, 14)
+    const m = L.map(box, { zoomControl: true, attributionControl: false, scrollWheelZoom: false, zoomSnap: 0.5, minZoom: 8, maxZoom: 18 }).setView(ll, 14)
     box.leafletMap = m
-    m.attributionControl.setPrefix(false)
+    creditsUnder(m, $('.map-credit', d))
     const online = navigator.onLine && D.build !== 'artifact'
     const chosen = store.get('mapBase', 'satellite')
-    const pack = D.build !== 'artifact' && (!online || chosen === 'satellite') ? makeSatPack() : null
+    const pack = D.build !== 'artifact' && !online ? makeSatPack() : null
     if (pack) pack.addTo(m)
     if (online && D.tiles) {
       const t = chosen === 'satellite' ? D.tiles.satellite : D.tiles.streets
       L.tileLayer(t.url, { attribution: t.attr, maxZoom: 19, maxNativeZoom: t.maxNative || 19, crossOrigin: true }).addTo(m)
       m.getContainer().classList.toggle('dim-tiles', chosen !== 'satellite' && isDark())
-    } else if (!pack && D.land) L.geoJSON(D.land, { interactive: false, style: { fillColor: cssVar('--map-land'), fillOpacity: 1, color: cssVar('--map-line'), weight: 1 } }).addTo(m)
+    } else if (!pack && D.land) L.geoJSON(D.land, { interactive: false, attribution: OSM_CREDIT, style: { fillColor: cssVar('--map-land'), fillOpacity: 1, color: cssVar('--map-line'), weight: 1 } }).addTo(m)
     L.circle(ll, { radius: 300, color: cssVar('--violet'), weight: 1.5, dashArray: '4 4', fillOpacity: 0.12, interactive: false }).addTo(m)
     L.circleMarker(ll, dotStyle('hotel')).addTo(m)
     requestAnimationFrame(() => m.invalidateSize())

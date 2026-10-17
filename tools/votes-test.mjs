@@ -269,6 +269,10 @@ const topMsg = await A.p.evaluate(async (id) => { document.querySelector('#' + i
 check('the top villa cannot move up', /top/i.test(topMsg), topMsg)
 // shared notes: A adds one on a villa (A's name is known: no dialog) and one for the whole group; B sees both; A deletes
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+// opening Add a note puts the cursor in the box
+await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa details.note-add summary').click()); await sleep(300)
+const focused = await A.p.evaluate(() => document.activeElement === document.querySelector('#ht-alisa-pool-villa .note-form textarea'))
+check('opening Add a note focuses the text box', focused, String(focused))
 await A.p.evaluate(() => {
   const d = document.querySelector('#ht-alisa-pool-villa details.note-add'); d.open = true
   d.querySelector('textarea').value = 'Ask if the pool is heated'

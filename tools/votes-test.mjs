@@ -270,22 +270,22 @@ check('the top villa cannot move up', /top/i.test(topMsg), topMsg)
 // shared notes: A adds one on a villa (A's name is known: no dialog) and one for the whole group; B sees both; A deletes
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => {
-  const d = document.querySelector('#ht-alisa-pool-villa details.notes'); d.open = true
+  const d = document.querySelector('#ht-alisa-pool-villa details.note-add'); d.open = true
   d.querySelector('textarea').value = 'Ask if the pool is heated'
   d.querySelector('.note-form button[type="submit"]').click()
 }); await sleep(900)
-const aNote = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, box: document.querySelector('#ht-alisa-pool-villa .note-form textarea').value }))
-check('a villa note is added at once and the box empties', /Ask if the pool is heated/.test(aNote.list) && /Ani/.test(aNote.list) && aNote.n === '(1)' && aNote.box === '', JSON.stringify(aNote))
+const aNote = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, box: document.querySelector('#ht-alisa-pool-villa .note-form textarea').value, folded: !document.querySelector('#ht-alisa-pool-villa details.note-add').open }))
+check('a villa note is added at once, the box empties and folds away', /Ask if the pool is heated/.test(aNote.list) && /Ani/.test(aNote.list) && aNote.n === '(1)' && aNote.box === '' && aNote.folded, JSON.stringify(aNote))
 await A.p.evaluate(() => { location.hash = 'home' }); await sleep(300)
 await A.p.evaluate(() => { const g = document.getElementById('group-notes'); g.querySelector('textarea').value = 'Meet at the airport\nexit 2'; g.querySelector('.note-form button[type="submit"]').click() }); await sleep(900)
 await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
-// (textContent: the villa's Notes accordion is closed on B's phone, and closed content has no innerText)
-const bNotes = await B.p.evaluate(() => ({ villa: document.querySelector('#ht-alisa-pool-villa .notes-list').textContent, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, all: document.querySelector('#group-notes .notes-list').innerHTML, mine: document.querySelectorAll('#ht-alisa-pool-villa [data-note-del]').length }))
-check('another phone sees the villa note (count on the closed accordion) and the group note', /pool is heated/.test(bNotes.villa) && bNotes.n === '(1)' && /Meet at the airport<br>exit 2/.test(bNotes.all) && bNotes.mine === 0, JSON.stringify(bNotes).slice(0, 220))
+// the notes show without opening anything (innerText: only what is on screen)
+const bNotes = await B.p.evaluate(() => ({ villa: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, all: document.querySelector('#group-notes .notes-list').innerHTML, mine: document.querySelectorAll('#ht-alisa-pool-villa [data-note-del]').length }))
+check('another phone sees the villa note (shown open, with its count) and the group note', /pool is heated/.test(bNotes.villa) && bNotes.n === '(1)' && /Meet at the airport<br>exit 2/.test(bNotes.all) && bNotes.mine === 0, JSON.stringify(bNotes).slice(0, 220))
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa [data-note-del]').click()); await sleep(900)
-const gone = await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa .notes-list').innerText)
-check('the author can delete a note', /No notes yet/.test(gone), gone)
+const gone = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').textContent, empty: document.querySelector('#ht-alisa-pool-villa .notes').classList.contains('empty'), label: getComputedStyle(document.querySelector('#ht-alisa-pool-villa .notes-label')).display }))
+check('the author can delete a note; no notes left: just Add a note', /No notes yet/.test(gone.list) && gone.empty && gone.label === 'none', JSON.stringify(gone))
 // Share: the phone's share sheet gets the villa, its price, beds, the listing and the guide link to the card
 await A.p.evaluate(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d } }); document.querySelector('#ht-alisa-pool-villa [data-share-stay]').click() }); await sleep(300)
 const shared = await A.p.evaluate(() => window.__shared)

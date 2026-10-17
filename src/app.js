@@ -938,6 +938,8 @@
       const list = notes[box.dataset.notes] || []
       box.hidden = false
       const n = $('.notes-n', box); if (n) n.textContent = list.length ? '(' + list.length + ')' : ''
+      // a villa with no notes shows just Add a note; Group notes says there are none yet
+      box.classList.toggle('empty', !list.length)
       $('.notes-list', box).innerHTML = list.length ? list.map((x) => '<li><p>' + esc(x.text).replace(/\n/g, '<br>') + '</p><small>' + esc(x.by) + ' · ' + esc(when(x.t)) + '</small>' +
         (me && same(x.by, me) ? '<button class="note-del" type="button" data-note-del="' + esc(x.id) + '" aria-label="Delete this note">' + '×' + '</button>' : '') + '</li>').join('')
         : '<li class="quiet">No notes yet.</li>'
@@ -990,7 +992,7 @@
       const box = f.closest('[data-notes]'), ta = $('textarea', f), text = ta.value.trim()
       if (!text) return
       const send = async (name) => {
-        try { applyShared(await post({ name, note: { item: box.dataset.notes, text } })); ta.value = ''; toast('Note added for everyone') } catch { failed() }
+        try { applyShared(await post({ name, note: { item: box.dataset.notes, text } })); ta.value = ''; const add = f.closest('details'); if (add) add.open = false; toast('Note added for everyone') } catch { failed() }
       }
       if (voterName()) send(voterName())
       else openDialog({ title: 'Add a note', what: box.dataset.notes === 'all' ? 'Group notes' : (box.closest('.card')?.dataset.name || ''), save: 'Add note', note: 'Everyone with the guide sees the note and your name.', run: send })

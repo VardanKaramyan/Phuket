@@ -239,7 +239,11 @@ details.mapacc summary svg { width: 16px; height: 16px; }
 .note-form { display: grid; gap: 8px; }
 .note-form textarea { font: inherit; font-size: 16px; color: var(--ink); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); resize: vertical; min-height: 64px; }
 .note-form .btn { justify-self: start; }
-details.notes summary svg { width: 16px; height: 16px; }
+details.note-add summary svg { width: 16px; height: 16px; }
+.notes-label { display: flex; align-items: center; gap: 6px; margin: 4px 0 0; font: 600 13px/1.4 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--sea-text); }
+.notes-label svg { width: 16px; height: 16px; }
+/* a villa with no notes: no label and no empty list, just Add a note */
+.card .notes.empty .notes-label, .card .notes.empty .notes-list { display: none; }
 .notes-all .block-title h2 { display: flex; align-items: center; gap: 8px; }
 .notes-all .block-title svg { width: 20px; height: 20px; }
 /* Like / Skip: the group's votes */

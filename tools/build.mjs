@@ -368,12 +368,13 @@ function priceBox(h) {
 const hotelsSorted = hotels.slice().sort((a, b) => (a.listFirst ?? 99) - (b.listFirst ?? 99) || ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
 // shared notes: a list and an Add note form; the vote server keeps them (website only: src/app.js fills the list and
 // shows the block once the server answers). item: 'ht:<id>' for a villa, 'all' for the whole trip
+// the notes show as they are; only the box to write a new one is folded away under Add a note
 function notesInner(item) {
   const fid = 'note-' + item.replace(/[^a-z0-9]+/gi, '-')
-  return `<ul class="notes-list" aria-live="polite"></ul><form class="note-form" autocomplete="off"><label class="sr-only" for="${fid}">Add a note</label>` +
-    `<textarea id="${fid}" name="text" rows="2" maxlength="500" required placeholder="Add a note for the group"></textarea><button class="btn" type="submit">${icon('plus')}Add note</button></form>`
+  return `<ul class="notes-list" aria-live="polite"></ul><details class="more note-add"><summary>Add a note</summary><form class="note-form" autocomplete="off"><label class="sr-only" for="${fid}">Add a note</label>` +
+    `<textarea id="${fid}" name="text" rows="2" maxlength="500" required placeholder="Add a note for the group"></textarea><button class="btn" type="submit">${icon('plus')}Add note</button></form></details>`
 }
-const villaNotes = (h) => `<details class="more notes js-only" data-notes="ht:${esc(h.id)}" hidden><summary>${icon('note')}Notes <span class="notes-n"></span></summary>${notesInner('ht:' + h.id)}</details>`
+const villaNotes = (h) => `<div class="notes js-only" data-notes="ht:${esc(h.id)}" hidden><p class="notes-label">${icon('note')}Notes <span class="notes-n"></span></p>${notesInner('ht:' + h.id)}</div>`
 // Move up / down: the villa order for everyone, kept by the vote server (website only: src/app.js shows them)
 const moveBtns = (h) => `<button class="btn square js-only" type="button" data-move-stay="up" hidden aria-label="${esc('Move ' + h.name + ' up')}">${icon('up')}</button>` +
   `<button class="btn square js-only" type="button" data-move-stay="down" hidden aria-label="${esc('Move ' + h.name + ' down')}">${icon('down')}</button>`

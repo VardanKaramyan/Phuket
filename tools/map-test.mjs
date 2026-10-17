@@ -185,11 +185,11 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.close()
 }
 
-// the map credits are not on the map: a line under it names what is showing (online satellite: Esri; plus OpenStreetMap)
+// no credit box on the map; online, the line under it is empty (the user removed the Esri and OpenStreetMap credits)
 {
   const { p } = await open()
   const r = await p.evaluate(() => ({ onMap: document.querySelectorAll('.leaflet-control-attribution').length, under: document.getElementById('map-credit')?.textContent || '' }))
-  check('no credit box on the map; the credit line is under it', r.onMap === 0 && /Esri/.test(r.under) && /OpenStreetMap/.test(r.under) && !/EOX/.test(r.under), JSON.stringify(r))
+  check('no credit box on the map, and no Esri or OpenStreetMap credit under it', r.onMap === 0 && !/Esri|OpenStreetMap|EOX/.test(r.under), JSON.stringify(r))
   await p.close()
 }
 

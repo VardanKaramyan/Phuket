@@ -428,7 +428,7 @@
   let satInline = null // the single file's tiles, read once (the big map and the villa maps share them)
   // the map credits (OpenStreetMap, Esri, EOX) go in a line under the map, not in a box on it: the credits of the layers
   // on the map right now, so it only names what is showing (worked out once per frame, as layers come and go)
-  const OSM_CREDIT = '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+  const OSM_CREDIT = ''
   function creditsUnder(m, el) {
     if (!el) return
     let queued = false

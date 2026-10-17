@@ -846,8 +846,8 @@ function clientData(build) {
     areaGeo, land, roads, points: pts, offlineUrl: extra.offlineUrl || '',
     precacheCount: 6 + Object.keys(images).filter((k) => usedKey(k) && !(extra.dropImages || []).includes(k) && fs.existsSync(P(images[k].file))).length,
     tiles: {
-      streets: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', attr: 'Tiles © <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> & contributors', maxNative: 19 },
-      satellite: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr: 'Imagery © Esri, Maxar, Earthstar Geographics', maxNative: 18 },
+      streets: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', attr: '', maxNative: 19 },
+      satellite: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr: '', maxNative: 18 },
       // under the Esri satellite layer: shows while Esri tiles load, and on its own offline
       offline: sat && build !== 'artifact' ? { url: build === 'single' ? '' : 'sat/{z}/{x}/{y}.webp', inline: build === 'single', ranges: sat.ranges, minZoom: sat.minZoom, maxZoom: sat.maxZoom, attr: sat.attribution } : null,
     },

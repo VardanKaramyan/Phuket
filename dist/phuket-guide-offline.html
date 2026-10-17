@@ -3438,6 +3438,11 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   const $ = (s, el = document) => el.querySelector(s)
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
   const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps']
+  // kept for this tab only (it survives a refresh): where you were on the page and on the map
+  const session = {
+    get(k) { try { return JSON.parse(sessionStorage.getItem('pg:' + k) || 'null') } catch { return null } },
+    set(k, v) { try { sessionStorage.setItem('pg:' + k, JSON.stringify(v)) } catch { /* private mode */ } },
+  }
   const store = {
     get(k, d) { try { const v = localStorage.getItem('pg:' + k); return v == null ? d : JSON.parse(v) } catch { return d } },
     set(k, v) { try { localStorage.setItem('pg:' + k, JSON.stringify(v)); return true } catch { return false } },
@@ -3932,7 +3937,10 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     }
     const home = L.latLngBounds([[7.75, 98.25], [8.30, 98.47]])
     const fitHome = (anim2) => map.fitBounds(home, { paddingTopLeft: [10, 58], paddingBottomRight: [10, 64], animate: anim2 })
-    fitHome(false)
+    // after a refresh in the same tab the map comes back where it was, otherwise it shows all of Phuket
+    const lastView = session.get('mapView')
+    if (lastView && Array.isArray(lastView.c)) map.setView(lastView.c, lastView.z, { animate: false }); else fitHome(false)
+    map.on('moveend', () => { const c = map.getCenter(); session.set('mapView', { c: [+c.lat.toFixed(5), +c.lng.toFixed(5)], z: map.getZoom() }) })
     const mapEl = map.getContainer()
     // while a popup is open the floating Back to villa button hides, so it never covers the popup's buttons
     map.on('popupopen', () => { mapEl.parentElement.classList.add('popup-open'); root.classList.add('map-popup') })
@@ -4471,10 +4479,39 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     requestAnimationFrame(() => m.invalidateSize())
   }, true)
 
+  /* ---------- keep your place across a refresh ---------- */
+  // the card (or day, section) at the top of the screen and how far down it was, kept for this tab; after a refresh the
+  // page goes back to it, even if the villa list was re-sorted in between. A link to a card still opens that card.
+  try { history.scrollRestoration = 'manual' } catch { /* old browser */ }
+  function savePlace() {
+    const view = current && document.getElementById(current)
+    if (!view) return
+    const below = document.querySelector('.topbar')?.getBoundingClientRect().bottom || 0
+    const anchor = $$('.card[id], .agenda-day[id], .acc[id], .callout[id], .stack[id]', view).find((e) => e.offsetParent && e.getBoundingClientRect().bottom > below + 8)
+    session.set('place', { hash: location.hash, view: current, y: Math.round(scrollY), id: anchor ? anchor.id : null, off: anchor ? Math.round(anchor.getBoundingClientRect().top) : 0 })
+  }
+  let placeTimer = 0
+  addEventListener('scroll', () => { clearTimeout(placeTimer); placeTimer = setTimeout(savePlace, 200) }, { passive: true })
+  addEventListener('pagehide', savePlace)
+  function restorePlace() {
+    const p = session.get('place')
+    if (!p || p.hash !== location.hash || p.view !== current) return
+    let touched = false
+    ;['touchstart', 'wheel', 'keydown'].forEach((ev) => addEventListener(ev, () => { touched = true }, { once: true, passive: true }))
+    const go = () => {
+      if (touched) return // the person is already scrolling: leave them
+      const el = p.id && document.getElementById(p.id)
+      window.scrollTo(0, el && el.offsetParent ? el.getBoundingClientRect().top + scrollY - p.off : p.y)
+    }
+    // now, after the first paint (a card link scrolls then), and once more when late content (votes, notes) is in
+    go(); requestAnimationFrame(go); setTimeout(go, 400)
+  }
+
   syncHiddenStays()
   syncFavs()
   refreshToday()
   route()
+  restorePlace()
 })()
 </script>
 </body>

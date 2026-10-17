@@ -185,6 +185,24 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.close()
 }
 
+// 5. a refresh keeps your place: the same villa at the same spot on the page, the map where you left it
+{
+  const { p, errors } = await open()
+  await p.evaluate(() => { location.hash = 'stay' }); await sleep(500)
+  const want = await p.evaluate(() => { const c = document.querySelectorAll('[data-list="stay"] > .card')[5]; window.scrollTo(0, c.getBoundingClientRect().top + scrollY - 120); return c.id })
+  await sleep(500)
+  await p.reload({ waitUntil: 'load' }); await sleep(1500)
+  const after = await p.evaluate((id) => ({ hash: location.hash, top: Math.round(document.getElementById(id).getBoundingClientRect().top) }), want)
+  check('a refresh keeps the same villa at the same spot', after.hash === '#stay' && Math.abs(after.top - 120) <= 4, JSON.stringify({ want, after }))
+  await p.evaluate(() => { location.hash = 'areas' }); await sleep(800)
+  await p.evaluate(() => __map.setView([7.9, 98.3], 13, { animate: false })); await sleep(500)
+  await p.reload({ waitUntil: 'load' }); await sleep(1500)
+  const mv = await p.evaluate(() => { const c = __map.getCenter(); return { lat: +c.lat.toFixed(3), lng: +c.lng.toFixed(3), z: __map.getZoom() } })
+  check('a refresh keeps the map where it was', mv.lat === 7.9 && mv.lng === 98.3 && mv.z === 13, JSON.stringify(mv))
+  if (errors.length) check('no page errors (refresh)', false, errors.join(' | '))
+  await p.close()
+}
+
 await b.close()
 const failed = results.filter((x) => !x).length
 console.log(failed ? `MAP TEST FAILED: ${failed} checks` : 'MAP TEST PASSED')

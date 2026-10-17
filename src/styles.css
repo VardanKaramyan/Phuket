@@ -227,6 +227,19 @@ html:not(.js) .js-only { display: none !important; }
 /* Show on map: the villa's own small map inside the card */
 .mini-map { height: 220px; margin: 6px 0 10px; border-radius: 10px; overflow: hidden; background: var(--map-sea); isolation: isolate; }
 details.mapacc summary svg { width: 16px; height: 16px; }
+/* shared notes: on a villa (its Notes accordion) and for the whole group (Group notes on the Trip page) */
+.notes-list, details.more .notes-list { list-style: none; margin: 6px 0 10px; padding: 0; display: grid; gap: 8px; }
+.notes-list li { position: relative; padding: 10px 40px 10px 12px; border-radius: 10px; background: var(--surface-2); }
+.notes-list li.quiet { padding: 2px 0; color: var(--ink-2); background: none; }
+.notes-list p { margin: 0 0 4px; overflow-wrap: anywhere; }
+.notes-list small { color: var(--ink-2); font-size: 12.5px; }
+.note-del { position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; border: 0; border-radius: 50%; background: transparent; color: var(--ink-2); font-size: 20px; line-height: 1; cursor: pointer; }
+.note-form { display: grid; gap: 8px; }
+.note-form textarea { font: inherit; font-size: 16px; color: var(--ink); padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); resize: vertical; min-height: 64px; }
+.note-form .btn { justify-self: start; }
+details.notes summary svg { width: 16px; height: 16px; }
+.notes-all .block-title h2 { display: flex; align-items: center; gap: 8px; }
+.notes-all .block-title svg { width: 20px; height: 20px; }
 /* Like / Skip: the group's votes */
 .votes { display: grid; gap: 6px; }
 .vote-btns { display: flex; gap: 8px; }
@@ -254,6 +267,7 @@ details.mapacc summary svg { width: 16px; height: 16px; }
 /* from a map popup to the card: the way back */
 .back-to-map { position: fixed; z-index: 920; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + 14px + env(safe-area-inset-bottom, 0px)); display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--ink); color: var(--bg); font: 600 14.5px/1 var(--font-body); box-shadow: var(--shadow); cursor: pointer; }
 .back-to-map svg { width: 18px; height: 18px; }
+html.map-popup #back-to-card { display: none; }
 
 /* ---------- flyer cards (music events) ---------- */
 .flyer { background: var(--night); color: var(--night-ink); box-shadow: none; border: 1px solid var(--night-line); }

@@ -100,6 +100,17 @@ const api = await import(mod + '?store')
   check('an order is saved for everyone', r.status === 200 && r.json.order?.ids?.join() === 'mouana-breeze-mai-khao,diamond-villa-278,alisa-pool-villa' && r.json.order.by === 'Vardan', JSON.stringify(r.json.order))
   r = await call(api, 'GET')
   check('GET returns the order', r.json.order?.ids?.length === 3, JSON.stringify(r.json.order))
+  // shared notes: on a villa, or for the whole trip ('all'); anyone adds, the note keeps its author and time
+  r = await call(api, 'POST', { name: 'Ani', note: { item: 'ht:mouana-breeze-mai-khao', text: '  Ask about the\ndeposit  ' } })
+  const n1 = r.json.notes?.['ht:mouana-breeze-mai-khao']?.[0]
+  check('a villa note is saved with its author', r.status === 200 && n1?.text === 'Ask about the\ndeposit' && n1.by === 'Ani' && !!n1.id, JSON.stringify(r.json.notes))
+  r = await call(api, 'POST', { name: 'Vardan', note: { item: 'all', text: 'Flights land 14:05' } })
+  check('a note for the whole trip is saved', r.json.notes?.all?.[0]?.text === 'Flights land 14:05', JSON.stringify(r.json.notes?.all))
+  r = await call(api, 'POST', { name: 'Ani', deleteNote: n1.id })
+  check('a note can be deleted', r.status === 200 && !r.json.notes['ht:mouana-breeze-mai-khao'], JSON.stringify(r.json.notes))
+  for (const [body, why] of [[{ name: 'V', note: { item: 'all', text: '   ' } }, 'an empty note'], [{ name: 'V', note: { item: 'all', text: 'x'.repeat(501) } }, 'a note over 500 characters'], [{ name: 'V', note: { item: 'zz:x', text: 'hi' } }, 'a note on an unknown item'], [{ name: '', note: { item: 'all', text: 'hi' } }, 'a note with no name']]) {
+    const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
+  }
   for (const [body, why] of [[{ name: 'V', order: [] }, 'an empty order'], [{ name: 'V', order: ['a', 'a'] }, 'a villa twice'], [{ name: 'V', order: ['Bad Id!'] }, 'a bad id'], [{ name: 'V', order: Array.from({ length: 301 }, (_, i) => 'v' + i) }, 'too many villas'], [{ name: '', order: ['a'] }, 'no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
@@ -241,6 +252,29 @@ const oB2 = await order(B.p)
 check('after a move, likes no longer reorder the list', oB2.at(-1) === o3.at(-1), oB2.at(-1))
 const topMsg = await A.p.evaluate(async (id) => { document.querySelector('#' + id + ' [data-move-stay="up"]').click(); await new Promise((r) => setTimeout(r, 300)); return document.querySelector('.toast')?.textContent || '' }, o3[0])
 check('the top villa cannot move up', /top/i.test(topMsg), topMsg)
+// shared notes: A adds one on a villa (A's name is known: no dialog) and one for the whole group; B sees both; A deletes
+await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+await A.p.evaluate(() => {
+  const d = document.querySelector('#ht-alisa-pool-villa details.notes'); d.open = true
+  d.querySelector('textarea').value = 'Ask if the pool is heated'
+  d.querySelector('.note-form button[type="submit"]').click()
+}); await sleep(900)
+const aNote = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, box: document.querySelector('#ht-alisa-pool-villa .note-form textarea').value }))
+check('a villa note is added at once and the box empties', /Ask if the pool is heated/.test(aNote.list) && /Ani/.test(aNote.list) && aNote.n === '(1)' && aNote.box === '', JSON.stringify(aNote))
+await A.p.evaluate(() => { location.hash = 'home' }); await sleep(300)
+await A.p.evaluate(() => { const g = document.getElementById('group-notes'); g.querySelector('textarea').value = 'Meet at the airport\nexit 2'; g.querySelector('.note-form button[type="submit"]').click() }); await sleep(900)
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
+// (textContent: the villa's Notes accordion is closed on B's phone, and closed content has no innerText)
+const bNotes = await B.p.evaluate(() => ({ villa: document.querySelector('#ht-alisa-pool-villa .notes-list').textContent, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, all: document.querySelector('#group-notes .notes-list').innerHTML, mine: document.querySelectorAll('#ht-alisa-pool-villa [data-note-del]').length }))
+check('another phone sees the villa note (count on the closed accordion) and the group note', /pool is heated/.test(bNotes.villa) && bNotes.n === '(1)' && /Meet at the airport<br>exit 2/.test(bNotes.all) && bNotes.mine === 0, JSON.stringify(bNotes).slice(0, 220))
+await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa [data-note-del]').click()); await sleep(900)
+const gone = await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa .notes-list').innerText)
+check('the author can delete a note', /No notes yet/.test(gone), gone)
+// Share: the phone's share sheet gets the villa, its price, beds, the listing and the guide link to the card
+await A.p.evaluate(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d } }); document.querySelector('#ht-alisa-pool-villa [data-share-stay]').click() }); await sleep(300)
+const shared = await A.p.evaluate(() => window.__shared)
+check('Share sends the villa, price, beds, listing and guide link', !!shared && /#ht-alisa-pool-villa$/.test(shared.url) && /THB/.test(shared.text) && /AMD/.test(shared.text) && /beds/.test(shared.text) && /airbnb\.com\/rooms/.test(shared.text), JSON.stringify(shared))
 for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

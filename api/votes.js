@@ -5,13 +5,19 @@
 //   POST /api/votes { item, name, vote: 'like' | 'skip' | null }  -> the same, after the change (null takes it back)
 //   POST /api/votes { item: 'ht:<id>', name, hide: true | false } -> hides the villa for everyone, or shows it again
 //   POST /api/votes { name, order: ['<villa id>', …] }           -> the villa list order for everyone (Move up / down)
-// GET and every POST answer with { votes, hidden, order: { ids, by, t } | null }.
+//   POST /api/votes { name, note: { item: 'ht:<id>' | 'all', text } } -> a shared note on a villa, or for the whole trip
+//   POST /api/votes { name, deleteNote: '<note id>' }            -> deletes a note
+// GET and every POST answer with { votes, hidden, order: { ids, by, t } | null, notes: { '<item>': [{ id, text, by, t }] } }.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
 const META = 'guide:meta' // one Redis hash: field "order", value { ids, n, t } (the villa order, who moved last)
 const VILLA = /^[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_ORDER = 300
+const NOTES = 'guide:notes' // one Redis hash: field "<note id>", value { item, text, n, t }
+const NOTE_ITEM = /^(all|ht:[a-z0-9][a-z0-9-]{0,80})$/
+const MAX_NOTES = 2000
+const NOTE_LEN = 500
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -61,7 +67,17 @@ async function villaOrder(db) {
   for (let i = 0; i < flat.length; i += 2) if (flat[i] === 'order') { try { const x = JSON.parse(flat[i + 1]); return { ids: x.ids, by: x.n, t: x.t } } catch { /* broken */ } }
   return null
 }
-const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db), order: await villaOrder(db) })
+async function allNotes(db) {
+  const flat = (await redis(db, ['HGETALL', NOTES])) || []
+  const rows = []
+  for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); rows.push({ id: flat[i], item: x.item, text: x.text, by: x.n, t: x.t }) } catch { /* broken */ } }
+  rows.sort((a, b) => a.t - b.t) // oldest first, like a chat
+  const notes = {}
+  for (const r of rows) (notes[r.item] ||= []).push({ id: r.id, text: r.text, by: r.by, t: r.t })
+  return notes
+}
+const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db), order: await villaOrder(db), notes: await allNotes(db) })
+const cleanName = (s) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 
 export async function GET() {
@@ -75,6 +91,25 @@ export async function POST(request) {
   if (!db) return NO_DB()
   let body
   try { body = await request.json() } catch { return reply(400, { error: 'Send JSON: { item, name, vote }' }) }
+  // shared notes: add one (with the author's name), or delete one by its id
+  if (body && (body.note || body.deleteNote)) {
+    const who = cleanName(body.name)
+    if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+    try {
+      if (body.deleteNote) await redis(db, ['HDEL', NOTES, String(body.deleteNote).slice(0, 40)])
+      else {
+        const item = String(body.note.item || '')
+        // keep line breaks, drop other control characters
+        const text = String(body.note.text ?? '').replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, '').trim()
+        if (!NOTE_ITEM.test(item)) return reply(400, { error: 'Notes go on a villa or on the whole trip' })
+        if (!text || text.length > NOTE_LEN) return reply(400, { error: 'A note of 1 to 500 characters, please' })
+        if ((await redis(db, ['HLEN', NOTES])) >= MAX_NOTES) return reply(507, { error: 'Too many notes saved' })
+        const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+        await redis(db, ['HSET', NOTES, id, JSON.stringify({ item, text, n: who, t: Date.now() })])
+      }
+      return reply(200, await everything(db))
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
   // the villa order: the whole list as the person sees it after a move (the client works out the move)
   if (body && Array.isArray(body.order)) {
     const ids = body.order.map(String)

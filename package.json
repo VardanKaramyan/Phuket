@@ -10,6 +10,7 @@
     "geo": "node tools/geo.mjs",
     "sat": "node tools/sat-tiles.mjs",
     "images": "node tools/images.mjs",
+    "gallery": "node tools/stay-gallery.mjs",
     "build": "node tools/build.mjs",
     "check": "node tools/check.mjs",
     "test:offline": "node tools/offline-test.mjs",
@@ -17,7 +18,8 @@
     "test:map": "node tools/map-test.mjs",
     "test:amd": "node tools/amd-test.mjs",
     "test:votes": "node tools/votes-test.mjs",
-    "test": "node tools/check.mjs && node tools/amd-test.mjs && node tools/offline-test.mjs && node tools/popup-test.mjs && node tools/map-test.mjs && node tools/votes-test.mjs",
+    "test:gallery": "node tools/gallery-test.mjs",
+    "test": "node tools/check.mjs && node tools/amd-test.mjs && node tools/offline-test.mjs && node tools/popup-test.mjs && node tools/map-test.mjs && node tools/votes-test.mjs && node tools/gallery-test.mjs",
     "qa": "node tools/qa-shots.mjs dist/phuket-guide-offline.html qa-out",
     "all": "npm run data && npm run build && npm test",
     "serve": "npx --yes http-server@14.1.1 dist -p 8080 -c-1"

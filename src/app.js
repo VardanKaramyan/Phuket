@@ -723,6 +723,40 @@
     $('#install-android').hidden = ios
   }
 
+  /* ---------- villa photo galleries: swipe through the listing's photos ---------- */
+  // the photos come from Airbnb / Booking.com: each is fetched only when you get near it (the next one once the card is
+  // on screen); the artifact cannot show outside photos, so its galleries stay on the saved photo
+  const OFFLINE_PHOTO = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405"><rect width="720" height="405" fill="#8a9a9c"/><text x="360" y="212" fill="#fff" font-family="sans-serif" font-size="30" text-anchor="middle">Photo needs internet</text></svg>')
+  const galleries = D.build === 'artifact' ? [] : $$('[data-gallery]')
+  const near = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.galleryNear(); near.unobserve(e.target) } }), { rootMargin: '200px 0px' }) : null
+  galleries.forEach((g) => {
+    const media = g.parentElement, imgs = $$('img', g), count = $('.gal-count', media)
+    const prev = $('.gal-btn.prev', media), next = $('.gal-btn.next', media)
+    g.classList.add('on')
+    const load = (i) => { const im = imgs[i]; if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src') } }
+    imgs.forEach((im) => im.addEventListener('error', () => { if (!im.classList.contains('gal-off')) { im.classList.add('gal-off'); im.src = OFFLINE_PHOTO } }))
+    const at = () => Math.round(g.scrollLeft / (g.clientWidth || 1))
+    let shown = -1
+    const update = () => {
+      const i = Math.min(imgs.length - 1, Math.max(0, at()))
+      if (i === shown) return
+      shown = i
+      if (count) count.textContent = (i + 1) + ' / ' + imgs.length
+      if (prev) prev.disabled = i === 0
+      if (next) next.disabled = i === imgs.length - 1
+      load(i); load(i + 1)
+    }
+    g.galleryNear = () => load(at() + 1)
+    let ticking = false
+    g.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; update() }) } }, { passive: true })
+    const go = (d) => g.scrollTo({ left: (at() + d) * g.clientWidth, behavior: reduceMotion ? 'auto' : 'smooth' })
+    prev?.addEventListener('click', () => go(-1))
+    next?.addEventListener('click', () => go(1))
+    g.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); go(e.key === 'ArrowRight' ? 1 : -1) } })
+    if (prev) prev.disabled = true
+    if (near) near.observe(g); else g.galleryNear()
+  })
+
   /* ---------- shared votes: Like / Skip by name, on the website (api/votes) ---------- */
   const voteBars = $$('[data-vote-item]')
   const dlg = $('#vote-dialog')

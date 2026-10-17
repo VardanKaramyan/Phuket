@@ -2302,5 +2302,17 @@
   "width": 1440,
   "height": 960,
   "note": "Listing cover photo (the house at night), checked by eye (17 Oct 2026)."
+ },
+ {
+  "key": "hotels:bangtao-4br-villa-unit-1",
+  "ok": true,
+  "file": "assets/raw/hotels-bangtao-4br-villa-unit-1.jpg",
+  "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1496974124558981643/original/81d063e2-eb64-4a5d-b21d-67867f44ca80.jpeg",
+  "page": "https://www.airbnb.com/rooms/1496974124558981643?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+  "credit": "\u00a9 \u7ee7\u8f89",
+  "license": "Airbnb listing photo",
+  "width": 1440,
+  "height": 960,
+  "note": "Listing cover photo (the courtyard pool at dusk), checked by eye (17 Oct 2026)."
  }
 ]

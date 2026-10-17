@@ -1928,5 +1928,15 @@
   "credit": "© Club Miracle",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1777276116063982026?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:brand-new-4br-villa-rawai-gym": {
+  "file": "assets/img/hotels-brand-new-4br-villa-rawai-gym.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Club Miracle",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1764267839144278922?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

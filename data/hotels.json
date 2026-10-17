@@ -5475,6 +5475,209 @@
    "bedrooms": 4,
    "beds": 4,
    "baths": 3
+  },
+  {
+   "id": "brand-new-4br-villa-rawai-gym",
+   "name": "Brand-New 4BR Villa with Gym, Rawai",
+   "area": "rawai",
+   "tier": "budget",
+   "priceText": "180,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 18,000 THB a night, or 2,250 THB per person a night. Electricity is extra. Checked 17 Oct 2026.",
+   "whyStay": "A new villa with its own pool in a quiet, gated street in Rawai, a short drive from Nai Harn Beach. Four bedrooms with king beds, plus a shared gym and pool table for the guests of the estate.",
+   "description": "Entire villa in Rawai: 4 air-conditioned bedrooms, each with a king bed, 3.5 baths (one with a bathtub), a bright living and dining room and a full kitchen with an oven and a dishwasher, a washer and fast wifi. A private pool with an enclosed poolside, and a gated car park. Guests share a gym and a pool table with the estate. Run by Club Miracle, a Phuket villa company with more than 15,000 reviews (4.43), like the Tropical 4BR villa.",
+   "nearby": "The host says: a quiet residential area of South Phuket, a short drive to Nai Harn and Rawai with restaurants, cafés and shops. In a straight line from the pin: Nai Harn Beach 2 km, Bangla Road 13 km, the airport 37 km, Baba Beach Club Natai (Circoloco) 52 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM. The listing says checkout before 11 PM, which may be a mistake for 11 AM: ask the host.",
+    "Free cancellation before 9 Dec 2026; cancel before 1 Jan for a partial refund.",
+    "Electricity is not in the price: ask the host for the rate per unit. Final cleaning and wifi are included.",
+    "A new listing with no reviews yet. No smoke alarm or carbon monoxide alarm is listed."
+   ],
+   "vibe": [
+    "private pool",
+    "gym",
+    "Rawai"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1764267839144278922?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1764267839144278922?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1764267839144278922?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/567d56ad-eabc-4c4e-af6f-683f9b2e57d0.jpeg",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Club Miracle"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Rawai · New · 4 bedrooms · 4 beds · 3.5 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (17 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.7809,
+   "lng": 98.3221,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.7809,98.3221",
+   "airbnbId": "1764267839144278922",
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 3.5,
+   "gallery": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/ce213edd-1c57-45b9-b0d2-58e13da63dd1.jpeg",
+     "alt": "Living room image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/1dea8397-c74a-4448-bab7-7e3df4787b14.jpeg",
+     "alt": "Living room image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/12bff6d6-e45f-4620-8d7d-35de47736770.jpeg",
+     "alt": "Living room image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/bbded5eb-cc45-4c51-b150-cef73c2520f2.jpeg",
+     "alt": "Full kitchen image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/3d5156f7-9183-47e7-9753-14e28c750868.jpeg",
+     "alt": "Full kitchen image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/01af07b3-840c-4e2a-b7f6-40e45a120940.jpeg",
+     "alt": "Dining area image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/b290419e-95af-4b82-b3d5-bfadfb862ada.jpeg",
+     "alt": "Dining area image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/e992be61-6051-4ef7-bed1-1155ba92ce63.jpeg",
+     "alt": "Dining area image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/1feaea91-8968-4061-8351-c18844905832.jpeg",
+     "alt": "Bedroom 1 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/62a31f8d-ed1f-48c4-9d0f-b2b358fc6ac1.jpeg",
+     "alt": "Bedroom 1 image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/07be8b14-ec79-4448-945f-078611e7b0a0.jpeg",
+     "alt": "Bedroom 1 image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/6820d6f1-409a-4757-addf-02f584a396c3.jpeg",
+     "alt": "Bedroom 1 image 4"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/624eacfe-ca5b-44fc-814a-17353ea4b97a.jpeg",
+     "alt": "Bedroom 2 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/c9819dca-96bb-4110-9719-508c84089353.jpeg",
+     "alt": "Bedroom 2 image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/c3e96845-0a24-45a7-9620-3cd00c8df994.jpeg",
+     "alt": "Bedroom 2 image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/c98ca164-d3aa-4bd0-9096-4f8e12eabd80.jpeg",
+     "alt": "Bedroom 3 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/ea7d5914-5487-4960-a5cf-6a3975ede41d.jpeg",
+     "alt": "Bedroom 3 image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/1211d066-a534-45f5-a671-d5cc98922347.jpeg",
+     "alt": "Bedroom 3 image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/309f5af2-bf4b-425a-b767-7f4146c6396f.jpeg",
+     "alt": "Bedroom 4 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/e0b7e5a6-6a9b-4fef-8356-00ae8d8a1d6d.jpeg",
+     "alt": "Bedroom 4 image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/75c2dbfb-35f9-4380-ab1f-41a997738cf8.jpeg",
+     "alt": "Bedroom 4 image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/ad00b31c-0a5f-4bc8-bca2-966e1b6b3e19.jpeg",
+     "alt": "Full bathroom 1 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/232b6737-9ef1-491e-bb6a-a61c568bbc1a.jpeg",
+     "alt": "Full bathroom 1 image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/7066c26f-2340-4245-bccf-61fa38757ea5.jpeg",
+     "alt": "Full bathroom 2 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/01c4c461-af9e-49f1-b968-cc6c76e5bd2f.png",
+     "alt": "Full bathroom 3 image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/b5b3abea-bb67-45ec-8cfe-b7fca27b95af.jpeg",
+     "alt": "Half bathroom image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/733430a9-49d5-4b97-b158-6826bd623db7.jpeg",
+     "alt": "Terrace image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/4f4a2aa6-e57e-4020-bb28-3a21153cbf0d.jpeg",
+     "alt": "Terrace image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/7212c30f-c678-40ac-8fb3-ed76256c4b6b.jpeg",
+     "alt": "Gym image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/805d1010-3cdd-45f0-811a-98e104a22d92.jpeg",
+     "alt": "Gym image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/063bfb38-5803-4588-b9e3-525cb377d52a.jpeg",
+     "alt": "Gym image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/137e1a6e-1bf4-49d4-a476-925e327d447d.jpeg",
+     "alt": "Pool image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/edafa193-ab56-4a4b-bc33-7db7f73b3da8.jpeg",
+     "alt": "Pool image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/29b529d7-783c-441a-befe-a8b78e4b44f7.jpeg",
+     "alt": "Game room image 1"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/d9b52b09-3c91-44fb-a18d-d0854d922e20.jpeg",
+     "alt": "Game room image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/dc2b7481-9e61-4d11-8ae2-42689e1f12fa.jpeg",
+     "alt": "Game room image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1764267839144278922/original/4af8c7ca-1887-4c08-96e0-9f3d0ad3e847.png",
+     "alt": "Additional photos image 1"
+    }
+   ]
   }
  ]
 }

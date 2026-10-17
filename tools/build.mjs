@@ -356,12 +356,25 @@ function bedRow(h) {
   const parts = [h.bedrooms > 0 ? plural(h.bedrooms, 'bedroom') : '', plural(h.beds, 'bed'), h.baths > 0 ? plural(h.baths, 'bath') : ''].filter(Boolean)
   return `<div class="beds-row"><span class="pill ${fit.key}">${esc(fit.text)}</span><span>${esc(parts.join(' · '))}</span></div>`
 }
+// US dollars from the mid-market rate in data/exchanges.json (an estimate, like the drams)
+const usdPerThb = (() => { const u = (money.midMarket || []).find((m) => m && m.currency === 'USD' && m.thbPerUnit > 0); return u ? 1 / u.thbPerUnit : 0 })()
+function usd(thbAmount) {
+  if (!usdPerThb) return ''
+  const v = thbAmount * usdPerThb
+  const step = v < 100 ? 1 : v < 1000 ? 5 : 10
+  return '≈$' + (Math.round(v / step) * step).toLocaleString('en-US')
+}
+// the villa price: drams first and big (an estimate, from the rate in data/extra.json), then US dollars, then the exact
+// price the listing showed in baht (the one to compare with Airbnb / Booking.com)
 function priceBox(h) {
   const pr = priceOf(h)
   if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div></div>`
-  // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs; drams first in the breakdown
-  const row = (label, n) => `<dt>${esc(label)}</dt><dd>${amdRate ? `<b>${amd.amount(n)}</b><span>${thb(n)}</span>` : `<b>${thb(n)}</b>`}</dd>`
-  return `<div class="price-box" data-noamd><div class="price-head"><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}</div></div>` +
+  const site = h.websiteLabel || 'Listing'
+  const alt = (n, label) => [usd(n), (label ? label + ' ' : '') + thb(n)].filter(Boolean).join(' · ')
+  // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs
+  const row = (label, n) => `<dt>${esc(label)}</dt><dd>${amdRate ? `<b>${amd.amount(n)}</b><span>${esc(alt(n))}</span>` : `<b>${thb(n)}</b>`}</dd>`
+  const main = amdRate ? `<b class="price-total">${amd.amount(pr.total)}</b><span class="price-alt">${esc(alt(pr.total, site + ' price'))}</span>` : `<b class="price-total">${thb(pr.total)}</b>`
+  return `<div class="price-box" data-noamd><div class="price-head"><div><span class="price-label">${pr.nights} nights · all fees${amdRate ? ' · estimate' : ''}</span>${main}</div></div>` +
     `<dl class="price-split">${row('Per person per day', pr.perPerson)}${row(`Per person, ${pr.nights} days`, pr.perPersonStay)}${row('Whole villa per day', pr.perNight)}</dl></div>`
 }
 // listFirst (data/stays.json): the villas the user put at the top, in that order; then by area, rooms on sale, price
@@ -377,7 +390,8 @@ function notesInner(item) {
 const villaNotes = (h) => `<div class="notes js-only" data-notes="ht:${esc(h.id)}" hidden><p class="notes-label">${icon('note')}Notes <span class="notes-n"></span></p>${notesInner('ht:' + h.id)}</div>`
 // Move up / down: the villa order for everyone, kept by the vote server (website only: src/app.js shows them)
 const moveBtns = (h) => `<button class="btn square js-only" type="button" data-move-stay="up" hidden aria-label="${esc('Move ' + h.name + ' up')}">${icon('up')}</button>` +
-  `<button class="btn square js-only" type="button" data-move-stay="down" hidden aria-label="${esc('Move ' + h.name + ' down')}">${icon('down')}</button>`
+  `<button class="btn square js-only" type="button" data-move-stay="down" hidden aria-label="${esc('Move ' + h.name + ' down')}">${icon('down')}</button>` +
+  `<button class="btn js-only" type="button" data-unpin-stay hidden aria-label="${esc('Reset the position of ' + h.name)}">${icon('swap')}Reset position</button>`
 function hotelCard(h, mode) {
   const tierKey = h.tier === 'hostel' ? 'budget hostel' : h.tier
   const extraBtns = isUrl(h.website) ? `<a class="btn" href="${esc(h.website)}" target="_blank" rel="noopener">${icon('globe')}${esc(h.websiteLabel || 'Website')}</a>` : ''
@@ -648,6 +662,7 @@ function stayView(mode) {
 <p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote, and the arrows to move a villa up or down the list for everyone.</p>
 <ol class="picks" id="group-picks"></ol></div>
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
+<p class="js-only pins-note" id="pins-note" hidden><span>Some villas were moved by hand and keep their place.</span> <button class="btn" type="button" id="unpin-all">Reset all positions</button></p>
 <div class="toolbar" data-toolbar="stay">
 ${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed, ['saved', 'Saved']], 'Filter villas by price')}
 ${chipRow('stay', 'zone', [['all', 'Everywhere'], ...zonesUsed], 'Filter hotels by area')}
@@ -807,7 +822,10 @@ function clientData(build) {
     add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.beds > 0 ? plural(h.beds, 'bed') : '', h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
     const pt = pts.at(-1), pr = priceOf(h)
     if (pt && pt.id === h.id && pt.t === 'hotel') {
-      if (pr) Object.assign(pt, { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: amdRate ? amd.amount(pr.total) : '', pricePp: amdRate ? `${amd.amount(pr.perPerson)} per person per day` : `${thb(pr.perPerson)} per person per day` })
+      // the popup: drams first (an estimate), then US dollars and the listing's baht price
+      if (pr) Object.assign(pt, amdRate
+        ? { price: amd.amount(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: [usd(pr.total), thb(pr.total)].filter(Boolean).join(' · '), pricePp: `${amd.amount(pr.perPerson)} per person per day` }
+        : { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: '', pricePp: `${thb(pr.perPerson)} per person per day` })
       if (isUrl(h.website)) Object.assign(pt, { web: h.website, webLabel: h.websiteLabel || 'Website' })
     }
   })

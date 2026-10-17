@@ -891,6 +891,22 @@
         .finished.then(() => { c.style.position = ''; c.style.zIndex = '' }, () => {})
     })
   }
+  // Reset position on a villa that has a fixed place, and Reset all positions while any villa has one
+  function syncPinUI() {
+    const map = (pins && pins.map) || {}
+    $$('[data-unpin-stay]').forEach((b) => { b.hidden = !canVote || !Number.isInteger(map[b.closest('.card').dataset.stay]) })
+    const note = $('#pins-note'); if (note) note.hidden = !canVote || !Object.keys(map).length
+  }
+  async function unpin(ids, name) {
+    const before = pins, map = { ...((pins && pins.map) || {}) }
+    ids.forEach((id) => delete map[id])
+    pins = { map, by: name, t: Date.now() }
+    sortStays(true, true); syncPinUI()
+    try {
+      applyShared(await post({ name, pins: Object.fromEntries(ids.map((id) => [id, null])) }))
+      toast(ids.length > 1 ? 'All positions reset for everyone' : 'Position reset for everyone')
+    } catch { pins = before; sortStays(true, true); syncPinUI(); failed() }
+  }
   // the next villa on the list in that direction (hidden and filtered-out ones are skipped)
   function neighbourOf(card, dir) {
     let n = card
@@ -908,14 +924,14 @@
     const before = pins
     Object.assign(map, change)
     pins = { map, by: name, t: Date.now() }
-    sortStays(true, true)
+    sortStays(true, true); syncPinUI()
     try {
       const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, pins: change }) })
       if (!r.ok) throw new Error('pins ' + r.status)
       applyShared(await r.json())
       toast('Moved ' + dir + ' for everyone')
     } catch {
-      pins = before; sortStays(true, true) // slide back
+      pins = before; sortStays(true, true); syncPinUI() // slide back
       toast(navigator.onLine ? 'Could not move it. Try again in a minute.' : 'This needs internet.')
     }
   }
@@ -931,7 +947,7 @@
   function applyShared(j) {
     votes = j.votes || {}; store.set('votes', votes)
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
-    if ('pins' in j) { pins = j.pins; store.set('villaPins', pins) }
+    if ('pins' in j) { pins = j.pins; store.set('villaPins', pins); syncPinUI() }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
     if (j.hidden) {
       hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
@@ -1015,6 +1031,16 @@
       const b = e.target.closest('[data-note-del]'); if (!b) return
       try { applyShared(await post({ name: voterName(), deleteNote: b.dataset.noteDel })); toast('Note deleted') } catch { toast(navigator.onLine ? 'Could not delete it. Try again in a minute.' : 'This needs internet.') }
     })
+    // Reset position / Reset all positions: the villas go back to their places by likes, for everyone
+    document.addEventListener('click', (e) => {
+      const one = e.target.closest('[data-unpin-stay]'), all = e.target.closest('#unpin-all')
+      if (!one && !all) return
+      const ids = one ? [one.closest('.card').dataset.stay] : Object.keys((pins && pins.map) || {})
+      if (!ids.length) return
+      if (voterName()) { unpin(ids, voterName()); return }
+      openDialog({ title: all ? 'Reset all positions' : 'Reset position', what: one ? one.closest('.card').dataset.name : 'Every villa moved by hand', save: 'Reset',
+        note: 'It goes back to its place by likes, for the whole group.', run: (n) => unpin(ids, n) })
+    })
     // Move up / down: one tap once the guide knows your name (the first time it asks, like a vote)
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-move-stay]'); if (!b) return
@@ -1045,6 +1071,7 @@
     })
     renderVotes()
     renderNotes()
+    syncPinUI()
     loadVotes()
     // other people's votes: when the guide comes back to the front, and every 30 s while it is open
     window.addEventListener('focus', loadVotes)

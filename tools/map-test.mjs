@@ -185,6 +185,16 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.close()
 }
 
+// the test switch: ?nocredit hides the map credit line (only that page load); without it the credit shows
+{
+  const p = await b.newPage()
+  await p.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true })
+  const credit = async (q) => { await p.goto(pathToFileURL(file).href + q + '#areas', { waitUntil: 'load' }); await sleep(1200); return p.evaluate(() => { const a = document.querySelector('#map .leaflet-control-attribution'); return !!a && getComputedStyle(a).display !== 'none' }) }
+  const normal = await credit(''), hidden = await credit('?nocredit')
+  check('?nocredit hides the map credit line, normally it shows', normal && !hidden, JSON.stringify({ normal, hidden }))
+  await p.close()
+}
+
 // 5. a refresh keeps your place: the same villa at the same spot on the page, the map where you left it
 {
   const { p, errors } = await open()

@@ -35,6 +35,9 @@
 
   /* ---------- theme (the saved choice is applied in <head> before first paint) ---------- */
   const root = document.documentElement
+  // ?nocredit in the address hides the map credit line on this page load only, for testing on your own screen; the
+  // public pages keep it (the Esri and EOX licences ask for it)
+  if (/[?&]nocredit\b/.test(location.search)) root.classList.add('no-credit')
   const isDark = () => root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches)
   const themeBtn = $('#theme-btn')
   if (themeBtn) {

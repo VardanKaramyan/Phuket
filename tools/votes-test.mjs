@@ -238,9 +238,19 @@ check('Show again brings it back for everyone', back.card && !/Diamond/.test(bac
 const idx = (list, id) => list.indexOf(id)
 let o1 = await order(A.p)
 const mover = o1[3]
-await A.p.evaluate((id) => document.querySelector('#' + id + ' [data-move-stay="up"]').click(), mover); await sleep(900)
+// the page stays put, and the two cards slide past each other
+const anim = await A.p.evaluate(async (id, above) => {
+  document.getElementById(id).scrollIntoView({ block: 'center' }); await new Promise((r) => setTimeout(r, 300))
+  const y = scrollY
+  document.querySelector('#' + id + ' [data-move-stay="up"]').click()
+  await new Promise((r) => requestAnimationFrame(r))
+  const running = [id, above].map((x) => document.getElementById(x).getAnimations().length)
+  await new Promise((r) => setTimeout(r, 600))
+  return { scrolled: Math.round(scrollY - y), running }
+}, mover, o1[2]); await sleep(600)
 let o2 = await order(A.p)
 check('Move up moves the villa one place up at once', idx(o2, mover) === 2 && o2[3] === o1[2], `${idx(o1, mover)} → ${idx(o2, mover)}`)
+check('moving does not scroll the page, and both cards slide', anim.scrolled === 0 && anim.running.every((n) => n > 0), JSON.stringify(anim))
 await A.p.evaluate((id) => document.querySelector('#' + id + ' [data-move-stay="down"]').click(), o2[0]); await sleep(900)
 const o3 = await order(A.p)
 await B.p.evaluate(() => { location.hash = 'home' }); await sleep(200)

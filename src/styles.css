@@ -202,6 +202,8 @@ details.more ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 5px; 
 .fav[aria-pressed="true"] svg { fill: currentColor; }
 html:not(.js) .js-only { display: none !important; }
 
+/* the villa list: no browser scroll anchoring, so moving a card never scrolls the page */
+.list[data-list="stay"] { overflow-anchor: none; }
 /* villa beds for the group of 8: the fit (a bed each, some share, not ideal) and bedrooms · beds · baths */
 .beds-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: var(--ink-2); }
 .flyer .beds-row { color: var(--night-muted); }

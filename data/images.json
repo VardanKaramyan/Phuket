@@ -1918,5 +1918,15 @@
   "credit": "© Mike",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1262796170798445334?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:bangtao-4br-villa-unit-1": {
+  "file": "assets/img/hotels-bangtao-4br-villa-unit-1.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© 继辉",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1496974124558981643?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

@@ -140,6 +140,20 @@ html:not(.js) .toolbar { display: none; }
 .media .ph { position: absolute; inset: 0; display: grid; place-items: center; font: 700 44px/1 var(--font-display); letter-spacing: 0.04em; color: var(--ink-2); opacity: 0.35; }
 .media .credit { z-index: 1; position: absolute; right: 6px; bottom: 5px; font-size: 10px; line-height: 1.2; color: #fff; background: rgb(0 0 0 / 0.45); padding: 2px 5px; border-radius: 4px; max-width: 70%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tag-top { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+/* villa photos: swipe through the listing's photos (one photo per swipe); until src/app.js switches a gallery on
+   (no JavaScript, the artifact), only the first photo shows */
+.media .slides { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.media .slides::-webkit-scrollbar { display: none; }
+.media .slides > img { flex: 0 0 100%; scroll-snap-align: start; scroll-snap-stop: always; background: var(--surface-2); }
+.media .slides:not(.on) > img + img { display: none; }
+.media .slides:not(.on) ~ .gal-count, .media .slides:not(.on) ~ .gal-btn { display: none; }
+.media .slides:focus-visible { outline: 3px solid var(--sea); outline-offset: -3px; }
+.gal-count { position: absolute; z-index: 1; left: 8px; bottom: 6px; font: 600 12px/1 var(--font-display); letter-spacing: 0.04em; color: #fff; background: rgb(0 0 0 / 0.55); padding: 5px 7px; border-radius: 5px; pointer-events: none; }
+.gal-btn { position: absolute; z-index: 1; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0.45); color: #fff; cursor: pointer; }
+.gal-btn svg { width: 18px; height: 18px; }
+.gal-btn.prev { left: 8px; }
+.gal-btn.next { right: 8px; }
+.gal-btn:disabled { opacity: 0; pointer-events: none; }
 .tag-bottom { position: absolute; left: 10px; bottom: 10px; }
 .pill { display: inline-flex; align-items: center; gap: 5px; font: 600 11.5px/1 var(--font-display); letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 8px; border-radius: 6px; background: var(--surface); color: var(--ink); }
 .pill svg { width: 13px; height: 13px; }

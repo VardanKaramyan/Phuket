@@ -18,7 +18,7 @@ You need Node.js 20.3+, Python 3.9+, and Google Chrome or Chromium for the tests
 
 ```sh
 npm install
-npm run all        # data (import + curate + apps) -> build -> check, dram, offline, popup, map and votes tests
+npm run all        # data (import + curate + apps) -> build -> check, dram, offline, popup, map, votes and gallery tests
 npm run qa         # screenshots for a visual check, in qa-out/
 npm run serve      # dist/ on http://localhost:8080
 ```
@@ -39,13 +39,14 @@ node tools/popup-test.mjs                          # map popups stay tappable at
 node tools/map-test.mjs                            # smooth wheel zoom, full screen, offline satellite
 node tools/amd-test.mjs                            # every baht price on the page has its dram amount
 node tools/votes-test.mjs                          # the vote server and the Like / Skip buttons, two people voting
+node tools/gallery-test.mjs                        # villa photo galleries: swipe, load on demand, offline, artifact
 ```
 
 The map: wheel and trackpad zoom glide (`smoothWheel` in `src/app.js` replaces Leaflet's stepped wheel zoom), the top button opens full screen, and Satellite works offline. The offline satellite layer is EOxCloudless 2025 (Sentinel-2, 10 m per pixel) for the trip region, Phuket and Koh Phangan, up to zoom 14 (769 tiles, 3.6 MB, listed in `assets/sat/coverage.json`). Online, the sharp Esri imagery draws on top of it. Esri's tiles are not saved in advance (their terms do not allow offline export outside ArcGIS); the service worker keeps up to 2500 tiles you have looked at.
 
 Dram prices: the build adds the Armenian dram amount next to every baht price, on the page, in the map popups and in the KML (`tools/amd.mjs`: `500 THB (≈5,400 AMD)`, inside brackets `(100 baht, ≈1,100 AMD)`). The rate is `amdRate` in `data/extra.json` (10.8 AMD per baht, 17 Oct 2026); AMD also comes first in the converter, which refreshes it online. Decimal amounts are left alone (they are exchange rates), and a number without THB or baht right next to it gets no dram amount.
 
-Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Each `priceText` must start with `<total> THB for <nights> nights`: the build reads the big price on the card and the map popup from it, and stops with an error otherwise. Check Airbnb prices in the listing's booking box for 8 adults, 8-18 Jan (`?adults=8&check_in=2027-01-08&check_out=2027-01-18&currency=THB`); the total there includes all fees. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
+Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Each `priceText` must start with `<total> THB for <nights> nights`: the build reads the big price on the card and the map popup from it, and stops with an error otherwise. Check Airbnb prices in the listing's booking box for 8 adults, 8-18 Jan (`?adults=8&check_in=2027-01-08&check_out=2027-01-18&currency=THB`); the total there includes all fees. Villa photo galleries: `npm run gallery` (or `node tools/stay-gallery.mjs <villa id>`) saves each listing's photo addresses into `data/stays.json` → `gallery` (nothing is downloaded); the cards swipe through them online, the saved photo first. Then `npm run data` and `npm run build`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
 
 ## Deploy `dist/`
 

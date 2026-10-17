@@ -98,6 +98,7 @@ const ICON = {
   like: '<path d="M7.5 10.5v9h-3v-9zM7.5 10.5l3.6-6.8c1.4 0 2.4 1.1 2.1 2.5l-.7 3.3h5.2a2 2 0 0 1 2 2.3l-1.1 6.3a2 2 0 0 1-2 1.7H7.5"/>',
   skip: '<path d="M7.5 13.5v-9h-3v9zM7.5 13.5l3.6 6.8c1.4 0 2.4-1.1 2.1-2.5l-.7-3.3h5.2a2 2 0 0 0 2-2.3l-1.1-6.3a2 2 0 0 0-2-1.7H7.5"/>',
   back: '<path d="M10 6l-6 6 6 6M4.5 12H20"/>',
+  next: '<path d="M14 6l6 6-6 6M19.5 12H4"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
 
@@ -109,6 +110,22 @@ function imgTag(key, alt, mode, placeholder = '') {
   const src = mode === 'inline' ? 'data:image/webp;base64,' + fs.readFileSync(P(im.file)).toString('base64') : 'img/' + path.basename(im.file)
   const credit = has(im.credit) ? `<span class="credit">${esc(String(im.credit).replace(/<[^>]+>/g, '').slice(0, 80))}${has(im.license) ? ' · ' + esc(im.license) : ''}</span>` : ''
   return `<div class="media"><img src="${src}" alt="${esc(alt)}" width="${im.w || 640}" height="${im.h || 360}" loading="lazy" decoding="async">${credit}${standIn ? `<span class="standin">${esc(standIn)}</span>` : ''}`
+}
+
+// a villa's photos to swipe through: the photo saved with the guide first (it shows offline), then the listing's own
+// photos straight from Airbnb or Booking.com (data/hotels.json → gallery, from tools/stay-gallery.mjs). They carry
+// data-src, and src/app.js loads each one when you get near it; without JavaScript, and in the artifact, only the first shows
+function villaMedia(h, mode) {
+  const html = imgTag('hotels:' + h.id, h.name, mode, 'H')
+  const g = (h.gallery || []).filter((x) => x && isUrl(x.url))
+  if (!g.length || !/<img /.test(html)) return html
+  const sized = (u) => (/muscache\.com/.test(u) ? u.split('?')[0] + '?im_w=720' : u)
+  const n = g.length + 1
+  const slides = g.map((x, i) => `<img data-src="${esc(sized(x.url))}" alt="${esc(x.alt || h.name + ', photo ' + (i + 2))}" width="720" height="480" decoding="async">`).join('')
+  return html.replace(/<img [^>]*>/, (first) => `<div class="slides" data-gallery tabindex="0" role="region" aria-label="${esc(`Photos of ${h.name}: ${n}, swipe for more`)}">${first}${slides}</div>` +
+    `<span class="gal-count js-only" aria-hidden="true">1 / ${n}</span>` +
+    `<button class="gal-btn prev js-only" type="button" aria-label="Previous photo">${icon('back')}</button>` +
+    `<button class="gal-btn next js-only" type="button" aria-label="Next photo">${icon('next')}</button>`)
 }
 
 // ---------- shared bits ----------
@@ -323,7 +340,7 @@ function hotelCard(h, mode) {
   const hideBtn = `<button class="btn js-only" type="button" data-hide-stay="${esc(h.id)}" aria-label="${esc('Hide ' + h.name)}">${icon('hide')}Hide</button>`
   const vibe = (h.vibe || []).filter(has)
   return `<article class="card" id="ht-${esc(h.id)}" data-stay="${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
-${imgTag('hotels:' + h.id, h.name, mode, 'H')}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
+${villaMedia(h, mode)}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
 ${priceBox(h)}

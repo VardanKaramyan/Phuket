@@ -54,8 +54,8 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url)
 
   if (url.origin === self.location.origin) {
-    // live data (the shared votes): always the network, never a saved copy
-    if (url.pathname.startsWith(SCOPE_PATH + 'api/')) return
+    // live data (the shared votes) and Vercel's analytics script: always the network, never a saved copy
+    if (url.pathname.startsWith(SCOPE_PATH + 'api/') || url.pathname.startsWith('/_vercel/')) return
     const isAppPage = req.mode === 'navigate' && (url.pathname === SCOPE_PATH || url.pathname === SCOPE_PATH + 'index.html')
     if (isAppPage) {
       // offline first: answer from the cache at once, refresh it in the background

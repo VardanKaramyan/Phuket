@@ -1928,5 +1928,15 @@
   "credit": "© 继辉",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1496974124558981643?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:tropical-4br-villa-rawai": {
+  "file": "assets/img/hotels-tropical-4br-villa-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Club Miracle",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1777276116063982026?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

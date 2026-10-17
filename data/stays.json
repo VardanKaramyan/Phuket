@@ -167,7 +167,10 @@
      "alt": "Listing image 30"
     }
    ],
-   "listFirst": 1
+   "listFirst": 1,
+   "bedrooms": 4,
+   "beds": 8,
+   "baths": 3.5
   },
   {
    "id": "fantastic-seaview-villa-rawai",
@@ -406,7 +409,10 @@
      "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-43792215/original/5af07feb-e209-4ad8-9367-7482a3abb224.jpeg",
      "alt": "We can arrange a half or full day at the elephant sanctuary for you, to bathe and feed the happy Elephants."
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 5,
+   "baths": 3.5
   },
   {
    "id": "luxury-4br-pool-villa-rawai",
@@ -633,7 +639,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzNjU0NDIxNDY3ODc4NDgyNw%3D%3D/original/f81857fd-a227-49c6-8872-55630454fc4e.jpeg",
      "alt": "Additional photos image 5"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4.5
   },
   {
    "id": "kata-v2-sea-view-villa",
@@ -762,7 +771,10 @@
      "alt": "Additional photos image 4"
     }
    ],
-   "listFirst": 2
+   "listFirst": 2,
+   "bedrooms": 5,
+   "beds": 6,
+   "baths": 6
   },
   {
    "id": "sawansa-34a-patong",
@@ -974,7 +986,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-648811354904336000/original/d943f05e-e8c6-4c84-bdf3-5a76acaefed9.png",
      "alt": "Additional photos image 6"
     }
-   ]
+   ],
+   "bedrooms": 3,
+   "beds": 5,
+   "baths": 4
   },
   {
    "id": "modern-4br-villa-laguna",
@@ -1102,7 +1117,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1516415222322114858/original/4da1e778-8aaf-4faf-afa5-9c16bb0b9304.jpeg",
      "alt": "Listing image 20"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 5
   },
   {
    "id": "spacious-4br-home-bluetree",
@@ -1441,7 +1459,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-948105045915258272/original/18ed605d-fc40-491d-9192-582a35edc10b.jpeg",
      "alt": "Private speedboat to Phang Nga Bay , James island, exploring caves and sea canyoning by 5 starmarine Phuket"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4.5
   },
   {
    "id": "luxpride-2-wallaya-v7",
@@ -1689,7 +1710,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1544037797487869623/original/6ef792eb-9646-4430-a61f-2c98d644eade.jpeg",
      "alt": "Additional photos image 5"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4.5
   },
   {
    "id": "la-belle-pool-villa",
@@ -2020,7 +2044,10 @@
      "url": "https://a0.muscache.com/im/pictures/d72c5958-c02a-44fc-b48e-0b7c450868bb.jpg",
      "alt": "Additional photos image 7"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 5,
+   "baths": 5
   },
   {
    "id": "alisa-pool-villa",
@@ -2238,7 +2265,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1761484044779958433/original/f04d7010-1276-4de0-9e15-748be70bcbf2.jpeg",
      "alt": "Additional photos image 2"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4
   },
   {
    "id": "brand-new-4br-villa-bangtao",
@@ -2389,7 +2419,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1510640953380000157/original/a41b157f-cb7f-431f-972b-78bfcd0981c2.jpeg",
      "alt": "Listing image 26"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 5,
+   "baths": 4.5
   },
   {
    "id": "bangtao-3br-pool-villa-laguna",
@@ -2632,7 +2665,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNzEwMDcxNTc0MjIwNTg1NA%3D%3D/original/9e6b86c5-db15-4c9b-9761-c5c2f34a1228.jpeg",
      "alt": "Additional photos image 10"
     }
-   ]
+   ],
+   "bedrooms": 3,
+   "beds": 4,
+   "baths": 3
   },
   {
    "id": "laguna-park-5br-villa",
@@ -2727,7 +2763,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1528952959320085603/original/83eca955-4080-4624-b09e-36626a4e1737.jpeg",
      "alt": "Listing image 11"
     }
-   ]
+   ],
+   "bedrooms": 5,
+   "beds": 6,
+   "baths": 5
   },
   {
    "id": "lux-laguna-park-5br-rooftop-pool",
@@ -3118,7 +3157,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1582239088245163061/original/b2f02ebc-fe9f-4cde-96a6-34c75388610e.jpeg",
      "alt": "Additional photos image 18"
     }
-   ]
+   ],
+   "bedrooms": 5,
+   "beds": 6,
+   "baths": 5
   },
   {
    "id": "diamond-villa-278",
@@ -3195,7 +3237,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1591208483216514134/original/102afe8c-37c6-40f2-aaa8-562aa860ddcf.jpeg",
      "alt": "Additional photos image 1"
     }
-   ]
+   ],
+   "bedrooms": 5,
+   "beds": 5,
+   "baths": 5
   },
   {
    "id": "chill-beach-bangla-patong",
@@ -3420,7 +3465,9 @@
      "url": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/784783425.jpg?k=e0a2ac99a3c547f391ebb504022e99e7d4d5ee1b82aa1124b413944af9c31b27&o=&hp=1",
      "alt": "a bedroom with a large bed with towels on it at Chill Beach Bangla comfy bed and pool 3 bedrooms 10pax in Patong Beach"
     }
-   ]
+   ],
+   "bedrooms": 3,
+   "beds": 5
   },
   {
    "id": "light-hope-laguna-6br-villa",
@@ -4080,7 +4127,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-40922608/original/75763c9f-1052-4238-8fcc-26f3d9c07fc3.jpeg",
      "alt": "Additional photos image 22"
     }
-   ]
+   ],
+   "bedrooms": 6,
+   "beds": 7,
+   "baths": 5
   },
   {
    "id": "mouana-breeze-mai-khao",
@@ -4436,7 +4486,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM2ODYwMzAxODU3MzUxOTIzNw==/original/7302b929-eff4-4822-96fb-ef2e270cf9ba.jpeg",
      "alt": "Additional photos image 6"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4.5
   },
   {
    "id": "patong-villa-5br-game-room",
@@ -4948,7 +5001,10 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1262796170798445334/original/4cd9fdf0-0f0d-473e-88dc-f4ae14ca3c9b.jpeg",
      "alt": "Game room image 7"
     }
-   ]
+   ],
+   "bedrooms": 5,
+   "beds": 6,
+   "baths": 6
   },
   {
    "id": "bangtao-4br-villa-unit-1",
@@ -5388,7 +5444,169 @@
      "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1496974124558981643/original/63ef9a51-f124-46b2-9487-e9e809a31601.jpeg",
      "alt": "Additional photos image 4"
     }
-   ]
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 4
+  },
+  {
+   "id": "tropical-4br-villa-rawai",
+   "name": "Tropical 4BR Pool Villa, Rawai",
+   "area": "rawai",
+   "tier": "budget",
+   "priceText": "180,000 THB for 10 nights (8-18 Jan, 8 guests), all Airbnb fees included. About 18,000 THB a night, or 2,250 THB per person a night. Electricity is extra. Checked 17 Oct 2026.",
+   "whyStay": "A new two-storey villa with a private pool in a quiet, green street in Rawai, near shops and cafés. Four bedrooms with king beds for the 8 of you, at one of the lower prices on this list.",
+   "description": "Entire villa in Rawai on two floors: 4 bedrooms, each with a king bed, 3 baths, a living and dining room and a full kitchen, all air-conditioned. A private pool with sun loungers and an outdoor dining area in a tropical garden. Run by Club Miracle, a Phuket villa company with more than 15,000 reviews (4.43).",
+   "nearby": "The host says: a quiet neighbourhood close to restaurants, shops and cafés. In a straight line from the pin: Nai Harn Beach 1 km, Bangla Road 12 km, the airport 36 km, Baba Beach Club Natai (Circoloco) 52 km. The pin is approximate: Airbnb sends the address after booking.",
+   "tips": [
+    "Check-in after 3 PM, checkout by 11 AM.",
+    "Free cancellation before 7 Jan 2027; cancel before check-in on 8 Jan for a partial refund.",
+    "Electricity is not in the price: ask the host for the rate per unit.",
+    "A new listing with no reviews yet. No smoke alarm or carbon monoxide alarm is listed."
+   ],
+   "vibe": [
+    "private pool",
+    "garden",
+    "Rawai"
+   ],
+   "beachfront": false,
+   "ratingText": "Airbnb: new, no reviews yet",
+   "website": "https://www.airbnb.com/rooms/1777276116063982026?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "websiteLabel": "Airbnb",
+   "links": [
+    {
+     "label": "Airbnb listing (8 guests, 8-18 Jan)",
+     "url": "https://www.airbnb.com/rooms/1777276116063982026?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+    }
+   ],
+   "sources": [
+    "https://www.airbnb.com/rooms/1777276116063982026?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/38e57fbd-72e7-4507-8a29-b1ced830bc11.png",
+     "source": "Airbnb listing",
+     "license": "Airbnb listing photo",
+     "credit": "© Club Miracle"
+    }
+   ],
+   "verification": "Listing live on Airbnb (Villa in Rawai · New · 4 bedrooms · 4 beds · 3 baths). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (17 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
+   "lat": 7.7878,
+   "lng": 98.3081,
+   "coordSource": "Airbnb listing map (approximate; exact address after booking)",
+   "coordConfidence": "medium",
+   "noDirections": true,
+   "gmapsQuery": "7.7878,98.3081",
+   "airbnbId": "1777276116063982026",
+   "gallery": [
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/eba805f4-e78d-4db1-befd-9dde1232f77f.jpeg",
+     "alt": "Listing image 2"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/1a5ce841-0540-4318-853c-eccc6263cba0.png",
+     "alt": "Listing image 3"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/e32b884d-734d-4c1b-870a-9d98e72deae0.png",
+     "alt": "Listing image 4"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/182d6ec1-0f83-4b19-a1a0-a647089903d0.png",
+     "alt": "Listing image 5"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/2d099fc9-bd3c-4379-98fd-215c8adbfc9c.png",
+     "alt": "Listing image 6"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/4beb7216-3091-48ab-8330-327b0054a43e.png",
+     "alt": "Listing image 7"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/0ff11f01-e973-49ab-8c54-313655e261fb.png",
+     "alt": "Listing image 8"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/412839b8-4ec6-4335-8481-eb065d1dae53.png",
+     "alt": "Listing image 9"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/765bf0e3-cb94-42fd-a5e7-d978fd4f106c.png",
+     "alt": "Listing image 10"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/e73fb268-a903-4ac1-9360-dab86f909369.png",
+     "alt": "Listing image 11"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/86888738-7173-4a22-9555-751aad31bd2e.png",
+     "alt": "Listing image 12"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/dab1a9bd-fdb5-4e08-8780-e521cbdc2b06.png",
+     "alt": "Listing image 13"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/dc737812-5ee9-4bb4-9b88-7e1f33157eff.png",
+     "alt": "Listing image 14"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/1f0ac51a-a25c-4c16-bac2-61265897ef62.png",
+     "alt": "Listing image 15"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/e0d33e31-aea7-44fd-976a-91c46a08b710.png",
+     "alt": "Listing image 16"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/5f5ab763-adaa-4b35-9c79-69ceb75b2137.png",
+     "alt": "Listing image 17"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/6b4f06c1-aa8e-49b6-a831-65cc28393138.png",
+     "alt": "Listing image 18"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/7107dbc8-a9be-4c0f-9011-c803372fdc67.png",
+     "alt": "Listing image 19"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/ea70a854-ecc6-4ae7-a7c0-3cec4276c812.png",
+     "alt": "Listing image 20"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/9a3e7adf-5f8b-45a2-b717-37a46d7a1737.png",
+     "alt": "Listing image 21"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/52b258ab-8845-4eeb-ad4f-1349d0a90e5c.png",
+     "alt": "Listing image 22"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/f9483312-a7de-4d7d-a281-0d1f47329a64.png",
+     "alt": "Listing image 23"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/b5b26b68-a385-4454-9106-a6225a0e0338.png",
+     "alt": "Listing image 24"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/86d6b8d7-5f61-4691-9215-e4cfcbf474fe.jpeg",
+     "alt": "Listing image 25"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/e2c2830f-4c3d-4988-8a64-bf57886f68a6.jpeg",
+     "alt": "Listing image 26"
+    },
+    {
+     "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1777276116063982026/original/c0584c89-916e-4fdc-9f63-603f74c15d2e.jpeg",
+     "alt": "Listing image 27"
+    }
+   ],
+   "bedrooms": 4,
+   "beds": 4,
+   "baths": 3
   }
  ]
 }

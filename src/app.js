@@ -232,6 +232,7 @@
   function show(view, focusEl) {
     if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
     syncBack(view)
+    if (view === 'stay' && current !== 'stay') sortByLikes(true) // coming to the villas: put them in like order now
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
@@ -288,7 +289,7 @@
       // approximate, so no Google Maps button
       const img = p.card && map && map.getSize().y >= 440 && document.querySelector('#' + p.card + ' .media img')
       const thumb = img ? '<img class="pop-thumb" src="' + esc(img.getAttribute('src')) + '" alt="">' : ''
-      const price = p.price ? '<p class="pop-price"><b>' + esc(p.price) + '</b> ' + esc(p.priceNote || '') + (p.priceAmd ? '<span>' + esc(p.priceAmd) + '</span>' : '') + '</p>' : ''
+      const price = p.price ? '<p class="pop-price"><b>' + esc(p.price) + '</b> ' + esc(p.priceNote || '') + (p.priceAmd ? '<span>' + esc(p.priceAmd) + '</span>' : '') + (p.pricePp ? '<small>' + esc(p.pricePp) + '</small>' : '') + '</p>' : ''
       const web = p.web ? '<a class="btn" target="_blank" rel="noopener" href="' + esc(p.web) + '">' + esc(p.webLabel) + '</a>' : ''
       return thumb + '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') + price + '<div class="actions">' + card + web + '</div>'
     }
@@ -781,6 +782,7 @@
       })
       $('.voters', bar).textContent = [it.like.length ? 'Like: ' + it.like.join(', ') : '', it.skip.length ? 'Skip: ' + it.skip.join(', ') : ''].filter(Boolean).join(' · ')
     })
+    sortByLikes()
     // Group picks: the villas with likes, most first (fewer skips breaks a tie)
     const box = $('#group-picks-box'), list = $('#group-picks')
     if (!box || !list) return
@@ -790,6 +792,19 @@
     box.hidden = !rows.length
     list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
       (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
+  }
+  // the villa list follows the votes: most likes first, then fewer skips, then the guide's own order (listFirst
+  // first). It is only re-sorted while you are not reading it, so cards do not move under your finger; otherwise it
+  // waits until you next open the villas
+  const stayList = $('[data-list="stay"]')
+  const stayCards = stayList ? $$(':scope > .card', stayList) : [] // in the guide's order
+  function sortByLikes(now) {
+    if (!stayList || !votes) return
+    const view = document.getElementById('stay')
+    if (!now && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
+    const it = (c) => votes['ht:' + c.dataset.stay] || { like: [], skip: [] }
+    const order = stayCards.slice().sort((a, b) => it(b).like.length - it(a).like.length || it(a).skip.length - it(b).skip.length || stayCards.indexOf(a) - stayCards.indexOf(b))
+    if (order.some((c, i) => stayList.children[i] !== c)) order.forEach((c) => stayList.appendChild(c))
   }
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return

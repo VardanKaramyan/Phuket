@@ -346,7 +346,7 @@ function villaMap(h) {
   if (lowConf(h) || !Number.isFinite(+h.lat)) return ''
   const approx = /approximate/i.test(h.coordSource || '') ? '<p class="note">The pin is approximate: Airbnb sends the address after booking.</p>' : ''
   return `<details class="more mapacc" data-mini-map data-lat="${+h.lat}" data-lng="${+h.lng}"><summary>${icon('areas')}Show on map</summary>` +
-    `<div class="mini-map js-only" role="img" aria-label="${esc('Map of where ' + h.name + ' is')}"></div>${approx}` +
+    `<div class="mini-map js-only" role="img" aria-label="${esc('Map of where ' + h.name + ' is')}"></div><p class="map-credit js-only"></p>${approx}` +
     `<div class="actions"><button class="btn primary js-only" type="button" data-on-map="hotel:${esc(h.id)}">${icon('areas')}Open the big map</button>` +
     `<a class="btn" href="${gmaps(h.gmapsQuery || h.name, h.placeId)}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a></div></details>`
 }
@@ -618,6 +618,7 @@ function areasView(mode, opts) {
 <button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>
 </div>
 </div>
+<p class="map-credit js-only" id="map-credit"></p>
 <div class="staticmap">${staticMapSvg()}</div>
 ${(extra.areasRecommendation || []).length || has(areasDoc.recommendation) ? `<div class="reco"><span class="eyebrow">For you</span><h3>Best bases for this trip</h3>${(extra.areasRecommendation || [areasDoc.recommendation]).map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}
 ${kmlNote}

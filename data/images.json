@@ -1888,5 +1888,35 @@
   "credit": "© Chill Beach Bangla",
   "license": "Booking.com listing photo",
   "source": "https://www.booking.com/hotel/th/chill-beach-bangla-comfy-bed-and-pool-with-3-bedrooms.html?checkin=2027-01-08&checkout=2027-01-18&group_adults=8&group_children=0&no_rooms=1"
+ },
+ "hotels:light-hope-laguna-6br-villa": {
+  "file": "assets/img/hotels-light-hope-laguna-6br-villa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© 继辉",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/40922608?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:mouana-breeze-mai-khao": {
+  "file": "assets/img/hotels-mouana-breeze-mai-khao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 958,
+  "credit": "© Lijing",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1401201577312144416?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:patong-villa-5br-game-room": {
+  "file": "assets/img/hotels-patong-villa-5br-game-room.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Mike",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1262796170798445334?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

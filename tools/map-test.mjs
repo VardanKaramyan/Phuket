@@ -130,6 +130,36 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.close()
 }
 
+// 4. villas: every villa has a pin, shown by default; popup → card → Back to map → the same popup
+{
+  const { p, errors } = await open()
+  const pins = await p.evaluate(() => {
+    const villas = document.querySelectorAll('.card[id^="ht-"]').length
+    const onMap = Object.values(__map._layers).filter((l) => l instanceof L.CircleMarker && l.getPopup && /See villa/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : '')).length
+    return { villas, onMap, chip: document.querySelector('.layerbar [data-layer="hotel"]').getAttribute('aria-pressed') }
+  })
+  check('every villa is on the map by default', pins.villas > 0 && pins.onMap === pins.villas && pins.chip === 'true', JSON.stringify(pins))
+  const pop = await p.evaluate(async () => {
+    const m = Object.values(__map._layers).find((l) => l instanceof L.CircleMarker && l.getPopup && /mouana/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : ''))
+    m.openPopup(); await new Promise((r) => setTimeout(r, 500))
+    const el = document.querySelector('.leaflet-popup')
+    return { price: el.querySelector('.pop-price b')?.textContent, amd: el.querySelector('.pop-price span')?.textContent, see: el.querySelector('[data-from-map]')?.textContent, web: [...el.querySelectorAll('.btn')].map((x) => x.textContent).join('/') }
+  })
+  check('villa popup: bold total, dram, See villa, Airbnb', /^[\d,]+ THB$/.test(pop.price || '') && /AMD/.test(pop.amd || '') && pop.see === 'See villa' && /Airbnb/.test(pop.web), JSON.stringify(pop))
+  await p.evaluate(() => document.querySelector('.leaflet-popup [data-from-map]').click()); await sleep(800)
+  const atCard = await p.evaluate(() => ({ hash: location.hash, back: !document.getElementById('back-to-map').hidden, top: Math.round(document.getElementById('ht-mouana-breeze-mai-khao').getBoundingClientRect().top) }))
+  check('See villa opens the card, with Back to map', atCard.hash === '#ht-mouana-breeze-mai-khao' && atCard.back && atCard.top < 200, JSON.stringify(atCard))
+  await p.click('#back-to-map'); await sleep(1500)
+  const back = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent, btn: !document.getElementById('back-to-map').hidden }))
+  check('Back to map reopens the same villa', back.hash === '#areas' && /Mouana/.test(back.popup || '') && !back.btn, JSON.stringify(back))
+  await p.evaluate(() => { __map.closePopup(); location.hash = 'stay' }); await sleep(500)
+  await p.evaluate(() => document.querySelector('#ht-patong-villa-5br-game-room .price-box [data-on-map]').click()); await sleep(1500)
+  const fromCard = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent }))
+  check('On map in the price box opens the villa on the map', fromCard.hash === '#areas' && /Patong Villa/.test(fromCard.popup || ''), JSON.stringify(fromCard))
+  if (errors.length) check('no page errors (villas)', false, errors.join(' | '))
+  await p.close()
+}
+
 await b.close()
 const failed = results.filter((x) => !x).length
 console.log(failed ? `MAP TEST FAILED: ${failed} checks` : 'MAP TEST PASSED')

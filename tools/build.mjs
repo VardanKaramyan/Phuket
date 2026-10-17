@@ -34,7 +34,7 @@ const roads = readJSON('data/geo/roads.geojson')
 const extra = readJSON('data/extra.json', {}) || {} // hand-written copy: intros, tips
 // dram (AMD) amounts next to every baht price, and AMD first in the converter (data/extra.json → amdRate)
 const amdRate = extra.amdRate && extra.amdRate.perThb > 0 ? extra.amdRate : null
-const amd = amdRate ? makeAmd(amdRate.perThb) : { text: (s) => s, html: (s) => s }
+const amd = amdRate ? makeAmd(amdRate.perThb) : { text: (s) => s, html: (s) => s, amount: () => '' }
 const midRates = () => (amdRate ? [{ currency: 'AMD', thbPerUnit: 1 / amdRate.perThb, date: amdRate.date }] : [])
   .concat((money.midMarket || []).filter((m) => m && m.thbPerUnit && m.currency !== 'AMD'))
 const appsDoc = readJSON('data/apps.json', { items: [] }) || { items: [] } // apps and services to install
@@ -95,6 +95,9 @@ const ICON = {
   download: '<path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/>',
   expand: '<path d="M14 4h6v6M20 4l-6.5 6.5M10 20H4v-6M4 20l6.5-6.5"/>',
   shrink: '<path d="M19.5 4.5L14 10M14 5.5V10h4.5M4.5 19.5L10 14M10 18.5V14H5.5"/>',
+  like: '<path d="M7.5 10.5v9h-3v-9zM7.5 10.5l3.6-6.8c1.4 0 2.4 1.1 2.1 2.5l-.7 3.3h5.2a2 2 0 0 1 2 2.3l-1.1 6.3a2 2 0 0 1-2 1.7H7.5"/>',
+  skip: '<path d="M7.5 13.5v-9h-3v9zM7.5 13.5l3.6 6.8c1.4 0 2.4-1.1 2.1-2.5l-.7-3.3h5.2a2 2 0 0 0 2-2.3l-1.1-6.3a2 2 0 0 0-2-1.7H7.5"/>',
+  back: '<path d="M10 6l-6 6 6 6M4.5 12H20"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
 
@@ -113,6 +116,8 @@ function imgTag(key, alt, mode, placeholder = '') {
 // noDirections hides it (tours from different piers); a low-confidence pin gets neither Directions nor a map dot
 const lowConf = (it) => it.coordConfidence === 'low'
 const dirOf = (it) => (it.noDirections || lowConf(it) ? null : Number.isFinite(it.dirLat) ? { lat: it.dirLat, lng: it.dirLng, label: it.dirLabel || 'Directions' } : Number.isFinite(it.lat) ? { lat: it.lat, lng: it.lng, label: 'Directions' } : null)
+// Like / Skip for the group: src/app.js loads the votes from /api/votes (website only) and shows the bar once they load
+const voteBar = (key, name) => `<div class="votes js-only" data-vote-item="${esc(key)}" data-vote-name="${esc(name)}" hidden><div class="vote-btns"><button class="btn vote" type="button" data-vote-btn="like" aria-pressed="false">${icon('like')}Like <b>0</b></button><button class="btn vote" type="button" data-vote-btn="skip" aria-pressed="false">${icon('skip')}Skip <b>0</b></button></div><p class="voters"></p></div>`
 function actionRow({ item, q, mapKey, fav, extraBtns = '' }) {
   const parts = []
   const query = q || item.gmapsQuery
@@ -193,6 +198,7 @@ ${dateChips}
 ${tags.length ? `<div class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
 ${facts([['When', recurring ? e.recurrence || e.timeText : e.timeText], ['Where', lowConf(e) ? 'Exact place not public yet. Check the organiser before you go.' : ''], ['Tickets', e.priceText]])}
 ${moreBlock('Line-up, tips & links', e.tips, e.links, [['Lineup', lineup.length ? lineup.join(', ') : ''], ['Type', e.type]])}
+${voteBar('ev:' + e.id, e.name)}
 ${actionRow({ item: e, mapKey: 'event:' + e.id, fav: 'ev:' + e.id })}
 </div></article>`
 }
@@ -248,6 +254,7 @@ ${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class
 <p class="desc">${esc(p.description)}</p>
 ${facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText]])}
 ${moreBlock('Opening, getting there & tips', p.tips, p.links, [['Open', [p.openText, days].filter(has).join(' · ')], ['Getting there', p.gettingThere]])}
+${voteBar('pl:' + p.id, p.name)}
 ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
 </div></article>`
 }
@@ -290,6 +297,24 @@ const zoneOf = (h) => {
 }
 const ZONES = [['west', 'Kamala & beach-club coast'], ['natai', 'Natai'], ['patong', 'Patong'], ['south', 'Kata · Rawai'], ['town', 'Old Town'], ['phangan', 'Koh Phangan'], ['airport', 'Near the airport']]
 const hotelOrder = { luxury: 0, boutique: 1, 'mid-range': 2, budget: 3, hostel: 4 }
+const STAY_GUESTS = 8
+// the trip total, read from the start of priceText ("241,500 THB for 10 nights (8-18 Jan, 8 guests), ..."), so the big
+// number on the card and the price notes can never disagree; a villa with no rooms on the dates has none
+function priceOf(h) {
+  if (h.noRoomsOnTrip) return null
+  const m = String(h.priceText || '').match(/^([\d,]+) THB for (\d+) nights/)
+  if (!m) throw new Error(`data/hotels.json: ${h.id}: priceText must start with "<total> THB for <nights> nights", not "${String(h.priceText).slice(0, 60)}"`)
+  const total = Number(m[1].replace(/,/g, '')), nights = Number(m[2])
+  return { total, nights, perPerson: Math.round(total / nights / STAY_GUESTS / 10) * 10 }
+}
+const thb = (n) => n.toLocaleString('en-US') + ' THB'
+function priceBox(h) {
+  const pr = priceOf(h)
+  const onMap = lowConf(h) ? '' : `<button class="btn js-only" type="button" data-on-map="hotel:${esc(h.id)}">${icon('areas')}On map</button>`
+  if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div>${onMap}</div>`
+  // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs
+  return `<div class="price-box" data-noamd><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}<span class="price-pp">${thb(pr.perPerson)} per person a night${amdRate ? ' · ' + amd.amount(pr.perPerson) : ''}</span></div>${onMap}</div>`
+}
 const hotelsSorted = hotels.slice().sort((a, b) => ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
 function hotelCard(h, mode) {
   const tierKey = h.tier === 'hostel' ? 'budget hostel' : h.tier
@@ -301,10 +326,12 @@ function hotelCard(h, mode) {
 ${imgTag('hotels:' + h.id, h.name, mode, 'H')}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
+${priceBox(h)}
 <p class="desc">${esc(h.whyStay)}</p>
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
 ${facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
+${voteBar('ht:' + h.id, h.name)}
 ${actionRow({ item: h, mapKey: 'hotel:' + h.id, fav: 'ht:' + h.id, extraBtns: extraBtns + hideBtn })}
 </div></article>`
 }
@@ -522,7 +549,7 @@ function areasView(mode, opts) {
 <button class="chip" type="button" data-layer="areas" aria-pressed="true"><i class="swatch-outline"></i>Areas</button>
 <button class="chip" type="button" data-layer="event" aria-pressed="true"><i style="background:var(--pulse)"></i>Music</button>
 <button class="chip" type="button" data-layer="place gem" aria-pressed="true"><i style="background:var(--sea)"></i><i style="background:var(--leaf)"></i>Places</button>
-<button class="chip" type="button" data-layer="hotel" aria-pressed="false"><i style="background:var(--violet)"></i>Hotels</button>
+<button class="chip" type="button" data-layer="hotel" aria-pressed="true"><i style="background:var(--violet)"></i>Villas</button>
 <button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>
 </div>
 </div>
@@ -550,6 +577,9 @@ function stayView(mode) {
 <div class="row2"><label for="mh-dates">Dates<input id="mh-dates" name="dates" placeholder="8–11 Jan"></label><label for="mh-notes">Notes<input id="mh-notes" name="notes" placeholder="Booking no., check-in time"></label></div>
 <button class="btn primary" type="submit">${icon('plus')}Add hotel</button>
 </form></div>
+<div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
+<p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote.</p>
+<ol class="picks" id="group-picks"></ol></div>
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <div class="toolbar" data-toolbar="stay">
 ${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed, ['saved', 'Saved']], 'Filter villas by price')}
@@ -651,6 +681,13 @@ function chrome(body) {
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark">${icon('theme')}</button>
 </div></header>
 <main id="main">${body}</main>
+<button class="back-to-map js-only" id="back-to-map" type="button" hidden>${icon('back')}Back to map</button>
+<dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
+<h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
+<label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
+<p class="note">Everyone with the guide sees the names. One vote per name.</p>
+<div class="actions"><button class="btn primary" type="submit" data-vote-save>Save vote</button><button class="btn" type="button" data-vote-cancel>Cancel</button></div>
+</form></dialog>
 <nav class="tabbar" aria-label="Sections"><ul>
 ${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places', 'places', 'Places')}${tab('areas', 'areas', 'Areas')}${tab('stay', 'stay', 'Stay')}${tab('money', 'money', 'Money')}
 </ul></nav>`
@@ -696,13 +733,15 @@ function clientData(build) {
   const popVenue = (v) => String(v || '').split(',')[0].trim()
   events.forEach((e) => { const ds = (e.dates || []).filter(inTrip); add('event', 'event', e, e.id, e.name, [popVenue(e.venue), ds.length ? popDates(ds) : popPattern(e.recurrence)].filter(has).join(' · '), 'ev-' + e.id) })
   places.forEach((p) => add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], durText(p)].filter(has).join(' · '), 'pl-' + p.id))
-  // the headline price only; the card has the full price notes
-  const popPrice = (h) => {
-    if (h.noRoomsOnTrip) return 'no rooms on sale for your dates'
-    const m = String(h.priceText || '').match(/(?:from |about )?[\d,]+(?:\s?[-–]\s?[\d,]+)? THB(?: \/ night| for \d+ nights)?/i)
-    return m ? m[0].replace(/^(From|About) /, (w) => w.toLowerCase()) : popPattern(h.priceText)
-  }
-  hotels.forEach((h) => add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], popPrice(h)].filter(has).join(' · '), 'ht-' + h.id))
+  // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
+  hotels.forEach((h) => {
+    add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
+    const pt = pts.at(-1), pr = priceOf(h)
+    if (pt && pt.id === h.id && pt.t === 'hotel') {
+      if (pr) Object.assign(pt, { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: amdRate ? amd.amount(pr.total) : '' })
+      if (isUrl(h.website)) Object.assign(pt, { web: h.website, webLabel: h.websiteLabel || 'Website' })
+    }
+  })
   brands.forEach((b) => (b.branches || []).forEach((x, i) => add('money', 'money', x, b.id + '-' + i, b.name + ' · ' + x.name, x.hoursText || '', 'mx-' + b.id)))
   const mid = Object.fromEntries(midRates().map((m) => [m.currency, m.thbPerUnit]))
   const best = brands[0]
@@ -719,6 +758,8 @@ function clientData(build) {
       offline: sat && build !== 'artifact' ? { url: build === 'single' ? '' : 'sat/{z}/{x}/{y}.webp', inline: build === 'single', ranges: sat.ranges, minZoom: sat.minZoom, maxZoom: sat.maxZoom, attr: sat.attribution } : null,
     },
     satCount: build === 'standalone' ? satFiles.length : 0,
+    // shared votes: only the website has the /api/votes server next to it
+    votes: build === 'standalone' ? 'api/votes' : '',
     rates: Object.keys(mid).length ? { mid, best: bestRates, bestName: best ? best.name : '', date: (money.midMarket[0] || {}).date || money.asOf || '', source: (money.midMarket[0] || {}).source ? 'mid-market' : 'mid-market' } : null,
   }
 }

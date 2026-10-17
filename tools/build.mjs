@@ -332,7 +332,8 @@ function priceBox(h) {
   // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs
   return `<div class="price-box" data-noamd><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}<span class="price-pp">${thb(pr.perPerson)} per person a night${amdRate ? ' · ' + amd.amount(pr.perPerson) : ''}</span></div>${onMap}</div>`
 }
-const hotelsSorted = hotels.slice().sort((a, b) => ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
+// listFirst (data/stays.json): the villas the user put at the top, in that order; then by area, rooms on sale, price
+const hotelsSorted = hotels.slice().sort((a, b) => (a.listFirst ?? 99) - (b.listFirst ?? 99) || ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
 function hotelCard(h, mode) {
   const tierKey = h.tier === 'hostel' ? 'budget hostel' : h.tier
   const extraBtns = isUrl(h.website) ? `<a class="btn" href="${esc(h.website)}" target="_blank" rel="noopener">${icon('globe')}${esc(h.websiteLabel || 'Website')}</a>` : ''

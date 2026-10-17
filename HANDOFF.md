@@ -235,7 +235,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`,
 **Data fields worth knowing:**
 - Events: `kind` (dated/recurring/venue), `dates` (ISO; only days that matter), `window` (in/before/after), `status` (`unconfirmed` shows as "Maybe" / "not confirmed"), `undergroundScore`, `pick`, `agendaNote`, `tile`, `placeId`, `extraMaps`.
 - Places: `tier`, `durationLabel`, `days`, `dirLat`/`dirLng`/`dirLabel`, `noDirections`.
-- Hotels: `lastNights`, `noRoomsOnTrip`, `websiteLabel` (the site button text, e.g. Airbnb). Villas with approximate Airbnb pins use `coordConfidence: medium` + `noDirections`, so they stay on the map without a Directions button.
+- Hotels: `lastNights`, `noRoomsOnTrip`, `websiteLabel` (the site button text, e.g. Airbnb), `listFirst` (1, 2, …: the villas the user wants at the top of the list, in that order; 17 Oct 2026: Luxurious SeaView Rawai, then Kata V2), `gallery` (from `npm run gallery`). Villas with approximate Airbnb pins use `coordConfidence: medium` + `noDirections`, so they stay on the map without a Directions button.
 - Low `coordConfidence` pins get no map dot and no Directions button.
 
 ## 8. Publishing the artifact

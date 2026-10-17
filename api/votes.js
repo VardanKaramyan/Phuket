@@ -10,6 +10,7 @@ const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t }
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
+const MAX_HIDDEN = 200 // far more than the villas on the list
 
 // Vercel names the variables after the prefix chosen when the database was connected (KV_ by default)
 export function storage() {
@@ -73,8 +74,10 @@ export async function POST(request) {
   if (body && 'hide' in body) {
     if (!item.startsWith('ht:')) return reply(400, { error: 'Only villas can be hidden' })
     try {
-      if (body.hide) await redis(db, ['HSET', HIDDEN, item, JSON.stringify({ n: name, t: Date.now() })])
-      else await redis(db, ['HDEL', HIDDEN, item])
+      if (body.hide) {
+        if ((await redis(db, ['HLEN', HIDDEN])) >= MAX_HIDDEN) return reply(507, { error: 'Too many hidden villas saved' })
+        await redis(db, ['HSET', HIDDEN, item, JSON.stringify({ n: name, t: Date.now() })])
+      } else await redis(db, ['HDEL', HIDDEN, item])
       return reply(200, await everything(db))
     } catch (e) { return reply(502, { error: e.message }) }
   }

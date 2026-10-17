@@ -155,5 +155,10 @@
    "text": "Check your passport: valid at least 6 months after arrival, with a free page.",
    "href": "#info-entry"
   }
- ]
+ ],
+ "amdRate": {
+  "perThb": 10.8,
+  "date": "17 Oct 2026",
+  "source": "mid-market: open.er-api.com 10.77 AMD per THB (17 Oct 2026, 00:02 UTC), FloatRates 10.82 (16 Oct 2026, 20:55 UTC)"
+ }
 }

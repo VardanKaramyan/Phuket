@@ -110,6 +110,8 @@ html:not(.js) main:not(:has(:target)) > .view:not(#home) { display: none; }
 .block-title small { font: 500 13px/1.2 var(--font-body); color: var(--ink-2); }
 .stack { display: grid; gap: 12px; }
 .note { font-size: 13.5px; color: var(--ink-2); }
+/* dram amounts next to baht prices: quieter than the price, in any text colour (light cards and dark flyers) */
+.amd { opacity: 0.72; white-space: nowrap; }
 
 /* ---------- chips & search ---------- */
 .toolbar { display: grid; gap: 8px; }

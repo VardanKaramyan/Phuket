@@ -156,6 +156,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - An 18-night plan grouped by phase, phase and place filters, favourites, "My hotels", Hide / Show again on the villa cards, a converter.
   - Google place IDs on 142 links; Directions go to piers or car parks where the pin is in the sea or uphill.
   - Map popups use short texts so they fit a 320×640 phone.
+  - Dram prices (17 Oct 2026): every baht price shows its Armenian dram amount, `500 THB (≈5,400 AMD)`, on the page (424), in the map popups and in the KML; AMD is first in the converter (it opens at 10,000 AMD). Section 10 has the rules.
   - Map (17 Oct 2026): wheel and trackpad zoom glide instead of jumping in 0.25 steps; a full-screen button (top of the map buttons; Esc or the same button exits); Satellite works offline with the EOxCloudless tiles (section 10).
 - **Outputs:**
   - `dist/`: the offline web app (service worker), set up on Vercel on 17 Oct 2026 (section 9, item 2).
@@ -167,6 +168,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - `offline-test`: both host styles, including Satellite with the server stopped.
   - `popup-test`: 27/27.
   - `map-test`: 9/9 on `dist/index.html` and on the single file.
+  - `amd-test`: 30 rule checks, and no baht price without a dram amount on all three builds.
   - Screenshots in light and dark at 390 and 320 px: no console errors, no sideways scroll, tab bar not covered.
 
 ---
@@ -187,10 +189,11 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 | 9 | `node tools/offline-test.mjs` | Serves `dist/`, installs the service worker, **stops the server**, reloads, checks everything still works (plain host and a host that redirects `/index.html`). |
 | 10 | `node tools/popup-test.mjs` | Taps "On map" on 9 cards in a row at 390, 360 and 320 px; every popup button must be tappable. |
 | 10b | `node tools/map-test.mjs [html]` | Trackpad-style wheel zoom must glide (15+ small zoom changes, no jump over 0.3); full screen must fill the screen, keep popups tappable, and exit with the button and Esc; with Esri blocked, Satellite must show offline tiles over the whole map at zoom 11, 16 and in Krabi at 13. |
+| 10c | `node tools/amd-test.mjs [html]` | The dram rules in `tools/amd.mjs` on 30 sample texts, then the built page: every whole-baht price must have its dram amount, and the popups and the converter must have them too. |
 | 11 | `node tools/qa-shots.mjs [html] [outdir]` | Screenshots: pass at 390 light / 320 dark, every agenda day, phase-filter counts, every Info section, the Apps view, chosen cards (`CARDS=id,id`). The sticky bars are made static so they do not cover content; the Apps view is saved in slices (`apps-1.png`, …). Exits 1 if it found problems. |
 | 12 | `node tools/shoot.mjs <html> <outdir> light\|dark [views…]` | Full-view phone screenshots (`WIDTH=320` for small phones; default views include `apps`, skipped while it is not built); reports console errors, overflow, covered tab bar, and exits 1 if it found any. |
 
-npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`, `npm run check`, `npm test` (check, offline, popup and map tests), `npm run test:map`, `npm run qa`, `npm run all`, `npm run serve`. `GUIDE_DATA=<dir> node tools/build.mjs` builds from another data folder (layout tests with sample data; it still writes to `dist/` and `artifact/`).
+npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`, `npm run check`, `npm test` (check, dram, offline, popup and map tests), `npm run test:map`, `npm run test:amd`, `npm run qa`, `npm run all`, `npm run serve`. `GUIDE_DATA=<dir> node tools/build.mjs` builds from another data folder (layout tests with sample data; it still writes to `dist/` and `artifact/`).
 
 ## 7. Files
 
@@ -206,13 +209,14 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`,
 | `tools/merge-late-jan.mjs` | The 19-26 Jan research merge: `TAKE` (fields a re-checked copy replaces), `AFTER` (keeps facts the researchers lacked), `SKIP` (left out on purpose), `NEW_FIX`, `DEAD_LINKS`. |
 | `tools/import.mjs`, `tools/import-apps.mjs` | Research result → data. |
 | `tools/apps-result-from-journal.py` | Rebuilds `research/result-apps.json` from the apps workflow's `journal.jsonl` (section 1, step 0). |
-| `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/map-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
+| `tools/amd.mjs` | Adds the dram amount after each baht price: `text()` for plain text (popups, KML), `html()` for the page text (tags, attributes, scripts and select options stay as they are). |
+| `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/map-test.mjs`, `tools/amd-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
 | `tools/images.mjs`, `tools/collect-photos.py`, `tools/photo-items-from-raw.mjs`, `tools/geo.mjs` | Photos and map geometry. `photo-items-from-raw.mjs` overwrites `data/photo-items.json` (142 items instead of 144; `npm run data` writes it back). |
 | `tools/journal-extract.py`, `tools/transcript-digest.py`, `tools/watch-workflows.py` | Helpers for Claude Code workflow journals (only useful on the machine that ran the workflows). |
 | `tools/workflows/` | Workflow scripts. Run one by asking Claude Code to call the Workflow tool with `{ scriptPath: "<absolute path>", args: {…} }`.<br>• `research.js`: the original 8-18 Jan research. `args.root` = project folder; `args.resume` / `args.precomputed` resume a killed run.<br>• `late-january.js`: the 19-26 Jan research. `args.known` = ids already in the guide.<br>• `apps.js`: the apps research (no args).<br>• `photos.js`: the photo hunt. `args.outDir` and `args.itemsFile` as absolute paths, `args.batches` = arrays of item keys.<br>• `qa.js` (`args.project`, `args.shots` = a folder of `light-/dark-<view>.png`) and `qa-2.js` (`args.project`): review rounds.<br>• `handoff-check.js` (`args.project`, `args.tmp`): the fresh-machine test of this handoff.<br>• `handoff-recheck.js` (`args.project`, `args.tmp`, `args.first` = an earlier check's JSON): the second pass that confirms its fixes. |
 | `data/events.json`, `places.json`, `areas.json`, `hotels.json`, `exchanges.json`, `essentials.json` | Content (generated by import + curate). |
 | `data/stays.json` | The villa shortlist, hand-written (16 Oct 2026: price for 8 guests on 8-18 Jan, copy, approximate Airbnb pins). `curate.mjs` replaces `hotels.json` with it after the late-January merge. Photos: `research/photos/w8/stays.json` → `npm run photos`. |
-| `data/extra.json` | Hand-written copy, edited directly: intros, `eventsCallout.groups` (18-night plan per phase), `eventsFooter`, `dayTips` (per date), `areasRecommendation`, `beforeYouFly`, `imageNotes` (stand-in photo labels), `dropImages`, `researchedOn` (the footer date: update it after re-checks), and `offlineUrl` (not in the file yet: add `"offlineUrl": "https://…"` once hosted). |
+| `data/extra.json` | Hand-written copy, edited directly: intros, `eventsCallout.groups` (18-night plan per phase), `eventsFooter`, `dayTips` (per date), `areasRecommendation`, `beforeYouFly`, `imageNotes` (stand-in photo labels), `dropImages`, `researchedOn` (the footer date: update it after re-checks), `amdRate` (AMD per baht for the dram prices, with its date and source: update it if the rate moves), and `offlineUrl` (not in the file yet: add `"offlineUrl": "https://…"` once hosted). |
 | `data/apps.json` | Apps page content (from `import-apps.mjs`). |
 | `data/images.json`, `data/image-picks.json` | Processed photos and the chosen source photos (paths relative to the project). |
 | `data/geo/` | OSM extracts and the built map layers. |
@@ -284,6 +288,7 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
   - The single file is the backup kept on the phone. iOS Files previews show it without JavaScript, which is why every section renders as static HTML and routes with CSS `:target`.
 - **Map tiles:** CARTO now returns "API KEY REQUIRED" tiles, and OSM's own tiles label Phuket in Thai, so streets and satellite come from Esri. Offline, the map falls back to the bundled vector land, roads and area outlines.
 - **Offline satellite (17 Oct 2026):** Esri's World Imagery page says the layer is not meant for exporting tiles offline (only ArcGIS apps with an org account), so its tiles are not downloaded in advance. The bundled layer is EOxCloudless 2025 (Sentinel-2): CC BY-NC-SA 4.0, free for non-commercial use with the credit shown on the map; 10 m per pixel, so sharp to zoom 14 and blurry past 15. 2025 was picked over 2023 (haze over the sea). Coverage: the whole trip region at zoom 8-10, the Andaman day trips and Koh Phangan / Samui at 11-12, Phuket and the bay islands at 13, Phuket island and Koh Phangan at 14 (769 tiles, 3.6 MB). It sits under the Esri layer, so it also shows while Esri tiles load. A tile missing at one zoom is drawn from the nearest lower zoom.
+- **Dram prices (17 Oct 2026):** the user asked for AMD next to every price. The build converts the finished page text, so every field with a price gets it (fees, tickets, villa prices, Info, Apps, Money, day tips). Rules: a whole number (or range `300-800`, `250 to 350`, list `990 / 1,400`, `450-baht`, `฿500`, `1 million baht`) right before THB or baht; rounded to 10 below 1,000 AMD, 100 below 100,000, then 1,000 and 10,000. Decimals are skipped (all of them are exchange rates). Inside brackets the dram amount follows a comma, so there are no brackets in brackets. Not covered: a number that relies on a currency named earlier, such as "Patong to Kata 250-500" after "600-950 baht". The rate is fixed at build time (10.8, the mid-market rate from two sources on 17 Oct 2026); only the converter refreshes it online.
 - **Wheel zoom (17 Oct 2026):** the user found the map "slow" and "clicky". A benchmark (phone size, CPU slowed 4×) showed touch drag and pinch already at 60 fps; the cause was Leaflet's wheel zoom (40 ms bursts, rounded up to a 0.25 step, each animated: about 2 s of trackpad scrolling for 2 zoom levels). `smoothWheel` moves the map every frame like pinch zoom: 120 px of scrolling per zoom level, ctrl + wheel (a trackpad pinch) at a factor of e per 100 px.
 - **Areas** follow official subdistricts (tambon) clipped to the coastline:
   - Karon, Choeng Thale, Sakhu, Rawai, Wichit and Pa Khlok are split with seed points.

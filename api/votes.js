@@ -137,14 +137,18 @@ export async function POST(request) {
     if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
     const changes = Object.entries(body.pins)
     if (!changes.length || changes.length > MAX_ORDER || !changes.every(([id, at]) => VILLA.test(id) && (at === null || (Number.isInteger(at) && at >= 0 && at < MAX_ORDER)))) return reply(400, { error: 'Pins are villa ids with a position (0, 1, …) or null' })
+    // one villa per place, in the request too, so the saved pins can never hold more than MAX_ORDER villas
+    const places = changes.map(([, at]) => at).filter((at) => at !== null)
+    if (new Set(places).size !== places.length) return reply(400, { error: 'Two villas cannot have the same place' })
     try {
       const map = { ...((await meta(db)).pins?.map || {}) }
       for (const [id, at] of changes) {
         delete map[id]
         if (at === null) continue
-        for (const [other, p] of Object.entries(map)) if (p === at && !(other in body.pins)) delete map[other]
+        for (const [other, p] of Object.entries(map)) if (p === at) delete map[other]
         map[id] = at
       }
+      if (Object.keys(map).length > MAX_ORDER) return reply(400, { error: 'Too many pinned villas' })
       await redis(db, ['HSET', META, 'pins', JSON.stringify({ map, n: who, t: Date.now() })])
       return reply(200, await everything(db))
     } catch (e) { return reply(502, { error: e.message }) }

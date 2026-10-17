@@ -122,10 +122,15 @@ const api = await import(mod + '?store')
   check('pins are saved for everyone', r.status === 200 && r.json.pins?.map?.['alisa-pool-villa'] === 0 && r.json.pins.map['diamond-villa-278'] === 3 && r.json.pins.by === 'Vardan', JSON.stringify(r.json.pins))
   r = await call(api, 'POST', { name: 'Ani', pins: { 'la-belle-pool-villa': 3, 'alisa-pool-villa': null } })
   check('a new pin takes the place, null unpins', r.json.pins.map['la-belle-pool-villa'] === 3 && !('diamond-villa-278' in r.json.pins.map) && !('alisa-pool-villa' in r.json.pins.map), JSON.stringify(r.json.pins.map))
-  for (const [body, why] of [[{ name: 'V', pins: { 'Bad Id!': 1 } }, 'a pin with a bad id'], [{ name: 'V', pins: { a: -1 } }, 'a negative position'], [{ name: 'V', pins: { a: 1.5 } }, 'a position that is not a whole number'], [{ name: '', pins: { a: 1 } }, 'pins with no name']]) {
+  for (const [body, why] of [[{ name: 'V', pins: { a: 5, b: 5 } }, 'two villas in one place'], [{ name: 'V', pins: { 'Bad Id!': 1 } }, 'a pin with a bad id'], [{ name: 'V', pins: { a: -1 } }, 'a negative position'], [{ name: 'V', pins: { a: 1.5 } }, 'a position that is not a whole number'], [{ name: '', pins: { a: 1 } }, 'pins with no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
   await call(api, 'POST', { name: 'Ani', pins: { 'la-belle-pool-villa': null } })
+  // the saved pins stay one per place: many requests with new ids cannot make the list grow past the cap
+  for (let k = 0; k < 4; k++) await call(api, 'POST', { name: 'X', pins: Object.fromEntries(Array.from({ length: 300 }, (_, i) => ['fake-' + k + '-' + i, i])) })
+  r = await call(api, 'GET')
+  check('the saved pins never grow past one per place (300)', Object.keys(r.json.pins.map).length <= 300, String(Object.keys(r.json.pins.map).length))
+  await call(api, 'POST', { name: 'X', pins: Object.fromEntries(Object.keys(r.json.pins.map).map((id) => [id, null])) })
   // the time of the latest like comes with the votes (newer like = higher among equal likes)
   r = await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: 'like' })
   check('votes carry the time of the latest like', Number.isFinite(r.json.votes['ht:alisa-pool-villa']?.last), JSON.stringify(r.json.votes['ht:alisa-pool-villa']))

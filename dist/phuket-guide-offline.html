@@ -3857,13 +3857,14 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     const cardLabel = p.card && p.card === backToCard ? backLabel(p.card) : villa ? 'See villa' : 'Details'
     const card = p.card ? '<a class="btn' + (villa ? ' primary' : '') + '" href="#' + p.card + '" data-from-map="' + esc(p.t + ':' + p.id) + '">' + cardLabel + '</a>' : ''
     if (villa) {
-      // the card's photo (when the map is tall enough for it), the trip total in bold and the listing; the pins are
-      // approximate, so no Google Maps button
+      // the card's photo (when the map is tall enough for it), the trip total in bold, Google Maps at the pin's exact
+      // spot (Airbnb pins are approximate: the same spot as here, not the door) and the listing
       const img = p.card && map && map.getSize().y >= 440 && document.querySelector('#' + p.card + ' .media img')
       const thumb = img ? '<img class="pop-thumb" src="' + esc(img.getAttribute('src')) + '" alt="">' : ''
       const price = p.price ? '<p class="pop-price"><b>' + esc(p.price) + '</b> ' + esc(p.priceNote || '') + (p.priceAmd ? '<span>' + esc(p.priceAmd) + '</span>' : '') + (p.pricePp ? '<small>' + esc(p.pricePp) + '</small>' : '') + '</p>' : ''
       const web = p.web ? '<a class="btn" target="_blank" rel="noopener" href="' + esc(p.web) + '">' + esc(p.webLabel) + '</a>' : ''
-      return thumb + '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') + price + '<div class="actions">' + card + web + '</div>'
+      const gm = '<a class="btn" target="_blank" rel="noopener" data-gmaps-pin href="' + gmaps(p.lat + ',' + p.lng) + '">Google Maps</a>'
+      return thumb + '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') + price + '<div class="actions">' + card + gm + web + '</div>'
     }
     const dir = p.nodir ? '' : '<a class="btn" target="_blank" rel="noopener" href="' + gdir(p.dlat ?? p.lat, p.dlng ?? p.lng) + '">' + esc(p.dlabel || 'Directions') + '</a>'
     return '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') +

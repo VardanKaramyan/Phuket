@@ -25,7 +25,15 @@ for (const [w, h] of [[390, 844], [360, 780], [320, 640]]) {
       const t = pop.querySelector('h4').getBoundingClientRect(); const tel = document.elementFromPoint(t.left + 10, t.top + t.height / 2)
       const titleOk = pop.contains(tel)
       const pr = pop.getBoundingClientRect()
-      return (bad.length ? 'covered: ' + bad.join('/') : 'buttons ok') + (titleOk ? '' : ' · title covered') + (pr.right > window.innerWidth || pr.left < 0 ? ' · off-screen' : '')
+      // a villa: Google Maps at the pin's exact coordinates
+      const card = pop.querySelector('[data-from-map]')?.getAttribute('href') || ''
+      let gm = ''
+      if (card.startsWith('#ht-')) {
+        const pt = JSON.parse(document.getElementById('guide-data').textContent).points.find((x) => x.t === 'hotel' && '#' + x.card === card)
+        const href = pop.querySelector('a[data-gmaps-pin]')?.getAttribute('href') || ''
+        if (!pt || href !== 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(pt.lat + ',' + pt.lng)) gm = ' · Google Maps link wrong: ' + href
+      }
+      return (bad.length ? 'covered: ' + bad.join('/') : 'buttons ok') + gm + (titleOk ? '' : ' · title covered') + (pr.right > window.innerWidth || pr.left < 0 ? ' · off-screen' : '')
     })
     if (r !== 'buttons ok') failures++
     out.push(id.replace(/^(ev|pl|ht)-/, '') + ': ' + r)

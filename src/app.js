@@ -96,8 +96,11 @@
 
   /* ---------- favourites ---------- */
   const favs = new Set(store.get('favs', []))
-  // villas hidden with 'Hide' (kept on this phone only): off the list and the map until 'Show again'
-  const hiddenStays = new Set(store.get('hiddenStays', []))
+  // villas hidden with 'Hide': off the list and the map until 'Show again'. On the website the hide is for everyone
+  // (kept by the vote server, see the votes below); elsewhere it is kept on this phone only
+  const sharedHide = !!D.votes && /^https?:$/.test(location.protocol)
+  let hiddenBy = sharedHide ? store.get('hiddenShared', {}) : {} // 'ht:<id>' -> { by, t }: the last list loaded
+  const hiddenStays = new Set(sharedHide ? Object.keys(hiddenBy).map((k) => k.slice(3)) : store.get('hiddenStays', []))
   const isHiddenStay = (card) => !!card.dataset.stay && hiddenStays.has(card.dataset.stay)
   function syncFavs() {
     $$('.fav').forEach((b) => b.setAttribute('aria-pressed', String(favs.has(b.dataset.fav))))
@@ -180,6 +183,7 @@
       box.hidden = !cards.length
       const n = $('#hidden-stays-n'); if (n) n.textContent = cards.length
       list.innerHTML = cards.map((c) => '<div class="mine-item"><b>' + esc(c.dataset.name) + '</b>' +
+        (hiddenBy['ht:' + c.dataset.stay]?.by ? '<span class="note">Hidden by ' + esc(hiddenBy['ht:' + c.dataset.stay].by) + '</span>' : '') +
         '<div class="actions"><button class="btn" type="button" data-unhide-stay="' + esc(c.dataset.stay) + '">Show again</button></div></div>').join('') +
         (cards.length > 1 ? '<button class="btn" type="button" data-unhide-stay="*">Show all again</button>' : '')
     }
@@ -195,11 +199,13 @@
     if (h) {
       e.preventDefault()
       const id = h.dataset.hideStay
+      if (sharedHide) { askShared('hide', id); return }
       setStayHidden(id, true)
       toast('Hidden: ' + (document.getElementById('ht-' + id)?.dataset.name || 'villa'), { label: 'Undo', run: () => { setStayHidden(id, false); $('#toast').hidden = true } })
       return
     }
     const u = e.target.closest('[data-unhide-stay]')
+    if (u && sharedHide) { e.preventDefault(); askShared('show', u.dataset.unhideStay); return }
     if (u) { e.preventDefault(); setStayHidden(u.dataset.unhideStay, false); toast(u.dataset.unhideStay === '*' ? 'All villas are back on the list' : 'Back on the list') }
   })
 
@@ -758,13 +764,13 @@
     if (near) near.observe(g); else g.galleryNear()
   })
 
-  /* ---------- shared votes: Like / Skip by name, on the website (api/votes) ---------- */
+  /* ---------- shared votes (Like / Skip by name) and villas hidden for everyone, on the website (api/votes) ---------- */
   const voteBars = $$('[data-vote-item]')
   const dlg = $('#vote-dialog')
   const VOTE = { like: 'Like', skip: 'Skip' }
   const canVote = !!D.votes && /^https?:$/.test(location.protocol) && !!dlg
   let votes = canVote ? store.get('votes', null) : null // the last votes loaded, also shown offline
-  let voteFor = null // what the open dialog is about: { item, v, remove }
+  let pending = null // what the open name dialog will send: { body(name) -> [POST bodies], done(name, first body) -> toast }
   const voterName = () => store.get('voterName', '')
   const same = (a, b) => a.toLowerCase() === b.toLowerCase()
   const mineOf = (it) => { const me = voterName(); return !me ? null : it.like.some((n) => same(n, me)) ? 'like' : it.skip.some((n) => same(n, me)) ? 'skip' : null }
@@ -786,7 +792,7 @@
     // Group picks: the villas with likes, most first (fewer skips breaks a tie)
     const box = $('#group-picks-box'), list = $('#group-picks')
     if (!box || !list) return
-    const rows = Object.entries(votes).filter(([k, it]) => k.startsWith('ht:') && it.like.length)
+    const rows = Object.entries(votes).filter(([k, it]) => k.startsWith('ht:') && it.like.length && !hiddenStays.has(k.slice(3)))
       .map(([k, it]) => ({ it, card: document.getElementById('ht-' + k.slice(3)) })).filter((r) => r.card)
       .sort((a, b) => b.it.like.length - a.it.like.length || a.it.skip.length - b.it.skip.length)
     box.hidden = !rows.length
@@ -811,39 +817,71 @@
     try {
       const r = await fetch(D.votes, { cache: 'no-store' })
       if (!r.ok) throw new Error('votes ' + r.status)
-      votes = (await r.json()).votes || {}
-      store.set('votes', votes); renderVotes()
+      applyShared(await r.json())
     } catch { /* offline, or voting not set up yet: keep the last votes */ }
+  }
+  // what the server sent: everyone's votes and the villas hidden for everyone
+  function applyShared(j) {
+    votes = j.votes || {}; store.set('votes', votes)
+    if (j.hidden) {
+      hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
+      hiddenStays.clear(); Object.keys(hiddenBy).forEach((k) => hiddenStays.add(k.slice(3)))
+      syncHiddenStays()
+    }
+    renderVotes()
+  }
+  const NOTE_VOTE = 'Everyone with the guide sees the names. One vote per name.'
+  function openDialog({ title, what, save, note, body, done }) {
+    pending = { body, done }
+    $('#vote-title').textContent = title
+    $('#vote-what').textContent = what
+    $('#vote-note').textContent = note
+    $('#vote-name').value = voterName()
+    $('[data-vote-save]', dlg).textContent = save
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '')
+    ;(voterName() ? $('[data-vote-save]', dlg) : $('#vote-name')).focus()
+  }
+  // Hide / Show again on the website: for the whole group, with a name like a vote (id '*': every hidden villa)
+  function askShared(what, id) {
+    if (!canVote) return
+    const ids = id === '*' ? [...hiddenStays] : [id]
+    const name = id === '*' ? 'Every hidden villa' : document.getElementById('ht-' + id)?.dataset.name || 'This villa'
+    const send = (hide) => (n) => ids.map((x) => ({ item: 'ht:' + x, name: n, hide }))
+    openDialog(what === 'hide'
+      ? { title: 'Hide for everyone', what: name, save: 'Hide', note: 'It goes off the list and the map for the whole group. Anyone can show it again.', body: send(true), done: () => 'Hidden for everyone: ' + name }
+      : { title: 'Show again for everyone', what: name, save: 'Show again', note: 'It comes back on the list and the map for the whole group.', body: send(false), done: () => (id === '*' ? 'All villas are back for everyone' : 'Back on the list for everyone') })
   }
   if (canVote) {
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-vote-btn]'); if (!b) return
-      const bar = b.closest('[data-vote-item]'), v = b.dataset.voteBtn
-      voteFor = { item: bar.dataset.voteItem, v, remove: b.getAttribute('aria-pressed') === 'true' }
-      $('#vote-title').textContent = voteFor.remove ? 'Take back your ' + VOTE[v] : VOTE[v]
-      $('#vote-what').textContent = bar.dataset.voteName
-      $('#vote-name').value = voterName()
-      $('[data-vote-save]', dlg).textContent = voteFor.remove ? 'Take back' : 'Save vote'
-      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '')
-      ;(voterName() ? $('[data-vote-save]', dlg) : $('#vote-name')).focus()
+      const bar = b.closest('[data-vote-item]'), v = b.dataset.voteBtn, item = bar.dataset.voteItem
+      const remove = b.getAttribute('aria-pressed') === 'true'
+      openDialog({
+        title: remove ? 'Take back your ' + VOTE[v] : VOTE[v], what: bar.dataset.voteName, save: remove ? 'Take back' : 'Save vote', note: NOTE_VOTE,
+        // a different name is a different person: for them it is a new vote, not taking one back
+        body: (n) => [{ item, name: n, vote: remove && same(n, voterName()) ? null : v }],
+        done: (n, sent) => (sent.vote ? VOTE[sent.vote] + ' saved for ' + n : 'Vote taken back'),
+      })
     })
-    $('[data-vote-cancel]', dlg).addEventListener('click', () => { voteFor = null; dlg.close() })
+    $('[data-vote-cancel]', dlg).addEventListener('click', () => { pending = null; dlg.close() })
     $('#vote-form').addEventListener('submit', async (e) => {
       e.preventDefault()
       const name = $('#vote-name').value.replace(/\s+/g, ' ').trim()
-      if (!name || !voteFor) return
-      // a different name is a different person: for them it is a new vote, not taking one back
-      const vote = voteFor.remove && same(name, voterName()) ? null : voteFor.v
-      const item = voteFor.item
+      if (!name || !pending) return
+      const { body, done } = pending
+      const bodies = body(name) // before the name is remembered: taking back a vote compares with the last name
       store.set('voterName', name)
-      voteFor = null; dlg.close()
+      pending = null; dlg.close()
       try {
-        const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ item, name, vote }) })
-        if (!r.ok) throw new Error('vote ' + r.status)
-        votes = (await r.json()).votes || {}
-        store.set('votes', votes); renderVotes()
-        toast(vote ? VOTE[vote] + ' saved for ' + name : 'Vote taken back')
-      } catch { toast(navigator.onLine ? 'Could not save the vote. Try again in a minute.' : 'Voting needs internet.') }
+        let j = null
+        for (const b of bodies) {
+          const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) })
+          if (!r.ok) throw new Error('vote ' + r.status)
+          j = await r.json()
+        }
+        if (j) applyShared(j)
+        toast(done(name, bodies[0] || {}))
+      } catch { toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
     })
     renderVotes()
     loadVotes()

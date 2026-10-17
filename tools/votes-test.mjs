@@ -40,7 +40,7 @@ const upstash = http.createServer((req, res) => {
     const h = hashes.get(key) || new Map(); hashes.set(key, h)
     if (cmd === 'HGETALL') result = [...h].flat()
     else if (cmd === 'HSET') { h.set(a[0], a[1]); result = 1 }
-    else if (cmd === 'HDEL') result = h.delete(a[0]) ? 1 : 0
+    else if (cmd === 'HDEL') result = a.filter((f) => h.delete(f)).length
     else if (cmd === 'HLEN') result = h.size
     else if (cmd === 'HGET') result = h.has(a[0]) ? h.get(a[0]) : null
     else { res.writeHead(400); return res.end(JSON.stringify({ error: 'unknown command ' + cmd })) }
@@ -167,6 +167,19 @@ const api = await import(mod + '?store')
   const st = await (await api.GET(new Request('http://x/api/votes?stats=1'))).json()
   const ani = st.visitors?.devani000001
   check('stats: visitors with visits and name, and the activity log', ani?.visits === 2 && ani.n === 'Ani' && st.log.some((x) => x.e === 'share' && x.d === 'devani000001') && st.log.some((x) => x.e === 'like'), JSON.stringify({ ani, log: st.log.length }))
+  check('stats send the phone type, not the browser details', ani && !('ua' in ani) && typeof ani.kind === 'string', JSON.stringify(ani))
+  // with STATS_KEY set (Vercel environment variable), the stats need ?key=
+  process.env.STATS_KEY = 'trip-secret'
+  const noKey = await api.GET(new Request('http://x/api/votes?stats=1'))
+  const withKey = await api.GET(new Request('http://x/api/votes?stats=1&key=trip-secret'))
+  check('STATS_KEY: no key → 401, the right key → the stats', noKey.status === 401 && withKey.status === 200, noKey.status + ' / ' + withKey.status)
+  delete process.env.STATS_KEY
+  // a full visitor list drops the phone seen longest ago, instead of refusing new ones
+  const vis = hashes.get('guide:visitors')
+  for (let i = 0; i < 2000; i++) vis.set('fill' + String(i).padStart(8, '0'), JSON.stringify({ first: i, last: i, visits: 1 }))
+  r = await call(api, 'POST', { device: 'devnew000001', track: [{ e: 'visit', x: '#home' }] })
+  check('a full visitor list makes room for a new phone', r.status === 200 && vis.has('devnew000001') && !vis.has('fill00000000') && vis.size <= 2000, r.status + ' size ' + vis.size)
+  for (const k of [...vis.keys()]) if (k.startsWith('fill')) vis.delete(k)
   for (const [body, why] of [[{ device: 'devani000001', track: [{ e: 'hack', x: '' }] }, 'an unknown action'], [{ device: 'bad device!', track: [{ e: 'visit' }] }, 'a bad device id'], [{ device: 'devani000001', track: Array.from({ length: 31 }, () => ({ e: 'view', x: 'home' })) }, 'too many actions at once']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }

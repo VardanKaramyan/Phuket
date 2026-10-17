@@ -4657,7 +4657,6 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 
   /* ---------- Stats: who opened the guide and what they did (website only) ---------- */
   const SAID = { visit: 'opened the guide', view: 'opened', card: 'looked at', map: 'opened the map of', share: 'shared', photos: 'browsed the photos of', ...DID }
-  const kindOf = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
   function itemLabel(e, x) {
     if (e === 'visit') return ''
     if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Info', apps: 'Apps', stats: 'Stats' }[x] || x) + ' tab'
@@ -4670,17 +4669,25 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     if (!canVote) { box.innerHTML = '<p class="note">The stats are on the website only.</p>'; return }
     box.innerHTML = '<p class="note">Loading…</p>'
     try {
-      const r = await fetch(D.votes + '?stats=1', { cache: 'no-store' })
+      // a password set as STATS_KEY on Vercel: asked once, kept on this phone
+      let r = await fetch(D.votes + '?stats=1&key=' + encodeURIComponent(store.get('statsKey', '')), { cache: 'no-store' })
+      if (r.status === 401) {
+        box.innerHTML = '<form class="myform" id="stats-key-form"><label for="stats-key">Password for the stats<input id="stats-key" type="password" autocomplete="current-password" required></label><button class="btn primary" type="submit">Show the stats</button></form>'
+        $('#stats-key-form').addEventListener('submit', (e) => { e.preventDefault(); store.set('statsKey', $('#stats-key').value); renderStats() })
+        $('#stats-key').focus()
+        return
+      }
       if (!r.ok) throw new Error('stats ' + r.status)
       const { visitors = {}, log = [] } = await r.json()
-      const name = (d) => (visitors[d] && visitors[d].n) || (d ? 'Someone on ' + kindOf((visitors[d] || {}).ua || '') + ' · ' + d.slice(0, 4) : 'Someone')
+      const kind = (d) => (visitors[d] && visitors[d].kind) || 'device'
+      const name = (d) => (visitors[d] && visitors[d].n) || (d ? 'Someone on ' + kind(d) + ' · ' + d.slice(0, 4) : 'Someone')
       const day = (t) => new Date(t).toDateString(), today = day(Date.now())
       const visits = log.filter((x) => x.e === 'visit')
       const devs = Object.entries(visitors).sort((a, b) => (b[1].last || 0) - (a[1].last || 0))
       const count = (pred) => log.filter(pred).length
       const tiles = [['People (phones)', devs.length], ['Visits', devs.reduce((a, [, v]) => a + (v.visits || 0), 0)], ['Visits today', visits.filter((x) => day(x.t) === today).length],
         ['Likes', count((x) => x.e === 'like')], ['Notes', count((x) => x.e === 'note')], ['Shares', count((x) => x.e === 'share')]]
-      const people = devs.map(([d, v]) => '<tr><td>' + esc(name(d)) + '<small>' + esc(kindOf(v.ua || '')) + '</small></td><td>' + (v.visits || 0) + '</td><td>' + count((x) => x.d === d && x.e !== 'visit') +
+      const people = devs.map(([d, v]) => '<tr><td>' + esc(name(d)) + '<small>' + esc(kind(d)) + '</small></td><td>' + (v.visits || 0) + '</td><td>' + count((x) => x.d === d && x.e !== 'visit') +
         '</td><td>' + esc(when(v.last || v.first)) + '</td></tr>').join('')
       // what people looked at most: villa cards, their maps, photos and shares, plus likes
       const seen = {}

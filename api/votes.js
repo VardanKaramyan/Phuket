@@ -10,7 +10,8 @@
 //   POST /api/votes { name, deleteNote: '<note id>' }            -> deletes a note
 //   POST /api/votes { device, name?, track: [{ e, x }] }        -> visits and actions for the Stats page
 //   GET  /api/votes?ver=<n>  -> { ver, same: true } when nothing changed since version n (one cheap read), else everything
-//   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, ua } }, log: [...] } for the Stats page
+//   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page;
+//        with a STATS_KEY environment variable set, it also needs &key=<that key>
 // GET and every POST answer with { votes, hidden, pins: { map, by, t } | null, order, notes: { '<item>': [{ id, text, by, t }] },
 // ver, recent: [the latest shared changes] }; each votes entry also has last: the time of its latest like.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
@@ -29,6 +30,7 @@ const LOG_MAX = 5000
 const VISITORS = 'guide:visitors' // one Redis hash: field "<device>", value { n, first, last, visits, ua }
 const MAX_VISITORS = 2000
 const DEVICE = /^[a-z0-9]{8,32}$/
+const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
 const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
 const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote']) // shared changes
 const SEP = '\u001f'
@@ -127,9 +129,12 @@ export async function GET(request) {
   const q = new URL(request?.url || 'http://x/').searchParams
   try {
     if (q.has('stats')) {
+      const key = process.env.STATS_KEY
+      if (key && q.get('key') !== key) return reply(401, { error: 'The stats need the key' })
       const flat = (await redis(db, ['HGETALL', VISITORS])) || []
       const visitors = {}
-      for (let i = 0; i < flat.length; i += 2) { try { visitors[flat[i]] = JSON.parse(flat[i + 1]) } catch { /* broken */ } }
+      // the phone type only, not the whole browser string
+      for (let i = 0; i < flat.length; i += 2) { try { const { ua, ...v } = JSON.parse(flat[i + 1]); visitors[flat[i]] = { ...v, kind: phoneKind(ua || '') } } catch { /* broken */ } }
       return reply(200, { visitors, log: await logRows(db, 2000), ver: await version(db) })
     }
     if (q.has('ver')) { const v = await version(db); if (String(v) === q.get('ver')) return reply(200, { ver: v, same: true }) }
@@ -153,7 +158,14 @@ export async function POST(request) {
       const raw = await redis(db, ['HGET', VISITORS, device])
       let v = null
       try { v = raw ? JSON.parse(raw) : null } catch { v = null }
-      if (!v && (await redis(db, ['HLEN', VISITORS])) >= MAX_VISITORS) return reply(507, { error: 'Too many visitors saved' })
+      if (!v && (await redis(db, ['HLEN', VISITORS])) >= MAX_VISITORS) {
+        // full: make room by dropping the phone seen longest ago (made-up ids cannot lock real phones out)
+        const all = (await redis(db, ['HGETALL', VISITORS])) || []
+        const seen = []
+        for (let i = 0; i < all.length; i += 2) { let t = 0; try { t = JSON.parse(all[i + 1]).last || 0 } catch { /* broken: goes first */ } seen.push([all[i], t]) }
+        const drop = seen.sort((a, b) => a[1] - b[1]).slice(0, seen.length - MAX_VISITORS + 1).map(([d]) => d)
+        if (drop.length) await redis(db, ['HDEL', VISITORS, ...drop])
+      }
       v = v || { first: now, visits: 0 }
       v.last = now
       v.visits += rows.filter((r) => r.e === 'visit').length

@@ -322,15 +322,34 @@ function priceOf(h) {
   const m = String(h.priceText || '').match(/^([\d,]+) THB for (\d+) nights/)
   if (!m) throw new Error(`data/hotels.json: ${h.id}: priceText must start with "<total> THB for <nights> nights", not "${String(h.priceText).slice(0, 60)}"`)
   const total = Number(m[1].replace(/,/g, '')), nights = Number(m[2])
-  return { total, nights, perPerson: Math.round(total / nights / STAY_GUESTS / 10) * 10 }
+  const r10 = (n) => Math.round(n / 10) * 10
+  // per person per day (a night's share), per person for the whole stay, and the villa per day
+  return { total, nights, perPerson: r10(total / nights / STAY_GUESTS), perPersonStay: r10(total / STAY_GUESTS), perNight: r10(total / nights) }
 }
 const thb = (n) => n.toLocaleString('en-US') + ' THB'
+// beds for the group (bedrooms / beds / baths from the listing): a bed each is ideal; 4 beds or fewer for 8 is not
+// ("if it's 4 beds it's not ideal", the user, 17 Oct 2026)
+function bedFit(h) {
+  if (!(h.beds > 0)) return null
+  if (h.beds >= STAY_GUESTS) return { key: 'good', text: 'A bed each' }
+  if (h.beds <= STAY_GUESTS / 2) return { key: 'bad', text: `Not ideal: ${Math.ceil(STAY_GUESTS / h.beds)} to a bed` }
+  return { key: 'warn', text: 'Some share a bed' }
+}
+const BED_CHIPS = [['good', 'A bed each'], ['warn', 'Some share'], ['bad', '2 to a bed']]
+function bedRow(h) {
+  const fit = bedFit(h)
+  if (!fit) return ''
+  const parts = [h.bedrooms > 0 ? plural(h.bedrooms, 'bedroom') : '', plural(h.beds, 'bed'), h.baths > 0 ? plural(h.baths, 'bath') : ''].filter(Boolean)
+  return `<div class="beds-row"><span class="pill ${fit.key}">${esc(fit.text)}</span><span>${esc(parts.join(' · '))}</span></div>`
+}
 function priceBox(h) {
   const pr = priceOf(h)
   const onMap = lowConf(h) ? '' : `<button class="btn js-only" type="button" data-on-map="hotel:${esc(h.id)}">${icon('areas')}On map</button>`
   if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div>${onMap}</div>`
-  // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs
-  return `<div class="price-box" data-noamd><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}<span class="price-pp">${thb(pr.perPerson)} per person a night${amdRate ? ' · ' + amd.amount(pr.perPerson) : ''}</span></div>${onMap}</div>`
+  // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs; drams first in the breakdown
+  const row = (label, n) => `<dt>${esc(label)}</dt><dd>${amdRate ? `<b>${amd.amount(n)}</b><span>${thb(n)}</span>` : `<b>${thb(n)}</b>`}</dd>`
+  return `<div class="price-box" data-noamd><div class="price-head"><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}</div>${onMap}</div>` +
+    `<dl class="price-split">${row('Per person per day', pr.perPerson)}${row(`Per person, ${pr.nights} days`, pr.perPersonStay)}${row('Whole villa per day', pr.perNight)}</dl></div>`
 }
 // listFirst (data/stays.json): the villas the user put at the top, in that order; then by area, rooms on sale, price
 const hotelsSorted = hotels.slice().sort((a, b) => (a.listFirst ?? 99) - (b.listFirst ?? 99) || ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
@@ -340,10 +359,11 @@ function hotelCard(h, mode) {
   // 'Hide' takes the villa off the list and the map on this phone; the Hidden villas list brings it back
   const hideBtn = `<button class="btn js-only" type="button" data-hide-stay="${esc(h.id)}" aria-label="${esc('Hide ' + h.name)}">${icon('hide')}Hide</button>`
   const vibe = (h.vibe || []).filter(has)
-  return `<article class="card" id="ht-${esc(h.id)}" data-stay="${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
+  return `<article class="card" id="ht-${esc(h.id)}" data-stay="${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-beds="${bedFit(h)?.key || ''}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
 ${villaMedia(h, mode)}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
+${bedRow(h)}
 ${priceBox(h)}
 <p class="desc">${esc(h.whyStay)}</p>
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
@@ -596,12 +616,13 @@ function stayView(mode) {
 <button class="btn primary" type="submit">${icon('plus')}Add hotel</button>
 </form></div>
 <div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
-<p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote.</p>
+<p class="note">Villas the group liked, most likes first. The list below follows the likes too. Tap Like or Skip on a card to vote.</p>
 <ol class="picks" id="group-picks"></ol></div>
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <div class="toolbar" data-toolbar="stay">
 ${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed, ['saved', 'Saved']], 'Filter villas by price')}
 ${chipRow('stay', 'zone', [['all', 'Everywhere'], ...zonesUsed], 'Filter hotels by area')}
+${chipRow('stay', 'beds', [['all', 'Any beds'], ...BED_CHIPS.filter(([k]) => hotels.some((h) => bedFit(h)?.key === k))], 'Filter villas by beds')}
 </div>
 <div class="list" data-list="stay">${hotelsSorted.map((h) => hotelCard(h, mode)).join('\n')}</div>
 <p class="empty" data-empty="stay" hidden>No villas match these filters.</p>
@@ -753,10 +774,10 @@ function clientData(build) {
   places.forEach((p) => add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], durText(p)].filter(has).join(' · '), 'pl-' + p.id))
   // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
   hotels.forEach((h) => {
-    add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
+    add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.beds > 0 ? plural(h.beds, 'bed') : '', h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
     const pt = pts.at(-1), pr = priceOf(h)
     if (pt && pt.id === h.id && pt.t === 'hotel') {
-      if (pr) Object.assign(pt, { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: amdRate ? amd.amount(pr.total) : '' })
+      if (pr) Object.assign(pt, { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: amdRate ? amd.amount(pr.total) : '', pricePp: amdRate ? `${amd.amount(pr.perPerson)} per person per day` : `${thb(pr.perPerson)} per person per day` })
       if (isUrl(h.website)) Object.assign(pt, { web: h.website, webLabel: h.websiteLabel || 'Website' })
     }
   })

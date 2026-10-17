@@ -65,12 +65,12 @@ const file = path.resolve(process.argv[2] || path.join(ROOT, 'dist/index.html'))
 const h = fs.readFileSync(file, 'utf8')
 // the page text (the artifact build has no <body> tag: then it starts at the top; styles and scripts are cut out below)
 const body = h.slice(Math.max(0, h.indexOf('<body')), h.indexOf('<script type="application/json"'))
-// the villa price boxes (data-noamd) write their own dram amounts: check those apart (the text part, up to its
-// </div>), then leave them out
-const boxes = body.match(/<div class="price-box" data-noamd><div>[\s\S]*?<\/div>/g) || []
+// the villa price boxes (data-noamd) write their own dram amounts: check those apart (the whole box, up to the
+// end of its breakdown), then leave them out
+const boxes = body.match(/<div class="price-box" data-noamd>[\s\S]*?<\/dl><\/div>/g) || []
 const boxMissing = boxes.filter((x) => (x.match(/THB/g) || []).length !== (x.match(/AMD/g) || []).length)
 if (!boxes.length || boxMissing.length) { failed++; console.log(`  FAIL villa price boxes: ${boxMissing.length} of ${boxes.length} without a dram amount for each baht amount`) }
-const text = body.replace(/<div class="price-box" data-noamd><div>[\s\S]*?<\/div>/g, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
+const text = body.replace(/<div class="price-box" data-noamd>[\s\S]*?<\/dl><\/div>/g, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
 const missed = []
 // (a number right after a / is part of a web address, like pattayamail.com/news/2000-baht-helmet-fine)
 for (const m of text.matchAll(/(?<![\d.,:/])\d[\d,]*(?:-|\s)(?:THB|baht|Baht)\b(?!\s\(≈|,\s≈)/g)) missed.push(text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 15).replace(/\s+/g, ' '))

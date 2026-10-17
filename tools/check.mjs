@@ -85,6 +85,11 @@ for (const a of ar) checkPoint('areas:' + a.id, Object.assign({}, a, { area: a.i
 const ho = rd('data/hotels.json', { items: [] }).items
 checkIds('hotels', ho)
 for (const h of ho) checkPoint('hotels:' + h.id, h)
+// the villa cards rate the beds for the group, and read the trip total from the start of priceText
+for (const h of ho) {
+  if (!(h.bedrooms > 0 && h.beds > 0)) warn('hotels:' + h.id, 'needs bedrooms and beds (numbers, from the listing)')
+  if (!h.noRoomsOnTrip && !/^[\d,]+ THB for \d+ nights/.test(h.priceText || '')) warn('hotels:' + h.id, 'priceText must start with "<total> THB for <nights> nights"')
+}
 const mx = rd('data/exchanges.json', { brands: [] })
 for (const b of mx.brands || []) for (const [i, x] of (b.branches || []).entries()) checkPoint(`money:${b.id}#${i} ${x.name}`, Object.assign({}, x, { area: areaPoly[x.area] || BOXES[x.area] ? x.area : '' }))
 

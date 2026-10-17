@@ -124,8 +124,12 @@ const vote = async (p, v, name) => {
   return open
 }
 
+// the villa list order: cards in the list, top first
+const order = (p) => p.evaluate(() => [...document.querySelectorAll('[data-list="stay"] > .card')].map((c) => c.id))
 const A = await person()
 await A.p.goto(base + '#stay', { waitUntil: 'networkidle0' }); await sleep(800)
+const first = await order(A.p)
+check('no votes yet: the pinned villas lead', first[0] === 'ht-luxurious-seaview-villa-rawai' && first[1] === 'ht-kata-v2-sea-view-villa', first.slice(0, 2).join(', '))
 let s = await bar(A.p)
 check('vote buttons show once votes load', s && s.shown && s.like === '0' && s.skip === '0', JSON.stringify(s))
 const counts = await A.p.evaluate(() => ['ev', 'pl', 'ht'].map((k) => document.querySelectorAll(`.card[id^="${k}-"] .votes`).length))
@@ -168,7 +172,13 @@ const after = await bar(B.p, 'ht-light-hope-laguna-6br-villa')
 const toast = await B.p.evaluate(() => document.querySelector('.toast')?.textContent || '')
 check('a failed vote says so and changes nothing', after.like === before.like && /could not|internet/i.test(toast), JSON.stringify({ before, after, toast }))
 apiDown = false
-for (const x of [A, B]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
+// someone new opens the guide: the liked villa leads the list, the skipped one goes to the end
+const C = await person()
+await C.p.goto(base + '#home', { waitUntil: 'networkidle0' }); await sleep(800)
+await C.p.evaluate(() => { location.hash = 'stay' }); await sleep(500)
+const liked = await order(C.p)
+check('more likes move a villa up, skips move it down', liked[0] === 'ht-light-hope-laguna-6br-villa' && liked.at(-1) === 'ht-mouana-breeze-mai-khao' && liked[1] === 'ht-luxurious-seaview-villa-rawai', liked.slice(0, 2).join(', ') + ' … ' + liked.at(-1))
+for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')
 process.exitCode = failed ? 1 : 0

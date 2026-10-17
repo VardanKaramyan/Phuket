@@ -80,7 +80,7 @@ if (notes < 300) { failed++; console.log(`  FAIL ${path.basename(file)}: only ${
 const data = JSON.parse(h.match(/<script type="application\/json" id="guide-data">([\s\S]*?)<\/script>/)[1])
 // popup lines with a price, and the villa popups' own price (price + priceAmd)
 const pops = data.points.filter((p) => /\d (THB|baht)/.test(p.sub || '') || p.price)
-const popMissed = pops.filter((p) => (p.price ? !/AMD/.test(p.priceAmd || '') : !/AMD/.test(p.sub)))
+const popMissed = pops.filter((p) => (p.price ? !/AMD/.test(p.price) : !/AMD/.test(p.sub)))
 if (!pops.length || popMissed.length) { failed++; console.log(`  FAIL map popups: ${popMissed.length} of ${pops.length} prices without a dram amount`) }
 if (!(data.rates && data.rates.mid && data.rates.mid.AMD)) { failed++; console.log('  FAIL converter: no AMD rate') }
 

@@ -294,7 +294,19 @@ const rules = await B.p.evaluate(() => {
   return { pinnedOk, likedFirst, newerFirst, likedTop: liked[0], pins, liked }
 })
 check('moved villas keep their places; liked villas come before the others; equal likes: the newer like first', rules.pinnedOk && rules.likedFirst && rules.newerFirst && rules.likedTop === last, JSON.stringify(rules))
-const topMsg = await A.p.evaluate(async (id) => { document.querySelector('#' + id + ' [data-move-stay="up"]').click(); await new Promise((r) => setTimeout(r, 300)); return document.querySelector('.toast')?.textContent || '' }, o3[0])
+// Reset position: the moved villa loses its fixed place (and the button goes); Reset all clears every fixed place
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
+const pinned0 = await A.p.evaluate(() => Object.keys((JSON.parse(localStorage.getItem('pg:villaPins') || 'null') || {}).map || {}))
+const resetId = pinned0[0]
+const resetBtn = await A.p.evaluate((id) => { const b = document.querySelector('#ht-' + id + ' [data-unpin-stay]'); return { shown: !!b && !b.hidden, note: !document.getElementById('pins-note').hidden } }, resetId)
+await A.p.evaluate((id) => document.querySelector('#ht-' + id + ' [data-unpin-stay]').click(), resetId); await sleep(1000)
+const afterOne = await A.p.evaluate((id) => ({ map: (JSON.parse(localStorage.getItem('pg:villaPins') || 'null') || {}).map || {}, btn: document.querySelector('#ht-' + id + ' [data-unpin-stay]').hidden }), resetId)
+check('Reset position takes the villa out of its fixed place', resetBtn.shown && resetBtn.note && !(resetId in afterOne.map) && afterOne.btn, JSON.stringify({ resetId, resetBtn, afterOne }))
+await A.p.evaluate(() => document.getElementById('unpin-all').click()); await sleep(1000)
+const afterAll = await A.p.evaluate(() => ({ n: Object.keys((JSON.parse(localStorage.getItem('pg:villaPins') || 'null') || {}).map || {}).length, note: document.getElementById('pins-note').hidden }))
+check('Reset all positions clears every fixed place', afterAll.n === 0 && afterAll.note, JSON.stringify(afterAll))
+const topNow = (await order(A.p))[0] // the villa at the top right now (the resets changed the order)
+const topMsg = await A.p.evaluate(async (id) => { document.querySelector('#' + id + ' [data-move-stay="up"]').click(); await new Promise((r) => setTimeout(r, 300)); return document.querySelector('.toast')?.textContent || '' }, topNow)
 check('the top villa cannot move up', /top/i.test(topMsg), topMsg)
 // shared notes: A adds one on a villa (A's name is known: no dialog) and one for the whole group; B sees both; A deletes
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)

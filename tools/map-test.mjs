@@ -153,7 +153,7 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
     const el = document.querySelector('.leaflet-popup')
     return { price: el.querySelector('.pop-price b')?.textContent, amd: el.querySelector('.pop-price span')?.textContent, see: el.querySelector('[data-from-map]')?.textContent, web: [...el.querySelectorAll('.btn')].map((x) => x.textContent).join('/') }
   })
-  check('villa popup: bold total, dram, See villa, Airbnb', /^[\d,]+ THB$/.test(pop.price || '') && /AMD/.test(pop.amd || '') && pop.see === 'See villa' && /Airbnb/.test(pop.web), JSON.stringify(pop))
+  check('villa popup: total in drams (bold), then dollars and the baht price, See villa, Airbnb', /^≈[\d,]+ AMD$/.test(pop.price || '') && /\$/.test(pop.amd || '') && /THB/.test(pop.amd || '') && pop.see === 'See villa' && /Airbnb/.test(pop.web), JSON.stringify(pop))
   await p.evaluate(() => document.querySelector('.leaflet-popup [data-from-map]').click()); await sleep(800)
   const atCard = await p.evaluate(() => ({ hash: location.hash, back: !document.getElementById('back-to-map').hidden, top: Math.round(document.getElementById('ht-mouana-breeze-mai-khao').getBoundingClientRect().top) }))
   check('See villa opens the card, with Back to map', atCard.hash === '#ht-mouana-breeze-mai-khao' && atCard.back && atCard.top < 200, JSON.stringify(atCard))

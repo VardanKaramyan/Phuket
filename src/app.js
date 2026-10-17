@@ -335,7 +335,7 @@
     $$('.basebar button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.base === base)))
     // street tiles only come in a light style; invert them for dark mode
     map.getContainer().classList.toggle('dim-tiles', base === 'streets' && isDark())
-    if (byUser) store.set('base', base)
+    if (byUser) store.set('mapBase', base) // 'mapBase', not the old 'base': everyone starts on Satellite (17 Oct 2026)
   }
   function declutterLabels() {
     // hide area labels that would overlap a bigger area's label
@@ -489,12 +489,13 @@
     const canTiles = D.build !== 'artifact'
     const bb = $('.basebar'); if (bb) bb.hidden = !canTiles
     $$('.basebar button').forEach((b) => b.addEventListener('click', () => setBase(b.dataset.base, true)))
-    const chosen = store.get('base', null)
-    // offline: the plain map, or the saved satellite tiles when Satellite was the last choice
-    setBase(!canTiles ? 'simple' : navigator.onLine ? (chosen || 'streets') : chosen === 'satellite' && satPack ? 'satellite' : 'simple')
-    if (canTiles && !navigator.onLine && chosen !== 'simple' && 'caches' in window) {
+    const chosen = store.get('mapBase', null)
+    // Satellite unless someone picked another style; offline the saved satellite tiles (or the plain map without them)
+    const start = chosen || 'satellite'
+    setBase(!canTiles ? 'simple' : navigator.onLine ? start : start === 'satellite' && satPack ? 'satellite' : 'simple')
+    if (canTiles && !navigator.onLine && start === 'streets' && 'caches' in window) {
       // offline but street tiles were saved while browsing: use them, the error fallback covers gaps
-      caches.open('guide-tiles').then((c) => c.keys()).then((k) => { if (k.length > 10) setBase(chosen || 'streets') }).catch(() => {})
+      caches.open('guide-tiles').then((c) => c.keys()).then((k) => { if (k.length > 10) setBase('streets') }).catch(() => {})
     }
     const home = L.latLngBounds([[7.75, 98.25], [8.30, 98.47]])
     const fitHome = (anim2) => map.fitBounds(home, { paddingTopLeft: [10, 58], paddingBottomRight: [10, 64], animate: anim2 })
@@ -1002,6 +1003,14 @@
     try { await navigator.clipboard.writeText(lines.concat(url ? [url] : []).join('\n')); toast('Copied: paste it in a chat') } catch { toast('Sharing is not available here') }
   })
 
+  // the Map button on a villa card: opens its Show on map accordion and brings the map on screen
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-open-map]'); if (!b) return
+    const d = $('details.mapacc', b.closest('.card')); if (!d) return
+    d.open = true
+    requestAnimationFrame(() => d.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }))
+  })
+
   /* ---------- a villa's own small map, in its Show on map accordion ---------- */
   // drawn the first time it opens, with the same picture as the big map: street or satellite tiles online, the saved
   // satellite tiles offline (or the plain land map); a soft circle says the pin is approximate
@@ -1016,7 +1025,7 @@
     box.leafletMap = m
     m.attributionControl.setPrefix(false)
     const online = navigator.onLine && D.build !== 'artifact'
-    const chosen = store.get('base', 'streets')
+    const chosen = store.get('mapBase', 'satellite')
     const pack = D.build !== 'artifact' && (!online || chosen === 'satellite') ? makeSatPack() : null
     if (pack) pack.addTo(m)
     if (online && D.tiles) {

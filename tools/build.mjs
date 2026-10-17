@@ -396,7 +396,7 @@ ${facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
 ${villaNotes(h)}
 ${voteBar('ht:' + h.id, h.name)}
-<div class="actions">${extraBtns}${hideBtn}<button class="btn square js-only" type="button" data-share-stay data-listing="${esc(isUrl(h.website) ? h.website : '')}" aria-label="${esc('Share ' + h.name)}">${icon('share')}</button>${moveBtns(h)}<button class="btn square fav js-only" type="button" data-fav="ht:${esc(h.id)}" aria-pressed="false" aria-label="${esc('Save ' + h.name)}">${icon('star')}</button></div>
+<div class="actions">${lowConf(h) ? '' : `<button class="btn primary js-only" type="button" data-open-map aria-label="${esc('Map of ' + h.name)}">${icon('areas')}Map</button>`}${extraBtns}${hideBtn}<button class="btn square js-only" type="button" data-share-stay data-listing="${esc(isUrl(h.website) ? h.website : '')}" aria-label="${esc('Share ' + h.name)}">${icon('share')}</button>${moveBtns(h)}<button class="btn square fav js-only" type="button" data-fav="ht:${esc(h.id)}" aria-pressed="false" aria-label="${esc('Save ' + h.name)}">${icon('star')}</button></div>
 </div></article>`
 }
 

@@ -20,7 +20,7 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.setViewport({ width: w, height: h, isMobile: true, hasTouch: true })
   // keep a handle on the Leaflet map, and record every zoom change
   await p.evaluateOnNewDocument((base) => {
-    if (base) try { localStorage.setItem('pg:base', JSON.stringify(base)) } catch {}
+    if (base) try { localStorage.setItem('pg:mapBase', JSON.stringify(base)) } catch {}
     let real
     Object.defineProperty(window, 'L', { configurable: true, get: () => real, set: (v) => {
       real = v
@@ -134,6 +134,13 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
 // 4. villas: every villa has a pin, shown by default; popup → card → Back to map → the same popup
 {
   const { p, errors } = await open()
+  const startBase = await p.evaluate(() => document.querySelector('.basebar [aria-pressed="true"]')?.dataset.base)
+  check('the big map starts on Satellite', startBase === 'satellite', String(startBase))
+  await p.evaluate(() => { location.hash = 'stay' }); await sleep(400)
+  await p.evaluate(() => document.querySelector('#ht-alisa-pool-villa [data-open-map]').click()); await sleep(1200)
+  const viaBtn = await p.evaluate(() => { const d = document.querySelector('#ht-alisa-pool-villa details.mapacc'); const r = d.getBoundingClientRect(); return { open: d.open, drawn: !!d.querySelector('.leaflet-pane'), onScreen: r.top >= 0 && r.top < innerHeight } })
+  check('the Map button opens the villa map and shows it', viaBtn.open && viaBtn.drawn && viaBtn.onScreen, JSON.stringify(viaBtn))
+  await p.evaluate(() => { location.hash = 'areas' }); await sleep(800)
   const pins = await p.evaluate(() => {
     const villas = document.querySelectorAll('.card[id^="ht-"]').length
     const onMap = Object.values(__map._layers).filter((l) => l instanceof L.CircleMarker && l.getPopup && /See villa/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : '')).length
@@ -160,7 +167,9 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
     const box = document.querySelector('#ht-patong-villa-5br-game-room .mini-map'), r = box.getBoundingClientRect()
     return { drawn: !!box.querySelector('.leaflet-pane'), pin: box.querySelectorAll('path.leaflet-interactive, svg path').length, h: Math.round(r.height), w: Math.round(r.width) }
   })
-  check('Show on map draws the villa on a small map in the card', mini.drawn && mini.pin >= 2 && mini.h >= 200 && mini.w > 200, JSON.stringify(mini))
+  check('Show on map draws the villa on a small map in the card', mini.drawn && mini.pin >= 2 && mini.h >= 300 && mini.w > 200, JSON.stringify(mini))
+  const miniSat = await p.evaluate(() => [...document.querySelectorAll('#ht-patong-villa-5br-game-room .mini-map img.leaflet-tile')].some((i) => /World_Imagery/.test(i.src)))
+  check('the small map is satellite by default', miniSat, String(miniSat))
   await p.evaluate(() => document.querySelector('#ht-patong-villa-5br-game-room .mapacc [data-on-map]').click()); await sleep(1500)
   const fromCard = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent }))
   check('Open the big map opens the villa on the Areas map', fromCard.hash === '#areas' && /Patong Villa/.test(fromCard.popup || ''), JSON.stringify(fromCard))

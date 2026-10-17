@@ -100,6 +100,8 @@ const ICON = {
   back: '<path d="M10 6l-6 6 6 6M4.5 12H20"/>',
   next: '<path d="M14 6l6 6-6 6M19.5 12H4"/>',
   up: '<path d="M12 19.5V5M6 11l6-6 6 6"/>',
+  share: '<path d="M12 3.5v11.5M7.5 8L12 3.5 16.5 8M5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-6"/>',
+  note: '<path d="M5.5 3.5h9l4 4v12a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1z"/><path d="M14.5 3.5v4h4M8 12h8M8 15.5h5"/>',
   down: '<path d="M12 4.5V19M6 13l6 6 6-6"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
@@ -364,6 +366,14 @@ function priceBox(h) {
 }
 // listFirst (data/stays.json): the villas the user put at the top, in that order; then by area, rooms on sale, price
 const hotelsSorted = hotels.slice().sort((a, b) => (a.listFirst ?? 99) - (b.listFirst ?? 99) || ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
+// shared notes: a list and an Add note form; the vote server keeps them (website only: src/app.js fills the list and
+// shows the block once the server answers). item: 'ht:<id>' for a villa, 'all' for the whole trip
+function notesInner(item) {
+  const fid = 'note-' + item.replace(/[^a-z0-9]+/gi, '-')
+  return `<ul class="notes-list" aria-live="polite"></ul><form class="note-form" autocomplete="off"><label class="sr-only" for="${fid}">Add a note</label>` +
+    `<textarea id="${fid}" name="text" rows="2" maxlength="500" required placeholder="Add a note for the group"></textarea><button class="btn" type="submit">${icon('plus')}Add note</button></form>`
+}
+const villaNotes = (h) => `<details class="more notes js-only" data-notes="ht:${esc(h.id)}" hidden><summary>${icon('note')}Notes <span class="notes-n"></span></summary>${notesInner('ht:' + h.id)}</details>`
 // Move up / down: the villa order for everyone, kept by the vote server (website only: src/app.js shows them)
 const moveBtns = (h) => `<button class="btn square js-only" type="button" data-move-stay="up" hidden aria-label="${esc('Move ' + h.name + ' up')}">${icon('up')}</button>` +
   `<button class="btn square js-only" type="button" data-move-stay="down" hidden aria-label="${esc('Move ' + h.name + ' down')}">${icon('down')}</button>`
@@ -384,8 +394,9 @@ ${villaMap(h)}
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
 ${facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
+${villaNotes(h)}
 ${voteBar('ht:' + h.id, h.name)}
-<div class="actions">${extraBtns}${hideBtn}${moveBtns(h)}<button class="btn square fav js-only" type="button" data-fav="ht:${esc(h.id)}" aria-pressed="false" aria-label="${esc('Save ' + h.name)}">${icon('star')}</button></div>
+<div class="actions">${extraBtns}${hideBtn}<button class="btn square js-only" type="button" data-share-stay data-listing="${esc(isUrl(h.website) ? h.website : '')}" aria-label="${esc('Share ' + h.name)}">${icon('share')}</button>${moveBtns(h)}<button class="btn square fav js-only" type="button" data-fav="ht:${esc(h.id)}" aria-pressed="false" aria-label="${esc('Save ' + h.name)}">${icon('star')}</button></div>
 </div></article>`
 }
 
@@ -516,6 +527,7 @@ function homeView(mode) {
 <div class="pass-bottom">${dayRows}
 <div class="pass-legend"><span><i></i>Music</span><span><i class="sun"></i>Market</span><span><i class="plane"></i>Flight home</span></div></div>
 </div>
+<div class="stack js-only notes notes-all" id="group-notes" data-notes="all" hidden><div class="block-title"><h2>${icon('note')}Group notes</h2></div><p class="note">Notes for the whole group: anyone can add one, everyone sees them.</p>${notesInner('all')}</div>
 <div class="block-title"><h2>Day by day</h2><button class="chip js-only" type="button" id="agenda-all" aria-pressed="false">Show all days</button></div>
 <div class="agenda" id="agenda">${agenda}</div>
 <div class="tiles">${tiles}</div>
@@ -736,6 +748,7 @@ function chrome(body) {
 </div></header>
 <main id="main">${body}</main>
 <button class="back-to-map js-only" id="back-to-map" type="button" hidden>${icon('back')}Back to map</button>
+<button class="back-to-map js-only" id="back-to-card" type="button" hidden>${icon('back')}<span>Back to villa</span></button>
 <dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
 <h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
 <label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>

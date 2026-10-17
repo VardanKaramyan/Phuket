@@ -24,7 +24,8 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
     let real
     Object.defineProperty(window, 'L', { configurable: true, get: () => real, set: (v) => {
       real = v
-      v.Map.addInitHook(function () { window.__map = this; window.__zooms = []; this.on('zoom', () => window.__zooms.push(this.getZoom())) })
+      // the big map only (the villa cards' small maps are Leaflet maps too)
+      v.Map.addInitHook(function () { if (this.getContainer().id !== 'map') return; window.__map = this; window.__zooms = []; this.on('zoom', () => window.__zooms.push(this.getZoom())) })
     } })
   }, base)
   if (blockEsri) {
@@ -163,6 +164,14 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.evaluate(() => document.querySelector('#ht-patong-villa-5br-game-room .mapacc [data-on-map]').click()); await sleep(1500)
   const fromCard = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent }))
   check('Open the big map opens the villa on the Areas map', fromCard.hash === '#areas' && /Patong Villa/.test(fromCard.popup || ''), JSON.stringify(fromCard))
+  // the popup's own link now says Back to villa; the floating button hides while the popup is open, then shows
+  const inPopup = await p.evaluate(() => document.querySelector('.leaflet-popup [data-from-map]')?.textContent)
+  await p.evaluate(() => __map.closePopup()); await sleep(300)
+  const backCard = await p.evaluate(() => { const b = document.getElementById('back-to-card'); return { shown: !b.hidden && getComputedStyle(b).display !== 'none', text: b.textContent.trim(), popupLink: null } })
+  backCard.popupLink = inPopup
+  await p.click('#back-to-card'); await sleep(1000)
+  const atVilla = await p.evaluate(() => ({ hash: location.hash, top: Math.round(document.getElementById('ht-patong-villa-5br-game-room').getBoundingClientRect().top), btn: !document.getElementById('back-to-card').hidden }))
+  check('Back to villa (in the popup, and floating once it closes) returns to the card', backCard.popupLink === 'Back to villa' && backCard.shown && backCard.text === 'Back to villa' && atVilla.hash === '#ht-patong-villa-5br-game-room' && atVilla.top < 200 && !atVilla.btn, JSON.stringify({ backCard, atVilla }))
   if (errors.length) check('no page errors (villas)', false, errors.join(' | '))
   await p.close()
 }

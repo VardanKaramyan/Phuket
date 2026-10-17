@@ -289,7 +289,9 @@
   function popupHtml(p) {
     const villa = p.t === 'hotel'
     // the card link remembers the pin, so the card can offer Back to map
-    const card = p.card ? '<a class="btn' + (villa ? ' primary' : '') + '" href="#' + p.card + '" data-from-map="' + esc(p.t + ':' + p.id) + '">' + (villa ? 'See villa' : 'Details') + '</a>' : ''
+    // came from this card (Open the big map / On map): the same link says Back to villa (event, place)
+    const cardLabel = p.card && p.card === backToCard ? backLabel(p.card) : villa ? 'See villa' : 'Details'
+    const card = p.card ? '<a class="btn' + (villa ? ' primary' : '') + '" href="#' + p.card + '" data-from-map="' + esc(p.t + ':' + p.id) + '">' + cardLabel + '</a>' : ''
     if (villa) {
       // the card's photo (when the map is tall enough for it), the trip total in bold and the listing; the pins are
       // approximate, so no Google Maps button
@@ -498,8 +500,9 @@
     const fitHome = (anim2) => map.fitBounds(home, { paddingTopLeft: [10, 58], paddingBottomRight: [10, 64], animate: anim2 })
     fitHome(false)
     const mapEl = map.getContainer()
-    map.on('popupopen', () => mapEl.parentElement.classList.add('popup-open'))
-    map.on('popupclose', () => mapEl.parentElement.classList.remove('popup-open'))
+    // while a popup is open the floating Back to villa button hides, so it never covers the popup's buttons
+    map.on('popupopen', () => { mapEl.parentElement.classList.add('popup-open'); root.classList.add('map-popup') })
+    map.on('popupclose', () => { mapEl.parentElement.classList.remove('popup-open'); root.classList.remove('map-popup') })
     const zoomClass = () => { mapEl.classList.toggle('z-low', map.getZoom() < 9.75); requestAnimationFrame(declutterLabels) }
     map.on('zoomend moveend', zoomClass); zoomClass()
     $('#map-zoom-in')?.addEventListener('click', () => map.zoomIn())
@@ -570,6 +573,8 @@
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-on-map]'); if (!b) return
     e.preventDefault()
+    const card = b.closest('.card')
+    backToCard = card ? card.id : null
     openOnMap(b.dataset.onMap)
   })
   function openOnMap(key) {
@@ -586,7 +591,17 @@
     if (backTo && backTo.view === null) backTo.view = view
     if (backTo && (view !== backTo.view || view === 'areas')) backTo = null
     if (backBtn) backBtn.hidden = !backTo
+    // and the other way: from a card to the big map, the map shows Back to villa (or event, place), back to that card
+    if (backToCard && view !== 'areas') backToCard = null
+    if (backCardBtn) {
+      backCardBtn.hidden = !backToCard
+      if (backToCard) $('span', backCardBtn).textContent = backLabel(backToCard)
+    }
   }
+  let backToCard = null // the id of the card the big map was opened from
+  const backLabel = (id) => 'Back to ' + ({ ht: 'villa', ev: 'event', pl: 'place', mx: 'money changer' }[id.slice(0, 2)] || 'the list')
+  const backCardBtn = $('#back-to-card')
+  backCardBtn?.addEventListener('click', () => { const id = backToCard; backToCard = null; backCardBtn.hidden = true; if (id) location.hash = id })
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-area-map]'); if (!b) return
     e.preventDefault()
@@ -855,6 +870,7 @@
   // what the server sent: everyone's votes and the villas hidden for everyone
   function applyShared(j) {
     votes = j.votes || {}; store.set('votes', votes)
+    if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
     if ('order' in j) { order = j.order; store.set('villaOrder', order) }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
     if (j.hidden) {
@@ -865,6 +881,27 @@
     renderVotes()
   }
   const NOTE_VOTE = 'Everyone with the guide sees the names. One vote per name.'
+  // shared notes: on each villa (its Notes accordion) and for the whole trip (Group notes on the Trip page)
+  let notes = canVote ? store.get('notes', null) : null // the last notes loaded, also shown offline
+  const when = (t) => new Date(t).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+  function renderNotes() {
+    if (!notes) return
+    const me = voterName()
+    $$('[data-notes]').forEach((box) => {
+      const list = notes[box.dataset.notes] || []
+      box.hidden = false
+      const n = $('.notes-n', box); if (n) n.textContent = list.length ? '(' + list.length + ')' : ''
+      $('.notes-list', box).innerHTML = list.length ? list.map((x) => '<li><p>' + esc(x.text).replace(/\n/g, '<br>') + '</p><small>' + esc(x.by) + ' · ' + esc(when(x.t)) + '</small>' +
+        (me && same(x.by, me) ? '<button class="note-del" type="button" data-note-del="' + esc(x.id) + '" aria-label="Delete this note">' + '×' + '</button>' : '') + '</li>').join('')
+        : '<li class="quiet">No notes yet.</li>'
+    })
+  }
+  async function post(body) {
+    const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+    if (!r.ok) throw new Error('post ' + r.status)
+    return r.json()
+  }
+  const failed = () => toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.')
   // run: instead of sending bodies, do this with the name (moving a villa)
   function openDialog({ title, what, save, note, body, done, run }) {
     pending = { body, done, run }
@@ -899,6 +936,22 @@
       })
     })
     $('[data-vote-cancel]', dlg).addEventListener('click', () => { pending = null; dlg.close() })
+    // Add note: straight away once the guide knows your name (the first time it asks, like a vote); delete your own
+    document.addEventListener('submit', (e) => {
+      const f = e.target.closest('.note-form'); if (!f) return
+      e.preventDefault()
+      const box = f.closest('[data-notes]'), ta = $('textarea', f), text = ta.value.trim()
+      if (!text) return
+      const send = async (name) => {
+        try { applyShared(await post({ name, note: { item: box.dataset.notes, text } })); ta.value = ''; toast('Note added for everyone') } catch { failed() }
+      }
+      if (voterName()) send(voterName())
+      else openDialog({ title: 'Add a note', what: box.dataset.notes === 'all' ? 'Group notes' : (box.closest('.card')?.dataset.name || ''), save: 'Add note', note: 'Everyone with the guide sees the note and your name.', run: send })
+    })
+    document.addEventListener('click', async (e) => {
+      const b = e.target.closest('[data-note-del]'); if (!b) return
+      try { applyShared(await post({ name: voterName(), deleteNote: b.dataset.noteDel })); toast('Note deleted') } catch { failed() }
+    })
     // Move up / down: one tap once the guide knows your name (the first time it asks, like a vote)
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-move-stay]'); if (!b) return
@@ -927,12 +980,27 @@
       } catch { toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
     })
     renderVotes()
+    renderNotes()
     loadVotes()
     // other people's votes: when the guide comes back to the front, and every 30 s while it is open
     window.addEventListener('focus', loadVotes)
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
     setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 30000)
   }
+
+  /* ---------- Share a villa: the phone's share sheet, or a copy to paste in a chat ---------- */
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-share-stay]'); if (!b) return
+    const card = b.closest('.card')
+    const guide = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : ''
+    const listing = b.dataset.listing || ''
+    const price = [$('.price-total', card)?.textContent, $('.price-label', card)?.textContent].filter(Boolean)
+    const lines = [card.dataset.name, price.length ? price[0] + ' (' + price[1].toLowerCase() + ')' + ($('.price-amd', card) ? ', ' + $('.price-amd', card).textContent : '') : '',
+      $('.beds-row span:last-child', card)?.textContent || '', listing && guide ? listing : ''].filter(Boolean)
+    const url = guide || listing
+    if (navigator.share) { try { await navigator.share({ title: card.dataset.name, text: lines.join('\n'), url }) } catch { /* closed */ } return }
+    try { await navigator.clipboard.writeText(lines.concat(url ? [url] : []).join('\n')); toast('Copied: paste it in a chat') } catch { toast('Sharing is not available here') }
+  })
 
   /* ---------- a villa's own small map, in its Show on map accordion ---------- */
   // drawn the first time it opens, with the same picture as the big map: street or satellite tiles online, the saved

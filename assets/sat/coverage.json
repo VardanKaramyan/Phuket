@@ -1,0 +1,170 @@
+{
+ "source": "EOxCloudless 2025 (Sentinel-2 cloudless), https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2025_3857/default/g/{z}/{y}/{x}.jpg",
+ "attribution": "Offline imagery: <a href=\"https://cloudless.eox.at\" target=\"_blank\" rel=\"noopener\">EOxCloudless</a> by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2025), <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY-NC-SA 4.0</a>",
+ "minZoom": 8,
+ "maxZoom": 14,
+ "areas": [
+  {
+   "name": "trip region (Similan to Koh Phangan)",
+   "box": [
+    7.5,
+    97.55,
+    9.9,
+    100.2
+   ],
+   "zooms": [
+    8,
+    10
+   ]
+  },
+  {
+   "name": "Andaman day trips (Phang Nga Bay, Krabi, Phi Phi)",
+   "box": [
+    7.55,
+    98.2,
+    8.35,
+    98.9
+   ],
+   "zooms": [
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Phuket and the bay islands",
+   "box": [
+    7.58,
+    98.22,
+    8.32,
+    98.66
+   ],
+   "zooms": [
+    13,
+    13
+   ]
+  },
+  {
+   "name": "Phuket island",
+   "box": [
+    7.74,
+    98.25,
+    8.21,
+    98.46
+   ],
+   "zooms": [
+    14,
+    14
+   ]
+  },
+  {
+   "name": "Koh Phangan and Koh Samui",
+   "box": [
+    9.4,
+    99.9,
+    9.85,
+    100.15
+   ],
+   "zooms": [
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Koh Phangan",
+   "box": [
+    9.66,
+    99.94,
+    9.81,
+    100.08
+   ],
+   "zooms": [
+    13,
+    14
+   ]
+  }
+ ],
+ "ranges": {
+  "8": [
+   [
+    197,
+    199,
+    120,
+    122
+   ]
+  ],
+  "9": [
+   [
+    394,
+    398,
+    241,
+    245
+   ]
+  ],
+  "10": [
+   [
+    789,
+    797,
+    483,
+    490
+   ]
+  ],
+  "11": [
+   [
+    1582,
+    1586,
+    976,
+    980
+   ],
+   [
+    1592,
+    1593,
+    967,
+    970
+   ]
+  ],
+  "12": [
+   [
+    3165,
+    3173,
+    1952,
+    1961
+   ],
+   [
+    3184,
+    3187,
+    1935,
+    1940
+   ]
+  ],
+  "13": [
+   [
+    6331,
+    6341,
+    3906,
+    3923
+   ],
+   [
+    6370,
+    6373,
+    3871,
+    3875
+   ]
+  ],
+  "14": [
+   [
+    12663,
+    12673,
+    7817,
+    7838
+   ],
+   [
+    12740,
+    12746,
+    7743,
+    7750
+   ]
+  ]
+ },
+ "tiles": 769,
+ "bytes": 3810972
+}

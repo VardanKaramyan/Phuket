@@ -1,6 +1,6 @@
 // Proves the static build works offline. For each host style (plain, and one that redirects /index.html to /
 // like Cloudflare Pages), it serves dist/, lets the service worker install, then STOPS the server and cuts the
-// page's network, reloads, and checks the page, its photos and the map still render.
+// page's network, reloads, and checks the page, its photos, the map and the saved satellite tiles still render.
 import http from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -59,11 +59,16 @@ async function run(label, port, redirectIndex, reloadPath) {
     const loaded = imgs.filter((i) => i.complete && i.naturalWidth > 0).length
     location.hash = 'areas'
     await new Promise((r) => setTimeout(r, 1500))
-    return { title: document.title, cards: document.querySelectorAll('.card').length, imgs: imgs.length, imgsLoaded: loaded, mapPaths: document.querySelectorAll('#map path').length, offlineText: document.getElementById('offline-state')?.textContent }
+    const mapPaths = document.querySelectorAll('#map path').length
+    // the saved satellite tiles show with no network
+    document.querySelector('.basebar [data-base="satellite"]')?.click()
+    await new Promise((r) => setTimeout(r, 2000))
+    const satTiles = Array.from(document.querySelectorAll('#map .leaflet-tile-loaded')).filter((t) => !/arcgisonline/.test(t.src || '')).length
+    return { title: document.title, cards: document.querySelectorAll('.card').length, imgs: imgs.length, imgsLoaded: loaded, mapPaths, satTiles, offlineText: document.getElementById('offline-state')?.textContent }
   }).catch((e) => ({ error: e.message }))
   await browser.close()
   // the page also reports photos missing from the cache (it compares with the build's count)
-  const ok = cached && result.cards > 100 && result.imgs > 0 && result.imgsLoaded === result.imgs && result.mapPaths > 50 && !/missing/i.test(result.offlineText || '')
+  const ok = cached && result.cards > 100 && result.imgs > 0 && result.imgsLoaded === result.imgs && result.mapPaths > 50 && result.satTiles >= 4 && !/missing/i.test(result.offlineText || '')
   console.log(`[${label}] cache: ${cached ? cached.entries + ' files' : 'NONE'} · after reload with the server stopped: ${JSON.stringify(result)}${errors.length ? ' · errors: ' + errors.join(' | ') : ''}`)
   console.log(`[${label}] ${ok ? 'PASSED' : 'FAILED'}`)
   return ok

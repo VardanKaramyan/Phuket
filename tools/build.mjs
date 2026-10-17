@@ -1,6 +1,6 @@
 // Builds the guide from data/*.json into three outputs:
-//   dist/                         static offline web app (index.html + img/ + sw.js + manifest + icons + KML)
-//   dist/phuket-guide-offline.html single self-contained file (images inlined) to keep on the phone
+//   dist/                         static offline web app (index.html + img/ + sat/ + sw.js + manifest + icons + KML)
+//   dist/phuket-guide-offline.html single self-contained file (images and satellite tiles inlined) to keep on the phone
 //   artifact/index.html            claude.ai artifact version (no document skeleton, Leaflet from cdnjs, no service worker)
 import fs from 'node:fs'
 import path from 'node:path'
@@ -87,6 +87,8 @@ const ICON = {
   phone: '<path d="M5.5 3.5h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 6 6l1.4-2.3 4.6 1.8v3.5a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2z"/>',
   apps: '<rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/>',
   download: '<path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/>',
+  expand: '<path d="M14 4h6v6M20 4l-6.5 6.5M10 20H4v-6M4 20l6.5-6.5"/>',
+  shrink: '<path d="M19.5 4.5L14 10M14 5.5V10h4.5M4.5 19.5L10 14M10 18.5V14H5.5"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
 
@@ -509,7 +511,7 @@ function areasView(mode, opts) {
 <div class="mapbox">
 <div id="map" aria-label="Map of Phuket areas"></div>
 <div class="basebar" role="group" aria-label="Map style" hidden><button type="button" data-base="streets" aria-pressed="false">Streets</button><button type="button" data-base="satellite" aria-pressed="false">Satellite</button><button type="button" data-base="simple" aria-pressed="false">Offline</button></div>
-<div class="maptools"><button class="icon-btn" type="button" id="map-zoom-in" aria-label="Zoom in">${icon('plus')}</button><button class="icon-btn" type="button" id="map-zoom-out" aria-label="Zoom out">${icon('minus')}</button><button class="icon-btn" type="button" id="map-fit" aria-label="Show all of Phuket">${icon('fit')}</button><button class="icon-btn" type="button" id="map-locate" aria-label="Show my location">${icon('locate')}</button></div>
+<div class="maptools"><button class="icon-btn" type="button" id="map-full" aria-label="Full screen" aria-pressed="false">${icon('expand', 'class="i-enter"')}${icon('shrink', 'class="i-exit"')}</button><button class="icon-btn" type="button" id="map-zoom-in" aria-label="Zoom in">${icon('plus')}</button><button class="icon-btn" type="button" id="map-zoom-out" aria-label="Zoom out">${icon('minus')}</button><button class="icon-btn" type="button" id="map-fit" aria-label="Show all of Phuket">${icon('fit')}</button><button class="icon-btn" type="button" id="map-locate" aria-label="Show my location">${icon('locate')}</button></div>
 <div class="layerbar" role="group" aria-label="Show on map">
 <button class="chip" type="button" data-layer="areas" aria-pressed="true"><i class="swatch-outline"></i>Areas</button>
 <button class="chip" type="button" data-layer="event" aria-pressed="true"><i style="background:var(--pulse)"></i>Music</button>
@@ -647,6 +649,19 @@ ${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places',
 </ul></nav>`
 }
 
+// ---------- offline satellite tiles (downloaded by tools/sat-tiles.mjs) ----------
+const sat = readJSON('assets/sat/coverage.json', null)
+const satFiles = []
+if (sat) {
+  const seen = new Set()
+  for (const [z, rs] of Object.entries(sat.ranges)) for (const [x0, x1, y0, y1] of rs) for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) seen.add(`${z}/${x}/${y}.webp`)
+  satFiles.push(...seen)
+  const missing = satFiles.filter((f) => !fs.existsSync(P('assets/sat', f)))
+  if (missing.length) throw new Error(`${missing.length} offline satellite tiles are missing (first: assets/sat/${missing[0]}). Run npm run sat.`)
+}
+// the single file carries the tiles inside it, in their own data block that the app reads only when Satellite is on
+const satInline = () => JSON.stringify(Object.fromEntries(satFiles.map((f) => [f.replace(/\.webp$/, ''), 'data:image/webp;base64,' + fs.readFileSync(P('assets/sat', f)).toString('base64')])))
+
 // ---------- client data ----------
 const usedKey = (k) => {
   const [kind, id] = k.split(':')
@@ -693,7 +708,10 @@ function clientData(build) {
     tiles: {
       streets: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', attr: 'Tiles © <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> & contributors', maxNative: 19 },
       satellite: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr: 'Imagery © Esri, Maxar, Earthstar Geographics', maxNative: 18 },
+      // under the Esri satellite layer: shows while Esri tiles load, and on its own offline
+      offline: sat && build !== 'artifact' ? { url: build === 'single' ? '' : 'sat/{z}/{x}/{y}.webp', inline: build === 'single', ranges: sat.ranges, minZoom: sat.minZoom, maxZoom: sat.maxZoom, attr: sat.attribution } : null,
     },
+    satCount: build === 'standalone' ? satFiles.length : 0,
     rates: Object.keys(mid).length ? { mid, best: bestRates, bestName: best ? best.name : '', date: (money.midMarket[0] || {}).date || money.asOf || '', source: (money.midMarket[0] || {}).source ? 'mid-market' : 'mid-market' } : null,
   }
 }
@@ -740,7 +758,8 @@ function page(build) {
   // mark JS on, and apply a saved theme before the first paint (not in the artifact, whose viewer sets the theme)
   const boot = build === 'artifact' ? '<script>document.documentElement.classList.add("js")</script>'
     : '<script>document.documentElement.classList.add("js");try{var t=JSON.parse(localStorage.getItem("pg:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>'
-  const tail = `<script type="application/json" id="guide-data">${data}</script>\n${leaflet}\n<script>${appJs}</script>`
+  const satData = build === 'single' && sat ? `<script type="application/json" id="sat-data">${satInline()}</script>\n` : ''
+  const tail = `<script type="application/json" id="guide-data">${data}</script>\n${satData}${leaflet}\n<script>${appJs}</script>`
   if (build === 'artifact') return `${title}\n${boot}\n<style>${css}</style>\n${body}\n${tail}\n`
   const head = `<!doctype html>
 <html lang="en">
@@ -801,6 +820,8 @@ for (const [k, im] of Object.entries(images)) {
   if (!usedKeys.has(k) || (extra.dropImages || []).includes(k) || !im || !fs.existsSync(P(im.file))) continue
   for (const dir of ['dist/img', 'artifact/img']) fs.copyFileSync(P(im.file), P(dir, path.basename(im.file)))
 }
+fs.rmSync(P('dist/sat'), { recursive: true, force: true })
+for (const f of satFiles) { fs.mkdirSync(path.dirname(P('dist/sat', f)), { recursive: true }); fs.copyFileSync(P('assets/sat', f), P('dist/sat', f)) }
 const standalone = page('standalone')
 fs.writeFileSync(P('dist/index.html'), standalone)
 fs.writeFileSync(P('dist/phuket-guide-offline.html'), page('single'))
@@ -816,10 +837,10 @@ fs.writeFileSync(P('dist/manifest.webmanifest'), JSON.stringify({
   icons: [{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' }, { src: 'icon-512.png', sizes: '512x512', type: 'image/png' }, { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }],
 }, null, 1))
 const precache = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'phuket-areas.kml',
-  ...fs.readdirSync(P('dist/img')).filter((f) => f.endsWith('.webp')).map((f) => 'img/' + f)]
+  ...fs.readdirSync(P('dist/img')).filter((f) => f.endsWith('.webp')).map((f) => 'img/' + f), ...satFiles.map((f) => 'sat/' + f)]
 const version = crypto.createHash('sha1').update(standalone).update(precache.join()).digest('hex').slice(0, 10)
 fs.writeFileSync(P('dist/sw.js'), fs.readFileSync(P('src/sw.js'), 'utf8').replace('__VERSION__', version).replace('__PRECACHE__', JSON.stringify(precache)))
 
 const kb = (f) => Math.round(fs.statSync(P(f)).size / 1024) + ' KB'
 console.log(`events ${events.length} · places ${places.length} · areas ${areas.length} · hotels ${hotels.length} · brands ${brands.length} · images ${Object.keys(images).length}`)
-console.log(`dist/index.html ${kb('dist/index.html')} · offline single file ${kb('dist/phuket-guide-offline.html')} · artifact ${kb('artifact/index.html')} · sw ${version}`)
+console.log(`dist/index.html ${kb('dist/index.html')} · offline single file ${kb('dist/phuket-guide-offline.html')} · artifact ${kb('artifact/index.html')} · satellite tiles ${satFiles.length} · sw ${version}`)

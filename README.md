@@ -7,8 +7,8 @@ A phone-first guide that works offline: music events, places to go, areas drawn 
 
 | File | Use |
 | --- | --- |
-| `dist/` | Static web app. Host it anywhere with HTTPS, open it once on the phone, then *Add to Home Screen*. A service worker keeps the page and all photos offline. |
-| `dist/phuket-guide-offline.html` | Single self-contained file with the photos inside. Keep it on the phone or a laptop. |
+| `dist/` | Static web app. Host it anywhere with HTTPS, open it once on the phone, then *Add to Home Screen*. A service worker keeps the page, all photos and the offline satellite map (`sat/`) offline. |
+| `dist/phuket-guide-offline.html` | Single self-contained file with the photos and the offline satellite map inside. Keep it on the phone or a laptop. |
 | `dist/phuket-areas.kml` | Area outlines and all pins, for Google My Maps → *Import* (then in the Google Maps app under *Saved → Maps*). |
 | `artifact/index.html` | The claude.ai artifact build (republish it to update the online copy, which needs internet): https://claude.ai/artifact/Nxy3LAarKyhwtFtf1HvZKD |
 
@@ -18,7 +18,7 @@ You need Node.js 20.3+, Python 3.9+, and Google Chrome or Chromium for the tests
 
 ```sh
 npm install
-npm run all        # data (import + curate + apps) -> build -> check, offline test, popup test
+npm run all        # data (import + curate + apps) -> build -> check, offline test, popup test, map test
 npm run qa         # screenshots for a visual check, in qa-out/
 npm run serve      # dist/ on http://localhost:8080
 ```
@@ -31,11 +31,15 @@ node tools/curate.mjs                              # all editorial fixes + the 1
 node tools/import-apps.mjs research/result-apps.json   # apps page data (skipped if the file is missing)
 python3 -I tools/collect-photos.py                 # photo picks from research/photos/
 node tools/images.mjs                              # photos -> assets/img/*.webp
+node tools/sat-tiles.mjs                           # offline satellite tiles -> assets/sat/ (only once; skips saved tiles)
 node tools/check.mjs                               # sanity checks on the data
 node tools/build.mjs                               # writes dist/ and artifact/
 node tools/offline-test.mjs                        # serves dist/, stops the server, reloads, checks it still works
 node tools/popup-test.mjs                          # map popups stay tappable at 390, 360 and 320 px
+node tools/map-test.mjs                            # smooth wheel zoom, full screen, offline satellite
 ```
+
+The map: wheel and trackpad zoom glide (`smoothWheel` in `src/app.js` replaces Leaflet's stepped wheel zoom), the top button opens full screen, and Satellite works offline. The offline satellite layer is EOxCloudless 2025 (Sentinel-2, 10 m per pixel) for the trip region, Phuket and Koh Phangan, up to zoom 14 (769 tiles, 3.6 MB, listed in `assets/sat/coverage.json`). Online, the sharp Esri imagery draws on top of it. Esri's tiles are not saved in advance (their terms do not allow offline export outside ArcGIS); the service worker keeps up to 2500 tiles you have looked at.
 
 Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
 
@@ -55,4 +59,4 @@ The pages carry `noindex`, so search engines skip them.
 
 ## Credits
 
-Map data © OpenStreetMap contributors (ODbL). Street and satellite tiles © Esri and contributors. Photos: Wikimedia Commons contributors (licenses on each photo) and the venues' own websites (personal use). Fonts: Chakra Petch and Anuphan by Cadson Demak (SIL Open Font License).
+Map data © OpenStreetMap contributors (ODbL). Street and satellite tiles © Esri and contributors. Offline satellite map: EOxCloudless by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2025), CC BY-NC-SA 4.0, so the guide stays non-commercial. Photos: Wikimedia Commons contributors (licenses on each photo) and the venues' own websites (personal use). Fonts: Chakra Petch and Anuphan by Cadson Demak (SIL Open Font License).

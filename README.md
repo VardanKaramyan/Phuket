@@ -18,7 +18,7 @@ You need Node.js 20.3+, Python 3.9+, and Google Chrome or Chromium for the tests
 
 ```sh
 npm install
-npm run all        # data (import + curate + apps) -> build -> check, offline test, popup test, map test
+npm run all        # data (import + curate + apps) -> build -> check, dram test, offline test, popup test, map test
 npm run qa         # screenshots for a visual check, in qa-out/
 npm run serve      # dist/ on http://localhost:8080
 ```
@@ -37,9 +37,12 @@ node tools/build.mjs                               # writes dist/ and artifact/
 node tools/offline-test.mjs                        # serves dist/, stops the server, reloads, checks it still works
 node tools/popup-test.mjs                          # map popups stay tappable at 390, 360 and 320 px
 node tools/map-test.mjs                            # smooth wheel zoom, full screen, offline satellite
+node tools/amd-test.mjs                            # every baht price on the page has its dram amount
 ```
 
 The map: wheel and trackpad zoom glide (`smoothWheel` in `src/app.js` replaces Leaflet's stepped wheel zoom), the top button opens full screen, and Satellite works offline. The offline satellite layer is EOxCloudless 2025 (Sentinel-2, 10 m per pixel) for the trip region, Phuket and Koh Phangan, up to zoom 14 (769 tiles, 3.6 MB, listed in `assets/sat/coverage.json`). Online, the sharp Esri imagery draws on top of it. Esri's tiles are not saved in advance (their terms do not allow offline export outside ArcGIS); the service worker keeps up to 2500 tiles you have looked at.
+
+Dram prices: the build adds the Armenian dram amount next to every baht price, on the page, in the map popups and in the KML (`tools/amd.mjs`: `500 THB (≈5,400 AMD)`, inside brackets `(100 baht, ≈1,100 AMD)`). The rate is `amdRate` in `data/extra.json` (10.8 AMD per baht, 17 Oct 2026); AMD also comes first in the converter, which refreshes it online. Decimal amounts are left alone (they are exchange rates), and a number without THB or baht right next to it gets no dram amount.
 
 Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
 

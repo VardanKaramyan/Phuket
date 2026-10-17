@@ -570,14 +570,17 @@
     const amt = $('#conv-amount'), cur = $('#conv-cur'), dirBtn = $('#conv-dir'), out = $('#conv-out'), note = $('#conv-note')
     let rates = Object.assign({}, D.rates.mid), live = store.get('liveRates', null), toThb = true
     if (live && live.rates) rates = Object.assign(rates, live.rates)
-    const fmt = (n, c) => (c === 'THB' ? '฿' : '') + n.toLocaleString('en-US', { maximumFractionDigits: c === 'THB' ? 0 : 2 }) + (c === 'THB' ? '' : ' ' + c)
+    const whole = (c) => c === 'THB' || c === 'AMD' // no coins worth showing
+    const fmt = (n, c) => (c === 'THB' ? '฿' : '') + n.toLocaleString('en-US', { maximumFractionDigits: whole(c) ? 0 : 2 }) + (c === 'THB' ? '' : ' ' + c)
     function calc() {
       const a = parseFloat(String(amt.value).replace(/,/g, '')) || 0
       const r = rates[cur.value]
       if (!r) { out.textContent = '—'; return }
       const res = toThb ? a * r : a / r
       const best = D.rates.best && D.rates.best[cur.value]
-      let extra = toThb ? '1 ' + cur.value + ' ≈ ฿' + r.toFixed(2) + ' (mid-market)' : '฿1 ≈ ' + (1 / r).toFixed(4) + ' ' + cur.value
+      // a currency worth less than a baht (the dram) reads better as "฿1 ≈ 10.8 AMD"
+      const perBaht = '฿1 ≈ ' + (1 / r).toLocaleString('en-US', { maximumFractionDigits: 1 / r >= 10 ? 1 : 4 }) + ' ' + cur.value
+      let extra = toThb ? (r < 1 ? perBaht : '1 ' + cur.value + ' ≈ ฿' + r.toFixed(2)) + ' (mid-market)' : perBaht
       if (toThb && best) extra += ' · at ' + D.rates.bestName + ' about ฿' + Math.round(a * best).toLocaleString('en-US')
       out.innerHTML = esc(fmt(res, toThb ? 'THB' : cur.value)) + '<small>' + esc(extra) + '</small>'
     }

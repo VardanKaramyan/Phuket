@@ -9,6 +9,7 @@ import crypto from 'node:crypto'
 import * as turf from '@turf/turf'
 import sharp from 'sharp'
 import { TRIP, TRIP_DAYS, TRIP_LABEL, inTrip, phaseOf, phaseRange, phaseLabel } from './trip.mjs'
+import { makeAmd } from './amd.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const P = (...a) => path.join(ROOT, ...a)
@@ -31,6 +32,11 @@ const areaGeo = readJSON('data/geo/areas.geojson')
 const land = readJSON('data/geo/land.geojson')
 const roads = readJSON('data/geo/roads.geojson')
 const extra = readJSON('data/extra.json', {}) || {} // hand-written copy: intros, tips
+// dram (AMD) amounts next to every baht price, and AMD first in the converter (data/extra.json → amdRate)
+const amdRate = extra.amdRate && extra.amdRate.perThb > 0 ? extra.amdRate : null
+const amd = amdRate ? makeAmd(amdRate.perThb) : { text: (s) => s, html: (s) => s }
+const midRates = () => (amdRate ? [{ currency: 'AMD', thbPerUnit: 1 / amdRate.perThb, date: amdRate.date }] : [])
+  .concat((money.midMarket || []).filter((m) => m && m.thbPerUnit && m.currency !== 'AMD'))
 const appsDoc = readJSON('data/apps.json', { items: [] }) || { items: [] } // apps and services to install
 const apps = appsDoc.items || []
 
@@ -558,7 +564,7 @@ ${chipRow('stay', 'zone', [['all', 'Everywhere'], ...zonesUsed], 'Filter hotels 
 }
 function moneyView(mode) {
   const best = brands[0]
-  const mid = (money.midMarket || []).filter((m) => m && m.thbPerUnit)
+  const mid = midRates()
   const curOpts = mid.map((m) => `<option value="${esc(m.currency)}">${esc(m.currency)}</option>`).join('')
   const listBlock = (title, arr, cls = '') => (arr || []).filter(has).length ? `<div class="callout ${cls}"><h3>${esc(title)}</h3><ul>${arr.filter(has).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''
   const atm = money.atm || {}
@@ -567,9 +573,10 @@ function moneyView(mode) {
 ${best ? `<div class="verdict"><span class="eyebrow">Best place to change money</span><div class="brand-row"><span class="sign${has(best.branding && best.branding.primaryColor) ? '' : ' plain'}" style="${has(best.branding && best.branding.primaryColor) ? signColors(best.branding) : ''}" aria-hidden="true">${esc(best.branding?.logoText || best.name)}</span><h3>${esc(best.name)}</h3></div><p>${esc(money.verdict)}</p><p><a href="#mx-${esc(best.id)}">Branches and details</a></p></div>` : ''}
 ${mid.length ? `<div class="converter js-only" id="converter"><span class="eyebrow">Quick converter</span>
 <label class="note" for="conv-amount" id="conv-from-label">You give</label>
-<div class="conv-row"><input id="conv-amount" type="number" inputmode="decimal" value="100" min="0" step="any"><select id="conv-cur" aria-label="Currency">${curOpts}</select></div>
+<div class="conv-row"><input id="conv-amount" type="number" inputmode="decimal" value="${mid[0].currency === 'AMD' ? 10000 : 100}" min="0" step="any"><select id="conv-cur" aria-label="Currency">${curOpts}</select></div>
 <div class="conv-row"><div class="conv-out num" id="conv-out" aria-live="polite">—</div><button class="icon-btn" type="button" id="conv-dir" aria-label="Switch direction">${icon('swap')}</button></div>
 <p class="note" id="conv-note"></p></div>` : ''}
+${amdRate ? `<p class="note">Dram amounts in this guide use ${amdRate.perThb} AMD per baht (mid-market, ${esc(amdRate.date)}).</p>` : ''}
 <div class="list">${brands.map((b) => brandCard(b, mode)).join('\n')}</div>
 ${atm.feeText || (atm.tips || []).length ? `<div class="callout"><h3>ATMs</h3>${has(atm.feeText) ? `<p>${esc(atm.feeText)}</p>` : ''}${(atm.cheapest || []).length ? `<p><b>Cheapest:</b> ${esc(atm.cheapest.join('; '))}</p>` : ''}${(atm.tips || []).length ? `<ul>${atm.tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>` : ''}
 ${listBlock('Cards', money.cards)}
@@ -673,7 +680,7 @@ function clientData(build) {
   const add = (t, k, it, id, name, sub, card) => {
     if (lowConf(it) || !Number.isFinite(+it.lat) || !Number.isFinite(+it.lng)) return
     const d = dirOf(it)
-    const pt = { t, k, id, name, sub, lat: +(+it.lat).toFixed(6), lng: +(+it.lng).toFixed(6), q: it.gmapsQuery || name, card }
+    const pt = { t, k, id, name, sub: amd.text(sub), lat: +(+it.lat).toFixed(6), lng: +(+it.lng).toFixed(6), q: it.gmapsQuery || name, card }
     if (it.placeId) pt.pid = it.placeId
     if (!d) pt.nodir = 1
     else if (d.lat !== it.lat || d.lng !== it.lng) Object.assign(pt, { dlat: d.lat, dlng: d.lng, dlabel: d.label })
@@ -697,7 +704,7 @@ function clientData(build) {
   }
   hotels.forEach((h) => add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], popPrice(h)].filter(has).join(' · '), 'ht-' + h.id))
   brands.forEach((b) => (b.branches || []).forEach((x, i) => add('money', 'money', x, b.id + '-' + i, b.name + ' · ' + x.name, x.hoursText || '', 'mx-' + b.id)))
-  const mid = Object.fromEntries((money.midMarket || []).filter((m) => m && m.thbPerUnit).map((m) => [m.currency, m.thbPerUnit]))
+  const mid = Object.fromEntries(midRates().map((m) => [m.currency, m.thbPerUnit]))
   const best = brands[0]
   const bestRates = best ? Object.fromEntries((best.sampleRates || []).filter((r) => r && r.buyTHB).map((r) => [r.currency, r.buyTHB])) : {}
   return {
@@ -748,7 +755,7 @@ const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 function page(build) {
   buildName = build
   const mode = build === 'single' ? 'inline' : 'file'
-  const body = chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView()].join('\n'))
+  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
   const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
   const leaflet = build === 'artifact'
@@ -792,7 +799,7 @@ function kml() {
   const polyKml = (g) => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates).map((p) => `<Polygon><outerBoundaryIs><LinearRing><coordinates>${ring(p[0])}</coordinates></LinearRing></outerBoundaryIs></Polygon>`).join('')
   const styles = Object.entries(AREA_COLORS).map(([id, c]) => `<Style id="a-${id}"><LineStyle><color>${kc(c, 'ff')}</color><width>2</width></LineStyle><PolyStyle><color>${kc(c, '66')}</color></PolyStyle></Style>`).join('')
   const pinStyle = (id, c) => `<Style id="${id}"><IconStyle><color>${kc(c, 'ff')}</color><Icon><href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>`
-  const cdata = (s) => `<![CDATA[${String(s || '').replace(/]]>/g, ']] >')}]]>`
+  const cdata = (s) => `<![CDATA[${amd.text(String(s || '')).replace(/]]>/g, ']] >')}]]>`
   const areasK = areasSorted.map((a) => {
     const f = areaGeo.features.find((x) => x.properties.id === a.id); if (!f) return ''
     return `<Placemark><name>${esc(a.name)}</name><description>${cdata(`<b>${a.tagline || ''}</b><br>${a.description || ''}<br><br>${a.stayIf || ''}`)}</description><styleUrl>#a-${a.id}</styleUrl><MultiGeometry>${polyKml(f.geometry)}</MultiGeometry></Placemark>`

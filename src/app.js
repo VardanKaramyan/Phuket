@@ -4,7 +4,7 @@
   const D = JSON.parse(document.getElementById('guide-data').textContent)
   const $ = (s, el = document) => el.querySelector(s)
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
-  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps']
+  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'stats']
   // kept for this tab only (it survives a refresh): where you were on the page and on the map
   const session = {
     get(k) { try { return JSON.parse(sessionStorage.getItem('pg:' + k) || 'null') } catch { return null } },
@@ -244,6 +244,9 @@
     if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
     syncBack(view)
     if (view === 'stay' && current !== 'stay') sortStays(true) // coming to the villas: put them in order now
+    if (view !== current) track('view', view)
+    if (focusEl) track('card', focusEl.id)
+    if (view === 'stats' && current !== 'stats') renderStats()
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
@@ -611,6 +614,7 @@
     openOnMap(b.dataset.onMap)
   })
   function openOnMap(key) {
+    track('map', key)
     if (location.hash !== '#areas') { pendingFocus = key; location.hash = 'areas' } else if (map) focusPoint(key)
     setTimeout(() => { if (map && pendingFocus) { focusPoint(pendingFocus); pendingFocus = null } }, 120)
   }
@@ -801,6 +805,7 @@
       if (prev) prev.disabled = i === 0
       if (next) next.disabled = i === imgs.length - 1
       load(i); load(i + 1)
+      if (i > 0 && !g.tracked) { g.tracked = true; track('photos', g.closest('.card')?.id || '') } // once per villa
     }
     g.galleryNear = () => load(at() + 1)
     let ticking = false
@@ -815,6 +820,52 @@
 
   /* ---------- shared votes (Like / Skip by name) and villas hidden for everyone, on the website (api/votes) ---------- */
   const voteBars = $$('[data-vote-item]')
+  // this phone: a random id kept on it, for the Stats page, and so your own changes do not pop up as news
+  const device = (() => {
+    let d = store.get('device', '')
+    if (!/^[a-z0-9]{8,32}$/.test(d)) { d = Array.from(crypto.getRandomValues(new Uint8Array(12)), (b) => (b % 36).toString(36)).join(''); store.set('device', d) }
+    return d
+  })()
+  let ver = 0 // the server's version last loaded
+  let seenT = store.get('seenT', 0) // the newest shared change this phone has seen
+  let firstAnnounce = true
+  // other people's changes, as they happen: "Ani liked Mouana Breeze", with Show to go to it
+  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on' }
+  const cardOf = (x) => { const m = /^(ht|ev|pl):(.+)$/.exec(x || ''); return m ? document.getElementById(m[1] + '-' + m[2]) : null }
+  function describe(r) {
+    const who = r.n || 'Someone'
+    if (r.x === 'all') return r.e === 'reset' ? who + ' reset all villa positions' : who + (r.e === 'note' ? ' added a group note' : r.e === 'unnote' ? ' deleted a group note' : ' changed something')
+    const c = cardOf(r.x)
+    return who + ' ' + (DID[r.e] || r.e) + ' ' + (c ? c.dataset.name : 'a villa')
+  }
+  function announce(recent) {
+    const fresh = recent.filter((r) => r.t > seenT && r.d !== device)
+    const newest = Math.max(seenT, ...recent.map((r) => r.t || 0))
+    const hadSeen = seenT > 0
+    if (newest > seenT) { seenT = newest; store.set('seenT', seenT) }
+    const first = firstAnnounce; firstAnnounce = false
+    if (!fresh.length || (first && !hadSeen)) return // a first visit: no flood of old news
+    const r = fresh[0], c = cardOf(r.x)
+    const text = (first ? 'Since your last visit: ' : '') + describe(r) + (fresh.length > 1 ? ' (+' + (fresh.length - 1) + ' more)' : '')
+    toast(text, c ? { label: 'Show', run: () => { $('#toast').hidden = true; location.hash = c.id } } : undefined)
+  }
+  // what people do in the guide, for the Stats page: sent in small batches (and when the page is closed)
+  const queue = []
+  let flushTimer = 0
+  function flush(closing) {
+    if (!queue.length || !navigator.onLine) return
+    const body = JSON.stringify({ device, name: voterName(), track: queue.splice(0, 30) })
+    if (closing && navigator.sendBeacon) { navigator.sendBeacon(D.votes, new Blob([body], { type: 'application/json' })); return }
+    fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true }).catch(() => {})
+  }
+  function track(e, x) {
+    if (!D.votes || !/^https?:$/.test(location.protocol)) return
+    queue.push({ e, x: String(x || '').slice(0, 100) })
+    clearTimeout(flushTimer)
+    if (queue.length >= 20) flush(); else flushTimer = setTimeout(flush, 6000)
+  }
+  addEventListener('pagehide', () => flush(true))
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(true) })
   const dlg = $('#vote-dialog')
   const VOTE = { like: 'Like', skip: 'Skip' }
   const canVote = !!D.votes && /^https?:$/.test(location.protocol) && !!dlg
@@ -926,25 +977,27 @@
     pins = { map, by: name, t: Date.now() }
     sortStays(true, true); syncPinUI()
     try {
-      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, pins: change }) })
-      if (!r.ok) throw new Error('pins ' + r.status)
-      applyShared(await r.json())
+      applyShared(await post({ name, pins: change }))
       toast('Moved ' + dir + ' for everyone')
     } catch {
       pins = before; sortStays(true, true); syncPinUI() // slide back
       toast(navigator.onLine ? 'Could not move it. Try again in a minute.' : 'This needs internet.')
     }
   }
+  // every few seconds: one small question (has anything changed since version ver?), and everything only if it has
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return
     try {
-      const r = await fetch(D.votes, { cache: 'no-store' })
+      const r = await fetch(D.votes + (ver ? '?ver=' + ver : ''), { cache: 'no-store' })
       if (!r.ok) throw new Error('votes ' + r.status)
-      applyShared(await r.json())
+      const j = await r.json()
+      if (!j.same) applyShared(j)
     } catch { /* offline, or voting not set up yet: keep the last votes */ }
   }
   // what the server sent: everyone's votes and the villas hidden for everyone
   function applyShared(j) {
+    if (j.ver) ver = j.ver
+    if (j.recent) announce(j.recent)
     votes = j.votes || {}; store.set('votes', votes)
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
     if ('pins' in j) { pins = j.pins; store.set('villaPins', pins); syncPinUI() }
@@ -976,7 +1029,7 @@
     })
   }
   async function post(body) {
-    const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+    const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ device, ...body }) })
     if (!r.ok) throw new Error('post ' + r.status)
     return r.json()
   }
@@ -1059,11 +1112,7 @@
       pending = null; dlg.close()
       try {
         let j = null
-        for (const b of bodies) {
-          const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) })
-          if (!r.ok) throw new Error('vote ' + r.status)
-          j = await r.json()
-        }
+        for (const b of bodies) j = await post(b)
         if (j) applyShared(j)
         if (bodies.some((b) => 'vote' in b && String(b.item).startsWith('ht:'))) sortStays(true, true) // your like moves the villa now
         toast(done(name, bodies[0] || {}))
@@ -1073,16 +1122,61 @@
     renderNotes()
     syncPinUI()
     loadVotes()
-    // other people's votes: when the guide comes back to the front, and every 30 s while it is open
+    // other people's changes: when the guide comes back to the front, and every 5 s while it is on screen
     window.addEventListener('focus', loadVotes)
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
-    setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 30000)
+    setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 5000)
+    track('visit', location.hash || '#home')
+  }
+
+  /* ---------- Stats: who opened the guide and what they did (website only) ---------- */
+  const SAID = { visit: 'opened the guide', view: 'opened', card: 'looked at', map: 'opened the map of', share: 'shared', photos: 'browsed the photos of', ...DID }
+  const kindOf = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
+  function itemLabel(e, x) {
+    if (e === 'visit') return ''
+    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Info', apps: 'Apps', stats: 'Stats' }[x] || x) + ' tab'
+    const id = String(x || '').replace(/^mini:/, '').replace(/^(ht|ev|pl|mx):/, '$1-').replace(/^(hotel|event|place|money):/, (m, k) => ({ hotel: 'ht-', event: 'ev-', place: 'pl-', money: 'mx-' }[k]))
+    const el = document.getElementById(id)
+    return x === 'all' ? 'Group notes' : el ? el.dataset.name || el.querySelector('h2, h3')?.textContent || id : String(x || '')
+  }
+  async function renderStats() {
+    const box = $('#stats-body'); if (!box) return
+    if (!canVote) { box.innerHTML = '<p class="note">The stats are on the website only.</p>'; return }
+    box.innerHTML = '<p class="note">Loading…</p>'
+    try {
+      const r = await fetch(D.votes + '?stats=1', { cache: 'no-store' })
+      if (!r.ok) throw new Error('stats ' + r.status)
+      const { visitors = {}, log = [] } = await r.json()
+      const name = (d) => (visitors[d] && visitors[d].n) || (d ? 'Someone on ' + kindOf((visitors[d] || {}).ua || '') + ' · ' + d.slice(0, 4) : 'Someone')
+      const day = (t) => new Date(t).toDateString(), today = day(Date.now())
+      const visits = log.filter((x) => x.e === 'visit')
+      const devs = Object.entries(visitors).sort((a, b) => (b[1].last || 0) - (a[1].last || 0))
+      const count = (pred) => log.filter(pred).length
+      const tiles = [['People (phones)', devs.length], ['Visits', devs.reduce((a, [, v]) => a + (v.visits || 0), 0)], ['Visits today', visits.filter((x) => day(x.t) === today).length],
+        ['Likes', count((x) => x.e === 'like')], ['Notes', count((x) => x.e === 'note')], ['Shares', count((x) => x.e === 'share')]]
+      const people = devs.map(([d, v]) => '<tr><td>' + esc(name(d)) + '<small>' + esc(kindOf(v.ua || '')) + '</small></td><td>' + (v.visits || 0) + '</td><td>' + count((x) => x.d === d && x.e !== 'visit') +
+        '</td><td>' + esc(when(v.last || v.first)) + '</td></tr>').join('')
+      // what people looked at most: villa cards, their maps, photos and shares, plus likes
+      const seen = {}
+      for (const x of log) if (['card', 'map', 'photos', 'share', 'like'].includes(x.e)) { const l = itemLabel(x.e, x.x); if (/Villa|BR|Pool|House|Townhouse|Home/i.test(l) || String(x.x).includes('ht')) seen[l] = (seen[l] || 0) + 1 }
+      const top = Object.entries(seen).sort((a, b) => b[1] - a[1]).slice(0, 8)
+      const tabs = {}
+      for (const x of log) if (x.e === 'view') tabs[itemLabel('view', x.x)] = (tabs[itemLabel('view', x.x)] || 0) + 1
+      const recent = log.slice(0, 80).map((x) => '<li><small>' + esc(when(x.t)) + '</small> <b>' + esc(x.n || name(x.d)) + '</b> ' + esc(SAID[x.e] || x.e) + (itemLabel(x.e, x.x) ? ' ' + esc(itemLabel(x.e, x.x)) : '') + '</li>').join('')
+      box.innerHTML = '<div class="stats-tiles">' + tiles.map(([k, v]) => '<div><b>' + esc(String(v)) + '</b><span>' + esc(k) + '</span></div>').join('') + '</div>' +
+        '<h2 class="block-title">People</h2><div class="stats-table"><table><thead><tr><th>Who</th><th>Visits</th><th>Actions</th><th>Last seen</th></tr></thead><tbody>' + (people || '<tr><td colspan="4">Nobody yet.</td></tr>') + '</tbody></table></div>' +
+        (top.length ? '<h2 class="block-title">Villas looked at most</h2><ol class="picks">' + top.map(([l, n]) => '<li>' + esc(l) + ' <span>' + n + '</span></li>').join('') + '</ol>' : '') +
+        (Object.keys(tabs).length ? '<h2 class="block-title">Tabs opened</h2><p class="stats-tabs">' + Object.entries(tabs).sort((a, b) => b[1] - a[1]).map(([l, n]) => esc(l) + ' <b>' + n + '</b>').join(' · ') + '</p>' : '') +
+        '<h2 class="block-title">Latest activity</h2><ul class="stats-log">' + (recent || '<li>Nothing yet.</li>') + '</ul>' +
+        '<p class="note">Counted on the website since the stats were added (17 Oct 2026). Phones show up by the name used to vote or add a note.</p>'
+    } catch { box.innerHTML = '<p class="note">' + (navigator.onLine ? 'Could not load the stats. Try again in a minute.' : 'The stats need internet.') + '</p>' }
   }
 
   /* ---------- Share a villa: the phone's share sheet, or a copy to paste in a chat ---------- */
   document.addEventListener('click', async (e) => {
     const b = e.target.closest('[data-share-stay]'); if (!b) return
     const card = b.closest('.card')
+    track('share', card.id)
     // just the link to this villa in the guide (it opens the guide on the villa); the single file has no web address,
     // so there it is the listing's link
     const url = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : b.dataset.listing || ''
@@ -1114,6 +1208,7 @@
     const box = $('.mini-map', d)
     if (!box || typeof L === 'undefined') return
     if (box.leafletMap) { box.leafletMap.invalidateSize(); return }
+    track('map', 'mini:' + (d.closest('.card')?.id || ''))
     const ll = [Number(d.dataset.lat), Number(d.dataset.lng)]
     const m = L.map(box, { zoomControl: true, attributionControl: false, scrollWheelZoom: false, zoomSnap: 0.5, minZoom: 8, maxZoom: 18 }).setView(ll, 14)
     box.leafletMap = m

@@ -247,6 +247,22 @@ details.note-add summary svg { width: 16px; height: 16px; }
 .card .notes.empty .notes-label, .card .notes.empty .notes-list { display: none; }
 .notes-all .block-title h2 { display: flex; align-items: center; gap: 8px; }
 .notes-all .block-title svg { width: 20px; height: 20px; }
+/* Stats: visits and activity */
+#stats-body { display: grid; gap: 14px; }
+#stats-body .block-title { margin-top: 8px; }
+.stats-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
+.stats-tiles div { display: grid; gap: 2px; padding: 12px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+.stats-tiles b { font: 700 24px/1.1 var(--font-display); }
+.stats-tiles span { font-size: 13px; color: var(--ink-2); }
+.stats-table { overflow-x: auto; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+.stats-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.stats-table th, .stats-table td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.stats-table th { font: 600 12px/1.2 var(--font-display); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.stats-table td small { display: block; color: var(--ink-2); font-size: 12px; }
+.stats-tabs { margin: 0; font-size: 14px; color: var(--ink-2); }
+.stats-tabs b { color: var(--ink); }
+.stats-log { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14px; }
+.stats-log small { color: var(--ink-2); }
 /* Like / Skip: the group's votes */
 .votes { display: grid; gap: 6px; }
 .vote-btns { display: flex; gap: 8px; }

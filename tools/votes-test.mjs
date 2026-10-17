@@ -15,15 +15,29 @@ const check = (name, ok, detail = '') => { if (!ok) failed++; console.log(`  ${o
 const listen = (srv) => new Promise((r) => srv.listen(0, '127.0.0.1', () => r(srv.address().port)))
 
 // ---- a stand-in for Upstash: POST a Redis command as a JSON array, get { result } back ----
-const hashes = new Map()
+const hashes = new Map(), strings = new Map(), lists = new Map()
 const upstash = http.createServer((req, res) => {
   let body = ''
   req.on('data', (c) => { body += c })
   req.on('end', () => {
     if (req.headers.authorization !== 'Bearer test-token') { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })) }
     const [cmd, key, ...a] = JSON.parse(body)
-    const h = hashes.get(key) || new Map(); hashes.set(key, h)
     let result
+    if (['GET', 'SET', 'INCR'].includes(cmd)) {
+      if (cmd === 'GET') result = strings.has(key) ? strings.get(key) : null
+      else if (cmd === 'SET') { strings.set(key, String(a[0])); result = 'OK' }
+      else { const n = Number(strings.get(key) || 0) + 1; strings.set(key, String(n)); result = n }
+      res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result }))
+    }
+    if (['LPUSH', 'LTRIM', 'LRANGE', 'LLEN'].includes(cmd)) {
+      const l = lists.get(key) || []; lists.set(key, l)
+      if (cmd === 'LPUSH') { l.unshift(...a.slice().reverse()); result = l.length }
+      else if (cmd === 'LTRIM') { lists.set(key, l.slice(Number(a[0]), Number(a[1]) + 1)); result = 'OK' }
+      else if (cmd === 'LRANGE') result = l.slice(Number(a[0]), Number(a[1]) === -1 ? undefined : Number(a[1]) + 1)
+      else result = l.length
+      res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result }))
+    }
+    const h = hashes.get(key) || new Map(); hashes.set(key, h)
     if (cmd === 'HGETALL') result = [...h].flat()
     else if (cmd === 'HSET') { h.set(a[0], a[1]); result = 1 }
     else if (cmd === 'HDEL') result = h.delete(a[0]) ? 1 : 0
@@ -135,6 +149,27 @@ const api = await import(mod + '?store')
   r = await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: 'like' })
   check('votes carry the time of the latest like', Number.isFinite(r.json.votes['ht:alisa-pool-villa']?.last), JSON.stringify(r.json.votes['ht:alisa-pool-villa']))
   await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: null })
+  // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
+  r = await call(api, 'GET')
+  const v0 = r.json.ver
+  r = await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: 'like', device: 'devgor000001' })
+  const ev = (r.json.recent || [])[0]
+  check('a change bumps the version and is in the recent activity', r.json.ver > v0 && ev?.e === 'like' && ev.x === 'ht:alisa-pool-villa' && ev.n === 'Gor' && ev.d === 'devgor000001', JSON.stringify({ ver: r.json.ver, ev }))
+  const same = await (await api.GET(new Request('http://x/api/votes?ver=' + r.json.ver))).json()
+  check('?ver= with the current version just says same', same.same === true && !same.votes, JSON.stringify(same))
+  const changed = await (await api.GET(new Request('http://x/api/votes?ver=' + v0))).json()
+  check('?ver= with an older version sends everything', !!changed.votes && changed.ver === r.json.ver, String(changed.ver))
+  await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: null, device: 'devgor000001' })
+  // analytics: visits and what people did, per device (with the name once known)
+  r = await call(api, 'POST', { device: 'devani000001', name: 'Ani', track: [{ e: 'visit', x: '#stay' }, { e: 'view', x: 'stay' }, { e: 'share', x: 'ht:alisa-pool-villa' }] })
+  check('tracked actions are saved', r.status === 200 && r.json.ok === true, JSON.stringify(r.json))
+  await call(api, 'POST', { device: 'devani000001', track: [{ e: 'visit', x: '#home' }] })
+  const st = await (await api.GET(new Request('http://x/api/votes?stats=1'))).json()
+  const ani = st.visitors?.devani000001
+  check('stats: visitors with visits and name, and the activity log', ani?.visits === 2 && ani.n === 'Ani' && st.log.some((x) => x.e === 'share' && x.d === 'devani000001') && st.log.some((x) => x.e === 'like'), JSON.stringify({ ani, log: st.log.length }))
+  for (const [body, why] of [[{ device: 'devani000001', track: [{ e: 'hack', x: '' }] }, 'an unknown action'], [{ device: 'bad device!', track: [{ e: 'visit' }] }, 'a bad device id'], [{ device: 'devani000001', track: Array.from({ length: 31 }, () => ({ e: 'view', x: 'home' })) }, 'too many actions at once']]) {
+    const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
+  }
   for (const [body, why] of [[{ name: 'V', order: [] }, 'an empty order'], [{ name: 'V', order: ['a', 'a'] }, 'a villa twice'], [{ name: 'V', order: ['Bad Id!'] }, 'a bad id'], [{ name: 'V', order: Array.from({ length: 301 }, (_, i) => 'v' + i) }, 'too many villas'], [{ name: '', order: ['a'] }, 'no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
@@ -341,6 +376,20 @@ await D2.p.goto(base + '#ht-bangtao-4br-villa-unit-1', { waitUntil: 'networkidle
 const land = await D2.p.evaluate(() => ({ top: Math.round(document.getElementById('ht-bangtao-4br-villa-unit-1').getBoundingClientRect().top), bars: [...document.querySelectorAll('.votes')].filter((x) => !x.hidden).length }))
 check('a shared villa link opens on that villa', land.bars > 0 && land.top >= 0 && land.top < 160, JSON.stringify(land))
 await D2.ctx.close()
+// live: A likes a villa, B's next check (every 5 s, or coming back to the page) shows it as news with Show
+await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+await A.p.evaluate(() => document.querySelector('#ht-diamond-villa-278 [data-vote-btn="like"]').click()); await sleep(300)
+await A.p.evaluate(() => document.querySelector('#vote-dialog [data-vote-save]').click()); await sleep(900)
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1500)
+const news = await B.p.evaluate(() => ({ text: document.querySelector('.toast')?.textContent || '', show: !!document.querySelector('.toast .toast-btn') }))
+check('another phone sees the like as news, with Show', /Ani liked Diamond Villa 278/.test(news.text) && news.show, JSON.stringify(news))
+const ownNews = await A.p.evaluate(async () => { window.dispatchEvent(new Event('focus')); await new Promise((r) => setTimeout(r, 1200)); return document.querySelector('.toast')?.textContent || '' })
+check('your own changes do not come back as news', !/Ani liked/.test(ownNews), ownNews)
+// Stats: A's actions are sent when the page is hidden; the Stats page lists people and the latest activity
+await A.p.evaluate(() => window.dispatchEvent(new Event('pagehide'))); await sleep(800)
+await A.p.evaluate(() => { location.hash = 'stats' }); await sleep(1500)
+const stats = await A.p.evaluate(() => ({ people: document.querySelector('#stats-body .stats-table')?.innerText || '', tiles: document.querySelector('#stats-body .stats-tiles')?.innerText || '', log: document.querySelector('#stats-body .stats-log')?.innerText || '' }))
+check('the Stats page lists people, visits and the latest activity', /Ani/.test(stats.people) && /Vardan/.test(stats.people) && /People/.test(stats.tiles) && /liked Diamond Villa 278/.test(stats.log) && /opened the guide/.test(stats.log), JSON.stringify(stats).slice(0, 300))
 for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

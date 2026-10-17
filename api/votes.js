@@ -96,8 +96,16 @@ export async function POST(request) {
     const who = cleanName(body.name)
     if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
     try {
-      if (body.deleteNote) await redis(db, ['HDEL', NOTES, String(body.deleteNote).slice(0, 40)])
-      else {
+      if (body.deleteNote) {
+        // only under the name that wrote it (names are typed, not accounts: this stops mix-ups, not a determined person)
+        const id = String(body.deleteNote).slice(0, 40)
+        const raw = await redis(db, ['HGET', NOTES, id])
+        if (!raw) return reply(404, { error: 'That note is gone' })
+        let author = ''
+        try { author = String(JSON.parse(raw).n || '') } catch { /* a broken row: anyone may clear it */ }
+        if (author && author.toLowerCase() !== who.toLowerCase()) return reply(403, { error: 'Only ' + author + ' can delete this note' })
+        await redis(db, ['HDEL', NOTES, id])
+      } else {
         const item = String(body.note.item || '')
         // keep line breaks, drop other control characters
         const text = String(body.note.text ?? '').replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, '').trim()

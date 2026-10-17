@@ -263,6 +263,42 @@
    "width": 1440,
    "height": 960,
    "note": "Listing cover photo (the pool with its waterfall wall), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:villa-take-it-easy-kamala",
+   "ok": true,
+   "file": "assets/raw/hotels-villa-take-it-easy-kamala.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1793188948090198170/original/287b8787-51e4-47e1-91b4-18ac43228e10.jpeg",
+   "page": "https://www.airbnb.com/rooms/1793188948090198170?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Andi",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 1080,
+   "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:88-pool-villa-patong-6br",
+   "ok": true,
+   "file": "assets/raw/hotels-88-pool-villa-patong-6br.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1440355523303519292/original/36c2aea8-edd5-4d4e-aee1-4e584970bbb2.jpeg",
+   "page": "https://www.airbnb.com/rooms/1440355523303519292?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Leky",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 960,
+   "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:oak-tree-villa-patong",
+   "ok": true,
+   "file": "assets/raw/hotels-oak-tree-villa-patong.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1571003872597675708/original/2be75ae9-a95f-448f-a8d8-bbf95cc9a9fd.png",
+   "page": "https://www.airbnb.com/rooms/1571003872597675708?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Mr. Dev",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 958,
+   "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
   }
  ]
 }

@@ -1948,5 +1948,35 @@
   "credit": "© Leky",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1294030803859639888?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:villa-take-it-easy-kamala": {
+  "file": "assets/img/hotels-villa-take-it-easy-kamala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 1080,
+  "credit": "© Andi",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1793188948090198170?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:88-pool-villa-patong-6br": {
+  "file": "assets/img/hotels-88-pool-villa-patong-6br.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Leky",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1440355523303519292?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:oak-tree-villa-patong": {
+  "file": "assets/img/hotels-oak-tree-villa-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 958,
+  "credit": "© Mr. Dev",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1571003872597675708?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

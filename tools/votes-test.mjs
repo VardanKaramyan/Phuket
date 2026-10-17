@@ -374,6 +374,8 @@ await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa details.note-add summary').click()); await sleep(300)
 const focused = await A.p.evaluate(() => document.activeElement === document.querySelector('#ht-alisa-pool-villa .note-form textarea'))
 check('opening Add a note focuses the text box', focused, String(focused))
+const noteLine = await A.p.evaluate(() => [...document.querySelectorAll('details.note-add')].map((d) => getComputedStyle(d).borderTopWidth).filter((w) => w !== '0px').length)
+check('no separator line above Add a note', noteLine === 0, noteLine + ' with a line')
 await A.p.evaluate(() => {
   const d = document.querySelector('#ht-alisa-pool-villa details.note-add'); d.open = true
   d.querySelector('textarea').value = 'Ask if the pool is heated'

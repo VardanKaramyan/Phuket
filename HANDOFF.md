@@ -156,15 +156,17 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - An 18-night plan grouped by phase, phase and place filters, favourites, "My hotels", Hide / Show again on the villa cards, a converter.
   - Google place IDs on 142 links; Directions go to piers or car parks where the pin is in the sea or uphill.
   - Map popups use short texts so they fit a 320×640 phone.
+  - Map (17 Oct 2026): wheel and trackpad zoom glide instead of jumping in 0.25 steps; a full-screen button (top of the map buttons; Esc or the same button exits); Satellite works offline with the EOxCloudless tiles (section 10).
 - **Outputs:**
-  - `dist/`: the offline web app (service worker; not hosted yet).
-  - `dist/phuket-guide-offline.html`: about 8.4 MB single file with photos inside; the copy to keep on the phone. The copy now on the phone is older, so AirDrop the new one (and again after each rebuild).
+  - `dist/`: the offline web app (service worker), set up on Vercel on 17 Oct 2026 (section 9, item 2).
+  - `dist/phuket-guide-offline.html`: about 12.2 MB single file with the photos and the offline satellite tiles inside; the copy to keep on the phone. The copy now on the phone is older, so AirDrop the new one (and again after each rebuild).
   - `artifact/index.html`: the build of the online copy, published as **version 5** (16 Oct 2026, with the Apps page).
   - `dist/phuket-areas.kml`: for Google My Maps.
-- **Tests, last run 16 Oct 2026, all pass:**
+- **Tests, last run 17 Oct 2026, all pass:**
   - `check`: no problems.
-  - `offline-test`: both host styles.
+  - `offline-test`: both host styles, including Satellite with the server stopped.
   - `popup-test`: 27/27.
+  - `map-test`: 9/9 on `dist/index.html` and on the single file.
   - Screenshots in light and dark at 390 and 320 px: no console errors, no sideways scroll, tab bar not covered.
 
 ---
@@ -178,30 +180,33 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 | 3 | `node tools/import-apps.mjs research/result-apps.json` | Apps research → `data/apps.json` (skips if the file is missing). Fixes to apps belong in this script. |
 | 4 | `python3 -I tools/collect-photos.py` | Rebuilds `data/image-picks.json` from `research/photos/<wave>/*.json`. On the old machine it first copies results out of the workflow journals; set `PHUKET_WORKFLOWS_DIR` if needed. **Photos for new items:** list them like `research/photo-items-wave7.json` (key, kind, name, where, gmapsQuery, website, candidates) in `research/photo-items-wave8.json`. Run `tools/workflows/photos.js` with absolute `outDir` (`<folder>/assets/raw`) and `itemsFile`, and `batches` (arrays of keys, about 6 each). Save its result as `research/photos/w8/photos.json` (the whole `~/.claude/projects/*/*/workflows/<run id>.json` file works too), add `'w8': '<run id>'` to `WAVES` in `collect-photos.py`, then run `npm run photos` and `npm run all`. |
 | 5 | `node tools/images.mjs` | `assets/raw/*` → `assets/img/*.webp` (640×360) + `data/images.json` + `data/contact-*.png` contact sheets. `POSITION` and `BAND` set crops by hand. |
+| 5b | `node tools/sat-tiles.mjs` | Downloads the offline satellite tiles (EOxCloudless 2025) for the `AREAS` in the script into `assets/sat/{z}/{x}/{y}.webp` + `assets/sat/coverage.json`. Run once; saved tiles are skipped. The build stops with an error if a listed tile is missing. |
 | 6 | `node tools/geo.mjs` | Only if the map geometry must change: `data/geo/*` (OSM extracts) → `areas.geojson`, `land.geojson`, `roads.geojson`. |
 | 7 | `node tools/check.mjs` | Coordinates on land / inside their area, dates in the window, ids, links. |
 | 8 | `node tools/build.mjs` | Writes `dist/`, `dist/phuket-guide-offline.html`, `artifact/index.html` (+ `artifact/img/`). |
 | 9 | `node tools/offline-test.mjs` | Serves `dist/`, installs the service worker, **stops the server**, reloads, checks everything still works (plain host and a host that redirects `/index.html`). |
 | 10 | `node tools/popup-test.mjs` | Taps "On map" on 9 cards in a row at 390, 360 and 320 px; every popup button must be tappable. |
+| 10b | `node tools/map-test.mjs [html]` | Trackpad-style wheel zoom must glide (15+ small zoom changes, no jump over 0.3); full screen must fill the screen, keep popups tappable, and exit with the button and Esc; with Esri blocked, Satellite must show offline tiles over the whole map at zoom 11, 16 and in Krabi at 13. |
 | 11 | `node tools/qa-shots.mjs [html] [outdir]` | Screenshots: pass at 390 light / 320 dark, every agenda day, phase-filter counts, every Info section, the Apps view, chosen cards (`CARDS=id,id`). The sticky bars are made static so they do not cover content; the Apps view is saved in slices (`apps-1.png`, …). Exits 1 if it found problems. |
 | 12 | `node tools/shoot.mjs <html> <outdir> light\|dark [views…]` | Full-view phone screenshots (`WIDTH=320` for small phones; default views include `apps`, skipped while it is not built); reports console errors, overflow, covered tab bar, and exits 1 if it found any. |
 
-npm shortcuts: `npm run data`, `npm run photos`, `npm run build`, `npm run check`, `npm test`, `npm run qa`, `npm run all`, `npm run serve`. `GUIDE_DATA=<dir> node tools/build.mjs` builds from another data folder (layout tests with sample data; it still writes to `dist/` and `artifact/`).
+npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`, `npm run check`, `npm test` (check, offline, popup and map tests), `npm run test:map`, `npm run qa`, `npm run all`, `npm run serve`. `GUIDE_DATA=<dir> node tools/build.mjs` builds from another data folder (layout tests with sample data; it still writes to `dist/` and `artifact/`).
 
 ## 7. Files
 
 | Path | What |
 | --- | --- |
 | `src/styles.css` | Design tokens (light + dark), layout, components, CSS-only routing for the no-JS case. |
-| `src/app.js` | Router (`VIEWS`), filters (generic: chip `data-group` ↔ card `data-<group>`), favourites, day planner, Leaflet map (vector offline basemap + Esri tiles online), converter, My hotels, hidden villas (`pg:hiddenStays`), Apps ticks, service-worker registration. |
-| `src/sw.js` | Service worker template (precache list and version injected by the build). |
+| `src/app.js` | Router (`VIEWS`), filters (generic: chip `data-group` ↔ card `data-<group>`), favourites, day planner, Leaflet map (vector offline basemap + Esri tiles online; `smoothWheel` for wheel and trackpad zoom, `makeSatPack` for the offline satellite layer, full screen in `initMap`), converter, My hotels, hidden villas (`pg:hiddenStays`), Apps ticks, service-worker registration. |
+| `src/sw.js` | Service worker template (precache list and version injected by the build). Photos and `sat/` tiles are saved one by one; up to `TILE_MAX` (2500) viewed Esri tiles are kept. |
+| `assets/sat/` | The offline satellite tiles and `coverage.json` (tile ranges per zoom, credit line). From `tools/sat-tiles.mjs`; the build copies them to `dist/sat/` and inlines them in the single file. |
 | `tools/trip.mjs` | **The trip dates in one place:** `TRIP` (start, end, last night, flight, phases), `TRIP_DAYS`, `inTrip`, `windowOf`, `phaseOf`, and date words for the copy. The build, import, merge, check and curate scripts all import it. |
 | `tools/build.mjs` | Renders every view to static HTML from `data/*.json`; inlines fonts, CSS, JS and Leaflet; writes the outputs, manifest, icons and KML. `PLAN_PHANGAN` (the nights the plan puts the two of them on Koh Phangan) is plan-specific. |
 | `tools/curate.mjs` | Every editorial fix after import (see the table above). |
 | `tools/merge-late-jan.mjs` | The 19-26 Jan research merge: `TAKE` (fields a re-checked copy replaces), `AFTER` (keeps facts the researchers lacked), `SKIP` (left out on purpose), `NEW_FIX`, `DEAD_LINKS`. |
 | `tools/import.mjs`, `tools/import-apps.mjs` | Research result → data. |
 | `tools/apps-result-from-journal.py` | Rebuilds `research/result-apps.json` from the apps workflow's `journal.jsonl` (section 1, step 0). |
-| `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
+| `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/map-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
 | `tools/images.mjs`, `tools/collect-photos.py`, `tools/photo-items-from-raw.mjs`, `tools/geo.mjs` | Photos and map geometry. `photo-items-from-raw.mjs` overwrites `data/photo-items.json` (142 items instead of 144; `npm run data` writes it back). |
 | `tools/journal-extract.py`, `tools/transcript-digest.py`, `tools/watch-workflows.py` | Helpers for Claude Code workflow journals (only useful on the machine that ran the workflows). |
 | `tools/workflows/` | Workflow scripts. Run one by asking Claude Code to call the Workflow tool with `{ scriptPath: "<absolute path>", args: {…} }`.<br>• `research.js`: the original 8-18 Jan research. `args.root` = project folder; `args.resume` / `args.precomputed` resume a killed run.<br>• `late-january.js`: the 19-26 Jan research. `args.known` = ids already in the guide.<br>• `apps.js`: the apps research (no args).<br>• `photos.js`: the photo hunt. `args.outDir` and `args.itemsFile` as absolute paths, `args.batches` = arrays of item keys.<br>• `qa.js` (`args.project`, `args.shots` = a folder of `light-/dark-<view>.png`) and `qa-2.js` (`args.project`): review rounds.<br>• `handoff-check.js` (`args.project`, `args.tmp`): the fresh-machine test of this handoff.<br>• `handoff-recheck.js` (`args.project`, `args.tmp`, `args.first` = an earlier check's JSON): the second pass that confirms its fixes. |
@@ -257,6 +262,8 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
      ```
    - Set `researchedOn` in `data/extra.json`, then run `npm run all`, republish, and send the new offline file to the phone.
 4. Optional (needs the user's Google account and consent): import `dist/phuket-areas.kml` into Google My Maps.
+5. The artifact (section 8) still has the old map: republish it so it gets the smooth zoom and the full-screen button (it has no satellite there, as before). Ask first.
+6. Known, not fixed: thin light lines along the Esri tile edges on the satellite and street maps (dark lines in dark mode). They were there before 17 Oct 2026; a 1 px tile overlap and whole zoom levels did not remove them, and the offline EOX tiles alone do not show them.
 
 ## 10. Decisions worth knowing
 
@@ -276,6 +283,8 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
   - `dist/` is the real offline app (service worker; Esri tiles cached as you view them).
   - The single file is the backup kept on the phone. iOS Files previews show it without JavaScript, which is why every section renders as static HTML and routes with CSS `:target`.
 - **Map tiles:** CARTO now returns "API KEY REQUIRED" tiles, and OSM's own tiles label Phuket in Thai, so streets and satellite come from Esri. Offline, the map falls back to the bundled vector land, roads and area outlines.
+- **Offline satellite (17 Oct 2026):** Esri's World Imagery page says the layer is not meant for exporting tiles offline (only ArcGIS apps with an org account), so its tiles are not downloaded in advance. The bundled layer is EOxCloudless 2025 (Sentinel-2): CC BY-NC-SA 4.0, free for non-commercial use with the credit shown on the map; 10 m per pixel, so sharp to zoom 14 and blurry past 15. 2025 was picked over 2023 (haze over the sea). Coverage: the whole trip region at zoom 8-10, the Andaman day trips and Koh Phangan / Samui at 11-12, Phuket and the bay islands at 13, Phuket island and Koh Phangan at 14 (769 tiles, 3.6 MB). It sits under the Esri layer, so it also shows while Esri tiles load. A tile missing at one zoom is drawn from the nearest lower zoom.
+- **Wheel zoom (17 Oct 2026):** the user found the map "slow" and "clicky". A benchmark (phone size, CPU slowed 4×) showed touch drag and pinch already at 60 fps; the cause was Leaflet's wheel zoom (40 ms bursts, rounded up to a 0.25 step, each animated: about 2 s of trackpad scrolling for 2 zoom levels). `smoothWheel` moves the map every frame like pinch zoom: 120 px of scrolling per zoom level, ctrl + wheel (a trackpad pinch) at a factor of e per 100 px.
 - **Areas** follow official subdistricts (tambon) clipped to the coastline:
   - Karon, Choeng Thale, Sakhu, Rawai, Wichit and Pa Khlok are split with seed points.
   - Ko Kaeo is left unassigned.

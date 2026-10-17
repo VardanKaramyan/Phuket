@@ -1,10 +1,10 @@
-// Offline cache for the Phuket guide. The page and every photo are saved on install;
-// map tiles are kept as you view them (up to TILE_MAX), so streets you looked at stay visible offline.
+// Offline cache for the Phuket guide. The page, every photo and the offline satellite tiles (sat/) are saved on
+// install; Esri map tiles are kept as you view them (up to TILE_MAX), so streets you looked at stay sharp offline.
 const VERSION = '__VERSION__'
 const PRECACHE = __PRECACHE__
 const CACHE = 'guide-' + VERSION
 const TILES = 'guide-tiles'
-const TILE_MAX = 400
+const TILE_MAX = 2500 // about 50 MB of viewed street and satellite tiles
 const TILE_HOSTS = /(^|\.)arcgisonline\.com$/
 const SCOPE_PATH = new URL('./', self.location).pathname
 
@@ -14,9 +14,10 @@ async function clean(res) {
   return new Response(await res.blob(), { status: res.status, statusText: res.statusText, headers: res.headers })
 }
 
-// the page, manifest and icons must be saved for the install to count; photos are saved one by one and any that
-// fail (a flaky connection) are fetched again the next time they are shown online
-const CORE = PRECACHE.filter((u) => !u.startsWith('img/'))
+// the page, manifest and icons must be saved for the install to count; photos and satellite tiles are saved one by
+// one and any that fail (a flaky connection) are fetched again the next time they are shown online
+const OPTIONAL = (u) => u.startsWith('img/') || u.startsWith('sat/')
+const CORE = PRECACHE.filter((u) => !OPTIONAL(u))
 async function save(c, u) {
   const res = await fetch(new Request(u, { cache: 'reload' }))
   if (!res.ok) throw new Error('precache failed: ' + u)
@@ -26,7 +27,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const c = await caches.open(CACHE)
     await Promise.all(CORE.map((u) => save(c, u)))
-    await Promise.allSettled(PRECACHE.filter((u) => u.startsWith('img/')).map((u) => save(c, u)))
+    await Promise.allSettled(PRECACHE.filter(OPTIONAL).map((u) => save(c, u)))
     await self.skipWaiting()
   })())
 })
@@ -39,7 +40,10 @@ self.addEventListener('activate', (event) => {
   )
 })
 
+// listing a big cache is slow, so trim it once every 50 new tiles
+let added = 0
 async function trimTiles(cache) {
+  if (++added % 50) return
   const keys = await cache.keys()
   if (keys.length > TILE_MAX) await Promise.all(keys.slice(0, keys.length - TILE_MAX).map((k) => cache.delete(k)))
 }
@@ -62,13 +66,13 @@ self.addEventListener('fetch', (event) => {
       })())
       return
     }
-    // other files (photos, icons, the KML, the single-file backup): cache first, then the network;
-    // a photo that is missing from the cache is saved when it loads
+    // other files (photos, satellite tiles, icons, the KML, the single-file backup): cache first, then the network;
+    // a photo or tile that is missing from the cache is saved when it loads
     event.respondWith((async () => {
       const hit = await caches.match(req, { ignoreSearch: true })
       if (hit) return hit
       const res = await fetch(req)
-      if (res.ok && url.pathname.includes('/img/')) { const c = await caches.open(CACHE); c.put(req, res.clone()) }
+      if (res.ok && /\/(img|sat)\//.test(url.pathname)) { const c = await caches.open(CACHE); c.put(req, res.clone()) }
       return res
     })())
     return

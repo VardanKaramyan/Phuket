@@ -294,7 +294,17 @@ html:not(.js) .mapbox { display: none; }
 .basebar { position: absolute; z-index: 600; top: 10px; left: 10px; display: flex; gap: 0; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
 .basebar button { border: 0; background: var(--surface); color: var(--ink); font: 600 12px/1 var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 11px; cursor: pointer; }
 .basebar button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+/* full screen: the map covers the page and the tab bar (the toast stays above it) */
+.mapbox.full { position: fixed; inset: 0; z-index: 950; height: auto; min-height: 0; margin: 0; border: 0; }
+html.map-full, html.map-full body { overflow: hidden; }
+.mapbox.full .basebar { top: calc(10px + env(safe-area-inset-top, 0px)); left: calc(10px + env(safe-area-inset-left, 0px)); }
+.mapbox.full .maptools { top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(10px + env(safe-area-inset-right, 0px)); }
+.mapbox.full .layerbar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+.mapbox.full .leaflet-bottom.leaflet-right { bottom: calc(52px + env(safe-area-inset-bottom, 0px)); }
+#map-full .i-exit, .mapbox.full #map-full .i-enter { display: none; }
+.mapbox.full #map-full .i-exit { display: block; }
 .leaflet-container { background: var(--map-sea); font-family: var(--font-body); }
+.sat-pack .leaflet-tile { width: 256.5px !important; height: 256.5px !important; background-repeat: no-repeat; }
 .dim-tiles .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.88) contrast(0.92) saturate(0.8); }
 .offline-state { font-weight: 600; }
 .offline-state.good { color: var(--good-ink); }

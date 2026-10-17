@@ -230,6 +230,7 @@
   const tabs = $$('.tabbar a')
   let current = null
   function show(view, focusEl) {
+    if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
@@ -258,7 +259,7 @@
   window.addEventListener('hashchange', route)
 
   /* ---------- map ---------- */
-  let map = null, layers = {}, markers = {}, bases = {}, base = null, pendingFocus = null, waitingForLeaflet = false
+  let map = null, layers = {}, markers = {}, bases = {}, base = null, pendingFocus = null, waitingForLeaflet = false, satPack = null, exitFull = null
   const cssVar = (n) => getComputedStyle(root).getPropertyValue(n).trim()
   function restyleMap() {
     if (!map) return
@@ -286,20 +287,29 @@
   function setBase(name, byUser) {
     if (!map) return
     Object.values(bases).forEach((l) => l && map.removeLayer(l))
+    if (satPack) map.removeLayer(satPack)
     base = name
     // the vector land and roads sit under the tile pane: real tiles cover them, and they fill any gaps offline
     if (name !== 'simple') {
       const t = name === 'satellite' ? D.tiles.satellite : D.tiles.streets
-      let ok = 0, bad = 0
+      // satellite: the saved offline tiles sit under the Esri ones, so they show at once and stand in for them offline
+      const pack = name === 'satellite' ? satPack : null
+      let ok = 0, bad = 0, told = false
       const layer = L.tileLayer(t.url, { attribution: t.attr, maxZoom: 19, maxNativeZoom: t.maxNative || 19, crossOrigin: true })
+      const reset = () => { ok = 0; bad = 0 }
       layer.on('tileload', () => { ok++ })
       layer.on('tileerror', () => {
         bad++
-        if (bad === 4 && ok === 0) { setBase('simple'); toast('No map tiles here right now. Showing the offline map.') }
+        if (bad !== 4 || ok !== 0) return
+        if (!pack) { setBase('simple'); toast('No map tiles here right now. Showing the offline map.') }
+        else if (!told) { told = true; toast('No internet: showing the saved satellite map. It is less sharp up close.') }
       })
-      map.on('movestart', () => { ok = 0; bad = 0 })
+      map.on('movestart', reset)
+      layer.on('remove', () => map.off('movestart', reset))
+      if (pack) pack.addTo(map)
       bases[name] = layer.addTo(map)
       layer.bringToBack()
+      if (pack) pack.bringToBack()
     }
     $$('.basebar button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.base === base)))
     // street tiles only come in a light style; invert them for dark mode
@@ -319,6 +329,81 @@
       if (hit) x.s.style.visibility = 'hidden'; else kept.push(r)
     }
   }
+  // Wheel and trackpad zoom that follows the fingers. Leaflet's own wheel zoom collects 40 ms of scrolling, rounds it
+  // up to a zoomSnap step and animates each step, so a trackpad zooms in slow, clicky jumps. This eases towards the
+  // wanted zoom every frame the way pinch zoom does (map._move with pinch: true), keeps the place under the pointer
+  // still, and settles on the zoom snap once the wheel stops.
+  function smoothWheel(m) {
+    const el = m.getContainer()
+    let active = false, goal = 0, z = 0, anchor = null, offset = null, raf = 0, idle = 0
+    const centerFor = (zz) => m.unproject(m.project(anchor, zz).subtract(offset), zz)
+    const end = () => {
+      active = false
+      const zz = m._limitZoom(z)
+      if (m.options.zoomAnimation) m._animateZoom(centerFor(zz), zz, true, m.options.zoomSnap)
+      else m._resetView(centerFor(zz), zz)
+    }
+    const frame = () => {
+      raf = 0
+      z = Math.abs(goal - z) < 0.01 ? goal : z + (goal - z) * 0.3
+      m._move(centerFor(z), z, { pinch: true, round: false })
+      if (z !== goal) raf = requestAnimationFrame(frame)
+      else if (!idle) end()
+    }
+    el.addEventListener('wheel', (e) => {
+      e.preventDefault() // the page must not scroll or zoom under the map
+      if (!active && m._animatingZoom) return
+      const r = el.getBoundingClientRect()
+      const pt = L.point(e.clientX - r.left, e.clientY - r.top)
+      if (!active) { m._stop(); active = true; z = goal = m.getZoom(); m._moveStart(true, false) }
+      anchor = m.containerPointToLatLng(pt)
+      offset = pt.subtract(m.getSize().divideBy(2))
+      // pixels: 120 per zoom level for a wheel or a two-finger scroll; ctrl + wheel is a trackpad pinch, which Chrome
+      // and Firefox scale so that 100 px is a factor of e
+      const px = e.deltaY * (e.deltaMode === 1 ? 20 : e.deltaMode === 2 ? 400 : 1)
+      const dz = Math.max(-1, Math.min(1, -px / (e.ctrlKey ? 69.3 : 120)))
+      goal = Math.max(m.getMinZoom(), Math.min(m.getMaxZoom(), goal + dz))
+      if (!raf) raf = requestAnimationFrame(frame)
+      clearTimeout(idle)
+      idle = setTimeout(() => { idle = 0; if (active && !raf) end() }, 160)
+    }, { passive: false })
+  }
+  // The offline satellite layer (EOxCloudless tiles saved with the guide, up to zoom 14). Where this zoom has no saved
+  // tile, the nearest lower-zoom tile is shown enlarged, so the whole trip area has a picture at every zoom.
+  function makeSatPack() {
+    const o = D.tiles && D.tiles.offline
+    if (!o) return null
+    let inline = null
+    if (o.inline) { try { inline = JSON.parse($('#sat-data').textContent) } catch { return null } }
+    const has = (z, x, y) => (o.ranges[z] || []).some((r) => x >= r[0] && x <= r[1] && y >= r[2] && y <= r[3])
+    const best = (c) => {
+      for (let z = Math.min(c.z, o.maxZoom); z >= o.minZoom; z--) {
+        const d = c.z - z, x = c.x >> d, y = c.y >> d
+        if (has(z, x, y)) return { z, x, y, d }
+      }
+      return null
+    }
+    const src = (t) => (inline ? inline[t.z + '/' + t.x + '/' + t.y] : o.url.replace('{z}', t.z).replace('{x}', t.x).replace('{y}', t.y))
+    const Pack = L.GridLayer.extend({
+      _isValidTile(c) { return !!best(c) && L.GridLayer.prototype._isValidTile.call(this, c) },
+      createTile(c, done) {
+        const tile = document.createElement('div')
+        const a = best(c), n = 1 << a.d
+        const im = new Image()
+        im.onload = () => {
+          tile.style.backgroundImage = 'url("' + im.src + '")'
+          tile.style.backgroundSize = n * 100 + '%'
+          // the part of the bigger tile that this tile covers
+          if (n > 1) tile.style.backgroundPosition = ((c.x - (a.x << a.d)) / (n - 1)) * 100 + '% ' + ((c.y - (a.y << a.d)) / (n - 1)) * 100 + '%'
+          done(null, tile)
+        }
+        im.onerror = () => done(new Error('offline tile missing'), tile)
+        im.src = src(a)
+        return tile
+      },
+    })
+    return new Pack({ className: 'sat-pack', maxNativeZoom: o.maxZoom, attribution: o.attr })
+  }
   function initMap() {
     if (map) return
     if (typeof L === 'undefined') {
@@ -337,8 +422,10 @@
       return
     }
     const anim = !reduceMotion
-    map = L.map('map', { zoomControl: false, attributionControl: true, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: 8, maxZoom: 18, maxBounds: [[6.9, 97.6], [10.3, 100.6]], zoomAnimation: anim, fadeAnimation: anim, markerZoomAnimation: anim })
+    map = L.map('map', { zoomControl: false, attributionControl: true, scrollWheelZoom: false, zoomSnap: 0.25, zoomDelta: 0.5, minZoom: 8, maxZoom: 18, maxBounds: [[6.9, 97.6], [10.3, 100.6]], zoomAnimation: anim, fadeAnimation: anim, markerZoomAnimation: anim })
     map.attributionControl.setPrefix(false)
+    smoothWheel(map)
+    satPack = makeSatPack()
     map.attributionControl.addAttribution('© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>')
     map.createPane('landPane').style.zIndex = 150 // under the tile pane (200)
     map.createPane('roadsPane').style.zIndex = 160
@@ -380,7 +467,8 @@
     const bb = $('.basebar'); if (bb) bb.hidden = !canTiles
     $$('.basebar button').forEach((b) => b.addEventListener('click', () => setBase(b.dataset.base, true)))
     const chosen = store.get('base', null)
-    setBase(canTiles && navigator.onLine ? (chosen || 'streets') : 'simple')
+    // offline: the plain map, or the saved satellite tiles when Satellite was the last choice
+    setBase(!canTiles ? 'simple' : navigator.onLine ? (chosen || 'streets') : chosen === 'satellite' && satPack ? 'satellite' : 'simple')
     if (canTiles && !navigator.onLine && chosen !== 'simple' && 'caches' in window) {
       // offline but street tiles were saved while browsing: use them, the error fallback covers gaps
       caches.open('guide-tiles').then((c) => c.keys()).then((k) => { if (k.length > 10) setBase(chosen || 'streets') }).catch(() => {})
@@ -396,6 +484,34 @@
     $('#map-zoom-in')?.addEventListener('click', () => map.zoomIn())
     $('#map-zoom-out')?.addEventListener('click', () => map.zoomOut())
     $('#map-fit')?.addEventListener('click', () => fitHome(!reduceMotion))
+    // full screen: the map box covers the page (CSS), and the browser's own full screen hides its bars where it
+    // exists (Android, desktop); iPhone Safari has no full screen for pages, so there it is the CSS part alone
+    const box = mapEl.parentElement, fullBtn = $('#map-full')
+    const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement
+    const quiet = (fn, ctx) => { try { const r = fn && fn.call(ctx); if (r && r.catch) r.catch(() => {}) } catch { /* not available */ } }
+    const setFull = (on) => {
+      if (box.classList.contains('full') === on) return
+      box.classList.toggle('full', on)
+      root.classList.toggle('map-full', on)
+      if (fullBtn) { fullBtn.setAttribute('aria-pressed', String(on)); fullBtn.setAttribute('aria-label', on ? 'Exit full screen' : 'Full screen') }
+      if (!on && fsEl()) quiet(document.exitFullscreen || document.webkitExitFullscreen, document)
+      map.invalidateSize()
+    }
+    exitFull = () => setFull(false)
+    fullBtn?.addEventListener('click', () => {
+      const on = !box.classList.contains('full')
+      setFull(on)
+      if (on && !fsEl()) quiet(box.requestFullscreen || box.webkitRequestFullscreen, box)
+    })
+    ;['fullscreenchange', 'webkitfullscreenchange'].forEach((ev) => document.addEventListener(ev, () => {
+      if (!fsEl()) setFull(false)
+      setTimeout(() => map.invalidateSize(), 60) // the browser bars come and go after the event
+    }))
+    // Esc in full screen closes an open popup first, then full screen
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || !box.classList.contains('full')) return
+      if (box.classList.contains('popup-open')) map.closePopup(); else setFull(false)
+    })
     const locBtn = $('#map-locate')
     if (locBtn) {
       if (!('geolocation' in navigator) || D.build === 'artifact') locBtn.hidden = true
@@ -547,13 +663,19 @@
       clearTimeout(timer)
       navigator.storage?.persist?.().catch(() => {})
       // count what is really in the cache: photos that failed during install are fetched again as you browse online
-      let missing = 0
+      let missing = 0, missingSat = 0
       try {
         const key = (await caches.keys()).find((k) => k.startsWith('guide-') && k !== 'guide-tiles')
-        if (key) missing = Math.max(0, (D.precacheCount || 0) - (await (await caches.open(key)).keys()).length)
+        if (key) {
+          const keys = (await (await caches.open(key)).keys()).map((r) => new URL(r.url).pathname)
+          const sat = keys.filter((p) => p.includes('/sat/')).length
+          missing = Math.max(0, (D.precacheCount || 0) - (keys.length - sat))
+          missingSat = Math.max(0, (D.satCount || 0) - sat)
+        }
       } catch { /* cache API not available */ }
       if (ios && !standalone) setOff('Saved in Safari for now. Add it to your Home Screen to keep it: Safari clears sites you have not opened for a week.', false)
       else if (missing > 0) setOff('Saved for offline use, but ' + missing + (missing === 1 ? ' photo is' : ' photos are') + ' missing. Open the guide again on good Wi-Fi.', false)
+      else if (missingSat > 0) setOff('Saved for offline use, but part of the offline satellite map is missing. Open the guide again on good Wi-Fi.', false)
       else setOff('Saved for offline use on this phone.', true)
     }).catch(() => { clearTimeout(timer); setOff('Offline saving is not available in this browser.', false) })
     navigator.serviceWorker.addEventListener('controllerchange', () => {

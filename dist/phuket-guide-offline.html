@@ -3761,6 +3761,23 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 
   /* ---------- router ---------- */
   const tabs = $$('.tabbar a')
+  /* ---------- Vercel Web Analytics (website only): visitors, countries, devices, and each tab and villa opened ---------- */
+  // the guide changes page by #hash, which Vercel's script does not notice, so each tab and villa is sent as its own page
+  const vercelVa = (() => {
+    if (!D.votes || location.protocol !== 'https:') return false
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments) }
+    const s = document.createElement('script')
+    s.src = '/_vercel/insights/script.js'; s.defer = true; s.dataset.disableAutoTrack = '1'
+    document.head.appendChild(s)
+    return true
+  })()
+  let lastPage = ''
+  function pageview(view, focusEl) {
+    const path = '/' + view + (focusEl && focusEl.id ? '/' + focusEl.id : '')
+    if (!vercelVa || path === lastPage) return
+    lastPage = path
+    window.va('pageview', { route: path, path })
+  }
   let current = null
   function show(view, focusEl) {
     if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
@@ -3771,6 +3788,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     if (view === 'stats' && current !== 'stats') renderStats()
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
+    pageview(view, focusEl)
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
     tabs.forEach((a) => { if (a.getAttribute('href') === '#' + view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current') })
     if (view === 'areas') initMap()

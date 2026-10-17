@@ -238,7 +238,7 @@
   function show(view, focusEl) {
     if (exitFull) exitFull() // a link in a map popup opens a card: show the page again
     syncBack(view)
-    if (view === 'stay' && current !== 'stay') sortByLikes(true) // coming to the villas: put them in like order now
+    if (view === 'stay' && current !== 'stay') sortStays(true) // coming to the villas: put them in order now
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     VIEWS.forEach((v) => { const el = document.getElementById(v); if (el) el.hidden = v !== view })
@@ -389,11 +389,12 @@
   }
   // The offline satellite layer (EOxCloudless tiles saved with the guide, up to zoom 14). Where this zoom has no saved
   // tile, the nearest lower-zoom tile is shown enlarged, so the whole trip area has a picture at every zoom.
+  let satInline = null // the single file's tiles, read once (the big map and the villa maps share them)
   function makeSatPack() {
     const o = D.tiles && D.tiles.offline
     if (!o) return null
     let inline = null
-    if (o.inline) { try { inline = JSON.parse($('#sat-data').textContent) } catch { return null } }
+    if (o.inline) { try { inline = satInline || (satInline = JSON.parse($('#sat-data').textContent)) } catch { return null } }
     const has = (z, x, y) => (o.ranges[z] || []).some((r) => x >= r[0] && x <= r[1] && y >= r[2] && y <= r[3])
     const best = (c) => {
       for (let z = Math.min(c.z, o.maxZoom); z >= o.minZoom; z--) {
@@ -788,7 +789,7 @@
       })
       $('.voters', bar).textContent = [it.like.length ? 'Like: ' + it.like.join(', ') : '', it.skip.length ? 'Skip: ' + it.skip.join(', ') : ''].filter(Boolean).join(' · ')
     })
-    sortByLikes()
+    sortStays()
     // Group picks: the villas with likes, most first (fewer skips breaks a tie)
     const box = $('#group-picks-box'), list = $('#group-picks')
     if (!box || !list) return
@@ -799,18 +800,49 @@
     list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
       (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
   }
-  // the villa list follows the votes: most likes first, then fewer skips, then the guide's own order (listFirst
-  // first). It is only re-sorted while you are not reading it, so cards do not move under your finger; otherwise it
-  // waits until you next open the villas
+  // the villa list order. Once someone has moved a villa (Move up / down), that order is the list for everyone; until
+  // then the list follows the likes: most first, then fewer skips, then the guide's own order (listFirst first).
+  // Other people's changes only re-sort it while you are not reading it, so cards do not move under your finger
   const stayList = $('[data-list="stay"]')
   const stayCards = stayList ? $$(':scope > .card', stayList) : [] // in the guide's order
-  function sortByLikes(now) {
+  let order = canVote ? store.get('villaOrder', null) : null // { ids, by, t }, the last order loaded
+  function sortStays(now) {
     if (!stayList || !votes) return
     const view = document.getElementById('stay')
     if (!now && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
     const it = (c) => votes['ht:' + c.dataset.stay] || { like: [], skip: [] }
-    const order = stayCards.slice().sort((a, b) => it(b).like.length - it(a).like.length || it(a).skip.length - it(b).skip.length || stayCards.indexOf(a) - stayCards.indexOf(b))
-    if (order.some((c, i) => stayList.children[i] !== c)) order.forEach((c) => stayList.appendChild(c))
+    const pos = order && Array.isArray(order.ids) ? new Map(order.ids.map((id, i) => [id, i])) : null
+    // a villa added after the order was saved goes after the ordered ones, in the guide's order
+    const at = (c) => (pos.has(c.dataset.stay) ? pos.get(c.dataset.stay) : 1e6 + stayCards.indexOf(c))
+    const sorted = stayCards.slice().sort(pos ? (a, b) => at(a) - at(b)
+      : (a, b) => it(b).like.length - it(a).like.length || it(a).skip.length - it(b).skip.length || stayCards.indexOf(a) - stayCards.indexOf(b))
+    if (sorted.some((c, i) => stayList.children[i] !== c)) sorted.forEach((c) => stayList.appendChild(c))
+  }
+  // the order after moving a card past the next villa that is on the list (hidden and filtered-out ones are skipped)
+  function moved(card, dir) {
+    const cards = [...stayList.children], i = cards.indexOf(card)
+    let j = i
+    do { j += dir === 'up' ? -1 : 1 } while (cards[j] && cards[j].hidden)
+    if (!cards[j]) return null
+    cards.splice(i, 1); cards.splice(j, 0, card)
+    return cards.map((c) => c.dataset.stay)
+  }
+  async function moveStay(card, dir, name) {
+    const ids = moved(card, dir)
+    if (!ids) { toast(dir === 'up' ? 'Already at the top' : 'Already at the bottom'); return }
+    const before = order
+    order = { ids, by: name, t: Date.now() }
+    sortStays(true)
+    card.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' })
+    try {
+      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, order: ids }) })
+      if (!r.ok) throw new Error('order ' + r.status)
+      applyShared(await r.json())
+      toast('Moved ' + dir + ' for everyone')
+    } catch {
+      order = before; sortStays(true)
+      toast(navigator.onLine ? 'Could not move it. Try again in a minute.' : 'This needs internet.')
+    }
   }
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return
@@ -823,6 +855,8 @@
   // what the server sent: everyone's votes and the villas hidden for everyone
   function applyShared(j) {
     votes = j.votes || {}; store.set('votes', votes)
+    if ('order' in j) { order = j.order; store.set('villaOrder', order) }
+    $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
     if (j.hidden) {
       hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
       hiddenStays.clear(); Object.keys(hiddenBy).forEach((k) => hiddenStays.add(k.slice(3)))
@@ -831,8 +865,9 @@
     renderVotes()
   }
   const NOTE_VOTE = 'Everyone with the guide sees the names. One vote per name.'
-  function openDialog({ title, what, save, note, body, done }) {
-    pending = { body, done }
+  // run: instead of sending bodies, do this with the name (moving a villa)
+  function openDialog({ title, what, save, note, body, done, run }) {
+    pending = { body, done, run }
     $('#vote-title').textContent = title
     $('#vote-what').textContent = what
     $('#vote-note').textContent = note
@@ -864,11 +899,19 @@
       })
     })
     $('[data-vote-cancel]', dlg).addEventListener('click', () => { pending = null; dlg.close() })
+    // Move up / down: one tap once the guide knows your name (the first time it asks, like a vote)
+    document.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-move-stay]'); if (!b) return
+      const card = b.closest('.card'), dir = b.dataset.moveStay
+      if (voterName()) { moveStay(card, dir, voterName()); return }
+      openDialog({ title: 'Move ' + dir + ' for everyone', what: card.dataset.name, save: 'Move ' + dir, note: 'Moves change the villa order for the whole group. The guide remembers your name for the next move.', run: (n) => moveStay(card, dir, n) })
+    })
     $('#vote-form').addEventListener('submit', async (e) => {
       e.preventDefault()
       const name = $('#vote-name').value.replace(/\s+/g, ' ').trim()
       if (!name || !pending) return
-      const { body, done } = pending
+      const { body, done, run } = pending
+      if (run) { store.set('voterName', name); pending = null; dlg.close(); run(name); return }
       const bodies = body(name) // before the name is remembered: taking back a vote compares with the last name
       store.set('voterName', name)
       pending = null; dlg.close()
@@ -890,6 +933,33 @@
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
     setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 30000)
   }
+
+  /* ---------- a villa's own small map, in its Show on map accordion ---------- */
+  // drawn the first time it opens, with the same picture as the big map: street or satellite tiles online, the saved
+  // satellite tiles offline (or the plain land map); a soft circle says the pin is approximate
+  document.addEventListener('toggle', (e) => {
+    const d = e.target
+    if (!(d instanceof HTMLDetailsElement) || !d.open || !d.matches('[data-mini-map]')) return
+    const box = $('.mini-map', d)
+    if (!box || typeof L === 'undefined') return
+    if (box.leafletMap) { box.leafletMap.invalidateSize(); return }
+    const ll = [Number(d.dataset.lat), Number(d.dataset.lng)]
+    const m = L.map(box, { zoomControl: true, attributionControl: true, scrollWheelZoom: false, zoomSnap: 0.5, minZoom: 8, maxZoom: 18 }).setView(ll, 14)
+    box.leafletMap = m
+    m.attributionControl.setPrefix(false)
+    const online = navigator.onLine && D.build !== 'artifact'
+    const chosen = store.get('base', 'streets')
+    const pack = D.build !== 'artifact' && (!online || chosen === 'satellite') ? makeSatPack() : null
+    if (pack) pack.addTo(m)
+    if (online && D.tiles) {
+      const t = chosen === 'satellite' ? D.tiles.satellite : D.tiles.streets
+      L.tileLayer(t.url, { attribution: t.attr, maxZoom: 19, maxNativeZoom: t.maxNative || 19, crossOrigin: true }).addTo(m)
+      m.getContainer().classList.toggle('dim-tiles', chosen !== 'satellite' && isDark())
+    } else if (!pack && D.land) L.geoJSON(D.land, { interactive: false, style: { fillColor: cssVar('--map-land'), fillOpacity: 1, color: cssVar('--map-line'), weight: 1 } }).addTo(m)
+    L.circle(ll, { radius: 300, color: cssVar('--violet'), weight: 1.5, dashArray: '4 4', fillOpacity: 0.12, interactive: false }).addTo(m)
+    L.circleMarker(ll, dotStyle('hotel')).addTo(m)
+    requestAnimationFrame(() => m.invalidateSize())
+  }, true)
 
   syncHiddenStays()
   syncFavs()

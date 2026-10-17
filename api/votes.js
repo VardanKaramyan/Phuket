@@ -4,9 +4,14 @@
 //   GET  /api/votes  -> { votes: { 'ht:<id>': { like: ['Ani'], skip: [] }, ... }, hidden: { 'ht:<id>': { by: 'Gor', t } } }
 //   POST /api/votes { item, name, vote: 'like' | 'skip' | null }  -> the same, after the change (null takes it back)
 //   POST /api/votes { item: 'ht:<id>', name, hide: true | false } -> hides the villa for everyone, or shows it again
+//   POST /api/votes { name, order: ['<villa id>', …] }           -> the villa list order for everyone (Move up / down)
+// GET and every POST answer with { votes, hidden, order: { ids, by, t } | null }.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
+const META = 'guide:meta' // one Redis hash: field "order", value { ids, n, t } (the villa order, who moved last)
+const VILLA = /^[a-z0-9][a-z0-9-]{0,80}$/
+const MAX_ORDER = 300
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -51,7 +56,12 @@ async function hiddenVillas(db) {
   for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); hidden[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
   return hidden
 }
-const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db) })
+async function villaOrder(db) {
+  const flat = (await redis(db, ['HGETALL', META])) || []
+  for (let i = 0; i < flat.length; i += 2) if (flat[i] === 'order') { try { const x = JSON.parse(flat[i + 1]); return { ids: x.ids, by: x.n, t: x.t } } catch { /* broken */ } }
+  return null
+}
+const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db), order: await villaOrder(db) })
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 
 export async function GET() {
@@ -65,6 +75,17 @@ export async function POST(request) {
   if (!db) return NO_DB()
   let body
   try { body = await request.json() } catch { return reply(400, { error: 'Send JSON: { item, name, vote }' }) }
+  // the villa order: the whole list as the person sees it after a move (the client works out the move)
+  if (body && Array.isArray(body.order)) {
+    const ids = body.order.map(String)
+    const who = String(body.name ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
+    if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+    if (!ids.length || ids.length > MAX_ORDER || new Set(ids).size !== ids.length || !ids.every((x) => VILLA.test(x))) return reply(400, { error: 'The order is a list of villa ids, each once' })
+    try {
+      await redis(db, ['HSET', META, 'order', JSON.stringify({ ids, n: who, t: Date.now() })])
+      return reply(200, await everything(db))
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
   const item = String(body?.item || '')
   // a name as typed, without control characters or extra spaces
   const name = String(body?.name ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()

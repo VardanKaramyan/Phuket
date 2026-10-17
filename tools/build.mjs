@@ -99,6 +99,8 @@ const ICON = {
   skip: '<path d="M7.5 13.5v-9h-3v9zM7.5 13.5l3.6 6.8c1.4 0 2.4-1.1 2.1-2.5l-.7-3.3h5.2a2 2 0 0 0 2-2.3l-1.1-6.3a2 2 0 0 0-2-1.7H7.5"/>',
   back: '<path d="M10 6l-6 6 6 6M4.5 12H20"/>',
   next: '<path d="M14 6l6 6-6 6M19.5 12H4"/>',
+  up: '<path d="M12 19.5V5M6 11l6-6 6 6"/>',
+  down: '<path d="M12 4.5V19M6 13l6 6 6-6"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
 
@@ -336,6 +338,16 @@ function bedFit(h) {
   return { key: 'warn', text: 'Some share a bed' }
 }
 const BED_CHIPS = [['good', 'A bed each'], ['warn', 'Some share'], ['bad', '2 to a bed']]
+// Show on map: a small map of the villa inside the card (src/app.js draws it when the accordion opens), the big map,
+// and Google Maps; without JavaScript only the Google Maps link shows
+function villaMap(h) {
+  if (lowConf(h) || !Number.isFinite(+h.lat)) return ''
+  const approx = /approximate/i.test(h.coordSource || '') ? '<p class="note">The pin is approximate: Airbnb sends the address after booking.</p>' : ''
+  return `<details class="more mapacc" data-mini-map data-lat="${+h.lat}" data-lng="${+h.lng}"><summary>${icon('areas')}Show on map</summary>` +
+    `<div class="mini-map js-only" role="img" aria-label="${esc('Map of where ' + h.name + ' is')}"></div>${approx}` +
+    `<div class="actions"><button class="btn primary js-only" type="button" data-on-map="hotel:${esc(h.id)}">${icon('areas')}Open the big map</button>` +
+    `<a class="btn" href="${gmaps(h.gmapsQuery || h.name, h.placeId)}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a></div></details>`
+}
 function bedRow(h) {
   const fit = bedFit(h)
   if (!fit) return ''
@@ -344,15 +356,17 @@ function bedRow(h) {
 }
 function priceBox(h) {
   const pr = priceOf(h)
-  const onMap = lowConf(h) ? '' : `<button class="btn js-only" type="button" data-on-map="hotel:${esc(h.id)}">${icon('areas')}On map</button>`
-  if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div>${onMap}</div>`
+  if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div></div>`
   // data-noamd: the dram amounts here are written out, not added by tools/amd.mjs; drams first in the breakdown
   const row = (label, n) => `<dt>${esc(label)}</dt><dd>${amdRate ? `<b>${amd.amount(n)}</b><span>${thb(n)}</span>` : `<b>${thb(n)}</b>`}</dd>`
-  return `<div class="price-box" data-noamd><div class="price-head"><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}</div>${onMap}</div>` +
+  return `<div class="price-box" data-noamd><div class="price-head"><div><span class="price-label">${pr.nights} nights · all fees</span><b class="price-total">${thb(pr.total)}</b>${amdRate ? `<span class="price-amd">${amd.amount(pr.total)}</span>` : ''}</div></div>` +
     `<dl class="price-split">${row('Per person per day', pr.perPerson)}${row(`Per person, ${pr.nights} days`, pr.perPersonStay)}${row('Whole villa per day', pr.perNight)}</dl></div>`
 }
 // listFirst (data/stays.json): the villas the user put at the top, in that order; then by area, rooms on sale, price
 const hotelsSorted = hotels.slice().sort((a, b) => (a.listFirst ?? 99) - (b.listFirst ?? 99) || ZONES.findIndex((z) => z[0] === zoneOf(a)) - ZONES.findIndex((z) => z[0] === zoneOf(b)) || (a.noRoomsOnTrip ? 1 : 0) - (b.noRoomsOnTrip ? 1 : 0) || (hotelOrder[a.tier] ?? 9) - (hotelOrder[b.tier] ?? 9))
+// Move up / down: the villa order for everyone, kept by the vote server (website only: src/app.js shows them)
+const moveBtns = (h) => `<button class="btn square js-only" type="button" data-move-stay="up" hidden aria-label="${esc('Move ' + h.name + ' up')}">${icon('up')}</button>` +
+  `<button class="btn square js-only" type="button" data-move-stay="down" hidden aria-label="${esc('Move ' + h.name + ' down')}">${icon('down')}</button>`
 function hotelCard(h, mode) {
   const tierKey = h.tier === 'hostel' ? 'budget hostel' : h.tier
   const extraBtns = isUrl(h.website) ? `<a class="btn" href="${esc(h.website)}" target="_blank" rel="noopener">${icon('globe')}${esc(h.websiteLabel || 'Website')}</a>` : ''
@@ -365,12 +379,13 @@ ${villaMedia(h, mode)}<div class="tag-top"><span class="pill ${h.tier === 'luxur
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
 ${bedRow(h)}
 ${priceBox(h)}
+${villaMap(h)}
 <p class="desc">${esc(h.whyStay)}</p>
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
 ${facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
 ${voteBar('ht:' + h.id, h.name)}
-${actionRow({ item: h, mapKey: 'hotel:' + h.id, fav: 'ht:' + h.id, extraBtns: extraBtns + hideBtn })}
+<div class="actions">${extraBtns}${hideBtn}${moveBtns(h)}<button class="btn square fav js-only" type="button" data-fav="ht:${esc(h.id)}" aria-pressed="false" aria-label="${esc('Save ' + h.name)}">${icon('star')}</button></div>
 </div></article>`
 }
 
@@ -616,7 +631,7 @@ function stayView(mode) {
 <button class="btn primary" type="submit">${icon('plus')}Add hotel</button>
 </form></div>
 <div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
-<p class="note">Villas the group liked, most likes first. The list below follows the likes too. Tap Like or Skip on a card to vote.</p>
+<p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote, and the arrows to move a villa up or down the list for everyone.</p>
 <ol class="picks" id="group-picks"></ol></div>
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <div class="toolbar" data-toolbar="stay">

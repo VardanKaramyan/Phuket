@@ -225,7 +225,7 @@ html:not(.js) .js-only { display: none !important; }
 .price-box.none .price-total { font-size: 20px; color: var(--alert); white-space: normal; }
 
 /* Show on map: the villa's own small map inside the card */
-.mini-map { height: 220px; margin: 6px 0 10px; border-radius: 10px; overflow: hidden; background: var(--map-sea); isolation: isolate; }
+.mini-map { height: clamp(300px, 55vh, 460px); margin: 6px 0 10px; border-radius: 10px; overflow: hidden; background: var(--map-sea); isolation: isolate; }
 details.mapacc summary svg { width: 16px; height: 16px; }
 /* shared notes: on a villa (its Notes accordion) and for the whole group (Group notes on the Trip page) */
 .notes-list, details.more .notes-list { list-style: none; margin: 6px 0 10px; padding: 0; display: grid; gap: 8px; }

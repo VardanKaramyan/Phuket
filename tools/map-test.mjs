@@ -153,9 +153,16 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   const back = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent, btn: !document.getElementById('back-to-map').hidden }))
   check('Back to map reopens the same villa', back.hash === '#areas' && /Mouana/.test(back.popup || '') && !back.btn, JSON.stringify(back))
   await p.evaluate(() => { __map.closePopup(); location.hash = 'stay' }); await sleep(500)
-  await p.evaluate(() => document.querySelector('#ht-patong-villa-5br-game-room .price-box [data-on-map]').click()); await sleep(1500)
+  // Show on map: the card's own small map, drawn when the accordion opens, then the big map from there
+  await p.evaluate(() => { const d = document.querySelector('#ht-patong-villa-5br-game-room details.mapacc'); d.scrollIntoView(); d.open = true }); await sleep(1500)
+  const mini = await p.evaluate(() => {
+    const box = document.querySelector('#ht-patong-villa-5br-game-room .mini-map'), r = box.getBoundingClientRect()
+    return { drawn: !!box.querySelector('.leaflet-pane'), pin: box.querySelectorAll('path.leaflet-interactive, svg path').length, h: Math.round(r.height), w: Math.round(r.width) }
+  })
+  check('Show on map draws the villa on a small map in the card', mini.drawn && mini.pin >= 2 && mini.h >= 200 && mini.w > 200, JSON.stringify(mini))
+  await p.evaluate(() => document.querySelector('#ht-patong-villa-5br-game-room .mapacc [data-on-map]').click()); await sleep(1500)
   const fromCard = await p.evaluate(() => ({ hash: location.hash, popup: document.querySelector('.leaflet-popup h4')?.textContent }))
-  check('On map in the price box opens the villa on the map', fromCard.hash === '#areas' && /Patong Villa/.test(fromCard.popup || ''), JSON.stringify(fromCard))
+  check('Open the big map opens the villa on the Areas map', fromCard.hash === '#areas' && /Patong Villa/.test(fromCard.popup || ''), JSON.stringify(fromCard))
   if (errors.length) check('no page errors (villas)', false, errors.join(' | '))
   await p.close()
 }

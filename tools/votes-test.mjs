@@ -26,7 +26,7 @@ const upstash = http.createServer((req, res) => {
     if (cmd === 'EXPIRE') { res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result: 1 })) }
     if (['GET', 'SET', 'INCR'].includes(cmd)) {
       if (cmd === 'GET') result = strings.has(key) ? strings.get(key) : null
-      else if (cmd === 'SET') { strings.set(key, String(a[0])); result = 'OK' }
+      else if (cmd === 'SET') { if (a.includes('NX') && strings.has(key)) result = null; else { strings.set(key, String(a[0])); result = 'OK' } }
       else { const n = Number(strings.get(key) || 0) + 1; strings.set(key, String(n)); result = n }
       res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result }))
     }

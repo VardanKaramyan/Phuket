@@ -4330,60 +4330,74 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
       (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
   }
-  // the villa list order. Once someone has moved a villa (Move up / down), that order is the list for everyone; until
-  // then the list follows the likes: most first, then fewer skips, then the guide's own order (listFirst first).
-  // Other people's changes only re-sort it while you are not reading it, so cards do not move under your finger
+  // the villa list order, the same for everyone:
+  //   1. villas someone moved by hand (Move up / down) keep the place they were moved to;
+  //   2. the rest fill the other places: liked villas first, most likes first, then the newest like, then fewer
+  //      skips; then the others in the guide's own order (listFirst first).
+  // Other people's changes only re-sort it while you are not reading it, so cards do not move under your finger; your
+  // own moves and likes re-sort it at once, and the cards slide to their new places
   const stayList = $('[data-list="stay"]')
   const stayCards = stayList ? $$(':scope > .card', stayList) : [] // in the guide's order
-  let order = canVote ? store.get('villaOrder', null) : null // { ids, by, t }, the last order loaded
-  function sortStays(now) {
+  let pins = canVote ? store.get('villaPins', null) : null // { map: { id: place }, by, t }, the last pins loaded
+  function stayOrder() {
+    const it = (c) => (votes && votes['ht:' + c.dataset.stay]) || { like: [], skip: [], last: 0 }
+    const natural = stayCards.slice().sort((a, b) => it(b).like.length - it(a).like.length || (it(b).last || 0) - (it(a).last || 0) ||
+      it(a).skip.length - it(b).skip.length || stayCards.indexOf(a) - stayCards.indexOf(b))
+    const map = (pins && pins.map) || {}
+    const placed = new Array(stayCards.length).fill(null)
+    stayCards.filter((c) => Number.isInteger(map[c.dataset.stay])).sort((a, b) => map[a.dataset.stay] - map[b.dataset.stay]).forEach((c) => {
+      let at = Math.min(map[c.dataset.stay], placed.length - 1)
+      while (at < placed.length && placed[at]) at++ // a place already taken: the next free one
+      if (at >= placed.length) { at = placed.lastIndexOf(null) }
+      placed[at] = c
+    })
+    const rest = natural.filter((c) => !placed.includes(c))
+    return placed.map((c) => c || rest.shift())
+  }
+  // put the cards in order; with animate, every card that changes place slides there (FLIP: measure, move, then
+  // animate from where it was), and the page does not scroll
+  function sortStays(now, animate) {
     if (!stayList || !votes) return
     const view = document.getElementById('stay')
     if (!now && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
-    const it = (c) => votes['ht:' + c.dataset.stay] || { like: [], skip: [] }
-    const pos = order && Array.isArray(order.ids) ? new Map(order.ids.map((id, i) => [id, i])) : null
-    // a villa added after the order was saved goes after the ordered ones, in the guide's order
-    const at = (c) => (pos.has(c.dataset.stay) ? pos.get(c.dataset.stay) : 1e6 + stayCards.indexOf(c))
-    const sorted = stayCards.slice().sort(pos ? (a, b) => at(a) - at(b)
-      : (a, b) => it(b).like.length - it(a).like.length || it(a).skip.length - it(b).skip.length || stayCards.indexOf(a) - stayCards.indexOf(b))
-    if (sorted.some((c, i) => stayList.children[i] !== c)) sorted.forEach((c) => stayList.appendChild(c))
+    const sorted = stayOrder()
+    if (!sorted.some((c, i) => stayList.children[i] !== c)) return
+    const was = animate && !reduceMotion ? new Map(stayCards.map((c) => [c, c.getBoundingClientRect().top])) : null
+    sorted.forEach((c) => stayList.appendChild(c))
+    if (!was) return
+    stayCards.forEach((c) => {
+      const dy = was.get(c) - c.getBoundingClientRect().top
+      if (!dy || c.hidden || !c.animate) return
+      c.style.position = 'relative'; c.style.zIndex = dy < 0 ? '2' : '1'
+      c.animate([{ transform: `translateY(${dy}px)` }, { transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.7,.2,1)' })
+        .finished.then(() => { c.style.position = ''; c.style.zIndex = '' }, () => {})
+    })
   }
-  // the order after moving a card past the next villa that is on the list (hidden and filtered-out ones are skipped)
   // the next villa on the list in that direction (hidden and filtered-out ones are skipped)
   function neighbourOf(card, dir) {
     let n = card
     do { n = dir === 'up' ? n.previousElementSibling : n.nextElementSibling } while (n && n.hidden)
     return n
   }
-  // swap two cards on screen: they slide past each other, and the page does not scroll (FLIP: measure, move, then
-  // animate each card from where it was to where it is now)
-  function swapCards(card, other, dir) {
-    const pair = [card, other], was = pair.map((c) => c.getBoundingClientRect().top)
-    if (dir === 'up') stayList.insertBefore(card, other); else other.after(card)
-    if (reduceMotion || !card.animate) return
-    pair.forEach((c, i) => {
-      const dy = was[i] - c.getBoundingClientRect().top
-      if (!dy) return
-      c.style.position = 'relative'; c.style.zIndex = c === card ? '2' : '1'
-      c.animate([{ transform: `translateY(${dy}px)` }, { transform: 'none' }], { duration: 340, easing: 'cubic-bezier(.2,.7,.2,1)' })
-        .finished.then(() => { c.style.position = ''; c.style.zIndex = '' }, () => {})
-    })
-  }
+  // a move pins the villa to its neighbour's place; a neighbour that was pinned too takes the villa's old place
   async function moveStay(card, dir, name) {
     const other = neighbourOf(card, dir)
     if (!other) { toast(dir === 'up' ? 'Already at the top' : 'Already at the bottom'); return }
-    const before = order
-    swapCards(card, other, dir)
-    const ids = [...stayList.children].map((c) => c.dataset.stay)
-    order = { ids, by: name, t: Date.now() }
+    const cards = [...stayList.children], from = cards.indexOf(card), to = cards.indexOf(other)
+    const map = { ...((pins && pins.map) || {}) }
+    const change = { [card.dataset.stay]: to }
+    if (Number.isInteger(map[other.dataset.stay])) change[other.dataset.stay] = from
+    const before = pins
+    Object.assign(map, change)
+    pins = { map, by: name, t: Date.now() }
+    sortStays(true, true)
     try {
-      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, order: ids }) })
-      if (!r.ok) throw new Error('order ' + r.status)
+      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, pins: change }) })
+      if (!r.ok) throw new Error('pins ' + r.status)
       applyShared(await r.json())
       toast('Moved ' + dir + ' for everyone')
     } catch {
-      order = before
-      swapCards(card, other, dir === 'up' ? 'down' : 'up') // slide them back
+      pins = before; sortStays(true, true) // slide back
       toast(navigator.onLine ? 'Could not move it. Try again in a minute.' : 'This needs internet.')
     }
   }
@@ -4399,7 +4413,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   function applyShared(j) {
     votes = j.votes || {}; store.set('votes', votes)
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
-    if ('order' in j) { order = j.order; store.set('villaOrder', order) }
+    if ('pins' in j) { pins = j.pins; store.set('villaPins', pins) }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
     if (j.hidden) {
       hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
@@ -4507,6 +4521,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
           j = await r.json()
         }
         if (j) applyShared(j)
+        if (bodies.some((b) => 'vote' in b && String(b.item).startsWith('ht:'))) sortStays(true, true) // your like moves the villa now
         toast(done(name, bodies[0] || {}))
       } catch { toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
     })

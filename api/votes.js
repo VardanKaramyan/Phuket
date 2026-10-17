@@ -4,14 +4,16 @@
 //   GET  /api/votes  -> { votes: { 'ht:<id>': { like: ['Ani'], skip: [] }, ... }, hidden: { 'ht:<id>': { by: 'Gor', t } } }
 //   POST /api/votes { item, name, vote: 'like' | 'skip' | null }  -> the same, after the change (null takes it back)
 //   POST /api/votes { item: 'ht:<id>', name, hide: true | false } -> hides the villa for everyone, or shows it again
-//   POST /api/votes { name, order: ['<villa id>', …] }           -> the villa list order for everyone (Move up / down)
+//   POST /api/votes { name, pins: { '<villa id>': position | null } } -> villas moved by hand keep that place (Move up / down)
+//   POST /api/votes { name, order: ['<villa id>', …] }           -> the old whole-list order (older copies of the page)
 //   POST /api/votes { name, note: { item: 'ht:<id>' | 'all', text } } -> a shared note on a villa, or for the whole trip
 //   POST /api/votes { name, deleteNote: '<note id>' }            -> deletes a note
-// GET and every POST answer with { votes, hidden, order: { ids, by, t } | null, notes: { '<item>': [{ id, text, by, t }] } }.
+// GET and every POST answer with { votes, hidden, pins: { map, by, t } | null, order, notes: { '<item>': [{ id, text, by, t }] } };
+// each votes entry also has last: the time of its latest like.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
-const META = 'guide:meta' // one Redis hash: field "order", value { ids, n, t } (the villa order, who moved last)
+const META = 'guide:meta' // one Redis hash: field "pins", value { map: { id: position }, n, t } (who moved last); "order" (old)
 const VILLA = /^[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_ORDER = 300
 const NOTES = 'guide:notes' // one Redis hash: field "<note id>", value { item, text, n, t }
@@ -51,7 +53,11 @@ async function allVotes(db) {
   }
   rows.sort((a, b) => a.t - b.t) // names in the order people voted
   const votes = {}
-  for (const r of rows) (votes[r.item] ||= { like: [], skip: [] })[r.v].push(r.n)
+  for (const r of rows) {
+    const it = (votes[r.item] ||= { like: [], skip: [], last: 0 })
+    it[r.v].push(r.n)
+    if (r.v === 'like') it.last = Math.max(it.last, r.t || 0)
+  }
   return votes
 }
 const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type' }
@@ -62,10 +68,17 @@ async function hiddenVillas(db) {
   for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); hidden[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
   return hidden
 }
-async function villaOrder(db) {
+async function meta(db) {
   const flat = (await redis(db, ['HGETALL', META])) || []
-  for (let i = 0; i < flat.length; i += 2) if (flat[i] === 'order') { try { const x = JSON.parse(flat[i + 1]); return { ids: x.ids, by: x.n, t: x.t } } catch { /* broken */ } }
-  return null
+  const out = { order: null, pins: null }
+  for (let i = 0; i < flat.length; i += 2) {
+    try {
+      const x = JSON.parse(flat[i + 1])
+      if (flat[i] === 'order') out.order = { ids: x.ids, by: x.n, t: x.t }
+      if (flat[i] === 'pins') out.pins = { map: x.map || {}, by: x.n, t: x.t }
+    } catch { /* broken */ }
+  }
+  return out
 }
 async function allNotes(db) {
   const flat = (await redis(db, ['HGETALL', NOTES])) || []
@@ -76,7 +89,7 @@ async function allNotes(db) {
   for (const r of rows) (notes[r.item] ||= []).push({ id: r.id, text: r.text, by: r.by, t: r.t })
   return notes
 }
-const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db), order: await villaOrder(db), notes: await allNotes(db) })
+const everything = async (db) => ({ votes: await allVotes(db), hidden: await hiddenVillas(db), ...(await meta(db)), notes: await allNotes(db) })
 const cleanName = (s) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 
@@ -118,7 +131,25 @@ export async function POST(request) {
       return reply(200, await everything(db))
     } catch (e) { return reply(502, { error: e.message }) }
   }
-  // the villa order: the whole list as the person sees it after a move (the client works out the move)
+  // villas moved by hand: { id: position } merged into the saved pins (null unpins); a position goes to one villa only
+  if (body && body.pins && typeof body.pins === 'object' && !Array.isArray(body.pins)) {
+    const who = cleanName(body.name)
+    if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+    const changes = Object.entries(body.pins)
+    if (!changes.length || changes.length > MAX_ORDER || !changes.every(([id, at]) => VILLA.test(id) && (at === null || (Number.isInteger(at) && at >= 0 && at < MAX_ORDER)))) return reply(400, { error: 'Pins are villa ids with a position (0, 1, …) or null' })
+    try {
+      const map = { ...((await meta(db)).pins?.map || {}) }
+      for (const [id, at] of changes) {
+        delete map[id]
+        if (at === null) continue
+        for (const [other, p] of Object.entries(map)) if (p === at && !(other in body.pins)) delete map[other]
+        map[id] = at
+      }
+      await redis(db, ['HSET', META, 'pins', JSON.stringify({ map, n: who, t: Date.now() })])
+      return reply(200, await everything(db))
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
+  // the old whole-list order (older copies of the page still send it)
   if (body && Array.isArray(body.order)) {
     const ids = body.order.map(String)
     const who = String(body.name ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()

@@ -71,7 +71,8 @@ const api = await import(mod + '?store')
   r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Vardan', vote: null })
   check('a vote can be taken back', r.json.votes['ht:mouana-breeze-mai-khao'].skip.join() === 'ani', JSON.stringify(r.json.votes))
   r = await call(api, 'GET')
-  check('GET sees the same votes', JSON.stringify(r.json.votes['ht:mouana-breeze-mai-khao']) === JSON.stringify({ like: [], skip: ['ani'] }))
+  const gv = r.json.votes['ht:mouana-breeze-mai-khao']
+  check('GET sees the same votes', JSON.stringify({ like: gv.like, skip: gv.skip }) === JSON.stringify({ like: [], skip: ['ani'] }), JSON.stringify(gv))
   const bad = [
     [{ item: 'xx:nope', name: 'Ani', vote: 'like' }, 'unknown item kind'],
     [{ item: 'ht:mouana', name: '', vote: 'like' }, 'empty name'],
@@ -116,6 +117,19 @@ const api = await import(mod + '?store')
   for (const [body, why] of [[{ name: 'V', note: { item: 'all', text: '   ' } }, 'an empty note'], [{ name: 'V', note: { item: 'all', text: 'x'.repeat(501) } }, 'a note over 500 characters'], [{ name: 'V', note: { item: 'zz:x', text: 'hi' } }, 'a note on an unknown item'], [{ name: '', note: { item: 'all', text: 'hi' } }, 'a note with no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
+  // moved villas keep their place: { pins: { id: position | null } }, merged; two villas never share a position
+  r = await call(api, 'POST', { name: 'Vardan', pins: { 'alisa-pool-villa': 0, 'diamond-villa-278': 3 } })
+  check('pins are saved for everyone', r.status === 200 && r.json.pins?.map?.['alisa-pool-villa'] === 0 && r.json.pins.map['diamond-villa-278'] === 3 && r.json.pins.by === 'Vardan', JSON.stringify(r.json.pins))
+  r = await call(api, 'POST', { name: 'Ani', pins: { 'la-belle-pool-villa': 3, 'alisa-pool-villa': null } })
+  check('a new pin takes the place, null unpins', r.json.pins.map['la-belle-pool-villa'] === 3 && !('diamond-villa-278' in r.json.pins.map) && !('alisa-pool-villa' in r.json.pins.map), JSON.stringify(r.json.pins.map))
+  for (const [body, why] of [[{ name: 'V', pins: { 'Bad Id!': 1 } }, 'a pin with a bad id'], [{ name: 'V', pins: { a: -1 } }, 'a negative position'], [{ name: 'V', pins: { a: 1.5 } }, 'a position that is not a whole number'], [{ name: '', pins: { a: 1 } }, 'pins with no name']]) {
+    const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
+  }
+  await call(api, 'POST', { name: 'Ani', pins: { 'la-belle-pool-villa': null } })
+  // the time of the latest like comes with the votes (newer like = higher among equal likes)
+  r = await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: 'like' })
+  check('votes carry the time of the latest like', Number.isFinite(r.json.votes['ht:alisa-pool-villa']?.last), JSON.stringify(r.json.votes['ht:alisa-pool-villa']))
+  await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: null })
   for (const [body, why] of [[{ name: 'V', order: [] }, 'an empty order'], [{ name: 'V', order: ['a', 'a'] }, 'a villa twice'], [{ name: 'V', order: ['Bad Id!'] }, 'a bad id'], [{ name: 'V', order: Array.from({ length: 301 }, (_, i) => 'v' + i) }, 'too many villas'], [{ name: '', order: ['a'] }, 'no name']]) {
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
@@ -258,13 +272,23 @@ await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(
 await B.p.evaluate(() => { location.hash = 'stay' }); await sleep(500)
 const oB = await order(B.p)
 check('another phone gets the same order', oB.join() === o3.join(), oB.slice(0, 4).join(', '))
-// a like on the last villa no longer pulls it up: the order set by hand wins
+// a like on the last villa pulls it up among the liked ones, while the villas moved by hand keep their places
 const last = o3.at(-1).slice(3)
 await B.p.evaluate((id) => document.querySelector('#ht-' + id + ' [data-vote-btn="like"]').click(), last); await sleep(300)
-await B.p.evaluate(() => document.querySelector('#vote-dialog [data-vote-save]').click()); await sleep(900)
-await B.p.evaluate(() => { location.hash = 'home' }); await sleep(200); await B.p.evaluate(() => { location.hash = 'stay' }); await sleep(500)
-const oB2 = await order(B.p)
-check('after a move, likes no longer reorder the list', oB2.at(-1) === o3.at(-1), oB2.at(-1))
+await B.p.evaluate(() => document.querySelector('#vote-dialog [data-vote-save]').click()); await sleep(1200)
+const rules = await B.p.evaluate(() => {
+  const ids = [...document.querySelectorAll('[data-list="stay"] > .card')].map((c) => c.dataset.stay)
+  const votes = JSON.parse(localStorage.getItem('pg:votes') || '{}'), pins = (JSON.parse(localStorage.getItem('pg:villaPins') || 'null') || {}).map || {}
+  const v = (id) => votes['ht:' + id] || { like: [], last: 0 }
+  const pinnedOk = Object.entries(pins).every(([id, at]) => ids[at] === id)
+  const free = ids.filter((id) => !(id in pins))
+  const firstUnliked = free.findIndex((id) => !v(id).like.length)
+  const likedFirst = firstUnliked < 0 || free.slice(firstUnliked).every((id) => !v(id).like.length)
+  const liked = free.filter((id) => v(id).like.length)
+  const newerFirst = liked.every((id, i) => i === 0 || v(liked[i - 1]).like.length > v(id).like.length || (v(liked[i - 1]).last || 0) >= (v(id).last || 0))
+  return { pinnedOk, likedFirst, newerFirst, likedTop: liked[0], pins, liked }
+})
+check('moved villas keep their places; liked villas come before the others; equal likes: the newer like first', rules.pinnedOk && rules.likedFirst && rules.newerFirst && rules.likedTop === last, JSON.stringify(rules))
 const topMsg = await A.p.evaluate(async (id) => { document.querySelector('#' + id + ' [data-move-stay="up"]').click(); await new Promise((r) => setTimeout(r, 300)); return document.querySelector('.toast')?.textContent || '' }, o3[0])
 check('the top villa cannot move up', /top/i.test(topMsg), topMsg)
 // shared notes: A adds one on a villa (A's name is known: no dialog) and one for the whole group; B sees both; A deletes

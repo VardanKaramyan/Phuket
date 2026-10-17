@@ -88,6 +88,13 @@ const api = await import(mod + '?store')
   check('Show again takes it out for everyone', r.status === 200 && JSON.stringify(r.json.hidden) === '{}', JSON.stringify(r.json.hidden))
   r = await call(api, 'POST', { item: 'ev:shelter-phuket', name: 'Gor', hide: true })
   check('refused: hiding something that is not a villa', r.status === 400, String(r.status))
+  // the hidden list has a cap like the votes: a full list refuses new hides, but Show again still works
+  const hiddenHash = new Map(); for (let i = 0; i < 200; i++) hiddenHash.set('ht:fake-' + i, JSON.stringify({ n: 'x', t: i }))
+  hashes.set('guide:hidden', hiddenHash)
+  r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Gor', hide: true })
+  check('refused: a new hide when the hidden list is full', r.status === 507, String(r.status))
+  r = await call(api, 'POST', { item: 'ht:fake-1', name: 'Gor', hide: false })
+  check('Show again works on a full list', r.status === 200 && !r.json.hidden['ht:fake-1'], String(r.status))
   hashes.clear()
 }
 

@@ -29,6 +29,8 @@ const LOG = 'guide:log' // a list, newest first: { t, e, x, n, d } (when, what, 
 const LOG_MAX = 5000
 const VISITORS = 'guide:visitors' // one Redis hash: field "<device>", value { n, first, last, visits, ua }
 const MAX_VISITORS = 2000
+const IDLE_DAYS = 14 // a full visitor list only makes room from phones not seen for this long
+const NEW_PER_HOUR = 20 // new phone ids one connection may add in an hour
 const DEVICE = /^[a-z0-9]{8,32}$/
 const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
 const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
@@ -158,13 +160,22 @@ export async function POST(request) {
       const raw = await redis(db, ['HGET', VISITORS, device])
       let v = null
       try { v = raw ? JSON.parse(raw) : null } catch { v = null }
-      if (!v && (await redis(db, ['HLEN', VISITORS])) >= MAX_VISITORS) {
-        // full: make room by dropping the phone seen longest ago (made-up ids cannot lock real phones out)
-        const all = (await redis(db, ['HGETALL', VISITORS])) || []
-        const seen = []
-        for (let i = 0; i < all.length; i += 2) { let t = 0; try { t = JSON.parse(all[i + 1]).last || 0 } catch { /* broken: goes first */ } seen.push([all[i], t]) }
-        const drop = seen.sort((a, b) => a[1] - b[1]).slice(0, seen.length - MAX_VISITORS + 1).map(([d]) => d)
-        if (drop.length) await redis(db, ['HDEL', VISITORS, ...drop])
+      if (!v) {
+        // a new phone: at most NEW_PER_HOUR from one connection, so nobody can flood the list with made-up ids
+        const ip = String(request.headers.get('x-forwarded-for') || 'unknown').split(',')[0].trim().slice(0, 64)
+        const rate = 'guide:newdev:' + ip
+        const n = await redis(db, ['INCR', rate])
+        if (n === 1) await redis(db, ['EXPIRE', rate, 3600])
+        if (n > NEW_PER_HOUR) return reply(429, { error: 'Too many new phones from here, try later' })
+        if ((await redis(db, ['HLEN', VISITORS])) >= MAX_VISITORS) {
+          // full: make room only from phones idle for IDLE_DAYS or more; recent visitors are never pushed out
+          const all = (await redis(db, ['HGETALL', VISITORS])) || []
+          const idle = now - IDLE_DAYS * 86400000, seen = []
+          for (let i = 0; i < all.length; i += 2) { let t = 0; try { t = JSON.parse(all[i + 1]).last || 0 } catch { /* broken: counts as idle */ } seen.push([all[i], t]) }
+          const drop = seen.filter(([, t]) => t < idle).sort((a, b) => a[1] - b[1]).slice(0, seen.length - MAX_VISITORS + 1).map(([d]) => d)
+          if (seen.length - drop.length >= MAX_VISITORS) return reply(507, { error: 'Too many visitors saved' })
+          await redis(db, ['HDEL', VISITORS, ...drop])
+        }
       }
       v = v || { first: now, visits: 0 }
       v.last = now

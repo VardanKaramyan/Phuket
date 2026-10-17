@@ -551,11 +551,18 @@ ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${be
 <div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
 <p class="note">For offline turn-by-turn directions, also download Phuket in the Google Maps app: profile picture → Offline maps → Select your own map.</p></div>
-<footer class="footer-note"><p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
+<footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only"><a href="#stats">Visits and activity</a>: the website counts visits and what people do in it, for the group.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
 </section>`
 }
 
 // ---------- views ----------
+// Stats: filled in by src/app.js from the vote server (website only)
+function statsView() {
+  return `<section class="view" id="stats" aria-labelledby="stats-title">
+<div class="view-head"><span class="eyebrow">Website only</span><h1 class="view-title" id="stats-title">Visits and activity</h1><p class="lede">Who opened the guide and what they did: visits, tabs, villas looked at, maps, photos, shares, likes and notes.</p></div>
+<div id="stats-body"><p class="note">Open the guide's website to see the stats.</p></div>
+</section>`
+}
 function chipRow(listId, group, items, label) {
   return `<div class="chips" role="toolbar" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}" aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}</div>`
 }
@@ -883,7 +890,7 @@ const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 function page(build) {
   buildName = build
   const mode = build === 'single' ? 'inline' : 'file'
-  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView()].join('\n')))
+  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), statsView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
   const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
   const leaflet = build === 'artifact'

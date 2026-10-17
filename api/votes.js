@@ -164,8 +164,8 @@ export async function POST(request) {
         // a new phone: at most NEW_PER_HOUR from one connection, so nobody can flood the list with made-up ids
         const ip = String(request.headers.get('x-forwarded-for') || 'unknown').split(',')[0].trim().slice(0, 64)
         const rate = 'guide:newdev:' + ip
+        await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX']) // the counter and its 1-hour expiry in one step
         const n = await redis(db, ['INCR', rate])
-        if (n === 1) await redis(db, ['EXPIRE', rate, 3600])
         if (n > NEW_PER_HOUR) return reply(429, { error: 'Too many new phones from here, try later' })
         if ((await redis(db, ['HLEN', VISITORS])) >= MAX_VISITORS) {
           // full: make room only from phones idle for IDLE_DAYS or more; recent visitors are never pushed out

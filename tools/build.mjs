@@ -575,16 +575,18 @@ function statsView() {
 <div id="stats-body"><p class="note">Open the guide's website to see the stats.</p></div>
 </section>`
 }
-function chipRow(listId, group, items, label) {
-  return `<div class="chips" role="toolbar" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}" aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}</div>`
+// links: values that have their own address (#<list>/<value>, e.g. #stay/liked), so a filtered list can be shared
+function chipRow(listId, group, items, label, links = [], after = '') {
+  return `<div class="chips" role="toolbar" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}"${links.includes(v) ? ' data-link' : ''} aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}${after}</div>`
 }
+const shareListBtn = `<button class="chip share-list js-only" type="button" data-share-list hidden>${icon('share')}Share</button>`
 function eventsView(mode) {
   const intro = extra.eventsIntro || 'Phuket’s scene is mostly beach clubs. For darker, Berlin-style raves, Koh Phangan is the place: a short flight to Samui and a 30-minute boat.'
   return `<section class="view" id="events" aria-labelledby="events-title">
 <div class="view-head"><span class="eyebrow">${TRIP_LABEL.long} · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p></div>
 ${extra.eventsCallout ? `<div class="callout"><h3>${esc(extra.eventsCallout.title)}</h3>${(extra.eventsCallout.groups || [{ items: extra.eventsCallout.items }]).map((g) => `${g.title ? `<h4 class="callout-sub">${esc(g.title)}</h4>` : ''}<ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`).join('')}</div>` : ''}
 <div class="toolbar" data-toolbar="events">
-${chipRow('events', 'f', [['all', 'All'], ['in', 'In my dates'], ['pick', 'Top picks'], ['recurring', 'Weekly & clubs'], ['dated', 'One-off events'], ['saved', 'Saved']], 'Filter events')}
+${chipRow('events', 'f', [['all', 'All'], ['in', 'In my dates'], ['pick', 'Top picks'], ['recurring', 'Weekly & clubs'], ['dated', 'One-off events'], ['saved', 'Saved']], 'Filter events', ['saved'], shareListBtn)}
 ${chipRow('events', 'phase', [['all', 'All my days'], ...TRIP.phases.map((p) => [p.id, `${p.label} · ${phaseRange(p)}`])], 'Filter by part of the trip')}
 ${chipRow('events', 'where', [['all', 'Everywhere'], ['phuket', 'Phuket & Natai'], ['koh-phangan', 'Koh Phangan'], ['other', 'Other islands']], 'Filter by place')}
 <input class="search" type="search" id="events-search" placeholder="Search events, venues, genres" aria-label="Search events">
@@ -598,7 +600,7 @@ function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">${esc(extra.placesIntro || 'Each place shows how long it takes, the best time to go and what it costs. In January the west-coast sea is calm and clear.')}</p></div>
 <div class="toolbar" data-toolbar="places">
-${chipRow('places', 'tier', [['all', 'All'], ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ['food', 'Food'], ['saved', 'Saved']], 'Filter places')}
+${chipRow('places', 'tier', [['all', 'All'], ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
 ${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed')}
 <input class="search" type="search" id="places-search" placeholder="Search beaches, temples, markets…" aria-label="Search places">
 </div>
@@ -684,7 +686,8 @@ function stayView(mode) {
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <p class="js-only pins-note" id="pins-note" hidden><span>Some villas were moved by hand and keep their place.</span> <button class="btn" type="button" id="unpin-all">Reset all positions</button></p>
 <div class="toolbar" data-toolbar="stay">
-${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed, ['saved', 'Saved']], 'Filter villas by price')}
+${chipRow('stay', 'pick', [['all', 'All'], ...(buildName === 'standalone' ? [['liked', 'Liked']] : []), ['saved', 'Saved']], 'Show the liked or saved villas', ['liked', 'saved'], shareListBtn)}
+${chipRow('stay', 'tier', [['all', 'All'], ...tiersUsed], 'Filter villas by price')}
 ${chipRow('stay', 'zone', [['all', 'Everywhere'], ...zonesUsed], 'Filter hotels by area')}
 ${chipRow('stay', 'beds', [['all', 'Any beds'], ...BED_CHIPS.filter(([k]) => hotels.some((h) => bedFit(h)?.key === k))], 'Filter villas by beds')}
 </div>

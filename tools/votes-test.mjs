@@ -44,6 +44,7 @@ const upstash = http.createServer((req, res) => {
     else if (cmd === 'HDEL') result = a.filter((f) => h.delete(f)).length
     else if (cmd === 'HLEN') result = h.size
     else if (cmd === 'HGET') result = h.has(a[0]) ? h.get(a[0]) : null
+    else if (cmd === 'HEXISTS') result = h.has(a[0]) ? 1 : 0
     else { res.writeHead(400); return res.end(JSON.stringify({ error: 'unknown command ' + cmd })) }
     res.writeHead(200, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ result }))
   })
@@ -150,6 +151,13 @@ const api = await import(mod + '?store')
   r = await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: 'like' })
   check('votes carry the time of the latest like', Number.isFinite(r.json.votes['ht:alisa-pool-villa']?.last), JSON.stringify(r.json.votes['ht:alisa-pool-villa']))
   await call(api, 'POST', { item: 'ht:alisa-pool-villa', name: 'Gor', vote: null })
+  // Saved for the whole group: with who saved it, and off again for everyone
+  r = await call(api, 'POST', { item: 'ev:shelter-phuket', name: 'Ani', save: true, device: 'devani000001' })
+  check('a save is shared, with who saved it, and is news', r.status === 200 && r.json.saved?.['ev:shelter-phuket']?.by === 'Ani' && r.json.recent?.[0]?.e === 'save', JSON.stringify(r.json.saved))
+  r = await call(api, 'POST', { item: 'ev:shelter-phuket', name: 'Gor', save: false, device: 'devgor000001' })
+  check('anyone can take a save off the list', r.status === 200 && !r.json.saved?.['ev:shelter-phuket'] && r.json.recent?.[0]?.e === 'unsave', JSON.stringify(r.json.saved))
+  r = await call(api, 'POST', { item: 'zz:nothing', name: 'Ani', save: true })
+  check('refused: saving an unknown item', r.status === 400, String(r.status))
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
   r = await call(api, 'GET')
   const v0 = r.json.ver
@@ -444,6 +452,45 @@ await A.p.evaluate(() => window.dispatchEvent(new Event('pagehide'))); await sle
 await A.p.evaluate(() => { location.hash = 'stats' }); await sleep(1500)
 const stats = await A.p.evaluate(() => ({ people: document.querySelector('#stats-body .stats-table')?.innerText || '', tiles: document.querySelector('#stats-body .stats-tiles')?.innerText || '', log: document.querySelector('#stats-body .stats-log')?.innerText || '' }))
 check('the Stats page lists people, visits and the latest activity', /Ani/.test(stats.people) && /Vardan/.test(stats.people) && /People/.test(stats.tiles) && /liked Diamond Villa 278/.test(stats.log) && /opened the guide/.test(stats.log), JSON.stringify(stats).slice(0, 300))
+// Saved for the whole group: A stars a villa (her name is known, so no dialog); B sees it in Saved, with her name
+await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa .fav').click()); await sleep(900)
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1500)
+const bSaved = await B.p.evaluate(() => ({ star: document.querySelector('#ht-alisa-pool-villa .fav').getAttribute('aria-pressed'), list: document.getElementById('saved-list').textContent }))
+check('a starred villa is saved for everyone, with who saved it', bSaved.star === 'true' && /Alisa Pool Villa/.test(bSaved.list) && /saved by Ani/.test(bSaved.list), JSON.stringify(bSaved))
+// a pasted address opens the filtered list: #stay/saved, #stay/liked
+const shownStay = (p) => p.evaluate(() => [...document.querySelectorAll('#stay .list .card')].filter((c) => !c.hidden).map((c) => c.id))
+await B.p.evaluate(() => { location.hash = 'stay/saved' }); await sleep(500)
+const sv = { shown: await shownStay(B.p), ...(await B.p.evaluate(() => ({ chip: document.querySelector('[data-toolbar="stay"] .chip[data-group="pick"][aria-pressed="true"]')?.dataset.value, share: (() => { const x = document.querySelector('[data-toolbar="stay"] [data-share-list]'); return x.hidden ? '' : x.dataset.url })(), view: !document.getElementById('stay').hidden }))) }
+check('#stay/saved opens the Stay tab on the saved villas, with a Share link', sv.view && sv.shown.join() === 'ht-alisa-pool-villa' && sv.chip === 'saved' && /\/#stay\/saved$/.test(sv.share), JSON.stringify(sv))
+await B.p.evaluate(() => { location.hash = 'stay/liked' }); await sleep(500)
+const likedIds = await B.p.evaluate(() => {
+  const hidden = JSON.parse(localStorage.getItem('pg:hiddenShared') || '{}')
+  return Object.entries(JSON.parse(localStorage.getItem('pg:votes') || '{}')).filter(([k, v]) => k.startsWith('ht:') && v.like.length && !hidden[k] && document.getElementById(k.replace(':', '-'))).map(([k]) => k.replace(':', '-')).sort()
+})
+const lk = (await shownStay(B.p)).sort()
+// a phone opening the shared link for the first time: the liked villas in order of likes, once the votes arrive
+const D3 = await person()
+await D3.p.goto(base + '#stay/liked', { waitUntil: 'networkidle0' }); await sleep(900)
+const firstOrder = await shownStay(D3.p)
+const expectOrder = await D3.p.evaluate((ids) => {
+  const v = JSON.parse(localStorage.getItem('pg:votes') || '{}'), pins = (JSON.parse(localStorage.getItem('pg:villaPins') || 'null') || {}).map || {}
+  return ids.filter((id) => !Number.isInteger(pins[id.slice(3)])).sort((a, b) => v['ht:' + b.slice(3)].like.length - v['ht:' + a.slice(3)].like.length || v['ht:' + b.slice(3)].last - v['ht:' + a.slice(3)].last)
+}, firstOrder)
+check('opening #stay/liked on a new phone: the liked villas in order of likes', firstOrder.filter((id) => expectOrder.includes(id)).join() === expectOrder.join() && expectOrder.length > 1, firstOrder.join() + ' vs ' + expectOrder.join())
+await D3.ctx.close()
+check('#stay/liked shows exactly the villas with a like', lk.length > 0 && lk.join() === likedIds.join(), lk.join() + ' vs ' + likedIds.join())
+const urls = []
+await B.p.evaluate(() => document.querySelector('[data-toolbar="stay"] .chip[data-group="pick"][data-value="all"]').click()); urls.push(await B.p.evaluate(() => location.hash))
+await B.p.evaluate(() => document.querySelector('[data-toolbar="stay"] .chip[data-group="pick"][data-value="liked"]').click()); urls.push(await B.p.evaluate(() => location.hash))
+await B.p.evaluate(() => document.querySelector('[data-toolbar="stay"] .chip[data-group="tier"][data-value="all"]').click()); urls.push(await B.p.evaluate(() => location.hash))
+await B.p.evaluate(() => document.querySelector('[data-toolbar="stay"] .chip[data-group="pick"][data-value="all"]').click())
+check('tapping Liked or Saved puts the link in the address bar, ready to copy', urls.join(' ') === '#stay #stay/liked #stay/liked', urls.join(' '))
+// saves made on a phone before Saved was shared move into the group's list once its name is known
+await C.p.evaluate(() => { localStorage.setItem('pg:favs', JSON.stringify(['pl:big-buddha'])); localStorage.setItem('pg:voterName', JSON.stringify('Lilit')); localStorage.removeItem('pg:favsMoved') })
+await C.p.reload({ waitUntil: 'networkidle0' }); await sleep(1500)
+const moved = (await (await api.GET(new Request('http://x/api/votes'))).json()).saved?.['pl:big-buddha']
+check("a phone's old saves join the group's Saved list, under its name", moved?.by === 'Lilit', JSON.stringify(moved))
 for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

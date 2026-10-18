@@ -167,7 +167,13 @@
   window.addEventListener('pageshow', refreshToday)
 
   /* ---------- favourites ---------- */
-  const favs = new Set(store.get('favs', []))
+  // on the website Saved is the whole group's list (kept by the vote server, with who saved each); elsewhere it is
+  // kept on this phone
+  const sharedSave = !!D.votes && /^https?:$/.test(location.protocol)
+  let savedBy = sharedSave ? store.get('savedShared', {}) : {} // '<item>' -> { by, t }: the last list loaded
+  const favs = new Set(sharedSave ? Object.keys(savedBy) : store.get('favs', []))
+  let shareSave = null // (item, on): set by the vote code below, which can send it to the server
+  const likedItems = new Set() // items with at least one like, for the Liked filter (filled in by renderVotes)
   // villas hidden with 'Hide': off the list and the map until 'Show again'. On the website the hide is for everyone
   // (kept by the vote server, see the votes below); elsewhere it is kept on this phone only
   const sharedHide = !!D.votes && /^https?:$/.test(location.protocol)
@@ -184,15 +190,19 @@
     const b = e.target.closest('.fav'); if (!b) return
     e.preventDefault()
     const id = b.dataset.fav
+    if (sharedSave) { if (shareSave) shareSave(id, !favs.has(id)); return }
     if (favs.has(id)) { favs.delete(id); toast('Removed from saved') } else { favs.add(id); toast('Saved') }
     saveOrWarn('favs', Array.from(favs)); syncFavs()
   })
   function renderSaved() {
     const box = $('#saved-list'); if (!box) return
     const items = Array.from(favs).map((f) => document.querySelector('[data-fav-card="' + CSS.escape(f) + '"]')).filter(Boolean)
+    const by = (card) => { const x = savedBy[card.dataset.favCard]; return x && x.by ? ' · saved by ' + x.by : '' }
+    const villas = items.filter((c) => c.dataset.stay).length
     box.innerHTML = items.length
-      ? items.map((card) => '<li><div><a href="#' + card.id + '">' + esc(card.dataset.name) + '</a> <span>· ' + esc(card.dataset.kind || '') + '</span></div></li>').join('')
-      : '<li class="tip"><div><span>Tap the star on any event, place or hotel to keep it here.</span></div></li>'
+      ? items.map((card) => '<li><div><a href="#' + card.id + '">' + esc(card.dataset.name) + '</a> <span>· ' + esc(card.dataset.kind || '') + esc(by(card)) + '</span></div></li>').join('') +
+        (villas > 1 ? '<li class="tip"><div><a href="#stay/saved">The saved villas on the Stay tab</a></div></li>' : '')
+      : '<li class="tip"><div><span>' + (sharedSave ? 'Tap the star on any event, place or villa to save it here for the whole group.' : 'Tap the star on any event, place or hotel to keep it here.') + '</span></div></li>'
   }
 
   /* ---------- filterable lists ---------- */
@@ -208,6 +218,7 @@
     const match = (card, group, value) => {
       if (value === 'all') return true
       if (value === 'saved') return favs.has(card.dataset.favCard)
+      if (value === 'liked') return likedItems.has(card.dataset.favCard)
       const v = card.dataset[group] || ''
       return v.split(' ').includes(value)
     }
@@ -240,11 +251,32 @@
         chip.addEventListener('click', () => {
           $$('.chip[data-group="' + g + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip)))
           state[g] = chip.dataset.value; apply()
+          // a list you can link to (Liked, Saved): its address goes in the address bar, ready to copy
+          if ($('.chip[data-link]', bar) && $$('.chip[data-group="' + g + '"]', bar).some((c) => c.hasAttribute('data-link'))) {
+            history.replaceState(null, '', '#' + id + (chip.hasAttribute('data-link') ? '/' + chip.dataset.value : ''))
+            syncShareList()
+          }
         })
       })
       if (search) search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); apply() })
     }
-    lists.push({ apply, reset, el: listEl })
+    // open the list on one of its linkable filters (from an address like #stay/liked)
+    const pick = (value) => {
+      const chip = bar && $('.chip[data-link][data-value="' + CSS.escape(value) + '"]', bar)
+      if (!chip) return false
+      reset()
+      $$('.chip[data-group="' + chip.dataset.group + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip)))
+      state[chip.dataset.group] = value; apply(); syncShareList()
+      return true
+    }
+    const shareBtn = bar && $('[data-share-list]', bar)
+    function syncShareList() {
+      if (!shareBtn) return
+      const on = $('.chip[data-link][aria-pressed="true"]', bar)
+      shareBtn.hidden = !on || !/^https?:$/.test(location.protocol)
+      if (on) shareBtn.dataset.url = location.origin + location.pathname + '#' + id + '/' + on.dataset.value
+    }
+    lists.push({ apply, reset, pick, el: listEl })
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
@@ -399,6 +431,14 @@
   function route() {
     const id = decodeURIComponent(location.hash.slice(1))
     if (!id || VIEWS.includes(id)) return show(id || 'home')
+    // a filtered list: #stay/liked, #stay/saved, #events/saved, #places/saved
+    const f = /^([a-z]+)\/([a-z]+)$/.exec(id)
+    if (f && VIEWS.includes(f[1])) {
+      show(f[1])
+      const l = lists.find((x) => x.el.dataset.list === f[1])
+      if (!l || !l.pick(f[2])) history.replaceState(null, '', '#' + f[1])
+      return
+    }
     const el = document.getElementById(id)
     if (!el) return show('home')
     const view = el.closest('.view')
@@ -968,7 +1008,7 @@
   let seenT = store.get('seenT', 0) // the newest shared change this phone has seen
   let firstAnnounce = true
   // other people's changes, as they happen: "Ani liked Mouana Breeze", with Show to go to it
-  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on' }
+  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list' }
   const cardOf = (x) => { const m = /^(ht|ev|pl):(.+)$/.exec(x || ''); return m ? document.getElementById(m[1] + '-' + m[2]) : null }
   function describe(r) {
     const who = r.n || 'Someone'
@@ -1016,6 +1056,9 @@
   const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's')
   function renderVotes() {
     if (!votes) return
+    likedItems.clear()
+    Object.entries(votes).forEach(([k, it]) => { if (it && it.like && it.like.length) likedItems.add(k) })
+    lists.forEach((l) => l.apply())
     voteBars.forEach((bar) => {
       const it = votes[bar.dataset.voteItem] || { like: [], skip: [] }
       const mine = mineOf(it)
@@ -1064,10 +1107,13 @@
   }
   // put the cards in order; with animate, every card that changes place slides there (FLIP: measure, move, then
   // animate from where it was), and the page does not scroll
+  let staysSorted = false // the list has been put in order once (the first votes arrive after the page is drawn)
   function sortStays(now, animate) {
     if (!stayList || !votes) return
     const view = document.getElementById('stay')
-    if (!now && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
+    // later changes wait while the list is on screen (no jumps); the very first order does not wait
+    if (!now && staysSorted && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
+    staysSorted = true
     const sorted = stayOrder()
     if (!sorted.some((c, i) => stayList.children[i] !== c)) return
     const was = animate && !reduceMotion ? new Map(stayCards.map((c) => [c, c.getBoundingClientRect().top])) : null
@@ -1141,6 +1187,11 @@
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
     if ('pins' in j) { pins = j.pins; store.set('villaPins', pins); syncPinUI() }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
+    if (j.saved && sharedSave) {
+      savedBy = j.saved; store.set('savedShared', savedBy)
+      favs.clear(); Object.keys(savedBy).forEach((k) => favs.add(k))
+      syncFavs(); moveLocalSaves()
+    }
     if (j.hidden) {
       hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
       hiddenStays.clear(); Object.keys(hiddenBy).forEach((k) => hiddenStays.add(k.slice(3)))
@@ -1204,6 +1255,36 @@
     openDialog(what === 'hide'
       ? { title: 'Hide for everyone', what: name, save: 'Hide', note: 'It goes off the list and the map for the whole group. Anyone can show it again.', body: send(true), done: () => 'Hidden for everyone: ' + name }
       : { title: 'Show again for everyone', what: name, save: 'Show again', note: 'It comes back on the list and the map for the whole group.', body: send(false), done: () => (id === '*' ? 'All villas are back for everyone' : 'Back on the list for everyone') })
+  }
+  // Save (the star) on the website: for the whole group, with your name (asked once). It shows at once, then the
+  // server's list replaces it
+  async function sendSave(item, on, name) {
+    const card = document.querySelector('[data-fav-card="' + CSS.escape(item) + '"]'), what = card?.dataset.name || 'it'
+    if (on) { favs.add(item); savedBy[item] = { by: name, t: Date.now() } } else { favs.delete(item); delete savedBy[item] }
+    syncFavs()
+    try { applyShared(await post({ item, name, save: on })); toast(on ? 'Saved for everyone: ' + what : 'Taken off the saved list for everyone') }
+    catch { if (on) favs.delete(item); else favs.add(item); syncFavs(); failed() }
+  }
+  if (canVote) shareSave = (item, on) => {
+    if (voterName()) return sendSave(item, on, voterName())
+    const card = document.querySelector('[data-fav-card="' + CSS.escape(item) + '"]')
+    openDialog({ title: on ? 'Save for everyone' : 'Take off the saved list', what: card?.dataset.name || '', save: on ? 'Save' : 'Take off',
+      note: on ? 'It goes in the Saved list for the whole group, with your name.' : 'It comes off the Saved list for the whole group.', run: (n) => sendSave(item, on, n) })
+  }
+  // this phone's saves from before Saved was shared: added to the group's list once, when the name is known
+  let movingSaves = false
+  async function moveLocalSaves() {
+    const old = store.get('favs', []).filter((x) => /^(ht|ev|pl):/.test(x) && !favs.has(x))
+    if (!canVote || movingSaves || store.get('favsMoved', false) || !voterName()) return
+    if (!old.length) { store.set('favsMoved', true); return }
+    movingSaves = true
+    try {
+      let j = null
+      for (const item of old.slice(0, 30)) j = await post({ item, name: voterName(), save: true })
+      store.set('favsMoved', true)
+      if (j) applyShared(j)
+      toast('Your saved ' + (old.length === 1 ? 'item is' : 'items are') + ' now in the Saved list for the whole group')
+    } catch { /* try again next time */ } finally { movingSaves = false }
   }
   if (canVote) {
     document.addEventListener('click', (e) => {
@@ -1339,6 +1420,15 @@
     const url = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : b.dataset.listing || ''
     if (!url) return
     if (navigator.share) { try { await navigator.share({ title: card.dataset.name, url }) } catch { /* closed */ } return }
+    try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
+  })
+
+  // Share link on a filtered list (Liked, Saved): its address, e.g. …/#stay/liked
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-share-list]'); if (!b || !b.dataset.url) return
+    const url = b.dataset.url, title = 'Phuket guide: ' + ($('.chip[data-link][aria-pressed="true"]', b.closest('.toolbar'))?.textContent.replace(/\d+/g, '').trim() || 'list')
+    track('share', url.split('#')[1])
+    if (navigator.share) { try { await navigator.share({ title, url }) } catch { /* closed */ } return }
     try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
   })
 

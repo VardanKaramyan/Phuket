@@ -17,6 +17,8 @@
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
+const SAVED = 'guide:saved' // one Redis hash: field "<item>", value { n, t } (who saved it for the group, when)
+const MAX_SAVED = 500
 const META = 'guide:meta' // one Redis hash: field "pins", value { map: { id: position }, n, t } (who moved last); "order" (old)
 const VILLA = /^[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_ORDER = 300
@@ -34,7 +36,7 @@ const NEW_PER_HOUR = 20 // new phone ids one connection may add in an hour
 const DEVICE = /^[a-z0-9]{8,32}$/
 const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
 const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
-const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote']) // shared changes
+const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave']) // shared changes
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -83,6 +85,12 @@ async function hiddenVillas(db) {
   for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); hidden[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
   return hidden
 }
+async function savedItems(db) {
+  const flat = (await redis(db, ['HGETALL', SAVED])) || []
+  const saved = {}
+  for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); saved[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
+  return saved
+}
 async function meta(db) {
   const flat = (await redis(db, ['HGETALL', META])) || []
   const out = { order: null, pins: null }
@@ -109,7 +117,7 @@ async function logRows(db, n) {
 }
 const version = async (db) => Number((await redis(db, ['GET', VER])) || 0)
 const everything = async (db) => ({
-  votes: await allVotes(db), hidden: await hiddenVillas(db), ...(await meta(db)), notes: await allNotes(db),
+  votes: await allVotes(db), hidden: await hiddenVillas(db), saved: await savedItems(db), ...(await meta(db)), notes: await allNotes(db),
   ver: await version(db), recent: (await logRows(db, 60)).filter((x) => SHARED.has(x.e)).slice(0, 30),
 })
 async function logPush(db, rows) {
@@ -260,6 +268,17 @@ export async function POST(request) {
   const vote = body?.vote ?? null
   if (!ITEM.test(item)) return reply(400, { error: 'Unknown item' })
   if (!name || name.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+  // Saved: one list for the whole group (an event, place or villa, with who saved it); tapping the star again takes it off
+  if (body && 'save' in body) {
+    try {
+      if (body.save) {
+        if (!(await redis(db, ['HEXISTS', SAVED, item])) && (await redis(db, ['HLEN', SAVED])) >= MAX_SAVED) return reply(507, { error: 'Too many saved' })
+        await redis(db, ['HSET', SAVED, item, JSON.stringify({ n: name, t: Date.now() })])
+      } else await redis(db, ['HDEL', SAVED, item])
+      await changed(db, body.save ? 'save' : 'unsave', item, name, body.device)
+      return reply(200, await everything(db))
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
   if (body && 'hide' in body) {
     if (!item.startsWith('ht:')) return reply(400, { error: 'Only villas can be hidden' })
     try {

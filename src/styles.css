@@ -178,6 +178,8 @@ html:not(.js) .toolbar { display: none; }
 .pill.good { background: var(--leaf-soft); color: var(--good-ink); }
 .pill.warn { background: var(--sun-soft); color: var(--warn-ink); }
 .pill.bad { background: var(--alert-soft); color: var(--alert); }
+.chip.share-list { display: inline-flex; align-items: center; gap: 6px; color: var(--sea-text); }
+.chip.share-list svg { width: 15px; height: 15px; }
 /* a villa this phone has not seen before; and the count of them on the Stay tab */
 .pill.new { background: var(--pulse); color: #fff; box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); animation: new-glow 2.4s ease-out 3; }
 @keyframes new-glow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 8px transparent; } }

@@ -736,6 +736,8 @@ font: 500 14px/1 var(--font-body); padding: 12px 14px; border-radius: 999px;
 .pill.good { background: var(--leaf-soft); color: var(--good-ink); }
 .pill.warn { background: var(--sun-soft); color: var(--warn-ink); }
 .pill.bad { background: var(--alert-soft); color: var(--alert); }
+.chip.share-list { display: inline-flex; align-items: center; gap: 6px; color: var(--sea-text); }
+.chip.share-list svg { width: 15px; height: 15px; }
 .pill.new { background: var(--pulse); color: #fff; box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); animation: new-glow 2.4s ease-out 3; }
 @keyframes new-glow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 8px transparent; } }
 .tab-new { position: absolute; top: 4px; left: calc(50% + 7px); min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--pulse); color: #fff; font: 700 10.5px/17px var(--font-display); letter-spacing: 0; text-align: center; box-shadow: 0 0 0 2px var(--surface); }
@@ -1179,7 +1181,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 <div class="view-head"><span class="eyebrow">8–26 Jan 2027 · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">Phuket&#39;s party scene is mostly beach clubs with big-name DJs. The most underground nights are small and announced late: Shelter in Patong and the crews at Courage Bar in Old Town. For proper jungle raves, go to Koh Phangan: a 1-hour flight to Samui plus a boat. In full-moon week (19 to 23 Jan) it has a party every night.</p></div>
 <div class="callout"><h3>A plan for your 18 nights</h3><h4 class="callout-sub">Group · 8–18 Jan</h4><ul><li>Fri 8 Jan: arrive. Argy at Café del Mar in Kamala from 14:00, or Shelter at Illuzion in Patong from 23:30.</li><li>Sat 9 Jan: Circoloco at Baba Beach Club Natai, 15:00 to 03:00. Book a driver both ways: about 1 hour from Kamala.</li><li>Sun 10 to Wed 13 Jan (morning): Koh Phangan with the group. Lost Jungle (Parvati Day &amp; Night) runs until 11 Jan, Chill Up on Monday, the Lighthouse Party on Tuesday.</li><li>Going to Koh Phangan only once? Make it the full-moon week (19 to 23 Jan), and use 10 to 13 Jan for boat trips and the Enthusiast Place open doors (Tue 12).</li><li>Wed 13 Jan: Marco Carola at Café del Mar. Fly back in the morning if you are on Koh Phangan.</li><li>Fri 15 Jan: Shelter again, or whatever the Courage Bar crews (SUB, FAKE PALM, Enthusiast) have on.</li><li>Sat 16 Jan: Circoloco, second weekend. Mon 18 Jan: the group leaves.</li></ul><h4 class="callout-sub">Two of you · 19–23 Jan</h4><ul><li>Tue 19 Jan: fly to Koh Samui (the 14:15 flight or earlier), then the boat to Thong Sala. Stay in Ban Tai. Tonight: OXA (moved to Tuesday this week) or the Lighthouse Party.</li><li>Wed 20 Jan: Waterfall (expected). Thu 21 Jan: Jungle Experience (expected), with Chill Up as the warm-up.</li><li>Fri 22 Jan: the Full Moon Party on Haad Rin. Bring cash and closed shoes, and leave your passport in the safe.</li><li>Sat 23 Jan: boat to Samui at 10:30 or 11:00, then the 15:05 flight. You land at 16:05 and reach Circoloco in Natai at about 17:00, for the last weekend. Book this flight now.</li><li>Staying in Phuket instead? Enthusiast Place on Tue 19, Shelter and DnB Allstars (Chalong, 22 to 24 Jan) on Fri 22, Circoloco on Sat 23.</li></ul><h4 class="callout-sub">Solo · 24–26 Jan</h4><ul><li>Base: near the airport in Nai Yang (5 to 10 minutes to the terminal), or a social hostel in Patong if you want company.</li><li>Sun 24 Jan: the Sunday Walking Street market in Old Town (16:00 to 22:00), or a beach day.</li><li>Mon 25 Jan: last party night. Open on Mondays: Illuzion, BOA and Armania in Patong, and Levitate (to 01:00). Closed: Shelter, Courage Bar and the Café del Mar Club Room.</li><li>Tue 26 Jan: check out, leave your bags, lunch at Natural Restaurant or on Nai Yang Beach, then plane spotting or the 13:30 Soi Dog tour. Be at the airport by 15:20 for the 18:20 flight.</li></ul></div>
 <div class="toolbar" data-toolbar="events">
-<div class="chips" role="toolbar" aria-label="Filter events"><button class="chip" type="button" data-group="f" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="in" aria-pressed="false">In my dates <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="pick" aria-pressed="false">Top picks <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="recurring" aria-pressed="false">Weekly &amp; clubs <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="dated" aria-pressed="false">One-off events <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="saved" aria-pressed="false">Saved <span class="n"></span></button></div>
+<div class="chips" role="toolbar" aria-label="Filter events"><button class="chip" type="button" data-group="f" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="in" aria-pressed="false">In my dates <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="pick" aria-pressed="false">Top picks <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="recurring" aria-pressed="false">Weekly &amp; clubs <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="dated" aria-pressed="false">One-off events <span class="n"></span></button><button class="chip" type="button" data-group="f" data-value="saved" data-link aria-pressed="false">Saved <span class="n"></span></button><button class="chip share-list js-only" type="button" data-share-list hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3.5v11.5M7.5 8L12 3.5 16.5 8M5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-6"/></svg>Share</button></div>
 <div class="chips" role="toolbar" aria-label="Filter by part of the trip"><button class="chip" type="button" data-group="phase" data-value="all" aria-pressed="true">All my days <span class="n"></span></button><button class="chip" type="button" data-group="phase" data-value="group" aria-pressed="false">Group · 8–18 <span class="n"></span></button><button class="chip" type="button" data-group="phase" data-value="duo" aria-pressed="false">Two of you · 19–23 <span class="n"></span></button><button class="chip" type="button" data-group="phase" data-value="solo" aria-pressed="false">Solo · 24–26 <span class="n"></span></button></div>
 <div class="chips" role="toolbar" aria-label="Filter by place"><button class="chip" type="button" data-group="where" data-value="all" aria-pressed="true">Everywhere <span class="n"></span></button><button class="chip" type="button" data-group="where" data-value="phuket" aria-pressed="false">Phuket &amp; Natai <span class="n"></span></button><button class="chip" type="button" data-group="where" data-value="koh-phangan" aria-pressed="false">Koh Phangan <span class="n"></span></button><button class="chip" type="button" data-group="where" data-value="other" aria-pressed="false">Other islands <span class="n"></span></button></div>
 <input class="search" type="search" id="events-search" placeholder="Search events, venues, genres" aria-label="Search events">
@@ -1710,7 +1712,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 <section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">Each place shows how long people usually stay (not the drive), the best time to go and the price. In January the sea on the west coast is calm and clear: the best month for beaches and boat trips.</p></div>
 <div class="toolbar" data-toolbar="places">
-<div class="chips" role="toolbar" aria-label="Filter places"><button class="chip" type="button" data-group="tier" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="must-see" aria-pressed="false">Must-see <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="hidden-gem" aria-pressed="false">Hidden gems <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="day-trip" aria-pressed="false">Day trips <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="food" aria-pressed="false">Food <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="saved" aria-pressed="false">Saved <span class="n"></span></button></div>
+<div class="chips" role="toolbar" aria-label="Filter places"><button class="chip" type="button" data-group="tier" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="must-see" aria-pressed="false">Must-see <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="hidden-gem" aria-pressed="false">Hidden gems <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="day-trip" aria-pressed="false">Day trips <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="food" aria-pressed="false">Food <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="saved" data-link aria-pressed="false">Saved <span class="n"></span></button><button class="chip share-list js-only" type="button" data-share-list hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3.5v11.5M7.5 8L12 3.5 16.5 8M5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-6"/></svg>Share</button></div>
 <div class="chips" role="toolbar" aria-label="Filter by time needed"><button class="chip" type="button" data-group="dur" data-value="all" aria-pressed="true">Any length <span class="n"></span></button><button class="chip" type="button" data-group="dur" data-value="short" aria-pressed="false">Up to 3 hours <span class="n"></span></button><button class="chip" type="button" data-group="dur" data-value="half" aria-pressed="false">Half day <span class="n"></span></button><button class="chip" type="button" data-group="dur" data-value="full" aria-pressed="false">Full day + <span class="n"></span></button><button class="chip" type="button" data-group="dur" data-value="evening" aria-pressed="false">Evening <span class="n"></span></button></div>
 <input class="search" type="search" id="places-search" placeholder="Search beaches, temples, markets…" aria-label="Search places">
 </div>
@@ -2706,7 +2708,8 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 <h2 class="block-title">Villas for the group <small>27 places</small></h2>
 <p class="js-only pins-note" id="pins-note" hidden><span>Some villas were moved by hand and keep their place.</span> <button class="btn" type="button" id="unpin-all">Reset all positions</button></p>
 <div class="toolbar" data-toolbar="stay">
-<div class="chips" role="toolbar" aria-label="Filter villas by price"><button class="chip" type="button" data-group="tier" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="luxury" aria-pressed="false">Luxury <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="mid-range" aria-pressed="false">Mid-range <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="budget" aria-pressed="false">Budget <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="saved" aria-pressed="false">Saved <span class="n"></span></button></div>
+<div class="chips" role="toolbar" aria-label="Show the liked or saved villas"><button class="chip" type="button" data-group="pick" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="pick" data-value="liked" data-link aria-pressed="false">Liked <span class="n"></span></button><button class="chip" type="button" data-group="pick" data-value="saved" data-link aria-pressed="false">Saved <span class="n"></span></button><button class="chip share-list js-only" type="button" data-share-list hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3.5v11.5M7.5 8L12 3.5 16.5 8M5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-6"/></svg>Share</button></div>
+<div class="chips" role="toolbar" aria-label="Filter villas by price"><button class="chip" type="button" data-group="tier" data-value="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="luxury" aria-pressed="false">Luxury <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="mid-range" aria-pressed="false">Mid-range <span class="n"></span></button><button class="chip" type="button" data-group="tier" data-value="budget" aria-pressed="false">Budget <span class="n"></span></button></div>
 <div class="chips" role="toolbar" aria-label="Filter hotels by area"><button class="chip" type="button" data-group="zone" data-value="all" aria-pressed="true">Everywhere <span class="n"></span></button><button class="chip" type="button" data-group="zone" data-value="west" aria-pressed="false">Kamala &amp; beach-club coast <span class="n"></span></button><button class="chip" type="button" data-group="zone" data-value="patong" aria-pressed="false">Patong <span class="n"></span></button><button class="chip" type="button" data-group="zone" data-value="south" aria-pressed="false">Kata · Rawai <span class="n"></span></button><button class="chip" type="button" data-group="zone" data-value="airport" aria-pressed="false">Near the airport <span class="n"></span></button></div>
 <div class="chips" role="toolbar" aria-label="Filter villas by beds"><button class="chip" type="button" data-group="beds" data-value="all" aria-pressed="true">Any beds <span class="n"></span></button><button class="chip" type="button" data-group="beds" data-value="good" aria-pressed="false">A bed each <span class="n"></span></button><button class="chip" type="button" data-group="beds" data-value="warn" aria-pressed="false">Some share <span class="n"></span></button><button class="chip" type="button" data-group="beds" data-value="bad" aria-pressed="false">2 to a bed <span class="n"></span></button></div>
 </div>
@@ -3782,7 +3785,13 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   window.addEventListener('pageshow', refreshToday)
 
   /* ---------- favourites ---------- */
-  const favs = new Set(store.get('favs', []))
+  // on the website Saved is the whole group's list (kept by the vote server, with who saved each); elsewhere it is
+  // kept on this phone
+  const sharedSave = !!D.votes && /^https?:$/.test(location.protocol)
+  let savedBy = sharedSave ? store.get('savedShared', {}) : {} // '<item>' -> { by, t }: the last list loaded
+  const favs = new Set(sharedSave ? Object.keys(savedBy) : store.get('favs', []))
+  let shareSave = null // (item, on): set by the vote code below, which can send it to the server
+  const likedItems = new Set() // items with at least one like, for the Liked filter (filled in by renderVotes)
   // villas hidden with 'Hide': off the list and the map until 'Show again'. On the website the hide is for everyone
   // (kept by the vote server, see the votes below); elsewhere it is kept on this phone only
   const sharedHide = !!D.votes && /^https?:$/.test(location.protocol)
@@ -3799,15 +3808,19 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     const b = e.target.closest('.fav'); if (!b) return
     e.preventDefault()
     const id = b.dataset.fav
+    if (sharedSave) { if (shareSave) shareSave(id, !favs.has(id)); return }
     if (favs.has(id)) { favs.delete(id); toast('Removed from saved') } else { favs.add(id); toast('Saved') }
     saveOrWarn('favs', Array.from(favs)); syncFavs()
   })
   function renderSaved() {
     const box = $('#saved-list'); if (!box) return
     const items = Array.from(favs).map((f) => document.querySelector('[data-fav-card="' + CSS.escape(f) + '"]')).filter(Boolean)
+    const by = (card) => { const x = savedBy[card.dataset.favCard]; return x && x.by ? ' · saved by ' + x.by : '' }
+    const villas = items.filter((c) => c.dataset.stay).length
     box.innerHTML = items.length
-      ? items.map((card) => '<li><div><a href="#' + card.id + '">' + esc(card.dataset.name) + '</a> <span>· ' + esc(card.dataset.kind || '') + '</span></div></li>').join('')
-      : '<li class="tip"><div><span>Tap the star on any event, place or hotel to keep it here.</span></div></li>'
+      ? items.map((card) => '<li><div><a href="#' + card.id + '">' + esc(card.dataset.name) + '</a> <span>· ' + esc(card.dataset.kind || '') + esc(by(card)) + '</span></div></li>').join('') +
+        (villas > 1 ? '<li class="tip"><div><a href="#stay/saved">The saved villas on the Stay tab</a></div></li>' : '')
+      : '<li class="tip"><div><span>' + (sharedSave ? 'Tap the star on any event, place or villa to save it here for the whole group.' : 'Tap the star on any event, place or hotel to keep it here.') + '</span></div></li>'
   }
 
   /* ---------- filterable lists ---------- */
@@ -3823,6 +3836,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     const match = (card, group, value) => {
       if (value === 'all') return true
       if (value === 'saved') return favs.has(card.dataset.favCard)
+      if (value === 'liked') return likedItems.has(card.dataset.favCard)
       const v = card.dataset[group] || ''
       return v.split(' ').includes(value)
     }
@@ -3855,11 +3869,32 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
         chip.addEventListener('click', () => {
           $$('.chip[data-group="' + g + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip)))
           state[g] = chip.dataset.value; apply()
+          // a list you can link to (Liked, Saved): its address goes in the address bar, ready to copy
+          if ($('.chip[data-link]', bar) && $$('.chip[data-group="' + g + '"]', bar).some((c) => c.hasAttribute('data-link'))) {
+            history.replaceState(null, '', '#' + id + (chip.hasAttribute('data-link') ? '/' + chip.dataset.value : ''))
+            syncShareList()
+          }
         })
       })
       if (search) search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); apply() })
     }
-    lists.push({ apply, reset, el: listEl })
+    // open the list on one of its linkable filters (from an address like #stay/liked)
+    const pick = (value) => {
+      const chip = bar && $('.chip[data-link][data-value="' + CSS.escape(value) + '"]', bar)
+      if (!chip) return false
+      reset()
+      $$('.chip[data-group="' + chip.dataset.group + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip)))
+      state[chip.dataset.group] = value; apply(); syncShareList()
+      return true
+    }
+    const shareBtn = bar && $('[data-share-list]', bar)
+    function syncShareList() {
+      if (!shareBtn) return
+      const on = $('.chip[data-link][aria-pressed="true"]', bar)
+      shareBtn.hidden = !on || !/^https?:$/.test(location.protocol)
+      if (on) shareBtn.dataset.url = location.origin + location.pathname + '#' + id + '/' + on.dataset.value
+    }
+    lists.push({ apply, reset, pick, el: listEl })
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
@@ -4014,6 +4049,14 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   function route() {
     const id = decodeURIComponent(location.hash.slice(1))
     if (!id || VIEWS.includes(id)) return show(id || 'home')
+    // a filtered list: #stay/liked, #stay/saved, #events/saved, #places/saved
+    const f = /^([a-z]+)\/([a-z]+)$/.exec(id)
+    if (f && VIEWS.includes(f[1])) {
+      show(f[1])
+      const l = lists.find((x) => x.el.dataset.list === f[1])
+      if (!l || !l.pick(f[2])) history.replaceState(null, '', '#' + f[1])
+      return
+    }
     const el = document.getElementById(id)
     if (!el) return show('home')
     const view = el.closest('.view')
@@ -4583,7 +4626,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   let seenT = store.get('seenT', 0) // the newest shared change this phone has seen
   let firstAnnounce = true
   // other people's changes, as they happen: "Ani liked Mouana Breeze", with Show to go to it
-  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on' }
+  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list' }
   const cardOf = (x) => { const m = /^(ht|ev|pl):(.+)$/.exec(x || ''); return m ? document.getElementById(m[1] + '-' + m[2]) : null }
   function describe(r) {
     const who = r.n || 'Someone'
@@ -4631,6 +4674,9 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's')
   function renderVotes() {
     if (!votes) return
+    likedItems.clear()
+    Object.entries(votes).forEach(([k, it]) => { if (it && it.like && it.like.length) likedItems.add(k) })
+    lists.forEach((l) => l.apply())
     voteBars.forEach((bar) => {
       const it = votes[bar.dataset.voteItem] || { like: [], skip: [] }
       const mine = mineOf(it)
@@ -4679,10 +4725,13 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   }
   // put the cards in order; with animate, every card that changes place slides there (FLIP: measure, move, then
   // animate from where it was), and the page does not scroll
+  let staysSorted = false // the list has been put in order once (the first votes arrive after the page is drawn)
   function sortStays(now, animate) {
     if (!stayList || !votes) return
     const view = document.getElementById('stay')
-    if (!now && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
+    // later changes wait while the list is on screen (no jumps); the very first order does not wait
+    if (!now && staysSorted && view && !view.hidden && stayList.getBoundingClientRect().top < innerHeight) return
+    staysSorted = true
     const sorted = stayOrder()
     if (!sorted.some((c, i) => stayList.children[i] !== c)) return
     const was = animate && !reduceMotion ? new Map(stayCards.map((c) => [c, c.getBoundingClientRect().top])) : null
@@ -4756,6 +4805,11 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
     if ('pins' in j) { pins = j.pins; store.set('villaPins', pins); syncPinUI() }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
+    if (j.saved && sharedSave) {
+      savedBy = j.saved; store.set('savedShared', savedBy)
+      favs.clear(); Object.keys(savedBy).forEach((k) => favs.add(k))
+      syncFavs(); moveLocalSaves()
+    }
     if (j.hidden) {
       hiddenBy = j.hidden; store.set('hiddenShared', hiddenBy)
       hiddenStays.clear(); Object.keys(hiddenBy).forEach((k) => hiddenStays.add(k.slice(3)))
@@ -4819,6 +4873,36 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     openDialog(what === 'hide'
       ? { title: 'Hide for everyone', what: name, save: 'Hide', note: 'It goes off the list and the map for the whole group. Anyone can show it again.', body: send(true), done: () => 'Hidden for everyone: ' + name }
       : { title: 'Show again for everyone', what: name, save: 'Show again', note: 'It comes back on the list and the map for the whole group.', body: send(false), done: () => (id === '*' ? 'All villas are back for everyone' : 'Back on the list for everyone') })
+  }
+  // Save (the star) on the website: for the whole group, with your name (asked once). It shows at once, then the
+  // server's list replaces it
+  async function sendSave(item, on, name) {
+    const card = document.querySelector('[data-fav-card="' + CSS.escape(item) + '"]'), what = card?.dataset.name || 'it'
+    if (on) { favs.add(item); savedBy[item] = { by: name, t: Date.now() } } else { favs.delete(item); delete savedBy[item] }
+    syncFavs()
+    try { applyShared(await post({ item, name, save: on })); toast(on ? 'Saved for everyone: ' + what : 'Taken off the saved list for everyone') }
+    catch { if (on) favs.delete(item); else favs.add(item); syncFavs(); failed() }
+  }
+  if (canVote) shareSave = (item, on) => {
+    if (voterName()) return sendSave(item, on, voterName())
+    const card = document.querySelector('[data-fav-card="' + CSS.escape(item) + '"]')
+    openDialog({ title: on ? 'Save for everyone' : 'Take off the saved list', what: card?.dataset.name || '', save: on ? 'Save' : 'Take off',
+      note: on ? 'It goes in the Saved list for the whole group, with your name.' : 'It comes off the Saved list for the whole group.', run: (n) => sendSave(item, on, n) })
+  }
+  // this phone's saves from before Saved was shared: added to the group's list once, when the name is known
+  let movingSaves = false
+  async function moveLocalSaves() {
+    const old = store.get('favs', []).filter((x) => /^(ht|ev|pl):/.test(x) && !favs.has(x))
+    if (!canVote || movingSaves || store.get('favsMoved', false) || !voterName()) return
+    if (!old.length) { store.set('favsMoved', true); return }
+    movingSaves = true
+    try {
+      let j = null
+      for (const item of old.slice(0, 30)) j = await post({ item, name: voterName(), save: true })
+      store.set('favsMoved', true)
+      if (j) applyShared(j)
+      toast('Your saved ' + (old.length === 1 ? 'item is' : 'items are') + ' now in the Saved list for the whole group')
+    } catch { /* try again next time */ } finally { movingSaves = false }
   }
   if (canVote) {
     document.addEventListener('click', (e) => {
@@ -4954,6 +5038,15 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     const url = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : b.dataset.listing || ''
     if (!url) return
     if (navigator.share) { try { await navigator.share({ title: card.dataset.name, url }) } catch { /* closed */ } return }
+    try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
+  })
+
+  // Share link on a filtered list (Liked, Saved): its address, e.g. …/#stay/liked
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-share-list]'); if (!b || !b.dataset.url) return
+    const url = b.dataset.url, title = 'Phuket guide: ' + ($('.chip[data-link][aria-pressed="true"]', b.closest('.toolbar'))?.textContent.replace(/\d+/g, '').trim() || 'list')
+    track('share', url.split('#')[1])
+    if (navigator.share) { try { await navigator.share({ title, url }) } catch { /* closed */ } return }
     try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
   })
 

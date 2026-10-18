@@ -94,11 +94,14 @@ button { font: inherit; color: inherit; }
 /* before the trip: a small copy of the departure board in the pass (the same flaps), in place of the pill; the
    brand's name steps aside for it on phones */
 .status-pill.live { padding: 0; background: none; border-radius: 0; line-height: 1; }
-.tb-board { display: flex; align-items: flex-start; gap: 3px; font: 700 clamp(13px, 4.3vw, 20px)/1 var(--font-display); }
+.tb-board { display: flex; align-items: flex-start; gap: 3px; font: 700 clamp(14px, 4.6vw, 22px)/1 var(--font-display); }
 .tb-unit { display: grid; justify-items: center; gap: 3px; }
 .tb-unit small { font: 600 7.5px/1 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
 .tb-board .pc-digits { gap: 2px; }
-.tb-board .pc-sep { color: var(--ink-2); height: 1.3em; line-height: 1.25em; }
+.tb-board .pc-sep { color: var(--ink-2); height: 1.2em; line-height: 1.2em; }
+/* small flaps: a hairline split, so an 8 does not read as a 0 */
+.tb-board .flap { width: 0.74em; height: 1.2em; }
+.tb-board .flap::after { height: 1px; top: calc(50% - 0.5px); background: rgba(0, 0, 0, 0.35); }
 .tb-board .flap { border-radius: 0.2em; box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.4), 0 0.12em 0.3em rgba(0, 0, 0, 0.22); }
 @media (max-width: 559px) { .cd-live .brand-text { display: none; } }
 .icon-btn { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; flex: none; }
@@ -367,7 +370,7 @@ html.map-popup #back-to-card { display: none; }
 .flap > span { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; }
 .f-top, .f-up { top: 0; border-radius: 0.16em 0.16em 0 0; background: linear-gradient(#24343a, #1a272b); }
 .f-bot, .f-down { bottom: 0; border-radius: 0 0 0.16em 0.16em; background: linear-gradient(#152024, #111a1d); }
-.flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; }
+.flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; padding-top: 0.12em; } /* the font's digits sit high in their line */
 .f-top b, .f-up b { top: 0; }
 .f-bot b, .f-down b { bottom: 0; }
 .flap::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 1px); height: 2px; background: rgba(0, 0, 0, 0.6); z-index: 3; } /* the split */

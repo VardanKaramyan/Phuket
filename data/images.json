@@ -1998,5 +1998,25 @@
   "credit": "© Leky (MP Property)",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1299054705124680671?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:elite-atoll-pool-villa-d-rawai": {
+  "file": "assets/img/hotels-elite-atoll-pool-villa-d-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 1440,
+  "credit": "© Elite Atoll Group",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1351149084698494894?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:sol-residences-saiyuan-rawai": {
+  "file": "assets/img/hotels-sol-residences-saiyuan-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Hostmaker Thailand",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1768694402573249231?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

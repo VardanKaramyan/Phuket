@@ -2398,5 +2398,29 @@
   "width": 1440,
   "height": 960,
   "note": "Listing cover photo (the pool and jacuzzi by the house), checked by eye (18 Oct 2026)."
+ },
+ {
+  "key": "hotels:elite-atoll-pool-villa-d-rawai",
+  "ok": true,
+  "file": "assets/raw/hotels-elite-atoll-pool-villa-d-rawai.jpg",
+  "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1351149084698494894/original/ad701133-1884-45dc-88e0-ebae6e521f1f.jpeg",
+  "page": "https://www.airbnb.com/rooms/1351149084698494894?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+  "credit": "\u00a9 Elite Atoll Group",
+  "license": "Airbnb listing photo",
+  "width": 1440,
+  "height": 1440,
+  "note": "Listing cover photo (the pool), checked by eye (18 Oct 2026)."
+ },
+ {
+  "key": "hotels:sol-residences-saiyuan-rawai",
+  "ok": true,
+  "file": "assets/raw/hotels-sol-residences-saiyuan-rawai.jpg",
+  "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1768694402573249231/original/25a1f277-d6d4-470d-99c1-fd73feec7118.jpeg",
+  "page": "https://www.airbnb.com/rooms/1768694402573249231?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+  "credit": "\u00a9 Hostmaker Thailand",
+  "license": "Airbnb listing photo",
+  "width": 1440,
+  "height": 960,
+  "note": "Listing cover photo (the living room and the pool), checked by eye (18 Oct 2026)."
  }
 ]

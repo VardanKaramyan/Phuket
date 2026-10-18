@@ -7,6 +7,7 @@ const TILES = 'guide-tiles'
 const TILE_MAX = 2500 // about 50 MB of viewed street and satellite tiles
 const TILE_HOSTS = /(^|\.)arcgisonline\.com$/
 const SCOPE_PATH = new URL('./', self.location).pathname
+const NET_WAIT = 3500 // ms to wait for the newest page before showing the saved copy
 
 // a response that came through a redirect cannot answer a page load, so store a clean copy
 async function clean(res) {
@@ -54,17 +55,22 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url)
 
   if (url.origin === self.location.origin) {
-    // live data (the shared votes) and Vercel's analytics script: always the network, never a saved copy
-    if (url.pathname.startsWith(SCOPE_PATH + 'api/') || url.pathname.startsWith('/_vercel/')) return
+    // live data (the shared votes), the version check and Vercel's analytics script: always the network, never a copy
+    if (url.pathname.startsWith(SCOPE_PATH + 'api/') || url.pathname === SCOPE_PATH + 'version.json' || url.pathname.startsWith('/_vercel/')) return
     const isAppPage = req.mode === 'navigate' && (url.pathname === SCOPE_PATH || url.pathname === SCOPE_PATH + 'index.html')
     if (isAppPage) {
-      // offline first: answer from the cache at once, refresh it in the background
+      // online: the newest page (so a new version of the guide shows on the first open), waiting at most NET_WAIT for
+      // it; offline, or a slow connection: the saved copy, and the newest is saved in the background for next time
       event.respondWith((async () => {
         const c = await caches.open(CACHE)
-        const cached = await c.match('./')
         const network = fetch(req).then(async (res) => { if (res.ok) await c.put('./', await clean(res.clone())); return res }).catch(() => null)
-        if (cached) { event.waitUntil(network); return cached }
-        return (await network) || new Response('Offline. Open the guide once with internet first.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+        const cached = await c.match('./')
+        if (!cached) return (await network) || new Response('Offline. Open the guide once with internet first.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
+        if (self.navigator.onLine === false) { event.waitUntil(network); return cached }
+        const fresh = await Promise.race([network, new Promise((r) => setTimeout(() => r(null), NET_WAIT))])
+        if (fresh && fresh.ok) return fresh
+        event.waitUntil(network)
+        return cached
       })())
       return
     }

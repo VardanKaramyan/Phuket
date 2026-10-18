@@ -42,6 +42,7 @@ node tools/votes-test.mjs                          # the vote server and the Lik
 node tools/gallery-test.mjs                        # villa photo galleries: swipe, load on demand, offline, artifact
 node tools/countdown-test.mjs                      # the countdown board and pill: before, during and after the trip
 node tools/new-villas-test.mjs                     # New badges on villas this phone has not seen yet
+node tools/update-test.mjs                         # new versions: shown on the first reload, offline copy, Reload offer
 ```
 
 The map: wheel and trackpad zoom glide (`smoothWheel` in `src/app.js` replaces Leaflet's stepped wheel zoom), the top button opens full screen, and Satellite works offline. The offline satellite layer is EOxCloudless 2025 (Sentinel-2, 10 m per pixel) for the trip region, Phuket and Koh Phangan, up to zoom 14 (769 tiles, 3.6 MB, listed in `assets/sat/coverage.json`). Online, the sharp Esri imagery draws on top of it. Esri's tiles are not saved in advance (their terms do not allow offline export outside ArcGIS); the service worker keeps up to 2500 tiles you have looked at.

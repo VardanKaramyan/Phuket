@@ -597,6 +597,9 @@ html:not(.js) body:has(#stay:target, #stay :target) .tabbar a[href="#stay"],
 html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] { color: var(--sea); }
 
 .toast { position: fixed; left: 50%; bottom: calc(var(--tabbar-h) + 14px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 1000; background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100vw - 32px); }
+/* a new version of the guide is out: Reload */
+.update-bar { position: fixed; left: 12px; right: 12px; bottom: calc(var(--tabbar-h) + 12px + env(safe-area-inset-bottom, 0px)); z-index: 1001; max-width: 560px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 14px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); background: var(--ink); color: var(--bg); box-shadow: var(--shadow); font-size: 14px; }
+.update-bar .btn { min-height: 38px; flex: none; }
 .footer-note { font-size: 12.5px; color: var(--ink-2); display: grid; gap: 6px; padding-top: 6px; }
 
 @media (max-width: 370px) {

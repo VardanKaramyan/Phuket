@@ -858,7 +858,7 @@ function clientData(build) {
   const best = brands[0]
   const bestRates = best ? Object.fromEntries((best.sampleRates || []).filter((r) => r && r.buyTHB).map((r) => [r.currency, r.buyTHB])) : {}
   return {
-    build, trip: TRIP,
+    build, trip: TRIP, buildId: build === 'standalone' ? '__BUILD_ID__' : '', // the website's build, see version.json
     areas: areasSorted.map((a) => ({ id: a.id, name: a.name, short: shortName(a), tagline: a.tagline, color: AREA_COLORS[a.id] || '#999', label: labelPoint(a), rank: (areaGeo.features.find((f) => f.properties.id === a.id) || { properties: {} }).properties.km2 || 0, gmapsArea: gmaps(a.gmapsQuery || a.name + ', Phuket', a.placeId) })),
     areaGeo, land, roads, points: pts, offlineUrl: extra.offlineUrl || '',
     precacheCount: 6 + Object.keys(images).filter((k) => usedKey(k) && !(extra.dropImages || []).includes(k) && fs.existsSync(P(images[k].file))).length,
@@ -981,8 +981,13 @@ for (const [k, im] of Object.entries(images)) {
 }
 fs.rmSync(P('dist/sat'), { recursive: true, force: true })
 for (const f of satFiles) { fs.mkdirSync(path.dirname(P('dist/sat', f)), { recursive: true }); fs.copyFileSync(P('assets/sat', f), P('dist/sat', f)) }
-const standalone = page('standalone')
+// the website's build id: in the page, and in dist/version.json, which open pages check to offer a reload
+const standaloneRaw = page('standalone')
+const buildId = crypto.createHash('sha1').update(standaloneRaw).digest('hex').slice(0, 12)
+if (standaloneRaw.split('__BUILD_ID__').length !== 2) throw new Error('the build id placeholder must appear once in the page')
+const standalone = standaloneRaw.replace('__BUILD_ID__', buildId)
 fs.writeFileSync(P('dist/index.html'), standalone)
+fs.writeFileSync(P('dist/version.json'), JSON.stringify({ v: buildId }))
 fs.writeFileSync(P('dist/phuket-guide-offline.html'), page('single'))
 fs.writeFileSync(P('artifact/index.html'), page('artifact'))
 fs.writeFileSync(P('dist/phuket-areas.kml'), kml())

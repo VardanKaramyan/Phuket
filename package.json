@@ -21,7 +21,8 @@
     "test:gallery": "node tools/gallery-test.mjs",
     "test:countdown": "node tools/countdown-test.mjs",
     "test:new": "node tools/new-villas-test.mjs",
-    "test": "node tools/check.mjs && node tools/amd-test.mjs && node tools/offline-test.mjs && node tools/popup-test.mjs && node tools/map-test.mjs && node tools/votes-test.mjs && node tools/gallery-test.mjs && node tools/countdown-test.mjs && node tools/new-villas-test.mjs",
+    "test:update": "node tools/update-test.mjs",
+    "test": "node tools/check.mjs && node tools/amd-test.mjs && node tools/offline-test.mjs && node tools/popup-test.mjs && node tools/map-test.mjs && node tools/votes-test.mjs && node tools/gallery-test.mjs && node tools/countdown-test.mjs && node tools/new-villas-test.mjs && node tools/update-test.mjs",
     "qa": "node tools/qa-shots.mjs dist/phuket-guide-offline.html qa-out",
     "all": "npm run data && npm run build && npm test",
     "serve": "npx --yes http-server@14.1.1 dist -p 8080 -c-1"

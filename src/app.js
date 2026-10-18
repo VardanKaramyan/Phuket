@@ -918,6 +918,30 @@
   const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true
   const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
   const setOff = (text, good) => { if (off) { off.textContent = text; off.className = 'offline-state' + (good ? ' good' : '') } }
+  /* ---------- a new version of the guide: a page left open (or resumed from the home screen) offers a reload ---------- */
+  if (D.build === 'standalone' && D.buildId && /^https?:$/.test(location.protocol)) {
+    let lastCheck = 0, offered = false
+    const checkVersion = async () => {
+      if (offered || !navigator.onLine || Date.now() - lastCheck < 60000) return // at most once a minute
+      lastCheck = Date.now()
+      try {
+        const r = await fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
+        const j = r.ok ? await r.json() : null
+        if (!j || !j.v || j.v === D.buildId) return
+        offered = true
+        navigator.serviceWorker?.getRegistration?.().then((g) => g && g.update()).catch(() => {})
+        const bar = document.createElement('div')
+        bar.className = 'update-bar'; bar.setAttribute('role', 'status')
+        bar.innerHTML = '<span>A new version of the guide is ready.</span><button class="btn primary" type="button">Reload</button>'
+        $('button', bar).addEventListener('click', () => { bar.remove(); location.reload() })
+        document.body.appendChild(bar)
+      } catch { /* offline: try again later */ }
+    }
+    setTimeout(checkVersion, 3000)
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') checkVersion() })
+    addEventListener('focus', checkVersion)
+    addEventListener('online', checkVersion)
+  }
   if (D.build === 'standalone' && 'serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
     const hadController = !!navigator.serviceWorker.controller
     const failMsg = () => setOff('Could not save for offline use. Open the guide again on good Wi-Fi.', false)

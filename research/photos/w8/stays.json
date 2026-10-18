@@ -299,6 +299,30 @@
    "width": 1440,
    "height": 958,
    "note": "Listing cover photo (pool and house), checked by eye (17 Oct 2026)."
+  },
+  {
+   "key": "hotels:pool-table-4br-villa-bangla-patong",
+   "ok": true,
+   "file": "assets/raw/hotels-pool-table-4br-villa-bangla-patong.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1773626302889385080/original/efef20f2-8d24-4666-926e-513553c55a0d.jpeg",
+   "page": "https://www.airbnb.com/rooms/1773626302889385080?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Leky (MP Property)",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 960,
+   "note": "Listing cover photo (the pool), checked by eye (18 Oct 2026)."
+  },
+  {
+   "key": "hotels:128-villa-patong-jacuzzi",
+   "ok": true,
+   "file": "assets/raw/hotels-128-villa-patong-jacuzzi.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1299054705124680671/original/8eac22c8-1a39-4d81-9bb6-22693e376fcd.jpeg",
+   "page": "https://www.airbnb.com/rooms/1299054705124680671?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Leky (MP Property)",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 960,
+   "note": "Listing cover photo (the pool and jacuzzi by the house), checked by eye (18 Oct 2026)."
   }
  ]
 }

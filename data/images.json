@@ -1978,5 +1978,25 @@
   "credit": "© Mr. Dev",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1571003872597675708?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:pool-table-4br-villa-bangla-patong": {
+  "file": "assets/img/hotels-pool-table-4br-villa-bangla-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Leky (MP Property)",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1773626302889385080?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "hotels:128-villa-patong-jacuzzi": {
+  "file": "assets/img/hotels-128-villa-patong-jacuzzi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 960,
+  "credit": "© Leky (MP Property)",
+  "license": "Airbnb listing photo",
+  "source": "https://www.airbnb.com/rooms/1299054705124680671?check_in=2027-01-08&check_out=2027-01-18&adults=8"
  }
 }

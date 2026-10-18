@@ -325,28 +325,28 @@
    "note": "Listing cover photo (the pool and jacuzzi by the house), checked by eye (18 Oct 2026)."
   },
   {
-   "key": "hotels:elite-atoll-pool-villa-d-rawai",
+   "key": "hotels:132-pool-villa-patong-5br",
    "ok": true,
-   "file": "assets/raw/hotels-elite-atoll-pool-villa-d-rawai.jpg",
-   "url": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1351149084698494894/original/ad701133-1884-45dc-88e0-ebae6e521f1f.jpeg",
-   "page": "https://www.airbnb.com/rooms/1351149084698494894?check_in=2027-01-08&check_out=2027-01-18&adults=8",
-   "credit": "© Elite Atoll Group",
-   "license": "Airbnb listing photo",
-   "width": 1440,
-   "height": 1440,
-   "note": "Listing cover photo (the pool), checked by eye (18 Oct 2026)."
-  },
-  {
-   "key": "hotels:sol-residences-saiyuan-rawai",
-   "ok": true,
-   "file": "assets/raw/hotels-sol-residences-saiyuan-rawai.jpg",
-   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1768694402573249231/original/25a1f277-d6d4-470d-99c1-fd73feec7118.jpeg",
-   "page": "https://www.airbnb.com/rooms/1768694402573249231?check_in=2027-01-08&check_out=2027-01-18&adults=8",
-   "credit": "© Hostmaker Thailand",
+   "file": "assets/raw/hotels-132-pool-villa-patong-5br.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1319557645128296487/original/d9a2e2b8-33bc-42b9-9d1a-2e3f98e22cc1.jpeg",
+   "page": "https://www.airbnb.com/rooms/1319557645128296487?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Leky (MP Property)",
    "license": "Airbnb listing photo",
    "width": 1440,
    "height": 960,
-   "note": "Listing cover photo (the living room and the pool), checked by eye (18 Oct 2026)."
+   "note": "Listing cover photo (the house and the pool), checked by eye (18 Oct 2026)."
+  },
+  {
+   "key": "hotels:136-pool-villa-patong-5br",
+   "ok": true,
+   "file": "assets/raw/hotels-136-pool-villa-patong-5br.jpg",
+   "url": "https://a0.muscache.com/im/pictures/hosting/Hosting-1586097453594142520/original/f70a0368-c4be-4526-b510-1b22d94638a0.jpeg",
+   "page": "https://www.airbnb.com/rooms/1586097453594142520?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "credit": "© Leky (MP Property)",
+   "license": "Airbnb listing photo",
+   "width": 1440,
+   "height": 961,
+   "note": "Listing cover photo (the house and the pool), checked by eye (18 Oct 2026)."
   }
  ]
 }

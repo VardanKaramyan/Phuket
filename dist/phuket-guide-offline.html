@@ -1072,6 +1072,8 @@ html.map-full, html.map-full body { overflow: hidden; }
 .acc > summary::after { content: "+"; font-size: 22px; color: var(--sea); }
 .acc[open] > summary::after { content: "–"; }
 .acc .acc-body { padding: 0 16px 16px; display: grid; gap: 12px; }
+.picks-acc > summary small { margin-left: 6px; font: 400 14px/1 var(--font-body); color: var(--ink-2); }
+.picks-acc .note { margin: 0; }
 .fact { display: grid; gap: 4px; }
 .fact h4 { font: 600 15.5px/1.3 var(--font-body); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .fact p { font-size: 14.5px; color: var(--ink); }
@@ -2699,9 +2701,9 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 <div class="row2"><label for="mh-dates">Dates<input id="mh-dates" name="dates" placeholder="8–11 Jan"></label><label for="mh-notes">Notes<input id="mh-notes" name="notes" placeholder="Booking no., check-in time"></label></div>
 <div class="actions"><button class="btn primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 5v14M5 12h14"/></svg>Save hotel</button><button class="btn" type="button" id="my-hotel-cancel">Cancel</button></div>
 </form></div>
-<div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
+<details class="acc picks-acc js-only" id="group-picks-box" hidden><summary><span>Group picks <small id="group-picks-n"></small></span></summary><div class="acc-body">
 <p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote, and the arrows to move a villa up or down the list for everyone.</p>
-<ol class="picks" id="group-picks"></ol></div>
+<ol class="picks" id="group-picks"></ol></div></details>
 <h2 class="block-title">Villas for the group <small>29 places</small></h2>
 <p class="js-only pins-note" id="pins-note" hidden><span>Some villas were moved by hand and keep their place.</span> <button class="btn" type="button" id="unpin-all">Reset all positions</button></p>
 <div class="toolbar" data-toolbar="stay">
@@ -4744,6 +4746,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
       .map(([k, it]) => ({ it, card: document.getElementById('ht-' + k.slice(3)) })).filter((r) => r.card)
       .sort((a, b) => b.it.like.length - a.it.like.length || a.it.skip.length - b.it.skip.length)
     box.hidden = !rows.length
+    const n = $('#group-picks-n'); if (n) n.textContent = rows.length ? plural(rows.length, 'villa') : ''
     list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
       (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
   }

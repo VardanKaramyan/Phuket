@@ -551,6 +551,9 @@ html.map-full, html.map-full body { overflow: hidden; }
 .acc > summary::after { content: "+"; font-size: 22px; color: var(--sea); }
 .acc[open] > summary::after { content: "–"; }
 .acc .acc-body { padding: 0 16px 16px; display: grid; gap: 12px; }
+/* Group picks on the Stay tab: folded away until tapped; the summary says how many villas */
+.picks-acc > summary small { margin-left: 6px; font: 400 14px/1 var(--font-body); color: var(--ink-2); }
+.picks-acc .note { margin: 0; }
 .fact { display: grid; gap: 4px; }
 .fact h4 { font: 600 15.5px/1.3 var(--font-body); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .fact p { font-size: 14.5px; color: var(--ink); }

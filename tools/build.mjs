@@ -680,9 +680,9 @@ function stayView(mode) {
 <div class="row2"><label for="mh-dates">Dates<input id="mh-dates" name="dates" placeholder="8–11 Jan"></label><label for="mh-notes">Notes<input id="mh-notes" name="notes" placeholder="Booking no., check-in time"></label></div>
 <div class="actions"><button class="btn primary" type="submit">${icon('plus')}Save hotel</button><button class="btn" type="button" id="my-hotel-cancel">Cancel</button></div>
 </form></div>
-<div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
+<details class="acc picks-acc js-only" id="group-picks-box" hidden><summary><span>Group picks <small id="group-picks-n"></small></span></summary><div class="acc-body">
 <p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote, and the arrows to move a villa up or down the list for everyone.</p>
-<ol class="picks" id="group-picks"></ol></div>
+<ol class="picks" id="group-picks"></ol></div></details>
 <h2 class="block-title">Villas for the group <small>${hotels.length} places</small></h2>
 <p class="js-only pins-note" id="pins-note" hidden><span>Some villas were moved by hand and keep their place.</span> <button class="btn" type="button" id="unpin-all">Reset all positions</button></p>
 <div class="toolbar" data-toolbar="stay">

@@ -1102,6 +1102,7 @@
       .map(([k, it]) => ({ it, card: document.getElementById('ht-' + k.slice(3)) })).filter((r) => r.card)
       .sort((a, b) => b.it.like.length - a.it.like.length || a.it.skip.length - b.it.skip.length)
     box.hidden = !rows.length
+    const n = $('#group-picks-n'); if (n) n.textContent = rows.length ? plural(rows.length, 'villa') : ''
     list.innerHTML = rows.map((r) => '<li><a href="#' + r.card.id + '">' + esc(r.card.dataset.name) + '</a> <span>' + plural(r.it.like.length, 'like') +
       (r.it.skip.length ? ' · ' + plural(r.it.skip.length, 'skip') : '') + '</span><small>' + esc(r.it.like.join(', ')) + '</small></li>').join('')
   }

@@ -279,8 +279,18 @@ check('the first phone sees the other vote after a refresh', s.like === '1' && s
 await vote(A.p, 'like')
 s = await bar(A.p)
 check('tapping your own vote again takes it back', s.like === '0' && s.mine === '', JSON.stringify(s))
-const picks = await B.p.evaluate(async () => { location.hash = 'stay'; await new Promise((r) => setTimeout(r, 300)); return document.getElementById('group-picks')?.innerText || '' })
+const picks = await B.p.evaluate(async () => { location.hash = 'stay'; await new Promise((r) => setTimeout(r, 300)); return document.getElementById('group-picks')?.textContent || '' })
 check('Group picks ranks the liked villa', /Light & Hope/.test(picks) && /1 like/.test(picks), JSON.stringify(picks.slice(0, 160)))
+// folded away by default; the summary says how many; a tap opens it
+const fold = await B.p.evaluate(async () => {
+  const box = document.getElementById('group-picks-box'), shut = !box.hidden && !box.open && !document.getElementById('group-picks').innerText.trim()
+  const count = document.getElementById('group-picks-n').textContent
+  box.querySelector('summary').click(); await new Promise((r) => setTimeout(r, 100))
+  const opened = box.open && /Light & Hope/.test(document.getElementById('group-picks').innerText)
+  box.querySelector('summary').click()
+  return { shut, count, opened }
+})
+check('Group picks is folded away by default and opens on a tap', fold.shut && fold.count === '1 villa' && fold.opened, JSON.stringify(fold))
 const dialogEsc = await B.p.evaluate(async () => {
   document.querySelector('#pl-big-buddha [data-vote-btn="like"]').click()
   await new Promise((r) => setTimeout(r, 200))

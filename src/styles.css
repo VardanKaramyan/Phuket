@@ -175,6 +175,10 @@ html:not(.js) .toolbar { display: none; }
 .pill.good { background: var(--leaf-soft); color: var(--good-ink); }
 .pill.warn { background: var(--sun-soft); color: var(--warn-ink); }
 .pill.bad { background: var(--alert-soft); color: var(--alert); }
+/* a villa this phone has not seen before; and the count of them on the Stay tab */
+.pill.new { background: var(--pulse); color: #fff; box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); animation: new-glow 2.4s ease-out 3; }
+@keyframes new-glow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 8px transparent; } }
+.tab-new { position: absolute; top: 4px; left: calc(50% + 7px); min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--pulse); color: #fff; font: 700 10.5px/17px var(--font-display); letter-spacing: 0; text-align: center; box-shadow: 0 0 0 2px var(--surface); }
 .body { padding: 14px 16px 16px; display: grid; gap: 9px; min-width: 0; }
 .title-row { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
 .title-row > div { min-width: 0; }

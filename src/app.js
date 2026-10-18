@@ -248,6 +248,47 @@
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
+  /* ---------- New villas: a badge on the villas this phone has not seen before ---------- */
+  // the phone remembers which villas it has shown; one added to the guide since then says New (and the Stay tab counts
+  // them) until it has been on screen for a moment, and the badge stays for the rest of that visit. A first visit shows
+  // no badges: everything is new then.
+  function newStays() {
+    const cards = $$('#stay .card[data-stay]')
+    const ids = cards.map((c) => c.dataset.stay)
+    const known = store.get('knownStays', null)
+    if (!Array.isArray(known)) { store.set('knownStays', ids); return }
+    const fresh = cards.filter((c) => !known.includes(c.dataset.stay))
+    if (!fresh.length) return
+    const unseen = new Set(fresh.map((c) => c.dataset.stay))
+    const tab = $('.tabbar a[href="#stay"]')
+    const dot = document.createElement('span'); dot.className = 'tab-new'
+    if (tab) tab.appendChild(dot)
+    const syncDot = () => {
+      const n = [...unseen].filter((id) => !hiddenStays.has(id)).length
+      dot.hidden = !n; dot.textContent = n
+      if (tab) tab.setAttribute('aria-label', 'Stay' + (n ? ', ' + n + ' new ' + (n === 1 ? 'villa' : 'villas') : ''))
+    }
+    const seen = (id) => {
+      if (!unseen.delete(id)) return
+      store.set('knownStays', [...new Set([...store.get('knownStays', []), id])])
+      syncDot()
+    }
+    for (const c of fresh) {
+      const b = document.createElement('span'); b.className = 'pill new'; b.textContent = 'New'
+      const top = $('.tag-top', c); if (top) top.prepend(b)
+      $('.card-title', c)?.insertAdjacentHTML('beforeend', '<span class="sr-only"> (new)</span>')
+    }
+    syncDot()
+    // seen: at least half the card on the Stay tab for 1.5 s
+    if (!('IntersectionObserver' in window)) return
+    const timers = new Map()
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      const id = e.target.dataset.stay
+      if (e.isIntersecting) { if (!timers.has(id)) timers.set(id, setTimeout(() => { seen(id); io.unobserve(e.target) }, 1500)) }
+      else { clearTimeout(timers.get(id)); timers.delete(id) }
+    }), { threshold: 0.5 })
+    fresh.forEach((c) => io.observe(c))
+  }
   function syncHiddenStays() {
     const box = $('#hidden-stays'), list = $('#hidden-stays-list')
     const cards = Array.from(hiddenStays).map((id) => document.getElementById('ht-' + id)).filter(Boolean)
@@ -1372,6 +1413,7 @@
   }
 
   syncHiddenStays()
+  newStays()
   syncFavs()
   refreshToday()
   tickLoop()

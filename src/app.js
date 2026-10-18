@@ -59,10 +59,8 @@
     const pill = $('#trip-status')
     if (pill) {
       const now = Date.now()
-      if (now < tripStart.getTime()) {
-        const days = Math.ceil((tripStart.getTime() - now) / DAY)
-        pill.textContent = days === 1 ? 'Tomorrow' : days + ' days to go'
-      } else if (now <= tripEnd.getTime()) {
+      if (now < tripStart.getTime()) countdown(false) // the pill counts down live, with the board in the pass
+      else if (now <= tripEnd.getTime()) {
         const n = Math.floor((new Date(todayISO + 'T00:00:00+07:00') - tripStart) / DAY) + 1
         pill.textContent = 'Day ' + n + ' of ' + D.trip.days
       } else pill.textContent = 'Trip done'
@@ -72,6 +70,75 @@
     if (!userPickedDay && !allOpen && dayBtns.length && shownToday !== todayISO) { selectDay(defaultDay(), false); shownToday = todayISO }
   }
   const defaultDay = () => (dayBtns.find((b) => b.dataset.day === todayISO) || dayBtns[0]).dataset.day
+
+  /* ---------- countdown: a departure board in the pass (to the trip, then to the flight home) and the live pill ---------- */
+  // each digit is a split flap: when it changes, the top half with the old digit falls and the new bottom half drops in
+  const flightHome = new Date(D.trip.flight.day + 'T' + D.trip.flight.time + ':00+07:00')
+  const board = $('#countdown')
+  const two = (n) => String(n).padStart(2, '0')
+  const dayWord = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' })
+  function makeFlap(v) {
+    const f = document.createElement('span')
+    f.className = 'flap'
+    f.innerHTML = '<span class="f-top"><b></b></span><span class="f-bot"><b></b></span><span class="f-fold f-up"><b></b></span><span class="f-fold f-down"><b></b></span>'
+    setFlap(f, v, false)
+    return f
+  }
+  function setFlap(f, v, animate) {
+    const old = f.dataset.v
+    if (old === v) return
+    f.dataset.v = v
+    const [top, bot, up, down] = [...f.children].map((c) => c.firstElementChild)
+    top.textContent = v; down.textContent = v; up.textContent = old ?? v
+    clearTimeout(f.flapTimer)
+    if (!animate || old === undefined) { bot.textContent = v; f.classList.remove('go'); return }
+    bot.textContent = old // until the new bottom half has dropped over it
+    f.classList.remove('go'); void f.offsetWidth; f.classList.add('go')
+    f.flapTimer = setTimeout(() => { bot.textContent = v; f.classList.remove('go') }, 650)
+  }
+  function setDigits(box, str, animate) {
+    if (box.children.length !== str.length) { box.replaceChildren(...[...str].map(makeFlap)); return }
+    ;[...box.children].forEach((f, i) => setFlap(f, str[i], animate))
+  }
+  let boardSaid = ''
+  function countdown(animate) {
+    const now = Date.now(), before = now < tripStart.getTime()
+    const left = (before ? tripStart.getTime() : flightHome.getTime()) - now
+    const pill = $('#trip-status')
+    if (left <= 0) { if (board) board.hidden = true; return false }
+    const t = Math.floor(left / 1000)
+    const d = Math.floor(t / 86400), h = Math.floor(t / 3600) % 24, m = Math.floor(t / 60) % 60, sec = t % 60
+    if (before && pill) {
+      // the top bar: a small copy of the board, with the same flaps
+      if (!pill.classList.contains('live')) {
+        pill.classList.add('live'); root.classList.add('cd-live')
+        pill.innerHTML = '<span class="tb-board" aria-hidden="true">' + [['d', 'Days'], ['h', 'Hrs'], ['m', 'Min'], ['s', 'Sec']].map(([k, l], i) =>
+          (i ? '<span class="pc-sep">:</span>' : '') + '<span class="tb-unit pc-' + k + '"><span class="pc-digits" data-cd="' + k + '"></span><small>' + l + '</small></span>').join('') + '</span>'
+      }
+      ;[['d', d], ['h', h], ['m', m], ['s', sec]].forEach(([k, v]) => setDigits($('[data-cd="' + k + '"]', pill), two(v), animate))
+      pill.setAttribute('aria-label', d + ' days and ' + h + ' hours to go')
+    } else if (pill && pill.classList.contains('live')) { pill.classList.remove('live'); root.classList.remove('cd-live'); pill.removeAttribute('aria-label'); refreshToday() } // the trip has begun
+    if (!board) return true
+    board.hidden = false
+    const say = (before ? 'Trip starts in ' : 'Flight home in ') + d + ' days, ' + h + ' hours, ' + m + ' minutes'
+    if (say !== boardSaid) {
+      boardSaid = say
+      board.setAttribute('aria-label', say)
+      $('#cd-label').textContent = before ? 'Trip starts in' : 'Flight home in'
+      $('#cd-when').textContent = before ? dayWord(D.trip.start) + ' · 00:00 Phuket time' : dayWord(D.trip.flight.day) + ' · ' + D.trip.flight.time
+    }
+    setDigits($('[data-cd="d"]', board), two(d), animate)
+    setDigits($('[data-cd="h"]', board), two(h), animate)
+    setDigits($('[data-cd="m"]', board), two(m), animate)
+    setDigits($('[data-cd="s"]', board), two(sec), animate)
+    return true
+  }
+  // once a second, on the second; the flaps only move while the guide is on screen (and not with reduced motion)
+  function tickLoop() {
+    if (countdown(!reduceMotion && document.visibilityState === 'visible') === false) { refreshToday(); return }
+    setTimeout(tickLoop, 1005 - (Date.now() % 1000))
+  }
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') countdown(false) })
 
   /* ---------- day strip (home) ---------- */
   function selectDay(iso, scroll) {
@@ -724,13 +791,24 @@
     }).join('') + '<button class="btn" type="button" id="mine-copy">Copy my hotels as text</button>'
       : '<p class="note">Nothing added yet. Add your booked hotel so its address is one tap away, even offline.</p>'
   }
+  // the form stays folded away until Add hotel is tapped, and folds again once the hotel is saved (or on Cancel)
+  const myOpen = $('#my-hotel-open')
+  function showMyForm(open) {
+    if (!myForm || !myOpen) return
+    myForm.hidden = !open
+    myOpen.closest('p').hidden = open
+    myOpen.setAttribute('aria-expanded', String(open))
+    if (open) $('#mh-name').focus(); else myOpen.focus()
+  }
+  myOpen?.addEventListener('click', () => showMyForm(true))
+  $('#my-hotel-cancel')?.addEventListener('click', () => { myForm.reset(); showMyForm(false) })
   if (myForm) {
     myForm.addEventListener('submit', (e) => {
       e.preventDefault()
       const f = new FormData(myForm)
       const name = String(f.get('name') || '').trim(); if (!name) return
       mine.push({ name, link: String(f.get('link') || '').trim(), dates: String(f.get('dates') || '').trim(), notes: String(f.get('notes') || '').trim() })
-      const saved = store.set('myHotels', mine); myForm.reset(); renderMine()
+      const saved = store.set('myHotels', mine); myForm.reset(); renderMine(); showMyForm(false)
       toast(saved ? 'Hotel added' : 'Shown here, but this device could not save it. Use "Copy my hotels as text" to keep it.')
     })
     myList?.addEventListener('click', (e) => {
@@ -1296,6 +1374,7 @@
   syncHiddenStays()
   syncFavs()
   refreshToday()
+  tickLoop()
   route()
   restorePlace()
 })()

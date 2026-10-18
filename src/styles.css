@@ -90,7 +90,17 @@ button { font: inherit; color: inherit; }
 .brand-text { display: grid; line-height: 1.1; min-width: 0; }
 .brand-text b { font: 700 18px/1.05 var(--font-display); letter-spacing: 0.02em; }
 .brand-text small { color: var(--ink-2); font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.status-pill { font: 600 12px/1 var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 9px; border-radius: 999px; background: var(--sea-soft); color: var(--sea-text); white-space: nowrap; }
+.status-pill { font: 600 12px/1 var(--font-display); letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 9px; border-radius: 999px; background: var(--sea-soft); color: var(--sea-text); white-space: nowrap; text-decoration: none; font-variant-numeric: tabular-nums; }
+/* before the trip: a small copy of the departure board in the pass (the same flaps), in place of the pill; the
+   brand's name steps aside for it on phones */
+.status-pill.live { padding: 0; background: none; border-radius: 0; line-height: 1; }
+.tb-board { display: flex; align-items: flex-start; gap: 3px; font: 700 clamp(13px, 4.3vw, 20px)/1 var(--font-display); }
+.tb-unit { display: grid; justify-items: center; gap: 3px; }
+.tb-unit small { font: 600 7.5px/1 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.tb-board .pc-digits { gap: 2px; }
+.tb-board .pc-sep { color: var(--ink-2); height: 1.3em; line-height: 1.25em; }
+.tb-board .flap { border-radius: 0.2em; box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.4), 0 0.12em 0.3em rgba(0, 0, 0, 0.22); }
+@media (max-width: 559px) { .cd-live .brand-text { display: none; } }
 .icon-btn { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; flex: none; }
 .icon-btn svg { width: 20px; height: 20px; }
 
@@ -337,6 +347,34 @@ html.map-popup #back-to-card { display: none; }
 .pass-side { text-align: right; display: grid; gap: 3px; font-size: 14px; }
 .pass-side b { font: 600 20px/1.1 var(--font-display); }
 .pass-side .thai { opacity: 0.75; font-size: 14px; }
+/* the countdown in the pass: a departure board, every digit a split flap that falls when it changes */
+.pass-count { padding: 2px 18px 16px; display: grid; gap: 10px; }
+.pc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 10px; }
+.pc-label { font: 600 13px/1.2 var(--font-display); letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.75; }
+.pc-when { font-size: 13px; opacity: 0.7; }
+.pc-board { display: flex; justify-content: space-between; align-items: flex-start; font: 700 clamp(22px, 8vw, 40px)/1 var(--font-display); }
+.pc-unit { display: grid; justify-items: center; gap: 7px; }
+.pc-unit small { font: 600 10.5px/1 var(--font-display); letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.65; }
+.pc-digits { display: flex; gap: 3px; }
+.pc-sep { height: 1.3em; line-height: 1.25em; opacity: 0.45; animation: pc-blink 1s steps(2, jump-none) infinite; }
+@keyframes pc-blink { 50% { opacity: 0.1; } }
+.flap { position: relative; display: block; width: 0.8em; height: 1.3em; perspective: 4em; color: #fff3d6; border-radius: 0.16em; box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.45), 0 0.2em 0.45em rgba(0, 0, 0, 0.28); outline: 1px solid color-mix(in srgb, var(--bg) 10%, transparent); }
+.pc-s .flap { color: #ffc24d; } /* seconds in amber, like an airport board */
+.flap > span { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; }
+.f-top, .f-up { top: 0; border-radius: 0.16em 0.16em 0 0; background: linear-gradient(#24343a, #1a272b); }
+.f-bot, .f-down { bottom: 0; border-radius: 0 0 0.16em 0.16em; background: linear-gradient(#152024, #111a1d); }
+.flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; }
+.f-top b, .f-up b { top: 0; }
+.f-bot b, .f-down b { bottom: 0; }
+.flap::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 1px); height: 2px; background: rgba(0, 0, 0, 0.6); z-index: 3; } /* the split */
+.f-fold { display: none; z-index: 2; backface-visibility: hidden; }
+.flap.go .f-fold { display: block; }
+.f-up { transform-origin: 50% 100%; }
+.f-down { transform-origin: 50% 0; transform: rotateX(90deg); }
+.flap.go .f-up { animation: flap-up 0.3s ease-in forwards; }
+.flap.go .f-down { animation: flap-down 0.3s 0.28s cubic-bezier(0.3, 1.6, 0.6, 1) forwards; }
+@keyframes flap-up { to { transform: rotateX(-90deg); filter: brightness(0.55); } }
+@keyframes flap-down { from { transform: rotateX(90deg); filter: brightness(0.55); } to { transform: rotateX(0); filter: none; } }
 .pass-cut { height: 14px; background: radial-gradient(circle at 0 50%, var(--bg) 7px, transparent 7.5px) left / 14px 14px no-repeat, radial-gradient(circle at 100% 50%, var(--bg) 7px, transparent 7.5px) right / 14px 14px no-repeat; position: relative; }
 .pass-cut::after { content: ""; position: absolute; left: 16px; right: 16px; top: 50%; border-top: 2px dashed color-mix(in srgb, var(--bg) 35%, transparent); }
 .pass-bottom { padding: 10px 14px 16px; display: grid; gap: 10px; }
@@ -555,7 +593,8 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 @media (max-width: 370px) {
   .day-btn .dw { font-size: 8.5px; letter-spacing: 0; }
   .day-btn .dn { font-size: 15px; }
-  .status-pill { padding: 6px 7px; font-size: 11px; }
+  .status-pill:not(.live) { padding: 6px 7px; font-size: 11px; }
+  .cd-live .topbar-in { gap: 8px; }
   .brand-text { display: none; }
 }
 @media (min-width: 560px) {

@@ -538,6 +538,10 @@ function homeView(mode) {
 <h1 class="sr-only" id="home-title">Phuket trip guide, ${TRIP_LABEL.words}</h1>
 <div class="pass">
 <div class="pass-top"><div class="pass-code"><small>Trip to</small>HKT</div><div class="pass-side"><b>Phuket</b><span class="thai" lang="th">ภูเก็ต</span><span><span class="nw">${TRIP_LABEL.long} ·</span> <span class="nw">${TRIP_LABEL.days}</span></span><span class="pass-flight"><span class="nw">Flight home</span> <span class="nw">${dayLabel(TRIP.flight.day)}, ${TRIP.flight.time}</span></span></div></div>
+<div class="pass-count js-only" id="countdown" role="timer" hidden>
+<div class="pc-head"><span class="pc-label" id="cd-label">Trip starts in</span><span class="pc-when" id="cd-when"></span></div>
+<div class="pc-board" aria-hidden="true">${[['d', 'Days'], ['h', 'Hours'], ['m', 'Min'], ['s', 'Sec']].map(([k, l], i) => `${i ? '<span class="pc-sep">:</span>' : ''}<div class="pc-unit pc-${k}"><div class="pc-digits" data-cd="${k}"></div><small>${l}</small></div>`).join('')}</div>
+</div>
 <div class="pass-cut" aria-hidden="true"></div>
 <div class="pass-bottom">${dayRows}
 <div class="pass-legend"><span><i></i>Music</span><span><i class="sun"></i>Market</span><span><i class="plane"></i>Flight home</span></div></div>
@@ -667,11 +671,12 @@ function stayView(mode) {
 <div class="view-head"><span class="eyebrow">8 guests · 8–18 Jan</span><h1 class="view-title" id="stay-title">Where to stay</h1><p class="lede">${esc(extra.stayIntro || 'Add your own bookings, and browse hotels picked for this trip, from Circoloco’s beach to Old Town.')}</p></div>
 <div class="stack"><h2 class="block-title">My hotels</h2>
 <div class="mine" id="my-hotels"><p class="note">Turn on JavaScript to save your own hotels here.</p></div>
-<form class="myform js-only" id="my-hotel-form" autocomplete="off">
+<p class="js-only"><button class="btn" type="button" id="my-hotel-open" aria-expanded="false" aria-controls="my-hotel-form">${icon('plus')}Add hotel</button></p>
+<form class="myform js-only" id="my-hotel-form" autocomplete="off" hidden>
 <label for="mh-name">Hotel name<input id="mh-name" name="name" required placeholder="e.g. Baba Beach Club Natai"></label>
 <label for="mh-link">Google Maps link (optional)<input id="mh-link" name="link" type="url" inputmode="url" placeholder="https://maps.app.goo.gl/…"></label>
 <div class="row2"><label for="mh-dates">Dates<input id="mh-dates" name="dates" placeholder="8–11 Jan"></label><label for="mh-notes">Notes<input id="mh-notes" name="notes" placeholder="Booking no., check-in time"></label></div>
-<button class="btn primary" type="submit">${icon('plus')}Add hotel</button>
+<div class="actions"><button class="btn primary" type="submit">${icon('plus')}Save hotel</button><button class="btn" type="button" id="my-hotel-cancel">Cancel</button></div>
 </form></div>
 <div class="stack js-only" id="group-picks-box" hidden><h2 class="block-title">Group picks</h2>
 <p class="note">Villas the group liked, most likes first. Tap Like or Skip on a card to vote, and the arrows to move a villa up or down the list for everyone.</p>
@@ -775,7 +780,7 @@ function chrome(body) {
   const tab = (id, ic, label) => `<li><a href="#${id}">${icon(ic)}<span>${label}</span></a></li>`
   return `<header class="topbar"><div class="topbar-in">
 <a class="brand" href="#home"><span class="brand-mark">HKT</span><span class="brand-text"><b>Phuket</b><small>${TRIP_LABEL.short}</small></span></a>
-<span class="status-pill" id="trip-status">Jan 2027</span>
+<a class="status-pill" id="trip-status" href="#home">Jan 2027</a>
 <a class="icon-btn" href="#info" aria-label="Essentials">${icon('info')}</a>
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark">${icon('theme')}</button>
 </div></header>

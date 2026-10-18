@@ -389,6 +389,15 @@ await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(
 // the notes show without opening anything (innerText: only what is on screen)
 const bNotes = await B.p.evaluate(() => ({ villa: document.querySelector('#ht-alisa-pool-villa .notes-list').innerText, n: document.querySelector('#ht-alisa-pool-villa .notes-n').textContent, all: document.querySelector('#group-notes .notes-list').innerHTML, mine: document.querySelectorAll('#ht-alisa-pool-villa [data-note-del]').length }))
 check('another phone sees the villa note (shown open, with its count) and the group note', /pool is heated/.test(bNotes.villa) && bNotes.n === '(1)' && /Meet at the airport<br>exit 2/.test(bNotes.all) && bNotes.mine === 0, JSON.stringify(bNotes).slice(0, 220))
+// My hotels: the form is folded away until Add hotel is tapped, and folds again once a hotel is saved
+await B.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
+const form0 = await B.p.evaluate(() => ({ form: document.getElementById('my-hotel-form').hidden, btn: !document.getElementById('my-hotel-open').closest('p').hidden }))
+await B.p.evaluate(() => document.getElementById('my-hotel-open').click()); await sleep(200)
+const form1 = await B.p.evaluate(() => ({ form: document.getElementById('my-hotel-form').hidden, btn: !document.getElementById('my-hotel-open').closest('p').hidden, focus: document.activeElement?.id }))
+await B.p.evaluate(() => { document.getElementById('mh-name').value = 'Test Hotel'; document.querySelector('#my-hotel-form [type="submit"]').click() }); await sleep(300)
+const form2 = await B.p.evaluate(() => ({ form: document.getElementById('my-hotel-form').hidden, btn: !document.getElementById('my-hotel-open').closest('p').hidden, list: document.getElementById('my-hotels').innerText }))
+await B.p.evaluate(() => document.querySelector('#my-hotels [data-del]')?.click())
+check('the add-hotel form is hidden until Add hotel is tapped, then folds after saving', form0.form && form0.btn && !form1.form && !form1.btn && form1.focus === 'mh-name' && form2.form && form2.btn && /Test Hotel/.test(form2.list), JSON.stringify([form0, form1, form2]).slice(0, 250))
 // the Notes tab (in place of Money on the website): group notes and every villa's notes, each under a link to its villa
 await B.p.evaluate(() => { location.hash = 'notes' }); await sleep(400)
 const nTab = await B.p.evaluate(() => ({

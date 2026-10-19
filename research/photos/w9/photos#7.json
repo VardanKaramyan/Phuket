@@ -1,0 +1,129 @@
+{
+ "results": [
+  {
+   "key": "events:sail-away-pukka-up-boat-party",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-sail-away-pukka-up-boat-party.jpg",
+   "url": "https://sailawayparty.com/wp-content/uploads/2024/03/image-16-1-1.png",
+   "page": "https://sailawayparty.com/gallery-sail-away-party/",
+   "credit": "\u00a9 Sail Away Party",
+   "license": "official site",
+   "width": 1235,
+   "height": 695,
+   "note": "Aerial drone shot of the Sail Away party boat at sea: the packed top deck with tables and dancers, the DJ booth at right, deep-blue water around. It comes from the gallery on the operator's own site. The 1235x925 PNG original has a 'SAIL AWAY' logo stamp near the bottom, so I saved only the top 16:9 band (1235x695, JPEG) and the logo is cut out. Rejected: candidate 1, the Megatix 800x800 Pukka Up promo (a close-up of a woman with both logos, probably Pukka Up's own Ibiza photo, not the Phuket boat). Also rejected: the two Megatix in-page collages, and the foam-party and DJ deck shots (logo stamps in the middle)."
+  },
+  {
+   "key": "events:russian-concerts-cherng-talay-jan-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-russian-concerts-cherng-talay-jan-2027.jpg",
+   "url": "https://back.lotusarena.com/media/149",
+   "page": "https://lotusarena.com/en/events/47-ddt-group-phuket",
+   "credit": "\u00a9 Art of Events / Lotus Arena",
+   "license": "official site",
+   "width": 1200,
+   "height": 675,
+   "note": "Fallback: the official DDT poster for 13 Jan 2027 at Lotus Arena Phuket (candidate 1, a text poster that is already 16:9: '13/01/2027 WED, DDT, LOTUS ARENA, PHUKET'). I found no real photo of Lotus Arena or Shaman. lotusarena.com has only flyers, ads and a logo; the Real Life Phuket article has only 3D renders from before the opening; Commons has nothing; no official Instagram or Facebook turned up. The other official flyers are also 16:9 (XOLIDAYBOY 23 Jan, media/191; Linda 17 Jan at Shaman, media/170; ICEGERGERT 24 Jan at Shaman, media/234). DDT is the headline concert, and its poster names the venue."
+  },
+  {
+   "key": "events:fira-beach-club-phuket",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-fira-beach-club-phuket.jpg",
+   "url": "https://firaphuket.com/wp-content/uploads/2025/03/fira-beach-club-main-view.jpg",
+   "page": "https://firaphuket.com/gallery/",
+   "credit": "\u00a9 Fira Phuket",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "The hilltop pool terrace: a curved infinity pool with palms, rows of daybeds under navy-striped umbrellas, and the white club buildings with jungle behind. A sharp professional photo from the official gallery, already 16:9. I picked it over candidate 1 (the og:image, the same terrace but only 800x800 and square). Backup: an aerial of the busy club on the jungle hill (fira-beach-club-pool-trees.jpg, 1920x1080). The site's ocean-view photo has a dark overlay baked in."
+  },
+  {
+   "key": "events:blanco-boat-party-phi-phi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-blanco-boat-party-phi-phi.jpg",
+   "url": "https://blancothailand.com/wp-content/uploads/2024/10/de_boatparty.jpg",
+   "page": "https://blancothailand.com/blanco-boat-party/",
+   "credit": "\u00a9 Blanco Thailand",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Drone shot of the green-and-yellow Blanco party boat with a crowd on its top deck, by the limestone cliff at Viking Cave (bird's-nest scaffolding at left), in turquoise water. Already 16:9, with no logo. It is in Blanco's own WordPress media library (media ID 15283, Oct 2024, uploaded with the 'Koh Phi Phi's original boat party' logo). Its attachment link only redirects to the file, so page points to the boat party page; boat.jpg on Blanco's site shows the same boat. Rejected: candidate 1 (mayabayjump.jpg, only 624 px wide, a group jumping on Maya Bay beach rather than the boat). The boat party page's other images are tour-stop scenery."
+  },
+  {
+   "key": "events:phi-phi-pirate-boat",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-phi-phi-pirate-boat.jpg",
+   "url": "https://phiphipirate.com/pirate-hero/faq-phi-phi-pirate-five-star-thailand.jpg",
+   "page": "https://phiphipirate.com/en",
+   "credit": "\u00a9 Phi Phi Pirate Boat",
+   "license": "official site",
+   "width": 1536,
+   "height": 1026,
+   "note": "The wooden pirate ship at sunset, anchored beside a limestone cliff, with guests on deck, flags in the rigging and a golden sky and sea. A professional photo used on the official site; I checked the pipeline's 16:9 attention crop and it keeps the ship and the cliff. Rejected: candidate 1 (a dark flash photo of the party crowd, faces close up) and candidate 2 (sunset from the deck, with a man's head filling the right half). Backup: nice-full-photo-phi-phi-pirate-boat.jpg (the ship in daylight, 2048x1536)."
+  },
+  {
+   "key": "events:ibiza-pool-party-phi-phi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-ibiza-pool-party-phi-phi.jpg",
+   "url": "https://ibizaphiphi.com/wp-content/uploads/2023/10/333078331_1976911955989201_4752590338146314226_n-1.jpg",
+   "page": "https://ibizaphiphi.com/pool-party/",
+   "credit": "\u00a9 Ibiza Phi Phi (Ibiza Pool Party)",
+   "license": "official site",
+   "width": 2048,
+   "height": 1152,
+   "note": "The night pool party at Ibiza: a crowd dancing and splashing in the pool under pink and yellow party lights, with the pool bar behind. The organiser's own photo from its pool party page. The 2048x1365 original has the 'IBIZA Pool Party' logo in the top right, so I saved the bottom 16:9 band (y 213-1365) and the logo is cut out. I skipped the Shutterstock and Unsplash images the site also uses. Rejected: candidate 1 (a daytime Commons view of Loh Dalum Bay, no party)."
+  },
+  {
+   "key": "events:loh-dalum-beach-bars-phi-phi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-loh-dalum-beach-bars-phi-phi.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Phi_Phi_party.jpg/1280px-Phi_Phi_party.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phi_Phi_party.jpg",
+   "credit": "Kroisenbrunner",
+   "license": "CC BY-SA 4.0",
+   "width": 990,
+   "height": 557,
+   "note": "A night beach party on Loh Dalum Beach (Commons category 'Loh Dalum Beach', taken 26 Dec 2014 at 23:34): fire torches, a flaming limbo bar and a crowd of backpackers, which is the bar-strip scene. It is a phone photo, a bit soft and noisy but clear at card size. From the 1280px thumbnail I cut a 990x557 16:9 window on the left, so a crude hand-written bar sign on the right ('topless girls / naked boys free = bucket') is left out. This crop is a modification under CC BY-SA. Rejected: candidate 1 (a calm evening bay with no bars) and candidate 2 (a dim, blurry 2007 dusk beach). The Commons categories Loh Dalum Beach, Loh Dalum Bay, Ban Ton Sai and Ko Phi Phi Don have no other night or bar photo."
+  },
+  {
+   "key": "events:daft-funk-live-koh-phangan-2027",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-daft-funk-live-koh-phangan-2027.jpg",
+   "url": "https://www.daftfunk.co.uk/assets/images/slideshow01-603c3f7f.jpg",
+   "page": "https://www.daftfunk.co.uk/",
+   "credit": "\u00a9 Daft Funk Live",
+   "license": "official site",
+   "width": 1080,
+   "height": 707,
+   "note": "The tribute act live under purple light: two performers in Daft Punk-style helmets at the decks, one with an arm raised, above a huge open-air night crowd full of glowing lights. From the slideshow on the act's official site. It shows the act, not the Phangan venue: the venue is unclear (Jungle Experience on the ticket page, Ban Sabaii on phangan.events and Entrix). I chose a different photo from the Phuket Daft Funk card (which uses share.jpg), so the two cards don't look the same. Rejected: candidate 1 (the official square flyer, text-heavy with a QR code) and the 16:9 copy of the same flyer on lotusarena.com (media/220)."
+  },
+  {
+   "key": "events:bluerama-sunset-pool-party-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-bluerama-sunset-pool-party-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2024/08/IMG_9774.jpeg",
+   "page": "https://phangan.events/event-location/bluerama-koh-phangan/",
+   "credit": "\u00a9 Bluerama",
+   "license": "venue photo via phangan.events",
+   "width": 1028,
+   "height": 578,
+   "note": "The sunset pool party itself: guests on the deck and in the infinity pool at golden hour, the pavilion bar on the left, and the sea and coast behind. This is candidate 2, the featured photo of the venue page: a 1280x578 phone panorama. The default attention crop cut out the pool and sea, so I saved the right-hand 16:9 window (x 252-1280, 1028x578). Backup: candidate 1 (2048x1365), a sharp shot of the empty deck with blue bean bags and a white lamp over the island view, but no party."
+  },
+  {
+   "key": "events:merkaba-beach-bums-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-merkaba-beach-bums-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2024/12/IMG_4520.jpeg",
+   "page": "https://phangan.events/event-location/merkaba-beach-club/",
+   "credit": "\u00a9 Merkaba Sunset Beach Club",
+   "license": "venue photo via phangan.events",
+   "width": 1280,
+   "height": 720,
+   "note": "Sunset at Merkaba: palm silhouettes under pink clouds, guests at tables on the beach, the sea, and the lit blue pool in front. This is candidate 1 from the venue page (1280x960). The default attention crop kept only palms and sky, so I saved a centred 16:9 band (y 120-840, 1280x720). The venue pages' only other images are flyers, such as the Beach Bums 'The Coven' Halloween flyer."
+  },
+  {
+   "key": "events:yep-listening-bar-phangan",
+   "ok": false,
+   "note": "No usable photo. The only real photo is candidate 1 from the phangan.events venue page: a portrait 724x1280 video still of the round vinyl-record 'YEP Listening Bar' sign hanging in a tree. Any 16:9 crop of it turns into a soft close-up of the logo. What I tried: every YEP event page and media item on phangan.events (all flyers, some dated, such as 'The Lounge @ YEP Bar, Oct 17'); Instagram @yep_listening_bar (login wall, the embed is blocked too); Facebook (error page); web searches for RA, promoter and listing pages (nothing); Visit Thailand Today (its photos are Google Maps place photos, which are not allowed); Commons (nothing). If a stand-in is wanted, the sign photo is at https://phangan.events/wp-content/uploads/2026/05/IMG_7681.jpeg (a 16:9 band at about y 300-707 keeps the sign with its chains and the flowering tree)."
+  }
+ ]
+}

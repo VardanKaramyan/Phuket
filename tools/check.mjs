@@ -18,6 +18,7 @@ const BOXES = { // rough boxes for off-island areas [minLng, minLat, maxLng, max
   'koh-phangan': [99.9, 9.6, 100.15, 9.85], 'koh-samui': [99.85, 9.35, 100.15, 9.6], 'phi-phi': [98.7, 7.6, 98.85, 7.8],
   krabi: [98.6, 7.7, 99.2, 8.2], 'koh-lanta': [98.95, 7.4, 99.2, 7.75], 'koh-yao': [98.5, 7.85, 98.7, 8.2],
   'koh-kaew': [98.34, 7.92, 98.42, 7.99], 'phang-nga': [98.2, 8.0, 98.8, 8.8], 'khao-lak': [98.2, 8.5, 98.4, 8.8], natai: [98.22, 8.2, 98.33, 8.36],
+  'koh-tao': [99.78, 10.04, 99.88, 10.14], 'koh-lipe': [99.25, 6.45, 99.33, 6.53], trang: [99.15, 7.2, 99.75, 7.7], 'surat-thani': [98.8, 8.9, 99.85, 9.45],
 }
 const problems = []
 const warn = (where, msg) => problems.push(`${where}: ${msg}`)
@@ -38,7 +39,9 @@ function checkPoint(where, it) {
   if (!areaPoly[area]) { if (area && area !== 'other') warn(where, `unknown area "${area}"`); return }
   const inArea = turf.booleanPointInPolygon(pt, areaPoly[area])
   if (!inArea) {
-    const d = turf.pointToLineDistance(pt, turf.polygonToLine(areaPoly[area]).type === 'FeatureCollection' ? turf.polygonToLine(areaPoly[area]).features[0] : turf.polygonToLine(areaPoly[area]), { units: 'kilometers' })
+    // an area can be several polygons (islets) and rings: measure to the nearest one
+    const lines = turf.polygonToLine(areaPoly[area])
+    const d = Math.min(...(lines.type === 'FeatureCollection' ? lines.features : [lines]).map((l) => turf.pointToLineDistance(pt, l, { units: 'kilometers' })))
     const actual = Object.keys(areaPoly).find((id) => turf.booleanPointInPolygon(pt, areaPoly[id]))
     if (d > 1.0) warn(where, `${d.toFixed(1)} km outside its area "${area}"${actual ? ` (falls in "${actual}")` : ''}`)
   }
@@ -73,7 +76,8 @@ const pl = rd('data/places.json', { items: [] }).items
 checkIds('places', pl)
 for (const p of pl) {
   const w = 'places:' + p.id
-  if (p.tier !== 'day-trip') checkPoint(w, p)
+  // day trips and boat tours may sit at sea or far away; piers and everything else must be where their area says
+  if (p.tier !== 'day-trip' && p.tier !== 'tour') checkPoint(w, p)
   else if (!Number.isFinite(p.lat)) warn(w, 'missing coordinates')
   if (!p.description) warn(w, 'no description')
   if ((p.category === 'market') && !(p.days || []).length) warn(w, 'market without days')

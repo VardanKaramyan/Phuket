@@ -128,7 +128,7 @@
    "airportDriveMin": 35,
    "patongDriveMin": 15,
    "highlights": [
-    "Argy on the Café del Mar Pyramid Stage, Fri 8 Jan from 14:00 (presale sign-up opens 20 Oct, 18:00)",
+    "Argy on the Café del Mar Pyramid Stage, Fri 8 Jan from 14:00 (tickets on sale Tue 20 Oct, 18:00 Thai time)",
     "Marco Carola, with Nicolas Masseyeff, at Café del Mar, Wed 13 Jan from 14:00",
     "Café del Mar Club Room DJ nights, Wed-Sat from 22:00",
     "Sunset drinks at Pine Beach Bar (InterContinental) at the north end",
@@ -1532,7 +1532,7 @@
    "id": "natai",
    "name": "Natai & Khao Pilai (Phang Nga)",
    "tagline": "Empty beach, Baba Beach Club and Circoloco Saturdays",
-   "description": "About 10 km of wide, pale sand on the mainland north of the Sarasin Bridge, 35 minutes from the airport. No vendors, sunbeds or jet skis, and only a few resorts, most of them luxury. Baba Beach Club has a Funktion-One sound system and hosts Circoloco on Sat 9 and Sat 16 Jan, 15:00-03:00. You need a car or Grab.",
+   "description": "About 10 km of wide, pale sand on the mainland north of the Sarasin Bridge, 35 minutes from the airport. No vendors, sunbeds or jet skis, and only a few resorts, most of them luxury. Baba Beach Club has a Funktion-One sound system and hosts Circoloco on Sat 9, 16 and 23 Jan, 15:00-03:00. You need a car or Grab.",
    "bestFor": [
     "techno",
     "beach-clubs",
@@ -1560,8 +1560,8 @@
    "airportDriveMin": 35,
    "patongDriveMin": 80,
    "highlights": [
-    "Circoloco at Baba Beach Club (Sat 9 and Sat 16 Jan, 15:00-03:00)",
-    "Baba Beach Club day pass (minimum spend 1,500 THB, 11:00-22:00)",
+    "Circoloco at Baba Beach Club (Sat 9, 16 and 23 Jan, 15:00-03:00)",
+    "Baba Beach Club day pass (minimum spend 3,000 THB per adult in high season, 11:00-22:00)",
     "Long, empty beach walks at sunset",
     "Sarasin Bridge viewpoint",
     "Samet Nangshe viewpoint, about 40 minutes away"

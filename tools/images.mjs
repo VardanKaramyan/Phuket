@@ -20,8 +20,8 @@ for (const pick of picks) {
   const POSITION = { 'places:renew-sauna-ice-bath': 'south', 'events:unclave-phangan': 'north' }
   if (POSITION[pick.key]) pick.position = POSITION[pick.key]
   // a fixed 16:9 band (top edge in source pixels) where no gravity works: the Seaside portrait photo keeps
-  // the fire dancer, the crowd and the top of the decks
-  const BAND = { 'events:seaside-pre-full-moon-haad-rin': 470 }
+  // the fire dancer, the crowd and the top of the decks; the Sédo flyer keeps both DJs and the decks, not its old date
+  const BAND = { 'events:seaside-pre-full-moon-haad-rin': 470, 'events:sedo-izikura-phuket-town': 250 }
   const name = pick.key.replace(':', '-').replace(/[^a-z0-9-]/gi, '-').toLowerCase() + '.webp'
   const dest = P('assets/img', name)
   try {

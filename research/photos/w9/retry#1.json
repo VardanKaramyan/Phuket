@@ -1,0 +1,40 @@
+{
+ "results": [
+  {
+   "key": "places:chong-lard-pier-koh-yao-yai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-chong-lard-pier-koh-yao-yai.jpg",
+   "url": "https://www.chonglardpier.com/images/home_slider1.jpg",
+   "page": "https://www.chonglardpier.com/",
+   "credit": "\u00a9 Chong Lard Pier (chonglardpier.com)",
+   "license": "official site",
+   "width": 1920,
+   "height": 1020,
+   "note": "From the pier's own website (home-page slider). It shows the red boat-bow terminal at the head of Chong Lard Pier with its Thai sign '\u0e40\u0e01\u0e32\u0e30\u0e22\u0e32\u0e27\u0e43\u0e2b\u0e0d\u0e48' (Koh Yao Yai), motorbikes on the pier deck, and the sea and hills behind. A small person in white stands under the arch. I checked that this is Chong Lard and not Klong Hia. The same terminal, with 'KOH YAO YAI' on its side, is in the site's chong-lard-pier1-8 gallery photos. Klong Hia's own site (klonghiapier.com) shows a different T-shaped pier with a blue floating pontoon. A 640x360 attention-crop preview keeps the terminal, the pier deck and the sea. Rejected: Commons has no photo of this pier. The CC0 Unsplash 'Koh Yao Yai Peer' shows a resort jetty with Thai lanterns. The 2014 Panoramio shot across the channel most likely shows Manoh Pier. The Flickr 'pier' shots are NC-licensed portraits of people. Ferry-site images are 422 px or are stock photos. Alternative from the same site: images/gallery/chong-lard-pier5.jpg (800x533) shows the whole pier on its piles from the water."
+  },
+  {
+   "key": "places:fruit-fusion-kamala",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-fruit-fusion-kamala.jpg",
+   "url": "https://phuket-insider.com/wp-content/uploads/2024/07/photo_2024-04-22_11-32-05.jpg",
+   "page": "https://phuket-insider.com/en/places/fruit-fusion-kamala-cafe/",
+   "credit": "\u00a9 Phuket Insider (phuket-insider.com)",
+   "license": "\u00a9 phuket-insider.com (third-party site, all rights reserved)",
+   "width": 960,
+   "height": 1280,
+   "note": "Inside the cafe, from Phuket Insider's own visit in April 2024 (the same set has a bowl spelling 'INSIDER'). It shows the pink palm-tree wall with 'Fruit Fusion Kamala Cafe' on it, the 'Smoothie Station' neon sign, the swing seat and a table. The photo is portrait. The project's sharp attention crop to 640x360 was tested and keeps the name wall, the neon sign and the table. If you crop by hand, use the upper band starting at about y=150. Tried and rejected: the cafe has no website. The og:image of its Facebook page (fruitfusionofficial) and its Instagram (@fruitfusioncafe) is only the logo, and its Instagram posts could not be reached. The Phuket.Net listing photos are only 600x400 and show the old 2019 interior. Tripadvisor, Wanderlog, coool.cafe and abillion have only Google or user photos. Openverse and Commons have no photo of the cafe, only Kamala Beach shots."
+  },
+  {
+   "key": "events:yep-listening-bar-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-yep-listening-bar-phangan.jpg",
+   "url": "https://i.ytimg.com/vi/vgmYQtLaOcw/maxresdefault.jpg",
+   "page": "https://www.youtube.com/watch?v=vgmYQtLaOcw",
+   "credit": "\u00a9 YEP Listening Bar Koh Phangan (official YouTube channel @YEPLISTENINGBAR)",
+   "license": "official site (venue's YouTube channel)",
+   "width": 1280,
+   "height": 720,
+   "note": "A party photo at YEP: the thumbnail of the venue's own video 'YEP & KOV\u00cbR CR\u00cbW' (YouTube oEmbed confirms the author is YEP LISTENING BAR KOH PHANGAN). It shows DJs at the Pioneer decks under red light, a hand fan, two people in balaclavas and the crowd, with the bar's red-brick wall behind. It is exactly 16:9. Rejected: the phangan.events candidate (IMG_7681) is a portrait close-up of the round YEP sign, which is close to a logo. The Facebook and Instagram og:images are the logo. The phangan.events and Telegram event images are text-heavy flyers. The phanganlife.com listing photos look Google-sourced (yep_01 is the same shot as a Google Places photo of YEP). The other channel thumbnails are the logo, a vertical frame or a man at a laptop."
+  }
+ ]
+}

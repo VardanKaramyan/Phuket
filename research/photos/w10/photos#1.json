@@ -1,0 +1,45 @@
+{
+ "results": [
+  {
+   "key": "places:mae-haad-pier-koh-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-mae-haad-pier-koh-tao.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Mae_Haad_pier_Ko_Tao.jpg/1280px-Mae_Haad_pier_Ko_Tao.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mae_Haad_pier_Ko_Tao.jpg",
+   "credit": "kallerna",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Mae Haad pier seen from the sea on a clear day (14 Jan 2026): the 'Welcome to Koh Tao' gate, ferries and longtails tied up at the pier, the waterfront shops and the green hills behind. Sharp, 3:2, and the 16:9 crop keeps the pier and gate. Picked over the given 2014 night candidate (Hafen_Koh_TAO - panoramio), which shows the same gate but is dark."
+  },
+  {
+   "key": "places:visit-panwa-pier",
+   "ok": false,
+   "note": "No usable photo of the pier. Tried: Commons searches for Visit Panwa, Panwa pier, Cape Panwa pier, Laem Phan Wa, Ao Makham and the Thai names, plus a 2 km geosearch around the pin (nothing of this pier); Openverse/Flickr CC (nothing); no official pier site (the visitpanwa.* domains don't exist; Time Out and phuketferry list only the address, and phuketferry's one image is 422 px). Love Andaman, which runs the pier's tours: its whole WordPress media library (2,121 files) has only people shots at the pier (a crowded check-in lounge, staff group photos) and a text-heavy fleet graphic. SailAwayParty's site and gallery (the Saturday boat party from this pier) show only party shots on board. Closest fallback, rejected as a people-heavy indoor shot: https://www.loveandaman.com/wp-content/uploads/2026/01/Guide-brief.jpeg"
+  },
+  {
+   "key": "events:sedo-izikura-phuket-town",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-sedo-izikura-phuket-town.jpg",
+   "url": "https://images.ra.co/b26ae824e03e8c04beede394dc12e93276d49743.jpg",
+   "page": "https://ra.co/events/2089321",
+   "credit": "\u00a9 S\u00e9do Izikura",
+   "license": "flyer, personal use",
+   "width": 828,
+   "height": 828,
+   "note": "The venue's own flyer for 'Sedo Izikura featuring Alam B2B Jah' (21 Jan 2025, RA): a black-and-white photo of two DJs on the decks, with the title at the top and 'S\u00c9DO IZIKURA, Japanese home cooking & underground music' at the bottom. The default attention crop keeps the hands on the decks and the venue name, cuts the faces and drops the old date. BAND 250 instead shows both faces and the decks with no text. No real venue photo could be found: all 21 phangan.events listings are flyers, the RA venue page has no photo, Instagram blocks access and there is no website. Both given candidates are text-heavy portrait flyers whose 16:9 crop is mostly title text or a past date (17.10.26)."
+  },
+  {
+   "key": "events:tree-secret-sound-garden-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-tree-secret-sound-garden-phangan.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2026/10/1792063630417-ywlk9yo3fek.jpg",
+   "page": "https://phangan.events/events/tree-secret/",
+   "credit": "\u00a9 Tree Secret Sound Garden",
+   "license": "flyer, personal use",
+   "width": 966,
+   "height": 1280,
+   "note": "The given candidate: the venue's Tree Secret jungle-techno flyer (Fri 16 Oct 2026), with resident DJ Annabelle at the decks in a lit jungle. Portrait, but the 16:9 attention crop keeps her face, 'Jungle Techno' and the 'Resident DJ Annabelle' sign, and drops the date and address text. A flyer was used because no real venue or party photo exists in the sources I could reach: all 41 phangan.events listings are flyers; RA's 'Sound Garden Tattoo Club' page (79/24 M.1 Thong Sala) has no photo, only 2019-2024 flyers; the Tattoo Club Facebook cover is a logo and its reel thumbnails are only 540 px wide."
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
- "researchedOn": "15-16 Oct 2026",
- "eventsIntro": "Phuket's party scene is mostly beach clubs with big-name DJs. The most underground nights are small and announced late: Shelter in Patong and the crews at Courage Bar in Old Town. For proper jungle raves, go to Koh Phangan: a 1-hour flight to Samui plus a boat. In full-moon week (19 to 23 Jan) it has a party every night.",
+ "researchedOn": "15-19 Oct 2026",
+ "eventsIntro": "Phuket's party scene is mostly beach clubs with big-name DJs. The most underground nights are small and announced late: Shelter in Patong, and in Old Town the crews at Courage Bar and the late sessions at Sédo Izikura. For proper jungle raves, go to Koh Phangan: a 1-hour flight to Samui plus a boat. In full-moon week (19 to 23 Jan) it has a party every night.",
  "eventsCallout": {
   "title": "A plan for your 18 nights",
   "groups": [
@@ -41,14 +41,14 @@
   "title": "Finding the real underground",
   "items": [
    "Small parties are posted only 1 to 3 weeks ahead. Look again in late December and every Monday of your trip.",
-   "Resident Advisor (ra.co): search Phuket and Koh Phangan.",
+   "Resident Advisor (ra.co): search Phuket and Koh Phangan. phangan.events also lists Phuket nights (Shelter, Illuzion, BOA, Sédo Izikura), often only a few days ahead.",
    "Telegram: the Phangan Party Guide channel (t.me/s/phanganparty) lists each week's parties.",
    "Instagram: Shelter Phuket, Courage Bar and its crews, Retro Mountain, Unclave and the Lighthouse Party post line-ups first.",
    "Ask DJs and bar staff at Shelter and Courage Bar about after-parties. They spread by word of mouth.",
-   "Changed since the first research: Bermudos in Rawai has had no parties since about 2023, Niky's Speakeasy could not be confirmed for 2026 (website offline), and OXA plays more tech house than techno."
+   "Changed since the first research: Bermudos (once in Rawai) has had no listed party since 10 May 2024, at Shelter in Patong. Niky's Speakeasy in Bang Tao still has an open Google listing (Tue-Sun 20:00-02:00, a review from July 2026), but its website is offline. OXA plays more tech house than techno."
   ]
  },
- "placesIntro": "Each place shows how long people usually stay (not the drive), the best time to go and the price. In January the sea on the west coast is calm and clear: the best month for beaches and boat trips.",
+ "placesIntro": "Each place shows how long people usually stay (not the drive), the best time to go and the price. Boat tours compare the island trips, and Piers & ferries lists the boats from each pier. In January the sea on the west coast is calm and clear: the best month for beaches and boat trips.",
  "areasIntro": "Tap an area on the map to read about it. The colors match the cards below. For this trip the best base is Kamala, with a driver for the Circoloco nights in Natai.",
  "stayIntro": "Add your own bookings so the address is one tap away, even offline. Below is the group's villa shortlist from Airbnb and Booking.com, with the full price for 8 guests on 8-18 Jan (checked 16 Oct 2026). Map pins are approximate until you book.",
  "moneyIntro": "Bring clean USD or EUR 100 notes and change them at a money changer, not at the airport or the hotel. ATMs charge 250 to 350 baht for each withdrawal.",
@@ -68,10 +68,14 @@
    "On Koh Phangan: Chill Up's Monday Madness tonight."
   ],
   "2027-01-12": [
-   "On Koh Phangan: the Lighthouse Party in Haad Rin tonight."
+   "On Koh Phangan: the Lighthouse Party in Haad Rin tonight.",
+   "By day: an Ang Thong Marine Park speedboat trip from Thong Sala (back at the hotel about 17:00). See Places, Boat tours."
   ],
   "2027-01-13": [
    "Fly back to Phuket in the morning. Tonight: Marco Carola at Café del Mar."
+  ],
+  "2027-01-14": [
+   "A free day for a boat trip: Phi Phi early by speedboat, or Phang Nga Bay. See Places, Boat tours."
   ],
   "2027-01-15": [
    "Tonight: Shelter, or ask about the Courage Bar crews' next party."
@@ -80,6 +84,7 @@
    "Tonight: Circoloco, second weekend. Book the driver early."
   ],
   "2027-01-17": [
+   "After Circoloco: if you want the sea today, take a short trip with a late start, like a longtail from Rawai to Coral Island or Koh Bon.",
    "Sunday: the SuperRich partner and NC Plus in Old Town are closed. Use Lion (Jungceylon, Patong) or Mamy."
   ],
   "2027-01-18": [
@@ -91,7 +96,8 @@
    "Tonight: OXA (moved to Tuesday this week) or the Lighthouse Party. In Phuket: Enthusiast Place open doors from 19:00."
   ],
   "2027-01-20": [
-   "Full-moon week: expect Waterfall tonight (not announced yet). Utopia may run too."
+   "Full-moon week: expect Waterfall tonight (not announced yet). Utopia may run too.",
+   "By day: Koh Tao and Koh Nang Yuan (08:30 boat, back 15:30 or 16:30), or an Ang Thong speedboat tour."
   ],
   "2027-01-21": [
    "Tonight: Jungle Experience (expected, the night before the Full Moon). Chill Up's Phangan Calling from 20:00 is the warm-up."
@@ -106,7 +112,8 @@
   ],
   "2027-01-24": [
    "On your own from today: see Info, Your solo days. Share your live location before a night out.",
-   "Sunday: the SuperRich partner and NC Plus in Old Town are closed."
+   "Sunday: the SuperRich partner and NC Plus in Old Town are closed.",
+   "A solo boat day: the Khai Islands half day (about 1,100 THB), or a boat from Bang Rong Pier to Koh Yao Noi. Do not book a boat for Tue 26."
   ],
   "2027-01-25": [
    "Last party night. Open on Mondays: Illuzion, BOA and Armania in Patong, and Levitate (to 01:00). Shelter, Courage Bar and the Café del Mar Club Room are closed.",
@@ -144,8 +151,12 @@
    "href": "#info-phangan-week"
   },
   {
-   "text": "Buy party tickets early: the cheaper tiers sell out (Argy: presale from Tue 20 Oct, 18:00 Thai time).",
+   "text": "Buy party tickets early: the cheaper tiers sell out (Argy: on sale Tue 20 Oct, 18:00 Thai time, 15:00 in Yerevan).",
    "href": "#events"
+  },
+  {
+   "text": "Book the boat days early: small-group and private boats sell out in January.",
+   "href": "#info-boat-tours"
   },
   {
    "text": "Leave vapes and e-cigarettes at home: they are illegal in Thailand.",

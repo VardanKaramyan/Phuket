@@ -57,7 +57,7 @@ const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s)
 const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`
 
 const AREA_NAMES = Object.fromEntries(areas.map((a) => [a.id, a.name]))
-const OFF_ISLAND = { 'koh-kaew': 'Koh Kaew', 'phang-nga': 'Phang Nga', 'khao-lak': 'Khao Lak', krabi: 'Krabi', 'phi-phi': 'Phi Phi', 'koh-yao': 'Koh Yao', 'koh-lanta': 'Koh Lanta', 'koh-phangan': 'Koh Phangan', 'koh-samui': 'Koh Samui', other: '' }
+const OFF_ISLAND = { 'koh-kaew': 'Koh Kaew', 'phang-nga': 'Phang Nga', 'khao-lak': 'Khao Lak', krabi: 'Krabi', 'phi-phi': 'Phi Phi', 'koh-yao': 'Koh Yao', 'koh-lanta': 'Koh Lanta', 'koh-lipe': 'Koh Lipe', trang: 'Trang islands', 'koh-phangan': 'Koh Phangan', 'koh-samui': 'Koh Samui', 'koh-tao': 'Koh Tao', 'surat-thani': 'Surat Thani', other: '' }
 const areaName = (id) => (id === 'other' ? '' : AREA_NAMES[id] || OFF_ISLAND[id] || (id ? cap(String(id).replace(/-/g, ' ')) : ''))
 
 const AREA_COLORS = {
@@ -204,7 +204,9 @@ function eventCard(e, mode) {
   const score = Math.max(1, Math.min(5, e.undergroundScore || 1))
   const f = [e.window === 'in' ? 'in' : 'out', e.pick ? 'pick' : '', recurring ? 'recurring' : 'dated'].filter(Boolean).join(' ')
   const where = whereOf(e)
-  const phases = dates.length ? Array.from(new Set(dates.filter(inTrip).map(phaseOf))).join(' ') : (e.kind === 'venue' ? 'group duo solo' : '')
+  // a club or a nightly party with no listed dates: any day you are there; the plan has the Gulf islands only with the
+  // group (10-13 Jan) or the two of you (19-23 Jan), never on the solo days
+  const phases = dates.length ? Array.from(new Set(dates.filter(inTrip).map(phaseOf))).join(' ') : (['koh-phangan', 'koh-samui', 'koh-tao'].includes(e.area) ? 'group duo' : 'group duo solo')
   const sub = [e.venue, areaName(e.area) || e.island].filter(has)
   const lineup = (e.lineup || []).filter(has)
   const tags = (e.genres || []).filter(has)
@@ -244,10 +246,40 @@ function recurrenceTile(e) {
 
 // ---------- places ----------
 const DUR = { '1-2h': ['1–2 h', 'short'], '2-3h': ['2–3 h', 'short'], 'half-day': ['Half day', 'half'], 'full-day': ['Full day', 'full'], 'multi-day': ['2+ days', 'full'], evening: ['Evening', 'evening'] }
-const TIER = { 'must-see': ['Must-see', 'must'], 'hidden-gem': ['Hidden gem', 'gem'], 'day-trip': ['Day trip', 'trip'] }
-const tierOrder = { 'must-see': 0, 'hidden-gem': 1, 'day-trip': 2 }
+const TIER = { 'must-see': ['Must-see', 'must'], 'hidden-gem': ['Hidden gem', 'gem'], 'day-trip': ['Day trip', 'trip'], tour: ['Boat tour', 'trip'], pier: ['Pier', 'soft'] }
+const tierOrder = { 'must-see': 0, 'hidden-gem': 1, 'day-trip': 2, tour: 3, pier: 4 }
+// the boats that leave a pier, one line each
+const routesHtml = (routes = []) => {
+  const r = (routes || []).filter((x) => x && has(x.to))
+  if (!r.length) return ''
+  return `<ul class="routes">${r.map((x) => `<li><b>${esc(x.to)}</b><span>${esc([x.operator, x.boat].filter(has).join(' · '))}</span>${has(x.times) ? `<span>${icon('clock')}${esc(x.times)}</span>` : ''}${has(x.duration) || has(x.priceText) ? `<span>${esc([x.duration, x.priceText].filter(has).join(' · '))}</span>` : ''}${has(x.season) ? `<span class="season">${esc(x.season)}</span>` : ''}${isUrl(x.bookingUrl) ? `<a href="${esc(x.bookingUrl)}" target="_blank" rel="noopener">Book or timetable</a>` : ''}</li>`).join('')}</ul>`
+}
+// tours name their piers in free text (departsFrom): link the ones that have a pier card, both ways
+const pierShort = (p) => String(p.name || '').replace(/\s*\(.*$/, '').trim()
+const piers = places.filter((p) => p.tier === 'pier' && pierShort(p).length > 4)
+const piersOf = (t) => piers.filter((p) => String(t.departsFrom || '').toLowerCase().includes(pierShort(p).toLowerCase()))
+const toursFrom = (p) => places.filter((t) => t.tier === 'tour' && piersOf(t).includes(p))
+const cardLinks = (label, items, name = (x) => x.name) => (items.length ? `<p class="card-links">${esc(label)} ${items.map((x) => `<a href="#pl-${esc(x.id)}">${esc(name(x))}</a>`).join(', ')}</p>` : '')
+// a pier card: where its boats go, then the boats folded away (a big pier has 7 or more), fees, tours from there
+// each place once: 'Ao Nang (Nopparat Thara Pier) and Railay East' and 'Railay and Ao Nang' give Ao Nang, Railay East
+const routeDests = (r) => {
+  const out = [], seen = new Set()
+  for (const x of r) for (const part of String(x.to || '').replace(/\s*\([^)]*\)/g, '').split(/,| via |:/)[0].split(/ and /)) {
+    const name = part.trim(), key = name.toLowerCase().replace(/^koh? /, '').replace(/ (east|west|town|pier)$/, '')
+    // a fragment like 'islands', or a line about boats arriving here, is not a place the boats go to
+    if (!/^[A-Z]/.test(name) || /^(Arriving|From) /.test(name)) continue
+    if (!seen.has(key)) { seen.add(key); out.push(name) }
+  }
+  return out
+}
+function pierBody(p) {
+  const r = (p.routes || []).filter((x) => x && has(x.to))
+  const boats = r.length > 2 ? `<details class="more"><summary>Boats: times and prices (${r.length})</summary>${routesHtml(r)}</details>` : r.length ? `<h3 class="mini-title">Boats from here</h3>${routesHtml(r)}` : ''
+  return facts([['Boats to', routeDests(r).join(', ')], ['Fees', p.feeText], ['Best time', p.bestTime]]) + boats + cardLinks('Boat tours from here:', toursFrom(p))
+}
 const placeIndex = new Map(places.map((p, i) => [p.id, i]))
-const placesSorted = places.slice().sort((a, b) => (a.category === 'food') - (b.category === 'food') || (tierOrder[a.tier] ?? 3) - (tierOrder[b.tier] ?? 3) || placeIndex.get(a.id) - placeIndex.get(b.id))
+// piers come last, after food: in All they are a reference list, not places to visit
+const placesSorted = places.slice().sort((a, b) => (a.tier === 'pier') - (b.tier === 'pier') || (a.category === 'food') - (b.category === 'food') || (tierOrder[a.tier] ?? 3) - (tierOrder[b.tier] ?? 3) || placeIndex.get(a.id) - placeIndex.get(b.id))
 const trimNum = (x) => String(Math.round(x * 10) / 10)
 // one duration per card: the researched on-site hours when they exist, minutes for short stops
 function durText(p) {
@@ -263,18 +295,22 @@ function placeCard(p, mode) {
   let [, durKey] = DUR[p.durationLabel] || [p.durationLabel || '', 'short']
   const hmax = p.durationHours && p.durationHours.max
   if (durKey === 'short' && hmax > 3) durKey = 'half'
+  // a pier is not a visit of some length: it shows only under Any length
+  if (p.tier === 'pier') durKey = ''
   const durLabel = durText(p)
   const [tierLabel, tierCls] = TIER[p.tier] || ['Place', 'soft']
   const tierKeys = [p.tier, p.category === 'food' ? 'food' : ''].filter(Boolean).join(' ')
-  const days = (p.days || []).length && p.days.length < 7 ? 'Only ' + p.days.join(', ') : ''
+  const days = (p.days || []).length === 6 ? 'Closed ' + WEEK.find((d) => !p.days.includes(d)) : (p.days || []).length && p.days.length < 7 ? 'Only ' + p.days.join(', ') : ''
   const sub = [areaName(p.area), cap(p.category)].filter(has).join(' · ')
   return `<article class="card" id="pl-${esc(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
-${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class="pill ${p.category === 'food' ? 'food' : tierCls}">${p.category === 'food' ? 'Food' : tierLabel}</span></div><div class="tag-bottom"><span class="pill">${icon('clock')}${esc(durLabel)}</span></div></div>
+${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class="pill ${p.category === 'food' ? 'food' : tierCls}">${p.category === 'food' ? 'Food' : tierLabel}</span></div>${p.tier === 'pier' ? '' : `<div class="tag-bottom"><span class="pill">${icon('clock')}${esc(durLabel)}</span></div>`}</div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc(sub)}${has(p.nameThai) ? ` · <span lang="th">${esc(p.nameThai)}</span>` : ''}</p></div></div>
 <p class="desc">${esc(p.description)}</p>
-${facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText]])}
-${moreBlock('Opening, getting there & tips', p.tips, p.links, [['Open', [p.openText, days].filter(has).join(' · ')], ['Getting there', p.gettingThere]])}
+${p.tier === 'pier' ? pierBody(p)
+    : p.tier === 'tour' ? facts([['Time', durLabel], ['Price', p.priceText || p.feeText], ['Private boat', p.privateCharter], ['Includes', p.includes], ['Leaves from', p.departsFrom], ['Best time', p.bestTime]]) + cardLinks(piersOf(p).length > 1 ? 'The piers:' : 'The pier:', piersOf(p), pierShort)
+    : facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText]])}
+${moreBlock(p.tier === 'tour' ? 'Operators, getting there & tips' : 'Opening, getting there & tips', p.tips, [...(p.tier === 'tour' ? p.operators || [] : []), ...(p.links || [])], [['Open', [p.openText, days].filter(has).join(' · ')], ['Getting there', p.gettingThere], ['Facilities', p.facilities]])}
 ${voteBar('pl:' + p.id, p.name)}
 ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
 </div></article>`
@@ -478,7 +514,8 @@ function sunTimes(iso, lat = 7.89, lng = 98.3, tz = 7) {
   const t = (Jd) => new Date((Jd - 2440587.5) * 86400000 + tz * 3600000).toISOString().slice(11, 16)
   return { rise: t(Jt - w / 360), set: t(Jt + w / 360) }
 }
-const markets = places.filter((p) => (p.category === 'market' || p.category === 'food') && (p.days || []).length && p.days.length < 7)
+// the agenda's market dots: markets, and food places open only on a few days (a restaurant closed on Wednesdays is not one)
+const markets = places.filter((p) => (p.days || []).length && (p.category === 'market' ? p.days.length < 7 : p.category === 'food' && p.days.length <= 3))
 // the plan has the two of you on Koh Phangan on these nights, so its parties come first in the agenda
 const PLAN_PHANGAN = new Set(['2027-01-19', '2027-01-20', '2027-01-21', '2027-01-22'])
 function dayAgenda(iso) {
@@ -486,7 +523,8 @@ function dayAgenda(iso) {
   if (iso === TRIP.flight.day) return { evs: [], mk: [] }
   const here = PLAN_PHANGAN.has(iso) ? 'koh-phangan' : 'phuket'
   const near = (e) => (whereOf(e) === here ? 0 : 1)
-  const evs = events.filter((e) => (e.dates || []).includes(iso)).sort((a, b) => near(a) - near(b) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) || (b.undergroundScore || 0) - (a.undergroundScore || 0))
+  // nights on islands outside the plan (Phi Phi pool parties, Lanta bars) only make the agenda when they suit the traveler
+  const evs = events.filter((e) => (e.dates || []).includes(iso) && (whereOf(e) !== 'other' || e.pick || (e.undergroundScore || 0) >= 3)).sort((a, b) => near(a) - near(b) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) || (b.undergroundScore || 0) - (a.undergroundScore || 0))
   const mk = markets.filter((p) => p.days.includes(dowOf(iso)))
   return { evs, mk }
 }
@@ -527,11 +565,11 @@ function homeView(mode) {
   const bestBrand = brands[0]
   const tiles = [
     ['events', 'events', 'Music & raves', plural(datedEvents.filter((e) => e.window === 'in').length, 'dated event') + ' in your dates'],
-    ['places', 'places', 'Places to go', plural(places.filter((p) => p.tier !== 'day-trip').length, 'spot') + ' · ' + plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip')],
+    ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
     ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
     ['money', 'money', 'Money', bestBrand ? `Best rates: ${bestBrand.name}` : 'Exchange & ATMs'],
-    ['info', 'info', 'Essentials', 'Entry, transport, safety, phrases'],
+    ['info', 'info', 'Essentials', 'Entry, transport, boats, safety, phrases'],
     ...(apps.length ? [['apps', 'apps', 'Apps to install', `${plural(apps.filter((a) => a.priority === 'must').length, 'app')} to set up before you fly, ${apps.length} in all`, 'wide']] : []),
   ].map(([href, ic, t, s, cls]) => `<a class="tile${cls ? ' ' + cls : ''}" href="#${href}">${icon(ic)}<b>${esc(t)}</b><span>${esc(s)}</span></a>`).join('')
   return `<section class="view" id="home" aria-labelledby="home-title">
@@ -600,7 +638,7 @@ function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">${esc(extra.placesIntro || 'Each place shows how long it takes, the best time to go and what it costs. In January the west-coast sea is calm and clear.')}</p></div>
 <div class="toolbar" data-toolbar="places">
-${chipRow('places', 'tier', [['all', 'All'], ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
+${chipRow('places', 'tier', [['all', 'All'], ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
 ${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed')}
 <input class="search" type="search" id="places-search" placeholder="Search beaches, temples, markets…" aria-label="Search places">
 </div>
@@ -726,7 +764,7 @@ function infoView() {
   const secs = (info.sections || []).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''} id="info-${esc(s.id)}"><summary>${esc(s.title)}</summary><div class="acc-body">${(s.items || []).map((it) => `<div class="fact"><h4>${esc(it.title)}${it.critical ? ' <span class="pill bad">Must know</span>' : ''}</h4><p>${esc(it.text)}</p>${linksHtml(it.links)}</div>`).join('')}</div></details>`).join('')
   const phrases = (info.phrases || []).map((p) => `<div class="phrase"><b>${esc(p.en)}</b><span class="say">${esc(p.say)}</span><span class="th" lang="th">${esc(p.thai)}</span></div>`).join('')
   return `<section class="view" id="info" aria-labelledby="info-title">
-<div class="view-head"><span class="eyebrow">Checked ${esc(info.asOf || 'Oct 2026')}</span><h1 class="view-title" id="info-title">Essentials</h1><p class="lede">Money, entry rules, getting around, safety and a few words of Thai.</p></div>
+<div class="view-head"><span class="eyebrow">Checked ${esc(info.asOf || 'Oct 2026')}</span><h1 class="view-title" id="info-title">Essentials</h1><p class="lede">Money, entry rules, getting around, boats and islands, safety and a few words of Thai.</p></div>
 <div class="tiles info-tiles"><a class="tile" href="#money">${icon('money')}<b>Money</b><span>${esc(brands[0] ? "Best rates: " + brands[0].name : "Exchange & ATMs")} · converter</span></a>${apps.length ? `<a class="tile" href="#apps">${icon('apps')}<b>Apps to install</b><span>${esc(plural(apps.filter((a) => a.priority === 'must').length, 'app') + ' before you fly')}</span></a>` : ''}</div>
 ${nums ? `<h2 class="block-title">Emergency numbers</h2><div class="sos">${nums}</div>` : ''}
 <div class="stack">${secs}</div>
@@ -840,7 +878,7 @@ function clientData(build) {
   // the venue name only: the pin already shows where it is
   const popVenue = (v) => String(v || '').split(',')[0].trim()
   events.forEach((e) => { const ds = (e.dates || []).filter(inTrip); add('event', 'event', e, e.id, e.name, [popVenue(e.venue), ds.length ? popDates(ds) : popPattern(e.recurrence)].filter(has).join(' · '), 'ev-' + e.id) })
-  places.forEach((p) => add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], durText(p)].filter(has).join(' · '), 'pl-' + p.id))
+  places.forEach((p) => add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : durText(p)].filter(has).join(' · '), 'pl-' + p.id))
   // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
   hotels.forEach((h) => {
     add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.beds > 0 ? plural(h.beds, 'bed') : '', h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
@@ -962,7 +1000,7 @@ function kml() {
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}
 ${folder('Areas', areasK)}
 ${folder('Music & raves', events.map((e) => pm(e.name, `${e.venue || ''}<br>${(e.dates || []).join(', ') || e.recurrence || ''}<br>${e.description || ''}`, e.lat, e.lng, 'p-event', e)).join(''))}
-${folder('Places to go', places.map((p) => pm(p.name, `${(TIER[p.tier] || [''])[0]} · ${(DUR[p.durationLabel] || [''])[0]}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
+${folder('Places to go', places.map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
 ${folder('Hotels', hotels.map((h) => pm(h.name, `${HTIER[h.tier] || ''} · ${h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel')).join(''))}
 ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => pm(`${b.name} · ${x.name}`, `${x.hoursText || ''}<br>${b.summary || ''}`, x.lat, x.lng, 'p-money'))).join(''))}
 </Document></kml>

@@ -1,0 +1,65 @@
+[
+ {
+  "key": "events:sedo-izikura-phuket-town",
+  "kind": "music event / venue",
+  "name": "Sédo Izikura (late underground sessions, Phuket Old Town)",
+  "where": "Sédo Izikura, 7 Suthat Road, Phuket Old Town (same spot as Sédo Record Store), phuket-town, Phuket",
+  "gmapsQuery": "Sédo Izikura, Talat Yai, Phuket",
+  "website": "https://www.instagram.com/sedoizikura/",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2026/09/backyard-2.jpeg",
+    "source": "phangan.events (the venue's Back Yard flyer, 12 Sep 2026)",
+    "credit": "Sédo Izikura",
+    "license": "flyer, personal use"
+   },
+   {
+    "url": "https://phangan.events/wp-content/uploads/2026/10/1791879978342-0t947egzc7hs.jpg",
+    "source": "phangan.events (the venue's Guest Class+ flyer, 17 Oct 2026)",
+    "credit": "Sédo Izikura",
+    "license": "flyer, personal use"
+   }
+  ]
+ },
+ {
+  "key": "events:tree-secret-sound-garden-phangan",
+  "kind": "music event / venue",
+  "name": "Tree Secret Sound Garden: free techno and psy nights (Thong Sala)",
+  "where": "Tree Secret Sound Garden (Google: 'Sound Garden' and 'Tree Secret'), 79/21 Moo 1, Soi Krung Thai, Thong Sala, Koh Phangan, koh-phangan, Koh Phangan",
+  "gmapsQuery": "Sound Garden, Koh Phangan",
+  "website": "https://phangan.events/event-location/sound-garden/",
+  "candidates": [
+   {
+    "url": "https://phangan.events/wp-content/uploads/2026/10/1792063630417-ywlk9yo3fek.jpg",
+    "source": "phangan.events (the venue's Tree Secret jungle techno flyer, 16 Oct 2026)",
+    "credit": "Tree Secret Sound Garden",
+    "license": "flyer, personal use"
+   }
+  ]
+ },
+ {
+  "key": "places:mae-haad-pier-koh-tao",
+  "kind": "pier / pier",
+  "name": "Mae Haad Pier (Koh Tao)",
+  "where": "koh-tao",
+  "gmapsQuery": "Mae Haad Pier, Ko Tao",
+  "website": "https://www.lomprayah.com/",
+  "candidates": [
+   {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Hafen_Koh_TAO_-_panoramio.jpg/1280px-Hafen_Koh_TAO_-_panoramio.jpg",
+    "source": "Wikimedia Commons (File:Hafen Koh TAO - panoramio.jpg, the pier gate at night, 2014)",
+    "credit": "Siamike",
+    "license": "CC BY 3.0"
+   }
+  ]
+ },
+ {
+  "key": "places:visit-panwa-pier",
+  "kind": "pier / pier",
+  "name": "Visit Panwa Pier (Cape Panwa)",
+  "where": "cape-panwa",
+  "gmapsQuery": "Visit Panwa Pier, Wichit, Phuket",
+  "website": "https://www.loveandaman.com/phi-phi-islands-bamboo-island/",
+  "candidates": []
+ }
+]

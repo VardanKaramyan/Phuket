@@ -1,0 +1,52 @@
+{
+ "results": [
+  {
+   "key": "events:zen-beach-sunset-sessions-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-zen-beach-sunset-sessions-phangan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/KoPhaNganMar2025_06.jpg/1280px-KoPhaNganMar2025_06.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:KoPhaNganMar2025_06.jpg",
+   "credit": "Hagai Agmon-Snir",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Zen Beach at sunset (March 2025): people wading in the shallows and a paddleboarder under a sunset sky. Geotagged about 50 m from Grasshopper Beach Bar, which sits on Zen Beach per OpenStreetMap. Replaced the given candidate, which showed the main Sri Thanu beach (2008 photo), not Zen Beach. The 4:3 frame crops to 16:9 keeping the people and the sky."
+  },
+  {
+   "key": "events:secret-party-koh-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-secret-party-koh-tao.jpg",
+   "url": "https://phangan.events/wp-content/uploads/2025/02/IMAGE-2025-02-24-023714.jpg",
+   "page": "https://phangan.events/event-location/karma-bar-koh-tao/",
+   "credit": "\u00a9 Secret Party Koh Tao",
+   "license": "organiser photo via phangan.events",
+   "width": 1280,
+   "height": 853,
+   "note": "The given candidate, kept: the Secret Party at night, a crowd in front of the red star-shaped stage under jungle trees. The organiser's small SECRET PARTY logo sits in the bottom-right corner and stays in the card crop (about 60 px wide on a phone). Every other image I found was a text flyer (26 phangan.events event posts, 4 megatix listings). secretpartykohtao.com and secretpartythailand.com are 'Coming Soon' pages."
+  },
+  {
+   "key": "events:hii-festival-koh-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-hii-festival-koh-tao.jpeg",
+   "url": "https://xxnpwhkeuxdbuqkaabhh.supabase.co/storage/v1/object/public/assets/venues/1783034920673-ptcwo5nyh1.jpeg",
+   "page": "https://www.entrix.vip/event/hii-festival",
+   "credit": "\u00a9 Hii Festival Koh Tao",
+   "license": "venue photo via entrix.vip (the event's ticket page)",
+   "width": 1632,
+   "height": 2040,
+   "note": "Night fire show at Hii Festival: a burning 'Hii KOH TAO' sign, a steel-wool fire spinner and sparks. Portrait, with the festival logo printed near the bottom (below y=1570). I ran the project's default 640x360 attention crop on it: it shows only the sign and sparks, no logo. If a crop is ever set by hand, keep it above the logo (BAND 560 works). Replaced the candidate, a soft portrait video frame of the hilltop Hii sign with a phangan.events caption. The official site hiifestivalkohtao.com has a good crowd photo, but its big logo sits in the middle of the crowd. The site's gallery is down because its Cloudinary account is disabled."
+  },
+  {
+   "key": "events:leo-beach-music-festival-koh-tao",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/events-leo-beach-music-festival-koh-tao.jpg",
+   "url": "https://leobeachmusicfestival.com/upload/img_6589a7b394226.jpg",
+   "page": "https://leobeachmusicfestival.com/gallery-detail/38/sai-thong-beach--koh-tao/",
+   "credit": "\u00a9 Leo Beach Music Festival",
+   "license": "official site",
+   "width": 1000,
+   "height": 1000,
+   "note": "Drone shot at sunset of Sai Thong Beach, the festival's venue: palms, sand, rocks and sea. From the festival's own 'Sai Thong Beach - Koh Tao' gallery, with no watermark. Replaced the candidate, a text-heavy collage flyer. The festival's party photos all carry an 'lbmf' watermark (about 60 checked across 5 albums), so I chose this clean venue photo. It is square; the default crop keeps the palms and the beach. Warning: the festival homepage loads upload/1764142773.phtml and upload/album-1788851489.php as CSS backgrounds. These look like scripts planted on a hacked site; I did not open them. Be careful about linking leobeachmusicfestival.com in the guide."
+  }
+ ]
+}

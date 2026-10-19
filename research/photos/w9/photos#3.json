@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:donsak-raja-ferry-port",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-donsak-raja-ferry-port.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Raja_Ferry_Pier_IMG_1910.jpg/1280px-Raja_Ferry_Pier_IMG_1910.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Raja_Ferry_Pier_IMG_1910.jpg",
+   "credit": "Per Meistrup",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 606,
+   "note": "Raja Ferry Pier at Don Sak, June 2022. Several Raja car ferries (one shows the RAJA logo) are moored at the pier under limestone hills. Sharp and bright. The image is wide (2.1:1), so the 16:9 crop only trims the sides and the ferries stay in. I chose it over the listed 2011 photo (Fabio Achilli, one old ferry by a rusty jetty) because it shows the whole port and is newer."
+  },
+  {
+   "key": "places:tour-phi-phi-speedboat",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-phi-phi-speedboat.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Loh_Samah_Bay.jpg/1280px-Loh_Samah_Bay.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Loh_Samah_Bay.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Loh Samah Bay on Phi Phi Leh, where the Maya Bay floating pier is. Taken from the bow of a boat, with longtails on turquoise water between the cliffs. Sharp, no watermark. This was the first listed candidate. I did not use the second (Maya Bay cliffs) because the Phi Phi / Maya Bay card already uses it."
+  },
+  {
+   "key": "places:tour-james-bond-early-speedboat",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-james-bond-early-speedboat.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_35.JPG/1280px-Isla_Tapu%2C_Phuket%2C_Tailandia%2C_2013-08-20%2C_DD_35.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Isla_Tapu,_Phuket,_Tailandia,_2013-08-20,_DD_35.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 778,
+   "note": "Ko Tapu (James Bond Island) and the islands next to it, with speedboats crossing the bay. A Commons quality image. It is from the same series as the listed DD_30 but wider, and it has speedboats in it. It also looks different from the Phang Nga Bay card, which uses DD_36 (Ko Tapu straight on between cliffs). I did not use the listed Weldon Kennedy photo: it is portrait and is not Ko Tapu. The Simba drone shot is only 870 px wide."
+  },
+  {
+   "key": "places:tour-phang-nga-big-boat-canoe",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-phang-nga-big-boat-canoe.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Boat_cruise_in_Phang-nga_%28Unsplash%29.jpg/1280px-Boat_cruise_in_Phang-nga_%28Unsplash%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Boat_cruise_in_Phang-nga_(Unsplash).jpg",
+   "credit": "Yap Chin Kuan (bergeryap87)",
+   "license": "CC0",
+   "width": 1280,
+   "height": 720,
+   "note": "A two-deck tour boat full of passengers in life jackets crossing Phang Nga Bay, with an island behind. Already 16:9, sharp, no watermark. I did not use the listed Ko Panak DD_01 because it shows no boat. The Amazing Canoeing big-boat photo shows the boat with canoes, but it has the company logo in the top-right corner."
+  },
+  {
+   "key": "places:tour-phang-nga-self-paddle-kayak",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-phang-nga-self-paddle-kayak.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thailand_2016_%28349_of_422%29_%2832243505271%29.jpg/1280px-Thailand_2016_%28349_of_422%29_%2832243505271%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Thailand_2016_(349_of_422)_(32243505271).jpg",
+   "credit": "Weldon Kennedy",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Two people paddling their own sea kayak out of a sea cave, with karst islands behind. Commons category: Kayaking in Phang Nga Bay. The exact island is not stated, so it may not be Koh Roi. The kayak survives the 16:9 crop. Paddle Asia's og:image is only 356x356, and all its site photos are under 640 px wide, so none could be used. The listed Weldon Kennedy cave-arch photo shows no paddlers."
+  },
+  {
+   "key": "places:tour-hong-krabi-james-bond-speedboat",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-hong-krabi-james-bond-speedboat.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Lagoon_of_Hong_island.jpg/1280px-Lagoon_of_Hong_island.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Lagoon_of_Hong_island.jpg",
+   "credit": "Vladimir Pankratov",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "The entrance to the Hong Island lagoon in Krabi (the file description says 'Thailand, Krabi, Lagoon of Hong island'), with a longtail and a speedboat coming in. Sharp, no watermark, and different from the Koh Hong (Krabi) card's beach photo. This was the first listed candidate. I rejected the second (DD_18) because it shows souvenir stalls at James Bond Island."
+  },
+  {
+   "key": "places:tour-similan-speedboat-khao-lak",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-similan-speedboat-khao-lak.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mu_Ko_Similan_National_Park_Thailand.jpg/1280px-Mu_Ko_Similan_National_Park_Thailand.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mu_Ko_Similan_National_Park_Thailand.jpg",
+   "credit": "KOSIN SUKHUM",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "A white-sand beach in the Similan Islands, with turquoise water and tour boats at anchor (a towel and hat in front, a couple walking). The exact island is not stated. Sharp, no watermark. I did not use the listed viewpoint shot because the Similan Islands card already uses it. The other listed Kosin Sukhum shot has no boats, and the Love Andaman image is an operator promo."
+  },
+  {
+   "key": "places:tour-racha-coral-boat",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-racha-coral-boat.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Racha_2015_december_-_panoramio_%283%29.jpg/1280px-Racha_2015_december_-_panoramio_%283%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Racha_2015_december_-_panoramio_(3).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Racha Yai's main bay, Dec 2015 (it looks like Patok Bay rather than Siam Bay), seen from the water. Speedboats and dive boats are moored off the white beach and resort, with snorkellers. Already 16:9. The water looks deep blue rather than turquoise. I did not use the listed Nicolas Vollmer photos because they show a beach path and a restaurant with no boats. Phuket Dive Tours has a brighter photo of a speedboat with snorkellers at Racha Yai, but it is square (1078x1078) and the automatic crop cuts out the boat."
+  },
+  {
+   "key": "places:tour-khai-islands-half-day",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-khai-islands-half-day.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG/1280px-Isla_Khai_Nok%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Isla_Khai_Nok,_Tailandia,_2013-08-19,_DD_02.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 764,
+   "note": "Speedboats pulled up on the sand at Khai Nok, with tourists wading ashore through clear water. This is exactly the half-day trip. A Commons quality image. I did not use the listed DD_03 because it is almost the same view as the Khai Islands card (DD_05, the bar on the rocks), and DD_07 shows only rocks. Note that this is Khai Nok, not Khai Nai; the tour visits both."
+  },
+  {
+   "key": "places:tour-krabi-4-islands-longtail",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-krabi-4-islands-longtail.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Poda_island_beach.jpg/1280px-Poda_island_beach.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Poda_island_beach.jpg",
+   "credit": "kallerna",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 836,
+   "note": "Longtail boats on the beach at Poda Island, with its rock stack behind (Jan 2012). A Commons quality image. This was the first listed candidate. I rejected the second (Ko Kai & Ko Tub 12) because it is a 1280x368 panorama."
+  },
+  {
+   "key": "places:tour-private-speedboat-group",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-private-speedboat-group.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Isla_Phi_Phi_Lay%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG/1280px-Isla_Phi_Phi_Lay%2C_Tailandia%2C_2013-08-19%2C_DD_02.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Isla_Phi_Phi_Lay,_Tailandia,_2013-08-19,_DD_02.JPG",
+   "credit": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 736,
+   "note": "Pileh Lagoon on Phi Phi Leh (matches the Pi Leh Bay map query): speedboats on bright turquoise water under the cliffs. A Commons quality image, no watermark. I did not use the listed Pileh Lagoon 2 because it is dark and mostly cliff. Ko Phi Phi Le 01 shows longtails and is a very wide panorama."
+  }
+ ]
+}

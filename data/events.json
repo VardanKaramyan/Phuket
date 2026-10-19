@@ -352,7 +352,7 @@
    "coordSource": "google-maps-listing (COURAGE | КУРАЖ, plus code V9HJ+MP) = address on RA and Megatix (16 Bangkok Rd); nominatim-reverse on Bangkok Road",
    "coordConfidence": "high",
    "gmapsQuery": "COURAGE КУРАЖ, 16 Bangkok Rd, Phuket Town",
-   "description": "Small bar in Phuket Old Town. In the 2025/26 season it hosted some of Phuket's most underground parties: FAKE PALM (techno, breaks), SUB (UK garage, bass, jungle) and WAV.e x Enthusiast (minimal). Parties are not weekly. No dates for 19-25 Jan yet (16 Oct 2026).",
+   "description": "Small bar in Phuket Old Town. In the 2025/26 season it hosted some of Phuket's most underground parties: FAKE PALM (techno, breaks), SUB (UK garage, bass, jungle), WAV.e x Enthusiast (minimal) and DnB nights. Parties are not weekly. No January 2027 dates yet (19 Oct 2026).",
    "genres": [
     "techno",
     "breakbeat",
@@ -367,7 +367,8 @@
     "Follow Instagram @courage.phuket and @subphuket for January dates. FAKE PALM nights also appear on RA and Megatix.",
     "Check the venue on each flyer. SUB also uses other places (The Chill Spot in Karon, Tempo in Chalong, a boat from Chalong Pier).",
     "Also watch VESHALKA, an electro and breakbeat crew: it played the bar Вечно Молодой (Vechno Molodoy), 88/15 Kata Road, on 16 Oct 2026 (400 THB).",
-    "Phuket Town is about 40 minutes by car from Kamala. Use Grab or Bolt to get home."
+    "Phuket Town is about 40 minutes by car from Kamala. Use Grab or Bolt to get home.",
+    "WAV.e and Framework Phuket sell their nights on megatix.in.th/framework. Their October night: COSMJN at The Chill Spot, Karon, Fri 23 Oct 2026 (300 THB)."
    ],
    "links": [
     {
@@ -385,6 +386,10 @@
     {
      "label": "SUB on Resident Advisor",
      "url": "https://ra.co/promoters/127822"
+    },
+    {
+     "label": "Framework Phuket on Megatix",
+     "url": "https://megatix.in.th/framework"
     }
    ],
    "sources": [
@@ -400,7 +405,10 @@
     "https://megatix.in.th/events/dawn-razor-fake-orbit-courage-phuket",
     "https://megatix.in.th/events/veshalka-with-unit-boy-phuket",
     "https://dropthebass.co/promoters/sub",
-    "https://ra.co/events/2419071"
+    "https://ra.co/events/2419071",
+    "https://megatix.in.th/framework",
+    "https://megatix.in.th/events/wav-e-cosmjn-231026",
+    "https://megatix.in.th/events/bass-sabotage-rave"
    ],
    "imageCandidates": [
     {
@@ -416,7 +424,7 @@
      "credit": "Christophe95"
     }
    ],
-   "verification": "Fact-checked 16 Oct 2026. RA (SUB promoter, all events): 2025/26 nights at Courage cost 300 (Stanton Warriors, 20 Dec), 800 (Sergey Sanchez at framework, 2 Jan), 400 (FAKE ORBIT, 17 Jan), 600 (Freestylers, 13 Feb) and 300 THB (WAV.e x Enthusiast, 19 Feb); boat party 27 Jan from Chalong Pier; last event 23 May 2026 at Tempo Phuket; no upcoming events. Megatix: FAKE ORBIT 400 THB (early bird 300). Google Maps: Wed-Sun, Sat from 15:00, closed Mon-Tue; website = instagram.com/courage.phuket. dropthebass SUB profile lists instagram.com/subphuket and facebook.com/subphuket. A FAKE PALM Instagram account could not be confirmed, so that link was removed. VESHALKA: Megatix, 16 Oct 2026, 400 THB, Vechno Molodoy, 88/15 Kata Rd. RA (SUB 3 Years, 25 Apr 2026): 'TECHNO & BREAKS curation by FAKE PALM', so 'electro' was replaced by 'breaks'.",
+   "verification": "Second fact-check 19 Oct 2026. RA GraphQL: SUB promoter has no upcoming events (last: Tempo Phuket 23 May 2026); RA Thailand and Phuket listings to Mar 2027 show no Courage, FAKE PALM, SUB, Enthusiast or WAV.e nights. Megatix full catalogue (450 events): no upcoming Courage event; Framework Phuket page lists only WAV.E presents COSMJN, Fri 23 Oct 2026, The Chill Spot (R824+XG Karon), 21:00-04:00, 300 THB, 20+, with MAFU, DEE MUSIC, PASHA TUNES and SEYTECHNIK. Megatix: BASS SABOTAGE RAVE (DnB, Ant C1) at Courage, Sat 27 Dec 2025, 300 THB, 21+; FAKE ORBIT 17 Jan 2026, 400 THB (early bird 300); VESHALKA with UNIT BOY, 16 Oct 2026, 400 THB, Vechno Molodoy, 88/15 Kata Rd. Google Maps: Wed-Fri and Sun 19:00-24:00, Sat 15:00-24:00, Mon-Tue closed; website instagram.com/courage.phuket. Earlier check (16 Oct 2026): RA SUB nights at Courage cost 300 (Stanton Warriors, 20 Dec 2025), 800 (Sergey Sanchez at Framework, 2 Jan), 400 (FAKE ORBIT, 17 Jan), 600 (Freestylers, 13 Feb) and 300 THB (WAV.e x Enthusiast, 19 Feb 2026); boat party 27 Jan from Chalong Pier. RA (SUB 3 Years, 25 Apr 2026): 'TECHNO & BREAKS curation by FAKE PALM'. A FAKE PALM Instagram account could not be confirmed.",
    "dates": [],
    "placeId": "ChIJCZGpPgAxUDARswiyIaohoLI"
   },
@@ -691,9 +699,12 @@
    ],
    "recurrence": "Usually 1-3 party nights a week; the program changes every week",
    "timeText": "Usually 21:00 to 05:00-06:00",
-   "priceText": "Usually 350-800 THB in 2026 (RA). Big names cost more (Family Piknik, Feb 2026: 2,000 THB).",
+   "priceText": "Usually 350-800 THB in 2026 (RA). Many Aug-Oct 2026 nights were free before 22:00 (Techno Tropics, Jungle Clubbing, Halloween rave; online from about 200 THB). Big names cost more (Family Piknik, Feb 2026: 2,000 THB).",
    "tips": [
     "In Jan 2026 there were 12 party nights here between 4 and 29 Jan, spread over the week. Jan 2027 dates are not out yet.",
+    "Sep-Oct 2026 nights: hard techno raves, Techno Tropics (Mon 12 Oct), Nakadia (Thu 1 Oct) and a Dreamland psytrance rave.",
+    "Arrive before 22:00: on many nights entry is free until then.",
+    "Megatix lists its Oct 2026 Halloween rave as 21+. Bring your passport or a photo ID.",
     "Check phangan.events or the 'Phangan Party Guide' Telegram channel for the week's parties.",
     "It is on a hill. Go by taxi, or by scooter only if you are a confident rider.",
     "Koh Phangan is far from Phuket. The fastest way is a flight to Koh Samui, then a boat. Plan at least 2 nights."
@@ -714,6 +725,10 @@
     {
      "label": "Resident Advisor",
      "url": "https://ra.co/clubs/186817"
+    },
+    {
+     "label": "Tickets example (Entrix, 28 Oct 2026)",
+     "url": "https://www.entrix.vip/event/halloween-hard-techno-rave"
     }
    ],
    "sources": [
@@ -726,7 +741,11 @@
     "https://phangan.events/events/halloween-hard-techno-rave-at-retro-mountain/",
     "https://phangan.events/events/hardtechno-kpg-retro-club-present-secret-rave-th/",
     "https://phangan.events/events/kontur-fest/",
-    "https://megatix.in.th/events/hard-techno-halloween-28-oct-wed"
+    "https://megatix.in.th/events/hard-techno-halloween-28-oct-wed",
+    "https://phangan.events/events/techno-tropics-at-retro-mountain/",
+    "https://phangan.events/events/nakadia-at-retro-mountain-jungle-club/",
+    "https://www.entrix.vip/event/halloween-hard-techno-rave",
+    "https://t.me/s/phanganparty"
    ],
    "imageCandidates": [
     {
@@ -742,7 +761,7 @@
      "credit": "Retro Mountain"
     }
    ],
-   "verification": "Re-checked 16 Oct 2026. No Jan 2027 events yet on phangan.events, Megatix or RA. Next: Halloween Hard Techno Rave on Wed 28 Oct 2026 (Megatix 200-700 THB). phangan.events Jan 2026: nights on 4, 5, 6, 9, 10, 13, 15, 16, 18, 22, 27 (Kontur Fest) and 29 Jan, on every weekday except Wednesday. RA 2026 prices: 350-800 THB, Family Piknik 2,000 THB. Hardtechno KPG 'Secret Rave' on 26 Feb 2026. RA: venue not closed. Google listing not marked closed.",
+   "verification": "Re-checked 19 Oct 2026. phangan.events REST data Aug-Oct 2026: Island Vibes (Tue 4 Aug), Secret Party Say Musick showcase (Thu 13 Aug), Hard Techno Rave (Mon 17 Aug, Mon 14 Sep), Orbital Vibes and BPM Dimensions psytrance by Sacred Moon (Thu 20 Aug, Thu 17 Sep), Jungle Vibes, Lost In The Jungle, Jungle Fever, Jungle Clubbing (Mondays 24 Aug to 21 Sep, free before 22:00), Dreamland Psytrance Jungle Rave (Sun 27 Sep), Nakadia (Thu 1 Oct), Techno Tropics (Mon 12 Oct; free before 22:00), Halloween Hard Techno Rave (Wed 28 Oct: Zwielicht, Abyss b2b Penelope, Kasatka, PCKT RCKT; free before 22:00 per Telegram 19 Oct). Megatix Halloween listing: age 21+, presale 200 (sold out) and 300, regular 600, VIP 700 THB; its date field says 31 Oct but the text says Wed 28 Oct 21:00. Entrix organiser 'Retro Mountain', from 200 THB plus a fee, pin = Google point. No Jan 2027 events yet on phangan.events, Megatix, Entrix or RA. RA venue not closed.",
    "dates": [],
    "placeId": "ChIJ7U9JMQD9VDARwMZtunZFrnc"
   },
@@ -853,13 +872,14 @@
     "2027-01-18",
     "2027-01-21"
    ],
-   "recurrence": "Mon Monday Madness, Tue and Fri PSYDAY (progressive psytrance), Thu Phangan Calling, Sat Sinewave DnB, Sun karaoke. Open 19:00-02:00, closed Wednesdays.",
+   "recurrence": "Mon Monday Madness, Tue and Fri PSYDAY (progressive psytrance), Thu Phangan Calling, Sat Sinewave DnB, Sun karaoke. Open 19:00-02:00, closed Wednesdays. On the last Thursday of the month: Techno Rebellion (techno, free entry).",
    "timeText": "Mon and Thu from 20:00 until 02:00",
    "priceText": "Free entry.",
    "tips": [
     "DJStrich lists Monday Madness on Mon 18 Jan and 'Phangan Calling: ICONS' on Thu 21 Jan 2027, from 20:00. These are weekly entries, not line-ups.",
     "There is also a Monday Madness on Mon 25 Jan, but plan to be back in Phuket by then (flight home Tue 26, 18:20).",
-    "Opposite Mini Big C, before Lavella Spa on the road to Haad Rin. Start here, then go on to a later party."
+    "Opposite Mini Big C, before Lavella Spa on the road to Haad Rin. Start here, then go on to a later party.",
+    "Techno Rebellion, a free techno night, is on the last Thursday of each month (#41 on 24 Sep 2026). In Jan 2027 that is Thu 28 Jan, after your trip."
    ],
    "links": [
     {
@@ -876,7 +896,10 @@
     "https://phangan.events/events/monday-madness-at-chill-up/",
     "https://phangan.events/events/phangan-calling/",
     "https://djstrich.de/en/club/chillup",
-    "https://phangan.events/events/monday-madness/"
+    "https://phangan.events/events/monday-madness/",
+    "https://phangan.events/events/techno-rebellion-41/",
+    "https://phangan.events/events/techno-rebellion-at-chill-up/",
+    "https://phangan.events/events/techno-rebellion-27-30-01-25/"
    ],
    "imageCandidates": [
     {
@@ -892,7 +915,7 @@
      "credit": "Chill Up"
     }
    ],
-   "verification": "Re-checked 16 Oct 2026. chillup.club: 'since 2015', free entry, 7 pm-2 am, closed Wednesdays; weekly program Mon Monday Madness, Tue and Fri PSYDAY, Thu Phangan Calling, Sat Sinewave DnB, Sun karaoke; on Ban Tai main road opposite Mini Big C, before Lavella Spa. DJStrich Jan 2027: Monday Madness 4, 11, 18, 25 Jan (20:00); Phangan Calling: ICONS 7, 14, 21, 28 Jan (20:00). Mon 25 Jan removed from dates because the trip plan has you back in Phuket that day. Coords: Google, OSM and plus code within 6 m.",
+   "verification": "Re-checked 19 Oct 2026. chillup.club: 'dancing under the roof since 2015', free entry, 7 pm-2 am, closed Wednesdays; weekly program Mon Monday Madness, Tue and Fri PSYDAY, Thu Phangan Calling, Sat Sinewave DnB, Sun karaoke; 114/2 Moo 1 Ban Tai main road. phangan.events calendar (EventON, Jan 2027 query): Monday Madness on 4, 11, 18 and 25 Jan and PsyDay on Tuesdays are already in the repeating series. DJStrich Jan 2027: Monday Madness 4, 11, 18, 25 Jan (20:00); Phangan Calling: ICONS 7, 14, 21, 28 Jan (20:00). Mon 25 Jan left out of dates because the trip plan has you back in Phuket. Techno Rebellion on phangan.events: #26 Thu 26 Dec 2024, #27 Thu 30 Jan 2025, #31 Thu 29 May 2025 (last of that season), #32 Thu 31 Jul 2025 (season opening), #41 Thu 24 Sep 2026 (20:00-02:00, free, DNY and Klangtherapie), always the last Thursday. Coords: Google, OSM and plus code within 6 m.",
    "placeId": "ChIJ3cTqOTT8VDARrX7WK1Hfnjk"
   },
   {
@@ -1079,7 +1102,7 @@
    ],
    "recurrence": "2 nights before and 2 nights after each Full Moon Party (Jan 2027: Wed 20 and Sun 24, not announced yet). In 2026 it also ran on most Wednesdays (Jan to Nov), so Wed 13 Jan is possible.",
    "timeText": "Gates 21:00 until sunrise (Eventpop listing: 21:00-07:00)",
-   "priceText": "Oct 2026: 1,100 THB early bird online, 1,300 online, 1,500 at the door (one beer included). VIP 2,500 online, 2,800 at the door.",
+   "priceText": "Oct 2026 (Eventpop, 25 Oct): early bird 1,100, 1,200 and 1,300 THB, general 1,400 online, 1,500 at the door (one beer included). VIP 2,500 online, 2,800 at the door.",
    "tips": [
     "Same pattern in Dec 2025, when the Full Moon Party was also on a Friday: Waterfall ran Wed 3 and Sun 7 Dec.",
     "Buy online early. It is cheaper than the door.",
@@ -1137,7 +1160,7 @@
    "area": "koh-lanta",
    "venue": "Pangea Beach Bar & Kitchen, Long Beach (Phra Ae), Koh Lanta",
    "window": "in",
-   "status": "unconfirmed",
+   "status": "recurring",
    "pick": false,
    "undergroundScore": 3,
    "lat": 7.60588,
@@ -1145,24 +1168,29 @@
    "coordSource": "wikidata+google-maps-listing 'Pangeabar & kitchen'+osm (within 64 m)",
    "coordConfidence": "high",
    "gmapsQuery": "Pangeabar & kitchen, Long Beach, Koh Lanta",
-   "description": "Beach bar on Long Beach, Koh Lanta, known for deep and minimal house since 2012. It booked Ian Pooley, Clive Henry and Nakadia in past years. In high season it runs 'Deep Sundays' from 18:00 with sunset DJ sets, last seen in March 2026. Small (about 300 people). Only worth it if you stay on Koh Lanta.",
+   "description": "Beach bar in the middle of Long Beach, Koh Lanta, with house, tech house and minimal parties since 2012. In the 2025-26 season it had two weekly parties: a Tuesday beach party from about 22:00 and Deep Sundays, sunset sets from 18:00. Local and visiting DJs, about 300 people. Worth it only if you sleep on Koh Lanta.",
    "genres": [
     "deep house",
-    "minimal",
-    "tech house"
+    "tech house",
+    "minimal"
    ],
    "dates": [
     "2027-01-10",
+    "2027-01-12",
     "2027-01-17",
+    "2027-01-19",
     "2027-01-24"
    ],
-   "recurrence": "Sundays in high season from 18:00 (seen 15 and 29 Mar 2026)",
-   "timeText": "Sundays from 18:00 to about midnight",
-   "priceText": "Not listed.",
+   "recurrence": "2025-26 season: a party every Tuesday from about 22:00 (late Nov 2025 to Jun 2026) and Deep Sundays from 18:00 (still on in Jun 2026). In your dates: Sun 10, Tue 12, Sun 17, Tue 19 and Sun 24 Jan. The 2026-27 season is not announced yet.",
+   "timeText": "Tue from about 22:00 until late; Sun from 18:00 to about midnight",
+   "priceText": "No entry price listed (Facebook and RA, 2026).",
    "tips": [
-    "Check facebook.com/pangeabeachbar before you go. The 2027 season is not announced.",
-    "On Google Maps it is called 'Pangeabar & kitchen'. It is closed on Wednesdays.",
-    "Koh Lanta is a ferry trip from Phuket. Plan at least one night there."
+    "Check facebook.com/pangeabeachbar the week you go. The 2026-27 season is not announced yet (19 Oct 2026).",
+    "On Google Maps it is 'Pangeabar & kitchen'. Low-season hours now: 16:00-21:00, Sundays to midnight, closed Wednesdays (Oct 2026).",
+    "Lanta also has a monthly New Moon Party on Naklang Hill, 17:00-06:00: two stages, DJs and fire, 350 THB in advance (2026). Next new moon: 8 Jan 2027. See @newmoon.kohlanta.",
+    "Another Long Beach night: The Ozone Beach Bar & Club has a Thursday beach party, 22:00-04:00 (local guide, 2026). Not confirmed, so ask locally.",
+    "Late at night tuk-tuks are rare on Lanta. Ask your hotel to book a driver for the way back, or sleep near Long Beach.",
+    "Koh Lanta is about 1.5-2 h by speedboat or 4 h by ferry from Phuket, and no boats run at night. Plan at least one night there."
    ],
    "links": [
     {
@@ -1172,6 +1200,10 @@
     {
      "label": "Resident Advisor",
      "url": "https://ra.co/clubs/101580"
+    },
+    {
+     "label": "New Moon Party (Naklang Hill)",
+     "url": "https://newmoonkohlanta.com/"
     }
    ],
    "sources": [
@@ -1179,7 +1211,14 @@
     "https://ra.co/events/2410915",
     "https://ra.co/clubs/101580",
     "https://www.wikidata.org/wiki/Q60178765",
-    "https://www.facebook.com/pangeabeachbar/"
+    "https://www.facebook.com/pangeabeachbar/",
+    "https://amazinglanta.com/koh-lanta-night-life-wheres-the-party",
+    "https://amazinglanta.com/hiring-a-motorbike-tuk-tuk-and-car-on-koh-lanta/",
+    "https://ra.co/events/1677071",
+    "https://newmoonkohlanta.com/",
+    "https://www.ticketmelon.com/dreamfarer/newmoon-march",
+    "https://www.ticketmelon.com/dreamfarer/newmoon-april",
+    "https://www.andamanwavemaster.com/speedboat/"
    ],
    "imageCandidates": [
     {
@@ -1189,7 +1228,7 @@
      "credit": "Luděk Chmurovský"
     }
    ],
-   "verification": "RA (GraphQL): Deep Sundays on 15 Mar 2026 (18:00-02:00) and 29 Mar 2026 (18:00-00:00). Past nights with Ian Pooley (2018), Clive Henry (2019) and Nakadia (2020); 6th anniversary in Feb 2018; capacity 300. Google Maps 'Pangeabar & kitchen' is open, 4.4 (374 reviews), Sun 16:00-24:00, Wed closed. The Facebook page (now 'Pangea Beach Bar & Kitchen') works. Coords: Wikidata = given point; Google pin 43 m away, OSM 64 m. No Jan 2027 dates yet.",
+   "verification": "Fact-checked again 19 Oct 2026. Facebook (read 19 Oct 2026): numbered Tuesday parties 'from 10pm on the sandfloor' (Week 22-25 = 21 Apr-12 May 2026, so Week 1 was about 25 Nov 2025); 25 May 'we keep it going every Tuesday'; 15 Jun 'Every Tuesday Night All Season'; Deep Sundays 'from 6pm' (Thai DJs TeTez, A.N.A.T) to 27 Jun 2026; 15 May low-season hours 16:00-21:00, closed Wed; no posts after 27 Jun 2026. RA: Deep Sundays 15 Mar 2026 (18:00-02:00, tags Tech House, Minimal) and 29 Mar 2026 (18:00-00:00, House, Tech House); Tuesday nights there since 2015, 6th anniversary 27 Feb 2018, capacity 300, venue not closed. Google (19 Oct 2026): 4.4 (374 reviews), Mon-Tue and Thu-Sat 16:00-21:00, Sun 16:00-24:00, Wed closed. Amazing Lanta 2026 page: Tue 21:00 until morning, Deep Sundays 17:00-01:00, Ozone Thu 22:00-04:00 (Ozone on Google: open, Wed closed). New Moon Party: newmoonkohlanta.com (350 THB advance, 500 door) and Ticketmelon (22 Mar and 15 Apr 2026, 17:00-06:00). Boat times: Andaman Wave Master (speedboat 2 h, ferry 4 h). Genres set back to the RA tags. Jan 2027 dates are by pattern.",
    "placeId": "ChIJ59jCtV8DTjARz_YqjkuYJSQ"
   },
   {
@@ -1298,20 +1337,23 @@
    "coordSource": "cafedelmar.com schema.org geo + Google listing 'Café del Mar Phuket Beach Club' (1 m) + OSM node (7 m)",
    "coordConfidence": "high",
    "gmapsQuery": "Café del Mar Phuket Beach Club, Kamala, Phuket",
-   "description": "Argy plays the Pyramid Stage at Café del Mar on your arrival day: melodic house and techno on the beach at Kamala, from the afternoon to 22:30, then an after-party in the Clubroom.",
+   "description": "Argy plays the open-air Pyramid Stage at Café del Mar on your arrival day: melodic house and techno on Kamala beach from 14:00 to 22:30, then an after-party in the Clubroom from 23:00. Tickets go on sale on Megatix on Tue 20 Oct 2026 at 18:00 Thai time.",
    "genres": [
     "house",
     "techno"
    ],
-   "timeText": "Fri 8 Jan, 14:00 to 22:30 on the Pyramid Stage; Clubroom after-party from 23:00",
-   "priceText": "On sale Tue 20 Oct 2026, 18:00 Thai time, on Megatix: Limited Presale 900 THB (entry by 16:00), 1st Release 1,700 THB (entry by 18:00), Anytime Entry 2,500 THB with 1 drink. Clubroom after-party from 23:00: 800 THB.",
+   "timeText": "Fri 8 Jan, 14:00 to 22:30 on the Pyramid Stage; Clubroom after-party from 23:00 (last entry 00:30)",
+   "priceText": "Megatix, on sale Tue 20 Oct 2026, 18:00 Thai time: Limited Presale 900 THB (entry by 16:00), 1st Release 1,700 THB (entry by 18:00), Anytime Entry 2,500 THB with 1 drink, Stage Access and After Party 6,000 THB. After-party only: 800 THB. Booking fee about 2-2.5%.",
    "status": "listed",
    "undergroundScore": 2,
    "pick": false,
    "tips": [
     "Strictly 20+. Bring ID.",
+    "Each ticket has an entry time. Late entry can be refused or cost 500 THB, so plan your airport transfer.",
     "Rain or storm: tickets become food and drink credit. No refunds.",
-    "Each ticket has an entry time. Late entry can be refused or cost 500 THB, so plan your airport transfer."
+    "The sale opens at 18:00 Thai time (15:00 in Yerevan). Once you are in, you have 5 minutes to finish choosing your tickets.",
+    "Skip the 3-Day Pass (4,500 THB): it also covers 6 and 7 Jan, before you land.",
+    "Stage Access (6,000 THB) adds backstage, a VIP bar and the after-party, but you must enter by 18:00."
    ],
    "links": [
     {
@@ -1325,6 +1367,10 @@
     {
      "label": "Presale sign-up",
      "url": "https://laylo.com/cdm/argy-jan8"
+    },
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/events/argy-cafe-del-mar-phuket-080127"
     }
    ],
    "imageCandidates": [
@@ -1335,11 +1381,16 @@
      "license": "Official promotional image"
     }
    ],
-   "verification": "Event page phuket.cafedelmar.com/events/2027-jan-08-pyramid checked 15 Oct 2026: Fri 8 Jan, 2 PM - late, 20+, headliner secret, rain = F&B credit. The 'free' tag on the page is a template placeholder (it also sits next to Marco Carola's 1,600 THB). Not on Megatix or RA yet. Laylo sign-up link works. Coords: venue schema.org = Google listing = OSM (within 7 m).",
+   "verification": "Second fact-check 19 Oct 2026 (20:19 Thai time). Megatix event API: Fri 8 Jan 14:00-22:30, 20+, on_sale_datetime 20 Oct 18:00, 'on sale soon'; six tiers: 3-Day Pass 4,500 (GA for 6, 7 and 8 Jan), Limited Presale 900 (4 PM entry, late fee 500), 1st Release 1,700 (6 PM entry), Anytime 2,500 (1 GA drink), Stage Access & After Party 6,000 (backstage, VIP bar, entry by 6 PM), After Party 800 (doors 23:00, last entry 00:30); booking fees 20-120 THB (2-2.5%). Sale rule on Megatix and venue page: 'once you enter, you have 5 minutes to complete your ticket selection' (the earlier tip said 5 minutes to pay, now fixed). Venue page: doors 2 PM, 20+, 'Presale goes live on 20 Oct at 6 PM'. Not on RA (RA Thailand listings checked to Feb 2027). Laylo sign-up and both images load (HTTP 200).",
    "sources": [
     "https://phuket.cafedelmar.com/events",
     "https://phuket.cafedelmar.com/events/2027-jan-08-pyramid",
-    "https://laylo.com/cdm/jan-27"
+    "https://laylo.com/cdm/jan-27",
+    "https://phuket.cafedelmar.com/events/argy-jan2027",
+    "https://megatix.in.th/events/argy-cafe-del-mar-phuket-080127",
+    "https://megatix.in.th/api/v2/events/argy-cafe-del-mar-phuket-080127",
+    "https://laylo.com/cdm/argy-jan8",
+    "https://phangan.events/events/argy/"
    ],
    "lineup": [
     "Argy"
@@ -1373,14 +1424,15 @@
     "Nicolas Masseyeff"
    ],
    "timeText": "Wed 13 Jan, 2 PM - 10:30 PM. Clubroom after-party from 11 PM (separate ticket)",
-   "priceText": "Megatix, 15 Oct 2026: Early Bird 1,900 and 1st Release 2,500 THB are sold out. Final Release 3,000 THB (entry by 18:00), Anytime Entry 5,000 THB with 1 drink. The Clubroom after-party from 23:00 is a separate 1,200 THB ticket (sold out).",
+   "priceText": "Megatix, 19 Oct 2026: Early Bird 1,900 and 1st Release 2,500 THB are sold out. Final Release 3,000 THB (entry by 18:00), Anytime Entry 5,000 THB with 1 drink, Stage Access and After Party 10,000 THB. The 1,200 THB after-party-only ticket is sold out. Booking fee about 2-2.5%.",
    "status": "tickets-on-sale",
    "undergroundScore": 2,
    "pick": true,
    "tips": [
     "Strictly 20+. Bring ID.",
-    "Each ticket has an entry time. Late arrival can be refused or cost a 1,000 THB fee. Come before 6 PM to avoid queues.",
+    "Each ticket has an entry time. Late arrival can be refused or cost a fee of up to 1,000 THB. Come before 6 PM to avoid queues.",
     "The main ticket is the outdoor show only. The after-party in the Clubroom (from 11 PM) needs its own ticket.",
+    "After-party-only tickets are sold out online. Stage Access (10,000 THB, entry by 18:00) still includes it. Door tickets only if space is left.",
     "Ticket tiers sell out fast: buy early."
    ],
    "links": [
@@ -1411,11 +1463,12 @@
      "license": "Official flyer"
     }
    ],
-   "verification": "Venue page (Wed 13 Jan, doors 2 PM, 1,600 THB, 20+), Megatix JSON-LD (14:00-22:30, from 1,200 THB, in stock, seller Café del Mar Phuket) and RA GraphQL (venue's own promoter account: support by Nicolas Masseyeff, 1,600 THB, 20+) checked 15 Oct 2026. RA pin is ~1 km off; venue geo used.",
+   "verification": "Second fact-check 19 Oct 2026. Megatix event API: Wed 13 Jan 14:00-22:30, 20+, on sale since 5 Oct; Early Bird 1,900 and 1st Release 2,500 sold out; Final Release 3,000 (6 PM entry), Anytime 5,000 (1 GA drink) and Stage Access & After Party 10,000 (backstage, VIP bar, after-party, entry by 6 PM) on sale; After Party 1,200 (doors 23:00, last entry 00:30) sold out; a 1,500 THB after-party add-on exists only for a hidden ticket, so it cannot be bought with Final Release; T&C: late fee up to 1,000 THB, after-party 'door tickets are subject to availability'. RA GraphQL 2554112: Marco Carola and Nicolas Masseyeff, 20+, venue promoter account. Venue events page: no other Pyramid shows after 13 Jan except the Season Pass. RA pin is ~1 km off; venue geo used.",
    "sources": [
     "https://phuket.cafedelmar.com/events/marco-carola-jan2027",
     "https://megatix.in.th/events/marco-carola-cafe-del-mar-phuket-130127",
-    "https://ra.co/events/2554112"
+    "https://ra.co/events/2554112",
+    "https://megatix.in.th/api/v2/events/marco-carola-cafe-del-mar-phuket-130127"
    ],
    "placeId": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo"
   },
@@ -1438,7 +1491,7 @@
    "coordSource": "Island centre (wikipedia). The venue does not publish an address.",
    "coordConfidence": "low",
    "gmapsQuery": "Koh Phangan, Surat Thani",
-   "description": "A Parvati Records party by Sacred Moon Phangan: about 48 hours of non-stop forest and dark psytrance in the Koh Phangan jungle. It is also the opening of Lost Jungle, a new hilltop site with camping, art market and food. With Giuseppe, Atriohm, Ectogasmics, Kerlivin and more. Not techno.",
+   "description": "A Parvati Records party by Sacred Moon Phangan for the crew's 10th birthday: about 48 hours of non-stop forest and dark psytrance in the jungle. It also opens Lost Jungle, a new mountain-top site with camping, an art market and food. With Giuseppe, Atriohm, Ectogasmics, Ordo Ab Chao and more. Not techno.",
    "genres": [
     "psytrance",
     "forest",
@@ -1450,29 +1503,37 @@
     "Ectogasmics",
     "Obelisk",
     "Weirdos",
-    "Audiofools",
     "Ectobot",
     "Gu",
     "Kerlivin",
     "KT",
     "Aztec Dosage",
     "Alien Trancesistor",
+    "Ordo Ab Chao",
     "Makumba",
     "Kokobloko",
+    "Sishiva",
     "Slate",
-    "Capodanna",
+    "Bubbleguns",
+    "Diansis",
+    "Black Sheeps",
+    "Xaphan",
+    "Manousakiz",
     "Kia Goa",
-    "Manousakiz"
+    "Ton",
+    "Apnea",
+    "Naan",
+    "Giuseppe vs Kia Goa"
    ],
-   "timeText": "Sat 9 to Mon 11 Jan, about 48 hours non-stop. Start time not final (ticket shop: Sat 4 PM; phangan.events: Sat noon)",
-   "priceText": "2,500 THB on the organiser's Vibez shop (second advance tier from 17 Oct 2026; first tier was 2,000 THB)",
+   "timeText": "Sat 9 Jan from 18:00 to Mon 11 Jan about 17:00, about 48 hours non-stop (organiser ticket shop, Oct 2026). phangan.events still lists Sat 12:00.",
+   "priceText": "2,500 THB 'second advance' ticket on the organiser's Vibez shop (on sale since 17 Oct 2026, 99 left on 19 Oct). The first tier was 2,000 THB.",
    "status": "tickets-on-sale",
    "undergroundScore": 4,
    "pick": true,
    "tips": [
     "The exact location is not public yet. Ask Sacred Moon Phangan or check phangan.events before you go. The map pin is only the island centre.",
     "Google Maps has no 'Lost Jungle' yet. The search shows Retro Mountain club instead. Do not go there without checking.",
-    "It clashes with Circoloco on Sat 9 Jan.",
+    "It starts on Sat 9 Jan, a Circoloco night. Fly to Samui on Sun 10 Jan and you still get the second day: it runs until Mon 11 Jan, about 17:00.",
     "From Phuket: fly to Koh Samui (about 1 h), then boat to Koh Phangan (30-60 min). There is a camping area on site."
    ],
    "links": [
@@ -1493,13 +1554,16 @@
      "license": "Event flyer"
     }
    ],
-   "verification": "Organiser ticket shop on Vibez (project 'Sacred Moon Phangan'): 'Parvati Day & Night', 4th edition, 9-11 Jan 2027, 48 h non-stop, grand opening of Lost Jungle; tickets active (2,000 THB tier ends 16 Oct, then 2,500 THB). Flyer shows the Parvati Records logo and the same lineup as phangan.events. No address anywhere; a Google 'Lost Jungle' search lands on Retro Mountain Jungle Club, so the query was changed.",
+   "verification": "Re-checked 19 Oct 2026 with the Vibez buyer API: 'PARVATI DAY & NIGHT', project Sacred Moon Phangan, status active, start 2027-01-09 11:00 UTC (18:00 Thai time), end 2027-01-11 10:00 UTC (17:00); text: '4th edition', 'Sacred Moon Phangan 10 Years Anniversary', '48 hours nonstop', 'Grand Opening of LOST JUNGLE', camping, art market, food village, '9. 10. 11 January 2027 6PM Onwards'. Product 'Second Advance Ticket' 2,500 THB, sales from 16 Oct 17:00 UTC, 99 left. The flyer inside the ticket page (Cloudinary upload 15 Oct 2026) is the 'Final Phase' line-up: Audiofools and Capodanna are no longer on it; Ordo Ab Chao, Sishiva, Bubbleguns, Diansis, Black Sheeps, Xaphan, Ton, Apnea and Naan are new. phangan.events (last edited 11 Aug 2026) still shows the older 'Phase 2' flyer, Sat 12:00 to Tue 06:00 and no address; its venue page has no map pin. Both image URLs return JPEG files.",
    "sources": [
     "https://web.vibez.io/events/a4528761-39b5-4f76-8597-0fb5e60f7e87",
     "https://phangan.events/events/lost-jungle-parvati-day-night/",
     "https://phangan.events/wp-content/uploads/2026/08/file_3983.jpg",
     "https://phangan.events/event-location/lost-jungle/",
-    "https://phangan.events/events/atman-begins-teaser-party-at-lost-jungle/"
+    "https://phangan.events/events/atman-begins-teaser-party-at-lost-jungle/",
+    "https://api.vibez.io/api/v102/buyer/events/a4528761-39b5-4f76-8597-0fb5e60f7e87",
+    "https://api.vibez.io/api/v102/buyer/events/a4528761-39b5-4f76-8597-0fb5e60f7e87/products",
+    "https://res.cloudinary.com/vibez-events/image/upload/v1792103479/p26ixmozcsi2n4ybq9zb.jpg"
    ]
   },
   {
@@ -1598,7 +1662,7 @@
    "coordSource": "Google Maps listing 'Banana Beach Club by Sollis 2.0' + Megatix plus code 27RG+PHH and OSM Banana Beach (96 m)",
    "coordConfidence": "high",
    "gmapsQuery": "Banana Beach Club by Sollis 2.0, Choeng Thale, Phuket",
-   "description": "A full live band plays Daft Punk songs note for note, with the helmets and a big light rig. At the new beach club on small Banana Beach, between Layan and Nai Thon (not the Banana Beach on Coral Island). A fun party night, not underground. Part of a three-city Thailand tour by Midnight Sun.",
+   "description": "A full live band plays Daft Punk songs note for note, with the helmets and a big light rig. At the beach club on small Banana Beach, between Layan and Nai Thon (not the Banana Beach on Coral Island). A fun party night, not underground. Part of a three-city Thailand tour by Midnight Sun.",
    "genres": [
     "french house",
     "disco",
@@ -1608,14 +1672,15 @@
     "Daft Funk Live"
    ],
    "timeText": "Thu 14 Jan, 5 PM - 3 AM",
-   "priceText": "990 / 1,400 / 1,700 / 2,000 THB tiers (Megatix). Tables from 10,000 THB.",
+   "priceText": "Megatix, 19 Oct 2026: the 990 THB Super Early tier is sold out. Tier 1 1,400, Tier 2 1,700, General Admission 2,000 and VIP 3,000 THB (platform next to the stage), plus 3% fee. High table 10,000 THB; VIP table for up to 8 people 24,000 THB (pay 25% now, with food and drink credit). Tables do not include entry tickets.",
    "status": "tickets-on-sale",
    "undergroundScore": 1,
    "pick": false,
    "tips": [
-    "Also on Koh Phangan: Tue 12 Jan at Ban Sabai beach bar, Ban Tai (from 990 THB).",
-    "Cheap tiers are very limited.",
-    "In Google Maps search 'Banana Beach Club by Sollis 2.0'. Do not go to Banana Beach on Coral Island (Koh Hey)."
+    "Also on Koh Phangan: Tue 12 Jan, now at Jungle Experience in Ban Tai, 17:00-02:00 (from 1,400 THB). Older listings said Ban Sabai.",
+    "Each tier is very limited. Tier 1 (1,400 THB) is the cheapest left.",
+    "In Google Maps search 'Banana Beach Club by Sollis 2.0'. Do not go to Banana Beach on Coral Island (Koh Hey).",
+    "Tables: pay 25% online and the rest at the cashier on the night. Entry tickets are extra: buy one for each guest."
    ],
    "links": [
     {
@@ -1629,6 +1694,10 @@
     {
      "label": "Venue (Banana Beach by Sollis 2.0)",
      "url": "https://bananabeachsollis.com/"
+    },
+    {
+     "label": "Tickets Phuket (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/62-daft-funk-live--phuket"
     }
    ],
    "imageCandidates": [
@@ -1639,13 +1708,15 @@
      "license": "Official promotional image"
     }
    ],
-   "verification": "Megatix (seller Midnight Sun) checked 15 Oct 2026: Phuket Thu 14 Jan 5 PM-3 AM, tiers 990-2,000 THB, tables from 10,000 THB; Koh Phangan Tue 12 Jan. RA Bangkok listing also says Phuket 14 Jan. Venue exists on Google (4.7, 863 reviews) and has its own site (Banana Beach, Layan).",
+   "verification": "Second fact-check 19 Oct 2026. Megatix API (seller Midnight Sun): Phuket Thu 14 Jan 17:00-03:00, 20+, Banana Beach Club by Sollis 2.0, 27RG+PHH Choeng Thale; Super Early 990 sold out; Tier 1 1,400, Tier 2 1,700, GA 2,000, VIP 3,000 ('platform next to the stage'), fee 3%; high table 10,000 and VIP table (8 pax) 24,000, 25% deposit, F&B credit, and both say 'This purchase does not include entry tickets'. Koh Phangan show: Tue 12 Jan 17:00-02:00 at Jungle Experience (Megatix and lotusarena.com, Tambon Ban Tai). Lotus Arena sells the Phuket show: Tier 1 (15 seats), Tier 2 (13), GA (15). The venue site does not call itself new, so 'new' was dropped. Google: Banana Beach Club by Sollis 2.0, 4.7 (866 reviews).",
    "sources": [
     "https://megatix.in.th/events/daft-funk-live-in-phuket-14-january-thu-thailand-premier-tour-2027-tribute-show",
     "https://megatix.in.th/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show",
     "https://ra.co/events/2562120",
     "https://phangan.events/events/daft-funk-live-thailand-at-ban-sabaii/",
-    "https://bananabeachsollis.com/"
+    "https://bananabeachsollis.com/",
+    "https://lotusarena.com/en/events/62-daft-funk-live--phuket",
+    "https://lotusarena.com/en/events/63-daft-funk-live--koh-phangan"
    ],
    "placeId": "ChIJqzu1OSE5UDARGefK9BMdANA"
   },
@@ -1746,20 +1817,25 @@
    "lineup": [
     "MACAN"
    ],
-   "timeText": "Fri 8 Jan, starts 7 PM",
-   "priceText": "Early bird: Dance Floor 1,250 THB, Fan Zone 1,900 THB (Megatix, plus 5% fee). Prices go up after each batch.",
+   "timeText": "Fri 8 Jan, 19:00 to 22:00",
+   "priceText": "Early bird: Dance Floor 1,250 THB, Fan Zone 1,900 THB (Megatix plus 5% fee, or lotusarena.com). On 19 Oct lotusarena.com had only 74 Dance Floor and 26 Fan Zone early-bird seats left. Super Fan Zone and VIP table seats cost more (from 5,000 THB). Prices go up after each batch.",
    "status": "tickets-on-sale",
    "undergroundScore": 1,
    "pick": false,
    "tips": [
     "The price goes up after each ticket batch sells out (organiser).",
-    "So far it is only on Megatix. Buy there, not from resellers.",
-    "It is your arrival day, so check your flight time first."
+    "Buy only on Megatix or on the venue's own site, lotusarena.com. Not from resellers.",
+    "It is your arrival day, so check your flight time first.",
+    "Lotus Arena is about 10 minutes by car from Kamala (7 km)."
    ],
    "links": [
     {
      "label": "Tickets (Megatix)",
      "url": "https://megatix.in.th/events/macan-phuket-2027"
+    },
+    {
+     "label": "Tickets (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/56-macan--phuket"
     }
    ],
    "imageCandidates": [
@@ -1770,11 +1846,13 @@
      "license": "Official promotional image"
     }
    ],
-   "verification": "Megatix page and API (seller ONLYUS Concerts, on sale since 9 Oct): Fri 8 Jan 2027, 7 PM, two early-bird tiers, checked 15 Oct 2026. Not found yet on artist or press channels. Lotus Arena is open-air and active in 2026 (Julian Marley, May 2026). Coords: Google place + OSM node, 3 m apart.",
+   "verification": "Second fact-check 19 Oct 2026. Megatix API (seller ONLYUS Concerts, on sale since 9 Oct): Fri 8 Jan 19:00-22:00, Dance Floor early bird 1,250 (fee 62.5) and Fan Zone early bird 1,900 (fee 95), so 5%. Lotus Arena ticket page (schema.org MusicEvent): 19:00-22:00, 'ONLYUS Concerts × Lotus Arena', categories Dance Floor, Fan Zone, Super Fan Zone, VIP tables; 74 and 26 early-bird seats, 191 seat and table places 5,000-504,000 THB. Google: Lotus Arena, live music venue, 1 Soi Cherng Taley 1, 4.4 (104 reviews). OSRM: north Kamala to Lotus Arena 7.4 km, 9 min.",
    "sources": [
     "https://megatix.in.th/events/macan-phuket-2027",
     "https://megatix.in.th/api/v2/events/macan-phuket-2027",
-    "https://en.reallifephuket.com/2024/12/29/lotus-arena/"
+    "https://en.reallifephuket.com/2024/12/29/lotus-arena/",
+    "https://lotusarena.com/en/events/56-macan--phuket",
+    "https://lotusarena.com/en/events"
    ],
    "placeId": "ChIJewS3V-U3UDARRqs5Y2tFd9E"
   },
@@ -1981,7 +2059,7 @@
     "Francis Mercier"
    ],
    "timeText": "Wed 6 Jan, 2 PM - 10:30 PM; after-party from 11 PM",
-   "priceText": "Megatix sale opens Tue 20 Oct 2026, 6 PM Thai time: presale 900 THB (4 PM entry), 1st Release 1,700 THB (6 PM entry), anytime entry with 1 drink 2,500 THB.",
+   "priceText": "Megatix, on sale Tue 20 Oct 2026, 18:00 Thai time: Limited Presale 900 THB (entry by 16:00), 1st Release 1,700 THB (entry by 18:00), Anytime Entry 2,500 THB with 1 drink, Stage Access and After Party 6,000 THB, after-party only 800 THB. 3-Day Pass for 6, 7 and 8 Jan: 4,500 THB.",
    "status": "listed",
    "undergroundScore": 1,
    "pick": false,
@@ -1997,6 +2075,10 @@
     {
      "label": "Tickets (Megatix)",
      "url": "https://megatix.in.th/events/francis-mercier-cafe-del-mar-phuket-060127"
+    },
+    {
+     "label": "Resident Advisor",
+     "url": "https://ra.co/events/2564567"
     }
    ],
    "imageCandidates": [
@@ -2007,11 +2089,13 @@
      "license": "Event flyer"
     }
    ],
-   "verification": "Café del Mar page and Megatix API (checked 15 Oct 2026): Wed 6 Jan, 2 PM - 10:30 PM, Pyramid Stage. All Megatix tiers are 'on sale soon' from 20 Oct, 6 PM. The venue page still says the presale opened 'Mon 13 Oct', which Megatix does not show. Not on RA.",
+   "verification": "Second fact-check 19 Oct 2026. Megatix event API: Wed 6 Jan 14:00-22:30, 20+, on_sale_datetime 20 Oct 18:00 ('on sale soon'); six tiers: 3-Day Pass 4,500, Limited Presale 900 (4 PM entry), 1st Release 1,700 (6 PM entry), Anytime 2,500, Stage Access & After Party 6,000, After Party 800; late fee 500 THB. RA GraphQL 2564567 (venue promoter account): 14:00-22:30, 900 THB, age 20. The venue page still says the presale went live 'Mon 13 Oct', which Megatix does not show.",
    "sources": [
     "https://phuket.cafedelmar.com/events/francis-mercier-jan2027",
     "https://megatix.in.th/events/francis-mercier-cafe-del-mar-phuket-060127",
-    "https://phangan.events/events/francis-mercier/"
+    "https://phangan.events/events/francis-mercier/",
+    "https://megatix.in.th/api/v2/events/francis-mercier-cafe-del-mar-phuket-060127",
+    "https://ra.co/events/2564567"
    ],
    "placeId": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo"
   },
@@ -2041,7 +2125,7 @@
     "BLOND:ISH"
    ],
    "timeText": "Thu 7 Jan, doors 2 PM, ends about 10:30 PM",
-   "priceText": "Sale opens Tue 20 Oct 2026, 6 PM Thai time on Megatix. Sign up on the venue site for presale access. Prices not published yet.",
+   "priceText": "Megatix, on sale Tue 20 Oct 2026, 18:00 Thai time: Limited Presale 900 THB (entry by 16:00), 1st Release 1,700 THB (entry by 18:00). A 3-Day Pass for 6, 7 and 8 Jan (Francis Mercier, BLOND:ISH and Argy) costs 4,500 THB.",
    "status": "listed",
    "undergroundScore": 1,
    "pick": false,
@@ -2067,11 +2151,12 @@
      "license": "Event flyer"
     }
    ],
-   "verification": "Café del Mar page and Megatix API (checked 15 Oct 2026): Thu 7 Jan, 2 PM - 10:30 PM, Pyramid Stage. Sale opens 20 Oct 6 PM; no ticket tiers loaded yet. Not on RA.",
+   "verification": "Second fact-check 19 Oct 2026. Megatix event API: Thu 7 Jan 14:00-22:30, 20+, on_sale_datetime 20 Oct 18:00 ('on sale soon'); visible tiers: 3-Day Pass 4,500 (subtitle: Jan 6 Francis Mercier, 7 BLOND:ISH, 8 Argy), Limited Presale 900 (4 PM entry, late fee 500), 1st Release 1,700 (6 PM entry); 800 THB after-party add-on; Megatix text: 'Café del Mar Phuket debut'. Venue page: doors 2 PM, 20+, 'Presale goes live on 20 Oct at 6 PM'. Not on RA.",
    "sources": [
     "https://phuket.cafedelmar.com/events/blondish-jan2027",
     "https://megatix.in.th/events/blondish-cafe-del-mar-phuket-070127",
-    "https://phangan.events/events/blondish/"
+    "https://phangan.events/events/blondish/",
+    "https://megatix.in.th/api/v2/events/blondish-cafe-del-mar-phuket-070127"
    ],
    "placeId": "ChIJcTtP-SA6UDAR2ObfmKVl7Wo"
   },
@@ -2094,15 +2179,81 @@
    "coordSource": "Megatix venue record 'Azulea Phuket Thailand' = plus code R9R8+2RP (decoded; Google resolves the same point). Fits the partner hotels: Hivetel (Google pin about 180 m away, '1 min walk'), TAVANA Residence (about 500 m, '7 min walk'). No Google or OSM place named Azulea.",
    "coordConfidence": "medium",
    "gmapsQuery": "R9R8+2RP Chalong, Phuket",
-   "description": "Three days of drum and bass at Azulea, an open-air site in the forest in Chalong, south Phuket. Pendulum (DJ set) is the first name, with 50+ international artists promised. Two stages, Void sound system, about 3,000 ravers and afterparties. The 2026 edition had Camo & Krooked, Turno, BOU and Grooverider.",
+   "description": "Three days of drum and bass at Azulea, an open-air site in the forest in Chalong, south Phuket. The full lineup is out: Pendulum (DJ set), Basslayerz b2b Mozey, Turno, Grooverider, Nicky Blackmarket, Degs and 100+ artists on two stages. Void sound system, about 3,000 ravers and jungle afterparties.",
    "genres": [
     "drum and bass"
    ],
    "lineup": [
-    "Pendulum (DJ set)"
+    "Pendulum (DJ set)",
+    "Basslayerz b2b Mozey",
+    "360 Showcase",
+    "[IVY]",
+    "Amplify",
+    "Anaïs",
+    "Anton",
+    "Azza & Grima",
+    "B-Line",
+    "Born On Road",
+    "Charlie Tee",
+    "Comma Dee",
+    "Deekline",
+    "Degs",
+    "Diagnostix",
+    "Disrupta",
+    "Dogger",
+    "Duskee",
+    "Dynamite MC",
+    "Ed Solo",
+    "EJ Kitto",
+    "Ekko & Sidetrack",
+    "Elipsa",
+    "Emily Makis",
+    "Evoke",
+    "Fatman D",
+    "Flowidus",
+    "FMS",
+    "Fussey",
+    "Georgie Riot",
+    "Gino",
+    "Grace Barton",
+    "Grooverider",
+    "Haribo",
+    "INJA",
+    "Jamezy",
+    "Jappa",
+    "Jenks",
+    "Jungle Cakes",
+    "Kara",
+    "Kaya Fyah",
+    "Lens",
+    "Lora",
+    "Lowqui",
+    "Mania",
+    "Millz",
+    "Monrroe",
+    "Nersha",
+    "Nerve",
+    "Nicky Blackmarket",
+    "Oko",
+    "Phibes",
+    "Pola & Bryson",
+    "Profile",
+    "Slay",
+    "S.P.Y",
+    "Subsonic",
+    "T & Sugah",
+    "The Prototypes",
+    "Ticky",
+    "T-Lex",
+    "Trimer",
+    "Tsuki",
+    "Turno",
+    "Used",
+    "Whiney",
+    "Yussi"
    ],
-   "timeText": "Fri 22 Jan 4 PM - 11 PM; Sat 23 and Sun 24 Jan 2 PM - 11 PM; afterparties (times not out yet)",
-   "priceText": "3-day GA 10,900 THB or £229; VIP 14,900 THB or £319; Inner Circle 22,900 THB or £499 (3rd release, 16 Oct 2026), plus about 3.5% fee. No day tickets. The price rises with each release.",
+   "timeText": "Fri 22 Jan 4 PM - 11 PM; Sat 23 and Sun 24 Jan 2 PM - 11 PM; jungle afterparties. Set times come nearer the date.",
+   "priceText": "3-day GA 10,900 THB or £229; VIP 14,900 THB or £319; Inner Circle 22,900 THB or £499 (dnballstars.com: only 1 left on 19 Oct 2026), plus about 3.5% fee. No day tickets. The price rises with each release.",
    "status": "tickets-on-sale",
    "undergroundScore": 2,
    "pick": false,
@@ -2110,7 +2261,8 @@
     "Strictly 20+. Photo ID is checked.",
     "Only 3-day tickets. Payment plans must be paid off by 16 Dec 2026.",
     "No parking at the venue. Take a taxi or Grab: about 45 minutes from Kamala.",
-    "Sat 23 Jan is also Circoloco day in Natai, far in the north."
+    "Sat 23 Jan is also Circoloco day in Natai, far in the north.",
+    "The partner hotels near the site were sold out on 19 Oct 2026. Only partner villas were left."
    ],
    "links": [
     {
@@ -2140,14 +2292,15 @@
      "license": "Official promotional image"
     }
    ],
-   "verification": "Fact-checked 16 Oct 2026. Official site and FAQ: 3rd release on sale (GA £229, VIP £319, Inner Circle £499), Pendulum (DJ set) still the only name, 2 stages at Azulea, Void rig, 3,000 ravers, no day tickets, plans paid off by 23:59 on 16 Dec 2026, 20+. Accommodation page: 'no parking at the venue'. dnballstars.com: Fri 4pm-11pm, Sat and Sun 2pm-11pm. Megatix API: 10,900 / 14,900 / 22,900 THB, booking fee 3.5%, rating 20+, venue R9R8+2RP. Time Out (Jan 2026): 2026 lineup. OSRM: Kamala to venue 27.5 km.",
+   "verification": "Second fact-check 19 Oct 2026. dnballstars.com event page: 'The full line-up is out', Pendulum (DJ set), Basslayerz b2b Mozey and the 65 acts listed here, plus 24 local support DJs; '3,000 ravers, 100+ artists and jungle afterparties'; Fri 4pm-11pm, Sat and Sun 2pm-11pm; Inner Circle 'only 1 left'. dnballstars-thailand.com: 3rd release (GA £229, VIP £319, Inner Circle £499), plans paid off by 23:59 on 16 Dec 2026, hotels sold out, Serenity Pool House rooms from £315 per person and 1 villa left. Megatix THB API: 10,900 / 14,900 / 22,900 THB, booking fee 3.5%, 20+, venue R9R8+2RP, 'JUNGLE AFTERPARTY'. Accommodation page: no parking at the venue. The old Pendulum image URL returned 404 and was replaced by the site's current og:image. OSRM: north Kamala to venue 27.5 km, 36 min without traffic.",
    "sources": [
     "https://dnballstars-thailand.com/",
     "https://dnballstars-thailand.com/faq",
     "https://dnballstars-thailand.com/accommodation",
     "https://www.dnballstars.com/events/dnb-allstars-thailand-2027/",
     "https://megatix.in.th/events/dnballstars2027-thb",
-    "https://www.timeout.com/phuket/things-to-do/catch-the-dnb-allstars-at-their-three-day-beach-festival-takeover"
+    "https://www.timeout.com/phuket/things-to-do/catch-the-dnb-allstars-at-their-three-day-beach-festival-takeover",
+    "https://megatix.in.th/api/v2/events/dnballstars2027-thb"
    ],
    "placeId": "IiY6JAoKDWtNrAQV_Z-hOhALGhQKEgmzQq2zsC9QMBFAJDgsvCMCBA"
   },
@@ -2585,14 +2738,14 @@
     "techno"
    ],
    "recurrence": "Open every night (Google Maps: 22:00-06:00). Guest nights on some dates; January 2027 guests not announced.",
-   "timeText": "Nightly 22:00 to about 06:00. Guest nights start at about 22:30-23:00.",
-   "priceText": "Guest nights in Oct-Nov 2026: 500 THB for men with 1 drink, ladies free (phangan.events). Jan 2025 guest nights: 400-700 THB with 1 drink (club website). Other nights: not listed.",
+   "timeText": "Nightly 22:00 to about 06:00. Doors for listed nights at 22:30.",
+   "priceText": "Resident nights: free entry (Sep-Oct 2026 listings). Guest nights in Oct-Nov 2026: 500 THB for men with 1 drink, ladies free (phangan.events). Jan 2025 guest nights: 400-700 THB with 1 drink (club website).",
    "status": "recurring",
    "undergroundScore": 3,
    "pick": false,
    "tips": [
     "Bring your passport or a photo ID.",
-    "Check soundclubsamui.co or Instagram @sound_clubsamui for guest nights.",
+    "Check soundclubsamui.co, Instagram @sound_clubsamui or the Samui Events channel on Telegram for guest nights.",
     "Only worth it if you are already on Samui."
    ],
    "links": [
@@ -2607,6 +2760,10 @@
     {
      "label": "Resident Advisor",
      "url": "https://ra.co/clubs/18035"
+    },
+    {
+     "label": "Samui Events (Telegram)",
+     "url": "https://t.me/s/epsamui"
     }
    ],
    "imageCandidates": [
@@ -2623,13 +2780,16 @@
      "credit": "Sound Club Samui"
     }
    ],
-   "verification": "Fact-checked 16 Oct 2026. Club website: Nakadia (10 Jan 2025, 400 THB with 1 drink, ladies free), Stella Bossi (18 Jan 2025, 700 THB, ladies 400 THB, 1 drink), gallery 'January 3rd 2026 (Stella Bossi)', Instagram @sound_clubsamui. phangan.events: nightly resident line-ups in Sep-Oct 2026; Nakadia Sat 3 Oct 2026 (doors 22:30, 500 THB for men with 1 drink, ladies free); Essence with JOWAVES Wed 4 Nov 2026 (same prices). Google: 4.5 (993 reviews), daily until 06:00. RA venue active (Chazin, 19 Apr 2026).",
+   "verification": "Re-checked 19 Oct 2026. Samui Events Telegram (phangan.events team): resident nights Thu 8 Oct (Funk D, Raffo, Tommy; 'entry is free all night') and Wed 14 Oct 2026 (Adam Matson, Comann, Mungkutt; free entry), from 22:30. phangan.events: 29 of 41 Sound Club listings since Mar 2026 say free entry and 7 say 500 THB; nightly resident line-ups to Sun 25 Oct 2026; paid guest nights include Nakadia (Sat 3 Oct), Essence (Wed 7 Oct, Wed 4 Nov) and Halloween (Sat 31 Oct), 500 THB for men with 1 drink, ladies free. No Jan 2027 guests announced. Earlier facts (16 Oct 2026): club website Nakadia (10 Jan 2025, 400 THB with 1 drink, ladies free), Stella Bossi (18 Jan 2025, 700 THB, ladies 400 THB), gallery 'January 3rd 2026 (Stella Bossi)'. RA venue active.",
    "sources": [
     "https://www.soundclubsamui.co/",
     "https://ra.co/clubs/18035",
     "https://ra.co/events/2414596",
     "https://phangan.events/events/nakadia/",
-    "https://phangan.events/events/essence-3/"
+    "https://phangan.events/events/essence-3/",
+    "https://phangan.events/events/essence-2/",
+    "https://phangan.events/events/funk-d-raffo-tommy/",
+    "https://t.me/s/epsamui"
    ],
    "window": "in"
   },
@@ -2650,26 +2810,28 @@
    "coordSource": "Google Maps listing 'SEASIDE SUNSET bar (Haad Rin West)' (address 70/1 Haad Rin Nai) + OSM 'Seaside Sunset Bar' (6 m apart)",
    "coordConfidence": "high",
    "gmapsQuery": "SEASIDE SUNSET bar (Haad Rin West), Koh Phangan",
-   "description": "Sunset-to-sunrise beach party at Seaside Sunset Bar on the quiet west side of Haad Rin, run by the Solar Conexion crew. Melodic house, techno and deep grooves, a fire show and an art market. In Jan 2026 it ran every Thursday. In Full Moon weeks it often moves to a Monday 'pre-Full Moon' party.",
+   "description": "Sunset-to-sunrise beach party at Seaside Sunset Bar on the quiet west side of Haad Rin, run by the Solar Conexion crew. Melodic house, techno and deep grooves, a fire show and an art market. In Jan 2026 it ran every Thursday. In Full Moon weeks it often becomes a 'pre-Full Moon' party 3-5 days before.",
    "genres": [
     "melodic house",
     "techno",
     "deep house"
    ],
-   "recurrence": "High season 2026: every Thursday (8, 15, 22 and 29 Jan). In Full Moon weeks of 2026 it often became a 'Pre-Full Moon' party 3-4 days before (Mon 27 Jul, Mon 24 Aug, Wed 23 Sep), but there were none in Jan or Feb 2026. Jan 2027 guess: Thu 14 Jan, and Mon 18 or Tue 19 Jan.",
+   "recurrence": "High season 2026: every Thursday (8, 15, 22 and 29 Jan). Later in 2026 it was mostly on Thursdays, a few times on a Wednesday. In Full Moon weeks it often became a 'Pre-Full Moon' party 3-5 days before (Mon 27 Jul, Mon 24 Aug, Wed 23 Sep, Thu 22 Oct 2026), but there were none in Jan or Feb 2026. Jan 2027 guess: Thu 14 Jan, and Mon 18 or Tue 19 Jan.",
    "timeText": "17:00 until about 05:00 (2026 listings)",
-   "priceText": "Mar 2026: online 400-600 THB. At the door free before 21:00 (women free before 22:00), then 600 THB. Jan 2026: free before 20:00, then 600 THB.",
+   "priceText": "Oct 2026 on Megatix: online 300 THB early bird, 400 presale, 500 regular. At the door free before 21:00 (women before 22:00), then 500 THB. VIP 1,000 THB.",
    "status": "unconfirmed",
    "pick": false,
    "undergroundScore": 3,
    "tips": [
     "Not announced for Jan 2027 yet. Check phangan.events or the Phangan Party Guide on Telegram a week before.",
     "In 2026 weeks with a Thursday or Friday Full Moon, phangan.events listed no Thursday party here, only the Monday pre-Full Moon edition. So do not count on Thu 21 Jan.",
-    "It is on Haad Rin Nai, the sunset beach, not on the Full Moon beach."
+    "It is on Haad Rin Nai, the sunset beach, not on the Full Moon beach.",
+    "The dance floor is covered (Megatix, Oct 2026). Some weeks the party is on a Wednesday instead of Thursday."
    ],
    "lineup": [
-    "Dava Di Toma (Solar Conexion / Seaside, regular)",
-    "Tino Moreno (Eden Garden / Seaside, regular)"
+    "Dava Di Toma (Solar Conexion / Seaside, resident)",
+    "Tino Moreno (Eden Garden / Seaside, resident)",
+    "Sacred Beat (Seaside, resident)"
    ],
    "links": [
     {
@@ -2679,6 +2841,10 @@
     {
      "label": "Example with prices (Mar 2026)",
      "url": "https://phangan.events/events/solar-conexion-seaside-pre-full-moon-beach-party/"
+    },
+    {
+     "label": "Tickets example (Megatix, 22 Oct 2026)",
+     "url": "https://megatix.in.th/events/seaside-pre-full-moon-beach-party221026"
     }
    ],
    "sources": [
@@ -2688,7 +2854,14 @@
     "https://phangan.events/events/seaside-pre-full-moon-beach-party-2/",
     "https://phangan.events/events/seaside-pre-full-moon-beach-party-4/",
     "https://phangan.events/events/pre-full-moon-beach-party/",
-    "https://phangan.events/events/seaside-beach-party-the-beach-vibes/"
+    "https://phangan.events/events/seaside-beach-party-the-beach-vibes/",
+    "https://megatix.in.th/events/seaside-pre-full-moon-beach-party221026",
+    "https://megatix.in.th/api/v2/events/seaside-pre-full-moon-beach-party221026",
+    "https://www.entrix.vip/event/seaside-beach-party-3",
+    "https://phangan.events/events/seaside-pre-full-moon-beach-party-5/",
+    "https://phangan.events/events/seaside-beach-party-19/",
+    "https://phangan.events/events/seaside-pre-full-moon-beach-party-3/",
+    "https://t.me/s/phanganparty"
    ],
    "imageCandidates": [
     {
@@ -2704,7 +2877,7 @@
      "credit": "Solar Conexion / Seaside"
     }
    ],
-   "verification": "Re-checked 16 Oct 2026 with the phangan.events event API. Pre-Full Moon editions: Thu 2 Oct and Tue 2 Dec 2025, Mon 30 Mar, Mon 27 Apr, Thu 28 May, Mon 27 Jul, Mon 24 Aug, Wed 23 Sep 2026, all 17:00-05:00. None in Jan or Feb 2026: in high season it ran every Thursday instead (Jan: 8, 15 Dava Di Toma birthday, 22 Ibiza Night, 29; Feb: 5, 12, 19, 26; Mar: 5, 12, 19), 20:00-05:00. Prices from the 30 Mar 2026 and 8 Jan 2026 listings. Solar Conexion hosts the fire show and art market (8 Oct 2026 listing). Google listing not marked closed. The old name said 'Pre-Full Moon' only; renamed because the Thursday party is the more likely January date.",
+   "verification": "Re-checked 19 Oct 2026. Megatix API (promoter 'SEASIDE Koh Phangan'): 'Seaside Pre Full Moon Beach Party' Thu 22 Oct 2026 17:00-05:00, venue Seaside Sunset Bar, 70/1 Haad Rin Nai; online 300 early bird, 400 presale, 500 regular THB (fees included); at the door free for ladies before 22:00 and for men before 21:00, then 500 THB; VIP 1,000 THB, VIP table 8,000 THB for 4; fire shows, laser show, art market, covered dance floor; residents Sacred Beat, Dava Di Toma, Tino Moreno. The Entrix page shows '21+', but Entrix shows '21+' and 'Tropical / smart casual' on every event (also on an ecstatic dance), so it is not used as a venue rule. phangan.events 2026: weekly parties mostly on Thursdays (8 and 15 Oct), some on Wednesdays (22 Jul, 5 Aug, 30 Sep); pre-Full Moon editions Mon 27 Jul, Mon 24 Aug, Wed 23 Sep and Thu 22 Oct, 3-5 days before the Full Moon Parties of Fri 31 Jul, Fri 28 Aug, Sat 26 Sep and Tue 27 Oct. Earlier check (16 Oct 2026): none in Jan or Feb 2026, when it ran every Thursday 20:00-05:00. No Jan 2027 dates yet. Dropped the 23 Sep 2026 flyer image because it shows another date.",
    "window": "in"
   },
   {
@@ -2811,7 +2984,7 @@
    ],
    "recurrence": "Every Sunday in high season (Dec 2025 to May 2026), from about 12:00-14:00 until late",
    "timeText": "Sun from about 14:00 until 02:00 (Oct 2026)",
-   "priceText": "Oct 2026: free before 16:00, then 500 THB at the door. Online from 320 THB (Entrix). 21+.",
+   "priceText": "Oct 2026: free before 16:00, then 500 THB at the door. Online from 320 THB (Entrix).",
    "status": "recurring",
    "pick": false,
    "undergroundScore": 3,
@@ -3006,6 +3179,1217 @@
     }
    ],
    "verification": "Re-checked 16 Oct 2026. utopia-events.com lists 24 Oct, 22 Dec (Astrix) and 31 Dec 2026 (Infected Mushroom) at 'Than Sadet-Ko Pha-Ngan National Park, Thong Nai Pan', gates 21:00, pre-sale on Get In; no 2027 dates. phangan.events API: 27 Jul, 26 Aug, 24 Sep, 24 Oct and 22 Dec 2026 are each 2 days before the astronomical full moon; Jan 2025 had 11 Jan (2 days before), but Jan 2026 had 13 and 29 Jan. Pin = Google listing = phangan.events plus code, not marked closed.",
+   "window": "in"
+  },
+  {
+   "id": "daft-funk-live-koh-phangan-2027",
+   "kind": "dated",
+   "name": "Daft Funk Live on Koh Phangan (Daft Punk tribute)",
+   "type": "live show",
+   "dates": [
+    "2027-01-12"
+   ],
+   "window": "in",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Jungle Experience site, Ban Tai (ticket page and flyer). phangan.events and Entrix say Ban Sabaii beach bar.",
+   "lat": 9.715354,
+   "lng": 100.0299359,
+   "coordSource": "Google Maps listing 'Jungle Experience' (9.715354, 100.0299359) = plus code P28H+4X, the venue on the Megatix page and the official flyer. Ban Sabai Bar, the venue on phangan.events and Entrix, is 2 km south-west on Ban Tai beach (Google 9.69944, 100.02125).",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Jungle Experience, Ban Tai, Koh Phangan",
+   "description": "A live band plays Daft Punk songs, with the helmets and a big light show. It is one of three Thailand shows (Phuket 14 Jan, Bangkok 16 Jan). The ticket page and the flyer say Jungle Experience in Ban Tai. phangan.events and Entrix say Ban Sabaii beach bar. Fun with a group, not underground.",
+   "genres": [
+    "french house",
+    "disco",
+    "electro",
+    "live band"
+   ],
+   "lineup": [
+    "Daft Funk Live (tribute band)",
+    "Support act: TBA"
+   ],
+   "timeText": "Tue 12 Jan, doors 21:00 (official flyer). Megatix lists 17:00 to 02:00.",
+   "priceText": "Megatix (19 Oct 2026): Tier 1 1,400 THB, Tier 2 1,700 THB, GA 2,000 THB, plus a 3% fee. Gate 2,500 THB. The 990 THB super early tier is sold out.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 1,
+   "pick": false,
+   "tips": [
+    "Two sources give different venues. Check the Megatix page a few days before.",
+    "Same night as the Lighthouse Tuesday party in Haad Rin, about 20 minutes away by taxi.",
+    "The Phuket show is on Thu 14 Jan at Banana Beach Club, if you are back in Phuket by then."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show"
+    },
+    {
+     "label": "Listing (phangan.events)",
+     "url": "https://phangan.events/events/daft-funk-live-thailand-at-ban-sabaii/"
+    }
+   ],
+   "sources": [
+    "https://megatix.in.th/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show",
+    "https://megatix.in.th/api/v2/events/daft-funk-live-in-koh-phangan-12-january-tue-thailand-premier-tour-2027-tribute-show",
+    "https://megatix.in.th/events/DaftFunkBkkTour2027",
+    "https://phangan.events/events/daft-funk-live-thailand-at-ban-sabaii/",
+    "https://www.entrix.vip/event/daft-punk-live-koh-phangan",
+    "https://t.me/s/epsamui"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/75653/2krWKEXEP2wvkXvgNzRw2SDuZNhRRknjcvLm9ar0.jpg",
+     "source": "megatix.in.th (official flyer for this show)",
+     "license": "© organiser",
+     "credit": "Midnight Sun"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. Megatix API: 'Daft Funk Live In Koh Phangan 12 January (Tue) - Thailand Premier Tour 2027', promoter Midnight SUN, venue 'Jungle Experience, Koh Phagan' (contact info@jungle-experience.com), listing time 17:00-02:00; tiers Super Early 990 (sold out), Tier 1 1,400, Tier 2 1,700, GA 2,000 THB, booking fee 3%; text: gates 2,500 THB, 'full line up for each city to be published soon'. Flyer (Megatix cover, viewed): '12 January 2027 Tuesday, Jungle Experience Koh Phangan, open doors 21:00, support act TBA', with Midnight Sun and Happy People logos. Megatix also lists Bangkok on Sat 16 Jan at Mustache Bangkok and Phuket on Thu 14 Jan. phangan.events (Sep 2026) and the Entrix pre-registration page (organiser shown as Phangan Events) say 'Ban Sabaii', 21:00. The flyer URL needs a browser user agent; a bare curl gets a Cloudflare page.",
+   "placeId": "ChIJzQVE0qv9VDARerIg-zO4ljQ"
+  },
+  {
+   "id": "bluerama-sunset-pool-party-phangan",
+   "kind": "recurring",
+   "name": "Bluerama Sunset Pool Party",
+   "type": "pool party",
+   "dates": [
+    "2027-01-09",
+    "2027-01-16",
+    "2027-01-23"
+   ],
+   "window": "in",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Bluerama hotel, 162 Nai Wok, on a hill 2 km from Thong Sala pier",
+   "lat": 9.7208185,
+   "lng": 99.9797226,
+   "coordSource": "Google Maps listing 'Bluerama' (162 Nai Wok) + Entrix venue pin (9.7208185, 99.9797226), 3 m apart; OSM 'Bluerama Resort' node 83 m. The older Google link on phangan.events points 250 m north.",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bluerama, Nai Wok, Koh Phangan",
+   "description": "Saturday afternoon party at a small hilltop hotel with an infinity pool and a wide sea view, 2 km from Thong Sala. Island DJs play house, melodic and tech house while the sun goes down. Free shuttle up the hill. Small (about 250 people) and adults only. A good start before a night party.",
+   "genres": [
+    "house",
+    "melodic house",
+    "tech house",
+    "progressive house"
+   ],
+   "recurrence": "Every Saturday 15:00-22:00 (official site: 'every Saturdays'). phangan.events listed it almost every week from mid-Feb to Oct 2026, a few times on a Friday. In Jan 2026 the parties were on Sat 24 and Fri 30 Jan.",
+   "timeText": "Sat 15:00-22:00",
+   "priceText": "2026 listings: 300 THB before 17:00, 500 THB after (Entrix online from 321 THB with fee). VIP table for 4: 5,000 THB deposit.",
+   "status": "recurring",
+   "undergroundScore": 2,
+   "pick": false,
+   "lineup": [
+    "Graham Gold (Oct 2026)",
+    "Tino Moreno (Oct 2026)",
+    "Seebeat (Oct 2026)"
+   ],
+   "tips": [
+    "A free shuttle runs up the steep hill from 16:00 to 22:00.",
+    "Adults only (organiser listing). Bring ID, swimwear and a towel.",
+    "Your Saturdays are Circoloco nights in Phuket (9, 16 and 23 Jan). This fits only if you change plans."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Entrix)",
+     "url": "https://www.entrix.vip/event/bluerama-sunset-pool-party"
+    },
+    {
+     "label": "Official website",
+     "url": "https://www.bluerama.com/"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/bluerama-koh-phangan/"
+    }
+   ],
+   "sources": [
+    "https://www.entrix.vip/event/bluerama-sunset-pool-party",
+    "https://phangan.events/events/bluerama-sunset-pool-experience-koh-phangan/",
+    "https://phangan.events/events/sunset-pool-party-8/",
+    "https://phangan.events/events/bluerama-saturday-sunset-pool-party-24-jan/",
+    "https://www.bluerama.com/blank-2",
+    "https://www.bluerama.com/",
+    "https://t.me/s/phanganparty"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2023/06/bluerama.jpeg",
+     "source": "phangan.events (Bluerama venue page)",
+     "license": "© venue",
+     "credit": "Bluerama"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2024/08/IMG_9774.jpeg",
+     "source": "phangan.events (Bluerama venue page)",
+     "license": "© venue",
+     "credit": "Bluerama"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. Entrix (organiser 'Bluerama'): Sat 24 Oct 2026 15:00-22:00, from 300 THB (321 with fee), regular entry 500 THB, VIP table for 4 guests with a 5,000 THB deposit, free shuttle up the hill, 162/1 Nai Wok, venue card '250 cap', pin 9.7208, 99.9797. Entrix shows '21+' on every event, so that is not used here. phangan.events: weekly Saturday listings with line-ups (5 Sep to 17 Oct 2026); organiser text (Mar-Oct 2026): 300 THB before 17:00, 500 after, free shuttle 16:00-22:00, adults only. Telegram 17 Oct: Seebeat, Graham Gold, Tino Moreno. bluerama.com: 'Saturday Pool Party ... every Saturdays', 2 km from Thong Sala pier; it gives no height above the sea, so that claim was removed. Jan 2026 editions: Sat 24 and Fri 30 Jan; Feb 2026: Fri 6, Sat 14, 21 and 28.",
+   "placeId": "ChIJffqdUmX-VDARcFlZnLM0rMk"
+  },
+  {
+   "id": "merkaba-beach-bums-phangan",
+   "kind": "recurring",
+   "name": "Beach Bums at Merkaba Sunset Beach Club",
+   "type": "day party",
+   "dates": [
+    "2027-01-10",
+    "2027-01-17",
+    "2027-01-24"
+   ],
+   "window": "in",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Merkaba Sunset Beach Club (ex Samsara), 117/24 Ban Tai, on the coast north-west of Haad Rin",
+   "lat": 9.6838454,
+   "lng": 100.0527536,
+   "coordSource": "Google Maps listing 'Merkaba Sunset Beach Club' (117/24 Ban Tai; the venue's own map link on Megatix) + OSM bar 'Samsara Beach', its old name (Photon 9.683933, 100.052272), 54 m apart",
+   "coordConfidence": "high",
+   "gmapsQuery": "Merkaba Sunset Beach Club, Koh Phangan",
+   "description": "Weekly day-to-night party at a small private beach with a pool, between Ban Tai and Haad Rin. Resident DJs play house and deep grooves, with a market and food. In autumn 2026 it runs on Sundays from 13:00. In Jan 2026 it was on Saturdays.",
+   "genres": [
+    "house",
+    "deep house",
+    "tech house"
+   ],
+   "recurrence": "Mar-Oct 2026: most Sundays from 11:00-13:00. Jan 2026: every Saturday 13:00-23:30 (3, 10, 17, 24 Jan), then Fridays (30 Jan, 6 Feb). The January 2027 day is not announced.",
+   "timeText": "From 13:00 until about 23:30 (Jan 2026 listings)",
+   "priceText": "Jan 2026: free before 15:00-17:00, then 300 THB (online presale 200 THB). Mar-Apr 2026: 300-400 THB. Oct 2026 prices not listed.",
+   "status": "unconfirmed",
+   "undergroundScore": 3,
+   "pick": false,
+   "lineup": [
+    "Dragos (resident)",
+    "Mr Grinch",
+    "Dyslex",
+    "Lancio",
+    "Fabrice"
+   ],
+   "tips": [
+    "The January day is not announced. Check phangan.events in early January: Saturday or Sunday.",
+    "In 2026 a free shuttle often ran from the Seaside Sunset Bar car park or a 7-Eleven. Check the week's listing.",
+    "Sun 10 Jan fits if the group reaches Koh Phangan by early afternoon."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/merkaba-beach-club/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/events/beach-bums-3/",
+    "https://phangan.events/events/beach-bums-2/",
+    "https://phangan.events/events/beach-bums-at-merkaba/",
+    "https://phangan.events/events/beach-bums/",
+    "https://phangan.events/events/beach-bums-the-merkaba-saturday-party/",
+    "https://phangan.events/events/beach-bums-merkaba-sunset-beach-club-30-jan-2026/",
+    "https://megatix.in.th/events/sunbios-at-merkaba-beach-club-koh-phangan-by-dreamland-techno",
+    "https://t.me/s/phanganparty"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2024/12/IMG_4520.jpeg",
+     "source": "phangan.events (Merkaba venue page)",
+     "license": "© venue",
+     "credit": "Merkaba Sunset Beach Club"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. phangan.events: Sunday 'Beach Bums' listings on 20 Sep and 4 Oct 2026 (from 13:00; Mr Grinch, Dragos, Fabrice, Graham Gold and others) and a Halloween night 'The Coven' on Sun 1 Nov 2026; Telegram 16 Oct 2026: Sunday 18 Oct from 13:00, Mr Grinch, Dragos, No:Mad, Fabrice, Leon Mester, market, food, 'one of the island's best sound systems'. Mar-Aug 2026: Sundays, 300-400 THB, free shuttle from the Ban Tai 7-Eleven (22 Mar), the Haad Rin 7-Eleven (5 Apr) or the Seaside parking (19 Apr, 2 Aug). Jan 2026: Saturdays 3, 10, 17, 24 Jan 13:00-23:30, free before 15:00-17:00 then 300 THB, presale 200 THB; then Fridays 30 Jan and 6 Feb. Megatix (Feb 2026): 'formerly Samsara Beach Club', 117/24 Ban Tai. The weekly repeat series was not visible in the phangan.events calendar feed, so the January day stays a guess. The Facebook link was dropped because it could not be checked.",
+   "placeId": "ChIJfTxCRpT8VDAR6ahXeeDQ1EU"
+  },
+  {
+   "id": "yep-listening-bar-phangan",
+   "kind": "venue",
+   "name": "YEP Listening Bar (minimal and deep sessions)",
+   "type": "bar",
+   "dates": [],
+   "window": "in",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "YEP Listening Bar, north of Thong Sala, Koh Phangan",
+   "lat": 9.7272872,
+   "lng": 99.9786236,
+   "coordSource": "Google Maps listing 'YEP Listening Bar' + phangan.events plus code PXGH+WC + OSM bar node (Photon 9.727292, 99.978601), all within 7 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "YEP Listening Bar, Koh Phangan",
+   "description": "Small listening bar built around its sound system, just north of Thong Sala. Free early-evening sessions with local DJs: rominimal, deep tech, minimal and dub. Kovër Crëw has held nights here. Not a rave, but a good place for minimal sounds near Thong Sala and a warm-up before a night party.",
+   "genres": [
+    "minimal",
+    "rominimal",
+    "deep tech",
+    "dub"
+   ],
+   "recurrence": "Oct 2026: 'The Lounge' on Saturdays from 18:00, 'Minimal Grooves' on Tuesdays from 19:00, plus some Monday and Thursday sessions. The program changes every week.",
+   "timeText": "Sessions start between 16:00 and 20:00 and usually end at midnight, some at 01:00-02:00 (Oct 2026)",
+   "priceText": "Free entry (Oct 2026 listings).",
+   "status": "recurring",
+   "undergroundScore": 4,
+   "pick": false,
+   "lineup": [
+    "Dragos",
+    "Danil Bilialov",
+    "Julescu",
+    "neBilA",
+    "Tikhonov"
+   ],
+   "tips": [
+    "Check @yep_listening_bar on Instagram or phangan.events for the week's sessions.",
+    "Google shows short daytime hours on most days. Go on a listed session night.",
+    "It is about 10 minutes from Ban Tai by taxi."
+   ],
+   "links": [
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/yep_listening_bar/"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/yep-listening-bar/"
+    }
+   ],
+   "sources": [
+    "https://www.visitthailandtoday.com/nightlife/koh-phangan/yep-listening-bar",
+    "https://phangan.events/event-location/yep-listening-bar/",
+    "https://phangan.events/events/tuesday-minimal-grooves/",
+    "https://phangan.events/events/the-lounge-2/",
+    "https://phangan.events/events/corporave-4-0/",
+    "https://phangan.events/events/kover-crew-birthday-yep-bar/",
+    "https://t.me/s/phanganparty"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/05/IMG_7681.jpeg",
+     "source": "phangan.events (YEP venue page)",
+     "license": "© venue",
+     "credit": "YEP Listening Bar"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. phangan.events: Kovër Crëw nights (Korporave 3.0 Mon 13 Oct 2025, Face2Face Wed 26 Nov 2025, crew birthday Tue 2 Dec 2025), Savaj techno set (Fri 26 Jun 2026, free), Minus I (19 Aug and Mon 12 Oct 2026), Katana Bass (10 Sep), The Lounge (Sat 19 Sep, 3, 10 and 17 Oct, from 18:00, 'underground, rominimal and deeptech grooves'), Tuesday Minimal Grooves (6 Oct, 19:00-01:00, free entry; neBilA), Dub&Wise (Thu 8 Oct, 20:00-02:00, free), Corporave 4.0 'The Crëw session' (Thu 15 Oct, free; Tikhonov, Siu). Bertanxcan had a farewell set on 12 Oct, so he is not listed. visitthailandtoday: Instagram @yep_listening_bar, rating 4.6 (112), daytime hours (Tue to 23:30, Sat to 22:00). About 5.5 km by road from Ban Tai.",
+   "placeId": "ChIJJ2I9uyj_VDARCRV9OBL5wS4"
+  },
+  {
+   "id": "zen-beach-sunset-sessions-phangan",
+   "kind": "venue",
+   "name": "Zen Beach sunset sessions (Grasshopper Beach Bar)",
+   "type": "beach party",
+   "dates": [],
+   "window": "in",
+   "island": "Koh Phangan",
+   "area": "koh-phangan",
+   "venue": "Grasshopper Beach Bar, Zen Beach, Srithanu (west coast)",
+   "lat": 9.757357,
+   "lng": 99.9611791,
+   "coordSource": "Google Maps listing 'Grasshopper Beach Bar' (QX46+WFV) + phangan.events plus code QX46+WG9 + OSM 'Grasshopper Beach Bar' (Photon 9.757353, 99.961133), all within 21 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Grasshopper Beach Bar, Zen Beach, Koh Phangan",
+   "description": "Free sunset parties at Grasshopper Beach Bar on Zen Beach, Srithanu, on the quiet west coast. The Happy People crew and guest DJs play afro, melodic and indie house from 15:00 to about 22:30. In Oct 2026 the Thursday sets had live drums. The sun goes down over the sea. A gentle start before a night out.",
+   "genres": [
+    "afro house",
+    "melodic house",
+    "indie dance",
+    "organic house"
+   ],
+   "recurrence": "Several afternoons a week. Oct 2026: Thursdays from 17:00 (DJ set with live drums) and 'Happy Saturday' or 'Happy Thursday' 15:00-22:30. Jan 2026: Mon 5, Mon 12, Sat 24 and Sat 31 Jan.",
+   "timeText": "15:00-22:30 (Thursday sets 17:00-21:00)",
+   "priceText": "Free entry (2026 listings).",
+   "status": "recurring",
+   "undergroundScore": 2,
+   "pick": false,
+   "lineup": [
+    "Boyonic",
+    "GuyBO",
+    "No:Mad",
+    "Graham Gold (Oct 2026)"
+   ],
+   "tips": [
+    "Srithanu is about 11 km from Ban Tai, 20 minutes by taxi. Agree the price for the way back.",
+    "Check phangan.events for the day. In Jan 2026 the sessions were on Mondays and Saturdays."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/grasshopper-bar-at-zen-beach/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/events/happy-saturday-zen-beach-24-jan/",
+    "https://phangan.events/events/happy-monday-zen-beach-monday-12-january/",
+    "https://phangan.events/events/happy-saturday-3/",
+    "https://phangan.events/events/happy-thursday/",
+    "https://phangan.events/events/grasshopper-at-zen-beach-3/",
+    "https://phangan.events/event-location/grasshopper-bar-at-zen-beach/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sri_Thanu_beach%2C_Koh_Phangan%2C_Thailand.jpg/1280px-Sri_Thanu_beach%2C_Koh_Phangan%2C_Thailand.jpg",
+     "source": "Wikimedia Commons (Sri Thanu beach)",
+     "license": "CC BY-SA 4.0",
+     "credit": "Craigb100 (Wikivoyage)"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. phangan.events: Happy Monday (7, 14 and 21 Sep 2026), Happy Saturday (26 Sep, 3 and 10 Oct; 10 Oct with Graham Gold, Angelika, Boyonic, free, 15:00-22:30, by Happy People), Happy Thursday (15 Oct, free); 'Grasshopper at Zen Beach' Thursdays 17:00-21:00 (Hioko b2b No:Mad, afro, melodic, indie, live drums and didgeridoo, free). The calendar feed repeats this Thursday series only to 26 Nov 2026. Jan 2026: Mon 5, Mon 12 (15:00-22:30, free), Sat 24 (Boyonic, GuyBO, No:Mad) and Sat 31 Jan. Commons file checked: CC BY-SA 4.0, Craigb100 at Wikivoyage. The weekly poster image was dropped because it says 'every Thursday', which did not hold in Jan 2026. About 10.6 km by road from Ban Tai.",
+   "placeId": "ChIJFXMYluMBVTARNee-mEnyWkU"
+  },
+  {
+   "id": "secret-party-koh-tao",
+   "kind": "venue",
+   "name": "Secret Party Koh Tao (jungle party)",
+   "type": "jungle party",
+   "dates": [],
+   "window": "in",
+   "island": "Koh Tao",
+   "area": "koh-tao",
+   "venue": "Secret Party at Karma Bar, on the road to Tanote Bay, Koh Tao",
+   "lat": 10.0775625,
+   "lng": 99.8400625,
+   "coordSource": "The organiser's map link on Megatix resolves to the Google listing 'Secret Party Koh Tao' at 10.0775625, 99.8400625 = plus code 3RHR+22 (phangan.events 3RHR+228)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Secret Party Koh Tao",
+   "description": "Jungle party running since 2015 in the hills on the road to Tanote Bay. Two stages: house and techno on the main stage, commercial hits on the second. Fire shows, body painting and a food market. Guests have included Nakadia (Jan 2026). Usually 1-2 nights a week in high season.",
+   "genres": [
+    "house",
+    "tech house",
+    "techno",
+    "commercial"
+   ],
+   "recurrence": "No fixed day, about 1-2 nights a week in high season. Jan 2026: Wed 7, Tue 13, Tue 20, Sat 24 and Mon 26 Jan (Sunflower Festival). Closed after the 28 Oct 2026 closing party for the monsoon, back with an opening party on Thu 3 Dec 2026.",
+   "timeText": "From 22:00 until about 05:00",
+   "priceText": "Dec 2026 on Megatix: early bird 500 THB, presale 600, general 700, door 800 THB, each with 1 drink. VIP table 6,000-8,000 THB.",
+   "status": "recurring",
+   "undergroundScore": 3,
+   "pick": false,
+   "lineup": [
+    "Andy Bennet (303Lovers, resident)",
+    "Nakadia (20 Jan 2026)",
+    "Marchelo"
+   ],
+   "tips": [
+    "Free one-way taxi from 22:00 to 24:00 from the 7-Eleven by Factory Café and the Sairee petrol station. The ride back is not free.",
+    "A Koh Tao party means a night on Koh Tao. The last boat to Koh Phangan leaves at about 16:30.",
+    "January dates go on sale on megatix.in.th/SECRETPARTY a few weeks before."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/SECRETPARTY"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/karma-bar-koh-tao/"
+    }
+   ],
+   "sources": [
+    "https://megatix.in.th/events/secret-jungle-party-koh-tao-3-december",
+    "https://megatix.in.th/events/secret-jungle-party-koh-tao-28-october-closing-party-halloween",
+    "https://megatix.in.th/events/secret-jungle-party-koh-tao-24-december",
+    "https://phangan.events/events/secret-party-jungle-party-koh-tao-20-january/",
+    "https://phangan.events/events/season-closing-halloween-party-at-secret-party/",
+    "https://phangan.events/event-location/karma-bar-koh-tao/",
+    "https://maps.app.goo.gl/iumbo9qh8VY4Sd9a9"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/02/IMAGE-2025-02-24-023714.jpg",
+     "source": "phangan.events (Karma bar Koh Tao venue page)",
+     "license": "© organiser",
+     "credit": "Secret Party Koh Tao"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. Megatix API: 'Closing Party, Halloween' Wed 28 Oct 2026; Thu 3 Dec 2026 22:00-05:00 (flyer: 'Opening Party', 'free taxi one way from 10PM to 12AM'), early bird 500, limited online 600, general 700, door 800 THB (all with 1 drink), VIP tables 6,000 and 8,000 THB, 'since 2015', free one-way taxi from the 7-Eleven in front of Factory Café and Sairee gas station, venue 'Karma (on the way to Tanote Bay)'; 24 and 31 Dec also on sale; no Jan 2027 date yet. Main-stage names differ between the 3 Dec text (Wally Lopez) and flyer (Kasat Ka), so they are not listed. phangan.events: 20 Jan 2026 with Nakadia, Marchelo, Andy Bennet ('two stages of world-class house and techno', free taxi 22:00-24:00); Sep-Oct 2026: 1-2 nights a week.",
+   "placeId": "ChIJN7hzafKhVTARJ5sARFkeiCo"
+  },
+  {
+   "id": "hii-festival-koh-tao",
+   "kind": "venue",
+   "name": "Hii Festival Koh Tao",
+   "type": "festival night",
+   "dates": [],
+   "window": "in",
+   "island": "Koh Tao",
+   "area": "koh-tao",
+   "venue": "Hii Festival site, south-west Koh Tao, with ocean views",
+   "lat": 10.0753125,
+   "lng": 99.8220625,
+   "coordSource": "Entrix venue pin (10.0753125, 99.8220625) = Entrix address plus code 3RGC+4RX = Google Maps listing 'Hii Festival Koh Tao'",
+   "coordConfidence": "high",
+   "gmapsQuery": "Hii Festival Koh Tao",
+   "description": "Big night party on Koh Tao since Dec 2025, with ocean views. Two stages: tech house, melodic house and techno on one, hip-hop and R&B on the other, plus live Muay Thai fights, lasers and fire shows. Same style, prices and many of the same DJs as Waterfall on Koh Phangan.",
+   "genres": [
+    "tech house",
+    "melodic house",
+    "techno",
+    "hip-hop"
+   ],
+   "recurrence": "No fixed day, about 2 nights a month. Jan 2026: Thu 8 and Wed 28 Jan. Sep 2026: Wed 2, Mon 21, Mon 28. Oct 2026: Thu 1 and Wed 21 Oct.",
+   "timeText": "Gates 21:30 until sunrise. Muay Thai fights from 22:00.",
+   "priceText": "Oct 2026 on Entrix: from 1,100 THB (1,172 with fee). Jan 2026: early bird 1,000 THB, online 1,300, door 1,500 (with 1 beer); VIP 2,500 online, 2,800 at the door.",
+   "status": "recurring",
+   "undergroundScore": 2,
+   "pick": false,
+   "lineup": [
+    "Alle Farben (8 and 28 Jan 2026)",
+    "Boyonic",
+    "Cal Grooves",
+    "Jordan Love",
+    "NOT"
+   ],
+   "tips": [
+    "Free one-way taxi to the party from 21:30 to 02:00 (Oct 2026). The ride back costs extra.",
+    "A Koh Tao party means a night on Koh Tao. The last boat to Koh Phangan leaves at about 16:30.",
+    "January dates are posted a few weeks before. Check Entrix or phangan.events in late December."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Entrix)",
+     "url": "https://www.entrix.vip/event/hii-festival"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/hii-festival-koh-tao/"
+    }
+   ],
+   "sources": [
+    "https://www.entrix.vip/event/hii-festival",
+    "https://phangan.events/events/hii-festival-8/",
+    "https://phangan.events/events/hii-festival-7/",
+    "https://phangan.events/events/hii-festival-koh-tao-08-january-2025/",
+    "https://phangan.events/events/hii-festival-koh-tao-28-january-2025/",
+    "https://phangan.events/events/hii-festival-koh-tao-grand-opening/",
+    "https://phangan.events/event-location/hii-festival-koh-tao/"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/12/Hii-Festival-Koh-Tao.jpeg",
+     "source": "phangan.events (Hii Festival venue page)",
+     "license": "© organiser",
+     "credit": "Hii Festival Koh Tao"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. Entrix 'HII FESTIVAL' Wed 21 Oct 2026: gates 21:30 until sunrise, stage 1 tech house, melodic house, techno (Boyonic, Cal Grooves, Sam & Sandra), stage 2 hip-hop and R&B (Marchelo, Jordan Love, NOT), Muay Thai from 22:00, free one-way taxi 21:30-02:00, from 1,100 THB (1,172 incl. fee), address plus code 3RGC+4RX, pin 10.0753, 99.8221. Entrix names 'Phangan Events' as organiser, as it does for other parties it resells (Seaside, Daft Funk), so the old claim that the phangan.events team runs it was removed. Its '21+' is an Entrix default and was removed. phangan.events: 'Grand Opening' Fri 26 Dec 2025; Thu 8 and Wed 28 Jan 2026 with Alle Farben, early bird 1,000, online 1,300, door 1,500 THB with one beer, VIP 2,500/2,800 (the same price list as Waterfall); about 2 dates a month since. Waterfall and Hii share DJs (Boyonic, Bank Waterfall, Cleo P, Jordan Love, NOT).",
+   "placeId": "ChIJn1X1fi-hVTARQBtECYjXYd0"
+  },
+  {
+   "id": "leo-beach-music-festival-koh-tao",
+   "kind": "venue",
+   "name": "Leo Beach Music Festival (Sai Thong Beach, Koh Tao)",
+   "type": "beach party",
+   "dates": [],
+   "window": "in",
+   "island": "Koh Tao",
+   "area": "koh-tao",
+   "venue": "Sai Thong Beach Club, Sai Thong Beach, south-west Koh Tao",
+   "lat": 10.0743241,
+   "lng": 99.8165966,
+   "coordSource": "The official site's map link resolves to the Google listing 'Sai Thong Beach Koh Tao' (10.0743203, 99.8166101), 2 m from the pin; OSM 'Sai Thong Resort' 73 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Leo Beach Music Festival, Sai Thong Beach, Koh Tao",
+   "description": "Big beach party on a private beach at Sai Thong, south-west Koh Tao. The main stage plays tech house, hip-hop and drum and bass. A second 'underground' stage plays house, organic house and melodic techno. Fire show and UV body paint, until sunrise.",
+   "genres": [
+    "tech house",
+    "melodic techno",
+    "organic house",
+    "drum and bass",
+    "hip-hop"
+   ],
+   "recurrence": "About once a week, no fixed day. Jan 2026: Mon 5, Thu 8, Mon 12, Thu 22 and Tue 27 Jan. Oct 2026: Thu 1, Thu 8 and Tue 13 Oct. In Nov-Dec 2025 it also ran about once a week.",
+   "timeText": "21:00 until sunrise",
+   "priceText": "Oct 2026 on Megatix: presale about 460 THB, online special 650, gate 840, plus a small fee. Every ticket includes 1 drink and a free ride to the party.",
+   "status": "recurring",
+   "undergroundScore": 2,
+   "pick": false,
+   "lineup": [
+    "Vroom (Ba'lunz Recs)",
+    "Koopmusik",
+    "Shargenol",
+    "Hippapa"
+   ],
+   "tips": [
+    "Free taxi to the party 21:00-24:00 from the Sairee village entrance, the big 7-Eleven across from Factory Café and Leo Evolution Club in Mae Haad. Rides back cost extra.",
+    "20+ on Megatix. Bring ID.",
+    "A Koh Tao party means a night on Koh Tao. The last boat to Koh Phangan leaves at about 16:30."
+   ],
+   "links": [
+    {
+     "label": "Official website",
+     "url": "https://leobeachmusicfestival.com/"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/leo-beach-music-festival-koh-tao/"
+    }
+   ],
+   "sources": [
+    "https://leobeachmusicfestival.com/",
+    "https://megatix.in.th/events/leo-beach-music-festival-13th-october-2026",
+    "https://phangan.events/events/leo-beach-music-festival-19/",
+    "https://phangan.events/events/leo-beach-music-festival-22-jan/",
+    "https://goo.gl/maps/mDZkYt7ZhLkdZR5K7"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2025/10/IMG_0894.jpeg",
+     "source": "phangan.events (Leo Beach venue page)",
+     "license": "© organiser",
+     "credit": "Leo Beach Music Festival"
+    }
+   ],
+   "verification": "Re-checked 19 Oct 2026. Megatix API, Tue 13 Oct 2026: 21:00-07:00, age 20+ (organiser setting), presale 462.88, limited online 653.16, gate 839.78 THB plus 20-29 THB fee, main stage tech house, hip-hop, DnB (Tum Oke, Hippapa, Ben 10), underground stage house, indie dance, organic house, melodic techno (Vroom, Koopmusik, Shargenol), free one-way taxi 21:00-24:00 from the Sairee village entrance, the big 7-Eleven across Factory Café and Leo Evolution Club Mae Haad, paid return shuttles, 1 free drink. Official site: 'private beach', two dance floors, Sai Thong Beach Club, latest date Tue 13 Oct 2026; nothing later is on sale yet. phangan.events dates: Nov-Dec 2025 about weekly (7, 11, 17, 24 Nov; 3, 10, 15, 22, 28 Dec), Jan 2026 5, 8, 12, 22, 27; Oct 2026 1, 8, 13.",
+   "placeId": "ChIJD_V19OyhVTAR9ScId1mXVYA"
+  },
+  {
+   "id": "sail-away-pukka-up-boat-party",
+   "kind": "recurring",
+   "name": "Sail Away x Pukka Up Boat Party",
+   "type": "boat party",
+   "island": "Phuket",
+   "area": "cape-panwa",
+   "venue": "Visit Panwa Pier (Ao Makham, Wichit), Cape Panwa, east coast of Phuket",
+   "status": "tickets-on-sale",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.8297374,
+   "lng": 98.4055368,
+   "coordSource": "Google Maps 'Visit Panwa Pier' (88/88 Moo 7 Wichit = the Megatix venue address; re-checked 19 Oct 2026); OSM 'Ao Makham pier' node 4205168991 and the pier ways within 40 m",
+   "coordConfidence": "high",
+   "gmapsQuery": "Visit Panwa Pier, Wichit, Phuket",
+   "description": "Sunset boat party every Saturday from Visit Panwa Pier on the east coast, run by Sail Away with the Ibiza boat-party brand Pukka Up this season. About four hours past Coconut Island and the Khai islands, with DJs, MCs, food and foam cannons. Big, loud and commercial: a fun group day, not a rave.",
+   "genres": [
+    "commercial"
+   ],
+   "dates": [
+    "2027-01-09",
+    "2027-01-16",
+    "2027-01-23"
+   ],
+   "recurrence": "Every Saturday from 5 Dec 2026 to 24 Apr 2027 (in November only on 7 and 21 Nov), on Megatix. In your dates: Sat 9, 16 and 23 Jan, the same days as Circoloco.",
+   "timeText": "Check-in from 15:00, boarding 15:30, the boat leaves at 16:00 and is back at about 20:00",
+   "priceText": "2,500 THB with 1 welcome drink and food, plus a 3.5% booking fee. 5-drink add-on 1,000 THB. VIP tables with bottles and a taxi to the pier: 15,000 THB (4 people) or 25,000 THB (6 people) (Megatix, 19 Oct 2026).",
+   "tips": [
+    "20+. Bring your passport or another original photo ID. Copies are not accepted.",
+    "Be on time: the boat leaves at 16:00 and late arrivals get no refund. If the sea is too rough, they move the date or refund you.",
+    "The taxi add-on is only for November. In January take a Grab: about 25 min from Patong or Rawai and 30 min from Kamala without traffic, so leave early.",
+    "On Circoloco Saturdays you can do both: back at the pier about 20:00, then about 65 min by car to Natai without traffic.",
+    "No outside food or drinks on board. The official website still shows 'from 1,800 THB', but Megatix sells at 2,500."
+   ],
+   "links": [
+    {
+     "label": "Tickets (Megatix)",
+     "url": "https://megatix.in.th/events/sailaway-foam-boat-party-phuket"
+    },
+    {
+     "label": "Sail Away official",
+     "url": "https://sailawayparty.com/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/sail_away_party/"
+    }
+   ],
+   "sources": [
+    "https://megatix.in.th/events/sailaway-foam-boat-party-phuket",
+    "https://megatix.in.th/api/v2/events/28729",
+    "https://megatix.in.th/api/v2/events/28729/sessions",
+    "https://sailawayparty.com/",
+    "https://www.timeout.com/phuket/things-to-do/get-soaked-in-suds-at-the-sailaway-foam-boat-party",
+    "https://www.headout.com/sightseeing-cruises/sail-away-phuket-boat-party-e-45868/",
+    "https://www.phuketferry.com/numchai-pier-visit-panwa-phuket.html",
+    "https://www.openstreetmap.org/node/4205168991"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://media.megatix.com.au/e/28729/9DpvyMdofsDPeURjE5hMVoaxtvTWVoLd26kURsFZ.jpg",
+     "source": "megatix.in.th (event cover)",
+     "license": "Official promotional image",
+     "credit": "Sail Away Party Phuket x Pukka Up"
+    },
+    {
+     "url": "https://sailawayparty.com/wp-content/uploads/2023/11/401624909_18309114244141619_2493252978509678299_n-1024x683.jpg",
+     "source": "sailawayparty.com",
+     "license": "© organiser (official website)",
+     "credit": "Sail Away Party Phuket"
+    }
+   ],
+   "verification": "Fact-checked again 19 Oct 2026. Megatix event API: 'Sail Away x Pukka Up Phuket Boat Party', 'From November to April every Saturday', 20+ with original government ID or passport, check-in 15:00, boarding 15:30, departure 16:00, late arrivals not refunded, no outside food or drink, weather = new date or 100% refund; GA 2,500 THB with welcome drink and food (booking fee 87.50 THB), 5 drinks 1,000, taxi add-on 300 THB for November dates only, VIP Silver 15,000 (4 people) and Gold 25,000 (6 people) with taxi; venue Visit Panwa, 88/88 Moo 7 Wichit. Sessions API: 7 and 21 Nov, then every Saturday 5 Dec 2026 to 24 Apr 2027, incl. 9, 16 and 23 Jan 2027, 15:30-20:00. Official site still 'from 1,800 THB'. Time Out (19 Feb 2026): Panwa Pier, past Coconut Island, Rang Noi and Khai Island, foam cannons, DJs and MCs. Instagram @sail_away_party exists (25K followers). Pin: Google 'Visit Panwa Pier' (4.5, 757 reviews) = OSM Ao Makham pier. Drive times by OSRM without traffic: Patong 26, Rawai 23, Kamala 32 min; pier to Natai 65 min.",
+   "window": "in"
+  },
+  {
+   "id": "blanco-boat-party-phi-phi",
+   "kind": "recurring",
+   "name": "Blanco Boat Party (Koh Phi Phi)",
+   "type": "boat party",
+   "island": "Koh Phi Phi",
+   "area": "phi-phi",
+   "venue": "Blanco Beach Bar, Loh Dalum Bay, Koh Phi Phi Don",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.7431047,
+   "lng": 98.7739088,
+   "coordSource": "Google Maps 'Blanco Boat Party' (re-checked 19 Oct 2026); 'Blanco Beach Bar & Hostel' listing 10 m away on Loh Dalum Bay",
+   "coordConfidence": "high",
+   "gmapsQuery": "Blanco Boat Party, Koh Phi Phi",
+   "description": "Party boat from Blanco Beach Bar on Loh Dalum Bay, running since 2013. At 13:30 a boat with a DJ goes to Monkey Beach, Viking Cave, Pileh Lagoon, Maya Bay and a sunset point, back at about 19:00. Snorkels, kayaks, lunch and the park fee are included. Backpacker crowd, 18+, up to 70 people.",
+   "dates": [],
+   "recurrence": "Mon, Wed, Fri and Sat, 13:30-19:00 (Instagram 12 Oct 2026 and the booking calendar). The website FAQ still says 'every day', so check the calendar for your date.",
+   "timeText": "Mon, Wed, Fri and Sat: check-in 12:45, boat 13:30 to about 19:00",
+   "priceText": "1,300 THB with the national park fee: 500 THB deposit online, 800 THB cash on the day (website and Instagram, Oct 2026). Posts in Jun-Jul 2026 said 1,500 THB, so check. Beer and rum or vodka mixers are sold on board.",
+   "tips": [
+    "18+, no children. You cannot bring your own alcohol.",
+    "Alcohol and smoking are banned in the national park, including Maya Bay and Pileh Lagoon. In April 2025 a boat was fined 10,000 THB after guests drank there.",
+    "The deposit is not refunded, but you can change the date until 11:00 on the day. If bad weather cancels the trip, you get a full refund.",
+    "The boat is back at about 19:00, after the last ferry (15:30) and the last speedboat (about 17:00) to Phuket, so sleep on Phi Phi.",
+    "Blanco also runs a 4-island speedboat trip with cheap drinks from Ao Nang (Krabi) on Tue, Thu and Sun, 13:15-19:00, 1,300 THB. Check-in at KoKo Hostel, 12:45."
+   ],
+   "links": [
+    {
+     "label": "Official page and booking",
+     "url": "https://blancothailand.com/blanco-boat-party/"
+    },
+    {
+     "label": "Krabi boat trip (Ao Nang)",
+     "url": "https://blancothailand.com/krabi-island-adventure/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/blancoboatpartythailand/"
+    }
+   ],
+   "sources": [
+    "https://blancothailand.com/blanco-boat-party/",
+    "https://blancothailand.com/krabi-island-adventure/",
+    "https://www.instagram.com/blancoboatpartythailand/",
+    "https://www.visitthailandtoday.com/guides/phi-phi-to-phuket",
+    "https://www.visitthailandtoday.com/activities-tours/phi-phi/blanco-boat-party",
+    "https://www.hostelworld.com/hostels/p/73234/blanco-beach-bar/",
+    "https://www.thephuketnews.com/boat-driver-fined-b10k-for-tourists-drinking-alcohol-smoking-at-phi-phi-islands-96104.php"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://blancothailand.com/wp-content/uploads/2022/06/mayabayjump.jpg",
+     "source": "blancothailand.com",
+     "license": "© operator (official website)",
+     "credit": "Blanco Thailand"
+    }
+   ],
+   "verification": "Fact-checked again 19 Oct 2026. Official page (modified 21 Jun 2026): est. 2013, 13:30-19:00, check-in 12:45 at Blanco Beach Bar, 1,300 THB incl. park fee (500 online, non-refundable, + 800 cash), DJ, fried rice, snorkels, kayaks, no own alcohol, 18+, max 70, weather = full refund, date change until 11:00, last ferry 15:30, private speedboat about 15,000 THB. CHANGED: the page's FAQ says 'every day', but the Instagram feed on the page (@blancoboatpartythailand) says the boat is back from 5 Oct 2026 and runs 'Mon | Wed | Fri | Sat' (12 Oct 2026), and the booking calendar for late Oct 2026 opens only Mon, Wed, Fri and Sat. Price in posts: 1,500 THB (Jun-Jul 2026), 1,300 THB (20 Jul-6 Oct 2026). Old Instagram link @blancoboatparty shows no profile, replaced. Krabi page (modified 30 Apr 2026): Tue, Thu, Sun 13:15-19:00 from KoKo Hostel (Google: KOKO Hostel and Bar, Ao Nang), 1,300 THB; its calendar opens Tue, Thu, Sun. Last boats from Phi Phi: Visit Thailand Today (6 Oct 2026), last ferry 15:30, last speedboat 17:00. Google: 4.5 (309 reviews). Pin: Google listing. Park rule: the National Park Act B.E. 2562 and 2020 rules ban selling or drinking alcohol inside the park; in Apr 2025 a speedboat was fined 10,000 THB and banned after guests drank and smoked at Pileh (Phuket News, Apr 2025).",
+   "window": "in"
+  },
+  {
+   "id": "phi-phi-pirate-boat",
+   "kind": "recurring",
+   "name": "Phi Phi Pirate Boat (sunset party cruise)",
+   "type": "boat party",
+   "island": "Koh Phi Phi",
+   "area": "phi-phi",
+   "venue": "Relax Bar by Phi Phi Pirate, Tonsai village, Koh Phi Phi Don (check-in)",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.7414859,
+   "lng": 98.7731198,
+   "coordSource": "Google Maps 'The Pirate Boat: Phi Phi Island Tour' and 'Relax Bar by Phi Phi Pirate' (same point, within 5 m; re-checked 19 Oct 2026)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Relax Bar by Phi Phi Pirate, Koh Phi Phi",
+   "description": "A pirate-style ship that leaves Koh Phi Phi Don every day at about 11:30 and is back at about 19:30. It stops at Monkey Beach, Maya Bay, Pileh Lagoon, Viking Cave and a snorkel spot. After sunset the music gets loud and the top-deck bar turns into a party, with an after-party at Relax Bar. All ages, very touristy.",
+   "dates": [],
+   "recurrence": "Every day: check-in 11:30 at Relax Bar, back at Tonsai Pier at about 19:30 (official site, Oct 2026).",
+   "timeText": "Daily, 11:30 to about 19:30 (sunset about 18:20-18:30 in January)",
+   "priceText": "1,800 THB with the 400-THB Maya Bay park fee, a fried-rice meal, snorkel gear and kayaks: 300 THB deposit online, 1,500 THB on the boat (phiphipirate.com, Oct 2026). Beer and cocktails are sold at the bar.",
+   "tips": [
+    "Book on phiphipirate.com (the site on its Facebook and Google pages), its partner Phi Phi Tours or at Relax Bar. phiphipirates.com is not on its list and shows 2,200 THB.",
+    "Alcohol and smoking are banned in the national park, including Maya Bay and Pileh Lagoon. In April 2025 a boat was fined 10,000 THB after guests drank there.",
+    "Max 65 guests a day and it sells out in high season, so book a few days ahead.",
+    "It starts on Phi Phi, not in Phuket. The last ferry to Phuket leaves at 15:30 and the last speedboat at about 17:00, so sleep on Phi Phi that night.",
+    "Bring cash for the balance and the bar, and a waterproof bag for your phone."
+   ],
+   "links": [
+    {
+     "label": "Official site and booking",
+     "url": "https://phiphipirate.com/en"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/PhiPhiPirateboat/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/phiphipirateboat/"
+    }
+   ],
+   "sources": [
+    "https://phiphipirate.com/en",
+    "https://phiphipirate.com/en/about/where-to-book",
+    "https://phiphipirate.com/en/about/how-to-take-part",
+    "https://phiphipirates.com/",
+    "https://www.facebook.com/PhiPhiPirateboat/",
+    "https://www.visitthailandtoday.com/guides/phi-phi-to-phuket",
+    "https://www.thephuketnews.com/boat-driver-fined-b10k-for-tourists-drinking-alcohol-smoking-at-phi-phi-islands-96104.php"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://phiphipirate.com/home-page/pirate-boat-party-tour-koh-phi-phi.jpg",
+     "source": "phiphipirate.com",
+     "license": "© operator (official website)",
+     "credit": "Phi Phi Pirate Boat"
+    },
+    {
+     "url": "https://phiphipirate.com/home-page/phi-phi-pirate-sunset-boat-tour.jpg",
+     "source": "phiphipirate.com",
+     "license": "© operator (official website)",
+     "credit": "Phi Phi Pirate Boat"
+    }
+   ],
+   "verification": "Fact-checked again 19 Oct 2026. phiphipirate.com (TAT licence 31/01423; boat owned by The Original P.P. Sunset Co., TAT 34/01747): '11:30 AM - SUNSET EVERYDAY' from Relax Bar, 1,800 THB (300 deposit + 1,500 on the boat), Maya Bay fee 400 THB included, fried rice, kayaks and snorkelling, all ages, music louder on the way back and party at Relax Bar. 'How to take part' page: back at Tonsai Pier about 19:30, you must sleep on Phi Phi. 'Where to book' page: only phiphipirate.com, partner Phi Phi Tours or Relax Bar are official, max 65 guests a day, sells out in peak season. phiphipirates.com also sells the same Relax Bar trip and shows 2,200 THB from 1 Nov 2026. Facebook (18,456 followers, posts to 18 Oct 2026) links to phiphipirate.com; Instagram @phiphipirateboat exists (15K). Google: tour 4.8 (628), Relax Bar 4.4 (115), 11:00-01:00. Sunset on Phi Phi 8-25 Jan 2027: 18:21-18:29 (computed). Park rule: the National Park Act B.E. 2562 and 2020 rules ban selling or drinking alcohol inside the park; in Apr 2025 a speedboat was fined 10,000 THB and banned after guests drank and smoked at Pileh (Phuket News, Apr 2025).",
+   "window": "in"
+  },
+  {
+   "id": "ibiza-pool-party-phi-phi",
+   "kind": "recurring",
+   "name": "Ibiza Pool Party (Koh Phi Phi)",
+   "type": "pool party",
+   "island": "Koh Phi Phi",
+   "area": "phi-phi",
+   "venue": "Ibiza House & Rawianda Villas, Loh Dalum Bay, Koh Phi Phi Don",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.742431,
+   "lng": 98.7734924,
+   "coordSource": "Google Maps 'IBIZA Pool Party - Phi Phi Island' (225 Moo 7; re-checked 19 Oct 2026)",
+   "coordConfidence": "high",
+   "gmapsQuery": "IBIZA Pool Party - Phi Phi Island",
+   "description": "The big pool party of Phi Phi, at the Ibiza House hotel right behind Loh Dalum Beach, on Tuesdays, Thursdays and Sundays. Guest DJs, a swim-up bar and an international crowd from about 13:00 to 20:00 or 21:00, then everyone moves to the beach bars. Pure party fun, not a rave.",
+   "dates": [
+    "2027-01-10",
+    "2027-01-12",
+    "2027-01-14",
+    "2027-01-17",
+    "2027-01-19",
+    "2027-01-21",
+    "2027-01-24"
+   ],
+   "recurrence": "Every Tuesday, Thursday and Sunday (Facebook, 29 Sep 2026; parties posted on 11, 13 and 15 Oct 2026). In your dates: Sun 10, Tue 12, Thu 14, Sun 17, Tue 19, Thu 21 and Sun 24 Jan.",
+   "timeText": "About 13:00-21:00 (Facebook, Sep 2026). Some days it starts at 15:00 or ends at 20:00.",
+   "priceText": "Free entry (Facebook, 29 Sep 2026). Hotel guests always get in free. You pay for drinks.",
+   "tips": [
+    "Check the DJ and start time on the Facebook page 'Ibiza Pool Party - Phi Phi Island'. The website's event list stops in April 2025.",
+    "18+ only (the hotel's Hostelworld page). The Loh Dalum beach bars are a one-minute walk away when the pool party ends."
+   ],
+   "links": [
+    {
+     "label": "Pool party page",
+     "url": "https://ibizaphiphi.com/pool-party/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/phiphiibizapool"
+    },
+    {
+     "label": "Instagram (Ibiza House)",
+     "url": "https://www.instagram.com/ibizahouse_phiphi/"
+    }
+   ],
+   "sources": [
+    "https://ibizaphiphi.com/pool-party/",
+    "https://www.facebook.com/phiphiibizapool",
+    "https://www.hostelworld.com/hostels/p/69774/ibiza-house-phi-phi/",
+    "https://backpackbob.com/phi-phi-island-nightlife",
+    "https://booking.com/hotel/th/ibisa-house.en-gb.html"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Loh_Dalum_Bay.jpg/1280px-Loh_Dalum_Bay.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    }
+   ],
+   "verification": "Fact-checked again 19 Oct 2026. The official pool party page was last edited 16 Apr 2025 ('EVERY TUES | THURS | SUN', events to Apr 2025), so I checked newer sources. Facebook 'Ibiza Pool Party - Phi Phi Island' (22,364 followers, posts to 17 Oct 2026): 29 Sep 2026 'Every Tuesday • Thursday • Sunday, FREE ENTRY from 1 PM - 9 PM'; Sun 11 Oct 'today 3-8PM'; Tue 13 Oct 'today from 1-8 PM'; Thu 15 Oct party photos; guest DJs; 'Stay with us = FREE entry'. Hostelworld (2026): 'Pool Party: Every Tue, Thu & Sun | 1 PM - 10 PM | Free Entry | Age Limit: 18+ only'. Backpack Bob (2023) gave Tue, Thu, Fri, Sat: outdated. Old Instagram link @ibizapoolparty_phiphi shows no profile, replaced by Facebook and @ibizahouse_phiphi (exists). Google (19 Oct 2026): 3.9 (743), daily 10:00-21:00. Pin: Google listing.",
+   "window": "in"
+  },
+  {
+   "id": "loh-dalum-beach-bars-phi-phi",
+   "kind": "venue",
+   "name": "Loh Dalum beach bars (Koh Phi Phi)",
+   "type": "beach bars",
+   "island": "Koh Phi Phi",
+   "area": "phi-phi",
+   "venue": "Slinky Bar, Stones Bar and the other bars on Loh Dalum Beach, Koh Phi Phi Don",
+   "status": "recurring",
+   "pick": false,
+   "undergroundScore": 1,
+   "lat": 7.7417769,
+   "lng": 98.7728289,
+   "coordSource": "Google Maps 'Slinky Bar' (4.3, 2,867 reviews; re-checked 19 Oct 2026); OSM node 'Loh Dalum beach' 45 m away",
+   "coordConfidence": "high",
+   "gmapsQuery": "Slinky Bar, Koh Phi Phi",
+   "description": "The party beach of Phi Phi, a few minutes' walk from Tonsai Pier. Every night bars like Slinky and Stones put on fire shows, sell buckets and play loud party music on the sand until about 02:00 (Stones to 02:30). Reggae Bar in the village has Muay Thai fights. Wild backpacker fun, not underground.",
+   "dates": [],
+   "recurrence": "Every night. Fire shows from about 19:00-21:00, then parties until about 02:00 (guides 2025-2026, Google hours Oct 2026).",
+   "timeText": "Nightly: fire shows from about 19:00-21:00, the party peaks from about 23:30 until 02:00",
+   "priceText": "You pay for drinks at the bars. Slinky is cash only (Oct 2026).",
+   "tips": [
+    "Stay out of the fire-show area and never try the fire rope or other fire games.",
+    "Do not swim after drinking or at night.",
+    "Buy your own drink and watch it being made. Never leave a drink alone.",
+    "Rooms near Loh Dalum and Tonsai are loud until late. If you want sleep, check reviews for noise."
+   ],
+   "links": [
+    {
+     "label": "Phi Phi nightlife guide (Oct 2026)",
+     "url": "https://www.asgoodrestaurant.com/blog/11982/phi-phi-nightlife-guide"
+    },
+    {
+     "label": "Phi Phi nightlife (Amazing Lanta)",
+     "url": "https://amazinglanta.com/koh-phi-phi-nightlife/"
+    }
+   ],
+   "sources": [
+    "https://amazinglanta.com/koh-phi-phi-nightlife/",
+    "https://thelandofwanderlust.com/nightlife-in-phi-phi-beach-parties/",
+    "https://www.asgoodrestaurant.com/blog/11982/phi-phi-nightlife-guide",
+    "https://backpackbob.com/phi-phi-island-nightlife",
+    "https://www.visitthailandtoday.com/nightlife/phi-phi/slinky-bar",
+    "https://www.hotels.com/go/thailand/best-phi-phi-bars"
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Loh_Dalum_Bay_in_the_evening.jpg/1280px-Loh_Dalum_Bay_in_the_evening.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY-SA 4.0",
+     "credit": "Christophe95"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ko_Phi_Phi_Don_at_night_%282007-03-074%29_%28713984204%29.jpg/1280px-Ko_Phi_Phi_Don_at_night_%282007-03-074%29_%28713984204%29.jpg",
+     "source": "Wikimedia Commons",
+     "license": "CC BY 2.0",
+     "credit": "Vyacheslav Argenberg"
+    }
+   ],
+   "verification": "Fact-checked again 19 Oct 2026. Google Maps (19 Oct 2026): Slinky Bar 4.3 (2,867), 09:00-02:00; Stones Bar 4.3 (493), 08:00-02:30; Reggae Bar 4.5 (1,961), 18:00-01:00; none marked closed. The Land of Wanderlust (undated): fire shows every evening, usually starting 19:00-21:00, parties 21:00 to 02:00-04:00, avoid fire rope jumping. As Good (updated 8 Oct 2026): fire show around 21:00, never try fire games, no swimming after drinking. Backpack Bob: Slinky fire show, beach clubs open until 02:00, Reggae Bar Muay Thai ring where tourists fight. Visit Thailand Today Slinky page (updated Oct 2026): 09:00-02:00, cash only, party 'properly kicks off around 11:30pm'. Commons photos checked: licences and authors match.",
+   "window": "in"
+  },
+  {
+   "id": "russian-concerts-cherng-talay-jan-2027",
+   "kind": "dated",
+   "name": "Russian-language concerts: DDT, Linda, XOLIDAYBOY, ICEGERGERT",
+   "type": "concert",
+   "dates": [
+    "2027-01-13",
+    "2027-01-17",
+    "2027-01-23",
+    "2027-01-24"
+   ],
+   "window": "in",
+   "venue": "Lotus Arena and Shaman club (next door), Soi Cherng Talay 1, Cherng Talay",
+   "island": "Phuket",
+   "area": "bang-tao",
+   "lat": 7.984822,
+   "lng": 98.310065,
+   "coordSource": "OSM node 'Lotus Arena' (photon, 7.984822, 98.3100655) = the guide's MACAN pin; Google 'Lotus Arena' 7.9848454, 98.3100588 and Lotus Arena's own XOLIDAYBOY page geo (3 m). Google 'SHAMAN PHUKET lounge cafe bar' 7.984401, 98.3101854, 47 m south. The DDT page's own pin (7.9949, 98.3007) is 1.5 km away and was not used.",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lotus Arena, Cherng Talay, Phuket",
+   "description": "Four Russian-language shows in Cherng Talay, about 10 minutes from Kamala: rock band DDT (Wed 13 Jan, Lotus Arena), singer Linda (Sun 17 Jan, Shaman club), pop singer XOLIDAYBOY (Sat 23 Jan, Lotus Arena) and the ICEGERGERT club show (Sun 24 Jan, Shaman). Not electronic music.",
+   "genres": [
+    "rock",
+    "pop",
+    "hip-hop"
+   ],
+   "lineup": [
+    "DDT (Wed 13 Jan)",
+    "Linda (Sun 17 Jan)",
+    "XOLIDAYBOY (Sat 23 Jan)",
+    "ICEGERGERT (Sun 24 Jan)"
+   ],
+   "timeText": "DDT Wed 13 Jan 19:00-22:00; Linda Sun 17 Jan 19:45-22:00; XOLIDAYBOY Sat 23 Jan, doors 18:00, show 20:00; ICEGERGERT Sun 24 Jan from 21:00 (Megatix: 23:00-04:00).",
+   "priceText": "lotusarena.com, 19 Oct 2026: DDT dance floor 2,500-3,000 THB (1,500 and 2,000 sold out); Linda 1,300-2,000; XOLIDAYBOY 1,200-3,000; ICEGERGERT 1,700 (GA) or 2,800 (fan zone). Tables cost much more.",
+   "status": "tickets-on-sale",
+   "undergroundScore": 1,
+   "pick": false,
+   "tips": [
+    "DDT is on the same night as Marco Carola, and XOLIDAYBOY is on the last Circoloco Saturday.",
+    "ICEGERGERT: lotusarena.com says Sun 24 Jan from 21:00. Megatix says 23:00-04:00 and its text still says 23 Jan. Check before you go.",
+    "Prices rise after each ticket batch. Buy on lotusarena.com (or Megatix for ICEGERGERT), not from resellers.",
+    "Shaman is a lounge club about 50 m south of Lotus Arena, on the same small road."
+   ],
+   "links": [
+    {
+     "label": "DDT, 13 Jan (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/47-ddt-group-phuket"
+    },
+    {
+     "label": "Linda, 17 Jan (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/53-linda-phuket"
+    },
+    {
+     "label": "XOLIDAYBOY, 23 Jan (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/61-xolidayboy--phuket"
+    },
+    {
+     "label": "ICEGERGERT, 24 Jan (Lotus Arena)",
+     "url": "https://lotusarena.com/en/events/66-icegergert--phuket"
+    },
+    {
+     "label": "ICEGERGERT (Megatix)",
+     "url": "https://megatix.in.th/events/icegergert-phuket-2027"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://back.lotusarena.com/media/149",
+     "source": "lotusarena.com (DDT event page)",
+     "credit": "Art of Events / Lotus Arena",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://back.lotusarena.com/media/191",
+     "source": "lotusarena.com (XOLIDAYBOY event page)",
+     "credit": "TIAMAT GLOBAL / Lotus Arena",
+     "license": "Official promotional image"
+    },
+    {
+     "url": "https://media.megatix.com.au/e/76949/1eJQwMcwvqiB55XuLFLQUGUqPvZ4lNmKZuOurfBy.jpg",
+     "source": "megatix.in.th (ICEGERGERT)",
+     "credit": "ONLYUS Concerts",
+     "license": "Official promotional image"
+    }
+   ],
+   "verification": "Fact-checked twice on 19 Oct 2026 on the Lotus Arena ticket pages (schema.org MusicEvent data and sector lists). DDT: Art of Events Entertainment and Asia Music Industry, Wed 13 Jan 19:00-22:00, Lotus Arena Phuket (also 16 Jan in Pattaya); dance floor 1,500 and 2,000 sold out, 2,500 and 3,000 in stock; sectors 40,000-150,000. Linda: Art of Events, Sun 17 Jan 19:45-22:00, SHAMAN, fan zone 1,300-2,000 (417 places). XOLIDAYBOY: TIAMAT GLOBAL, 'ВСЕ НАШИ' and Lotus Arena, 'first time in Asia', doors 18:00, start 20:00, 1,200 (18 left) to 3,000. ICEGERGERT: G-Bands x OnlyUs x Asia Music Industry, SHAMAN, 24 Jan 21:00-23:45 (Lotus Arena); Megatix: 24 Jan 23:00-04:00, 18+, GA 1,700 and fan zone 2,800 plus 5% fee, text still says 23 Jan 21:00. Eventpop also lists DDT on 13 Jan. Lotus Arena's other Phuket shows (Potap and Nastya 3 Jan, Mumiy Troll 4 Jan, Meladze 5 Jan, GUF 7 Jan) are before your arrival. A Scriptonite date (11 Jan) on one listing site (whereismyparty.top) was not confirmed and is left out. OSRM: north Kamala to Lotus Arena 7.4 km, 9 min.",
+   "sources": [
+    "https://lotusarena.com/en/events",
+    "https://lotusarena.com/en/events/47-ddt-group-phuket",
+    "https://lotusarena.com/en/events/53-linda-phuket",
+    "https://lotusarena.com/en/events/61-xolidayboy--phuket",
+    "https://lotusarena.com/en/events/66-icegergert--phuket",
+    "https://megatix.in.th/events/icegergert-phuket-2027",
+    "https://shamanphuket.com/",
+    "https://www.eventpop.me/search?q=phuket"
+   ],
+   "placeId": "ChIJewS3V-U3UDARRqs5Y2tFd9E"
+  },
+  {
+   "id": "fira-beach-club-phuket",
+   "kind": "venue",
+   "name": "Fira Beach Club (hilltop day club, Kata Noi)",
+   "type": "beach club",
+   "dates": [],
+   "window": "in",
+   "venue": "Fira Phuket, 228/6-7 Khok Tanod Road, on the hill above Kata Noi",
+   "island": "Phuket",
+   "area": "kata-noi",
+   "lat": 7.8107217,
+   "lng": 98.3020275,
+   "coordSource": "Google Maps listing 'Fira Beach Club' (228/6-7 Khok Tanod Road, 7.8107217, 98.3020275), the same place as the map embed on firaphuket.com/contact; OSM reverse: Kata Sai Yuan road, Kata Noi, Karon. Not in OSM by name.",
+   "coordConfidence": "high",
+   "gmapsQuery": "Fira Beach Club, Khok Tanod Road, Karon, Phuket",
+   "description": "Hilltop day club above Kata Noi with an infinity pool, a sky bar and big sunset views. Resident DJs play every day from noon to 21:00, and guest DJs come in high season: in Jan 2026 it had Blackchild (Techno & Chill), Mason Collective and the Be Loved house party. Stylish, not underground.",
+   "genres": [
+    "house",
+    "tech house",
+    "afro house",
+    "Balearic"
+   ],
+   "recurrence": "Pool party every day from 12:00 (official events feed, Jan 2027): AKRI Mon, KYMA Tue, GAIA Wed, SOLIS Thu, ETHOS Fri (resident DJ crew, live percussion, fire show), AURA Sat, Sunday Pool Party. Guest nights are posted a few weeks ahead.",
+   "timeText": "Beach club 11:00-21:00; DOXA Skybar 16:00-24:00 (official site). Pool parties 12:00-21:00.",
+   "priceText": "GAIA (Wed) and AURA (Sat) pool parties list 500 THB; the other days list no entry price (official events feed, Jan 2027). Guest nights have their own tickets.",
+   "status": "recurring",
+   "undergroundScore": 2,
+   "pick": false,
+   "tips": [
+    "Watch @firaphuket and Megatix for guest nights. Last January it had Techno & Chill with Blackchild (Solid Grooves tech house) on Tue 13 Jan 2026.",
+    "About 10 minutes by car from Rawai, 15 from Patong and 25-35 from Kamala.",
+    "Book a sunbed for sunset (about 18:30). The pool closes at 21:00; DOXA Skybar stays open until midnight."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://firaphuket.com/"
+    },
+    {
+     "label": "Events",
+     "url": "https://firaphuket.com/events/"
+    },
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/firaphuket/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://firaphuket.com/wp-content/uploads/2025/03/fira-beach-club-pool.jpg",
+     "source": "firaphuket.com (og:image)",
+     "credit": "Fira Phuket",
+     "license": "© venue (official website)"
+    }
+   ],
+   "verification": "Fact-checked twice on 19 Oct 2026. Official site: 'Perched atop the stunning Kata Noi hill', 'Infinity Pool', 'resident DJs spinning daily and international artists taking over for special events', FIRA Beach Club 11AM-9PM, KIPO 5PM-12AM, DOXA Skybar 4PM-12AM, 228/6-7 Khok Tanod Road, Karon. Official events feed (Tribe API) for 1-31 Jan 2027: 40 entries, daily themed pool parties 12:00-21:00, GAIA and AURA 500 THB, no guest DJs yet. Megatix: Fira NYE party 31 Dec 2026, Halloween after-party 31 Oct. RA GraphQL (2025/26 season): Be Loved Thailand (Fri 9 Jan 2026, house), Techno & Chill presents Blackchild (Tue 13 Jan 2026), Mason Collective (Sat 24 Jan 2026, 21+) at Fira. Google: Fira Beach Club, 4.7 (999 reviews). OSRM: north Kamala 22.7 km, 25 min without traffic.",
+   "sources": [
+    "https://firaphuket.com/",
+    "https://firaphuket.com/contact/",
+    "https://firaphuket.com/wp-json/tribe/events/v1/events",
+    "https://ra.co/events/2329827",
+    "https://ra.co/events/2339375",
+    "https://ra.co/events/2348117",
+    "https://www.timeout.com/phuket/things-to-do/close-the-weekend-with-underground-energy-from-rinascimento"
+   ],
+   "placeId": "ChIJ9fVlU9wlUDAR4-TKOCJyWmo"
+  },
+  {
+   "id": "sedo-izikura-phuket-town",
+   "kind": "venue",
+   "name": "Sédo Izikura (late underground sessions, Phuket Old Town)",
+   "type": "bar",
+   "dates": [],
+   "area": "phuket-town",
+   "island": "Phuket",
+   "lat": 7.888375,
+   "lng": 98.3935681,
+   "coordSource": "Google Maps listing 'Sédo Izikura' (Japanese restaurant, plus code V9QV+8CW, Talat Yai); 'Sédo Record Store, 7 Suthat Rd' has the same phone and a pin 1 m away; OSM reverse geocode: Suthat Road, Phuket Old Town (re-checked 19 Oct 2026)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sédo Izikura, Talat Yai, Phuket",
+   "venue": "Sédo Izikura, 7 Suthat Road, Phuket Old Town (same spot as Sédo Record Store)",
+   "description": "A small Japanese home-cooking restaurant and record store in Phuket Old Town that hosts underground DJ nights. Local crews play minimal, house and tech house, often from midnight to about 05:00, and Tuesday is an open-deck night. Entry is free or 200 THB. Tiny, local and very late.",
+   "genres": [
+    "minimal",
+    "house",
+    "tech house"
+   ],
+   "timeText": "Weekend sessions start between 21:00 and 00:00 on a Friday or Saturday night and run to about 02:00-06:00. Tuesday open decks start at about 20:00-23:00. Google lists the restaurant 14:00-23:00, closed Wednesday.",
+   "priceText": "Free or 200 THB (Sep-Oct 2026 listings).",
+   "recurrence": "Most weekends in Sep-Oct 2026 (Back Yard 5 and 12 Sep, After Burn 26 Sep, Nissa Takeover 3 Oct, Local Drive 10 Oct, Guest Class+ 17 Oct) and open decks on Tue 6, 13 and 20 Oct. Also nights in May-Jun 2026 and Jul-Oct 2025. None were listed from Nov 2025 to Apr 2026 (the last high season), so January 2027 is not sure.",
+   "status": "unconfirmed",
+   "undergroundScore": 4,
+   "lineup": [
+    "Sundara Sound (plays most nights)",
+    "Natti D",
+    "Nam Auun",
+    "Floating J",
+    "2Fargonz",
+    "Noetic"
+   ],
+   "tips": [
+    "Flyers show a date and 'start 00:00'. That can mean the night before that date, so check Instagram @sedoizikura or phangan.events (Phuket) that week.",
+    "From Shelter in Patong it is 16 km, about 20 min by car at night. Sessions often run to 05:00-06:00, so it can be your last stop. Courage Bar is 2 km away.",
+    "From Kamala it is 22 km, about 25-35 min at night. Use Grab or Bolt both ways.",
+    "Bring cash and ID. Japanese home cooking is served during the sessions."
+   ],
+   "links": [
+    {
+     "label": "Instagram @sedoizikura",
+     "url": "https://www.instagram.com/sedoizikura/"
+    },
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/sedo-izikura/"
+    },
+    {
+     "label": "Example: Guest Class+ (17 Oct 2026)",
+     "url": "https://phangan.events/events/guest-class/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/wp-json/wp/v2/ajde_events?event_location=1537&per_page=50",
+    "https://phangan.events/wp-json/wp/v2/ajde_events?event_type_2=469&per_page=100&orderby=date&order=desc",
+    "https://phangan.events/events/guest-class/",
+    "https://phangan.events/events/local-drive-2/",
+    "https://phangan.events/events/nissa-takeover/",
+    "https://phangan.events/events/after-burn/",
+    "https://phangan.events/events/backyard/",
+    "https://phangan.events/events/open-deck-7/",
+    "https://phangan.events/events/open-deck-8/",
+    "https://www.instagram.com/sedoizikura/"
+   ],
+   "verification": "Fact-checked 19 Oct 2026. phangan.events REST data (location 'Sedo Izikura', 21 listings, and the Phuket region list): DJ Fishmonger (Tue 15 Jul 2025), The Vagabond (Fri 29 Aug 2025, minimal and tech house), DJ Open Deck 'every Tuesday' from Sep 2025, Local Drive (Fri 24 Oct 2025), Back Yard (Sat 16 May and 13 Jun 2026, 'hypnotic minimal beats'), Guest Class+ (Sat 6 Jun 2026, vinyl), After Burn (Sat 20 Jun 2026, free); then Back Yard 5 and 12 Sep (00:00-05:00, entered as the night of Friday into Saturday), After Burn Sat 26 Sep (21:00-02:00, free), Nissa Takeover Sat 3 Oct (23:59-06:00, a Saturday night), Local Drive 10 Oct and Guest Class+ 17 Oct (00:00-06:00, 200 THB, entered as the Friday night), open decks Tue 6 Oct (22:00), 13 Oct (23:00) and 20 Oct (20:00, posted 19 Oct). Listings went up 0-4 days ahead. No Sédo listings between Nov 2025 and Apr 2026, although phangan.events published 202 other Phuket listings in that time, so the sessions may pause in high season (status unconfirmed). Flyers seen: 'Sédo Izikura, Japanese home cooking & underground music', 'Phuket | Oldtown', 'start 00:00', 'ticket: 200'. Google Maps: 'Sédo Izikura', Japanese restaurant, 4.7 from 167 reviews, 087 627 4082, 14:00-23:00, closed Wednesday; 'Sédo Record Store', 7 Suthat Rd, same phone. OSM reverse: Suthat Road, Phuket Old Town. Instagram @sedoizikura: 1,856 followers, 980 posts (link preview, 19 Oct 2026). OSRM without traffic: Kamala 21.9 km 25 min, Shelter 16.0 km 20 min, Courage Bar 2.2 km. Not on RA or Megatix (critic's check). January 2027 dates not posted yet.",
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/09/backyard-2.jpeg",
+     "source": "phangan.events (the venue's Back Yard flyer, 12 Sep 2026)",
+     "credit": "Sédo Izikura",
+     "license": "flyer, personal use"
+    },
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/10/1791879978342-0t947egzc7hs.jpg",
+     "source": "phangan.events (the venue's Guest Class+ flyer, 17 Oct 2026)",
+     "credit": "Sédo Izikura",
+     "license": "flyer, personal use"
+    }
+   ],
+   "window": "in",
+   "tile": {
+    "word": "Maybe",
+    "label": "Fri Sat"
+   }
+  },
+  {
+   "id": "tree-secret-sound-garden-phangan",
+   "kind": "venue",
+   "name": "Tree Secret Sound Garden: free techno and psy nights (Thong Sala)",
+   "type": "small bar",
+   "dates": [],
+   "area": "koh-phangan",
+   "island": "Koh Phangan",
+   "lat": 9.711274,
+   "lng": 99.9868058,
+   "coordSource": "Google Maps listing 'Sound Garden' (bar, 79/21 M.1 Soi Krung Thai, Thong Sala); the 'Tree Secret' listing at the same address is 5 m away; 440-460 m on foot from the Thong Sala pier (OSRM foot route), re-checked 19 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sound Garden, Koh Phangan",
+   "venue": "Tree Secret Sound Garden (Google: 'Sound Garden' and 'Tree Secret'), 79/21 Moo 1, Soi Krung Thai, Thong Sala, Koh Phangan",
+   "description": "A small garden bar on Soi Krung Thai in Thong Sala, about 6 minutes on foot from the pier. It has free nights most weeks: techno with resident DJ Annabelle (often on Tuesdays), Psy Garden psytrance on many Saturdays, and minimal 'Garden of Sins' nights. Small and local.",
+   "genres": [
+    "techno",
+    "minimal",
+    "psytrance",
+    "deep house"
+   ],
+   "timeText": "Nights start at about 18:00-21:00 and end at about 00:00-02:00. Google lists the bar 14:00-01:00 every day.",
+   "priceText": "Free entry on most 2026 listings; none showed a ticket price.",
+   "recurrence": "One to three nights a week; the program changes. 2026: Tuesday techno nights with resident Annabelle (May to Aug; in late Sep some Tuesdays were drum and bass or live percussion), Psy Garden on many Saturdays, Garden of Sins on some Mondays and Fridays. January 2027 nights are not posted yet.",
+   "status": "recurring",
+   "undergroundScore": 4,
+   "lineup": [
+    "Annabelle (resident)",
+    "Danny Joe",
+    "Distracted",
+    "Darkmøm",
+    "Zig",
+    "Apnea"
+   ],
+   "tips": [
+    "About 6 minutes on foot from Thong Sala pier: an easy warm-up on Tue 19 Jan, the day you land, before OXA.",
+    "Check phangan.events (venue: Tree Secret (Sound Garden)) or the Phangan Party Guide on Telegram for the week's nights.",
+    "Cannabis is for medical use with a Thai prescription only (since June 2025). Do not buy or smoke it at parties."
+   ],
+   "links": [
+    {
+     "label": "Listings (phangan.events)",
+     "url": "https://phangan.events/event-location/sound-garden/"
+    },
+    {
+     "label": "Example: Tree Secret jungle techno (16 Oct 2026)",
+     "url": "https://phangan.events/events/tree-secret/"
+    }
+   ],
+   "sources": [
+    "https://phangan.events/wp-json/wp/v2/ajde_events?event_location=432,1786,1865,1863&per_page=100",
+    "https://phangan.events/event-location/sound-garden/",
+    "https://phangan.events/events/techno-night-at-sound-garden/",
+    "https://phangan.events/events/tuesday-techno-night/",
+    "https://phangan.events/events/tree-secret/",
+    "https://phangan.events/events/tree-secret-sound-garden/",
+    "https://www.visitthailandtoday.com/nightlife/koh-phangan/sound-garden"
+   ],
+   "verification": "Fact-checked 19 Oct 2026. phangan.events REST data (locations 'TREE SECRET (SOUND GARDEN)', 'Tree Secret Sound Garden' and 'Tree Secret', 41 listings, Mar-Oct 2026): techno nights with resident Annabelle on Tue 5, 12 and 26 May, 2, 16, 23 and 30 Jun, 14 Jul, 4 and 25 Aug; Hole Night Long, 'strictly techno' on a Function-One system (Fri 1 May, Sat 6 Jun); Electro Garden techno (Fri 8 May); Psy Garden psytrance on Saturdays from 4 Apr to 26 Sep (presented by Sacred Moon Phangan on 8 and 29 Aug); Garden of Sins, minimal deep tech (Fri 28 Aug, Mon 28 Sep); drum and bass and jungle techno (Tue 29 Sep); jungle techno with Annabelle (Fri 16 Oct, from 18:00) and Aura live percussion (Sat 17 Oct). Start times 18:00-21:00, end times 00:00-03:00. 25 of the 41 listings say free entry and none shows a price. The Sep-Oct 2026 flyers say 'Tree Secret Sound Garden, Koh Phangan', 'Soi Krung Thai, Thong Sala', 'Free entry'. Google Maps: 'Sound Garden', bar, 79/21 M.1 Soi Krung Thai, 4.6 from 203 reviews, daily 14:00-01:00; 'Tree Secret', bar, same address, 5.0 from 36 reviews. Visit Thailand Today (Sep 2026): same address and hours. Google's top result for the old query 'Sound Garden, Soi Krung Thai, Thong Sala, Koh Phangan' was SOHO Bar, so the query is now 'Sound Garden, Koh Phangan'. The first draft's red lights, hidden entrance and 'cannabis shop upstairs' came from reviews that could not be read again, so they were taken out.",
+   "imageCandidates": [
+    {
+     "url": "https://phangan.events/wp-content/uploads/2026/10/1792063630417-ywlk9yo3fek.jpg",
+     "source": "phangan.events (the venue's Tree Secret jungle techno flyer, 16 Oct 2026)",
+     "credit": "Tree Secret Sound Garden",
+     "license": "flyer, personal use"
+    }
+   ],
    "window": "in"
   }
  ]

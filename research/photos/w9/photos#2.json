@@ -1,0 +1,129 @@
+{
+ "results": [
+  {
+   "key": "places:railay-east-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-railay-east-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/East_Rai_Leh.jpg/1280px-East_Rai_Leh.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:East_Rai_Leh.jpg",
+   "credit": "Christophe95",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "East Railay bay in June 2018. The long floating pier crosses the middle of the frame: a pontoon walkway with white posts, longtails moored along it and a ferry at its end (checked by zooming into the original). The karst headland is behind. The sky is overcast. It is the only Commons photo that shows the floating pier, and Openverse found nothing closer. The visitthailandtoday pier photos are Google Maps user photos, so they were not used."
+  },
+  {
+   "key": "places:tonsai-pier-phi-phi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tonsai-pier-phi-phi.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Ko_Phi_Phi.JPG/1280px-Ko_Phi_Phi.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Ko_Phi_Phi.JPG",
+   "credit": "Cocu",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 851,
+   "note": "Big ferries moored at Ton Sai Pier below the limestone cliffs, with travellers on the pier and the beach in front. Sharp and sunny. The file is in the Commons 'Ton Sai Pier' category. It is an older photo (Nikon D40 era, undated) and the pier deck has been rebuilt since, but the view is the same. Chosen over the given candidates: the bay overview from the hill (pier tiny) and the 2025 longtail shot (no ferries)."
+  },
+  {
+   "key": "places:saladan-pier-koh-lanta",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-saladan-pier-koh-lanta.jpg",
+   "url": "https://live.staticflickr.com/3800/11864756345_20e2ce9ced_h.jpg",
+   "page": "https://www.flickr.com/photos/97164866@N08/11864756345",
+   "credit": "Where Is Your Toothbrush? (Flickr)",
+   "license": "CC BY-NC-SA 2.0",
+   "width": 1600,
+   "height": 899,
+   "note": "Saladan Pier arrival point, Jan 2014: the 'Welcome to Ko Lanta' arch at the pier entrance, with resort staff holding hotel signs and tuk-tuks waiting. Already 16:9. There were no candidates. Commons only has the Saladan waterfront and the Lanta bridge under construction, none clearly the ferry pier, so this Flickr CC photo was used. Earlier waves already used Flickr NC licences."
+  },
+  {
+   "key": "places:manoh-pier-koh-yao-noi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-manoh-pier-koh-yao-noi.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/On_the_Yao_Noi_Harbour_Pier._-_panoramio.jpg/1280px-On_the_Yao_Noi_Harbour_Pier._-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:On_the_Yao_Noi_Harbour_Pier._-_panoramio.jpg",
+   "credit": "Jaakko H.",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Standing on Manoh Pier (geotagged on the pier at the south tip of Koh Yao Noi, Jan 2009). The concrete pier leads to the red-roofed buildings and wooded hill on shore, under blue sky. The shore buildings match a 2014 Roma Neus photo of Manoh taken from the water. Slightly soft phone photo, but clear at card size. The pier has more lamp posts now."
+  },
+  {
+   "key": "places:chong-lard-pier-koh-yao-yai",
+   "ok": false,
+   "note": "No usable photo found. Commons has no file of the pier: geosearch within 700 m of the pier (8.0816, 98.5864), the Ko Yao Yai / Koh Yao Yai categories, and English and Thai text searches all came up empty. A Dec 2014 Roma Neus telephoto of a long pier from the channel points NNW (EXIF 342\u00b0), so it shows Manoh, not Chong Lard. The Unsplash 'Koh Yao Yai Peer' is a decorative resort jetty, and places:koh-yao-yai already has it as a candidate. Openverse/Flickr only has portraits at an unnamed Koh Yao Yai pier. Booking and operator pages (phuketferry, Pornpinyo) have no usable photos, and no local government page was found."
+  },
+  {
+   "key": "places:koh-lipe-pattaya-beach",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-lipe-pattaya-beach.jpg",
+   "url": "https://live.staticflickr.com/5095/13867196683_078662a69c_h.jpg",
+   "page": "https://www.flickr.com/photos/96107271@N08/13867196683",
+   "credit": "Touristing (Flickr)",
+   "license": "CC BY-NC-SA 2.0",
+   "width": 1600,
+   "height": 1200,
+   "note": "A colourful longtail moored in clear shallow water on Pattaya Beach, Koh Lipe (title says Pattaya Beach; April 2014), blue sky, no people. This is the beach where ferries and speedboats land passengers. The given 'Debarking Ferry' candidate was rejected: it is portrait, faces fill the frame and a 16:9 crop cuts heads. Different from the Sunrise Beach sandbar already used for places:koh-lipe. Phuketian.S photos were skipped because of their 'FORUM linvoyage.com' watermark."
+  },
+  {
+   "key": "places:bangrak-big-buddha-piers-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bangrak-big-buddha-piers-samui.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Samui_2015_febr._-_panoramio_%2813%29.jpg/1280px-Samui_2015_febr._-_panoramio_%2813%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Samui_2015_febr._-_panoramio_(13).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Pier frames at the Bangrak pier cluster on Big Buddha Beach, with the Big Buddha statue on its islet and sailboats behind. Feb 2015, already 16:9. Geotag 9.5594, 100.0575 is beside the Lamtaen terminal and about 200 m from the Lomprayah and Haad Rin Queen (Big Buddha) piers, per OSM. The given candidate was rejected: a girl in a hammock on the ferry, no pier visible."
+  },
+  {
+   "key": "places:seatran-bangrak-pier-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-seatran-bangrak-pier-samui.jpg",
+   "url": "https://www.seatrandiscovery.com/files/Seatran-Discovery-Samui-Bangrak-pier_web.jpg",
+   "page": "https://www.seatrandiscovery.com/",
+   "credit": "\u00a9 Seatran Discovery",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Aerial photo of a red-and-white Seatran Discovery ferry docked at Seatran's Bangrak Pier, with the beach and hillside behind. Sharp, bright, 16:9, no watermark. Shown on the operator's homepage and About page (file name says Samui Bangrak pier). A 2013 Commons photo from the same spot shows the same pier with the same lantern posts."
+  },
+  {
+   "key": "places:nathon-pier-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-nathon-pier-samui.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/The_Blue_Dolphin_-_Seahorse_IMG_4096.jpg/1280px-The_Blue_Dolphin_-_Seahorse_IMG_4096.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Blue_Dolphin_-_Seahorse_IMG_4096.jpg",
+   "credit": "Per Meistrup",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 647,
+   "note": "Nathon Pier deck, with railing, lamp posts and shelters, leading to the Seahorse car ferry 'The Blue Dolphin' moored there (Commons category Nathon Pier, May 2023). Wide frame; the sides crop away for 16:9. The given 'View from Nathon Pier' was rejected: beach at low tide, pier not visible."
+  },
+  {
+   "key": "places:thong-sala-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-thong-sala-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Thong_Sala_Seaport_2015.jpg/1280px-Thong_Sala_Seaport_2015.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Thong_Sala_Seaport_2015.jpg",
+   "credit": "Lindnerix",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "A red-and-white express ferry arriving at Thong Sala Pier while two pier staff watch from the concrete pier, side-on. Turquoise water, soft light, Dec 2014, Commons category Thong Sala Pier. The given candidate was rejected: mostly the 'Multipurpose Port of Koh Phangan' sign. Seatran's own Thong Sala aerial is only 637 px wide."
+  },
+  {
+   "key": "places:haad-rin-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-haad-rin-pier.jpg",
+   "url": "https://live.staticflickr.com/5285/5260608094_c0942597fa_b.jpg",
+   "page": "https://www.flickr.com/photos/98849948@N00/5260608094",
+   "credit": "udim (Flickr)",
+   "license": "CC BY-NC 2.0",
+   "width": 1024,
+   "height": 768,
+   "note": "Hillside view over Haad Rin Nai bay and town. The long Haad Rin (Haadrin Queen) pier reaches into the sea at the end of the beach, with longtails at anchor (titled 'Haad Rin Pier', Dec 2010). Chosen over the given candidate, a close-up of the ferry's side where the pier is not visible, and over a 2003 800 px film scan."
+  }
+ ]
+}

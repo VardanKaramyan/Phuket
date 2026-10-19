@@ -2018,5 +2018,855 @@
   "credit": "© Leky (MP Property)",
   "license": "Airbnb listing photo",
   "source": "https://www.airbnb.com/rooms/1586097453594142520?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+ },
+ "places:rassada-pier": {
+  "file": "assets/img/places-rassada-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1000,
+  "srcH": 500,
+  "credit": "© Andaman Wave Master",
+  "license": "official site",
+  "source": "https://www.andamanwavemaster.com/pier/"
+ },
+ "places:chalong-pier": {
+  "file": "assets/img/places-chalong-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "JULIANISME",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phuket_Chalong_Pier_03.jpg"
+ },
+ "places:rawai-pier": {
+  "file": "assets/img/places-rawai-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "ADwarf",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_02.jpg"
+ },
+ "places:ao-po-pier": {
+  "file": "assets/img/places-ao-po-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 851,
+  "credit": "edwin.11",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ao_Po,_Phuket_(5729992145).jpg"
+ },
+ "places:ao-po-grand-marina": {
+  "file": "assets/img/places-ao-po-grand-marina.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1000,
+  "credit": "© Ao Po Grand Marina",
+  "license": "official site",
+  "source": "https://www.aopograndmarina.com/"
+ },
+ "places:bang-rong-pier": {
+  "file": "assets/img/places-bang-rong-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2560,
+  "srcH": 1440,
+  "credit": "© Bang Rong Connect",
+  "license": "official site",
+  "source": "https://www.bangrongconnect.com/bangrong-community-based-tourism-phuket/"
+ },
+ "places:laem-hin-pier": {
+  "file": "assets/img/places-laem-hin-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Mozhar",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Unnamed_Road,_Koh_Keaw,_Amphoe_Mueang_Phuket,_Chang_Wat_Phuket_83000,_Thailand_-_panoramio.jpg"
+ },
+ "places:royal-phuket-marina": {
+  "file": "assets/img/places-royal-phuket-marina.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1922,
+  "srcH": 940,
+  "credit": "© Royal Phuket Marina",
+  "license": "official site",
+  "source": "https://royalphuketmarina.com/"
+ },
+ "places:thap-lamu-pier": {
+  "file": "assets/img/places-thap-lamu-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Roma Neus",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phan-Nga,_2015_march_-_panoramio_(6).jpg"
+ },
+ "places:klong-jilad-pier": {
+  "file": "assets/img/places-klong-jilad-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Krzysztof Golik",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Klong_Jilad_Pier_in_Krabi.jpg"
+ },
+ "places:nopparat-thara-pier": {
+  "file": "assets/img/places-nopparat-thara-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 847,
+  "credit": "Marcin Konsek",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2016_Prowincja_Krabi,_%C5%81odzie_w_przystani_Noppharat_Thara_(02).jpg"
+ },
+ "places:railay-east-pier": {
+  "file": "assets/img/places-railay-east-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Christophe95",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:East_Rai_Leh.jpg"
+ },
+ "places:tonsai-pier-phi-phi": {
+  "file": "assets/img/places-tonsai-pier-phi-phi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 851,
+  "credit": "Cocu",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ko_Phi_Phi.JPG"
+ },
+ "places:saladan-pier-koh-lanta": {
+  "file": "assets/img/places-saladan-pier-koh-lanta.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 899,
+  "credit": "Where Is Your Toothbrush? (Flickr)",
+  "license": "CC BY-NC-SA 2.0",
+  "source": "https://www.flickr.com/photos/97164866@N08/11864756345"
+ },
+ "places:manoh-pier-koh-yao-noi": {
+  "file": "assets/img/places-manoh-pier-koh-yao-noi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Jaakko H.",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:On_the_Yao_Noi_Harbour_Pier._-_panoramio.jpg"
+ },
+ "places:chong-lard-pier-koh-yao-yai": {
+  "file": "assets/img/places-chong-lard-pier-koh-yao-yai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1020,
+  "credit": "© Chong Lard Pier (chonglardpier.com)",
+  "license": "official site",
+  "source": "https://www.chonglardpier.com/"
+ },
+ "places:koh-lipe-pattaya-beach": {
+  "file": "assets/img/places-koh-lipe-pattaya-beach.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1200,
+  "credit": "Touristing (Flickr)",
+  "license": "CC BY-NC-SA 2.0",
+  "source": "https://www.flickr.com/photos/96107271@N08/13867196683"
+ },
+ "places:bangrak-big-buddha-piers-samui": {
+  "file": "assets/img/places-bangrak-big-buddha-piers-samui.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Roma Neus",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Samui_2015_febr._-_panoramio_(13).jpg"
+ },
+ "places:seatran-bangrak-pier-samui": {
+  "file": "assets/img/places-seatran-bangrak-pier-samui.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1080,
+  "credit": "© Seatran Discovery",
+  "license": "official site",
+  "source": "https://www.seatrandiscovery.com/"
+ },
+ "places:nathon-pier-samui": {
+  "file": "assets/img/places-nathon-pier-samui.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 647,
+  "credit": "Per Meistrup",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:The_Blue_Dolphin_-_Seahorse_IMG_4096.jpg"
+ },
+ "places:thong-sala-pier": {
+  "file": "assets/img/places-thong-sala-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Lindnerix",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thong_Sala_Seaport_2015.jpg"
+ },
+ "places:haad-rin-pier": {
+  "file": "assets/img/places-haad-rin-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1024,
+  "srcH": 768,
+  "credit": "udim (Flickr)",
+  "license": "CC BY-NC 2.0",
+  "source": "https://www.flickr.com/photos/98849948@N00/5260608094"
+ },
+ "places:donsak-raja-ferry-port": {
+  "file": "assets/img/places-donsak-raja-ferry-port.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 606,
+  "credit": "Per Meistrup",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Raja_Ferry_Pier_IMG_1910.jpg"
+ },
+ "places:tour-phi-phi-speedboat": {
+  "file": "assets/img/places-tour-phi-phi-speedboat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Christophe95",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Loh_Samah_Bay.jpg"
+ },
+ "places:tour-james-bond-early-speedboat": {
+  "file": "assets/img/places-tour-james-bond-early-speedboat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 778,
+  "credit": "Diego Delso",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Isla_Tapu,_Phuket,_Tailandia,_2013-08-20,_DD_35.JPG"
+ },
+ "places:tour-phang-nga-big-boat-canoe": {
+  "file": "assets/img/places-tour-phang-nga-big-boat-canoe.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Yap Chin Kuan (bergeryap87)",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Boat_cruise_in_Phang-nga_(Unsplash).jpg"
+ },
+ "places:tour-phang-nga-self-paddle-kayak": {
+  "file": "assets/img/places-tour-phang-nga-self-paddle-kayak.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Weldon Kennedy",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thailand_2016_(349_of_422)_(32243505271).jpg"
+ },
+ "places:tour-hong-krabi-james-bond-speedboat": {
+  "file": "assets/img/places-tour-hong-krabi-james-bond-speedboat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Vladimir Pankratov",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lagoon_of_Hong_island.jpg"
+ },
+ "places:tour-similan-speedboat-khao-lak": {
+  "file": "assets/img/places-tour-similan-speedboat-khao-lak.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "KOSIN SUKHUM",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mu_Ko_Similan_National_Park_Thailand.jpg"
+ },
+ "places:tour-racha-coral-boat": {
+  "file": "assets/img/places-tour-racha-coral-boat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Roma Neus",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Racha_2015_december_-_panoramio_(3).jpg"
+ },
+ "places:tour-khai-islands-half-day": {
+  "file": "assets/img/places-tour-khai-islands-half-day.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 764,
+  "credit": "Diego Delso",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Isla_Khai_Nok,_Tailandia,_2013-08-19,_DD_02.JPG"
+ },
+ "places:tour-krabi-4-islands-longtail": {
+  "file": "assets/img/places-tour-krabi-4-islands-longtail.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 836,
+  "credit": "kallerna",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Poda_island_beach.jpg"
+ },
+ "places:tour-private-speedboat-group": {
+  "file": "assets/img/places-tour-private-speedboat-group.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 736,
+  "credit": "Diego Delso",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Isla_Phi_Phi_Lay,_Tailandia,_2013-08-19,_DD_02.JPG"
+ },
+ "places:tour-private-catamaran-group": {
+  "file": "assets/img/places-tour-private-catamaran-group.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2560,
+  "srcH": 1440,
+  "credit": "© Love Andaman",
+  "license": "official site",
+  "source": "https://www.loveandaman.com/private-charter/"
+ },
+ "places:tour-sunset-catamaran": {
+  "file": "assets/img/places-tour-sunset-catamaran.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1287,
+  "credit": "© Love Andaman",
+  "license": "official site",
+  "source": "https://www.loveandaman.com/phi-phi-maiton-sunset/"
+ },
+ "places:tour-ang-thong-from-phangan": {
+  "file": "assets/img/places-tour-ang-thong-from-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Maris Teteris",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mu_Ko_Ang_Thong_National_Park_Surat_Thani_-_panoramio_(4).jpg"
+ },
+ "places:koh-lanta": {
+  "file": "assets/img/places-koh-lanta.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 698,
+  "credit": "Stefan Fussan",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ko_Lanta_-_Klong_Khong_Beach_-_0019.jpg"
+ },
+ "places:bamboo-island": {
+  "file": "assets/img/places-bamboo-island.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 611,
+  "credit": "Maksym Kozlenko",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2016-04-10_Long_tail_boats_at_Ko_Mai_Phai.jpg"
+ },
+ "places:koh-yao-yai": {
+  "file": "assets/img/places-koh-yao-yai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Tom Ek",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Yao_Yai_palms_(32706989645).jpg"
+ },
+ "places:koh-panyee": {
+  "file": "assets/img/places-koh-panyee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Glen MacLarty",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Panyi_Village.jpg"
+ },
+ "places:surin-islands": {
+  "file": "assets/img/places-surin-islands.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 954,
+  "credit": "The Cosmonaut",
+  "license": "CC BY-SA 2.5 ca",
+  "source": "https://commons.wikimedia.org/wiki/File:Chong_Khad_Bay_and_South_Surin_Island.jpg"
+ },
+ "places:koh-lipe": {
+  "file": "assets/img/places-koh-lipe.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Vyacheslav Argenberg",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Lipe_(island),_Sandy_beach,_Thailand.jpg"
+ },
+ "places:trang-islands": {
+  "file": "assets/img/places-trang-islands.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 854,
+  "credit": "Khunkay",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Ngai_07.jpg"
+ },
+ "places:koh-racha-noi": {
+  "file": "assets/img/places-koh-racha-noi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1080,
+  "credit": "© Aussie Divers Phuket",
+  "license": "official site",
+  "source": "https://www.aussiediversphuket.com/dive-sites/banana-bay/"
+ },
+ "places:koh-samui": {
+  "file": "assets/img/places-koh-samui.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Fabio Achilli",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thong_Ta_Kian_Beach,_Koh_Samui_(48107355718).jpg"
+ },
+ "places:koh-tao-nang-yuan": {
+  "file": "assets/img/places-koh-tao-nang-yuan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Justraveling.com",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Nang_Yuan.jpg"
+ },
+ "places:ang-thong-marine-park": {
+  "file": "assets/img/places-ang-thong-marine-park.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "GiggleAun",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Angthong_National_Marine_Park_350_m._View_point.JPG"
+ },
+ "places:koh-phi-phi-don-night": {
+  "file": "assets/img/places-koh-phi-phi-don-night.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Caitriana Nicholson",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Phi_Phi_viewpoint_(4463466585).jpg"
+ },
+ "places:krabi-4-islands": {
+  "file": "assets/img/places-krabi-4-islands.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "kallerna",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Koh_Poda_9.jpg"
+ },
+ "places:amp-listening-bar": {
+  "file": "assets/img/places-amp-listening-bar.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 750,
+  "srcH": 1000,
+  "credit": "Phuket Insider",
+  "license": "Guide photo (personal use)",
+  "source": "https://phuket-insider.com/en/places/amp-listening-bar-analogue-me-phuket/"
+ },
+ "places:tree-bay-clubhouse-kata": {
+  "file": "assets/img/places-tree-bay-clubhouse-kata.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2304,
+  "srcH": 1536,
+  "credit": "© Tree Bay Clubhouse",
+  "license": "official site",
+  "source": "https://tree-bay.com/"
+ },
+ "places:bebop-live-music-bar": {
+  "file": "assets/img/places-bebop-live-music-bar.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1065,
+  "credit": "Phuket 101",
+  "license": "Guide photo (personal use)",
+  "source": "https://www.phuket101.net/bebop-live-music-bar/"
+ },
+ "places:yona-beach-club": {
+  "file": "assets/img/places-yona-beach-club.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1400,
+  "srcH": 932,
+  "credit": "Phuket 101 (photo: Khun New)",
+  "license": "Guide photo (personal use)",
+  "source": "https://www.phuket101.net/yona-floating-beach-club/"
+ },
+ "places:catch-beach-club": {
+  "file": "assets/img/places-catch-beach-club.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1281,
+  "credit": "© Catch Beach Club",
+  "license": "official site",
+  "source": "https://www.catchbeachclub.com/"
+ },
+ "places:baba-nest": {
+  "file": "assets/img/places-baba-nest.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Sri panwa Hotel",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Baba_Nest.jpg"
+ },
+ "places:the-kitchen-patong": {
+  "file": "assets/img/places-the-kitchen-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1773,
+  "srcH": 1330,
+  "credit": "© The Kitchen Thai & International Cuisine",
+  "license": "official site",
+  "source": "https://www.kitchen-thailand.net/"
+ },
+ "places:chokchai-dim-sum": {
+  "file": "assets/img/places-chokchai-dim-sum.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2048,
+  "srcH": 1536,
+  "credit": "© Phuket One Map (phuketonemap.com)",
+  "license": "© phuketonemap.com (third-party site, all rights reserved)",
+  "source": "https://phuketonemap.com/chokchai-dimsum-phuket/"
+ },
+ "places:fruit-fusion-kamala": {
+  "file": "assets/img/places-fruit-fusion-kamala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 960,
+  "srcH": 1280,
+  "credit": "© Phuket Insider (phuket-insider.com)",
+  "license": "© phuket-insider.com (third-party site, all rights reserved)",
+  "source": "https://phuket-insider.com/en/places/fruit-fusion-kamala-cafe/"
+ },
+ "places:zima-spa-rawai": {
+  "file": "assets/img/places-zima-spa-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1440,
+  "credit": "© ZIMA Spa & Wellness",
+  "license": "official site",
+  "source": "https://zima.spa/"
+ },
+ "places:bangtao-muay-thai": {
+  "file": "assets/img/places-bangtao-muay-thai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1000,
+  "srcH": 667,
+  "credit": "© Bangtao Muay Thai & MMA",
+  "license": "official site",
+  "source": "https://bangtaomuaythai.com/"
+ },
+ "places:phuket-surf-house-patong": {
+  "file": "assets/img/places-phuket-surf-house-patong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2560,
+  "srcH": 1440,
+  "credit": "© Phuket Surf House",
+  "license": "official site",
+  "source": "https://phuketsurfhouse.com/patong/"
+ },
+ "places:flying-hanuman": {
+  "file": "assets/img/places-flying-hanuman.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 3000,
+  "srcH": 2000,
+  "credit": "© Flying Hanuman",
+  "license": "official site",
+  "source": "https://flyinghanuman.com/"
+ },
+ "places:sunrise-divers-try-dive": {
+  "file": "assets/img/places-sunrise-divers-try-dive.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1080,
+  "credit": "© Sunrise Divers",
+  "license": "official site",
+  "source": "https://www.sunrise-divers.com/courses/discover-scuba/"
+ },
+ "places:kba-efoil-kitesurf-rawai": {
+  "file": "assets/img/places-kba-efoil-kitesurf-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2560,
+  "srcH": 1707,
+  "credit": "© KBA Kiteboarding Asia",
+  "license": "official site",
+  "source": "https://kiteboardingasia.com/phuket/"
+ },
+ "places:wat-doi-thepnimit-viewpoint": {
+  "file": "assets/img/places-wat-doi-thepnimit-viewpoint.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1800,
+  "srcH": 1198,
+  "credit": "© Willy Thuan / phuket101.net",
+  "license": "© phuket101.net (third-party site, all rights reserved)",
+  "source": "https://www.phuket101.net/doi-thepnimit-phuket/"
+ },
+ "places:pensook-view-cafe": {
+  "file": "assets/img/places-pensook-view-cafe.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1065,
+  "credit": "© Willy Thuan / phuket101.net",
+  "license": "© phuket101.net (third-party site, all rights reserved)",
+  "source": "https://www.phuket101.net/pensook-view-cafe/"
+ },
+ "events:sail-away-pukka-up-boat-party": {
+  "file": "assets/img/events-sail-away-pukka-up-boat-party.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1235,
+  "srcH": 695,
+  "credit": "© Sail Away Party",
+  "license": "official site",
+  "source": "https://sailawayparty.com/gallery-sail-away-party/"
+ },
+ "events:russian-concerts-cherng-talay-jan-2027": {
+  "file": "assets/img/events-russian-concerts-cherng-talay-jan-2027.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 675,
+  "credit": "© Art of Events / Lotus Arena",
+  "license": "official site",
+  "source": "https://lotusarena.com/en/events/47-ddt-group-phuket"
+ },
+ "events:fira-beach-club-phuket": {
+  "file": "assets/img/events-fira-beach-club-phuket.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1080,
+  "credit": "© Fira Phuket",
+  "license": "official site",
+  "source": "https://firaphuket.com/gallery/"
+ },
+ "events:blanco-boat-party-phi-phi": {
+  "file": "assets/img/events-blanco-boat-party-phi-phi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1920,
+  "srcH": 1080,
+  "credit": "© Blanco Thailand",
+  "license": "official site",
+  "source": "https://blancothailand.com/blanco-boat-party/"
+ },
+ "events:phi-phi-pirate-boat": {
+  "file": "assets/img/events-phi-phi-pirate-boat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1536,
+  "srcH": 1026,
+  "credit": "© Phi Phi Pirate Boat",
+  "license": "official site",
+  "source": "https://phiphipirate.com/en"
+ },
+ "events:ibiza-pool-party-phi-phi": {
+  "file": "assets/img/events-ibiza-pool-party-phi-phi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2048,
+  "srcH": 1152,
+  "credit": "© Ibiza Phi Phi (Ibiza Pool Party)",
+  "license": "official site",
+  "source": "https://ibizaphiphi.com/pool-party/"
+ },
+ "events:loh-dalum-beach-bars-phi-phi": {
+  "file": "assets/img/events-loh-dalum-beach-bars-phi-phi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 990,
+  "srcH": 557,
+  "credit": "Kroisenbrunner",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phi_Phi_party.jpg"
+ },
+ "events:daft-funk-live-koh-phangan-2027": {
+  "file": "assets/img/events-daft-funk-live-koh-phangan-2027.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 707,
+  "credit": "© Daft Funk Live",
+  "license": "official site",
+  "source": "https://www.daftfunk.co.uk/"
+ },
+ "events:bluerama-sunset-pool-party-phangan": {
+  "file": "assets/img/events-bluerama-sunset-pool-party-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1028,
+  "srcH": 578,
+  "credit": "© Bluerama",
+  "license": "venue photo via phangan.events",
+  "source": "https://phangan.events/event-location/bluerama-koh-phangan/"
+ },
+ "events:merkaba-beach-bums-phangan": {
+  "file": "assets/img/events-merkaba-beach-bums-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "© Merkaba Sunset Beach Club",
+  "license": "venue photo via phangan.events",
+  "source": "https://phangan.events/event-location/merkaba-beach-club/"
+ },
+ "events:yep-listening-bar-phangan": {
+  "file": "assets/img/events-yep-listening-bar-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "© YEP Listening Bar Koh Phangan (official YouTube channel @YEPLISTENINGBAR)",
+  "license": "official site (venue's YouTube channel)",
+  "source": "https://www.youtube.com/watch?v=vgmYQtLaOcw"
+ },
+ "events:zen-beach-sunset-sessions-phangan": {
+  "file": "assets/img/events-zen-beach-sunset-sessions-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Hagai Agmon-Snir",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:KoPhaNganMar2025_06.jpg"
+ },
+ "events:secret-party-koh-tao": {
+  "file": "assets/img/events-secret-party-koh-tao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "© Secret Party Koh Tao",
+  "license": "organiser photo via phangan.events",
+  "source": "https://phangan.events/event-location/karma-bar-koh-tao/"
+ },
+ "events:hii-festival-koh-tao": {
+  "file": "assets/img/events-hii-festival-koh-tao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1632,
+  "srcH": 2040,
+  "credit": "© Hii Festival Koh Tao",
+  "license": "venue photo via entrix.vip (the event's ticket page)",
+  "source": "https://www.entrix.vip/event/hii-festival"
+ },
+ "events:leo-beach-music-festival-koh-tao": {
+  "file": "assets/img/events-leo-beach-music-festival-koh-tao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1000,
+  "srcH": 1000,
+  "credit": "© Leo Beach Music Festival",
+  "license": "official site",
+  "source": "https://leobeachmusicfestival.com/gallery-detail/38/sai-thong-beach--koh-tao/"
+ },
+ "places:mae-haad-pier-koh-tao": {
+  "file": "assets/img/places-mae-haad-pier-koh-tao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "kallerna",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mae_Haad_pier_Ko_Tao.jpg"
+ },
+ "places:visit-panwa-pier": {
+  "file": "assets/img/places-visit-panwa-pier.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 675,
+  "credit": "© ONE°15 Marina Panwa Phuket",
+  "license": "official site",
+  "source": "https://one15marina.com/panwa-phuket/marina/"
+ },
+ "events:sedo-izikura-phuket-town": {
+  "file": "assets/img/events-sedo-izikura-phuket-town.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 828,
+  "srcH": 828,
+  "credit": "© Sédo Izikura",
+  "license": "flyer, personal use",
+  "source": "https://ra.co/events/2089321"
+ },
+ "events:tree-secret-sound-garden-phangan": {
+  "file": "assets/img/events-tree-secret-sound-garden-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 966,
+  "srcH": 1280,
+  "credit": "© Tree Secret Sound Garden",
+  "license": "flyer, personal use",
+  "source": "https://phangan.events/events/tree-secret/"
  }
 }

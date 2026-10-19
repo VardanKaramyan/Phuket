@@ -10,7 +10,8 @@ import glob, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W = os.environ.get('PHUKET_WORKFLOWS_DIR', os.path.expanduser('~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/subagents/workflows'))
 # w8: the stays' listing photos, picked by hand (no workflow): research/photos/w8/stays.json
-WAVES = {'w1': 'wf_37b202cc-9ea', 'w2': 'wf_7449d89f-29c', 'w3': 'wf_a1aa8663-200', 'w4': 'wf_f4d31692-ce6', 'w5': 'wf_14607df2-a14', 'w6': 'wf_566ae36a-956', 'w7': 'wf_cf058967-e2e', 'w8': None}
+# w9: piers, boat tours, islands, places and events from the 19 Oct 2026 research; w10: the critic's four additions
+WAVES = {'w1': 'wf_37b202cc-9ea', 'w2': 'wf_7449d89f-29c', 'w3': 'wf_a1aa8663-200', 'w4': 'wf_f4d31692-ce6', 'w5': 'wf_14607df2-a14', 'w6': 'wf_566ae36a-956', 'w7': 'wf_cf058967-e2e', 'w8': None, 'w9': 'wf_24b94078-911', 'w10': 'wf_e63f8df1-e98'}
 
 extracted = {}
 for wave, wf in WAVES.items():

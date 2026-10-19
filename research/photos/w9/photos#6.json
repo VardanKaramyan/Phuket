@@ -1,0 +1,131 @@
+{
+ "results": [
+  {
+   "key": "places:the-kitchen-patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-the-kitchen-patong.jpg",
+   "url": "https://static.wixstatic.com/media/337798_922008aadada441eaf88cf524f0d3b9c%7Emv2.jpeg/v1/fit/w_2500,h_1330,al_c/337798_922008aadada441eaf88cf524f0d3b9c%7Emv2.jpeg",
+   "page": "https://www.kitchen-thailand.net/",
+   "credit": "\u00a9 The Kitchen Thai & International Cuisine",
+   "license": "official site",
+   "width": 1773,
+   "height": 1330,
+   "note": "Candidate 1, the official og:image: a seared-tuna salad with a poached egg on a table at The Kitchen, with the chain's branded menu beside it. Sharp, 4:3, and the 16:9 crop keeps the bowl (checked). The site is shared by the Patong, Lamai and Samui branches and has no photo of the Patong room itself, so this is the brand's own food photo."
+  },
+  {
+   "key": "places:chokchai-dim-sum",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-chokchai-dim-sum.jpg",
+   "url": "https://phuketonemap.com/wp-content/uploads/2020/07/IMG_20200716_093103-2048x1536.jpg",
+   "page": "https://phuketonemap.com/chokchai-dimsum-phuket/",
+   "credit": "\u00a9 Phuket One Map (phuketonemap.com)",
+   "license": "\u00a9 phuketonemap.com (third-party site, all rights reserved)",
+   "width": 2048,
+   "height": 1536,
+   "note": "Replaces the candidate, a generic Phuket dim sum photo from another shop. This is a table of Chokchai's own Phuket-style dim sum (yellow siu mai, seaweed pork rolls, the red dipping sauce) from a local guide site's July 2020 visit post. The post gives the same address (46/2 Mae Luan Rd) and 04:00-12:00 hours. Sharp, 4:3, no watermark. The shop's Facebook og:image is only its logo, and KTC's copy of its photo is 600x800 portrait."
+  },
+  {
+   "key": "places:fruit-fusion-kamala",
+   "ok": false,
+   "note": "No usable photo found. Tried: Commons and Openverse (nothing). There is no official website. The Facebook page fruitfusionofficial gives only the logo as og:image, and its photos need a login. Instagram @fruitfusioncafe has a login wall and its API is rate-limited. Guides (Northabroad, Keemala, the Bangtao gym blog) have no photo of their own, only a screenshot of unknown origin. Everything else is Tripadvisor / Wanderlog / Google user photos, which are not allowed. abillion has shut down."
+  },
+  {
+   "key": "places:zima-spa-rawai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-zima-spa-rawai.jpg",
+   "url": "https://zima.spa/media/img_0127.jpg",
+   "page": "https://zima.spa/",
+   "credit": "\u00a9 ZIMA Spa & Wellness",
+   "license": "official site",
+   "width": 1080,
+   "height": 1440,
+   "note": "Candidate 1, the official og:image: the poolside lounge terrace with teak and rattan armchairs under a thatched roof. It is portrait, but the 16:9 attention crop keeps the chairs and the pool edge (checked). The site's four other photos and its two videos (720x1280) all show the same lounge, with no banya shot, and no other source is indexed."
+  },
+  {
+   "key": "places:bangtao-muay-thai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bangtao-muay-thai.jpg",
+   "url": "https://bangtaomuaythai.com/wp-content/uploads/2022/10/SUPERBON_SEMINAR-73-of-100.jpg",
+   "page": "https://bangtaomuaythai.com/",
+   "credit": "\u00a9 Bangtao Muay Thai & MMA",
+   "license": "official site",
+   "width": 1000,
+   "height": 667,
+   "note": "Candidate 2, the homepage og:image: a trainer in Bangtao Muay Thai kit doing pad work with a student under the gym's neon 'Bangtao' sign. Chosen over candidate 1 (an MMA team huddle in MMA gloves with nothing that names the gym) because it shows both Muay Thai and the place. Sharp; the 16:9 crop keeps both people and the sign (checked)."
+  },
+  {
+   "key": "places:phuket-surf-house-patong",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-phuket-surf-house-patong.jpg",
+   "url": "https://phuketsurfhouse.com/wp-content/uploads/2023/05/Copy-of-IMG_20211231_133431-scaled.jpg",
+   "page": "https://phuketsurfhouse.com/patong/",
+   "credit": "\u00a9 Phuket Surf House",
+   "license": "official site",
+   "width": 2560,
+   "height": 1440,
+   "note": "From the official Patong page: two surfers on the Patong FlowRider wave, a coach with the tow rope, and onlookers. Behind them are the 'Surf House Pa(tong)' building sign and a 'Surf's up Patong' banner. Sharp and already 16:9. The site's og:image is only the logo."
+  },
+  {
+   "key": "places:flying-hanuman",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-flying-hanuman.jpg",
+   "url": "https://flyinghanuman.com/images/organized/hero/hero-3.jpg",
+   "page": "https://flyinghanuman.com/",
+   "credit": "\u00a9 Flying Hanuman",
+   "license": "official site",
+   "width": 3000,
+   "height": 2000,
+   "note": "Hero image 3 from the official site, the same hero set as the two candidates: a smiling rider in an orange helmet on the zipline over green jungle. Chosen over candidate 1 (a group on a tree platform, small figures on a phone card) because it reads clearly at 360 px. Sharp; the 16:9 crop keeps the rider and the cable (checked). The site's blog covers look AI-made and were skipped."
+  },
+  {
+   "key": "places:sunrise-divers-try-dive",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-sunrise-divers-try-dive.jpg",
+   "url": "https://www.sunrise-divers.com/wp-content/uploads/2016/04/discover-scuba.jpg",
+   "page": "https://www.sunrise-divers.com/courses/discover-scuba/",
+   "credit": "\u00a9 Sunrise Divers",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Candidate 1, the Discover Scuba page's og:image: two first-time divers holding hands over a coral reef in clear blue water. 16:9 and sharp enough for a card, with slight JPEG softness. The site's Racha Yai trip gallery photos are only 850 px wide."
+  },
+  {
+   "key": "places:kba-efoil-kitesurf-rawai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-kba-efoil-kitesurf-rawai.jpg",
+   "url": "https://kiteboardingasia.com/wp-content/uploads/2026/06/DSC06006-scaled.jpg",
+   "page": "https://kiteboardingasia.com/phuket/",
+   "credit": "\u00a9 KBA Kiteboarding Asia",
+   "license": "official site",
+   "width": 2560,
+   "height": 1707,
+   "position": "center",
+   "note": "Hero of KBA's Phuket page, directly above its Rawai address: KBA's beach spot with orange KBA flags, a kite in the air and a student carrying a wing, with forested hills across the water. The hills rule out west-facing Nai Yang, so this is most likely the Rawai spot. Candidate 1 was a generic eFoil brand shot from the page's eFoil section, not Phuket. Sharp. The attention crop cuts the students at the bottom; position 'center' keeps the kite, the flags and the beach (checked)."
+  },
+  {
+   "key": "places:wat-doi-thepnimit-viewpoint",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-wat-doi-thepnimit-viewpoint.jpg",
+   "url": "https://content.phuket101.net/wp-content/uploads/20181001210622/doi-thepnimit-phuket-island.jpg",
+   "page": "https://www.phuket101.net/doi-thepnimit-phuket/",
+   "credit": "\u00a9 Willy Thuan / phuket101.net",
+   "license": "\u00a9 phuket101.net (third-party site, all rights reserved)",
+   "width": 1800,
+   "height": 1198,
+   "position": "north",
+   "note": "From the same Phuket 101 article as the candidates: the white-and-gold chedi with naga railings, and Patong town and bay below. That is the hilltop view the card is about, while the two candidates show only the chedi (fisheye) and a naga statue. Commons has no photos of this temple. A small '\u00a9WillyThuan' mark sits bottom-left. The attention crop keeps it; position 'north' drops it and keeps the chedi and the bay (checked)."
+  },
+  {
+   "key": "places:pensook-view-cafe",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-pensook-view-cafe.jpg",
+   "url": "https://content.phuket101.net/wp-content/uploads/20260920214525/Pensook-View-Cafe-Patong-Beach-Phuket-5.jpg",
+   "page": "https://www.phuket101.net/pensook-view-cafe/",
+   "credit": "\u00a9 Willy Thuan / phuket101.net",
+   "license": "\u00a9 phuket101.net (third-party site, all rights reserved)",
+   "width": 1600,
+   "height": 1065,
+   "note": "Candidate 1 (Phuket 101, Sept 2026): guests in rattan chairs on the cafe terrace at sunset, looking down the green valley to Patong Bay. Sharp. A small '\u00a9 Phuket 101' mark sits bottom-right and falls outside the 16:9 attention crop (checked). The cafe's only official presence is a Facebook page."
+  }
+ ]
+}

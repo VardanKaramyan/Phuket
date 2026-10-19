@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:rassada-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-rassada-pier.jpg",
+   "url": "https://www.andamanwavemaster.com/wp-content/uploads/2026/06/andamanwave-pier-point.jpg",
+   "page": "https://www.andamanwavemaster.com/pier/",
+   "credit": "\u00a9 Andaman Wave Master",
+   "license": "official site",
+   "width": 1000,
+   "height": 500,
+   "note": "There were no candidates. This is an aerial photo from the item's website (the pier page, captioned 'Phuket Rassada Pier'). It shows the purple-roofed Rassada Harbour terminal with its name sign and a row of ferries at the quay. It is sharp and 2:1, and the 16:9 centre crop keeps the terminal and the ferries. Commons has a similar aerial (File:Rassada_Harbour_2025.jpg, Krishkara), but it has no camera EXIF and comes from an account that only uploads Rassada files, so I used the operator's own photo. The other Commons ground photo shows only the entrance with vans."
+  },
+  {
+   "key": "places:chalong-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-chalong-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Phuket_Chalong_Pier_03.jpg/1280px-Phuket_Chalong_Pier_03.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_Chalong_Pier_03.jpg",
+   "credit": "JULIANISME",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 960,
+   "note": "Found by Commons search; it is from the same September 2025 series as candidate 1 and geotagged at the pier. It shows Chalong Pier with its roofed jetty building on the left, speedboats and longtails in front and the yacht anchorage behind, under a cloudy sky. Candidate 1 shows the pier small at the left edge and is mostly water. Candidate 2 (the view from Big Buddha) is already used for areas:chalong."
+  },
+  {
+   "key": "places:rawai-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-rawai-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Phuket_-_Rawai_Beach_02.jpg/1280px-Phuket_-_Rawai_Beach_02.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_02.jpg",
+   "credit": "ADwarf",
+   "license": "Public domain",
+   "width": 1280,
+   "height": 960,
+   "note": "Found by Commons search (Rawai Beach category). It shows the long concrete Rawai pier on the right, two longtail boats with Thai flags and a speedboat, with islands behind (2010, overcast). Candidate 1 was rejected: it is a close-up of the red 'Rawai Landing Pier' sign, which is mostly text. This is a different file from the one used for areas:rawai (Rawai Beach 11)."
+  },
+  {
+   "key": "places:ao-po-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-ao-po-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ao_Po%2C_Phuket_%285729992145%29.jpg/1280px-Ao_Po%2C_Phuket_%285729992145%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ao_Po,_Phuket_(5729992145).jpg",
+   "credit": "edwin.11",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 851,
+   "note": "Found by Commons search. It shows the very long Ao Po pier with lamp posts running across the frame, and a speedboat and a longtail in the shallow bay (May 2011). The geotag is at the shore end of the pier and matches the pier line in OpenStreetMap. Candidate 1 (Diego Delso's panorama) is already used for areas:ao-po, and it is a view from the pier, not of it."
+  },
+  {
+   "key": "places:ao-po-grand-marina",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-ao-po-grand-marina.jpg",
+   "url": "https://aopograndmarina.com/wp-content/uploads/2016/10/prime-location-entrance-1600x1000.jpg",
+   "page": "https://www.aopograndmarina.com/",
+   "credit": "\u00a9 Ao Po Grand Marina",
+   "license": "official site",
+   "width": 1600,
+   "height": 1000,
+   "note": "From the slideshow on the official homepage. It is a sunny aerial view of the marina pontoons full of yachts and superyachts, with the wooded headland and the Phang Nga Bay hills behind. No watermark. Candidate 1 was rejected: it is a close-up of outboard engines at a boat show with a large 'FORUM.LINVOYAGE.COM' watermark."
+  },
+  {
+   "key": "places:bang-rong-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bang-rong-pier.jpg",
+   "url": "https://www.bangrongconnect.com/wp-content/uploads/2023/04/bangrong-community-travel-tourism-phuket-drone-mangrove-forest-5-scaled.jpg",
+   "page": "https://www.bangrongconnect.com/bangrong-community-based-tourism-phuket/",
+   "credit": "\u00a9 Bang Rong Connect",
+   "license": "official site",
+   "width": 2560,
+   "height": 1440,
+   "note": "From the media library of the Bang Rong community tourism site; the photo is attached to its Bang Rong page. It is a drone view of Bang Rong Pier: the jetty with parked cars and moored speedboats, the long floating raft restaurant and the mangrove channel out to Phang Nga Bay. It is natively 16:9 and sharp. It is a different photo from the one used for places:bang-rong-mangroves (forest-4). Candidate 1 (Tuderna, Commons) was rejected: it shows mangroves and sky with only two boat bows at the edge, not the pier, and has a thin frame."
+  },
+  {
+   "key": "places:laem-hin-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-laem-hin-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Unnamed_Road%2C_Koh_Keaw%2C_Amphoe_Mueang_Phuket%2C_Chang_Wat_Phuket_83000%2C_Thailand_-_panoramio.jpg/1280px-Unnamed_Road%2C_Koh_Keaw%2C_Amphoe_Mueang_Phuket%2C_Chang_Wat_Phuket_83000%2C_Thailand_-_panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Unnamed_Road,_Koh_Keaw,_Amphoe_Mueang_Phuket,_Chang_Wat_Phuket_83000,_Thailand_-_panoramio.jpg",
+   "credit": "Mozhar",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 960,
+   "note": "There were no candidates. This is the only real photo I found: Commons geosearch found it, while Commons text search, Flickr and Openverse had nothing. It shows the long Laem Hin pier on the left with a wooden passenger boat, and the wooden deck of the Laem Hin Seafood restaurant on the right, looking out to the islands (June 2011). The geotag is on that deck, next to the shore end of the 'Laem Hin Pier' line in OpenStreetMap. The sky is hazy and a bit cyan, but the photo is sharp, and the 16:9 centre crop keeps both piers and the boat. The weakest of the 11 picks, but acceptable."
+  },
+  {
+   "key": "places:royal-phuket-marina",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-royal-phuket-marina.jpg",
+   "url": "https://royalphuketmarina.com/wp-content/uploads/2022/05/Marina-Hero-Shot-S.jpg",
+   "page": "https://royalphuketmarina.com/",
+   "credit": "\u00a9 Royal Phuket Marina",
+   "license": "official site",
+   "width": 1922,
+   "height": 940,
+   "note": "Candidate 1, the homepage og:image. It shows yachts in the marina basin with the marina's white residence buildings and palms behind, under a blue dusk sky. It is about 2:1, and the 16:9 centre crop keeps the yachts and the buildings. A backup on the same site is the newer main slide (MainSlideRPM-scaled.jpg, a 2048x704 sunset aerial)."
+  },
+  {
+   "key": "places:thap-lamu-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-thap-lamu-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Phan-Nga%2C_2015_march_-_panoramio_%286%29.jpg/1280px-Phan-Nga%2C_2015_march_-_panoramio_%286%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Phan-Nga,_2015_march_-_panoramio_(6).jpg",
+   "credit": "Roma Neus",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "There were no candidates. Found by Commons geosearch: the geotag is 17 m from the Tap Lamu Pier point in OpenStreetMap. It shows dive and tour boats at the pier (a South Siam Divers speedboat, a red speedboat and two liveaboard ships) with people on the jetty, blue sky and forest behind (March 2015). It is natively 16:9 and sharp. The file title does not name the pier, but the location and the Similan dive boats fit. Flickr options were rejected: stormy fishing-boat shots."
+  },
+  {
+   "key": "places:klong-jilad-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-klong-jilad-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Klong_Jilad_Pier_in_Krabi.jpg/1280px-Klong_Jilad_Pier_in_Krabi.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Klong_Jilad_Pier_in_Krabi.jpg",
+   "credit": "Krzysztof Golik",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "Candidate 2. It shows the long roofed walkway of Klong Jilad Pier with a ferry docked at its end and Krabi's limestone cliffs behind, under a blue sky (Nov 2015). It is geotagged across the water from the terminal. Candidate 1 was rejected: it shows a navy ship and a government building beside a small jetty, not the passenger pier."
+  },
+  {
+   "key": "places:nopparat-thara-pier",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-nopparat-thara-pier.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2016_Prowincja_Krabi%2C_%C5%81odzie_w_przystani_Noppharat_Thara_%2802%29.jpg/1280px-2016_Prowincja_Krabi%2C_%C5%81odzie_w_przystani_Noppharat_Thara_%2802%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:2016_Prowincja_Krabi,_%C5%81odzie_w_przystani_Noppharat_Thara_(02).jpg",
+   "credit": "Marcin Konsek",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 847,
+   "note": "Found by Commons search; it is geotagged at the pier. It shows colourful longtail boats and a row of speedboats at Nopparat Thara pier, with the pier buildings and tall limestone cliffs behind, under a blue sky (Feb 2016). Candidate 1 (Jukka) was rejected: it is hazy and half the frame is empty sand."
+  }
+ ]
+}

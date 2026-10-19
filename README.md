@@ -1,6 +1,6 @@
 # Phuket Trip Guide (8–26 Jan 2027)
 
-A phone-first guide that works offline: music events, places to go, areas drawn on a map, hotels, money exchange, essentials and the apps to install.
+A phone-first guide that works offline: music events, places to go, islands, boat tours and the boats from each pier, areas drawn on a map, villas, money exchange, essentials and the apps to install.
 **To continue the work, read `HANDOFF.md`.** It has the status, the next steps and every decision.
 
 **Live site: https://phuket-six.vercel.app** (Vercel publishes `main` of `VardanKaramyan/Phuket` on every push). Open it once on the phone, then *Add to Home Screen* to use it offline.
@@ -29,7 +29,7 @@ Step by step:
 
 ```sh
 node tools/import.mjs research/result-final.json   # research -> data/*.json (overwrites them)
-node tools/curate.mjs                              # all editorial fixes + the 19-26 Jan research merge
+node tools/curate.mjs                              # all editorial fixes + the 19-26 Jan and 19 Oct island research merges
 node tools/import-apps.mjs research/result-apps.json   # apps page data (skipped if the file is missing)
 python3 -I tools/collect-photos.py                 # photo picks from research/photos/
 node tools/images.mjs                              # photos -> assets/img/*.webp
@@ -51,7 +51,7 @@ The map: wheel and trackpad zoom glide (`smoothWheel` in `src/app.js` replaces L
 
 Dram prices: the build adds the Armenian dram amount next to every baht price, on the page, in the map popups and in the KML (`tools/amd.mjs`: `500 THB (≈5,400 AMD)`, inside brackets `(100 baht, ≈1,100 AMD)`). The rate is `amdRate` in `data/extra.json` (10.8 AMD per baht, 17 Oct 2026); AMD also comes first in the converter, which refreshes it online. Decimal amounts are left alone (they are exchange rates), and a number without THB or baht right next to it gets no dram amount.
 
-Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Each `priceText` must start with `<total> THB for <nights> nights`: the build reads the big price on the card and the map popup from it, and stops with an error otherwise. Check Airbnb prices in the listing's booking box for 8 adults, 8-18 Jan (`?adults=8&check_in=2027-01-08&check_out=2027-01-18&currency=THB`); the total there includes all fees. Villa photo galleries: `npm run gallery` (or `node tools/stay-gallery.mjs <villa id>`) saves each listing's photo addresses into `data/stays.json` → `gallery` (nothing is downloaded); the cards swipe through them online, the saved photo first. Then `npm run data` and `npm run build`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
+Content edits: hand-written copy is in `data/extra.json`. The villa list (Where to stay) is hand-written in `data/stays.json`: `curate.mjs` swaps it in for the researched hotels, and its photos are picked in `research/photos/w8/stays.json`. Each `priceText` must start with `<total> THB for <nights> nights`: the build reads the big price on the card and the map popup from it, and stops with an error otherwise. Check Airbnb prices in the listing's booking box for 8 adults, 8-18 Jan (`?adults=8&check_in=2027-01-08&check_out=2027-01-18&currency=THB`); the total there includes all fees. Villa photo galleries: `npm run gallery` (or `node tools/stay-gallery.mjs <villa id>`) saves each listing's photo addresses into `data/stays.json` → `gallery` (nothing is downloaded); the cards swipe through them online, the saved photo first. Then `npm run data` and `npm run build`. Every other fix goes into `tools/curate.mjs` as code (Apps page fixes go into `tools/import-apps.mjs`), because the import overwrites `data/*.json`. Fixes to items from the late-January research go after `mergeLateJan(...)` in `curate.mjs`, or the merge overwrites them. Fixes to items from the 19 Oct 2026 island research (piers, boat tours, islands, island events) go in the hook tables of `tools/merge-islands-events.mjs`. Then run `npm run data`: `curate.mjs` refuses to run twice on the same import. The trip dates live in `tools/trip.mjs`.
 
 ## Deploy `dist/`
 

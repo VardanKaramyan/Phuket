@@ -220,11 +220,192 @@
   },
   {
    "id": "island-hopping",
-   "title": "Island hopping",
+   "title": "Ferries and boats",
    "items": [
     {
+     "title": "Which pier for which island",
+     "critical": false,
+     "text": "Phi Phi, Ao Nang, Railay, Koh Lanta and Koh Lipe: Rassada Pier near Phuket Town (a few Krabi speedboats leave Bang Rong or Laem Hin). Koh Yao Noi and Koh Yao Yai: Bang Rong (or Laem Hin). Racha and Coral Island: Chalong, or a longtail from Rawai. Phang Nga Bay: Ao Po, Royal Phuket Marina or Bang Rong. Similan: Thap Lamu in Khao Lak, 1.5-2 hours by road. Tours choose the pier, so read the voucher.",
+     "links": [
+      {
+       "label": "Phuket piers guide (Phuket 101, Aug 2026)",
+       "url": "https://www.phuket101.net/phuket-piers-and-ferries/"
+      }
+     ]
+    },
+    {
+     "title": "Last boats of the day",
+     "critical": true,
+     "text": "There are no night boats between Phuket and the islands. Last boats back: Phi Phi ferry 15:30, speedboat about 17:00; Koh Yao Noi about 16:00; Lanta speedboats about 15:30; Ao Nang and Railay speedboats about 14:00, the Ao Nang Princess ferry 15:00-15:15. Samui to Koh Phangan: Lomprayah 17:30 from Bangrak, Haad Rin Queen speedboat 18:30. Koh Tao to Koh Phangan: the 16:30 Lomprayah ferry (at Thong Sala 18:10).",
+     "links": [
+      {
+       "label": "Phi Phi to Phuket (Visit Thailand Today, Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phi-phi-to-phuket"
+      }
+     ]
+    },
+    {
+     "title": "How to book boats",
+     "critical": false,
+     "text": "Book on the company's own site (Lomprayah, Seatran Discovery, Bundhaya, Satun Pakbara, Andaman Wave Master) or on 12Go, Klook or Ferryscanner, which add a small fee. The Haad Rin Queen sells at its pier desk, on its own site and through Seatran Discovery; Rawai longtails only on the beach, in cash. In January book 2-3 days ahead, and a week ahead around the Full Moon (Fri 22 Jan) and the day after.",
+     "links": [
+      {
+       "label": "12Go",
+       "url": "https://12go.asia/en"
+      },
+      {
+       "label": "Klook",
+       "url": "https://www.klook.com"
+      },
+      {
+       "label": "Lomprayah",
+       "url": "https://www.lomprayah.com/"
+      },
+      {
+       "label": "Seatran Discovery",
+       "url": "https://www.seatrandiscovery.com/"
+      }
+     ]
+    },
+    {
+     "title": "E-ticket or voucher",
+     "critical": false,
+     "text": "Most online bookings give you a voucher or a QR code, not a boarding pass. At the pier, show it and your passport at the company's counter: you get a boarding pass or a sticker and a coloured luggage tag. A 12Go ticket marked e-ticket may need no swap. Be there 30-45 minutes early and save every ticket offline.",
+     "links": [
+      {
+       "label": "Rassada Pier check-in (Visit Thailand Today, Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/transportation/phuket/rassada-pier"
+      }
+     ]
+    },
+    {
+     "title": "Hotel pickup for boats and tours",
+     "critical": false,
+     "text": "Many ferry and tour tickets include a shared van from Patong, Kata, Karon, Rawai, Nai Harn and Phuket Town. Kamala, Surin, Bang Tao and Nai Yang usually cost about 150 THB per person each way (some sellers also charge it for Rawai and Nai Harn). Mai Khao, Layan and Nai Thon may need a private car, about 2,000 THB return. The van collects other hotels too, so be in the lobby 10 minutes early.",
+     "links": [
+      {
+       "label": "Pickup zones and extra fees (Tisland, 2026)",
+       "url": "https://www.tisland.travel/en/excursion/phuket-phi-phi-ferry-transfer-round-trip"
+      }
+     ]
+    },
+    {
+     "title": "Boats that run only in high season",
+     "critical": false,
+     "text": "These run in January but not all year: the Phuket - Lanta - Koh Ngai - Koh Mook - Koh Lipe speedboats (15 Oct 2026 - 30 Apr 2027, Bundhaya to 20 May), the big ferries Phuket - Phi Phi - Lanta and the Krabi Town - Lanta boats (November to April), the daily 13:30 Ao Nang Princess from Rassada (15 Nov - 19 May) and all Similan trips (15 Oct 2026 - 15 May 2027).",
+     "links": [
+      {
+       "label": "Satun Pakbara Lipe timetable 2026-27",
+       "url": "https://www.ferrylipe.com/ferry_timetable.html"
+      },
+      {
+       "label": "Bundhaya routes and seasons (official)",
+       "url": "https://www.bundhayaspeedboat.com/routes"
+      }
+     ]
+    },
+    {
+     "title": "Speedboat or big ferry",
+     "critical": false,
+     "text": "Speedboats are twice as fast (Phi Phi in 1 hour, not 2) but they bounce, spray and pile bags at the back. Big ferries roll much less and have seats inside. If you get seasick, take the ferry and sit low in the middle; on a speedboat sit at the back. Take a seasickness pill 30-60 minutes before you leave.",
+     "links": [
+      {
+       "label": "Phuket to Phi Phi boats (Visit Thailand Today, Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phuket-to-phi-phi"
+      }
+     ]
+    },
+    {
+     "title": "Safety on boats",
+     "critical": true,
+     "text": "Boats in Thailand can sink or collide, mostly because of overloading, poor maintenance or rough seas (UK travel advice). Use known companies, do not board a boat that looks overloaded, and wear the life jacket on speedboats and longtails. Keep your phone and passport in a dry bag.",
+     "links": [
+      {
+       "label": "UK travel advice: safety",
+       "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "January sea and cancellations",
+     "critical": true,
+     "text": "On the Andaman side (Phuket, Phi Phi, Krabi, Similan) January is calm and dry, so cancellations are rare. In the Gulf (Samui, Phangan) the north-east monsoon can raise 2-4 m waves until about early January (Thai Meteorological Department); from mid-January it usually settles, but a windy day can still delay or cancel boats. Do not plan a boat on the same morning as an important flight.",
+     "links": [
+      {
+       "label": "Thai Meteorological Department winter outlook (2024-25)",
+       "url": "https://www.tmd.go.th/media/climate/climate-monthly/winter2024-2025.pdf"
+      }
+     ]
+    },
+    {
+     "title": "Luggage on boats",
+     "critical": false,
+     "text": "Most boats take one suitcase and one hand bag per person. Andaman Wave Master allows a suitcase up to 25 inches on its ferries and 18 inches on speedboats, and charges 300 THB for each extra bag; Lomprayah's limit is 20 kg. On speedboats bags sit in a pile at the back and can get wet, so use a dry bag. Phi Phi and Koh Lipe have no cars: porters (about 100 THB on Phi Phi) or longtails carry bags.",
+     "links": [
+      {
+       "label": "Andaman Wave Master baggage rules",
+       "url": "https://www.andamanwavemaster.com/terms-conditions/"
+      }
+     ]
+    },
+    {
+     "title": "Route: Phuket - Phi Phi - Krabi",
+     "critical": false,
+     "text": "08:30 ferry from Rassada to Phi Phi (2 h) or a speedboat (1 h). Stay 1-2 nights. Then the 14:30 ferry to Ao Nang or Railay (about 2 h), or 10:30, 13:30 or 15:30 to Krabi Town (2 h). Back to Phuket by speedboat from Ao Nang or Railay in 1-2 hours, to Rassada, Bang Rong or Laem Hin. About 450-1,100 THB per leg.",
+     "links": [
+      {
+       "label": "Seatran Discovery booking (sells these ferries)",
+       "url": "https://www.seatrandiscovery.com/"
+      }
+     ]
+    },
+    {
+     "title": "Route: Phuket - Koh Lanta (and Phi Phi)",
+     "critical": false,
+     "text": "Fast: speedboat Rassada - Saladan in about 1 h 30 (08:30-14:30, 1,260-1,700 THB). Slow and scenic: the 08:30 ferry to Phi Phi, change boats, at Lanta about 12:30 (about 4 h, 820-1,350 THB, November to April). Lanta - Phi Phi is 30 min to 1 h 30. Speedboats back to Phuket leave Lanta until about 15:30.",
+     "links": [
+      {
+       "label": "Phuket to Koh Lanta (Visit Thailand Today, Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phuket-to-koh-lanta"
+      }
+     ]
+    },
+    {
+     "title": "Route: Phuket - Koh Yao Noi - Koh Yao Yai",
+     "critical": false,
+     "text": "Bang Rong to Manoh pier on Koh Yao Noi: 30-40 min by speedboat (about 400 THB), 08:40-17:00; the last boat back is about 16:00. Longtails cross from Manoh to Chong Lard on Koh Yao Yai in 10 min. Some Phuket - Ao Nang speedboats stop at Koh Yao, so you can go on to Krabi in about 1 hour.",
+     "links": [
+      {
+       "label": "Koh Yao Noi boat times (Camphadee)",
+       "url": "https://www.camphadee.com/Kohyaonoi_boat_schedule.html"
+      }
+     ]
+    },
+    {
+     "title": "Route: Phuket - Koh Lipe",
+     "critical": false,
+     "text": "In season the Satun Pakbara and Bundhaya speedboats leave Rassada at 08:30 and reach Koh Lipe about 13:30 (2,450-2,500 THB), via Phi Phi, Lanta and the Trang islands. Back about 09:00-10:30, in Phuket 14:30-16:00. Add the 200 THB park fee and about 50 THB for the longtail to the beach. Plan at least 3 nights.",
+     "links": [
+      {
+       "label": "Satun Pakbara Lipe timetable 2026-27",
+       "url": "https://www.ferrylipe.com/ferry_timetable.html"
+      }
+     ]
+    },
+    {
+     "title": "Route: Khao Lak - Similan",
+     "critical": false,
+     "text": "From Phuket the van leaves about 05:30-07:00 and takes 1.5-2 hours to Thap Lamu pier. Check-in about 08:00, then 1 h 15 - 1 h 30 by speedboat. Back at the pier 16:30-17:30 and in Phuket in the evening. A night in Khao Lak cuts 3-4 hours of driving.",
+     "links": [
+      {
+       "label": "Thap Lamu Pier (Visit Thailand Today, Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/transportation/khao-lak/thap-lamu-pier"
+      }
+     ]
+    },
+    {
      "title": "Koh Phangan: fastest (fly + boat)",
-     "text": "There is no direct boat. Fly Phuket - Koh Samui with Bangkok Airways (55 min, 6-7 flights a day, about 3,000-5,000 baht one way in late 2026). From Samui airport, a Lomprayah van + boat goes to Koh Phangan: about 500 baht, or 700 to your hotel, 1-2 hours. Door to door about 5 hours.",
+     "text": "There is no direct boat. Fly Phuket - Koh Samui with Bangkok Airways (55 min, up to 8 flights a day, from about 4,700 baht one way in Oct 2026). From Samui airport, a Lomprayah van + boat goes to Koh Phangan: about 500 baht, or 700 to your hotel, 1-2 hours. Door to door about 5 hours.",
      "links": [
       {
        "label": "Bangkok Airways",
@@ -241,30 +422,6 @@
      ]
     },
     {
-     "title": "Koh Phangan: one bus + boat ticket",
-     "text": "Lomprayah sells one ticket: bus to Donsak pier, then a fast boat. Pickup about 07:30 at hotels in Patong, Kata, Karon, Rawai and Nai Harn, or 10:00 at Phuket airport. You reach Koh Phangan about 16:30. About 1,600 baht, or 1,800 with hotel drop-off (2026 timetable). Book a few days ahead.",
-     "links": [
-      {
-       "label": "Lomprayah timetable 2026 (official)",
-       "url": "https://www.lomprayah.com/time-table"
-      },
-      {
-       "label": "12Go: Phuket to Koh Phangan",
-       "url": "https://12go.asia/en/travel/phuket/koh-phangan"
-      }
-     ]
-    },
-    {
-     "title": "Koh Phangan: cheapest and slowest",
-     "text": "Public bus from Phuket Bus Terminal 2 to Surat Thani (about 4 hours), van to Donsak pier (about 1 hour), then a ferry to Thong Sala (about 2.5 hours). Total about 8-9 hours and roughly 600-900 baht. Only worth it on a tight budget.",
-     "links": [
-      {
-       "label": "12Go: Phuket to Koh Phangan",
-       "url": "https://12go.asia/en/travel/phuket/koh-phangan"
-      }
-     ]
-    },
-    {
      "title": "Party trips: book early",
      "text": "Flights, boats and rooms on Koh Phangan sell out around big party dates. Book early and check the last boat back. Koh Phangan's rainy season is roughly October to December. January still gets some showers (about 130 mm on 8 to 9 days, against about 30 mm in Phuket), so rain and choppy seas are more likely there. Do not plan a tight connection to a flight home.",
      "links": [
@@ -273,63 +430,256 @@
        "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
       }
      ]
-    },
+    }
+   ]
+  },
+  {
+   "id": "islands",
+   "title": "Islands around Phuket",
+   "items": [
     {
-     "title": "Phi Phi ferries from Rassada Pier",
-     "text": "Big ferries leave Rassada Pier (near Phuket Town) at about 08:30, 11:00, 13:30 and 15:00. They take about 2 hours and cost about 500-700 baht. Speedboats take about 1 hour for 750-850 baht. Pay the 20-baht island fee in cash at Tonsai pier.",
+     "title": "Which island for what",
+     "text": "Party: Koh Phangan (raves) and a night on Phi Phi Don (beach bars). Snorkelling: Similan, Surin, Racha Yai and Noi, Koh Rok. Quiet beaches: Koh Yao Noi and Yao Yai, Koh Ngai, Koh Kradan. Views: Phang Nga Bay, Koh Hong, Railay, Ang Thong. Village life: Koh Panyee. Short and easy: Coral Island, the Khai Islands, or Koh Bon (10-15 min by longtail from Rawai, about 1,200 THB per boat, return).",
      "links": [
       {
-       "label": "Andaman Wave Master (ferry)",
-       "url": "https://www.andamanwavemaster.com"
-      },
-      {
-       "label": "Phuket to Phi Phi guide (Oct 2026)",
-       "url": "https://www.visitthailandtoday.com/guides/phuket-to-phi-phi"
+       "label": "Koh Bon from Rawai (May 2026)",
+       "url": "https://homeiswhereyourbagis.com/en/koh-bon-phuket/"
       }
      ]
     },
     {
-     "title": "Maya Bay and park fee",
-     "text": "Trips to Maya Bay and Phi Phi Le pay a national park fee: 400 baht for foreign adults, 200 for children. Some tours include it, others collect cash on the day. Swimming at Maya Bay is not allowed. The bay closes every year from 1 Aug to 30 Sep, so it is open in January.",
-     "links": [
-      {
-       "label": "Phuket to Phi Phi guide (Oct 2026)",
-       "url": "https://www.visitthailandtoday.com/guides/phuket-to-phi-phi"
-      }
-     ]
-    },
-    {
-     "title": "Krabi and Ao Nang",
-     "text": "Boats also run from Rassada Pier to Ao Nang in Krabi. The fastest speedboats take about 1-1.5 hours; ferries that stop at Phi Phi take much longer. Schedules change by season, so check times on 12Go.",
-     "links": [
-      {
-       "label": "12Go (ferries, buses, flights)",
-       "url": "https://12go.asia/en"
-      }
-     ]
-    },
-    {
-     "title": "Day tours: Chalong and Ao Po piers",
-     "text": "Many speedboat day tours (Phi Phi, Racha, Coral Island) leave from Chalong Pier in the south. Some boats leave from Ao Po Grand Marina in the north-east. Most tours include hotel pickup. Ask which pier before you book.",
+     "title": "Day trip or overnight",
+     "text": "Fine as a day trip from Phuket: Phi Phi and Maya Bay, Phang Nga Bay, Similan (very early start), Racha Yai and Noi, Coral Island, Khai, Koh Yao Noi and Yao Yai. Better with nights: Phi Phi Don and Railay (1-2), Koh Yao Noi (2-3), the Trang islands (2 or more). Plan 3 nights or more: Koh Lanta (about 1 h 30 min by speedboat) and Koh Lipe (about 5 h each way). Surin: an 11-12 h day from Phuket, or a night in the park tents.",
      "links": []
     },
     {
-     "title": "How to book boats",
-     "text": "Book on 12Go or on the official sites (Lomprayah, Seatran, Bangkok Airways). Save e-tickets offline. Arrive at the pier 30-45 minutes early to swap the e-ticket for a boarding pass.",
+     "title": "National park fees (2026 rates)",
+     "text": "Per foreign adult: Similan and Surin 500 THB; Phi Phi, Maya Bay and Bamboo Island 400; Phang Nga Bay and Koh Panyee 300 (one guide says 400); Koh Hong (Krabi) 300; Ang Thong 300; Koh Lanta park, Koh Mook (Emerald Cave), Koh Kradan, Koh Lipe and the Krabi 4 Islands 200 (Koh Rok tours charge 400). Children pay about half. Also in cash: Phi Phi Don pier 20 THB and Koh Nang Yuan about 250 THB. Racha, Coral Island and Koh Yao have no park fee.",
      "links": [
       {
-       "label": "12Go",
-       "url": "https://12go.asia/en"
+       "label": "Park fees 2026 (Siam Tour and Realty, Aug 2026)",
+       "url": "https://www.siamtourandrealty.com/thailand-national-park-fees/"
       },
       {
-       "label": "Lomprayah",
-       "url": "https://www.lomprayah.com"
-      },
-      {
-       "label": "Seatran Discovery",
-       "url": "https://www.seatrandiscovery.com"
+       "label": "National park e-ticket (DNP, official)",
+       "url": "https://e-ticket.dnp.go.th/"
       }
      ]
+    },
+    {
+     "title": "E-tickets for six marine parks",
+     "text": "Since 15 Oct 2025, the Phi Phi, Phang Nga Bay, Koh Hong (Than Bok Khorani), Similan, Surin and Koh Lanta parks sell e-tickets with a QR code, bought ahead (QueQ app or e-ticket.dnp.go.th) or before 08:00 on the day. The rollout is slow, and most piers still take cash (Oct 2026). Tours handle it: send your passport details when you book and carry a copy.",
+     "links": [
+      {
+       "label": "News: e-tickets from 15 Oct 2025 (Asian Trails)",
+       "url": "https://www.asiantrails.travel/?p=1044754"
+      },
+      {
+       "label": "National park e-ticket (DNP, official)",
+       "url": "https://e-ticket.dnp.go.th/"
+      }
+     ]
+    },
+    {
+     "title": "Seasons and closures",
+     "text": "Open in January: Similan and Surin (15 Oct 2026 - 15 May 2027), Maya Bay (closed only 1 Aug - 30 Sep), Koh Rok, the Emerald Cave and Ang Thong (closed about 1 Nov - 15 Dec). Sleeping on the Similan islands is banned: only liveaboard boats stay overnight. Koh Tachai (Similan) has been closed to landings since 2016. Landing on Koh Maiton is suspended (Phuket 101, Mar 2026).",
+     "links": [
+      {
+       "label": "Similan opens 15 Oct 2026 (Tisland)",
+       "url": "https://www.tisland.travel/en/blog/similany-otkryvayutsya-15-oktyabrya-2026"
+      },
+      {
+       "label": "Maya Bay reopened 1 Oct 2026 (Tisland)",
+       "url": "https://www.tisland.travel/en/blog/maya-bay-otkryvaetsya-1-oktyabrya-2026"
+      }
+     ]
+    },
+    {
+     "title": "Park rules: alcohol, drones, sunscreen",
+     "critical": true,
+     "text": "No alcohol in national parks: rules under the 2019 National Park Act ban drinking and selling it there. In April 2025 a boat driver was fined 10,000 THB after his guests drank and smoked at Pileh Lagoon, and Sirinat park (Nai Yang, Mai Khao) warns of fines from 5,000 THB. Drones need written park permission; Koh Hong bans them. Do not feed fish or touch coral. Banned sunscreens: fines up to 100,000 THB.",
+     "links": [
+      {
+       "label": "News: Phi Phi alcohol fine (Apr 2025)",
+       "url": "https://www.thephuketnews.com/boat-driver-fined-b10k-for-tourists-drinking-alcohol-smoking-at-phi-phi-islands-96104.php"
+      },
+      {
+       "label": "News: alcohol ban in Sirinat park (May 2025)",
+       "url": "https://www.thephuketnews.com/phuket-park-chief-warns-of-alcohol-ban-in-sirinat-96158.php"
+      }
+     ]
+    },
+    {
+     "title": "Beat the crowds",
+     "text": "Most tour boats reach Maya Bay, James Bond Island, Bamboo Island and Koh Panyee between 10:00 and 14:00. Book an early or sunrise departure, or sleep on the island and go at 07:00-09:00. Emerald Cave: before 09:00. Koh Nang Yuan: before 11:00.",
+     "links": []
+    },
+    {
+     "title": "Group days 8-18 Jan: the island plan",
+     "text": "If the group stays in Phuket on 10-14 Jan, use these days for the long trips: Similan (pickup 03:00-07:30), Phi Phi and Maya Bay, Phang Nga Bay. Hong by Starlight is best on dark nights early in the trip (new moon 8 Jan). A night on Phi Phi Don fits Mon 11 or Tue 12. The day after Circoloco (Sun 10, Sun 17), choose a short trip with a late start: a longtail from Rawai to Coral Island or Koh Bon.",
+     "links": []
+    },
+    {
+     "title": "The two of you, 19-23 Jan: Gulf islands",
+     "text": "From Koh Phangan: Koh Tao and Koh Nang Yuan (08:30 boat, back 15:30 or 16:30), or an Ang Thong speedboat tour (about 1,900 THB plus the 300 THB park fee). Both fit Wed 20 or Thu 21 between the night parties. Koh Ma, a free snorkel spot on a sandbar at Mae Haad beach (north-west Koh Phangan), is 25 min from Thong Sala; snorkel at high tide. Keep Fri 22 easy and Sat 23 for the boat and the flight.",
+     "links": [
+      {
+       "label": "Koh Phangan to Koh Tao boats (Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/koh-phangan-to-koh-tao"
+      },
+      {
+       "label": "Koh Ma sandbar (Thai Holiday Guide, Jul 2026)",
+       "url": "https://www.thaiholidayguide.com/attraction/koh-ma/"
+      }
+     ]
+    },
+    {
+     "title": "Solo days 24-26 Jan: islands near the airport",
+     "text": "From Nai Yang, take a Grab to Bang Rong Pier (about 17 km, 20-30 min) for boats to Koh Yao Noi and Koh Yao Yai (30-40 min, about 400 THB). Join-in tours cost the same alone: Khai Islands half day about 1,100 THB, Racha Yai from 1,300 THB. Sun 24 and Mon 25 work well. Do not book a boat trip on Tue 26: boats can be late, and you must be at the airport by 15:20.",
+     "links": []
+    }
+   ]
+  },
+  {
+   "id": "boat-tours",
+   "title": "Choosing a boat tour",
+   "items": [
+    {
+     "title": "Speedboat, big boat, catamaran or longtail",
+     "text": "Speedboats are the fastest (Phi Phi in about 1 hour) but bumpy, and carry 15 to 60 people. Big boats are slow and steady, cheaper and better if you get seasick; they often carry 40 to 80. Catamarans are stable with a big deck for sun and sunset, but slow. Longtails are for short hops near Ao Nang, Phi Phi Don or Phang Nga town.",
+     "links": [
+      {
+       "label": "Phi Phi tour types (Phuket 101, Apr 2026)",
+       "url": "https://www.phuket101.net/best-tours-to-phi-phi-island/"
+      },
+      {
+       "label": "Phang Nga Bay tour types (Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phang-nga-bay-guide"
+      }
+     ]
+    },
+    {
+     "title": "Small group, big group or private",
+     "text": "Budget tours put 30 to 60 people on one speedboat. Small-group boats (max 18-20, like Simba or Phuket Sail Tours) cost about 4,400-5,310 baht each. For 8 friends a private speedboat at about 20,000-46,600 baht per boat (2,500-5,800 each, often with pickup, lunch and park fees) costs about the same, and you choose the time and the stops.",
+     "links": [
+      {
+       "label": "Simba small-group tours (official)",
+       "url": "https://simbaseatrips.com/join-in-tours/"
+      },
+      {
+       "label": "Amazing Canoeing private boats (official)",
+       "url": "https://amazingcanoeing.com/private-charters/"
+      }
+     ]
+    },
+    {
+     "title": "Fair prices in January",
+     "text": "Per person with pickup and lunch (operator prices, Oct 2026): Phi Phi by speedboat 1,900-3,500 baht, small group or sunrise 4,400-5,310. James Bond Island 1,500-2,900 (the cheapest add the park fee), small group 4,500. Racha + Coral 1,100-1,300. Khai half day 1,000-1,200. Similan from Khao Lak 3,900-4,100, plus 300-400 for a Phuket pickup. Much cheaper offers often add fees at the pier.",
+     "links": [
+      {
+       "label": "Amazing Canoeing tours (official)",
+       "url": "https://amazingcanoeing.com/boat-tours/"
+      },
+      {
+       "label": "Tisland tour list (agency)",
+       "url": "https://www.tisland.travel/en/phuket/excursions"
+      }
+     ]
+    },
+    {
+     "title": "What is included, and what costs extra",
+     "text": "Most tours include hotel pickup, lunch, water, mask, snorkel, life jacket and basic insurance. Often extra: fins (100-200 baht), the park fee, pickup from outer areas like Kamala, Cape Panwa or Nai Yang (100-400 baht per person, or a private car), the longtail into Pileh Lagoon, alcohol, photos and tips. Ask for the pier and pickup time in writing.",
+     "links": [
+      {
+       "label": "Example inclusions (Amazing Canoeing)",
+       "url": "https://amazingcanoeing.com/boat-tours/phi-phi-bamboo-islands-by-speedboat/"
+      }
+     ]
+    },
+    {
+     "title": "Life jackets and reef rules",
+     "text": "Since 22 Apr 2025, snorkellers near coral must wear a life vest the whole time, unless they have a freediving card. One guide may watch up to 20 snorkellers. Touching coral or sea life and feeding fish are banned, and staff must stop your swim if you break the rules. In national parks use reef-safe sunscreen only.",
+     "links": [
+      {
+       "label": "TAT: new diving and snorkelling rules (May 2025)",
+       "url": "https://www.tatnews.org/2025/05/stricter-regulations-for-diving-activities-now-in-effect-in-thailand/"
+      }
+     ]
+    },
+    {
+     "title": "Safety on the water",
+     "text": "Accidents happen in high season too. On 11 Jan 2026 a tour speedboat from Chalong Pier with 55 people on board hit a fishing trawler between Koh Khai and Phi Phi, in 2 m waves: 1 tourist died and about 22 were hurt. The boat's driver was arrested and stricter checks were ordered. Choose a known operator with good recent reviews, and wear the life jacket when the sea is rough.",
+     "links": [
+      {
+       "label": "News: Phi Phi speedboat crash (Thai Examiner, Jan 2026)",
+       "url": "https://www.thaiexaminer.com/thai-news-foreigners/2026/01/12/young-russian-tourist-dies-after-speed-boat-overturns-in-andaman-sea-on-sunday-after-trawler-collision/"
+      },
+      {
+       "label": "News: the same crash (Baird Maritime, Jan 2026)",
+       "url": "https://www.bairdmaritime.com/security/incidents/accidents/video-tourist-killed-after-two-boats-collide-off-thailands-phi-phi-islands"
+      }
+     ]
+    },
+    {
+     "title": "Bad weather and refunds",
+     "text": "January is usually calm, but windy days can bring 2 m waves, and the Gulf around Koh Phangan is rougher. If the operator or the park cancels for weather, you get a new date or a full refund. If you cancel yourself, most tours refund only up to 24 hours before; Similan and Ang Thong trips need 48 hours, and Similan park fees are not refunded. Keep a spare day.",
+     "links": [
+      {
+       "label": "Simba cancellation rules (official)",
+       "url": "https://simbaseatrips.com/tours/phi-phi-sunrise-tour/"
+      },
+      {
+       "label": "Similan tour rules (Khao Lak Land Discovery)",
+       "url": "https://www.khaolaklanddiscovery.com/khao-lak-tours/similan-islands-tour/"
+      }
+     ]
+    },
+    {
+     "title": "Where to book",
+     "text": "Booking direct on the operator's website usually gives the clearest price, pier and pickup time. GetYourGuide and Viator add reviews, card payment and free cancellation up to 24 hours before on most tours; on Klook the rules differ by tour. Street agents sell the same budget boats: ask for the operator's name and the pier. In January book small-group boats and Similan trips early.",
+     "links": [
+      {
+       "label": "Klook",
+       "url": "https://www.klook.com"
+      },
+      {
+       "label": "GetYourGuide",
+       "url": "https://www.getyourguide.com"
+      },
+      {
+       "label": "Viator",
+       "url": "https://www.viator.com"
+      }
+     ]
+    },
+    {
+     "title": "Red flags",
+     "text": "No tourism licence number when you ask for it (check it in the government's Thailand Tourism Directory), a 'small group' that turns out to be 40-60 people, Phi Phi far below 1,500 baht, a park fee taken without a ticket, no life jackets, fake '50% off' prices, fish feeding offered as a stop, and jet-ski add-ons. Read reviews from the last few months, not only the average score.",
+     "links": [
+      {
+       "label": "Thailand Tourism Directory (official licence search)",
+       "url": "https://www.thailandtourismdirectory.go.th/"
+      },
+      {
+       "label": "How to check a tour licence (Railay Eco Tour, Jul 2026)",
+       "url": "https://www.railayecotour.com/en/blog/tourism-license-check"
+      }
+     ]
+    },
+    {
+     "title": "Seasickness and what to bring",
+     "text": "Take a seasickness pill 30 minutes before the boat and sit at the back of a speedboat. The morning sea is calmer than the ride back. Phang Nga Bay is calm; Phi Phi, Similan and Ang Thong are open sea. Bring a dry bag for your phone, a towel, a hat, water shoes, cash and reef-safe sunscreen.",
+     "links": [
+      {
+       "label": "Phi Phi day-trip tips (Phuket 101, Apr 2026)",
+       "url": "https://www.phuket101.net/best-tours-to-phi-phi-island/"
+      }
+     ]
+    },
+    {
+     "title": "Which pier your tour leaves from",
+     "text": "Day tours leave from several piers. Chalong Pier: Racha, Coral Island and some Phi Phi boats. Royal Phuket Marina and Boat Lagoon: many Phi Phi, Phang Nga and Krabi speedboats. Ao Po Pier (not Ao Po Grand Marina): Phang Nga Bay big boats and canoe trips. Visit Panwa: Love Andaman. Most tours include pickup; ask which pier.",
+     "links": []
     }
    ]
   },
@@ -350,7 +700,7 @@
     },
     {
      "title": "Fastest way: fly Phuket to Koh Samui, then a boat",
-     "text": "Bangkok Airways is the only nonstop airline from Phuket (HKT) to Koh Samui (USM). On Mon 18 and Tue 19 Jan 2027 there are 8 flights a day, 55 minutes: 07:30, 09:45, 11:00, 12:55, 14:15, 16:35, 17:30 and 19:55, from about 4,730 THB one way (Google Flights, 16 Oct 2026). Take the 14:15 flight or earlier. Later flights miss the last boats to Thong Sala; only the Haad Rin Queen speedboat at 18:30 still goes to Haad Rin.",
+     "text": "Bangkok Airways is the only nonstop airline from Phuket (HKT) to Koh Samui (USM). On Mon 18 and Tue 19 Jan 2027 there are 8 flights a day, 55 minutes: 07:30, 09:45, 11:00, 12:55, 14:15, 16:35, 17:30 and 19:55, from about 4,730 THB one way (Google Flights, 16 Oct 2026). Take the 14:15 flight or earlier. Later flights miss the last boats to Thong Sala. The Haad Rin Queen speedboat at 18:30 still goes to Haad Rin, and Echo Travel lists speedboats from Petcherat Marina to Baan Tai at 18:30 and 20:30 (its own site was offline in Oct 2026, so check before you rely on it).",
      "critical": true,
      "links": [
       {
@@ -414,7 +764,7 @@
     },
     {
      "title": "Raja car ferry (only with a car or a bus ticket)",
-     "text": "Raja Ferry crosses from Donsak on the mainland to Thong Sala at 05:00, 08:00, 11:00, 14:00 and 18:00 (2 h 30 min), and from Lipa Noi on Samui in about 1 h 30 min. It is slow; you only use it on a bus + ferry ticket or with a car.",
+     "text": "Raja Ferry crosses from Donsak on the mainland to Thong Sala at 05:00, 08:00, 11:00, 14:00 and 18:00 (2 h 30 min, 270 THB; back from Thong Sala at 05:00, 08:00, 11:00, 14:00 and 17:30). Raja's own site no longer lists a Lipa Noi (Samui) - Koh Phangan sailing; its Samui boats only go to Donsak. It is slow; you only use it on a bus + ferry ticket or with a car.",
      "critical": false,
      "links": [
       {
@@ -440,7 +790,7 @@
     },
     {
      "title": "Earliest boats from Koh Phangan on Sat 23 Jan",
-     "text": "From Thong Sala the first boat is the Lomprayah speedboat at 07:30 to Bangrak (arrives 08:00, 350 THB; 2026 timetable). With its van ticket (500 THB) you are at Samui airport at 08:30, in time for the 09:20 flight. Later: Seatran 10:30 and 11:00 (500 THB with the airport transfer, at the airport 12:00 or 12:30). From Haad Rin: Haad Rin Queen ferry 09:30 (200 THB) or speedboat 12:30 (500 THB) to Bangrak.",
+     "text": "From Thong Sala the first boat is the Lomprayah speedboat at 07:30 to Bangrak (arrives 08:00, 350 THB). On 19 Oct 2026 its booking system showed only a few seats left for Sat 23 Jan (2 pier tickets, 5 with the airport van), so book it now if you want it. With its van ticket (500 THB) you are at Samui airport at 08:30, in time for the 09:20 flight. Later: Seatran 10:30 and 11:00 (500 THB with the airport transfer, at the airport 12:00 or 12:30). From Haad Rin: Haad Rin Queen ferry 09:30 (200 THB) or speedboat 12:30 (500 THB) to Bangrak.",
      "critical": true,
      "links": [
       {
@@ -455,7 +805,7 @@
     },
     {
      "title": "Backup if the flights are full",
-     "text": "The Lomprayah bus + boat leaves Thong Sala at 11:00 and reaches its Phuket Town office at 18:30 (1,400 THB, 2026 timetable). Other bus + ferry tickets to Phuket Bus Terminal 2 leave in the morning and take 10-12 hours; check 12Go for times. From Phuket Town it is about 1 hour by taxi north to Natai.",
+     "text": "The Lomprayah bus + boat leaves Thong Sala at 11:00 and reaches its Phuket office at 18:30 (1,400 THB, 2026 timetable). Samui Tour's boat + bus leaves Thong Sala at 11:30 and reaches Phuket airport at 18:30 (1,060 THB, on sale for 23 Jan 2027), about 30-45 minutes from Natai. Phantip's leaves at 08:30 and reaches Phuket Bus Terminal 2 at 18:00 (900 THB). From Phuket Town it is about 1 hour by taxi north to Natai.",
      "critical": false,
      "links": [
       {
@@ -598,6 +948,177 @@
    ]
   },
   {
+   "id": "island-parties",
+   "title": "Parties on the islands",
+   "items": [
+    {
+     "title": "Island parties: sleep on the island",
+     "text": "No ferries go back to Phuket at night. From Phi Phi the last ferry leaves at about 15:30 and the last speedboat at about 17:00 (Oct 2026), but the party boats come back at about 19:00. A private speedboat after the party costs about 15,000 THB (Blanco, 2026). For a party night on Phi Phi, Koh Lanta or Railay, book a room there and come back the next day.",
+     "critical": true,
+     "links": [
+      {
+       "label": "Phi Phi to Phuket boats (Oct 2026)",
+       "url": "https://www.visitthailandtoday.com/guides/phi-phi-to-phuket"
+      },
+      {
+       "label": "Blanco Boat Party FAQ (2026)",
+       "url": "https://blancothailand.com/blanco-boat-party/"
+      }
+     ]
+    },
+    {
+     "title": "Phi Phi at night",
+     "text": "The party strip is Loh Dalum Beach, a few minutes' walk from Tonsai Pier. Fire shows start at about 19:00-21:00 and the bars play loud music until about 02:00, Stones until 02:30. Stay out of the fire-show area, never try the fire rope, and do not swim after drinking. Rooms near Loh Dalum and Tonsai are noisy.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Phi Phi nightlife guide (Oct 2026)",
+       "url": "https://www.asgoodrestaurant.com/blog/11982/phi-phi-nightlife-guide"
+      },
+      {
+       "label": "Phi Phi beach parties guide",
+       "url": "https://thelandofwanderlust.com/nightlife-in-phi-phi-beach-parties/"
+      }
+     ]
+    },
+    {
+     "title": "Koh Lanta at night",
+     "text": "Lanta is calm, and each party night is at a different beach bar (local guide, 2026): Pangea on Long Beach on Tuesday and Sunday, The Ozone on Long Beach on Thursday, Fusion Beach Bar near Relax Bay on Friday. Why Not Bar in Kantiang Bay has fire shows every night. The bars are far apart and late tuk-tuks are rare, so ask your hotel to book a driver.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Koh Lanta nightlife 2026 (Amazing Lanta)",
+       "url": "https://amazinglanta.com/koh-lanta-night-life-wheres-the-party"
+      },
+      {
+       "label": "Getting around Koh Lanta",
+       "url": "https://amazinglanta.com/hiring-a-motorbike-tuk-tuk-and-car-on-koh-lanta/"
+      }
+     ]
+    },
+    {
+     "title": "Railay and Ao Nang at night",
+     "text": "Railay has no roads. Shared longtails to Ao Nang cost 100 THB per person and leave when about 8 people are waiting. After about 18:00 it is about 150 THB, and boats run until about 21:00-22:00. If nobody else is waiting, you pay 600-800 THB for the whole boat (Aug 2026). Railay nightlife is small reggae bars and fire shows, busiest on East Railay.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Ao Nang to Railay boats (Aug 2026)",
+       "url": "https://couplestravelstories.ca/ao-nang-railay-beach/"
+      },
+      {
+       "label": "Railay nightlife",
+       "url": "https://amazinglanta.com/railay-beach-nightlife/"
+      }
+     ]
+    },
+    {
+     "title": "Boat parties: what to bring",
+     "text": "Bring your passport or original ID (Sail Away is 20+, Blanco 18+), cash for the balance and the bar, reef-safe sunscreen and a dry bag. You cannot bring your own drinks. No drinking or smoking inside the national park at Maya Bay and Pileh Lagoon. If rough sea stops the trip, they move the date or refund you, but Blanco keeps your deposit if you cancel.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Sail Away rules (Megatix)",
+       "url": "https://megatix.in.th/events/sailaway-foam-boat-party-phuket"
+      },
+      {
+       "label": "Blanco Boat Party FAQ",
+       "url": "https://blancothailand.com/blanco-boat-party/"
+      },
+      {
+       "label": "Park alcohol fine (Phuket News, Apr 2025)",
+       "url": "https://www.thephuketnews.com/boat-driver-fined-b10k-for-tourists-drinking-alcohol-smoking-at-phi-phi-islands-96104.php"
+      }
+     ]
+    },
+    {
+     "title": "Underground boat parties",
+     "text": "Underground crews run a boat party only now and then, posted a few weeks ahead. Example: SUB's UK garage and drum and bass boat party from Chalong Pier on Tue 27 Jan 2026, 12:00-19:00, 3,990 THB, only 40 tickets (Resident Advisor). Nothing is announced for Jan 2027 yet (19 Oct 2026). Check RA and @subphuket in December.",
+     "critical": false,
+     "links": [
+      {
+       "label": "SUB Boat Party 2026 (RA)",
+       "url": "https://ra.co/events/2347461"
+      },
+      {
+       "label": "SUB on Instagram",
+       "url": "https://www.instagram.com/subphuket/"
+      }
+     ]
+    },
+    {
+     "title": "Party on Koh Tao? Stay the night",
+     "text": "Koh Tao is 1 to 1.5 hours by boat from Thong Sala. In Jan 2027 Lomprayah has 7 boats a day from 08:30 to 16:45 (450-600 THB). Boonsiri boats, sold on the Seatran site, leave at 08:45, 13:15 and 15:45 (600 THB). The last boat back leaves Koh Tao at 16:30. There are no night boats, so book a room on Koh Tao.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Lomprayah booking",
+       "url": "https://www.lomprayah.com/"
+      },
+      {
+       "label": "Seatran Discovery booking (Boonsiri boats to Koh Tao)",
+       "url": "https://www.seatrandiscovery.com/"
+      }
+     ]
+    },
+    {
+     "title": "Free rides go to the party, not back",
+     "text": "On Koh Tao some tickets include a free ride to the party, never back. Secret Party: 22:00-24:00 from the 7-Eleven by Factory Café and the Sairee petrol station. Leo Beach: 21:00-24:00 from Sairee and Mae Haad. Hii Festival: 21:30-02:00. For the way home, agree the taxi price before you get in.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Secret Party Koh Tao (Megatix)",
+       "url": "https://megatix.in.th/SECRETPARTY"
+      },
+      {
+       "label": "Hii Festival (Entrix)",
+       "url": "https://www.entrix.vip/event/hii-festival"
+      }
+     ]
+    },
+    {
+     "title": "Buy online and arrive early",
+     "text": "Online tickets cost less than the door: Waterfall 1,100-1,400 THB vs 1,500, Jungle Experience 850-1,000 vs 1,200, Secret Party Koh Tao 500-700 vs 800. Many nights are free early: Lighthouse before 22:00, Seaside before 21:00 (women 22:00), Hollystone before 21:00, Bambu before 16:00, many Retro Mountain nights before 22:00. Jungle Experience, OXA and Halfmoon do not refund tickets.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Koh Phangan tickets (Entrix)",
+       "url": "https://www.entrix.vip/events?city=phangan"
+      },
+      {
+       "label": "Megatix Thailand",
+       "url": "https://megatix.in.th/"
+      }
+     ]
+    },
+    {
+     "title": "Where island parties sell tickets",
+     "text": "Megatix: OXA, Jungle Experience, Hollystone, Halfmoon, Groovy Tunes (Unclave), Secret Party and Leo Beach. Entrix (entrix.vip): Waterfall, Bambu, Bluerama and Hii Festival. Seaside and Retro Mountain sell on both. Eventpop: Waterfall and Halfmoon. Get In: Utopia. Vibez: Lost Jungle. Buy from the links in this guide or on the organiser's own page.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Entrix: Koh Phangan",
+       "url": "https://www.entrix.vip/events?city=phangan"
+      },
+      {
+       "label": "Entrix: Koh Tao",
+       "url": "https://www.entrix.vip/events?city=koh-tao"
+      }
+     ]
+    },
+    {
+     "title": "Bring ID: many parties are 20+",
+     "text": "Age limits set by the organisers on Megatix: Jungle Experience, Hollystone, Halfmoon and Leo Beach 20+, Retro Mountain 21+ (Oct 2026), OXA 18+. Bluerama is adults only. Entrix shows '21+' on every event, so it does not tell you the real rule. Halfmoon checks that the name on the ticket matches your passport. Carry your passport or a photo ID.",
+     "critical": false,
+     "links": [
+      {
+       "label": "Jungle Experience tickets (Megatix)",
+       "url": "https://megatix.in.th/events/jungle-experience-festival-dec-23rd-2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "connectivity",
    "title": "SIM, eSIM and Wi-Fi",
    "items": [
@@ -639,6 +1160,21 @@
       {
        "label": "UK travel advice: local laws",
        "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security"
+      }
+     ]
+    },
+    {
+     "title": "Shisha (hookah) is illegal too",
+     "text": "Shisha and electronic shisha are illegal in Thailand, the same as vapes (Tourism Authority of Thailand). In 2026 officials raided hookah bars in Patong and then in Rawai. Some bars and Google listings still offer it. Say no.",
+     "critical": false,
+     "links": [
+      {
+       "label": "TAT: anti-smoking laws (Nov 2019)",
+       "url": "https://www.tatnews.org/2019/11/tat-highlights-anti-smoking-laws-in-thailand/"
+      },
+      {
+       "label": "ASEAN Now: Phuket hookah raids (Aug 2026)",
+       "url": "https://aseannow.com/thailand-news/phuket-hookah-raids-expand-from-patong-to-rawai-r3137/"
       }
      ]
     },
@@ -799,7 +1335,7 @@
     },
     {
      "title": "Find the techno people",
-     "text": "Check Resident Advisor with the location set to Thailand (its Phuket page stays empty; Shelter has a club page there), and the Instagram pages of Shelter, Courage Bar and SUB (FAKE PALM nights show up on RA and Megatix): small parties are posted only 1-3 weeks ahead. Go early, stand near the booth and talk to the DJs and bar staff. They know the after-parties.",
+     "text": "Check Resident Advisor with the location set to Thailand (its Phuket page stays empty; Shelter has a club page there), and the Instagram pages of Shelter, Courage Bar, SUB and Sédo Izikura (@sedoizikura; FAKE PALM nights show up on RA and Megatix, and phangan.events lists Phuket club nights): small parties are posted only 1-3 weeks ahead. Go early, stand near the booth and talk to the DJs and bar staff. They know the after-parties.",
      "links": [
       {
        "label": "Shelter Phuket on Resident Advisor",

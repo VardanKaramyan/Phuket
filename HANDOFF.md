@@ -1,6 +1,7 @@
 # Handoff: Phuket Trip Guide
 
 **Status, 16 Oct 2026: done.** The guide is built, tested and published for the full trip (8-26 Jan 2027), including the new **Apps and services** page: 54 apps, all fact-checked, including the completeness critic's additions. The online copy is version 6. Nothing is half-done. Optional follow-ups are in section 9.
+**Update, 19 Oct 2026: done.** The user asked for deep research on ports and ferries, islands, island events, island-hopping tours, music events and places for their taste. Seven researchers, seven adversarial fact-checkers, a completeness critic and its fact-check ran as `tools/workflows/islands-events.js` (run `wf_0c06cc84-75b`); the result is `research/result-islands-events.json`, merged by `tools/merge-islands-events.mjs` (called by `curate.mjs`; its hook tables hold every editorial decision, section 10). New in the guide: 25 pier cards with their boats, times and prices (Places → Piers & ferries), 13 boat tours with the price of a private boat for 8 (Places → Boat tours), 12 more islands, 17 places for the user's taste (a vinyl listening bar, a jazz bar, beach clubs, late food, a banya, Muay Thai, a zipline, a try-dive, eFoil), 17 new music items (Sédo Izikura's late sessions in Old Town, Tree Secret Sound Garden on Koh Phangan, the Koh Tao and Phi Phi parties, the Saturday boat party) and fresh facts on 14 others, 3 new Info sections (Islands around Phuket, Choosing a boat tour, Parties on the islands) with Island hopping rebuilt as Ferries and boats, 38 checked corrections, and day tips for boat days. Photos for the new items: waves 9 and 10 (`wf_24b94078-911`, `wf_e63f8df1-e98`).
 This file is meant to be enough on its own, on any machine. Open the folder in Claude Code and say: **"Read HANDOFF.md and continue."**
 
 ---
@@ -31,10 +32,11 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
    - Python 3.9 or newer, for `tools/collect-photos.py` and a few helpers.
    - Google Chrome (or Chromium), for the tests and screenshots. It is found automatically on macOS, Linux and Windows; otherwise set `CHROME_PATH=/path/to/chrome`.
 3. Run `npm install`, then `npm run all`. That rebuilds the data, builds the site and runs the tests. It should exit with code 0 and print:
-   - `checked: 40 events, 71 places, 20 areas, 16 hotels, 8 brands` and `no problems found`
+   - `checked: 57 events, 138 places, 20 areas, 29 hotels, 8 brands` and `no problems found`
    - `OFFLINE TEST PASSED`
    - 27 lines of `buttons ok` (3 phone sizes × 9 popups), then `POPUP TEST PASSED`
    - `54 apps · by priority {"must":11,"useful":25,"optional":18} …`, and the 4 `apps fix:` lines from curate.
+   - About 150 `islands/events:` lines from curate (the 19 Oct 2026 merge), with no `NO MATCH` among them.
 
    Every check and test exits with code 1 when it fails.
 4. To look at the result, open `dist/phuket-guide-offline.html` in a browser (after step 3, so it matches the data), or run `npm run serve` and open http://localhost:8080.
@@ -52,7 +54,7 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 - Likes big tasks done thoroughly. They turn on **max effort and "ultracode"** (run substantive work as Workflow orchestrations with adversarial fact-checks). They expect progress updates while long workflows run.
 - Wants this `HANDOFF.md` kept up to date during long work. They switch sessions and machines, and a terminal restart once killed a long workflow mid-run.
 - Ask before anything outward-facing: hosting `dist/`, a Google My Maps import, pushing to GitHub. They chose **"Skip for now"** on hosting (16 Oct 2026), then set up Vercel themselves on 17 Oct 2026 (see section 9, item 2).
-- Two GitHub remotes: `origin` = `vardan-k/Phuket`, `karamyan` = `VardanKaramyan/Phuket` (public; Vercel deploys from its `main`). Push with `git push karamyan main` and `git push origin main`.
+- Remotes: `karamyan` = `VardanKaramyan/Phuket` (public; Vercel deploys from its `main`) is the one to sync with: `git pull karamyan main`, `git push karamyan main`. `origin` = `vardan-k/Phuket` is private and still has the old history from before the 19 Oct 2026 rewrite (with the Claude trailers); do not push there unless the user asks (it would need a force push).
 - Loves underground techno (Bassiani / Berlin style), good raves and festivals. Events are ranked underground-first.
 
 ## 3. The trip (the content depends on these facts)
@@ -154,8 +156,8 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 
 ## 5. Where everything stands (done and tested)
 
-- **Content:** 40 music items (dated events, weekly nights, clubs), 71 places (must-see, hidden gems, day trips, food), 20 areas, 25 villas for the group (the user's own Airbnb and Booking.com shortlist for 8 guests, 8-18 Jan, which replaced the 28 researched hotels on 16 Oct 2026; on 17 Oct 2026 every price was re-checked, 10 were added and Kata V2 Sea View Villa was removed at the user's request), 8 money-changer brands, 12 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
-- **Photos:** 173 photos, 166 in use. Each was looked at by an agent and cropped to 640×360 WebP. Sources are Wikimedia Commons (with author and license) or the venue's own site or social accounts, for personal use only.
+- **Content:** 57 music items (dated events, weekly nights, clubs), 138 places (must-see, hidden gems, day trips, food, 13 boat tours and 25 piers with their boats), 20 areas, 25 villas for the group (the user's own Airbnb and Booking.com shortlist for 8 guests, 8-18 Jan, which replaced the 28 researched hotels on 16 Oct 2026; on 17 Oct 2026 every price was re-checked, 10 were added and Kata V2 Sea View Villa was removed at the user's request), 8 money-changer brands, 15 Info sections and 16 Thai phrases. Every item was researched and then adversarially fact-checked: coordinates re-derived, closures checked, dates confirmed on ticket sites. Each item has a `verification` note, and there is a log in `data/research-log.json`.
+- **Photos:** 287 photos (19 Oct 2026, after waves 9 and 10). Each was looked at by an agent and cropped to 640×360 WebP. Sources are Wikimedia Commons (with author and license) or the venue's own site or social accounts, for personal use only.
 - **Site:**
   - Hash-routed and works with JavaScript off (CSS `:target`); light and dark themes.
   - Home: a boarding-pass header with one row of days per trip phase, the flight, and a day agenda. On 19-22 Jan the agenda lists Koh Phangan first; flight day lists no evening events.
@@ -169,10 +171,10 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
   - Map (17 Oct 2026): wheel and trackpad zoom glide instead of jumping in 0.25 steps; a full-screen button (top of the map buttons; Esc or the same button exits); Satellite works offline with the EOxCloudless tiles (section 10).
 - **Outputs:**
   - `dist/`: the offline web app (service worker), set up on Vercel on 17 Oct 2026 (section 9, item 2).
-  - `dist/phuket-guide-offline.html`: about 12.2 MB single file with the photos and the offline satellite tiles inside; the copy to keep on the phone. The copy now on the phone is older, so AirDrop the new one (and again after each rebuild).
+  - `dist/phuket-guide-offline.html`: about 17.4 MB single file with the photos and the offline satellite tiles inside; the copy to keep on the phone. The copy now on the phone is older, so AirDrop the new one (and again after each rebuild).
   - `artifact/index.html`: the build of the online copy, published as **version 6** (16 Oct 2026, with the full Apps page).
   - `dist/phuket-areas.kml`: for Google My Maps.
-- **Tests, last run 17 Oct 2026, all pass:**
+- **Tests, last run 19 Oct 2026 (`npm run all`), all pass:**
   - `check`: no problems.
   - `offline-test`: both host styles, including Satellite with the server stopped.
   - `popup-test`: 27/27.
@@ -190,7 +192,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 | Step | Command | What it does |
 | --- | --- | --- |
 | 1 | `node tools/import.mjs research/result-final.json` | Main research result → `data/{events,places,areas,hotels,exchanges,essentials}.json` (normalized) + `data/research-log.json` + `data/photo-items.json`. **Overwrites those files.** |
-| 2 | `node tools/curate.mjs` | All editorial fixes, in order: duplicates, QA fixes, texts for the 8-26 Jan dates, then `mergeLateJan()` (`tools/merge-late-jan.mjs` reads `research/result-late-jan.json`), the apps corrections, Google place ids, area labels that match the map polygons. **Hand edits to data go here** (as code), not straight into `data/*.json`, or the next import wipes them. It runs once per fresh import (it appends tips), so it refuses to run on curated data: after editing it, run `npm run data`. |
+| 2 | `node tools/curate.mjs` | All editorial fixes, in order: duplicates, QA fixes, texts for the 8-26 Jan dates, then `mergeLateJan()` (`tools/merge-late-jan.mjs` reads `research/result-late-jan.json`), the apps corrections, the villa list (`data/stays.json`), then `mergeIslandsEvents()` (`tools/merge-islands-events.mjs` reads `research/result-islands-events.json`: piers, boat tours, islands, events, places, Info sections and corrections), Google place ids, area labels that match the map polygons. **Hand edits to data go here** (as code), not straight into `data/*.json`, or the next import wipes them. It runs once per fresh import (it appends tips), so it refuses to run on curated data: after editing it, run `npm run data`. |
 | 3 | `node tools/import-apps.mjs research/result-apps.json` | Apps research → `data/apps.json` (skips if the file is missing). Fixes to apps belong in this script. |
 | 4 | `python3 -I tools/collect-photos.py` | Rebuilds `data/image-picks.json` from `research/photos/<wave>/*.json`. On the old machine it first copies results out of the workflow journals; set `PHUKET_WORKFLOWS_DIR` if needed. **Photos for new items:** list them like `research/photo-items-wave7.json` (key, kind, name, where, gmapsQuery, website, candidates) in `research/photo-items-wave8.json`. Run `tools/workflows/photos.js` with absolute `outDir` (`<folder>/assets/raw`) and `itemsFile`, and `batches` (arrays of keys, about 6 each). Save its result as `research/photos/w8/photos.json` (the whole `~/.claude/projects/*/*/workflows/<run id>.json` file works too), add `'w8': '<run id>'` to `WAVES` in `collect-photos.py`, then run `npm run photos` and `npm run all`. |
 | 5 | `node tools/images.mjs` | `assets/raw/*` → `assets/img/*.webp` (640×360) + `data/images.json` + `data/contact-*.png` contact sheets. `POSITION` and `BAND` set crops by hand. |
@@ -224,6 +226,7 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`,
 | `tools/build.mjs` | Renders every view to static HTML from `data/*.json`; inlines fonts, CSS, JS and Leaflet; writes the outputs, manifest, icons and KML. `PLAN_PHANGAN` (the nights the plan puts the two of them on Koh Phangan) is plan-specific. |
 | `tools/curate.mjs` | Every editorial fix after import (see the table above). |
 | `tools/merge-late-jan.mjs` | The 19-26 Jan research merge: `TAKE` (fields a re-checked copy replaces), `AFTER` (keeps facts the researchers lacked), `SKIP` (left out on purpose), `NEW_FIX`, `DEAD_LINKS`. |
+| `tools/merge-islands-events.mjs` | The 19 Oct 2026 research merge (ports, islands, island events, boat tours, Phuket events, places): `EVENT_TAKE` / `PLACE_TAKE` (fields a re-checked copy replaces), `SKIP`, `DROP`, `AFTER`, `SECTIONS` (Info sections built from the researchers' facts: `key`, `id`, `title`, `after`, `keep`, `drop`, `only`, `add`, `first`, or `append` into an existing section), `INFO_FIX` (Info texts) and `TEXT_FIX` (texts in events, places and areas). It writes `research/photo-items-wave9.json` for new items without a photo. |
 | `tools/import.mjs`, `tools/import-apps.mjs` | Research result → data. |
 | `tools/apps-result-from-journal.py` | Rebuilds `research/result-apps.json` from the apps workflow's `journal.jsonl` (section 1, step 0). |
 | `tools/stay-gallery.mjs` | `npm run gallery [villa id …]`: opens each listing in headless Chrome and saves its photo addresses and captions into `data/stays.json` → `gallery` (Airbnb's photo tour in its order; Booking.com's own photo list). Some hosts reuse photos stored under another listing number: they are still that listing's photo tour. |
@@ -232,14 +235,14 @@ npm shortcuts: `npm run data`, `npm run photos`, `npm run sat`, `npm run build`,
 | `tools/check.mjs`, `tools/offline-test.mjs`, `tools/popup-test.mjs`, `tools/map-test.mjs`, `tools/amd-test.mjs`, `tools/qa-shots.mjs`, `tools/shoot.mjs`, `tools/chrome.mjs` | Checks, tests and screenshots (`chrome.mjs` finds Chrome; `CHROME_PATH` overrides). |
 | `tools/images.mjs`, `tools/collect-photos.py`, `tools/photo-items-from-raw.mjs`, `tools/geo.mjs` | Photos and map geometry. `photo-items-from-raw.mjs` overwrites `data/photo-items.json` (142 items instead of 144; `npm run data` writes it back). |
 | `tools/journal-extract.py`, `tools/transcript-digest.py`, `tools/watch-workflows.py` | Helpers for Claude Code workflow journals (only useful on the machine that ran the workflows). |
-| `tools/workflows/` | Workflow scripts. Run one by asking Claude Code to call the Workflow tool with `{ scriptPath: "<absolute path>", args: {…} }`.<br>• `research.js`: the original 8-18 Jan research. `args.root` = project folder; `args.resume` / `args.precomputed` resume a killed run.<br>• `late-january.js`: the 19-26 Jan research. `args.known` = ids already in the guide.<br>• `apps.js`: the apps research (no args).<br>• `photos.js`: the photo hunt. `args.outDir` and `args.itemsFile` as absolute paths, `args.batches` = arrays of item keys.<br>• `qa.js` (`args.project`, `args.shots` = a folder of `light-/dark-<view>.png`) and `qa-2.js` (`args.project`): review rounds.<br>• `handoff-check.js` (`args.project`, `args.tmp`): the fresh-machine test of this handoff.<br>• `handoff-recheck.js` (`args.project`, `args.tmp`, `args.first` = an earlier check's JSON): the second pass that confirms its fixes. |
+| `tools/workflows/` | Workflow scripts. Run one by asking Claude Code to call the Workflow tool with `{ scriptPath: "<absolute path>", args: {…} }`.<br>• `research.js`: the original 8-18 Jan research. `args.root` = project folder; `args.resume` / `args.precomputed` resume a killed run.<br>• `late-january.js`: the 19-26 Jan research. `args.known` = ids already in the guide.<br>• `apps.js`: the apps research (no args).<br>• `islands-events.js`: the 19 Oct 2026 research on ports, islands, island events, boat tours, Phuket events and places (`args.project`, `args.today`).<br>• `photos.js`: the photo hunt. `args.outDir` and `args.itemsFile` as absolute paths, `args.batches` = arrays of item keys.<br>• `qa.js` (`args.project`, `args.shots` = a folder of `light-/dark-<view>.png`) and `qa-2.js` (`args.project`): review rounds.<br>• `handoff-check.js` (`args.project`, `args.tmp`): the fresh-machine test of this handoff.<br>• `handoff-recheck.js` (`args.project`, `args.tmp`, `args.first` = an earlier check's JSON): the second pass that confirms its fixes. |
 | `data/events.json`, `places.json`, `areas.json`, `hotels.json`, `exchanges.json`, `essentials.json` | Content (generated by import + curate). |
 | `data/stays.json` | The villa shortlist, hand-written (16 Oct 2026: price for 8 guests on 8-18 Jan, copy, approximate Airbnb pins). `curate.mjs` replaces `hotels.json` with it after the late-January merge. Photos: `research/photos/w8/stays.json` → `npm run photos`. |
 | `data/extra.json` | Hand-written copy, edited directly: intros, `eventsCallout.groups` (18-night plan per phase), `eventsFooter`, `dayTips` (per date), `areasRecommendation`, `beforeYouFly`, `imageNotes` (stand-in photo labels), `dropImages`, `researchedOn` (the footer date: update it after re-checks), `amdRate` (AMD per baht for the dram prices, with its date and source: update it if the rate moves), and `offlineUrl` (not in the file yet: add `"offlineUrl": "https://…"` once hosted). |
 | `data/apps.json` | Apps page content (from `import-apps.mjs`). |
 | `data/images.json`, `data/image-picks.json` | Processed photos and the chosen source photos (paths relative to the project). |
 | `data/geo/` | OSM extracts and the built map layers. |
-| `research/` | Every research output:<br>• `result-final.json` (main), `result-late-jan.json`, `result-apps.json` (when done), and `journal-apps.jsonl` (if copied).<br>• `result-provisional.json`: an early main result with 61 places, replaced by `result-final.json` and not used.<br>• `raw/` (each agent's output) and `resume/` (digests of interrupted agents).<br>• `photos/w1-w7/` (photo agents' results) and `photo-items-wave*.json` (photo search lists; wave 7 is written again only while late-January items lack photos).<br>• `qa-result*.json` (review findings) and `qa-shots*/` (old QA screenshots).<br>• `google-place-ids.json`, and `prior-events-research.md` (the first events research chat). |
+| `research/` | Every research output:<br>• `result-final.json` (main), `result-late-jan.json`, `result-apps.json`, `result-islands-events.json` (19 Oct 2026), and `journal-apps.jsonl`.<br>• `result-provisional.json`: an early main result with 61 places, replaced by `result-final.json` and not used.<br>• `raw/` (each agent's output) and `resume/` (digests of interrupted agents).<br>• `photos/w1-w10/` (photo agents' results) and `photo-items-wave*.json` (photo search lists; wave 7 is written again only while late-January items lack photos).<br>• `qa-result*.json` (review findings) and `qa-shots*/` (old QA screenshots).<br>• `google-place-ids.json`, and `prior-events-research.md` (the first events research chat). |
 | `assets/fonts/`, `assets/raw/`, `assets/img/` | Fonts (OFL, inlined at build), original photos, processed WebP photos. |
 
 **Data fields worth knowing:**
@@ -283,6 +286,7 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
      ```js
      { const d = rd('events.json'); const x = d.items.find((e) => e.id === 'waterfall-festival-phangan'); if (x) { x.status = 'listed'; x.dates = ['2027-01-20', '2027-01-24'] } wr('events.json', d); log.push('re-check: waterfall') }
      ```
+   - From the 19 Oct 2026 research (the fact-checkers' notes in `research/result-islands-events.json`): the Lomprayah and Tigerline 2027 timetables (not out yet), the Ao Nang Princess daily high-season sailing, Echo Travel's late Samui - Baan Tai speedboats (own site offline), the seats on the 07:30 Lomprayah boat from Thong Sala on Sat 23 Jan (only a few left on 19 Oct), January quotes for the private boats and catamarans (several sites show low-season rates), Khao Lak Land Discovery's Similan price after 31 Dec 2026, YONA's 2027 passes, the January days of Merkaba and Seaside, and new dates at Retro Mountain, Lost Jungle and the Courage Bar crews (SUB, FAKE PALM, WAV.e, VESHALKA). Fixes for those items go in the hook tables of `tools/merge-islands-events.mjs` (`TEXT_FIX`, `INFO_FIX`, `AFTER`), because the merge replaces their texts.
    - Set `researchedOn` in `data/extra.json`, then run `npm run all`, republish, and send the new offline file to the phone.
 4. Optional (needs the user's Google account and consent): import `dist/phuket-areas.kml` into Google My Maps.
 5. Votes: after the user connected Upstash (17 Oct 2026, prefix `STORAGE`), open `<site>/api/votes`: it should answer `{"votes":{}}`, not 503. The user pasted the database token in the chat, so suggest resetting it in the Upstash console (Vercel picks up the new one when the store is reconnected).
@@ -340,6 +344,13 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
   - Ko Kaeo is left unassigned.
   - Natai is cut from the mainland coastline.
   - Talat Yai is "island minus all the other subdistricts".
+- **Island research merge (19 Oct 2026):**
+  - Left out (`SKIP`): the Thailand International Boat Show (a yacht show, not a music night), Pak Bara pier (the mainland pier for Koh Lipe), the Raja Ferry pier at Lipa Noi and Lomprayah's Maenam pier (not on this trip's routes).
+  - The old Island hopping section is now Ferries and boats (same id, `island-hopping`): its Phi Phi, Krabi, pier and booking facts became pier cards and ferry facts; its two Koh Phangan facts stay as a pointer to the full-moon week section.
+  - A fact that two lists both wrote is kept in one section only: park fees in Islands around Phuket, private boats in Choosing a boat tour, crowds and the group plan in Islands.
+  - Pier cards have no length pill, sort last on the Places page and show only under Any length. Tours link to their pier cards, and piers to their tours, by the pier name in the tour's `departsFrom` (`piersOf` in `build.mjs`).
+  - Nights on islands outside the plan (Phi Phi pool parties, Lanta bars) stay out of the day agenda unless they score 3+ underground or are a pick. A night with no listed dates counts for every trip phase, except on the Gulf islands (Koh Phangan, Samui, Tao): the group and the two of you only.
+  - Trial merges run in a copy of the project (rsync to the scratchpad, `node_modules` symlinked), never in this folder while a research workflow runs: its fact-checkers read `data/*.json`, and on 19 Oct 2026 an early trial merge here made one of them take the new items as already in the guide.
 - **Google Maps links:** "Google Maps" opens the item's `gmapsQuery` (plus a place id when known); "Directions" uses lat/lng or the `dir*` override.
 - **Late-January merge rules:**
   - Re-checked copies replace text fields; dates, links and sources are merged.
@@ -363,3 +374,6 @@ The journals of these runs are only on the old machine: `~/.claude/projects/-Use
 | Apps research: 3 researchers, 3 fact-checkers, a completeness critic and its fact-checker (all finished) | `wf_979252ad-2ea` | `research/result-apps.json`, `research/journal-apps.jsonl` |
 | Handoff check: fresh-machine dry run + review (30 findings, all fixed on 16 Oct 2026) | `wf_f201079e-c9e` | `research/handoff-check-1.json` |
 | Handoff recheck: 55 of the 60 first-pass checks confirmed fixed; the other 5 and 23 smaller new findings fixed the same day | `wf_c2d3717f-9b9` | `research/handoff-check-2.json` |
+| Ports and ferries, islands, island events, boat tours, Phuket events, places (19 Oct 2026): 7 researchers, 7 fact-checkers, a completeness critic and its fact-checker | `wf_0c06cc84-75b` | `research/result-islands-events.json` |
+| Photos, wave w9 (the new piers, tours, islands, places and events) | `wf_24b94078-911` | `research/photos/w9/`, `assets/raw/` |
+| Photos, wave w10 (the critic's four additions: Mae Haad and Visit Panwa piers, Sédo Izikura, Tree Secret Sound Garden) | `wf_e63f8df1-e98` | `research/photos/w10/`, `assets/raw/` |

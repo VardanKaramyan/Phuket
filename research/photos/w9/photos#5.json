@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:koh-samui",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-samui.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Thong_Ta_Kian_Beach%2C_Koh_Samui_%2848107355718%29.jpg/1280px-Thong_Ta_Kian_Beach%2C_Koh_Samui_%2848107355718%29.jpg",
+   "width": 1280,
+   "height": 720,
+   "credit": "Fabio Achilli",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Thong_Ta_Kian_Beach,_Koh_Samui_(48107355718).jpg",
+   "note": "Thong Ta Kian (Crystal Bay / Silver Beach), Koh Samui: white sand, clear turquoise water, granite boulders and a green headland. Native 16:9. Found by a Commons search. Candidate 1 was hazy and dull. Candidate 2 (dusk view over Chaweng Bay) was usable but dark, so a bright daytime beach was preferred."
+  },
+  {
+   "key": "places:koh-tao-nang-yuan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-tao-nang-yuan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Koh_Nang_Yuan.jpg/1280px-Koh_Nang_Yuan.jpg",
+   "width": 1280,
+   "height": 960,
+   "credit": "Justraveling.com",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Nang_Yuan.jpg",
+   "note": "Candidate 1: the classic viewpoint shot of Koh Nang Yuan, with the white sandbar joining its islets in turquoise water. 4:3, and the subject survives a 16:9 crop."
+  },
+  {
+   "key": "places:ang-thong-marine-park",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-ang-thong-marine-park.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Angthong_National_Marine_Park_350_m._View_point.JPG/1280px-Angthong_National_Marine_Park_350_m._View_point.JPG",
+   "width": 1280,
+   "height": 960,
+   "credit": "GiggleAun",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Angthong_National_Marine_Park_350_m._View_point.JPG",
+   "note": "The iconic panorama from the 350 m viewpoint on Ko Wua Talap: green limestone islands in a turquoise sea. Found by a Commons search. Preferred over the candidates: candidate 1 has small islands on the horizon under mostly sky, and candidate 2 is a close-up of the Emerald Lake lagoon."
+  },
+  {
+   "key": "places:koh-phi-phi-don-night",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-phi-phi-don-night.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Koh_Phi_Phi_viewpoint_%284463466585%29.jpg/1280px-Koh_Phi_Phi_viewpoint_%284463466585%29.jpg",
+   "width": 1280,
+   "height": 960,
+   "credit": "Caitriana Nicholson",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Phi_Phi_viewpoint_(4463466585).jpg",
+   "note": "Candidate 1: view from the Phi Phi Don viewpoint over Tonsai village and the twin bays with longtail boats, framed by palms. Candidate 2 was rejected because it is a 1280x177 panorama strip."
+  },
+  {
+   "key": "places:krabi-4-islands",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-krabi-4-islands.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Koh_Poda_9.jpg/1280px-Koh_Poda_9.jpg",
+   "width": 1280,
+   "height": 853,
+   "credit": "kallerna",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Poda_9.jpg",
+   "note": "Candidate 2: the tall limestone rock stack off Koh Poda beach, with kayakers and the Krabi karsts behind. Candidate 1 (Poda beach with a longtail boat) was usable but mostly white sky, so the stronger subject was chosen."
+  },
+  {
+   "key": "places:amp-listening-bar",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-amp-listening-bar.jpg",
+   "url": "https://phuket-insider.com/wp-content/uploads/2025/07/zus8xv5krqmdi3f6egxat5d4r4b2tnd1.jpg",
+   "width": 750,
+   "height": 1000,
+   "credit": "Phuket Insider",
+   "license": "Guide photo (personal use)",
+   "page": "https://phuket-insider.com/en/places/amp-listening-bar-analogue-me-phuket/",
+   "note": "Candidate 1: inside AMP, a wall of vinyl records with hi-fi amps and bottles in warm light. It is portrait and only 750 px wide, but a 16:9 centre crop (checked) keeps the records and amps. No official photos are reachable: the website is Instagram, which only gives a 100 px profile picture. The guide page also has a landscape storefront shot, but its 16:9 crop cuts off the AMP sign and it may be a Google Maps photo, so it was skipped."
+  },
+  {
+   "key": "places:tree-bay-clubhouse-kata",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tree-bay-clubhouse-kata.jpg",
+   "url": "https://tree-bay.com/images/banner1.jpg",
+   "width": 2304,
+   "height": 1536,
+   "credit": "\u00a9 Tree Bay Clubhouse",
+   "license": "official site",
+   "page": "https://tree-bay.com/",
+   "note": "Candidate 1, the official site banner (confirmed as its og:image): the cliff-top terrace at a fiery sunset over the sea, with a couple and cocktails at a table."
+  },
+  {
+   "key": "places:bebop-live-music-bar",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bebop-live-music-bar.jpg",
+   "url": "https://content.phuket101.net/wp-content/uploads/20260725222116/BeBop-Jazz-Bar-Phuket-Old-Town-3.jpg",
+   "width": 1600,
+   "height": 1065,
+   "credit": "Phuket 101",
+   "license": "Guide photo (personal use)",
+   "page": "https://www.phuket101.net/bebop-live-music-bar/",
+   "note": "The jazz band playing in Bebop's new room (moved in 2026 to the 2nd floor of VELA Phuket Old Town, Yaowarat / Phang Nga Road): guitar, singer, sax, drums and a grand piano. It is the og:image of Phuket 101's Bebop page. Same source as candidate 1 (bar counter), but it shows the live music. It has a small \"\u00a9 Phuket 101\" mark in the bottom-right corner that falls outside a 16:9 centre crop. Every photo of the new room carries that mark, and the official Facebook page only gives its profile picture without a login."
+  },
+  {
+   "key": "places:yona-beach-club",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-yona-beach-club.jpg",
+   "url": "https://content.phuket101.net/wp-content/uploads/20230110110834/yona-floating-beach-club-phuket-4.jpg",
+   "width": 1400,
+   "height": 932,
+   "credit": "Phuket 101 (photo: Khun New)",
+   "license": "Guide photo (personal use)",
+   "page": "https://www.phuket101.net/yona-floating-beach-club/",
+   "note": "Candidate 1, the og:image of the guide page (credit \"photos by Khun New\" confirmed there): an aerial of the Yona floating club in Patong Bay, with its pool, daybeds, palms and upper deck. No watermark. The official site sits behind a Cloudflare check."
+  },
+  {
+   "key": "places:catch-beach-club",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-catch-beach-club.webp",
+   "url": "https://www.catchbeachclub.com/wp-content/uploads/2024/01/CATCH-56-scaled.webp",
+   "width": 1920,
+   "height": 1281,
+   "credit": "\u00a9 Catch Beach Club",
+   "license": "official site",
+   "page": "https://www.catchbeachclub.com/",
+   "note": "From the official homepage gallery: the pool with cabanas, white umbrellas and sunbeds along Bang Tao beach under a blue sky. Chosen over the og:image candidate, a blurred close-up of a lounge sofa that says less about the venue."
+  },
+  {
+   "key": "places:baba-nest",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-baba-nest.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Baba_Nest.jpg/1280px-Baba_Nest.jpg",
+   "width": 1280,
+   "height": 853,
+   "credit": "Sri panwa Hotel",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Baba_Nest.jpg",
+   "note": "Candidate 1: the Baba Nest rooftop deck with striped floor cushions, surrounded by its infinity pool, with the sea and islands beyond in golden-hour light. Candidate 2 shows a different Sri Panwa pool, not Baba Nest."
+  }
+ ]
+}

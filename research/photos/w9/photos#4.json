@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "key": "places:tour-private-catamaran-group",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-private-catamaran-group.jpg",
+   "url": "https://www.loveandaman.com/wp-content/uploads/2025/12/WS-72.jpg",
+   "page": "https://www.loveandaman.com/private-charter/",
+   "credit": "\u00a9 Love Andaman",
+   "license": "official site",
+   "width": 2560,
+   "height": 1440,
+   "note": "Drone shot of Love Andaman's double-deck catamaran (water slide, parasols on the sun deck) anchored off a green island, with swimmers and a paddleboarder. og:image of its private-charter page (candidate 2). Candidate 1 rejected: PHUKET@PHOTOGRAPHER.NET watermark, and it shows a beach at sunset, not a boat day."
+  },
+  {
+   "key": "places:tour-sunset-catamaran",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-sunset-catamaran.jpg",
+   "url": "https://www.loveandaman.com/wp-content/uploads/2025/03/Photo-134.png",
+   "page": "https://www.loveandaman.com/phi-phi-maiton-sunset/",
+   "credit": "\u00a9 Love Andaman",
+   "license": "official site",
+   "width": 1920,
+   "height": 1287,
+   "note": "Guest at the bow of Love Andaman's boat watching the sun set over the sea, islands on the horizon. Gallery photo from its Phi Phi + Maiton sunset tour page (same shoot as its sun-deck photos, not stock). Saved as JPEG with the PNG's alpha removed. Rejected: candidate 1 (portrait SUP silhouette, no boat) and candidate 2 (watermark, a beach rather than a boat)."
+  },
+  {
+   "key": "places:tour-ang-thong-from-phangan",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-tour-ang-thong-from-phangan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mu_Ko_Ang_Thong_National_Park_Surat_Thani_-_panoramio_%284%29.jpg/1280px-Mu_Ko_Ang_Thong_National_Park_Surat_Thani_-_panoramio_%284%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mu_Ko_Ang_Thong_National_Park_Surat_Thani_-_panoramio_(4).jpg",
+   "credit": "Maris Teteris",
+   "license": "CC BY 3.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Tour group in red kayaks with a day-trip boat and Ang Thong's limestone islands behind, so it shows the tour itself. Chosen over the Emerald Lake and viewpoint candidates (both acceptable) so this card looks different from the separate places:ang-thong-marine-park card, which will probably get a viewpoint shot. Best viewpoint alternative if wanted: File:Angthong_National_Marine_Park.jpg (Ditsakul, CC BY-SA 3.0). The official og:image is only 700 px, and that site also uses Shutterstock photos."
+  },
+  {
+   "key": "places:koh-lanta",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-lanta.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ko_Lanta_-_Klong_Khong_Beach_-_0019.jpg/1280px-Ko_Lanta_-_Klong_Khong_Beach_-_0019.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ko_Lanta_-_Klong_Khong_Beach_-_0019.jpg",
+   "credit": "Stefan Fussan",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 698,
+   "note": "Klong Khong Beach on Lanta's west coast: calm turquoise water and a palm-lined beach with bungalows. Found by search. The candidates were usable but weaker: (1) mostly bare sand under a pale sky, (2) a generic longtail sunset."
+  },
+  {
+   "key": "places:bamboo-island",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-bamboo-island.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2016-04-10_Long_tail_boats_at_Ko_Mai_Phai.jpg/1280px-2016-04-10_Long_tail_boats_at_Ko_Mai_Phai.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:2016-04-10_Long_tail_boats_at_Ko_Mai_Phai.jpg",
+   "credit": "Maksym Kozlenko",
+   "license": "CC BY-SA 4.0",
+   "width": 1280,
+   "height": 611,
+   "note": "Longtail boats moored in the shallow, very clear turquoise water at Bamboo Island's beach (candidate 3). Rejected: candidate 1 (tsunami sign, portrait) and candidate 2 (crowded 3:1 panorama, too thin for 16:9)."
+  },
+  {
+   "key": "places:koh-yao-yai",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-yao-yai.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Koh_Yao_Yai_palms_%2832706989645%29.jpg/1280px-Koh_Yao_Yai_palms_%2832706989645%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Yao_Yai_palms_(32706989645).jpg",
+   "credit": "Tom Ek",
+   "license": "CC BY-SA 2.0",
+   "width": 1280,
+   "height": 720,
+   "note": "Palms on a white sand spit with turquoise water and green hills behind (looks like the Laem Haad sandbar). Found by search. Chosen over the candidates: (1) a dark HDR beach-bar table and (2) a resort pier at dusk, which shows a resort rather than the island."
+  },
+  {
+   "key": "places:koh-panyee",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-panyee.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Koh_Panyi_Village.jpg/1280px-Koh_Panyi_Village.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Panyi_Village.jpg",
+   "credit": "Glen MacLarty",
+   "license": "CC BY 2.0",
+   "width": 1280,
+   "height": 960,
+   "note": "The stilt village's waterfront under its huge limestone rock, with a blue sky and a longtail in front (2004, still sharp). A small yellow royal flag sits in the lower right. Found by search. Rejected: candidate 1 (blown-out sky, cluttered), 2 (close-up of the mosque), 3 (restaurant interior)."
+  },
+  {
+   "key": "places:surin-islands",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-surin-islands.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chong_Khad_Bay_and_South_Surin_Island.jpg/1280px-Chong_Khad_Bay_and_South_Surin_Island.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chong_Khad_Bay_and_South_Surin_Island.jpg",
+   "credit": "The Cosmonaut",
+   "license": "CC BY-SA 2.5 ca",
+   "width": 1280,
+   "height": 954,
+   "note": "Chong Khad Bay with clear turquoise water over the reef, a sandy beach and jungle on South Surin, under a cloudy sky (candidate 1). For the Moken village instead: File:Moken_Village1.jpg (same author and license)."
+  },
+  {
+   "key": "places:koh-lipe",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-lipe.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Koh_Lipe_%28island%29%2C_Sandy_beach%2C_Thailand.jpg/1280px-Koh_Lipe_%28island%29%2C_Sandy_beach%2C_Thailand.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Lipe_(island),_Sandy_beach,_Thailand.jpg",
+   "credit": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "width": 1280,
+   "height": 853,
+   "note": "White sandbar in turquoise water with a longtail and Koh Adang's hills behind (Sunrise Beach side). Candidate 1, sharp and vivid."
+  },
+  {
+   "key": "places:trang-islands",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-trang-islands.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Koh_Ngai_07.jpg/1280px-Koh_Ngai_07.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Koh_Ngai_07.jpg",
+   "credit": "Khunkay",
+   "license": "CC BY-SA 3.0",
+   "width": 1280,
+   "height": 854,
+   "note": "Koh Ngai's white beach with a casuarina tree, turquoise water and limestone islets on the horizon. Found by search. Chosen over the candidates: Emerald Cave (credit watermark, crowded), Kradan (mostly sky) and Ngai (a yacht is the main subject)."
+  },
+  {
+   "key": "places:koh-racha-noi",
+   "ok": true,
+   "file": "/Users/mac/Documents/Phuket/assets/raw/places-koh-racha-noi.jpg",
+   "url": "https://www.aussiediversphuket.com/wp-content/uploads/2024/06/Banana-Bay-Racha-Noi-Phuekt-Scuba-Diving-PADI.jpg",
+   "page": "https://www.aussiediversphuket.com/dive-sites/banana-bay/",
+   "credit": "\u00a9 Aussie Divers Phuket",
+   "license": "official site",
+   "width": 1920,
+   "height": 1080,
+   "note": "Banana Bay, Racha Noi: a forested hill above a granite-boulder shore, very clear blue water and a moored yacht. og:image of the dive operator's Banana Bay page, which the guide cites as a source. It matches other Racha Noi photos (Thai Holiday Guide). Commons has no Racha Noi photos (searched Racha Noi, Raya Noi, the Thai name and Wikidata). Tisland's tour gallery was rejected: generic dolphin photos and views that look like the Similans."
+  }
+ ]
+}

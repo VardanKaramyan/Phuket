@@ -5,6 +5,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import * as turf from '@turf/turf'
 import { mergeLateJan } from './merge-late-jan.mjs'
+import { mergeIslandsEvents } from './merge-islands-events.mjs'
 import { inTrip } from './trip.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -344,6 +345,9 @@ mergeLateJan(ROOT, log)
   d.items = st.items
   wr('hotels.json', d)
 }
+
+// ---- the 19 Oct 2026 research: ports and ferries, islands, island events, boat tours, Phuket events, places ----
+mergeIslandsEvents(ROOT, log)
 
 // ---- Google place ids (recorded by the maps reviewer): links open the exact listing ----
 {

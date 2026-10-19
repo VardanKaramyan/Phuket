@@ -46,7 +46,7 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 
 ## 2. The user
 
-- **The user is the only author.** Never add `Co-Authored-By: Claude …`, "Generated with Claude Code" or any other Claude / AI attribution to commits, pull requests, tags or files. Commit as `vvvrdo <vvvrdo@gmail.com>` (GitHub user `vardan-k`; set in this repo's git config). On 19 Oct 2026 the history was rewritten to remove such lines; see `CLAUDE.md`.
+- **The user is the only author.** Never add `Co-Authored-By: Claude …`, "Generated with Claude Code" or any other Claude / AI attribution to commits, pull requests, tags or files. Commit as `vvvrdo <vvvrdo@gmail.com>` (GitHub user `vardan-k`; set in this repo's git config). On 19 Oct 2026 the history was rewritten to remove such lines; see `CLAUDE.md`. `.claude/settings.json` turns the attribution off for every machine that pulls the repo.
 - A frontend developer, so web tooling terms are fine.
 - Writes short, informal English with typos; English is not their first language. All guide copy uses **short, simple, concrete English**: no marketing words, no emoji, no exclamation marks, no em-dash asides.
 - Likes big tasks done thoroughly. They turn on **max effort and "ultracode"** (run substantive work as Workflow orchestrations with adversarial fact-checks). They expect progress updates while long workflows run.

@@ -1,6 +1,6 @@
 # Handoff: Phuket Trip Guide
 
-**Status, 16 Oct 2026: done.** The guide is built, tested and published for the full trip (8-26 Jan 2027), including the new **Apps and services** page: 51 apps from 3 fact-checked lists. The online copy is version 5. Nothing is half-done. Optional follow-ups are in section 9.
+**Status, 16 Oct 2026: done.** The guide is built, tested and published for the full trip (8-26 Jan 2027), including the new **Apps and services** page: 54 apps, all fact-checked, including the completeness critic's additions. The online copy is version 6. Nothing is half-done. Optional follow-ups are in section 9.
 This file is meant to be enough on its own, on any machine. Open the folder in Claude Code and say: **"Read HANDOFF.md and continue."**
 
 ---
@@ -9,7 +9,7 @@ This file is meant to be enough on its own, on any machine. Open the folder in C
 
 Everything the project needs is inside this folder. The old machine's Claude Code memory and session logs do **not** move with it; what mattered from them is written down in this file.
 
-0. **On the old machine, optional:** `research/result-apps.json` already exists (3 fact-checked lists, rebuilt from the run's journal). The run's last step, the completeness critic, had not finished. If `~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/workflows/wf_979252ad-2ea.json` exists later, it holds the full result with the critic's additions. Copy it over `research/result-apps.json` (as below) and run `npm run all`. These were the steps when the run was still going:
+0. **Nothing to do on the old machine any more.** The Apps run finished, and its full, fact-checked result is in `research/result-apps.json` (only the `result` part of the run file). These were the steps while the run was still going; keep them for the next long run:
    - If the Apps research (section 4) is still running there, keep that Claude Code session open until it finishes. Then save its result from the project folder:
      ```sh
      cp ~/.claude/projects/-Users-mac-Documents-Phuket/7325013c-74b9-46f2-8e7b-729314cad5fc/workflows/wf_979252ad-2ea.json research/result-apps.json && chmod 644 research/result-apps.json
@@ -34,11 +34,11 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
    - `checked: 40 events, 71 places, 20 areas, 16 hotels, 8 brands` and `no problems found`
    - `OFFLINE TEST PASSED`
    - 27 lines of `buttons ok` (3 phone sizes × 9 popups), then `POPUP TEST PASSED`
-   - `51 apps · by priority {"must":12,"useful":23,"optional":16} …`, and the 4 `apps fix:` lines from curate.
+   - `54 apps · by priority {"must":11,"useful":25,"optional":18} …`, and the 4 `apps fix:` lines from curate.
 
    Every check and test exits with code 1 when it fails.
 4. To look at the result, open `dist/phuket-guide-offline.html` in a browser (after step 3, so it matches the data), or run `npm run serve` and open http://localhost:8080.
-5. The online copy is a private claude.ai artifact: https://claude.ai/artifact/Nxy3LAarKyhwtFtf1HvZKD (version 5, 16 Oct 2026). To update it, Claude Code must be logged in to the **same claude.ai account**. See section 8.
+5. The online copy is a private claude.ai artifact: https://claude.ai/artifact/Nxy3LAarKyhwtFtf1HvZKD (version 6, 16 Oct 2026). To update it, Claude Code must be logged in to the **same claude.ai account**. See section 8.
 
 `npm run all` = `npm run data` (import, curate, apps import) + `npm run build` + `npm test`. Every step on its own is in section 6.
 
@@ -46,6 +46,7 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 
 ## 2. The user
 
+- **The user is the only author.** Never add `Co-Authored-By: Claude …`, "Generated with Claude Code" or any other Claude / AI attribution to commits, pull requests, tags or files. Commit as `vvvrdo <vvvrdo@gmail.com>` (GitHub user `vardan-k`; set in this repo's git config). On 19 Oct 2026 the history was rewritten to remove such lines; see `CLAUDE.md`.
 - A frontend developer, so web tooling terms are fine.
 - Writes short, informal English with typos; English is not their first language. All guide copy uses **short, simple, concrete English**: no marketing words, no emoji, no exclamation marks, no em-dash asides.
 - Likes big tasks done thoroughly. They turn on **max effort and "ultracode"** (run substantive work as Workflow orchestrations with adversarial fact-checks). They expect progress updates while long workflows run.
@@ -78,7 +79,12 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 The user asked (16 Oct 2026): "add also if theres none the apps and services that we will need to download and use there like bolt app grab etc".
 
 **Done:**
-- 51 apps and services in `data/apps.json`: 12 must-have, 23 useful, 16 optional. They come from the three fact-checked lists in `research/result-apps.json`, rebuilt from the run's journal (`research/journal-apps.jsonl`). The completeness critic's additions were not waited for, because time ran out; see section 1 step 0 to add them.
+- 54 apps and services in `data/apps.json`: 11 must-have, 25 useful, 18 optional. They come from the finished run in `research/result-apps.json`: three fact-checked lists, plus the completeness critic's fact-checked additions and corrections.
+  - **Added by the critic:** THIM / TDAC (must), Instagram, tricount, AIRPORTELs and Thailand VRT.
+  - **Merged:** the Grab / GrabFood and the Telegram duplicates.
+  - **Moved to "useful":** the Tourist Police app and the Bangkok Airways app.
+  - **Tips added:** the ATM fee (to Wise and Revolut), Thai SIM registration (since 16 May 2026), and TrueMoney's sign-up limits.
+  - These edits are `APP_FIX` and `DROP` in `tools/import-apps.mjs`. The critic's ATM figure (220-250 baht) is not used, because the official 2026 bank fee tables say 250 (Visa) / 350 (Mastercard).
 - Of the 16 corrections to older guide texts, 12 were confirmed correct. 4 were fixed:
   - 12Go: e-ticket versus a printed voucher.
   - LINE: "answers faster" had no source.
@@ -164,7 +170,7 @@ The user asked (16 Oct 2026): "add also if theres none the apps and services tha
 - **Outputs:**
   - `dist/`: the offline web app (service worker), set up on Vercel on 17 Oct 2026 (section 9, item 2).
   - `dist/phuket-guide-offline.html`: about 12.2 MB single file with the photos and the offline satellite tiles inside; the copy to keep on the phone. The copy now on the phone is older, so AirDrop the new one (and again after each rebuild).
-  - `artifact/index.html`: the build of the online copy, published as **version 5** (16 Oct 2026, with the Apps page).
+  - `artifact/index.html`: the build of the online copy, published as **version 6** (16 Oct 2026, with the full Apps page).
   - `dist/phuket-areas.kml`: for Google My Maps.
 - **Tests, last run 17 Oct 2026, all pass:**
   - `check`: no problems.
@@ -258,8 +264,8 @@ The artifact is online-only: claude.ai blocks service workers and external tiles
 0. **Tue 20 Oct 2026, 18:00 Thai time:** the Argy presale opens on Megatix (Limited Presale 900 THB, entry by 16:00). Remind the user. After that date:
    - Update the Argy `priceText` in `tools/curate.mjs` (the `cafe-del-mar-pyramid-2027-01-08` fix) and the ticket line in `data/extra.json` → `beforeYouFly`.
    - Check the ticket link. It points to Café del Mar's Megatix page, `https://megatix.in.th/cafedelmarphuket`, because the old `megatix.co.th` link was a parked domain (checked 16 Oct 2026). Use the Argy event page on Megatix once it is listed.
-1. Optional: add the critic's additions to the Apps page (section 1 step 0), and cut Info → "Power and apps" down to "Plugs and voltage", now that the Apps page covers those apps.
-2. **Hosting:** Vercel, imported from `VardanKaramyan/Phuket` on 17 Oct 2026. `vercel.json` skips the install and build and serves the committed `dist/`, so rebuild locally, commit `dist/`, and push to `karamyan`. Once the URL is known, add it as `offlineUrl` in `data/extra.json` and rebuild. Other static hosts work too:
+1. Optional: cut Info → "Power and apps" down to "Plugs and voltage", now that the Apps page covers those apps.
+2. **Hosting:** Vercel, imported from `VardanKaramyan/Phuket` on 17 Oct 2026, live at **https://phuket-six.vercel.app**. Both machines sync with `git pull` / `git push` through the `karamyan` remote (`git@github.com:VardanKaramyan/Phuket.git`; the Mac's SSH key was added on 19 Oct 2026). `vercel.json` skips the install and build and serves the committed `dist/`, so rebuild locally, commit `dist/`, and push to `karamyan`. Once the URL is known, add it as `offlineUrl` in `data/extra.json` and rebuild. Other static hosts work too:
    - `npx vercel deploy dist --prod` after `npx vercel login`
    - `npx netlify-cli deploy --dir dist --prod`
    - `npx surge dist`
@@ -354,6 +360,6 @@ The journals of these runs are only on the old machine: `~/.claude/projects/-Use
 | QA rounds 1 and 2 | `wf_b10b9b5c-7aa`, `wf_abb5b0cb-e93` | `research/qa-result.json`, `research/qa-result-2.json`, `research/qa-shots*/` |
 | Late January (19-26 Jan) research + fact-check | `wf_f72ec0b6-320` | `research/result-late-jan.json` |
 | Photos, wave w7 (17 new items) | `wf_cf058967-e2e` | `research/photos/w7/`, `assets/raw/` |
-| Apps research (3 lists and their fact-checks done; the critic was still running) | `wf_979252ad-2ea` | `research/result-apps.json` (rebuilt from the journal), `research/journal-apps.jsonl` |
+| Apps research: 3 researchers, 3 fact-checkers, a completeness critic and its fact-checker (all finished) | `wf_979252ad-2ea` | `research/result-apps.json`, `research/journal-apps.jsonl` |
 | Handoff check: fresh-machine dry run + review (30 findings, all fixed on 16 Oct 2026) | `wf_f201079e-c9e` | `research/handoff-check-1.json` |
 | Handoff recheck: 55 of the 60 first-pass checks confirmed fixed; the other 5 and 23 smaller new findings fixed the same day | `wf_c2d3717f-9b9` | `research/handoff-check-2.json` |

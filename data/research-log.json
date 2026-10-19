@@ -306,6 +306,18 @@
      "name": "Megatix app (stores)",
      "reason": "The store apps called Megatix (iOS id1085614750 by Vertigrate Pty Ltd, Android com.megatix.android) describe themselves as ticket scanners for event managers. Buyers use megatix.in.th and the email PDF."
     }
+   ],
+   "critic-additions": [
+    {
+     "id": "foodpanda",
+     "name": "foodpanda",
+     "reason": "Left Thailand: its last day of service was 23 May 2025 (Delivery Hero). Use GrabFood or LINE MAN in Phuket and Delivery KPG on Koh Phangan."
+    },
+    {
+     "id": "uber",
+     "name": "Uber",
+     "reason": "Not in Thailand. Uber sold its Southeast Asia business to Grab in March 2018, and I found no report of a return by Oct 2026. Use Grab or Bolt."
+    }
    ]
   }
  },
@@ -751,6 +763,32 @@
     "getyourguide: no content change; verification notes the site returns HTTP 403 to scripts.",
     "removed: foodpanda reason now cites Delivery Hero's 23 Apr 2025 announcement; ShopeeFood reason updated (iOS TH-only in 5 stores, only a vendor page claims Phuket).",
     "corrections: RA correction no longer contains the unverified '1-3 weeks ahead' claim; Hostelworld note fixed (Social Pass since Nov 2025, not Sep 2026)."
+   ],
+   "critic-additions": [
+    "tdac-thim: setup now gives concrete dates for the 3-day window (send on 6 or 7 Jan for an 8 Jan arrival).",
+    "tdac-thim: QR tip now says THIM can show the code offline (THIM v2.16.2 notes, 14 Sep 2026).",
+    "tdac-thim: error tip now says some users cannot scan their passport in THIM (Sep 2026 App Store reviews).",
+    "tdac-thim: group tip grammar fixed ('their own passport details', 'their own QR code').",
+    "tdac-thim: verification corrected: first US App Store release 29 Mar 2026 (test phase), official launch 1 Aug 2026. Added the official site notice text and the names of the helper apps.",
+    "tdac-thim: removed sources I could not open or that were not needed (Forvis Mazars, Fragomen fraud advisory). Added the official site and thaievisa.go.th.",
+    "instagram: added @circolocoibiza (1M followers, linked from the official site circolocoibiza.com) to the accounts tip.",
+    "tricount: Splitwise tip now also says currency conversion is a paid Pro feature (Splitwise Pro page).",
+    "airportels: domestic counter tip now also covers the return on 23 Jan.",
+    "airportels: new tip: price is per bag for each 24 hours, so 19 to 23 Jan costs about 4 to 5 day prices.",
+    "airportels: hotel tip changed from 'hotels often' to 'many hotels'.",
+    "airportels: removed the Klook Bangkok source and the unread Phuket blog page from sources. Added app.airportels.asia.",
+    "thailand-vrt: 'what' and 'where' no longer say 'from HKT'. You claim at the airport of your international flight, and HKT has a 24-hour office (Revenue Department airport list).",
+    "thailand-vrt: new tip on the Customs check from 20,000 baht, on the departure day before check-in (Revenue Department conditions page).",
+    "thailand-vrt: added the Revenue Department conditions, FAQ and airport pages as sources. Noted that the AOT page copies Suvarnabhumi office details.",
+    "corrections/TDAC: date fixed to a test phase from March 2026 and an official launch on 1 Aug 2026. Added the June 2026 Nation article and the App Store page as sources.",
+    "corrections/Grab: removed the unconfirmed claim that GrabFood works on Samui. Added sources for Grab not working on Koh Phangan and for Delivery KPG.",
+    "corrections/Tourist Police: added that the ratings come from only 6 ratings each. Added the UK store link.",
+    "corrections/Bangkok Airways: says the lounge part of the claim is right (the app has 'Lounge location'). Check-in window confirmed on the Jan 2026 Bangkok Airways check-in page.",
+    "corrections/ATM: fee changed from '220 at most banks, 250 at some' to '220 or 250 baht, and some machines charge more', because the 2026 guides disagree.",
+    "corrections/SIM: wording matched to Tilleke: 'branch or authorized dealer' and '3 SIMs per provider'.",
+    "corrections/TrueMoney: replaced the 2022 forum source with the Wise (2026) and Thaiger guides. Added the 1 to 3 business day approval time. Removed 'may not work on a tourist stay'.",
+    "removed/uber: reason reworded to 'I found no report of a return by Oct 2026'.",
+    "notes: added the checks on the Megatix app, the Lomprayah app, Delivery KPG store links, Samui airport pickup rules, the entry fee and the Circoloco Phuket date."
    ]
   }
  },
@@ -873,6 +911,76 @@
    "verdict": "wrong",
    "correction": "Tickets: on the Café del Mar event page, which sells through Megatix. Presale opens Tue 20 Oct 2026 at 18:00 Thai time. Megatix Thailand is megatix.in.th.",
    "source": "http://megatix.co.th/ shows 'Domain parked by Asia Registry' and HTTPS does not connect (16 Oct 2026) ; https://phuket.cafedelmar.com/events/argy-jan2027 ('Presale goes live on 20 Oct at 6 PM', Megatix widget script from megatix.in.th, Age 20+) ; https://megatix.in.th/cafedelmarphuket (Café del Mar presenter page)"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Task brief: 'TDAC is a web form, not an app' (TDAC is also missing from the list).",
+   "verdict": "outdated",
+   "correction": "TDAC is still a free web form on tdac.immigration.go.th. The official THIM app of the Immigration Bureau (Royal Thai Police) can also send it. It was in the stores as a test from March 2026 and launched officially on 1 Aug 2026. Unofficial 'TDAC helper' apps are in the stores too. Added as a new 'must' item.",
+   "source": "https://www.nationthailand.com/news/tourism/40071480 ; https://www.nationthailand.com/news/policy/40067126 ; https://apps.apple.com/us/app/id6759272559"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Google Maps is listed twice: in rides-travel and in money-phone-safety.",
+   "verdict": "wrong",
+   "correction": "Keep one item: Google Maps [maps, must]. Download offline areas at home. Offline maps give driving routes only: no walking, transit or traffic. You can share your live location with friends.",
+   "source": "https://support.google.com/maps/answer/6291838"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Telegram is listed twice: 'Telegram Messenger' [chat] and 'Telegram (Phangan Party Guide)' [events].",
+   "verdict": "wrong",
+   "correction": "Keep one item: Telegram Messenger [events, useful]. Install it at home and join the 'Phangan Party Guide' channel.",
+   "source": ""
+  },
+  {
+   "from": "critic-additions",
+   "claim": "'Grab' [rides] and 'Grab (GrabFood)' [food] are two items for the same app.",
+   "verdict": "wrong",
+   "correction": "Keep one Grab item [rides, must] and add a tip: the same app orders food (GrabFood) in Phuket. Grab does not work on Koh Phangan. For food there, use Delivery KPG.",
+   "source": "https://phanganlife.com/taxis-on-koh-phangan/ ; https://apps.apple.com/app/id1632709343"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Thailand Tourist Police app is 'must'.",
+   "verdict": "wrong",
+   "correction": "Make it 'useful'. You can call 1155 without the app. The app has low ratings: 2.3 of 5 on the US App Store and 1.7 on the UK store, from only 6 ratings each (Oct 2026). Keep 'Thai emergency numbers' as 'must'.",
+   "source": "https://apps.apple.com/us/app/id6479636779 ; https://apps.apple.com/gb/app/id6479636779"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Bangkok Airways app is 'must'; it 'also shows where the airline's lounges are'.",
+   "verdict": "wrong",
+   "correction": "Make it 'useful'. The lounge part is right: the app has a 'Lounge location' section. Online check-in works on the website and in the app, from 24 hours to 1 hour before the flight. Add a tip: the Boutique Lounge is free for all Bangkok Airways passengers, also economy. At Phuket it is in the domestic terminal, 2nd floor, near Gate 4, open 05:30-21:30 (Bangkok Airways, Nov 2025).",
+   "source": "https://blog.bangkokair.com/en/bangkok-airways-boutique-lounge/ ; https://blog.bangkokair.com/en/how-to-check-in-bangkok-airways/ ; https://apps.apple.com/us/app/id781290048"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Wise and Revolut: 'Cash works at any Thai bank ATM', with no word on the ATM fee.",
+   "verdict": "wrong",
+   "correction": "Add: Thai ATMs charge their own fee for each withdrawal with a foreign card. 2026 guides give 220 or 250 baht per withdrawal, and some machines charge more. Wise and Revolut do not pay it back. Take out bigger amounts less often. If the screen offers your home currency, choose baht.",
+   "source": "https://destinationthailand.io/money-in-thailand-atms-cards-fees/ ; https://thaibudgetplanner.com/news/2026-08-04-thailand-atm-fees-guide"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "myAIS and True tourist SIM items say nothing about how to register the SIM.",
+   "verdict": "outdated",
+   "correction": "Add: since 16 May 2026, a foreigner must register a Thai SIM in person at a branch or authorized dealer, mainly with a passport. The limit is 3 SIMs per person per provider (NBTC rule). Bring your passport to the AIS or True counter at Phuket airport.",
+   "source": "https://www.tilleke.com/insights/thailand-tightens-telecom-registration-data-and-ip-address-rules-to-combat-tech-crime"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "TrueMoney: 'A foreigner can register with a passport and pay at 7-Eleven, shops and many QR codes.'",
+   "verdict": "unsupported",
+   "correction": "For foreigners, sign-up needs a Thai mobile number for the SMS code, then a passport scan and a live selfie. Approval can take 1 to 3 business days, and some travellers fail the check. Do not count on it for this trip.",
+   "source": "https://wise.com/en-th/blog/truemoney-wallet-guide ; https://thethaiger.com/guides/best-of/lifestyle/how-to-go-cashless-at-7-11-thailand"
+  },
+  {
+   "from": "critic-additions",
+   "claim": "Overall: 13 'must' entries (12 different apps) is too many.",
+   "verdict": "wrong",
+   "correction": "Merge the duplicates and move the Tourist Police app and the Bangkok Airways app to 'useful'. The 'must' list is then: Grab, Google Maps, Google Translate, Wise, LINE, WhatsApp, Thai emergency numbers, Lomprayah (book ahead, no app), DICE, Megatix, and the new TDAC. That is 11.",
+   "source": ""
   }
  ]
 }

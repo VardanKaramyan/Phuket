@@ -51,9 +51,29 @@ for (const [key, v] of sets) {
   }
 }
 // editorial fixes after the merge (for example from the completeness critic): change an app, or drop it
+// from the completeness critic's fact-checked corrections (16 Oct 2026)
+const tip = (a, t) => { a.tips = [...(a.tips || []), t] }
+const ATM = 'Thai ATMs still charge their own fee for each withdrawal with a foreign card: 250 baht (Visa) or 350 baht (Mastercard) at the big banks in 2026. The card does not pay it back, so take out bigger amounts less often, and choose baht if the screen offers your home currency.'
 const APP_FIX = { // id: (app) => { ... }
+  // one Telegram item, with the party channel
+  telegram: (a) => {
+    const g = byId.get('telegram-party-guide')
+    a.category = 'events'
+    if (g) { a.tips = Array.from(new Set([...(a.tips || []), ...(g.tips || [])])); const seen = new Set(); a.links = [...(a.links || []), ...(g.links || [])].filter((l) => l && l.url && !seen.has(l.url) && seen.add(l.url)) }
+  },
+  grab: (a) => tip(a, 'The same app orders food (GrabFood) in Phuket. Grab does not work on Koh Phangan: for food there, use Delivery KPG.'),
+  // 1155 works without the app, and the app has low ratings (from only 6 ratings each, Oct 2026)
+  'tourist-police': (a) => { a.priority = 'useful'; tip(a, 'You can call 1155 without the app. The app has low store ratings, so keep 1155 as a normal phone call.') },
+  'bangkok-airways': (a) => { a.priority = 'useful'; tip(a, 'The Boutique Lounge is free for all Bangkok Airways passengers, also in economy. At Phuket it is in the domestic terminal, 2nd floor, near Gate 4, open 05:30-21:30 (Nov 2025).') },
+  wise: (a) => tip(a, ATM),
+  revolut: (a) => tip(a, ATM),
+  'ais-tourist-sim': (a) => tip(a, 'Since 16 May 2026 a Thai SIM card for a foreigner is registered in person with the passport, at a shop or the airport counter (max 3 SIMs per person per provider, NBTC rule). Bring your passport.'),
+  'true-tourist-sim': (a) => tip(a, 'Since 16 May 2026 a Thai SIM card for a foreigner is registered in person with the passport, at a shop or the airport counter (max 3 SIMs per person per provider, NBTC rule). Bring your passport.'),
+  truemoney: (a) => { a.setup = 'Sign-up needs a Thai mobile number for the SMS code, then a passport scan and a live selfie. Approval can take 1 to 3 business days, and some travellers fail the check. Do not count on it for this trip.' },
 }
 const DROP = new Set([ // ids to leave out
+  'grabfood', // the same app as Grab (tip added there)
+  'telegram-party-guide', // merged into telegram
 ])
 for (const [id, fn] of Object.entries(APP_FIX)) { const a = byId.get(id); if (a) fn(a); else console.log(`  APP_FIX: no app ${id}`) }
 for (const id of DROP) if (!byId.delete(id)) console.log(`  DROP: no app ${id}`)

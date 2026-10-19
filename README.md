@@ -3,11 +3,13 @@
 A phone-first guide that works offline: music events, places to go, areas drawn on a map, hotels, money exchange, essentials and the apps to install.
 **To continue the work, read `HANDOFF.md`.** It has the status, the next steps and every decision.
 
+**Live site: https://phuket-six.vercel.app** (Vercel publishes `main` of `VardanKaramyan/Phuket` on every push). Open it once on the phone, then *Add to Home Screen* to use it offline.
+
 ## Outputs
 
 | File | Use |
 | --- | --- |
-| `dist/` | Static web app. Host it anywhere with HTTPS, open it once on the phone, then *Add to Home Screen*. A service worker keeps the page, all photos and the offline satellite map (`sat/`) offline. |
+| `dist/` | Static web app, live at https://phuket-six.vercel.app. Host it anywhere with HTTPS, open it once on the phone, then *Add to Home Screen*. A service worker keeps the page, all photos and the offline satellite map (`sat/`) offline. |
 | `dist/phuket-guide-offline.html` | Single self-contained file with the photos and the offline satellite map inside. Keep it on the phone or a laptop. |
 | `dist/phuket-areas.kml` | Area outlines and all pins, for Google My Maps → *Import* (then in the Google Maps app under *Saved → Maps*). |
 | `artifact/index.html` | The claude.ai artifact build (republish it to update the online copy, which needs internet): https://claude.ai/artifact/Nxy3LAarKyhwtFtf1HvZKD |
@@ -53,7 +55,7 @@ Content edits: hand-written copy is in `data/extra.json`. The villa list (Where 
 
 ## Deploy `dist/`
 
-Vercel (17 Oct 2026): the project imports `VardanKaramyan/Phuket` from GitHub, and `vercel.json` tells it to skip the install and build and serve the committed `dist/`. So rebuild locally (`npm run build`), commit `dist/`, and push to the `karamyan` remote; each push to `main` redeploys.
+Vercel (17 Oct 2026): the project imports `VardanKaramyan/Phuket` from GitHub, and `vercel.json` tells it to skip the install and build and serve the committed `dist/`. So rebuild locally (`npm run build`), commit `dist/`, and push to the `karamyan` remote; each push to `main` redeploys https://phuket-six.vercel.app.
 
 Votes: `api/votes.js` is a Vercel function (no packages) at `/api/votes` that keeps the group's Like / Skip votes in the Upstash Redis database connected to the project (Vercel → Storage). It finds the database from the variables Vercel created, whatever their prefix (`KV_REST_API_URL`, `STORAGE_REST_API_URL`, or a `rediss://…upstash.io` URL). Never put the token in the repo. Only the website can vote; the single file and the artifact hide the buttons. `node tools/votes-test.mjs` tests the function and the page against a stand-in database.
 

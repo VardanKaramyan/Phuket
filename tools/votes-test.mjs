@@ -222,6 +222,7 @@ const site = http.createServer(async (req, res) => {
     res.writeHead(r.status, Object.fromEntries(r.headers)); return res.end(await r.text())
   }
   let p = decodeURIComponent(u.pathname); if (p.endsWith('/')) p += 'index.html'
+  if (/^\/s\/[a-z0-9-]+$/.test(p)) p += '.html' // share pages, as vercel.json rewrites them
   const f = path.join(DIST, p)
   if (!f.startsWith(DIST) || !fs.existsSync(f)) { res.writeHead(404); return res.end() }
   res.writeHead(200, { 'Content-Type': TYPES[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res)
@@ -441,12 +442,13 @@ check('the author can delete a note; no notes left: just Add a note', /No notes 
 // Share: the phone's share sheet gets the villa, its price, beds, the listing and the guide link to the card
 await A.p.evaluate(() => { Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d } }); document.querySelector('#ht-alisa-pool-villa [data-share-stay]').click() }); await sleep(300)
 const shared = await A.p.evaluate(() => window.__shared)
-check('Share sends just the link to the villa in the guide', !!shared && shared.url === base + '#ht-alisa-pool-villa' && !shared.text && shared.title === 'Alisa Pool Villa', JSON.stringify(shared))
+check('Share sends the villa\'s share page (it has the link preview)', !!shared && shared.url === base + 's/ht-alisa-pool-villa' && !shared.text && shared.title === 'Alisa Pool Villa', JSON.stringify(shared))
 // that link opens the guide on the villa, and it stays there while the votes and notes appear above it
 const D2 = await person()
-await D2.p.goto(base + '#ht-bangtao-4br-villa-unit-1', { waitUntil: 'networkidle0' }); await sleep(1500)
+await D2.p.goto(base + 's/ht-bangtao-4br-villa-unit-1', { waitUntil: 'networkidle0' }); await sleep(1500)
 const land = await D2.p.evaluate(() => ({ top: Math.round(document.getElementById('ht-bangtao-4br-villa-unit-1').getBoundingClientRect().top), bars: [...document.querySelectorAll('.votes')].filter((x) => !x.hidden).length }))
-check('a shared villa link opens on that villa', land.bars > 0 && land.top >= 0 && land.top < 160, JSON.stringify(land))
+land.url = await D2.p.evaluate(() => location.pathname + location.hash)
+check('a shared villa link opens the guide on that villa', land.url === '/#ht-bangtao-4br-villa-unit-1' && land.bars > 0 && land.top >= 0 && land.top < 160, JSON.stringify(land))
 await D2.ctx.close()
 // live: A likes a villa, B's next check (every 5 s, or coming back to the page) shows it as news with Show
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
@@ -472,7 +474,7 @@ check('a starred villa is saved for everyone, with who saved it', bSaved.star ==
 const shownStay = (p) => p.evaluate(() => [...document.querySelectorAll('#stay .list .card')].filter((c) => !c.hidden).map((c) => c.id))
 await B.p.evaluate(() => { location.hash = 'stay/saved' }); await sleep(500)
 const sv = { shown: await shownStay(B.p), ...(await B.p.evaluate(() => ({ chip: document.querySelector('[data-toolbar="stay"] .chip[data-group="pick"][aria-pressed="true"]')?.dataset.value, share: (() => { const x = document.querySelector('[data-toolbar="stay"] [data-share-list]'); return x.hidden ? '' : x.dataset.url })(), view: !document.getElementById('stay').hidden }))) }
-check('#stay/saved opens the Stay tab on the saved villas, with a Share link', sv.view && sv.shown.join() === 'ht-alisa-pool-villa' && sv.chip === 'saved' && /\/#stay\/saved$/.test(sv.share), JSON.stringify(sv))
+check('#stay/saved opens the Stay tab on the saved villas, with a Share link', sv.view && sv.shown.join() === 'ht-alisa-pool-villa' && sv.chip === 'saved' && /\/s\/stay-saved$/.test(sv.share), JSON.stringify(sv))
 await B.p.evaluate(() => { location.hash = 'stay/liked' }); await sleep(500)
 const likedIds = await B.p.evaluate(() => {
   const hidden = JSON.parse(localStorage.getItem('pg:hiddenShared') || '{}')

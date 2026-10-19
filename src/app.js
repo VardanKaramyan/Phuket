@@ -166,6 +166,9 @@
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refreshToday() })
   window.addEventListener('pageshow', refreshToday)
 
+  // a share page's address (…/s/<name>): it carries the link preview, then opens the guide
+  const shareUrl = (name) => new URL('s/' + name, location.origin + location.pathname).href
+
   /* ---------- favourites ---------- */
   // on the website Saved is the whole group's list (kept by the vote server, with who saved each); elsewhere it is
   // kept on this phone
@@ -274,7 +277,7 @@
       if (!shareBtn) return
       const on = $('.chip[data-link][aria-pressed="true"]', bar)
       shareBtn.hidden = !on || !/^https?:$/.test(location.protocol)
-      if (on) shareBtn.dataset.url = location.origin + location.pathname + '#' + id + '/' + on.dataset.value
+      if (on) shareBtn.dataset.url = shareUrl(id + '-' + on.dataset.value)
     }
     lists.push({ apply, reset, pick, el: listEl })
   })
@@ -1437,13 +1440,13 @@
 
   /* ---------- Share a villa: the phone's share sheet, or a copy to paste in a chat ---------- */
   document.addEventListener('click', async (e) => {
-    const b = e.target.closest('[data-share-stay]'); if (!b) return
+    const b = e.target.closest('[data-share-stay], [data-share-card]'); if (!b) return
     const card = b.closest('.card')
     track('share', card.id)
-    // just the link to this villa in the guide (it opens the guide on the villa); the single file has no web address,
-    // so there it is the listing's link
-    const url = /^https?:$/.test(location.protocol) ? location.origin + location.pathname + '#' + card.id : b.dataset.listing || ''
-    if (!url) return
+    // the card's share page (…/s/ht-<id>): messengers show its photo, name and price, and it opens the guide on the
+    // card; the single file has no web address, so there a villa shares its listing
+    const url = /^https?:$/.test(location.protocol) ? shareUrl(card.id) : b.dataset.listing || ''
+    if (!url) { toast('Sharing works on the website: ' + (D.siteUrl || 'phuket-six.vercel.app')); return }
     if (navigator.share) { try { await navigator.share({ title: card.dataset.name, url }) } catch { /* closed */ } return }
     try { await navigator.clipboard.writeText(url); toast('Link copied: paste it in a chat') } catch { toast(url) }
   })

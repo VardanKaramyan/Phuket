@@ -148,6 +148,7 @@ function actionRow({ item, q, mapKey, fav, extraBtns = '' }) {
   ;(item.extraMaps || []).forEach((x) => parts.push(`<a class="btn" href="${gmaps(x.q, x.placeId)}" target="_blank" rel="noopener">${icon('pin')}${esc(x.label)}</a>`))
   if (mapKey && !lowConf(item)) parts.push(`<button class="btn js-only" type="button" data-on-map="${esc(mapKey)}">${icon('areas')}On map</button>`)
   parts.push(extraBtns)
+  if (fav) parts.push(`<button class="btn square js-only" type="button" data-share-card aria-label="${esc('Share ' + (item.name || ''))}">${icon('share')}</button>`)
   if (fav) parts.push(`<button class="btn square fav js-only" type="button" data-fav="${esc(fav)}" aria-pressed="false" aria-label="${esc('Save ' + (item.name || ''))}">${icon('star')}</button>`)
   return `<div class="actions">${parts.join('')}</div>`
 }
@@ -596,6 +597,82 @@ ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${be
 </section>`
 }
 
+// ---------- share pages: link previews in WhatsApp, Telegram, iMessage… ----------
+// A shared link like https://phuket-six.vercel.app/s/ht-<id> is a small page whose Open Graph tags (the photo, the
+// name, the price or the date) messengers read for the preview; opened, it goes straight to that card in the guide
+// (/#ht-<id>). vercel.json maps /s/<name> to dist/s/<name>.html. The preview photos are JPEGs in dist/og/ (WhatsApp:
+// under 600 KB, at least 300 px wide; JPEG is the format every messenger takes).
+const SITE = String(extra.siteUrl || 'https://phuket-six.vercel.app').replace(/\/$/, '')
+const OG_W = 800, OG_H = 420
+const SITE_TITLE = 'Phuket trip guide'
+const SITE_DESC = `Music, places, villas and money for the group trip to Phuket, ${TRIP_LABEL.long}. Works offline.`
+const short = (t, n = 190) => { t = String(t || '').replace(/\s+/g, ' ').trim(); return t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1)).replace(/[,.;:·\s]+$/, '') + '…' }
+const firstSentence = (t) => (String(t || '').match(/^.*?[.!?](\s|$)/) || [String(t || '')])[0].trim()
+const ogTags = ({ title, desc, url, img }) => [
+  ['og:type', 'website'], ['og:site_name', `${SITE_TITLE} · ${TRIP_LABEL.long}`], ['og:title', title], ['og:description', desc], ['og:url', url],
+  ...(img ? [['og:image', SITE + '/og/' + img], ['og:image:type', 'image/jpeg'], ['og:image:width', OG_W], ['og:image:height', OG_H], ['og:image:alt', title]] : []),
+].map(([k, v]) => `<meta property="${k}" content="${esc(String(v))}">`).join('\n') + `\n<meta name="twitter:card" content="summary_large_image">`
+const siteMeta = () => ogTags({ title: SITE_TITLE + ' · ' + TRIP_LABEL.long, desc: SITE_DESC, url: SITE + '/', img: 'site.jpg' })
+// every card someone can share, with its preview text and photo
+function shareItems() {
+  const raw = Object.fromEntries((readJSON('data/image-picks.json', []) || []).filter((x) => x.ok && x.file).map((x) => [x.key, x.file]))
+  const photo = (key) => (images[key] && !(extra.dropImages || []).includes(key) ? (raw[key] && fs.existsSync(P(raw[key])) ? raw[key] : images[key].file) : null)
+  const out = []
+  for (const h of hotels) {
+    const pr = priceOf(h)
+    const price = pr ? `${amdRate ? amd.amount(pr.total) + ' (' + thb(pr.total) + ')' : thb(pr.total)} for ${pr.nights} nights, 8 guests, 8–18 Jan` : h.noRoomsOnTrip || ''
+    const rooms = [h.bedrooms > 0 ? plural(+h.bedrooms, 'bedroom') : '', h.beds > 0 ? plural(+h.beds, 'bed') : ''].filter(Boolean).join(', ')
+    out.push({ slug: 'ht-' + h.id, hash: 'ht-' + h.id, title: h.name, desc: short([price, rooms, areaName(h.area), h.ratingText].filter(has).join(' · ')), key: 'hotels:' + h.id })
+  }
+  for (const e of events) {
+    const dates = (e.dates || []).filter(inTrip).sort()
+    const when = e.kind === 'dated' && dates.length ? dates.slice(0, 3).map(dayLabel).join(', ') + (dates.length > 3 ? '…' : '') : firstSentence(e.recurrence || e.timeText || '').replace(/\.$/, '')
+    out.push({ slug: 'ev-' + e.id, hash: 'ev-' + e.id, title: e.name, desc: short([when, areaName(e.area), firstSentence(e.description)].filter(has).join(' · ')), key: 'events:' + e.id })
+  }
+  for (const pl of places) out.push({ slug: 'pl-' + pl.id, hash: 'pl-' + pl.id, title: pl.name, desc: short([areaName(pl.area), firstSentence(pl.description)].filter(has).join(' · ')), key: 'places:' + pl.id })
+  // the lists you can share from their filter chips
+  out.push({ slug: 'stay-liked', hash: 'stay/liked', title: 'Villas the group liked', desc: 'The villas with likes, most likes first, in the Phuket trip guide.' })
+  out.push({ slug: 'stay-saved', hash: 'stay/saved', title: 'Villas the group saved', desc: 'The saved villas, with their prices for 8 guests, 8–18 Jan.' })
+  out.push({ slug: 'events-saved', hash: 'events/saved', title: 'Saved music and parties', desc: 'The events the group saved in the Phuket trip guide.' })
+  out.push({ slug: 'places-saved', hash: 'places/saved', title: 'Saved places', desc: 'The places the group saved in the Phuket trip guide.' })
+  return out.map((x) => ({ ...x, src: x.key ? photo(x.key) : null }))
+}
+const sharePage = ({ slug, hash, title, desc, img }) => `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)} · ${SITE_TITLE}</title>
+<meta name="description" content="${esc(desc)}">
+${ogTags({ title, desc, url: SITE + '/s/' + slug, img })}
+<meta name="robots" content="noindex">
+<link rel="icon" href="/icon-192.png">
+<script>location.replace('/#${hash}')</script>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box;background:#0b1416;color:#e9f1ef;font:16px/1.5 system-ui,sans-serif}main{max-width:440px;display:grid;gap:12px}img{width:100%;border-radius:12px}h1{margin:0;font-size:22px}p{margin:0;color:#b6c5c2}a{justify-self:start;padding:12px 16px;border-radius:10px;background:#39c0cb;color:#032328;font-weight:600;text-decoration:none}</style>
+</head><body><main>${img ? `<img src="/og/${img}" alt="">` : ''}<h1>${esc(title)}</h1><p>${esc(desc)}</p><a href="/#${hash}">Open in the Phuket guide</a></main></body></html>
+`
+async function ogJpeg(src, out) {
+  // made again only when the photo is newer than the preview
+  if (fs.existsSync(out) && fs.statSync(out).mtimeMs >= fs.statSync(P(src)).mtimeMs) return
+  await sharp(P(src)).rotate().resize(OG_W, OG_H, { fit: 'cover', position: 'attention' }).jpeg({ quality: 74, mozjpeg: true }).toFile(out)
+}
+async function sharePages() {
+  const items = shareItems()
+  fs.rmSync(P('dist/s'), { recursive: true, force: true }); fs.mkdirSync(P('dist/s'), { recursive: true })
+  fs.mkdirSync(P('dist/og'), { recursive: true })
+  const keep = new Set(['site.jpg'])
+  // the guide's own preview: a sunset photo with its name on it
+  const siteSrc = ['places:promthep-cape', 'places:big-buddha'].map((k) => items.find((x) => x.key === k)?.src || (images[k] && images[k].file)).find((f) => f && fs.existsSync(P(f)))
+  if (siteSrc && !fs.existsSync(P('dist/og/site.jpg'))) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${OG_W}" height="${OG_H}"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0.35" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.75"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="40" y="${OG_H - 92}" font-family="Avenir Next, Helvetica Neue, Arial" font-weight="800" font-size="72" fill="#fff">Phuket</text><text x="42" y="${OG_H - 44}" font-family="Avenir Next, Helvetica Neue, Arial" font-weight="600" font-size="30" fill="#fff" fill-opacity="0.9">Trip guide · ${esc(TRIP_LABEL.long)}</text></svg>`
+    await sharp(P(siteSrc)).resize(OG_W, OG_H, { fit: 'cover', position: 'attention' }).composite([{ input: Buffer.from(svg) }]).jpeg({ quality: 78, mozjpeg: true }).toFile(P('dist/og/site.jpg'))
+  }
+  for (const it of items) {
+    let img = 'site.jpg'
+    if (it.src) { img = it.slug + '.jpg'; keep.add(img); await ogJpeg(it.src, P('dist/og', img)) }
+    fs.writeFileSync(P('dist/s', it.slug + '.html'), sharePage({ ...it, img }))
+  }
+  for (const f of fs.readdirSync(P('dist/og'))) if (!keep.has(f)) fs.rmSync(P('dist/og', f))
+  return items.length
+}
+
 // ---------- views ----------
 // Notes (website only): the group's notes for the whole trip, and every villa's notes in one list (src/app.js fills it)
 function notesView() {
@@ -965,6 +1042,7 @@ function page(build) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${title}
 <meta name="description" content="Pocket guide for Phuket, ${TRIP_LABEL.full}: music events, places, areas, hotels, money and essentials. Works offline.">
+${build === 'standalone' ? siteMeta() : ''}
 <meta name="theme-color" content="#0a7480">
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="noindex, nofollow">
@@ -1026,6 +1104,7 @@ if (standaloneRaw.split('__BUILD_ID__').length !== 2) throw new Error('the build
 const standalone = standaloneRaw.replace('__BUILD_ID__', buildId)
 fs.writeFileSync(P('dist/index.html'), standalone)
 fs.writeFileSync(P('dist/version.json'), JSON.stringify({ v: buildId }))
+await sharePages()
 fs.writeFileSync(P('dist/phuket-guide-offline.html'), page('single'))
 fs.writeFileSync(P('artifact/index.html'), page('artifact'))
 fs.writeFileSync(P('dist/phuket-areas.kml'), kml())

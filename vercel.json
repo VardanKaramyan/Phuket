@@ -3,5 +3,11 @@
   "framework": null,
   "installCommand": "echo skip",
   "buildCommand": "echo skip",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/s/:slug",
+      "destination": "/s/:slug.html"
+    }
+  ]
 }

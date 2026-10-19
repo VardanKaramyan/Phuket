@@ -143,10 +143,12 @@ async function open({ blockEsri = false, base = null, w = 390, h = 844 } = {}) {
   await p.evaluate(() => { location.hash = 'areas' }); await sleep(800)
   const pins = await p.evaluate(() => {
     const villas = document.querySelectorAll('.card[id^="ht-"]').length
-    const onMap = Object.values(__map._layers).filter((l) => l instanceof L.CircleMarker && l.getPopup && /See villa/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : '')).length
-    return { villas, onMap, chip: document.querySelector('.layerbar [data-layer="hotel"]').getAttribute('aria-pressed') }
+    const villaPins = Object.values(__map._layers).filter((l) => l instanceof L.CircleMarker && l.getPopup && /See villa/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : ''))
+    // our booked villas have a second, labelled pin of their own (basePane)
+    const onMap = villaPins.filter((l) => l.options.pane !== 'basePane').length, ours = villaPins.filter((l) => l.options.pane === 'basePane').length
+    return { villas, onMap, ours, chip: document.querySelector('.layerbar [data-layer="hotel"]').getAttribute('aria-pressed') }
   })
-  check('every villa is on the map by default', pins.villas > 0 && pins.onMap === pins.villas && pins.chip === 'true', JSON.stringify(pins))
+  check('every villa is on the map by default, and our two villas have labelled pins too', pins.villas > 0 && pins.onMap === pins.villas && pins.ours === 2 && pins.chip === 'true', JSON.stringify(pins))
   const pop = await p.evaluate(async () => {
     const m = Object.values(__map._layers).find((l) => l instanceof L.CircleMarker && l.getPopup && /mouana/.test(typeof l.getPopup()._content === 'function' ? l.getPopup()._content(l) : ''))
     m.openPopup(); await new Promise((r) => setTimeout(r, 500))

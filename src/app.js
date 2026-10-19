@@ -283,6 +283,27 @@
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
+  /* ---------- Directions: from one of our villas, or from where you are now ---------- */
+  // every Directions link carries its destination (data-dir="lat,lng"); with our villas known, a tap asks where from.
+  // The villa you sleep in tonight comes first. Without JavaScript the link itself goes from your current location
+  const dirDlg = $('#dir-dialog')
+  if (dirDlg && (D.bases || []).length) {
+    const dirUrl = (from, to) => 'https://www.google.com/maps/dir/?api=1' + (from ? '&origin=' + from : '') + '&destination=' + to + '&travelmode=driving'
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[data-dir]'); if (!a) return
+      e.preventDefault()
+      const today = bkkDate(new Date())
+      const tonight = D.bases.find((b) => today >= b.from && today < b.to)
+      const opts = D.bases.filter((b) => b.key !== a.dataset.dirSkip).sort((x, y) => (y === tonight) - (x === tonight))
+      $('#dir-what').textContent = 'To ' + (a.dataset.dirName || 'this place')
+      $('#dir-options').innerHTML = opts.map((b) => '<a class="dir-opt" target="_blank" rel="noopener" href="' + esc(dirUrl(b.lat + ',' + b.lng, a.dataset.dir)) + '"><b>From the ' + esc(b.short) + '</b><span>' + esc(b.range) + (b === tonight ? ' · where you sleep tonight' : '') + '</span></a>').join('') +
+        '<a class="dir-opt" target="_blank" rel="noopener" href="' + esc(dirUrl('', a.dataset.dir)) + '"><b>From where I am now</b><span>Google Maps uses your location</span></a>'
+      track('map', 'dir:' + (a.dataset.dirName || ''))
+      if (dirDlg.showModal) dirDlg.showModal(); else dirDlg.setAttribute('open', '')
+    })
+    $('#dir-options').addEventListener('click', (e) => { if (e.target.closest('.dir-opt')) setTimeout(() => dirDlg.close(), 50) })
+  }
+
   /* ---------- New villas: a badge on the villas this phone has not seen before ---------- */
   // the phone remembers which villas it has shown; one added to the guide since then says New (and the Stay tab counts
   // them) until it has been on screen for a moment, and the badge stays for the rest of that visit. A first visit shows
@@ -486,7 +507,8 @@
       const gm = '<a class="btn" target="_blank" rel="noopener" data-gmaps-pin href="' + gmaps(p.lat + ',' + p.lng) + '">Google Maps</a>'
       return thumb + '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') + price + '<div class="actions">' + card + gm + web + '</div>'
     }
-    const dir = p.nodir ? '' : '<a class="btn" target="_blank" rel="noopener" href="' + gdir(p.dlat ?? p.lat, p.dlng ?? p.lng) + '">' + esc(p.dlabel || 'Directions') + '</a>'
+    const dll = (p.dlat ?? p.lat) + ',' + (p.dlng ?? p.lng)
+    const dir = p.nodir ? '' : '<a class="btn" target="_blank" rel="noopener" href="' + gdir(p.dlat ?? p.lat, p.dlng ?? p.lng) + '" data-dir="' + dll + '" data-dir-name="' + esc(p.name) + '">' + esc(p.dlabel || 'Directions') + '</a>'
     return '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') +
       '<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="' + gmaps(p.q, p.pid) + '">Google Maps</a>' + dir + card + '</div>'
   }
@@ -667,6 +689,8 @@
       },
     })
     ;['event', 'place', 'gem', 'hotel', 'money'].forEach((t) => { layers[t] = L.layerGroup() })
+    layers.base = L.layerGroup().addTo(map) // our villas: always shown, in a pane above the other pins
+    map.createPane('basePane').style.zIndex = 450
     ;['event', 'place', 'gem', 'hotel'].forEach((t) => layers[t].addTo(map))
     D.points.forEach((p) => {
       // the popup is built when it opens, so it fits the map's size at that moment (full screen or not)
@@ -675,6 +699,11 @@
       m.bindTooltip(esc(p.name), { direction: 'top', offset: [0, -6] })
       layers[p.k === 'gem' ? 'gem' : p.t].addLayer(m)
       markers[p.t + ':' + p.id] = m
+      if (p.base) {
+        const home = L.circleMarker([p.lat, p.lng], { pane: 'basePane', radius: 10, color: cssVar('--surface'), weight: 3, fillColor: cssVar('--sun'), fillOpacity: 1 }).bindPopup(() => popupHtml(p), popupOpts())
+        home.bindTooltip(esc(p.baseLabel), { permanent: true, direction: 'right', offset: [10, 0], className: 'base-tip' })
+        layers.base.addLayer(home)
+      }
     })
     syncHiddenPins()
     $$('.layerbar .chip').forEach((chip) => {

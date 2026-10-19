@@ -133,10 +133,11 @@ wr('hotels.json', ho)
   })
   p('karon-temple-market', (x) => { x.gmapsQuery = 'Karon Temple Market, Karon, Phuket'; x.placeIdLocked = true })
   p('koh-phangan-rave-trip', (x) => {
-    // two windows: with the group (10-13 Jan) or the two of you in full-moon week (19-23 Jan)
+    // the group stays in Phuket (the Patong villa 8-14 Jan, the Rawai villa 14-18 Jan, booked 19 Oct 2026), so the
+    // window is the two of you in full-moon week (19-23 Jan)
     x.name = 'Koh Phangan rave trip (2-5 days)'
-    x.bestTime = 'Two good windows. With the group: Sun 10 to Wed 13 Jan (Lost Jungle until 11 Jan, Chill Up on Mon 11, the Lighthouse Party on Tue 12). For the two of you: Tue 19 to Sat 23 Jan, the full-moon week, then fly back for the last Circoloco on Sat 23. See Info, Koh Phangan full-moon week.'
-    x.description = "Thailand's party island, in the Gulf. Most jungle raves are inland near Ban Tai. With the group: OXA (Fri 8 and 15 Jan), Lost Jungle psytrance (Sat 9 to Mon 11) and Halfmoon (Fri 15 - Sat 16). In full-moon week: OXA (Tue 19), Waterfall (Wed 20), Jungle Experience (Thu 21) and the Full Moon Party (Fri 22 Jan)."
+    x.bestTime = 'For the two of you: Tue 19 to Sat 23 Jan, the full-moon week, then fly back for the last Circoloco on Sat 23. The group stays in Phuket (the Patong villa 8 to 14 Jan, the Rawai villa 14 to 18 Jan). See Info, Koh Phangan full-moon week.'
+    x.description = "Thailand's party island, in the Gulf. Most jungle raves are inland near Ban Tai. While the group is in Phuket: OXA (Fri 8 and 15 Jan), Lost Jungle psytrance (Sat 9 to Mon 11) and Halfmoon (Fri 15 - Sat 16). In full-moon week: OXA (Tue 19), Waterfall (Wed 20), Jungle Experience (Thu 21) and the Full Moon Party (Fri 22 Jan)."
     x.gettingThere = String(x.gettingThere || '').replace('Bangkok Airways Phuket - Koh Samui (about 1 h, several flights a day), then', 'Bangkok Airways Phuket - Koh Samui (about 1 h, 8 flights a day; take one at 14:15 or earlier to catch the boats), then')
     x.tips = (x.tips || []).concat(['Full-moon week (20-24 Jan): rooms cost 2-3 times more and many ask for a 3-5 night minimum. Book in October or November. Ban Tai is the best base.'])
     x.feeText = String(x.feeText || '').replace(/from about 2,200 THB one way/g, 'about 3,000 to 5,000 THB one way')
@@ -171,7 +172,7 @@ wr('hotels.json', ho)
     if (Array.isArray(x.tips)) x.tips = x.tips.filter((t) => !/Niky/.test(t))
   }
   if (/Niky/.test(ard.recommendation || '')) ard.recommendation = ''
-  a('natai', (x) => { x.stayIf = 'Stay here if you find a room: on the Circoloco Saturdays (9, 16 and 23 Jan) rooms are sold out or very expensive, so this guide suggests Kamala and a driver.' })
+  a('natai', (x) => { x.stayIf = 'Stay here if you find a room: on the Circoloco Saturdays (9, 16 and 23 Jan) rooms are sold out or very expensive. The group sleeps in its booked villas (Patong to 14 Jan, Rawai to 18 Jan) and books a driver: about 1 hour from Patong, 1 hour 10 from Rawai.' })
   // the two Bang Tao sentences that the removal above leaves broken
   a('bang-tao', (x) => {
     x.tagline = 'Long beach, top restaurants and beach clubs'
@@ -183,7 +184,7 @@ wr('hotels.json', ho)
   const baba = byId(hod.items, 'baba-beach-club-natai')
   if (baba) {
     baba.noRoomsOnTrip = 'No rooms 8–27 Jan'
-    baba.whyStay = 'The Circoloco venue itself: a music hotel on Natai Beach with a Funktion-One sound system. No rooms are on sale for 8 to 27 Jan 2027, so for this trip it is your party venue. Stay in Kamala and book a driver.'
+    baba.whyStay = 'The Circoloco venue itself: a music hotel on Natai Beach with a Funktion-One sound system. No rooms are on sale for 8 to 27 Jan 2027, so for this trip it is your party venue. Book a driver from the villa: about 1 hour from Patong (9 Jan), 1 hour 10 from Rawai (16 Jan).'
     log.push('hotels: flagged Baba Beach Club (no rooms on the trip dates)')
   }
   const nh = byId(hod.items, 'natai-house')
@@ -348,6 +349,12 @@ mergeLateJan(ROOT, log)
 
 // ---- the 19 Oct 2026 research: ports and ferries, islands, island events, boat tours, Phuket events, places ----
 mergeIslandsEvents(ROOT, log)
+// the group no longer goes to Koh Phangan on 10-13 Jan (villas booked in Phuket, 19 Oct 2026)
+{
+  const d = rd('places.json')
+  for (const x of d.items) if (typeof x.description === 'string' && x.description.includes(', or 10-13 Jan if the group goes')) { x.description = x.description.replace(', or 10-13 Jan if the group goes', ''); log.push('places: ' + x.id + ' no group Phangan window') }
+  wr('places.json', d)
+}
 
 // ---- Google place ids (recorded by the maps reviewer): links open the exact listing ----
 {

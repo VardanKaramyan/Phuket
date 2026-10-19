@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url'
 import crypto from 'node:crypto'
 import * as turf from '@turf/turf'
 import sharp from 'sharp'
-import { TRIP, TRIP_DAYS, TRIP_LABEL, inTrip, phaseOf, phaseRange, phaseLabel } from './trip.mjs'
+import { TRIP, TRIP_DAYS, TRIP_LABEL, inTrip, phaseOf, phaseRange, phaseLabel, baseOf, leavingOn } from './trip.mjs'
 import { makeAmd } from './amd.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -144,7 +144,7 @@ function actionRow({ item, q, mapKey, fav, extraBtns = '' }) {
   const query = q || item.gmapsQuery
   if (has(query)) parts.push(`<a class="btn primary" href="${gmaps(query, item.placeId)}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a>`)
   const d = dirOf(item)
-  if (d) parts.push(`<a class="btn" href="${gdir(d.lat, d.lng)}" target="_blank" rel="noopener">${icon('route')}${esc(d.label)}</a>`)
+  if (d) parts.push(`<a class="btn" href="${gdir(d.lat, d.lng)}" target="_blank" rel="noopener" data-dir="${+d.lat},${+d.lng}" data-dir-name="${esc(item.name || '')}">${icon('route')}${esc(d.label)}</a>`)
   ;(item.extraMaps || []).forEach((x) => parts.push(`<a class="btn" href="${gmaps(x.q, x.placeId)}" target="_blank" rel="noopener">${icon('pin')}${esc(x.label)}</a>`))
   if (mapKey && !lowConf(item)) parts.push(`<button class="btn js-only" type="button" data-on-map="${esc(mapKey)}">${icon('areas')}On map</button>`)
   parts.push(extraBtns)
@@ -220,7 +220,7 @@ ${dateChips}
 <div class="meter-row"><span class="meter" aria-hidden="true">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= score ? 'on' : ''}"></i>`).join('')}</span>Underground ${score}/5</div>
 <p class="desc">${esc(e.description)}</p>
 ${tags.length ? `<div class="tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
-${facts([['When', recurring ? e.recurrence || e.timeText : e.timeText], ['Where', lowConf(e) ? 'Exact place not public yet. Check the organiser before you go.' : ''], ['Tickets', e.priceText]])}
+${facts([['When', recurring ? e.recurrence || e.timeText : e.timeText], ['Where', lowConf(e) ? 'Exact place not public yet. Check the organiser before you go.' : ''], ['Tickets', e.priceText], ['By car', lowConf(e) ? '' : driveText('ev:' + e.id)]])}
 ${moreBlock('Line-up, tips & links', e.tips, e.links, [['Lineup', lineup.length ? lineup.join(', ') : ''], ['Type', e.type]])}
 ${voteBar('ev:' + e.id, e.name)}
 ${actionRow({ item: e, mapKey: 'event:' + e.id, fav: 'ev:' + e.id })}
@@ -276,7 +276,7 @@ const routeDests = (r) => {
 function pierBody(p) {
   const r = (p.routes || []).filter((x) => x && has(x.to))
   const boats = r.length > 2 ? `<details class="more"><summary>Boats: times and prices (${r.length})</summary>${routesHtml(r)}</details>` : r.length ? `<h3 class="mini-title">Boats from here</h3>${routesHtml(r)}` : ''
-  return facts([['Boats to', routeDests(r).join(', ')], ['Fees', p.feeText], ['Best time', p.bestTime]]) + boats + cardLinks('Boat tours from here:', toursFrom(p))
+  return facts([['Boats to', routeDests(r).join(', ')], ['Fees', p.feeText], ['Best time', p.bestTime], ['By car', driveText('pl:' + p.id, p)]]) + boats + cardLinks('Boat tours from here:', toursFrom(p))
 }
 const placeIndex = new Map(places.map((p, i) => [p.id, i]))
 // piers come last, after food: in All they are a reference list, not places to visit
@@ -310,7 +310,7 @@ ${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class
 <p class="desc">${esc(p.description)}</p>
 ${p.tier === 'pier' ? pierBody(p)
     : p.tier === 'tour' ? facts([['Time', durLabel], ['Price', p.priceText || p.feeText], ['Private boat', p.privateCharter], ['Includes', p.includes], ['Leaves from', p.departsFrom], ['Best time', p.bestTime]]) + cardLinks(piersOf(p).length > 1 ? 'The piers:' : 'The pier:', piersOf(p), pierShort)
-    : facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText]])}
+    : facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText], ['By car', driveText('pl:' + p.id, p)]])}
 ${moreBlock(p.tier === 'tour' ? 'Operators, getting there & tips' : 'Opening, getting there & tips', p.tips, [...(p.tier === 'tour' ? p.operators || [] : []), ...(p.links || [])], [['Open', [p.openText, days].filter(has).join(' · ')], ['Getting there', p.gettingThere], ['Facilities', p.facilities]])}
 ${voteBar('pl:' + p.id, p.name)}
 ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
@@ -335,7 +335,7 @@ ${imgTag('areas:' + a.id, a.name, mode, (a.name || '').slice(0, 3).toUpperCase()
 ${best.length ? `<div class="tags">${best.map((t) => `<span class="tag">${esc(t.replace(/-/g, ' '))}</span>`).join('')}</div>` : ''}
 <p class="desc">${esc(a.description)}</p>
 ${has(a.stayIf) ? `<p class="stayif">${esc(a.stayIf)}</p>` : ''}
-${facts([['Prices', price], ['Airport', a.airportDriveMin ? `≈ ${a.airportDriveMin} min drive` : '']])}
+${facts([['Prices', price], ['Airport', a.airportDriveMin ? `≈ ${a.airportDriveMin} min drive` : ''], ['By car', driveText('ar:' + a.id)]])}
 <details class="more"><summary>Scores, sea & highlights</summary><div class="scores">${bars}</div>${facts([['To Patong', a.id === 'patong' ? '' : a.patongDriveMin ? `≈ ${a.patongDriveMin} min drive` : ''], ['Sea in Jan', a.beach], ['Not ideal for', (a.notIdealFor || []).join(', ').replace(/-/g, ' ')]])}${(a.highlights || []).filter(has).length ? `<ul>${a.highlights.filter(has).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${linksHtml(a.links)}</details>
 <div class="actions"><button class="btn primary js-only" type="button" data-area-map="${esc(a.id)}">${icon('areas')}Show on map</button><a class="btn" href="${gmaps(a.gmapsQuery || a.name + ', Phuket')}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a></div>
 </div></article>`
@@ -358,6 +358,24 @@ const hotelOrder = { luxury: 0, boutique: 1, 'mid-range': 2, budget: 3, hostel: 
 const STAY_GUESTS = 8
 // the trip total, read from the start of priceText ("241,500 THB for 10 nights (8-18 Jan, 8 guests), ..."), so the big
 // number on the card and the price notes can never disagree; a villa with no rooms on the dates has none
+// ---------- our villas: the two the group booked (TRIP.bases), and driving times from them ----------
+// data/drive-times.json comes from tools/drive-times.mjs (OSRM on OpenStreetMap roads, no traffic)
+const DRIVE = (readJSON('data/drive-times.json', { items: {} }) || { items: {} }).items || {}
+const BASES = TRIP.bases.map((b) => {
+  const h = hotels.find((x) => x.id === b.id)
+  if (!h) throw new Error(`tools/trip.mjs: the booked villa ${b.id} is not in data/hotels.json`)
+  return { ...b, h, nights: Math.round((Date.parse(b.to) - Date.parse(b.from)) / 86400000) }
+})
+const baseOfVilla = (id) => BASES.find((b) => b.id === id)
+const baseRange = (b) => `${Number(b.from.slice(8))}–${Number(b.to.slice(8))} Jan`
+const mins = (m) => (m >= 60 ? `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}` : `${m} min`)
+// "3 min from the Patong villa · 22 min from the Rawai villa": only for places you drive to (not islands or boat tours)
+function driveText(key, it) {
+  const d = DRIVE[key]
+  if (!d || (it && (it.category === 'island' || ['tour', 'day-trip'].includes(it.tier)))) return ''
+  const parts = BASES.filter((b) => d[b.key]).map((b) => `${mins(d[b.key].min)} from the ${b.short}`)
+  return parts.length ? parts.join(' · ') + ' (no traffic)' : ''
+}
 function priceOf(h) {
   if (h.noRoomsOnTrip) return null
   const m = String(h.priceText || '').match(/^([\d,]+) THB for (\d+) nights/)
@@ -436,7 +454,7 @@ function hotelCard(h, mode) {
   const hideBtn = `<button class="btn js-only" type="button" data-hide-stay="${esc(h.id)}" aria-label="${esc('Hide ' + h.name)}">${icon('hide')}Hide</button>`
   const vibe = (h.vibe || []).filter(has)
   return `<article class="card" id="ht-${esc(h.id)}" data-stay="${esc(h.id)}" data-fav-card="ht:${esc(h.id)}" data-name="${esc(h.name)}" data-kind="Hotel" data-tier="${esc(tierKey)}" data-zone="${zoneOf(h)}" data-beds="${bedFit(h)?.key || ''}" data-text="${textOf(h.name, areaName(h.area), h.tier, vibe)}">
-${villaMedia(h, mode)}<div class="tag-top"><span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
+${villaMedia(h, mode)}<div class="tag-top">${baseOfVilla(h.id) ? `<span class="pill booked">Booked · ${baseRange(baseOfVilla(h.id))}</span>` : ''}<span class="pill ${h.tier === 'luxury' ? 'must' : 'soft'}">${esc(HTIER[h.tier] || h.tier)}</span>${h.noRoomsOnTrip ? `<span class="pill bad">${esc(h.noRoomsOnTrip)}</span>` : ''}${h.adultsOnly ? '<span class="pill soft">Adults only</span>' : ''}${h.beachfront ? '<span class="pill soft">Beachfront</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(h.name)}</h2><p class="subtitle">${esc(areaName(h.area))}${has(h.ratingText) ? ' · ' + esc(h.ratingText) : ''}</p></div></div>
 ${bedRow(h)}
@@ -524,8 +542,10 @@ function dayAgenda(iso) {
   if (iso === TRIP.flight.day) return { evs: [], mk: [] }
   const here = PLAN_PHANGAN.has(iso) ? 'koh-phangan' : 'phuket'
   const near = (e) => (whereOf(e) === here ? 0 : 1)
-  // nights on islands outside the plan (Phi Phi pool parties, Lanta bars) only make the agenda when they suit the traveler
-  const evs = events.filter((e) => (e.dates || []).includes(iso) && (whereOf(e) !== 'other' || e.pick || (e.undergroundScore || 0) >= 3)).sort((a, b) => near(a) - near(b) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) || (b.undergroundScore || 0) - (a.undergroundScore || 0))
+  // nights on islands outside the plan (Phi Phi pool parties, Lanta bars) only make the agenda when they suit the traveler;
+  // nights in one of our Phuket villas leave out Koh Phangan
+  const inVilla = !!baseOf(iso)
+  const evs = events.filter((e) => (e.dates || []).includes(iso) && !(inVilla && whereOf(e) === 'koh-phangan') && (whereOf(e) !== 'other' || e.pick || (e.undergroundScore || 0) >= 3)).sort((a, b) => near(a) - near(b) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) || (b.undergroundScore || 0) - (a.undergroundScore || 0))
   const mk = markets.filter((p) => p.days.includes(dowOf(iso)))
   return { evs, mk }
 }
@@ -556,7 +576,9 @@ function homeView(mode) {
       ...mk.map((p) => `<li class="mk"><div><a href="#pl-${esc(p.id)}">${esc(p.name)}</a> <span>· ${esc([areaName(p.area), shortHours(p.openText)].filter(has).join(' · '))}</span></div></li>`),
     ]
     ;[].concat((extra.dayTips || {})[iso] || []).forEach((tip) => items.push(`<li class="tip"><div><span>${esc(tip)}</span></div></li>`))
-    return `<article class="agenda-day" id="day-${iso}" data-day="${iso}"><h3>${dayLabel(iso)} <small>Sunrise ${st.rise} · Sunset ${st.set}</small></h3>${items.length ? `<ul>${items.join('')}</ul>` : '<p class="quiet">No parties listed yet. A good day for a beach, a viewpoint or a day trip.</p>'}</article>`
+    const b = baseOf(iso), lv = leavingOn(iso)
+    const where = lv && b ? `Move: out of the ${lv.short} by ${lv.checkOut}, into the ${b.short} from ${b.checkIn}` : b && iso === b.from ? `Check in at the ${b.short} from ${b.checkIn}` : b ? `Night at the ${b.short}` : lv ? `Check out of the ${lv.short} by ${lv.checkOut}` : ''
+    return `<article class="agenda-day" id="day-${iso}" data-day="${iso}"><h3>${dayLabel(iso)} <small>Sunrise ${st.rise} · Sunset ${st.set}</small></h3>${where ? `<p class="day-base"><a href="#our-villas">${icon('stay')}${esc(where)}</a></p>` : ''}${items.length ? `<ul>${items.join('')}</ul>` : '<p class="quiet">No parties listed yet. A good day for a beach, a viewpoint or a day trip.</p>'}</article>`
   }).join('')
   // a hand-picked list (extra.beforeYouFly); without one, the first 'must know' facts of the pre-trip sections
   const tripSections = new Set(['phangan-week', 'solo', 'departure'])
@@ -585,6 +607,7 @@ function homeView(mode) {
 <div class="pass-bottom">${dayRows}
 <div class="pass-legend"><span><i></i>Music</span><span><i class="sun"></i>Market</span><span><i class="plane"></i>Flight home</span></div></div>
 </div>
+${BASES.length ? `<div class="bases-strip" aria-label="Our villas">${BASES.map((b) => `<a href="#our-villas"><span>${icon('stay')}${esc(b.short)}</span><b>${esc(dayLabel(b.from).replace(/ Jan$/, ''))} → ${esc(dayLabel(b.to))}</b></a>`).join('')}</div>` : ''}
 <div class="block-title"><h2>Day by day</h2><button class="chip js-only" type="button" id="agenda-all" aria-pressed="false">Show all days</button></div>
 <div class="agenda" id="agenda">${agenda}</div>
 <div class="tiles">${tiles}</div>
@@ -780,12 +803,28 @@ ${chipRow('areas', 'best', [['all', 'All areas'], ...tags.map((t) => [t, cap(t.r
 <p class="empty" data-empty="areas" hidden>No areas match.</p>
 </section>`
 }
+// Our villas, at the top of the Stay tab: the dates, check-in and checkout, and the way there
+function ourVillas(mode) {
+  if (!BASES.length) return ''
+  const card = (b) => {
+    const h = b.h, im = images['hotels:' + h.id]
+    const src = im && fs.existsSync(P(im.file)) ? (mode === 'inline' ? 'data:image/webp;base64,' + fs.readFileSync(P(im.file)).toString('base64') : 'img/' + path.basename(im.file)) : ''
+    const ll = `${+h.lat},${+h.lng}`
+    return `<article class="base-card" id="base-${b.key}">${src ? `<a class="base-thumb" href="#ht-${esc(h.id)}" tabindex="-1" aria-hidden="true"><img src="${src}" alt="" loading="lazy"></a>` : ''}<div class="base-body">
+<span class="eyebrow">${esc(b.short)} · ${plural(b.nights, 'night')}</span><h3><a href="#ht-${esc(h.id)}">${esc(h.name)}</a></h3>
+<p class="base-dates"><b>${esc(dayLabel(b.from))}</b> check-in from ${b.checkIn} → <b>${esc(dayLabel(b.to))}</b> checkout by ${b.checkOut}</p>
+<p class="note">${esc(areaName(h.area))}${DRIVE['airport'] && DRIVE['airport'][b.key] ? ` · the airport ${mins(DRIVE['airport'][b.key].min)} by car (no traffic)` : ''}</p>
+<div class="actions"><a class="btn primary" href="#ht-${esc(h.id)}">See the villa</a><a class="btn" href="${gmaps(ll)}" target="_blank" rel="noopener">${icon('pin')}Map</a><a class="btn" href="${gdir(h.lat, h.lng)}" target="_blank" rel="noopener" data-dir="${ll}" data-dir-name="${esc('the ' + b.short)}" data-dir-skip="${b.key}">${icon('route')}Directions</a></div></div></article>`
+  }
+  return `<div class="stack" id="our-villas"><h2 class="block-title">Our villas <small>booked</small></h2>${BASES.map(card).join('')}<p class="note">The pins are Airbnb's approximate ones until the hosts send the exact addresses, so directions may end a few hundred metres off. Directions anywhere in the guide can start from either villa.</p></div>`
+}
 function stayView(mode) {
   const zonesUsed = ZONES.filter(([z]) => hotels.some((h) => zoneOf(h) === z))
   // only the price chips that match a card (the villa list has no boutique hotels)
   const tiersUsed = [['luxury', 'Luxury'], ['boutique', 'Boutique'], ['mid-range', 'Mid-range'], ['budget', 'Budget']].filter(([t]) => hotels.some((h) => (h.tier === 'hostel' ? 'budget' : h.tier) === t))
   return `<section class="view" id="stay" aria-labelledby="stay-title">
 <div class="view-head"><span class="eyebrow">8 guests · 8–18 Jan</span><h1 class="view-title" id="stay-title">Where to stay</h1><p class="lede">${esc(extra.stayIntro || 'Add your own bookings, and browse hotels picked for this trip, from Circoloco’s beach to Old Town.')}</p></div>
+${ourVillas(mode)}
 <div class="stack"><h2 class="block-title">My hotels</h2>
 <div class="mine" id="my-hotels"><p class="note">Turn on JavaScript to save your own hotels here.</p></div>
 <p class="js-only"><button class="btn" type="button" id="my-hotel-open" aria-expanded="false" aria-controls="my-hotel-form">${icon('plus')}Add hotel</button></p>
@@ -905,6 +944,7 @@ function chrome(body) {
 <main id="main">${body}</main>
 <button class="back-to-map js-only" id="back-to-map" type="button" hidden>${icon('back')}Back to map</button>
 <button class="back-to-map js-only" id="back-to-card" type="button" hidden>${icon('back')}<span>Back to villa</span></button>
+<dialog class="vote-dialog dir-dialog" id="dir-dialog" aria-labelledby="dir-title"><form method="dialog"><h2 id="dir-title">Directions</h2><p class="vote-what" id="dir-what"></p><div class="dir-options" id="dir-options"></div><div class="actions"><button class="btn" type="submit">Cancel</button></div></form></dialog>
 <dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
 <h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
 <label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
@@ -960,6 +1000,9 @@ function clientData(build) {
   hotels.forEach((h) => {
     add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.beds > 0 ? plural(h.beds, 'bed') : '', h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
     const pt = pts.at(-1), pr = priceOf(h)
+    // our booked villas: a pin of their own on the map, always on, with its name and dates
+    const bv = baseOfVilla(h.id)
+    if (pt && pt.id === h.id && pt.t === 'hotel' && bv) Object.assign(pt, { base: bv.key, baseLabel: `${bv.short} · ${baseRange(bv)}` })
     if (pt && pt.id === h.id && pt.t === 'hotel') {
       // the popup: drams first (an estimate), then US dollars and the listing's baht price
       if (pr) Object.assign(pt, amdRate
@@ -974,6 +1017,8 @@ function clientData(build) {
   const bestRates = best ? Object.fromEntries((best.sampleRates || []).filter((r) => r && r.buyTHB).map((r) => [r.currency, r.buyTHB])) : {}
   return {
     build, trip: TRIP, buildId: build === 'standalone' ? '__BUILD_ID__' : '', // the website's build, see version.json
+    // our villas, for Directions (start from either) and the map
+    bases: BASES.map((b) => ({ key: b.key, short: b.short, from: b.from, to: b.to, range: `${dayLabel(b.from)} → ${dayLabel(b.to)}`, lat: +b.h.lat, lng: +b.h.lng, card: 'ht-' + b.h.id })),
     areas: areasSorted.map((a) => ({ id: a.id, name: a.name, short: shortName(a), tagline: a.tagline, color: AREA_COLORS[a.id] || '#999', label: labelPoint(a), rank: (areaGeo.features.find((f) => f.properties.id === a.id) || { properties: {} }).properties.km2 || 0, gmapsArea: gmaps(a.gmapsQuery || a.name + ', Phuket', a.placeId) })),
     areaGeo, land, roads, points: pts, offlineUrl: extra.offlineUrl || '',
     precacheCount: 6 + Object.keys(images).filter((k) => usedKey(k) && !(extra.dropImages || []).includes(k) && fs.existsSync(P(images[k].file))).length,

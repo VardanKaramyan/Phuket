@@ -5,6 +5,13 @@
 // then the date texts (grep -n "Jan" data/extra.json tools/curate.mjs tools/merge-late-jan.mjs), then `npm run all`.
 export const TRIP = {
   start: '2027-01-08', end: '2027-01-26', lastNight: '2027-01-25', flight: { day: '2027-01-26', time: '18:20' },
+  // the villas the group booked (ids in data/stays.json), 19 Oct 2026: a night belongs to the villa whose stay covers it
+  // (from = check-in day, to = check-out day). The two villas' pins are Airbnb's approximate ones until the hosts send
+  // the address.
+  bases: [
+    { id: '136-pool-villa-patong-5br', key: 'patong', short: 'Patong villa', from: '2027-01-08', to: '2027-01-14', checkIn: '15:00', checkOut: '11:00' },
+    { id: 'luxurious-seaview-villa-rawai', key: 'rawai', short: 'Rawai villa', from: '2027-01-14', to: '2027-01-18', checkIn: '16:00', checkOut: '12:00' },
+  ],
   phases: [
     { id: 'group', label: 'Group', from: '2027-01-08', to: '2027-01-18' },
     { id: 'duo', label: 'Two of you', from: '2027-01-19', to: '2027-01-23' },
@@ -16,6 +23,10 @@ const DAY = 86400000
 const utc = (iso) => Date.parse(iso + 'T00:00:00Z')
 export const TRIP_DAYS = Array.from({ length: Math.round((utc(TRIP.end) - utc(TRIP.start)) / DAY) + 1 }, (_, i) => new Date(utc(TRIP.start) + i * DAY).toISOString().slice(0, 10))
 TRIP.days = TRIP_DAYS.length
+
+// the booked villa for the night of iso (null when the group is not in one), and the villa you leave that day
+export const baseOf = (iso) => TRIP.bases.find((b) => iso >= b.from && iso < b.to) || null
+export const leavingOn = (iso) => TRIP.bases.find((b) => b.to === iso) || null
 
 // a night out counts if it starts on or before the last night (the flight leaves on the last day)
 export const inTrip = (iso) => iso >= TRIP.start && iso <= TRIP.lastNight

@@ -1,0 +1,1968 @@
+{
+ "generatedOn": "2026-10-19",
+ "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap roads; no traffic",
+ "bases": {
+  "patong": {
+   "id": "136-pool-villa-patong-5br",
+   "lat": 7.8863,
+   "lng": 98.29855
+  },
+  "rawai": {
+   "id": "luxurious-seaview-villa-rawai",
+   "lat": 7.80056,
+   "lng": 98.33697
+  }
+ },
+ "items": {
+  "pl:big-buddha": {
+   "patong": {
+    "min": 26,
+    "km": 21.4
+   },
+   "rawai": {
+    "min": 16,
+    "km": 10.6
+   }
+  },
+  "pl:wat-chalong": {
+   "patong": {
+    "min": 20,
+    "km": 17.8
+   },
+   "rawai": {
+    "min": 9,
+    "km": 7
+   }
+  },
+  "pl:phuket-old-town": {
+   "patong": {
+    "min": 17,
+    "km": 15.1
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.1
+   }
+  },
+  "pl:sunday-walking-street": {
+   "patong": {
+    "min": 17,
+    "km": 15
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14
+   }
+  },
+  "pl:promthep-cape": {
+   "patong": {
+    "min": 23,
+    "km": 20
+   },
+   "rawai": {
+    "min": 9,
+    "km": 6.3
+   }
+  },
+  "pl:windmill-viewpoint": {
+   "patong": {
+    "min": 22,
+    "km": 19
+   },
+   "rawai": {
+    "min": 11,
+    "km": 6.4
+   }
+  },
+  "pl:black-rock-viewpoint": {
+   "patong": {
+    "min": 35,
+    "km": 14.9
+   },
+   "rawai": {
+    "min": 29,
+    "km": 7.9
+   }
+  },
+  "pl:karon-viewpoint": {
+   "patong": {
+    "min": 14,
+    "km": 12.9
+   },
+   "rawai": {
+    "min": 9,
+    "km": 6.6
+   }
+  },
+  "pl:kata-beach": {
+   "patong": {
+    "min": 11,
+    "km": 9.5
+   },
+   "rawai": {
+    "min": 13,
+    "km": 9.8
+   }
+  },
+  "pl:kata-noi-beach": {
+   "patong": {
+    "min": 14,
+    "km": 11.5
+   },
+   "rawai": {
+    "min": 15,
+    "km": 10.7
+   }
+  },
+  "pl:nai-harn-beach": {
+   "patong": {
+    "min": 21,
+    "km": 16.9
+   },
+   "rawai": {
+    "min": 11,
+    "km": 6.1
+   }
+  },
+  "pl:freedom-beach": {
+   "patong": {
+    "min": 21,
+    "km": 4.2
+   },
+   "rawai": {
+    "min": 38,
+    "km": 18.9
+   }
+  },
+  "pl:patong-beach": {
+   "patong": {
+    "min": 3,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "pl:bangla-road": {
+   "patong": {
+    "min": 3,
+    "km": 2.6
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.6
+   }
+  },
+  "pl:khao-rang-viewpoint": {
+   "patong": {
+    "min": 16,
+    "km": 14
+   },
+   "rawai": {
+    "min": 18,
+    "km": 14.3
+   }
+  },
+  "pl:rawai-seafood-market": {
+   "patong": {
+    "min": 23,
+    "km": 19
+   },
+   "rawai": {
+    "min": 5,
+    "km": 3.3
+   }
+  },
+  "pl:naka-weekend-market": {
+   "patong": {
+    "min": 15,
+    "km": 13.2
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13
+   }
+  },
+  "pl:chillva-market": {
+   "patong": {
+    "min": 12,
+    "km": 11.1
+   },
+   "rawai": {
+    "min": 19,
+    "km": 15.9
+   }
+  },
+  "pl:nai-yang-beach": {
+   "patong": {
+    "min": 41,
+    "km": 35.9
+   },
+   "rawai": {
+    "min": 48,
+    "km": 43.6
+   }
+  },
+  "pl:bang-pae-waterfall": {
+   "patong": {
+    "min": 34,
+    "km": 30.4
+   },
+   "rawai": {
+    "min": 40,
+    "km": 35.1
+   }
+  },
+  "pl:phuket-elephant-sanctuary": {
+   "patong": {
+    "min": 30,
+    "km": 27.7
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.5
+   }
+  },
+  "pl:chalong-bay-rum": {
+   "patong": {
+    "min": 20,
+    "km": 17.4
+   },
+   "rawai": {
+    "min": 9,
+    "km": 6.7
+   }
+  },
+  "pl:banana-beach": {
+   "patong": {
+    "min": 32,
+    "km": 27
+   },
+   "rawai": {
+    "min": 45,
+    "km": 41
+   }
+  },
+  "pl:laem-singh-beach": {
+   "patong": {
+    "min": 15,
+    "km": 13
+   },
+   "rawai": {
+    "min": 34,
+    "km": 30.8
+   }
+  },
+  "pl:ya-nui-beach": {
+   "patong": {
+    "min": 22,
+    "km": 19.4
+   },
+   "rawai": {
+    "min": 10,
+    "km": 5.9
+   }
+  },
+  "pl:tri-trang-beach": {
+   "patong": {
+    "min": 10,
+    "km": 4.8
+   },
+   "rawai": {
+    "min": 29,
+    "km": 21.8
+   }
+  },
+  "pl:ao-yon-beach": {
+   "patong": {
+    "min": 29,
+    "km": 24.4
+   },
+   "rawai": {
+    "min": 25,
+    "km": 20.5
+   }
+  },
+  "pl:layan-beach": {
+   "patong": {
+    "min": 30,
+    "km": 24.2
+   },
+   "rawai": {
+    "min": 43,
+    "km": 38.2
+   }
+  },
+  "pl:sai-kaew-beach": {
+   "patong": {
+    "min": 53,
+    "km": 47
+   },
+   "rawai": {
+    "min": 60,
+    "km": 54.7
+   }
+  },
+  "pl:laem-krating-viewpoint": {
+   "patong": {
+    "min": 48,
+    "km": 16.1
+   },
+   "rawai": {
+    "min": 43,
+    "km": 9.1
+   }
+  },
+  "pl:khao-khad-viewpoint": {
+   "patong": {
+    "min": 29,
+    "km": 21.6
+   },
+   "rawai": {
+    "min": 25,
+    "km": 16.9
+   }
+  },
+  "pl:bang-rong-mangroves": {
+   "patong": {
+    "min": 35,
+    "km": 31.3
+   },
+   "rawai": {
+    "min": 41,
+    "km": 36.1
+   }
+  },
+  "pl:gibbon-rehabilitation-project": {
+   "patong": {
+    "min": 34,
+    "km": 30.4
+   },
+   "rawai": {
+    "min": 40,
+    "km": 35.1
+   }
+  },
+  "pl:koh-sirey": {
+   "patong": {
+    "min": 26,
+    "km": 20.4
+   },
+   "rawai": {
+    "min": 26,
+    "km": 19.4
+   }
+  },
+  "pl:wat-phra-thong": {
+   "patong": {
+    "min": 30,
+    "km": 25.7
+   },
+   "rawai": {
+    "min": 37,
+    "km": 33.4
+   }
+  },
+  "pl:phuket-mining-museum": {
+   "patong": {
+    "min": 14,
+    "km": 12
+   },
+   "rawai": {
+    "min": 28,
+    "km": 23.8
+   }
+  },
+  "pl:soi-dog-foundation": {
+   "patong": {
+    "min": 43,
+    "km": 38
+   },
+   "rawai": {
+    "min": 50,
+    "km": 45.7
+   }
+  },
+  "pl:karon-temple-market": {
+   "patong": {
+    "min": 7,
+    "km": 6.6
+   },
+   "rawai": {
+    "min": 14,
+    "km": 12
+   }
+  },
+  "pl:kruvit-raft": {
+   "patong": {
+    "min": 26,
+    "km": 21.1
+   },
+   "rawai": {
+    "min": 31,
+    "km": 21.8
+   }
+  },
+  "pl:summore-day-cafe": {
+   "patong": {
+    "min": 23,
+    "km": 19.9
+   },
+   "rawai": {
+    "min": 10,
+    "km": 6.5
+   }
+  },
+  "pl:view-cafe-phuket": {
+   "patong": {
+    "min": 26,
+    "km": 18.5
+   },
+   "rawai": {
+    "min": 17,
+    "km": 10.6
+   }
+  },
+  "pl:phang-nga-bay-james-bond": {
+   "patong": {
+    "min": 96,
+    "km": 78.5
+   },
+   "rawai": {
+    "min": 103,
+    "km": 86.2
+   }
+  },
+  "pl:hong-by-starlight": {
+   "patong": {
+    "min": 91,
+    "km": 79.8
+   },
+   "rawai": {
+    "min": 98,
+    "km": 87.5
+   }
+  },
+  "pl:similan-islands": {
+   "patong": {
+    "min": 116,
+    "km": 118.1
+   },
+   "rawai": {
+    "min": 123,
+    "km": 125.8
+   }
+  },
+  "pl:koh-racha-yai": {
+   "patong": {
+    "min": 25,
+    "km": 20.1
+   },
+   "rawai": {
+    "min": 11,
+    "km": 6.3
+   }
+  },
+  "pl:coral-island-koh-hey": {
+   "patong": {
+    "min": 26,
+    "km": 19.2
+   },
+   "rawai": {
+    "min": 8,
+    "km": 3.5
+   }
+  },
+  "pl:khai-islands": {
+   "patong": {
+    "min": 33,
+    "km": 22.4
+   },
+   "rawai": {
+    "min": 33,
+    "km": 21.5
+   }
+  },
+  "pl:samet-nangshe-viewpoint": {
+   "patong": {
+    "min": 98,
+    "km": 82.1
+   },
+   "rawai": {
+    "min": 105,
+    "km": 89.8
+   }
+  },
+  "pl:one-chun": {
+   "patong": {
+    "min": 17,
+    "km": 14.7
+   },
+   "rawai": {
+    "min": 17,
+    "km": 13.7
+   }
+  },
+  "pl:mee-ton-poe": {
+   "patong": {
+    "min": 18,
+    "km": 15.9
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14
+   }
+  },
+  "pl:lock-tien": {
+   "patong": {
+    "min": 17,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.8
+   }
+  },
+  "pl:go-benz": {
+   "patong": {
+    "min": 15,
+    "km": 13.4
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.8
+   }
+  },
+  "pl:naam-yoi": {
+   "patong": {
+    "min": 19,
+    "km": 15.7
+   },
+   "rawai": {
+    "min": 20,
+    "km": 16.5
+   }
+  },
+  "pl:mor-mu-dong": {
+   "patong": {
+    "min": 26,
+    "km": 20.3
+   },
+   "rawai": {
+    "min": 15,
+    "km": 9.6
+   }
+  },
+  "pl:malin-plaza-night-market": {
+   "patong": {
+    "min": 1,
+    "km": 1
+   },
+   "rawai": {
+    "min": 20,
+    "km": 18
+   }
+  },
+  "pl:karon-beach": {
+   "patong": {
+    "min": 7,
+    "km": 6.6
+   },
+   "rawai": {
+    "min": 14,
+    "km": 11.5
+   }
+  },
+  "pl:kamala-beach": {
+   "patong": {
+    "min": 13,
+    "km": 11.3
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.1
+   }
+  },
+  "pl:surin-beach": {
+   "patong": {
+    "min": 17,
+    "km": 14.5
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.2
+   }
+  },
+  "pl:mai-khao-plane-spotting": {
+   "patong": {
+    "min": 49,
+    "km": 39.6
+   },
+   "rawai": {
+    "min": 56,
+    "km": 47.3
+   }
+  },
+  "pl:bangla-boxing-stadium": {
+   "patong": {
+    "min": 1,
+    "km": 0.7
+   },
+   "rawai": {
+    "min": 21,
+    "km": 19.3
+   }
+  },
+  "pl:blue-elephant-cooking-school": {
+   "patong": {
+    "min": 16,
+    "km": 13.6
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13
+   }
+  },
+  "pl:renew-sauna-ice-bath": {
+   "patong": {
+    "min": 21,
+    "km": 18.6
+   },
+   "rawai": {
+    "min": 37,
+    "km": 32.9
+   }
+  },
+  "pl:nai-thon-beach": {
+   "patong": {
+    "min": 34,
+    "km": 29.3
+   },
+   "rawai": {
+    "min": 47,
+    "km": 43.2
+   }
+  },
+  "pl:natural-restaurant-airport": {
+   "patong": {
+    "min": 37,
+    "km": 34.4
+   },
+   "rawai": {
+    "min": 45,
+    "km": 42.2
+   }
+  },
+  "pl:sabai-massage-airport": {
+   "patong": {
+    "min": 39,
+    "km": 35
+   },
+   "rawai": {
+    "min": 46,
+    "km": 42.7
+   }
+  },
+  "pl:rassada-pier": {
+   "patong": {
+    "min": 23,
+    "km": 18.4
+   },
+   "rawai": {
+    "min": 22,
+    "km": 17
+   }
+  },
+  "pl:chalong-pier": {
+   "patong": {
+    "min": 17,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 7,
+    "km": 4.4
+   }
+  },
+  "pl:rawai-pier": {
+   "patong": {
+    "min": 22,
+    "km": 18.9
+   },
+   "rawai": {
+    "min": 5,
+    "km": 3.2
+   }
+  },
+  "pl:ao-po-pier": {
+   "patong": {
+    "min": 42,
+    "km": 36
+   },
+   "rawai": {
+    "min": 48,
+    "km": 40.7
+   }
+  },
+  "pl:ao-po-grand-marina": {
+   "patong": {
+    "min": 44,
+    "km": 36.7
+   },
+   "rawai": {
+    "min": 50,
+    "km": 41.4
+   }
+  },
+  "pl:bang-rong-pier": {
+   "patong": {
+    "min": 35,
+    "km": 31.3
+   },
+   "rawai": {
+    "min": 41,
+    "km": 36.1
+   }
+  },
+  "pl:laem-hin-pier": {
+   "patong": {
+    "min": 25,
+    "km": 20.9
+   },
+   "rawai": {
+    "min": 30,
+    "km": 21.6
+   }
+  },
+  "pl:royal-phuket-marina": {
+   "patong": {
+    "min": 27,
+    "km": 20.4
+   },
+   "rawai": {
+    "min": 34,
+    "km": 25.2
+   }
+  },
+  "pl:thap-lamu-pier": {
+   "patong": {
+    "min": 97,
+    "km": 101.6
+   },
+   "rawai": {
+    "min": 104,
+    "km": 109.3
+   }
+  },
+  "pl:koh-panyee": {
+   "patong": {
+    "min": 104,
+    "km": 93.6
+   },
+   "rawai": {
+    "min": 111,
+    "km": 101.3
+   }
+  },
+  "pl:surin-islands": {
+   "patong": {
+    "min": 177,
+    "km": 208.3
+   },
+   "rawai": {
+    "min": 185,
+    "km": 216
+   }
+  },
+  "pl:koh-racha-noi": {
+   "patong": {
+    "min": 24,
+    "km": 20
+   },
+   "rawai": {
+    "min": 10,
+    "km": 6.2
+   }
+  },
+  "pl:tour-james-bond-early-speedboat": {
+   "patong": {
+    "min": 95,
+    "km": 78.5
+   },
+   "rawai": {
+    "min": 103,
+    "km": 86.2
+   }
+  },
+  "pl:tour-phang-nga-big-boat-canoe": {
+   "patong": {
+    "min": 87,
+    "km": 77.8
+   },
+   "rawai": {
+    "min": 95,
+    "km": 85.5
+   }
+  },
+  "pl:tour-similan-speedboat-khao-lak": {
+   "patong": {
+    "min": 100,
+    "km": 102.1
+   },
+   "rawai": {
+    "min": 107,
+    "km": 109.8
+   }
+  },
+  "pl:tour-racha-coral-boat": {
+   "patong": {
+    "min": 25,
+    "km": 20.1
+   },
+   "rawai": {
+    "min": 11,
+    "km": 6.3
+   }
+  },
+  "pl:tour-khai-islands-half-day": {
+   "patong": {
+    "min": 33,
+    "km": 22.4
+   },
+   "rawai": {
+    "min": 33,
+    "km": 21.5
+   }
+  },
+  "pl:tour-private-catamaran-group": {
+   "patong": {
+    "min": 26,
+    "km": 19.2
+   },
+   "rawai": {
+    "min": 8,
+    "km": 3.5
+   }
+  },
+  "pl:tour-sunset-catamaran": {
+   "patong": {
+    "min": 31,
+    "km": 25.2
+   },
+   "rawai": {
+    "min": 27,
+    "km": 21.3
+   }
+  },
+  "pl:amp-listening-bar": {
+   "patong": {
+    "min": 20,
+    "km": 17.2
+   },
+   "rawai": {
+    "min": 38,
+    "km": 33.7
+   }
+  },
+  "pl:tree-bay-clubhouse-kata": {
+   "patong": {
+    "min": 16,
+    "km": 13.3
+   },
+   "rawai": {
+    "min": 11,
+    "km": 7
+   }
+  },
+  "pl:bebop-live-music-bar": {
+   "patong": {
+    "min": 18,
+    "km": 15.5
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.1
+   }
+  },
+  "pl:yona-beach-club": {
+   "patong": {
+    "min": 2,
+    "km": 1.8
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.8
+   }
+  },
+  "pl:catch-beach-club": {
+   "patong": {
+    "min": 22,
+    "km": 17.2
+   },
+   "rawai": {
+    "min": 41,
+    "km": 35
+   }
+  },
+  "pl:baba-nest": {
+   "patong": {
+    "min": 31,
+    "km": 25.2
+   },
+   "rawai": {
+    "min": 27,
+    "km": 21.2
+   }
+  },
+  "pl:the-kitchen-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.6
+   }
+  },
+  "pl:chokchai-dim-sum": {
+   "patong": {
+    "min": 14,
+    "km": 12.6
+   },
+   "rawai": {
+    "min": 17,
+    "km": 13.9
+   }
+  },
+  "pl:fruit-fusion-kamala": {
+   "patong": {
+    "min": 12,
+    "km": 10.1
+   },
+   "rawai": {
+    "min": 32,
+    "km": 27.8
+   }
+  },
+  "pl:zima-spa-rawai": {
+   "patong": {
+    "min": 18,
+    "km": 16.9
+   },
+   "rawai": {
+    "min": 8,
+    "km": 5.5
+   }
+  },
+  "pl:bangtao-muay-thai": {
+   "patong": {
+    "min": 20,
+    "km": 16.5
+   },
+   "rawai": {
+    "min": 39,
+    "km": 34.3
+   }
+  },
+  "pl:phuket-surf-house-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "pl:flying-hanuman": {
+   "patong": {
+    "min": 11,
+    "km": 8.4
+   },
+   "rawai": {
+    "min": 27,
+    "km": 21.2
+   }
+  },
+  "pl:sunrise-divers-try-dive": {
+   "patong": {
+    "min": 9,
+    "km": 8.5
+   },
+   "rawai": {
+    "min": 12,
+    "km": 10.1
+   }
+  },
+  "pl:kba-efoil-kitesurf-rawai": {
+   "patong": {
+    "min": 21,
+    "km": 17.8
+   },
+   "rawai": {
+    "min": 2,
+    "km": 0.8
+   }
+  },
+  "pl:wat-doi-thepnimit-viewpoint": {
+   "patong": {
+    "min": 8,
+    "km": 5.1
+   },
+   "rawai": {
+    "min": 27,
+    "km": 21.8
+   }
+  },
+  "pl:pensook-view-cafe": {
+   "patong": {
+    "min": 5,
+    "km": 4.3
+   },
+   "rawai": {
+    "min": 25,
+    "km": 21.1
+   }
+  },
+  "pl:visit-panwa-pier": {
+   "patong": {
+    "min": 25,
+    "km": 21.6
+   },
+   "rawai": {
+    "min": 21,
+    "km": 17.6
+   }
+  },
+  "ev:shelter-phuket": {
+   "patong": {
+    "min": 3,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "ev:illuzion-phuket": {
+   "patong": {
+    "min": 3,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "ev:boa-phuket": {
+   "patong": {
+    "min": 3,
+    "km": 2.6
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "ev:cafe-del-mar-phuket": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:courage-bar-phuket-town": {
+   "patong": {
+    "min": 18,
+    "km": 14.3
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.3
+   }
+  },
+  "ev:enthusiast-place-open-doors": {
+   "patong": {
+    "min": 23,
+    "km": 20.6
+   },
+   "rawai": {
+    "min": 34,
+    "km": 30.1
+   }
+  },
+  "ev:circoloco-thailand-2027": {
+   "patong": {
+    "min": 62,
+    "km": 55.7
+   },
+   "rawai": {
+    "min": 69,
+    "km": 63.4
+   }
+  },
+  "ev:cafe-del-mar-pyramid-2027-01-08": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:marco-carola-cafe-del-mar-2027": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:daft-funk-live-phuket-2027": {
+   "patong": {
+    "min": 33,
+    "km": 27.4
+   },
+   "rawai": {
+    "min": 46,
+    "km": 41.4
+   }
+  },
+  "ev:o-beach-ibiza-barra-cuda-2027": {
+   "patong": {
+    "min": 3,
+    "km": 2.9
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.9
+   }
+  },
+  "ev:macan-live-phuket-2027": {
+   "patong": {
+    "min": 22,
+    "km": 19.1
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.2
+   }
+  },
+  "ev:carl-cox-cafe-del-mar-2027": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:francis-mercier-cafe-del-mar-2027": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:blondish-cafe-del-mar-2027": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "ev:dnb-allstars-thailand-2027": {
+   "patong": {
+    "min": 25,
+    "km": 19.7
+   },
+   "rawai": {
+    "min": 14,
+    "km": 8.9
+   }
+  },
+  "ev:zamna-phuket-2027": {
+   "patong": {
+    "min": 66,
+    "km": 57.7
+   },
+   "rawai": {
+    "min": 73,
+    "km": 65.4
+   }
+  },
+  "ev:levitate-sunset-connections": {
+   "patong": {
+    "min": 7,
+    "km": 6
+   },
+   "rawai": {
+    "min": 26,
+    "km": 23.7
+   }
+  },
+  "ev:armania-phuket": {
+   "patong": {
+    "min": 3,
+    "km": 2.6
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "ev:summerset-lounge-experemint": {
+   "patong": {
+    "min": 24,
+    "km": 21
+   },
+   "rawai": {
+    "min": 34,
+    "km": 30.4
+   }
+  },
+  "ev:sail-away-pukka-up-boat-party": {
+   "patong": {
+    "min": 25,
+    "km": 21.6
+   },
+   "rawai": {
+    "min": 21,
+    "km": 17.6
+   }
+  },
+  "ev:russian-concerts-cherng-talay-jan-2027": {
+   "patong": {
+    "min": 22,
+    "km": 19.1
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.2
+   }
+  },
+  "ev:fira-beach-club-phuket": {
+   "patong": {
+    "min": 12,
+    "km": 10.9
+   },
+   "rawai": {
+    "min": 11,
+    "km": 8.5
+   }
+  },
+  "ev:sedo-izikura-phuket-town": {
+   "patong": {
+    "min": 17,
+    "km": 14.8
+   },
+   "rawai": {
+    "min": 18,
+    "km": 14.3
+   }
+  },
+  "ar:patong": {
+   "patong": {
+    "min": 3,
+    "km": 2.8
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "ar:kamala": {
+   "patong": {
+    "min": 13,
+    "km": 11.4
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.1
+   }
+  },
+  "ar:surin": {
+   "patong": {
+    "min": 17,
+    "km": 14.5
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.3
+   }
+  },
+  "ar:bang-tao": {
+   "patong": {
+    "min": 28,
+    "km": 21.3
+   },
+   "rawai": {
+    "min": 44,
+    "km": 36.2
+   }
+  },
+  "ar:layan": {
+   "patong": {
+    "min": 30,
+    "km": 24.2
+   },
+   "rawai": {
+    "min": 43,
+    "km": 38.2
+   }
+  },
+  "ar:nai-thon": {
+   "patong": {
+    "min": 34,
+    "km": 29.3
+   },
+   "rawai": {
+    "min": 47,
+    "km": 43.2
+   }
+  },
+  "ar:nai-yang": {
+   "patong": {
+    "min": 41,
+    "km": 35.8
+   },
+   "rawai": {
+    "min": 48,
+    "km": 43.5
+   }
+  },
+  "ar:mai-khao": {
+   "patong": {
+    "min": 51,
+    "km": 41.9
+   },
+   "rawai": {
+    "min": 58,
+    "km": 49.6
+   }
+  },
+  "ar:karon": {
+   "patong": {
+    "min": 7,
+    "km": 6.6
+   },
+   "rawai": {
+    "min": 14,
+    "km": 11.5
+   }
+  },
+  "ar:kata": {
+   "patong": {
+    "min": 12,
+    "km": 9.6
+   },
+   "rawai": {
+    "min": 13,
+    "km": 9.7
+   }
+  },
+  "ar:kata-noi": {
+   "patong": {
+    "min": 14,
+    "km": 11.5
+   },
+   "rawai": {
+    "min": 15,
+    "km": 10.7
+   }
+  },
+  "ar:nai-harn": {
+   "patong": {
+    "min": 22,
+    "km": 18.3
+   },
+   "rawai": {
+    "min": 11,
+    "km": 6.2
+   }
+  },
+  "ar:rawai": {
+   "patong": {
+    "min": 21,
+    "km": 18.6
+   },
+   "rawai": {
+    "min": 6,
+    "km": 3.8
+   }
+  },
+  "ar:chalong": {
+   "patong": {
+    "min": 18,
+    "km": 16.5
+   },
+   "rawai": {
+    "min": 5,
+    "km": 3.9
+   }
+  },
+  "ar:phuket-town": {
+   "patong": {
+    "min": 17,
+    "km": 15.1
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.1
+   }
+  },
+  "ar:kathu": {
+   "patong": {
+    "min": 7,
+    "km": 6.1
+   },
+   "rawai": {
+    "min": 22,
+    "km": 18.9
+   }
+  },
+  "ar:cape-panwa": {
+   "patong": {
+    "min": 29,
+    "km": 24.8
+   },
+   "rawai": {
+    "min": 25,
+    "km": 20.8
+   }
+  },
+  "ar:ao-po": {
+   "patong": {
+    "min": 44,
+    "km": 36.7
+   },
+   "rawai": {
+    "min": 50,
+    "km": 41.4
+   }
+  },
+  "ar:thalang": {
+   "patong": {
+    "min": 30,
+    "km": 25.7
+   },
+   "rawai": {
+    "min": 37,
+    "km": 33.4
+   }
+  },
+  "ar:natai": {
+   "patong": {
+    "min": 67,
+    "km": 58.7
+   },
+   "rawai": {
+    "min": 74,
+    "km": 66.4
+   }
+  },
+  "ht:luxurious-seaview-villa-rawai": {
+   "patong": {
+    "min": 20,
+    "km": 17.3
+   },
+   "rawai": {
+    "min": 0,
+    "km": 0
+   }
+  },
+  "ht:fantastic-seaview-villa-rawai": {
+   "patong": {
+    "min": 20,
+    "km": 17.3
+   },
+   "rawai": {
+    "min": 4,
+    "km": 1.8
+   }
+  },
+  "ht:luxury-4br-pool-villa-rawai": {
+   "patong": {
+    "min": 20,
+    "km": 17.2
+   },
+   "rawai": {
+    "min": 4,
+    "km": 2.2
+   }
+  },
+  "ht:sawansa-34a-patong": {
+   "patong": {
+    "min": 4,
+    "km": 2.9
+   },
+   "rawai": {
+    "min": 24,
+    "km": 21.5
+   }
+  },
+  "ht:modern-4br-villa-laguna": {
+   "patong": {
+    "min": 26,
+    "km": 22.5
+   },
+   "rawai": {
+    "min": 36,
+    "km": 33.1
+   }
+  },
+  "ht:spacious-4br-home-bluetree": {
+   "patong": {
+    "min": 24,
+    "km": 20.2
+   },
+   "rawai": {
+    "min": 38,
+    "km": 32.7
+   }
+  },
+  "ht:luxpride-2-wallaya-v7": {
+   "patong": {
+    "min": 25,
+    "km": 22.3
+   },
+   "rawai": {
+    "min": 36,
+    "km": 33.2
+   }
+  },
+  "ht:la-belle-pool-villa": {
+   "patong": {
+    "min": 26,
+    "km": 21.2
+   },
+   "rawai": {
+    "min": 40,
+    "km": 33.3
+   }
+  },
+  "ht:alisa-pool-villa": {
+   "patong": {
+    "min": 26,
+    "km": 21.4
+   },
+   "rawai": {
+    "min": 40,
+    "km": 33.4
+   }
+  },
+  "ht:brand-new-4br-villa-bangtao": {
+   "patong": {
+    "min": 26,
+    "km": 21.1
+   },
+   "rawai": {
+    "min": 41,
+    "km": 36.1
+   }
+  },
+  "ht:bangtao-3br-pool-villa-laguna": {
+   "patong": {
+    "min": 23,
+    "km": 19.8
+   },
+   "rawai": {
+    "min": 39,
+    "km": 34.1
+   }
+  },
+  "ht:laguna-park-5br-villa": {
+   "patong": {
+    "min": 24,
+    "km": 19.9
+   },
+   "rawai": {
+    "min": 41,
+    "km": 34.9
+   }
+  },
+  "ht:lux-laguna-park-5br-rooftop-pool": {
+   "patong": {
+    "min": 24,
+    "km": 19.9
+   },
+   "rawai": {
+    "min": 41,
+    "km": 34.9
+   }
+  },
+  "ht:diamond-villa-278": {
+   "patong": {
+    "min": 17,
+    "km": 15.5
+   },
+   "rawai": {
+    "min": 37,
+    "km": 33.2
+   }
+  },
+  "ht:chill-beach-bangla-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.2
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.8
+   }
+  },
+  "ht:light-hope-laguna-6br-villa": {
+   "patong": {
+    "min": 26,
+    "km": 22.5
+   },
+   "rawai": {
+    "min": 39,
+    "km": 35.1
+   }
+  },
+  "ht:mouana-breeze-mai-khao": {
+   "patong": {
+    "min": 44,
+    "km": 38
+   },
+   "rawai": {
+    "min": 51,
+    "km": 45.8
+   }
+  },
+  "ht:patong-villa-5br-game-room": {
+   "patong": {
+    "min": 3,
+    "km": 1.8
+   },
+   "rawai": {
+    "min": 22,
+    "km": 18.8
+   }
+  },
+  "ht:bangtao-4br-villa-unit-1": {
+   "patong": {
+    "min": 23,
+    "km": 20.2
+   },
+   "rawai": {
+    "min": 39,
+    "km": 34.4
+   }
+  },
+  "ht:tropical-4br-villa-rawai": {
+   "patong": {
+    "min": 18,
+    "km": 15.3
+   },
+   "rawai": {
+    "min": 9,
+    "km": 5.2
+   }
+  },
+  "ht:brand-new-4br-villa-rawai-gym": {
+   "patong": {
+    "min": 20,
+    "km": 17.2
+   },
+   "rawai": {
+    "min": 7,
+    "km": 3.9
+   }
+  },
+  "ht:sunshine-pool-villa-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.2
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.8
+   }
+  },
+  "ht:villa-take-it-easy-kamala": {
+   "patong": {
+    "min": 14,
+    "km": 11.3
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29
+   }
+  },
+  "ht:88-pool-villa-patong-6br": {
+   "patong": {
+    "min": 1,
+    "km": 0.5
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.5
+   }
+  },
+  "ht:oak-tree-villa-patong": {
+   "patong": {
+    "min": 3,
+    "km": 1.8
+   },
+   "rawai": {
+    "min": 22,
+    "km": 18.8
+   }
+  },
+  "ht:pool-table-4br-villa-bangla-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.1
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "ht:128-villa-patong-jacuzzi": {
+   "patong": {
+    "min": 1,
+    "km": 0.4
+   },
+   "rawai": {
+    "min": 20,
+    "km": 18.4
+   }
+  },
+  "ht:132-pool-villa-patong-5br": {
+   "patong": {
+    "min": 1,
+    "km": 0.4
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.3
+   }
+  },
+  "ht:136-pool-villa-patong-5br": {
+   "patong": {
+    "min": 0,
+    "km": 0
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.6
+   }
+  },
+  "mx:mamy-exchange#0": {
+   "patong": {
+    "min": 21,
+    "km": 19.1
+   },
+   "rawai": {
+    "min": 27,
+    "km": 23.8
+   }
+  },
+  "mx:lion-currency-exchange#0": {
+   "patong": {
+    "min": 1,
+    "km": 0.4
+   },
+   "rawai": {
+    "min": 21,
+    "km": 19
+   }
+  },
+  "mx:lion-currency-exchange#1": {
+   "patong": {
+    "min": 13,
+    "km": 11.4
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.2
+   }
+  },
+  "mx:superrich-1965-phuket#0": {
+   "patong": {
+    "min": 17,
+    "km": 15.4
+   },
+   "rawai": {
+    "min": 15,
+    "km": 13
+   }
+  },
+  "mx:nc-plus#0": {
+   "patong": {
+    "min": 19,
+    "km": 16
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.1
+   }
+  },
+  "mx:value-plus#0": {
+   "patong": {
+    "min": 1,
+    "km": 0.9
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "mx:value-plus#1": {
+   "patong": {
+    "min": 3,
+    "km": 2.1
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.7
+   }
+  },
+  "mx:value-plus#2": {
+   "patong": {
+    "min": 21,
+    "km": 18.7
+   },
+   "rawai": {
+    "min": 37,
+    "km": 33
+   }
+  },
+  "mx:value-plus#3": {
+   "patong": {
+    "min": 21,
+    "km": 18.5
+   },
+   "rawai": {
+    "min": 37,
+    "km": 32.8
+   }
+  },
+  "mx:value-plus#4": {
+   "patong": {
+    "min": 13,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.6
+   }
+  },
+  "mx:value-plus#5": {
+   "patong": {
+    "min": 17,
+    "km": 14.8
+   },
+   "rawai": {
+    "min": 7,
+    "km": 4.6
+   }
+  },
+  "mx:money-shop#0": {
+   "patong": {
+    "min": 10,
+    "km": 9.5
+   },
+   "rawai": {
+    "min": 12,
+    "km": 9.3
+   }
+  },
+  "mx:money-shop#1": {
+   "patong": {
+    "min": 9,
+    "km": 8.2
+   },
+   "rawai": {
+    "min": 13,
+    "km": 10
+   }
+  },
+  "mx:money-shop#2": {
+   "patong": {
+    "min": 20,
+    "km": 18.2
+   },
+   "rawai": {
+    "min": 6,
+    "km": 4.2
+   }
+  },
+  "mx:money-shop#3": {
+   "patong": {
+    "min": 18,
+    "km": 16.5
+   },
+   "rawai": {
+    "min": 8,
+    "km": 4.4
+   }
+  },
+  "mx:money-shop#4": {
+   "patong": {
+    "min": 18,
+    "km": 17
+   },
+   "rawai": {
+    "min": 8,
+    "km": 6.2
+   }
+  },
+  "mx:money-shop#5": {
+   "patong": {
+    "min": 38,
+    "km": 34.1
+   },
+   "rawai": {
+    "min": 46,
+    "km": 41.8
+   }
+  },
+  "mx:money-shop#6": {
+   "patong": {
+    "min": 13,
+    "km": 11.4
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.2
+   }
+  },
+  "mx:phuket-airport-counters#0": {
+   "patong": {
+    "min": 45,
+    "km": 36.9
+   },
+   "rawai": {
+    "min": 52,
+    "km": 44.6
+   }
+  },
+  "airport": {
+   "patong": {
+    "min": 47,
+    "km": 36.5
+   },
+   "rawai": {
+    "min": 54,
+    "km": 44.2
+   }
+  }
+ }
+}

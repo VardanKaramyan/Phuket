@@ -48,13 +48,13 @@ Everything the project needs is inside this folder. The old machine's Claude Cod
 
 ## 2. The user
 
-- **The user is the only author.** Never add `Co-Authored-By: Claude …`, "Generated with Claude Code" or any other Claude / AI attribution to commits, pull requests, tags or files. Commit as `vvvrdo <vvvrdo@gmail.com>` (GitHub user `vardan-k`; set in this repo's git config). On 19 Oct 2026 the history was rewritten to remove such lines; see `CLAUDE.md`. `.claude/settings.json` turns the attribution off for every machine that pulls the repo.
+- **The user is the only author.** Never add `Co-Authored-By: Claude …`, "Generated with Claude Code" or any other Claude / AI attribution to commits, pull requests, tags or files. Commit as `vvvrdo <numberupp@gmail.com>`: the email of the GitHub user `VardanKaramyan`, the user's choice on 20 Oct 2026 (vvvrdo@gmail.com, used before, counts for `vardan-k`); set in this repo's git config. On 19 Oct 2026 the history was rewritten to remove such lines; see `CLAUDE.md`. The commits that the force pushes replaced stay reachable on GitHub by their ids (the repo's Activity page) with their old Claude trailers; the user chose to leave them (20 Oct 2026). `.claude/settings.json` turns the attribution off for every machine that pulls the repo.
 - A frontend developer, so web tooling terms are fine.
 - Writes short, informal English with typos; English is not their first language. All guide copy uses **short, simple, concrete English**: no marketing words, no emoji, no exclamation marks, no em-dash asides.
 - Likes big tasks done thoroughly. They turn on **max effort and "ultracode"** (run substantive work as Workflow orchestrations with adversarial fact-checks). They expect progress updates while long workflows run.
 - Wants this `HANDOFF.md` kept up to date during long work. They switch sessions and machines, and a terminal restart once killed a long workflow mid-run.
 - Ask before anything outward-facing: hosting `dist/`, a Google My Maps import, pushing to GitHub. They chose **"Skip for now"** on hosting (16 Oct 2026), then set up Vercel themselves on 17 Oct 2026 (see section 9, item 2).
-- Remotes: `karamyan` = `VardanKaramyan/Phuket` (public; Vercel deploys from its `main`) is the one to sync with: `git pull karamyan main`, `git push karamyan main`. `origin` = `vardan-k/Phuket` is private and still has the old history from before the 19 Oct 2026 rewrite (with the Claude trailers); do not push there unless the user asks (it would need a force push).
+- Remotes: `karamyan` = `VardanKaramyan/Phuket` (public; Vercel deploys from its `main`) is the one to sync with: `git pull karamyan main`, `git push karamyan main`. `origin` = `vardan-k/Phuket` is private: on 20 Oct 2026 its `main` was synced to the `karamyan` history, and the old history from before the 19 Oct rewrite (with the Claude trailers) is kept there in the branch `backup-before-sync-2026-10-19` (the user chose to keep it). Do not push there unless the user asks.
 - Loves underground techno (Bassiani / Berlin style), good raves and festivals. Events are ranked underground-first.
 
 ## 3. The trip (the content depends on these facts)

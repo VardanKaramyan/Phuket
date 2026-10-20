@@ -3444,5 +3444,17 @@
   "width": 966,
   "height": 1280,
   "note": "The given candidate: the venue's Tree Secret jungle-techno flyer (Fri 16 Oct 2026), with resident DJ Annabelle at the decks in a lit jungle. Portrait, but the 16:9 attention crop keeps her face, 'Jungle Techno' and the 'Resident DJ Annabelle' sign, and drops the date and address text. A flyer was used because no real venue or party photo exists in the sources I could reach: all 41 phangan.events listings are flyers; RA's 'Sound Garden Tattoo Club' page (79/24 M.1 Thong Sala) has no photo, only 2019-2024 flyers; the Tattoo Club Facebook cover is a logo and its reel thumbnails are only 540 px wide."
+ },
+ {
+  "key": "areas:promthep",
+  "ok": true,
+  "file": "assets/raw/areas-promthep.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg",
+  "credit": "Phuket@photographer.net",
+  "license": "CC BY 2.0",
+  "width": 1280,
+  "height": 853,
+  "note": "Sunset with palm trees at Promthep Cape (Commons, from Flickr, 31 Mar 2017). License checked on Commons, 20 Oct 2026; checked by eye."
  }
 ]

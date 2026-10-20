@@ -2868,5 +2868,15 @@
   "credit": "© Tree Secret Sound Garden",
   "license": "flyer, personal use",
   "source": "https://phangan.events/events/tree-secret/"
+ },
+ "areas:promthep": {
+  "file": "assets/img/areas-promthep.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Phuket@photographer.net",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
  }
 }

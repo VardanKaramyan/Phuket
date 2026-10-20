@@ -6,7 +6,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { windowOf } from './trip.mjs'
 
-const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
+const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'promthep', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
 const OFF = ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'koh-lipe', 'trang', 'koh-phangan', 'koh-samui', 'koh-tao', 'surat-thani', 'koh-kaew', 'other']
 const AREA_FIX = {
   'ko-phangan': 'koh-phangan', 'ko-pha-ngan': 'koh-phangan', phangan: 'koh-phangan', 'ko-samui': 'koh-samui', samui: 'koh-samui', 'ko-tao': 'koh-tao', tao: 'koh-tao',

@@ -63,7 +63,7 @@ const areaName = (id) => (id === 'other' ? '' : AREA_NAMES[id] || OFF_ISLAND[id]
 const AREA_COLORS = {
   patong: '#D9435F', kamala: '#8C6FD1', surin: '#D45D79', 'bang-tao': '#3D7FD1', layan: '#9A7BD8', 'nai-thon': '#E39A4F',
   'nai-yang': '#E0719A', 'mai-khao': '#3FA37A', karon: '#F0963A', kata: '#2FB59A', 'kata-noi': '#7E6BD6', 'nai-harn': '#F2A541',
-  rawai: '#E07BB0', chalong: '#3B9FD1', 'phuket-town': '#E8A33D', kathu: '#6FA83D', 'cape-panwa': '#9BBF45', 'ao-po': '#5C8FD6',
+  rawai: '#E07BB0', promthep: '#58A7C9', chalong: '#3B9FD1', 'phuket-town': '#E8A33D', kathu: '#6FA83D', 'cape-panwa': '#9BBF45', 'ao-po': '#5C8FD6',
   thalang: '#9AA79A', natai: '#2E9C8F',
 }
 
@@ -348,7 +348,7 @@ const zoneOf = (h) => {
   if (h.area === 'natai' || h.area === 'phang-nga') return 'natai'
   if (['kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao'].includes(h.area)) return 'west'
   if (h.area === 'patong') return 'patong'
-  if (['karon', 'kata', 'kata-noi', 'nai-harn', 'rawai', 'chalong'].includes(h.area)) return 'south'
+  if (['karon', 'kata', 'kata-noi', 'nai-harn', 'promthep', 'rawai', 'chalong'].includes(h.area)) return 'south'
   if (h.area === 'phuket-town') return 'town'
   if (h.area === 'koh-phangan') return 'phangan'
   return 'other'

@@ -1,5 +1,5 @@
 {
- "generatedOn": "2026-10-19",
+ "generatedOn": "2026-10-20",
  "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap roads; no traffic",
  "bases": {
   "patong": {
@@ -1392,6 +1392,16 @@
    "rawai": {
     "min": 11,
     "km": 6.2
+   }
+  },
+  "ar:promthep": {
+   "patong": {
+    "min": 23,
+    "km": 20
+   },
+   "rawai": {
+    "min": 9,
+    "km": 6.3
    }
   },
   "ar:rawai": {

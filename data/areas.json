@@ -868,8 +868,8 @@
   {
    "id": "nai-harn",
    "name": "Nai Harn",
-   "tagline": "Green hills, a lake and a protected beach in the south",
-   "description": "A wide, soft beach between green hills, with a lake and a temple behind it and yachts in the bay. By law nothing can be built on the land behind the sand, so there are only tall casuarina trees. No town, just scattered restaurants, cafes and villas, with many long-stay expats. Busy in Dec-Jan, but relaxed.",
+   "tagline": "The south's best swimming beach, with a lake and green hills",
+   "description": "A wide bay of soft sand between green hills, with a lake and Wat Nai Harn behind it and yachts at anchor in the bay. The land behind the beach is protected, so there are casuarina trees and a row of Thai restaurants across the road, not hotels on the sand. No town: about a dozen restaurants and cafes on the road north, villas in the lanes around the lake and up to the Sai Yuan junction, and many long-stay expats.",
    "bestFor": [
     "beach",
     "swimming",
@@ -881,7 +881,7 @@
     "nightlife",
     "shopping"
    ],
-   "beach": "In January the water is clear blue and calm, one of the best swimming beaches in the south, but this is its busiest time of year.",
+   "beach": "In January the sea is calm and clear: one of the best swims in the south, but busy in December and January. The red-flag days with rip currents are in the rainy season (June to October).",
    "scores": {
     "nightlife": 1,
     "beach": 5,
@@ -894,19 +894,21 @@
    "airportDriveMin": 70,
    "patongDriveMin": 30,
    "highlights": [
-    "Windmill Viewpoint over Ya Nui and Promthep",
-    "Black Rock Viewpoint (steep climb)",
-    "Ao Sane, a small snorkelling cove (one 2026 guide said it was closed for building work; check first)",
-    "Wat Nai Harn and the lake (paddle boats)",
-    "Reflections rooftop bar at The Nai Harn (17:00-22:00)"
+    "Swim at Nai Harn Beach; a beach massage costs about 300 THB an hour",
+    "Wat Nai Harn and the lake behind the beach",
+    "Black Rock Viewpoint over the bay (a steep climb)",
+    "The Reflections rooftop bar at The Nai Harn (17:00-22:00)",
+    "Dinner on the road north: Rock Salt, M&M's Pizza, De Renata, Rum Jungle Cafe"
    ],
    "lat": 7.7755,
    "lng": 98.306,
    "coordSource": "osm-beach(relation 6162518, 31 m)+google(Nai Han Beach, 78 m)+wikidata(Q14226240, 100 m)",
    "coordConfidence": "high",
    "gmapsQuery": "Nai Han Beach (หาดในหาน), Phuket",
-   "stayIf": "Stay here if you want nature, a great beach and a calm long-stay feel, and do not mind 30 minutes to Patong.",
+   "stayIf": "Stay here if you want the best beach in the south and a calm long-stay feel, and do not mind 30 minutes to Patong.",
    "tips": [
+    "Ao Sane, the small snorkelling coves just north (you drive through The Nai Harn resort), was closed for construction in March 2026. Check before you go.",
+    "The lake path: its 66.6 million THB makeover was left unfinished by the first contractor in 2025, and a new one was to finish in early 2026. We found no news that it is done.",
     "Google's English 'Nai Harn Beach' result is a locality pin almost 1 km north-east of the sand. The Thai name หาดในหาน (Google: 'Nai Han Beach') lands on the beach.",
     "Money Shop Exchange has an office in Nai Harn (daily 10:00-19:00 on Google; OK rates, a little below Mamy Exchange)."
    ],
@@ -916,8 +918,12 @@
      "url": "https://www.phuket101.net/nai-harn-beach/"
     },
     {
-     "label": "Phuket101: Windmill Viewpoint",
-     "url": "https://www.phuket101.net/windmill-viewpoint/"
+     "label": "Phuket101: Ao Sane",
+     "url": "https://www.phuket101.net/ao-sane-beach/"
+    },
+    {
+     "label": "Phuket101: Nai Harn restaurants",
+     "url": "https://www.phuket101.net/nai-harn-beach-restaurants/"
     }
    ],
    "imageCandidates": [
@@ -930,32 +936,116 @@
    ],
    "sources": [
     "https://www.phuket101.net/nai-harn-beach/",
-    "https://www.phuket101.net/windmill-viewpoint/",
+    "https://www.phuket101.net/nai-harn-beach-vs-kata-beach/",
+    "https://www.phuket101.net/nai-harn-beach-restaurants/",
     "https://www.phuket101.net/ao-sane-beach/",
-    "https://www.thaiholidayguide.com/attraction/ao-sane/",
-    "https://en.wikivoyage.org/wiki/Nai_Han"
+    "https://www.tourismthailand.org/Attraction/hat-nai-han",
+    "https://en.wikivoyage.org/wiki/Nai_Han",
+    "https://www.thephuketnews.com/nai-harn-lake-makeover-ready-by-february-94835.php",
+    "https://www.thephuketnews.com/nai-harn-makeover-drags-on-without-deadline-95343.php",
+    "https://www.thephuketnews.com/slow-lake-makeover-at-nai-harn-lake-hits-bureaucratic-snag-96131.php",
+    "https://www.openstreetmap.org/relation/17100962"
    ],
-   "verification": "Checked 15 Oct 2026. Phuket101 Nai Harn page (updated 15 Sep 2026): protected land behind the sand, paddle boats on the lake, viewpoints, Reflections rooftop, busy in Dec-Jan. Google test: 'Nai Harn Beach, Phuket' lands on a locality pin 890 m NE; 'หาดในหาน' lands on the beach (4.6, 2,106 reviews), 78 m from the pin. Ao Sane: Phuket101 (Mar 2026) says closed for construction, Thai Holiday Guide (Jul 2026) says open, so it is flagged. Money Shop Nai Harn and Reflections hours from Google.",
+   "verification": "Checked 20 Oct 2026. Phuket101: Nai Harn (updated 15 Sep 2026): protected land behind the sand, about a dozen restaurants, massage about 300 THB an hour, busy in December and January; Nai Harn vs Kata (7 Sep 2026): calm, clear water in high season; Nai Harn restaurants (12 Oct 2026); Ao Sane (12 Mar 2026): closed for construction. The Phuket News: the lake makeover was due 10 Feb 2025, left by the contractor (May 2025), a new contractor to finish in early 2026 (not confirmed). Borders: OpenStreetMap, tambon Rawai and Karon; Ao Sane, Black Rock and Laem Krating are in tambon Karon but reached through Nai Harn. Money Shop and Reflections hours from Google (15 Oct 2026).",
    "placeId": "ChIJ1TrmSxwmUDARyXz7aKZdziw"
   },
   {
+   "id": "promthep",
+   "name": "Promthep Cape, Windmill & Ya Nui",
+   "tagline": "The sunset cape, a viewpoint and a small swimming cove",
+   "description": "The hilly southern tip of Phuket, on the road between Nai Harn and Rawai. Promthep Cape is the island's best-known sunset spot, with a lighthouse and a Brahma shrine full of elephant statues. Below the Windmill Viewpoint, Ya Nui is a tiny cove with calm water for a swim and easy snorkelling. Few places to stay: most people come for an hour or two from Nai Harn or Rawai, a few minutes away.",
+   "bestFor": [
+    "sunset",
+    "snorkeling",
+    "swimming",
+    "nature"
+   ],
+   "notIdealFor": [
+    "nightlife",
+    "shopping"
+   ],
+   "beach": "Ya Nui is the swim here: a small cove split in two by a rocky hill, calm in January, with snorkel gear (100 THB), kayaks (100 THB an hour) and paddleboards (300 THB an hour) for rent. The water is less clear at the north end, where a stream comes in. The cape itself is rock.",
+   "scores": {
+    "nightlife": 0,
+    "beach": 2,
+    "food": 2,
+    "quiet": 3,
+    "family": 4,
+    "value": 3
+   },
+   "priceLevel": 3,
+   "airportDriveMin": 70,
+   "patongDriveMin": 30,
+   "highlights": [
+    "Sunset at Promthep Cape: free and open all day; in mid-January the sun sets at about 18:25",
+    "The Windmill Viewpoint over Ya Nui and Nai Harn",
+    "Swim, kayak or snorkel at Ya Nui",
+    "Kanchanaphisek Lighthouse, with a small free museum inside",
+    "Summore Day Cafe on the road down to Ya Nui (10:00-20:00)"
+   ],
+   "lat": 7.76189,
+   "lng": 98.30536,
+   "coordSource": "osm(node 1597528224, the sunset viewpoint)+wikidata(Q16307767, Kanchanaphisek Lighthouse, 18 m)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Laem Phromthep (แหลมพรหมเทพ), Phuket",
+   "stayIf": "Stay here if you want a quiet room by the sunset cape and do not mind driving for food and nights out. Most people visit from Nai Harn or Rawai.",
+   "tips": [
+    "Quiet by day, packed from about 17:00: come at least 30 minutes before sunset. The crowd leaves minutes after the sun goes down.",
+    "Entry is free. In May 2026 a man was arrested for charging tourists 100 THB for the stairs down from the cape: pay no one.",
+    "Parking at Ya Nui is short from November to February: come early, or by scooter or Grab.",
+    "The walk down to the tip of the cape is easy; the climb back up in the heat is hard."
+   ],
+   "links": [
+    {
+     "label": "Phuket101: Promthep Cape",
+     "url": "https://www.phuket101.net/promthep-cape/"
+    },
+    {
+     "label": "Phuket101: Ya Nui",
+     "url": "https://www.phuket101.net/ya-nui-beach/"
+    },
+    {
+     "label": "Phuket101: Windmill Viewpoint",
+     "url": "https://www.phuket101.net/windmill-viewpoint/"
+    }
+   ],
+   "imageCandidates": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
+     "credit": "Phuket@photographer.net",
+     "license": "CC BY 2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/promthep-cape/",
+    "https://www.phuket101.net/ya-nui-beach/",
+    "https://www.phuket101.net/windmill-viewpoint/",
+    "https://www.tourismthailand.org/Attraction/laem-phromthep",
+    "https://www.tourismthailand.org/Attraction/hat-nai-han",
+    "https://www.thephuketnews.com/man-arrested-for-charging-tourists-b100-to-access-promthep-cape-100339.php",
+    "https://www.openstreetmap.org/node/1597528224",
+    "https://www.wikidata.org/wiki/Q16307767"
+   ],
+   "verification": "Checked 20 Oct 2026. Phuket101: Promthep Cape (updated 5 Aug 2026): free, open 24 hours, crowds from about 17:00, come 30 minutes before sunset, the lighthouse museum and the elephant shrine, Summore Day 10:00-20:00; Ya Nui (2 May 2026): rental prices, busier November to February, little parking; Windmill Viewpoint (1 Nov 2025): the turbine is still there. The Phuket News, 22 May 2026: an arrest for a fake 100 THB stair fee. Sunset time from the guide's sun calculation. Pin: OSM node 1597528224, Wikidata Q16307767 (the lighthouse) 18 m away."
+  },
+  {
    "id": "rawai",
-   "name": "Rawai, Ya Nui & Promthep",
-   "tagline": "Seafood, island boats and the famous sunset cape",
-   "description": "The working harbour at Phuket's southern tip, not a swimming beach: longtail boats line the shore. People come for the seafood market (buy fish, a restaurant cooks it), boats to Koh Bon, Coral Island and Racha, and a slow local pace with expats, cafes and Muay Thai gyms. Ya Nui and Promthep Cape are a few minutes west.",
+   "name": "Rawai town & Sai Yuan",
+   "tagline": "Seafood market, island boats and the long-stay villa lanes",
+   "description": "The south-east side of the tip, from the Rawai seafront to Chalong Circle. Rawai Beach is a working harbour, not a swimming beach: longtail boats, the pier for Koh Bon, Coral Island and the Racha islands, the seafood market and what is left of the Chao Ley sea-gypsy village. Inland, Sai Yuan Road and Wiset Road are where many long-stay expats live, with villas, cafes, gyms and Muay Thai camps. Friendship Beach, on Chalong Bay, is for kitesurfing rather than swimming.",
    "bestFor": [
     "food",
     "local-life",
     "long-stay",
-    "muay-thai",
-    "sunset",
-    "snorkeling"
+    "muay-thai"
    ],
    "notIdealFor": [
     "swimming",
-    "beach"
+    "beach",
+    "nightlife"
    ],
-   "beach": "Rawai's own beach is for boats, not swimming. In January go 2 km west to Ya Nui, a small cove with calm water and rocks for easy snorkelling (gear, kayaks and paddleboards for rent).",
+   "beach": "No swimming beach: Rawai Beach is shallow, with boats, rocks and mudflats at low tide, and Friendship Beach is a kitesurf spot (November to April; some days in December and January are flat). For a swim, Nai Harn and Ya Nui are about 10 minutes away.",
    "scores": {
     "nightlife": 2,
     "beach": 1,
@@ -968,22 +1058,23 @@
    "airportDriveMin": 65,
    "patongDriveMin": 30,
    "highlights": [
-    "Rawai Seafood Market (go around 11:30, before the dinner rush)",
-    "Sunset at Promthep Cape",
-    "Kayak, paddleboard and snorkel at Ya Nui",
-    "Longtail boat to Koh Bon or Coral Island",
-    "Chao Ley sea-gypsy village by the pier"
+    "Rawai Seafood Market: buy at a stall, a restaurant across the road cooks it (11:00-21:00)",
+    "Longtail or speedboat from Rawai Pier to Koh Bon, Coral Island or the Racha islands",
+    "Salaloy, a seafood restaurant on the seafront (Michelin Bib Gourmand, 2023)",
+    "Cafes, gyms and Muay Thai camps on Sai Yuan Road",
+    "Kitesurf and eFoil lessons at Friendship Beach (November to April)"
    ],
    "lat": 7.7726,
    "lng": 98.3228,
    "coordSource": "wikidata(Q14217890, 6 m)+google(Ra Wai Beach, 141 m)",
    "coordConfidence": "high",
    "gmapsQuery": "Rawai Beach, Phuket",
-   "stayIf": "Stay here if you want a low-cost long-stay base with seafood, gyms and island boats, and will drive to swim.",
+   "stayIf": "Stay here if you want a villa near the island boats and the seafood market, at long-stay prices, and will drive 10 minutes to swim. Our Rawai villa (14 to 18 Jan) is here, by Friendship Beach.",
    "tips": [
-    "Older guides list Bermudos (house and techno) in Rawai. We found no 2025-2026 dates: its last listed party was at Shelter, Patong, on 10 May 2024, and its RA page has nothing since 2021. Check its social pages before you plan around it.",
+    "Cooking at the seafood market costs about 100 THB per kg, or 50-100 THB a dish; big prawns cost up to 1,500 THB per kg. It is quietest late in the morning and busiest about 19:00.",
     "Agree the price before you hire a longtail on the beach.",
-    "Promthep Cape is very crowded at sunset; the crowd leaves minutes after the sun goes down."
+    "Laem Ka Beach, east of the pier, has been closed to the public since 2024.",
+    "Older guides list Bermudos (house and techno) in Rawai. We found no 2025-2026 dates: its last listed party was at Shelter, Patong, on 10 May 2024, and its RA page has nothing since 2021. Check its social pages before you plan around it."
    ],
    "links": [
     {
@@ -991,12 +1082,12 @@
      "url": "https://www.phuket101.net/rawai-beach/"
     },
     {
-     "label": "Phuket101: Ya Nui",
-     "url": "https://www.phuket101.net/ya-nui-beach/"
+     "label": "Phuket101: Rawai Seafood Market",
+     "url": "https://www.phuket101.net/rawai-seafood-market/"
     },
     {
-     "label": "Phuket101: Promthep Cape",
-     "url": "https://www.phuket101.net/promthep-cape/"
+     "label": "Phuket101: Friendship Beach",
+     "url": "https://www.phuket101.net/friendship-beach-phuket-phuket/"
     }
    ],
    "imageCandidates": [
@@ -1005,26 +1096,22 @@
      "credit": "ADwarf",
      "license": "Public domain",
      "source": "https://commons.wikimedia.org/wiki/File:Phuket_-_Rawai_Beach_11.jpg"
-    },
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg/1280px-Beautiful_Sunset_on_Promthep_Cape%2C_Phuket_island%2C_Thailand.jpg",
-     "credit": "Phuket@photographer.net",
-     "license": "CC BY 2.0",
-     "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
     }
    ],
    "sources": [
     "https://www.phuket101.net/rawai-beach/",
-    "https://www.phuket101.net/ya-nui-beach/",
-    "https://www.phuket101.net/promthep-cape/",
+    "https://www.phuket101.net/rawai-seafood-market/",
+    "https://www.phuket101.net/laem-ka-beach/",
+    "https://www.phuket101.net/friendship-beach-phuket-phuket/",
+    "https://www.phuket101.net/kitesurfing-in-phuket/",
     "https://en.wikivoyage.org/wiki/Rawai",
-    "https://en.wikivoyage.org/wiki/Phuket",
+    "https://www.tourismthailand.org/Attraction/rawai-beach-lon-island",
+    "https://www.openstreetmap.org/relation/17100962",
     "https://mixmag.asia/feature/label-focus-bermudos",
     "https://ra.co/promoters/32305",
-    "https://phangan.events/?s=bermudos",
-    "https://www.tripadvisor.com/Attraction_Review-g297934-d12705270-Reviews-Bermudos_The_Underground_Music_Spot-Rawai_Phuket.html"
+    "https://phangan.events/?s=bermudos"
    ],
-   "verification": "Checked 15 Oct 2026. Phuket101 Rawai page (updated 16 Sep 2026) confirms the harbour, the 11:30 market tip, the Chao Ley village, the boats and Ya Nui 2 km west; Ya Nui page: snorkel, kayak and SUP rental. Bermudos: RA promoter 'Bermudos Promo' last event 1 Jan 2021; phangan.events last lists Shelter, 10 May 2024; no RA Thailand listings May 2026-Feb 2027. Pin: Wikidata 6 m, Google 'Ra Wai Beach' 141 m; OSM beach centre is 395 m SW and the seafood market 760 m E.",
+   "verification": "Checked 20 Oct 2026. Phuket101: Rawai Beach (updated 16 Sep 2026): a working harbour, shallow with mudflats at low tide, boats to Koh Bon, Coral Island and the Racha islands, Salaloy, the Chao Ley village, cafes, gyms and Muay Thai camps on Sai Yuan Road; Rawai Seafood Market (21 Sep 2026): 11:00-21:00, cooking fees, busiest about 19:00; Laem Ka Beach (16 Jun 2024): access closed; Friendship Beach (7 Jul 2025); kitesurfing (1 Jul 2026): November to April. Wikivoyage Rawai; TAT. Borders: OpenStreetMap, tambon Rawai ends at Chalong Circle. Bermudos: RA promoter 'Bermudos Promo' last event 1 Jan 2021; phangan.events last lists Shelter, 10 May 2024. Pin: Wikidata 6 m, Google 'Ra Wai Beach' 141 m.",
    "placeId": "ChIJlz7j37woUDARfDrLfKWxSi4"
   },
   {

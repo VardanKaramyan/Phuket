@@ -172,6 +172,14 @@ wr('hotels.json', ho)
     if (Array.isArray(x.tips)) x.tips = x.tips.filter((t) => !/Niky/.test(t))
   }
   if (/Niky/.test(ard.recommendation || '')) ard.recommendation = ''
+  // the southern tip in three areas (20 Oct 2026): data/areas-south.json replaces the research's Nai Harn and Rawai and
+  // adds Promthep after Nai Harn
+  for (const x of rd('areas-south.json').items) {
+    const i = ard.items.findIndex((y) => y.id === x.id)
+    if (i >= 0) ard.items[i] = x
+    else ard.items.splice(ard.items.findIndex((y) => y.id === 'nai-harn') + 1, 0, x)
+    log.push('areas: ' + x.id + ' from areas-south.json')
+  }
   a('natai', (x) => { x.stayIf = 'Stay here if you find a room: on the Circoloco Saturdays (9, 16 and 23 Jan) rooms are sold out or very expensive. The group sleeps in its booked villas (Patong to 14 Jan, Rawai to 18 Jan) and books a driver: about 1 hour from Patong, 1 hour 10 from Rawai.' })
   // the two Bang Tao sentences that the removal above leaves broken
   a('bang-tao', (x) => {

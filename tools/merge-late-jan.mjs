@@ -6,7 +6,7 @@ import path from 'node:path'
 import { TRIP, inTrip, windowOf, dayLabel, phaseLabel } from './trip.mjs'
 
 // same normalization as import.mjs
-const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
+const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'promthep', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
 const OFF = ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'koh-phangan', 'koh-samui', 'koh-kaew', 'other']
 const slug = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const strip = (s) => (typeof s === 'string' ? s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : s)

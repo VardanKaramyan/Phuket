@@ -11,7 +11,7 @@ const P = (...a) => path.join(ROOT, ...a)
 const src = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))
 const R = src.result || src
 
-const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
+const AREA_IDS = ['patong', 'kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'karon', 'kata', 'kata-noi', 'nai-harn', 'promthep', 'rawai', 'chalong', 'phuket-town', 'kathu', 'cape-panwa', 'ao-po', 'thalang', 'natai']
 const OFF = ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'koh-phangan', 'koh-samui', 'koh-kaew', 'other']
 const slug = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const strip = (s) => (typeof s === 'string' ? s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : s)
@@ -23,7 +23,7 @@ const cleanText = (o) => {
 function normArea(a) {
   const s = slug(a)
   if (AREA_IDS.includes(s) || OFF.includes(s)) return s
-  const map = { 'ko-phangan': 'koh-phangan', 'ko-pha-ngan': 'koh-phangan', phangan: 'koh-phangan', 'ko-samui': 'koh-samui', samui: 'koh-samui', 'phi-phi-islands': 'phi-phi', 'koh-phi-phi': 'phi-phi', 'old-town': 'phuket-town', 'phuket-old-town': 'phuket-town', 'bangtao': 'bang-tao', 'laguna': 'bang-tao', 'kalim': 'patong', 'ya-nui': 'rawai', 'cape-yamu': 'ao-po', 'khok-kloi': 'natai', 'khao-pilai': 'natai' }
+  const map = { 'ko-phangan': 'koh-phangan', 'ko-pha-ngan': 'koh-phangan', phangan: 'koh-phangan', 'ko-samui': 'koh-samui', samui: 'koh-samui', 'phi-phi-islands': 'phi-phi', 'koh-phi-phi': 'phi-phi', 'old-town': 'phuket-town', 'phuket-old-town': 'phuket-town', 'bangtao': 'bang-tao', 'laguna': 'bang-tao', 'kalim': 'patong', 'ya-nui': 'promthep', 'cape-yamu': 'ao-po', 'khok-kloi': 'natai', 'khao-pilai': 'natai' }
   return map[s] || s || 'other'
 }
 const log = { removed: {}, changes: {}, unverified: {} }

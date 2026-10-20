@@ -54,14 +54,22 @@ const SPLIT = {
     ['nai-thon', 8.0560, 98.2790], ['nai-thon', 8.0620, 98.2950],
     ['nai-yang', 8.0880, 98.2980], ['nai-yang', 8.1050, 98.3150],
   ],
+  // the south tip of Karon (Ao Sane, Black Rock, Laem Krating) is reached through Nai Harn: it goes with Nai Harn
   Karon: [
     ['karon', 7.8460, 98.2950], ['karon', 7.8560, 98.3060],
     ['kata', 7.8210, 98.3000], ['kata', 7.8260, 98.3110],
     ['kata-noi', 7.8060, 98.3020],
+    ['nai-harn', 7.7780, 98.2950], ['nai-harn', 7.7830, 98.2975], ['nai-harn', 7.7765, 98.2895],
   ],
+  // three areas since 20 Oct 2026 (the user's choice, from the 18 Oct research): Nai Harn (the beach, the lake, Soi
+  // Naya and the road up to the Sai Yuan junction), Promthep (the cape hill road: Windmill, Ya Nui, Promthep) and
+  // Rawai (the seafront from the foot of the Promthep hill to Laem Ka, Sai Yuan Road and Wiset Road to Chalong Circle)
   Rawai: [
-    ['nai-harn', 7.7780, 98.3040], ['nai-harn', 7.7850, 98.3110],
-    ['rawai', 7.7740, 98.3260], ['rawai', 7.7625, 98.3050], ['rawai', 7.7670, 98.3100], ['rawai', 7.7920, 98.3300],
+    ['nai-harn', 7.7760, 98.3057], ['nai-harn', 7.7782, 98.3096], ['nai-harn', 7.7786, 98.3026], ['nai-harn', 7.7860, 98.3090],
+    ['nai-harn', 7.7835, 98.3130], ['nai-harn', 7.7895, 98.3150], ['nai-harn', 7.7950, 98.3120],
+    ['promthep', 7.7697, 98.3066], ['promthep', 7.7675, 98.3060], ['promthep', 7.7619, 98.3054], ['promthep', 7.7589, 98.3034], ['promthep', 7.7650, 98.3095],
+    ['rawai', 7.7708, 98.3193], ['rawai', 7.7756, 98.3288], ['rawai', 7.7791, 98.3348], ['rawai', 7.7800, 98.3230], ['rawai', 7.7911, 98.3267],
+    ['rawai', 7.7967, 98.3262], ['rawai', 7.8018, 98.3357], ['rawai', 7.8120, 98.3380],
   ],
   // Pa Khlok: the inland Khao Phra Thaeo forest (Bang Pae, Gibbon project, elephant sanctuary) belongs with Thalang;
   // the coast (Bang Rong pier, Ao Po, Cape Yamu) is the Ao Po area

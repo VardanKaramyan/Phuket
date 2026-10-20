@@ -101,6 +101,7 @@ const ICON = {
   next: '<path d="M14 6l6 6-6 6M19.5 12H4"/>',
   up: '<path d="M12 19.5V5M6 11l6-6 6 6"/>',
   share: '<path d="M12 3.5v11.5M7.5 8L12 3.5 16.5 8M5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-6"/>',
+  wallet: '<path d="M17.5 7.5V5.8a1.3 1.3 0 0 0-1.6-1.3L5 7.5"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M20.5 11.5h-4a2 2 0 0 0 0 4h4"/><path d="M16.6 13.5h.01"/>',
   note: '<path d="M5.5 3.5h9l4 4v12a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1z"/><path d="M14.5 3.5v4h4M8 12h8M8 15.5h5"/>',
   down: '<path d="M12 4.5V19M6 13l6 6 6-6"/>',
 }
@@ -591,6 +592,7 @@ function homeView(mode) {
     ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
     ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
+    ...(buildName === 'standalone' ? [['spend', 'wallet', 'Spendings', 'Who paid what, and who owes whom']] : []),
     ['money', 'money', 'Money', bestBrand ? `Best rates: ${bestBrand.name}` : 'Exchange & ATMs'],
     ['info', 'info', 'Essentials', 'Entry, transport, boats, safety, phrases'],
     ...(apps.length ? [['apps', 'apps', 'Apps to install', `${plural(apps.filter((a) => a.priority === 'must').length, 'app')} to set up before you fly, ${apps.length} in all`, 'wide']] : []),
@@ -704,6 +706,29 @@ function notesView() {
 <div class="view-head"><span class="eyebrow">Shared with the group</span><h1 class="view-title" id="notes-title">Notes</h1><p class="lede">Notes for the whole trip, and every note on the villas. Anyone can add one, everyone sees them.</p></div>
 <div class="stack js-only notes notes-all" id="group-notes" data-notes="all" hidden><div class="block-title"><h2>${icon('note')}Group notes</h2></div>${notesInner('all')}</div>
 <div class="stack js-only" id="villa-notes-box"><div class="block-title"><h2>${icon('stay')}On the villas</h2><small id="villa-notes-n"></small></div><div id="villa-notes"><p class="note">Add a note on a villa from its card on the Stay tab.</p></div></div>
+</section>`
+}
+// Spendings (website only): what each of the group paid for the group, the balances and who pays whom, kept by the vote
+// server; src/app.js fills it. The people are TRIP.people (tools/trip.mjs)
+function spendView() {
+  if (buildName !== 'standalone') return ''
+  const opts = TRIP.people.map((p) => `<option value="${esc(p)}">${esc(p)}</option>`).join('')
+  const boxes = TRIP.people.map((p) => `<label class="split-box"><input type="checkbox" name="split" value="${esc(p)}" checked><span>${esc(p)}</span></label>`).join('')
+  return `<section class="view" id="spend" aria-labelledby="spend-title">
+<div class="view-head"><span class="eyebrow">Shared with the group</span><h1 class="view-title" id="spend-title">Spendings</h1><p class="lede">Add what you pay for the group. Everyone sees it, and the guide works out who owes whom. Amounts in baht, drams or dollars; drams and dollars count at the guide's rates.</p></div>
+<div class="spend-tiles js-only" id="spend-tiles" hidden></div>
+<p class="js-only"><button class="btn primary" type="button" id="spend-open" aria-expanded="false" aria-controls="spend-form">${icon('plus')}Add expense</button></p>
+<form class="myform js-only" id="spend-form" autocomplete="off" hidden data-noamd>
+<label for="sp-what">What<input id="sp-what" name="what" maxlength="80" required placeholder="e.g. Dinner at the seafood market"></label>
+<div class="row2"><label for="sp-amount">Amount<input id="sp-amount" name="amount" type="number" inputmode="decimal" min="0.01" step="0.01" required placeholder="2400"></label><label for="sp-cur">Currency<select id="sp-cur" name="cur"><option value="THB">Baht</option><option value="AMD">Drams</option><option value="USD">Dollars</option></select></label></div>
+<div class="row2"><label for="sp-paid">Paid by<select id="sp-paid" name="paid" required><option value="">Who paid?</option>${opts}</select></label><label for="sp-date">Day<input id="sp-date" name="date" type="date" required min="2026-10-01" max="2027-02-28"></label></div>
+<fieldset class="split-set"><legend>Split between</legend><div class="split-tools"><button class="chip" type="button" data-split="all">Everyone</button><button class="chip" type="button" data-split="none">Nobody</button></div><div class="split-boxes">${boxes}</div></fieldset>
+<p class="note" id="sp-each" aria-live="polite"></p>
+<div class="actions"><button class="btn primary" type="submit" id="sp-save">${icon('plus')}<span>Save expense</span></button><button class="btn" type="button" id="sp-cancel">Cancel</button></div>
+</form>
+<div class="stack js-only" id="spend-balances-box" hidden><h2 class="block-title">Balances</h2><div class="spend-balances" id="spend-balances"></div></div>
+<div class="stack js-only" id="spend-settle-box" hidden><h2 class="block-title">Settle up <small>the fewest payments</small></h2><ol class="spend-settle" id="spend-settle"></ol></div>
+<div class="stack js-only"><h2 class="block-title">Expenses <small id="spend-n"></small></h2><div class="spend-list" id="spend-list"><p class="note">No expenses yet. Tap Add expense when someone pays for the group.</p></div><p><button class="btn" type="button" id="spend-copy" hidden>Copy everything as text</button></p></div>
 </section>`
 }
 // Stats: filled in by src/app.js from the vote server (website only)
@@ -952,7 +977,7 @@ function chrome(body) {
 <div class="actions"><button class="btn primary" type="submit" data-vote-save>Save vote</button><button class="btn" type="button" data-vote-cancel>Cancel</button></div>
 </form></dialog>
 <nav class="tabbar" aria-label="Sections"><ul>
-${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places', 'places', 'Places')}${tab('areas', 'areas', 'Areas')}${tab('stay', 'stay', 'Stay')}${buildName === 'standalone' ? tab('notes', 'note', 'Notes') : tab('money', 'money', 'Money')}
+${tab('home', 'trip', 'Trip')}${tab('events', 'events', 'Music')}${tab('places', 'places', 'Places')}${tab('areas', 'areas', 'Areas')}${tab('stay', 'stay', 'Stay')}${buildName === 'standalone' ? tab('notes', 'note', 'Notes') + tab('spend', 'wallet', 'Spend') : tab('money', 'money', 'Money')}
 </ul></nav>`
 }
 
@@ -1067,7 +1092,7 @@ const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 function page(build) {
   buildName = build
   const mode = build === 'single' ? 'inline' : 'file'
-  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), statsView()].join('\n')))
+  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), spendView(), statsView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
   const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
   const leaflet = build === 'artifact'

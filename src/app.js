@@ -4,7 +4,7 @@
   const D = JSON.parse(document.getElementById('guide-data').textContent)
   const $ = (s, el = document) => el.querySelector(s)
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
-  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'stats']
+  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'spend', 'stats']
   // kept for this tab only (it survives a refresh): where you were on the page and on the map
   const session = {
     get(k) { try { return JSON.parse(sessionStorage.getItem('pg:' + k) || 'null') } catch { return null } },
@@ -1064,10 +1064,11 @@
   let seenT = store.get('seenT', 0) // the newest shared change this phone has seen
   let firstAnnounce = true
   // other people's changes, as they happen: "Ani liked Mouana Breeze", with Show to go to it
-  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list' }
+  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list', spend: 'added an expense:', respend: 'changed an expense:', unspend: 'deleted an expense:' }
   const cardOf = (x) => { const m = /^(ht|ev|pl):(.+)$/.exec(x || ''); return m ? document.getElementById(m[1] + '-' + m[2]) : null }
   function describe(r) {
     const who = r.n || 'Someone'
+    if (/^(re|un)?spend$/.test(r.e)) return who + ' ' + DID[r.e] + ' ' + (r.x || '')
     if (r.x === 'all') return r.e === 'reset' ? who + ' reset all villa positions' : who + (r.e === 'note' ? ' added a group note' : r.e === 'unnote' ? ' deleted a group note' : ' changed something')
     const c = cardOf(r.x)
     return who + ' ' + (DID[r.e] || r.e) + ' ' + (c ? c.dataset.name : 'a villa')
@@ -1081,7 +1082,7 @@
     if (!fresh.length || (first && !hadSeen)) return // a first visit: no flood of old news
     const r = fresh[0], c = cardOf(r.x)
     const text = (first ? 'Since your last visit: ' : '') + describe(r) + (fresh.length > 1 ? ' (+' + (fresh.length - 1) + ' more)' : '')
-    const to = c ? c.id : r.x === 'all' && document.getElementById('notes') ? 'notes' : '' // a group note: the Notes tab
+    const to = c ? c.id : /^(re|un)?spend$/.test(r.e) && document.getElementById('spend') ? 'spend' : r.x === 'all' && document.getElementById('notes') ? 'notes' : '' // a group note: the Notes tab
     toast(text, to ? { label: 'Show', run: () => { $('#toast').hidden = true; location.hash = to } } : undefined)
   }
   // what people do in the guide, for the Stats page: sent in small batches (and when the page is closed)
@@ -1242,6 +1243,7 @@
     if (j.recent) announce(j.recent)
     votes = j.votes || {}; store.set('votes', votes)
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
+    if (Array.isArray(j.spend)) { spend = j.spend; store.set('spend', spend); renderSpend() }
     if ('pins' in j) { pins = j.pins; store.set('villaPins', pins); syncPinUI() }
     $$('[data-move-stay]').forEach((b) => { b.hidden = false }) // the server is there: moving works
     if (j.saved && sharedSave) {
@@ -1417,11 +1419,136 @@
     track('visit', location.hash || '#home')
   }
 
+  /* ---------- Spendings: who paid what for the group, the balances, and who pays whom (website only) ---------- */
+  // amounts count in baht (drams and dollars at the guide's mid-market rates), in satang so the shares add up exactly
+  const PEOPLE = (D.trip && D.trip.people) || []
+  let spend = canVote ? store.get('spend', []) : []
+  const midOf = (cur) => (cur === 'THB' ? 1 : (D.rates && D.rates.mid && D.rates.mid[cur]) || 0)
+  const thbOf = (x) => Number(x.amount) * midOf(x.cur)
+  const fmtThb = (thb) => Math.round(thb).toLocaleString('en-US') + ' THB'
+  const fmtAmd = (thb) => (midOf('AMD') ? '≈' + (Math.round(thb / midOf('AMD') / 100) * 100).toLocaleString('en-US') + ' AMD' : '')
+  const bothAmt = (thb) => [fmtAmd(thb), fmtThb(thb)].filter(Boolean).join(' · ')
+  const origAmt = (x) => Number(x.amount).toLocaleString('en-US', { maximumFractionDigits: 2 }) + ' ' + x.cur
+  const meOf = () => PEOPLE.find((p) => voterName() && same(p, voterName())) || ''
+  function spendBalances() {
+    const b = Object.fromEntries(PEOPLE.map((p) => [p, { paid: 0, share: 0 }]))
+    for (const x of spend) {
+      const total = Math.round(thbOf(x) * 100), split = (x.split || []).filter((p) => b[p])
+      if (!total || !split.length || !b[x.paid]) continue
+      b[x.paid].paid += total
+      const each = Math.floor(total / split.length)
+      let rest = total - each * split.length
+      split.forEach((p) => { b[p].share += each + (rest-- > 0 ? 1 : 0) })
+    }
+    return b
+  }
+  // the fewest payments that settle everyone: the one who owes most pays the one owed most, and so on (under 1 THB: even)
+  function settleUp(b) {
+    const cred = [], debt = []
+    for (const [p, v] of Object.entries(b)) { const d = v.paid - v.share; if (d >= 100) cred.push([p, d]); else if (d <= -100) debt.push([p, -d]) }
+    const out = [], big = (a, c) => c[1] - a[1]
+    while (cred.length && debt.length) {
+      cred.sort(big); debt.sort(big)
+      const c = cred[0], d = debt[0], t = Math.min(c[1], d[1])
+      out.push({ from: d[0], to: c[0], thb: t / 100 })
+      c[1] -= t; d[1] -= t
+      if (c[1] < 100) cred.shift()
+      if (d[1] < 100) debt.shift()
+    }
+    return out
+  }
+  function renderSpend() {
+    const list = $('#spend-list'); if (!list) return
+    const b = spendBalances(), moves = settleUp(b), me = meOf()
+    const total = spend.reduce((a, x) => a + thbOf(x), 0)
+    const tiles = $('#spend-tiles')
+    tiles.hidden = !spend.length
+    const mine = me && b[me] ? (b[me].paid - b[me].share) / 100 : null
+    tiles.innerHTML = '<div><b>' + esc(fmtAmd(total) || fmtThb(total)) + '</b><span>spent together · ' + esc(fmtThb(total)) + '</span></div>' +
+      '<div><b>' + spend.length + '</b><span>' + (spend.length === 1 ? 'expense' : 'expenses') + '</span></div>' +
+      (mine === null ? '' : '<div class="' + (mine >= 1 ? 'good' : mine <= -1 ? 'bad' : '') + '"><b>' + esc(Math.abs(mine) < 1 ? 'Even' : fmtAmd(Math.abs(mine)) || fmtThb(Math.abs(mine))) + '</b><span>' + esc(me) + (Math.abs(mine) < 1 ? '' : mine > 0 ? ' gets back' : ' owes') + '</span></div>')
+    $('#spend-balances-box').hidden = $('#spend-settle-box').hidden = !spend.length
+    $('#spend-balances').innerHTML = PEOPLE.map((p) => {
+      const d = (b[p].paid - b[p].share) / 100, cls = d >= 1 ? 'good' : d <= -1 ? 'bad' : 'even'
+      return '<div class="bal-row ' + cls + (p === me ? ' me' : '') + '"><div><b>' + esc(p) + '</b><span>paid ' + esc(fmtThb(b[p].paid / 100)) + ' · share ' + esc(fmtThb(b[p].share / 100)) + '</span></div><div class="bal-amt"><b>' +
+        esc(cls === 'even' ? 'even' : (d > 0 ? 'gets back ' : 'owes ') + (fmtAmd(Math.abs(d)) || fmtThb(Math.abs(d)))) + '</b>' + (cls === 'even' ? '' : '<span>' + esc(fmtThb(Math.abs(d))) + '</span>') + '</div></div>'
+    }).join('')
+    $('#spend-settle').innerHTML = moves.length ? moves.map((m) => '<li><span><b>' + esc(m.from) + '</b> pays <b>' + esc(m.to) + '</b></span><span>' + esc(bothAmt(m.thb)) + '</span></li>').join('') : '<li class="quiet">Everyone is even.</li>'
+    $('#spend-n').textContent = spend.length ? spend.length + (spend.length === 1 ? ' expense' : ' expenses') : ''
+    $('#spend-copy').hidden = !spend.length
+    let day = ''
+    list.innerHTML = spend.length ? spend.map((x) => {
+      const head = x.date !== day ? '<h3 class="spend-day">' + esc(dayWord(day = x.date)) + '</h3>' : ''
+      const who = (x.split || []).length === PEOPLE.length ? 'everyone (' + PEOPLE.length + ')' : (x.split || []).join(', ')
+      return head + '<article class="spend-item" data-spend-id="' + esc(x.id) + '"><div class="spend-top"><b>' + esc(x.what) + '</b><span class="spend-amt">' + esc(origAmt(x)) + '</span></div>' +
+        '<p class="note">' + esc([x.cur === 'THB' ? fmtAmd(thbOf(x)) : '≈' + fmtThb(thbOf(x)), 'paid by ' + x.paid, 'split by ' + who].filter(Boolean).join(' · ')) + '</p>' +
+        '<small>added by ' + esc(x.by || 'someone') + (x.editedBy ? ' · changed by ' + esc(x.editedBy) : '') + '</small>' +
+        '<div class="actions"><button class="btn" type="button" data-spend-edit>Edit</button><button class="btn" type="button" data-spend-del>Delete</button></div></article>'
+    }).join('') : '<p class="note">No expenses yet. Tap Add expense when someone pays for the group.</p>'
+  }
+  const spendForm = $('#spend-form'), spendOpen = $('#spend-open')
+  if (spendForm && spendOpen) {
+    const f = (n) => spendForm.elements[n]
+    const boxes = () => $$('input[name="split"]', spendForm)
+    const eachLine = () => {
+      const amt = Number(f('amount').value), n = boxes().filter((c) => c.checked).length
+      $('#sp-each').textContent = amt > 0 && n ? 'Each of ' + n + ' pays ' + bothAmt(amt * midOf(f('cur').value) / n) : n ? '' : 'Tick at least one person.'
+    }
+    const fold = (open) => {
+      spendForm.hidden = !open; spendOpen.closest('p').hidden = open; spendOpen.setAttribute('aria-expanded', String(open))
+      if (open) f('what').focus(); else { spendForm.reset(); delete spendForm.dataset.edit; $('#sp-save span').textContent = 'Save expense'; $('#sp-each').textContent = '' }
+    }
+    const today = () => { const t = bkkDate(new Date()); return t < f('date').min ? f('date').min : t > f('date').max ? f('date').max : t }
+    spendOpen.addEventListener('click', () => {
+      fold(true); f('date').value = today(); f('paid').value = meOf(); boxes().forEach((c) => { c.checked = true }); eachLine()
+    })
+    $('#sp-cancel').addEventListener('click', () => fold(false))
+    spendForm.addEventListener('input', eachLine)
+    spendForm.addEventListener('click', (e) => {
+      const t = e.target.closest('[data-split]'); if (!t) return
+      boxes().forEach((c) => { c.checked = t.dataset.split === 'all' }); eachLine()
+    })
+    async function sendSpend(name, body, done) {
+      try { applyShared(await post({ name, ...body })); toast(done) } catch { failed() }
+    }
+    spendForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const split = boxes().filter((c) => c.checked).map((c) => c.value)
+      if (!split.length) { eachLine(); return }
+      const x = { what: f('what').value.trim(), amount: Number(f('amount').value), cur: f('cur').value, paid: f('paid').value, split, date: f('date').value }
+      if (spendForm.dataset.edit) x.id = spendForm.dataset.edit
+      const done = x.id ? 'Changed for everyone' : 'Saved for everyone'
+      const go = (n) => { sendSpend(n, { spend: x }, done); fold(false) }
+      if (voterName()) go(voterName())
+      else openDialog({ title: 'Save the expense', what: x.what + ' · ' + origAmt(x), save: 'Save', note: 'Everyone in the group sees it, with your name.', run: go })
+    })
+    $('#spend-list').addEventListener('click', (e) => {
+      const card = e.target.closest('[data-spend-id]'); if (!card) return
+      const x = spend.find((y) => y.id === card.dataset.spendId); if (!x) return
+      if (e.target.closest('[data-spend-del]')) {
+        openDialog({ title: 'Delete this expense', what: x.what + ' · ' + origAmt(x), save: 'Delete', note: 'It goes for the whole group.', run: (n) => sendSpend(n, { deleteSpend: x.id }, 'Deleted for everyone') })
+      } else if (e.target.closest('[data-spend-edit]')) {
+        fold(true)
+        f('what').value = x.what; f('amount').value = x.amount; f('cur').value = x.cur; f('paid').value = x.paid; f('date').value = x.date
+        boxes().forEach((c) => { c.checked = (x.split || []).includes(c.value) })
+        spendForm.dataset.edit = x.id; $('#sp-save span').textContent = 'Save changes'; eachLine()
+        spendForm.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' })
+      }
+    })
+    $('#spend-copy').addEventListener('click', async () => {
+      const b = spendBalances()
+      const text = ['Spendings (Phuket trip)', ...spend.map((x) => [x.date, x.what, origAmt(x), 'paid by ' + x.paid, 'split by ' + (x.split || []).join(', ')].join(' | ')), '',
+        'Balances:', ...PEOPLE.map((p) => p + ': paid ' + fmtThb(b[p].paid / 100) + ', share ' + fmtThb(b[p].share / 100)), '', 'Settle up:', ...settleUp(b).map((m) => m.from + ' pays ' + m.to + ' ' + fmtThb(m.thb))].join('\n')
+      try { await navigator.clipboard.writeText(text); toast('Copied: paste it in a chat or a note') } catch { toast('Could not copy here') }
+    })
+    renderSpend()
+  }
+
   /* ---------- Stats: who opened the guide and what they did (website only) ---------- */
   const SAID = { visit: 'opened the guide', view: 'opened', card: 'looked at', map: 'opened the map of', share: 'shared', photos: 'browsed the photos of', ...DID }
   function itemLabel(e, x) {
     if (e === 'visit') return ''
-    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Essentials', apps: 'Apps', notes: 'Notes', stats: 'Stats' }[x] || x) + ' tab'
+    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Essentials', apps: 'Apps', notes: 'Notes', spend: 'Spend', stats: 'Stats' }[x] || x) + ' tab'
     const id = String(x || '').replace(/^mini:/, '').replace(/^(ht|ev|pl|mx):/, '$1-').replace(/^(hotel|event|place|money):/, (m, k) => ({ hotel: 'ht-', event: 'ev-', place: 'pl-', money: 'mx-' }[k]))
     const el = document.getElementById(id)
     return x === 'all' ? 'Group notes' : el ? el.dataset.name || el.querySelector('h2, h3')?.textContent || id : String(x || '')

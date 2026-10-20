@@ -7,6 +7,7 @@ import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import puppeteer from 'puppeteer-core'
 import { chromePath } from './chrome.mjs'
+import { TRIP } from './trip.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const DIST = path.join(ROOT, 'dist')
@@ -158,6 +159,20 @@ const api = await import(mod + '?store')
   check('anyone can take a save off the list', r.status === 200 && !r.json.saved?.['ev:shelter-phuket'] && r.json.recent?.[0]?.e === 'unsave', JSON.stringify(r.json.saved))
   r = await call(api, 'POST', { item: 'zz:nothing', name: 'Ani', save: true })
   check('refused: saving an unknown item', r.status === 400, String(r.status))
+  // Spendings: an expense with who paid and who shares it; anyone changes or deletes it; only the group's names
+  check('the server and tools/trip.mjs list the same 8 people', JSON.stringify(api.PEOPLE) === JSON.stringify(TRIP.people) && TRIP.people.length === 8, TRIP.people.join(', '))
+  r = await call(api, 'POST', { name: 'Ani', device: 'devani000001', spend: { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', split: TRIP.people, date: '2027-01-14' } })
+  const sp = r.json.spend?.[0]
+  check('an expense is saved for everyone, with who added it, and is news', r.status === 200 && sp?.what === 'Dinner at the market' && sp.amount === 2400 && sp.paid === 'Hovo' && sp.split.length === 8 && sp.by === 'Ani' && r.json.recent?.[0]?.e === 'spend' && /Dinner at the market · 2,400 THB/.test(r.json.recent[0].x), JSON.stringify(sp))
+  r = await call(api, 'POST', { name: 'Gor', spend: { id: sp.id, what: 'Dinner at the market', amount: 2500, cur: 'THB', paid: 'Hovo', split: ['Lara', 'Hovo', 'Hovo'], date: '2027-01-14' } })
+  const sp2 = (r.json.spend || []).find((x) => x.id === sp.id)
+  check('anyone can change an expense: it keeps who added it and says who changed it', r.status === 200 && sp2?.amount === 2500 && sp2.split.join() === 'Hovo,Lara' && sp2.by === 'Ani' && sp2.editedBy === 'Gor' && r.json.spend.length === 1 && r.json.recent?.[0]?.e === 'respend', JSON.stringify(sp2))
+  for (const [bad, why] of [[{ paid: 'Nobody' }, 'a payer outside the group'], [{ split: [] }, 'an empty split'], [{ split: ['Hovo', 'Zed'] }, 'a split with someone outside the group'], [{ cur: 'EUR' }, 'another currency'], [{ amount: 0 }, 'a zero amount'], [{ what: 'x'.repeat(81) }, 'an 81-character description'], [{ date: 'soon' }, 'a bad date']]) {
+    r = await call(api, 'POST', { name: 'Ani', spend: { what: 'Taxi', amount: 300, cur: 'THB', paid: 'Mes', split: ['Mes'], date: '2027-01-15', ...bad } })
+    check('refused: ' + why, r.status === 400, String(r.status))
+  }
+  r = await call(api, 'POST', { name: 'Gor', deleteSpend: sp.id })
+  check('anyone can delete an expense, and it is news', r.status === 200 && !r.json.spend.length && r.json.recent?.[0]?.e === 'unspend', JSON.stringify(r.json.spend))
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
   r = await call(api, 'GET')
   const v0 = r.json.ver
@@ -434,7 +449,7 @@ check('a villa name on the Notes tab opens that villa', fromNotes.hash === '#ht-
 const money = await B.p.evaluate(() => { location.hash = 'info'; return !!document.querySelector('#info .info-tiles a[href="#money"]') })
 check('Money is reached from the Essentials page', money, String(money))
 const single = fs.readFileSync(path.join(DIST, 'phuket-guide-offline.html'), 'utf8').match(/<nav class="tabbar"[\s\S]*?<\/nav>/)?.[0] || ''
-check('the offline file (no shared notes) keeps the Money tab', /href="#money"/.test(single) && !/href="#notes"/.test(single), single.length + ' chars')
+check('the offline file (no shared notes or spendings) keeps the Money tab', /href="#money"/.test(single) && !/href="#notes"/.test(single) && !/href="#spend"/.test(single), single.length + ' chars')
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa [data-note-del]').click()); await sleep(900)
 const gone = await A.p.evaluate(() => ({ list: document.querySelector('#ht-alisa-pool-villa .notes-list').textContent, empty: document.querySelector('#ht-alisa-pool-villa .notes').classList.contains('empty'), label: getComputedStyle(document.querySelector('#ht-alisa-pool-villa .notes-label')).display }))
@@ -503,6 +518,52 @@ await C.p.evaluate(() => { localStorage.setItem('pg:favs', JSON.stringify(['pl:b
 await C.p.reload({ waitUntil: 'networkidle0' }); await sleep(1500)
 const moved = (await (await api.GET(new Request('http://x/api/votes'))).json()).saved?.['pl:big-buddha']
 check("a phone's old saves join the group's Saved list, under its name", moved?.by === 'Lilit', JSON.stringify(moved))
+// Spendings: A adds two expenses in the form (her name is known: no dialog); B sees them, the news, the balances and
+// who pays whom; A changes one; B deletes one
+const tabsWeb = await A.p.evaluate(() => [...document.querySelectorAll('.tabbar a')].map((a) => a.getAttribute('href')).join(' '))
+const tile = await A.p.evaluate(() => !!document.querySelector('#home .tile[href="#spend"]'))
+check('the website has a Spend tab, and the Trip page links to it', /#notes #spend$/.test(tabsWeb) && tile, tabsWeb)
+const addSpend = (p, x) => p.evaluate(async (x) => {
+  location.hash = 'spend'; await new Promise((r) => setTimeout(r, 200))
+  document.getElementById('spend-open').click(); await new Promise((r) => setTimeout(r, 100))
+  const f = document.getElementById('spend-form')
+  f.querySelector('#sp-what').value = x.what; f.querySelector('#sp-amount').value = String(x.amount); f.querySelector('#sp-cur').value = x.cur
+  f.querySelector('#sp-paid').value = x.paid; f.querySelector('#sp-date').value = x.date
+  if (x.split) f.querySelectorAll('input[name="split"]').forEach((c) => { c.checked = x.split.includes(c.value) })
+  f.querySelector('#sp-save').click()
+}, x)
+await addSpend(A.p, { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', date: '2027-01-14' }); await sleep(900)
+await addSpend(A.p, { what: 'Taxi to the pier', amount: 1000, cur: 'AMD', paid: 'Lara', date: '2027-01-15', split: ['Lara', 'Mes'] }); await sleep(900)
+const aList = await A.p.evaluate(() => ({ items: [...document.querySelectorAll('#spend-list .spend-item b')].map((b) => b.textContent), dialog: document.getElementById('vote-dialog').open, folded: document.getElementById('spend-form').hidden }))
+check('expenses from the form are saved for everyone, newest day first', aList.items.join('|') === 'Taxi to the pier|Dinner at the market' && !aList.dialog && aList.folded, JSON.stringify(aList))
+await B.p.evaluate(() => { location.hash = 'spend'; window.dispatchEvent(new Event('focus')) }); await sleep(1500)
+const bal = await B.p.evaluate(() => {
+  const thb = (t) => Number(((t || '').match(/([\d,]+) THB/) || [0, '0'])[1].replace(/,/g, ''))
+  const rows = Object.fromEntries([...document.querySelectorAll('#spend-balances .bal-row')].map((r) => [r.querySelector('b').textContent, { text: r.querySelector('.bal-amt').textContent, thb: thb(r.querySelector('.bal-amt').textContent) }]))
+  return { rows, moves: [...document.querySelectorAll('#spend-settle li')].map((li) => ({ text: li.textContent, thb: thb(li.textContent) })), perAmd: JSON.parse(document.getElementById('guide-data').textContent).rates.mid.AMD,
+    n: document.querySelectorAll('#spend-list .spend-item').length, news: document.querySelector('.toast')?.textContent || '' }
+})
+check('another phone sees the expenses, with the news', bal.n === 2 && /Ani added an expense: Taxi to the pier/.test(bal.news), bal.news)
+const taxi = 1000 * bal.perAmd // in baht, at the guide's rate
+check('balances: Hovo gets back 2,100 THB, Artash owes 300, Mes owes 300 and half the taxi', /gets back/.test(bal.rows.Hovo.text) && bal.rows.Hovo.thb === 2100 && /owes/.test(bal.rows.Artash.text) && bal.rows.Artash.thb === 300 &&
+  Math.abs(bal.rows.Mes.thb - (300 + taxi / 2)) <= 1 && Math.abs(bal.rows.Lara.thb - (300 + taxi / 2 - taxi)) <= 1, JSON.stringify(Object.fromEntries(Object.entries(bal.rows).map(([k, v]) => [k, v.text]))).slice(0, 320))
+const paidBack = bal.moves.reduce((a, m) => a + m.thb, 0)
+check('settle up: 7 payments, all to Hovo, adding up to what he gets back', bal.moves.length === 7 && bal.moves.every((m) => /pays Hovo/.test(m.text)) && Math.abs(paidBack - 2100) <= 7, bal.moves.map((m) => m.text).join(' | ').slice(0, 300))
+const edited = await A.p.evaluate(async () => {
+  const card = [...document.querySelectorAll('#spend-list .spend-item')].find((c) => /Dinner/.test(c.textContent))
+  card.querySelector('[data-spend-edit]').click(); await new Promise((r) => setTimeout(r, 100))
+  const f = document.getElementById('spend-form'), filled = f.querySelector('#sp-amount').value === '2400' && f.querySelector('#sp-paid').value === 'Hovo'
+  f.querySelector('#sp-amount').value = '3200'; f.querySelector('#sp-save').click(); await new Promise((r) => setTimeout(r, 900))
+  const now = [...document.querySelectorAll('#spend-list .spend-item')].find((c) => /Dinner/.test(c.textContent))
+  return { filled, text: now.textContent, n: document.querySelectorAll('#spend-list .spend-item').length }
+})
+check('Edit fills the form with the expense, and saves the change for everyone', edited.filled && /3,200 THB/.test(edited.text) && /changed by Ani/.test(edited.text) && edited.n === 2, JSON.stringify(edited).slice(0, 200))
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+await B.p.evaluate(() => document.querySelector('#spend-list .spend-item [data-spend-del]').click()); await sleep(200)
+const askDel = await B.p.evaluate(() => ({ open: document.getElementById('vote-dialog').open, title: document.getElementById('vote-title').textContent, what: document.getElementById('vote-what').textContent }))
+await B.p.evaluate(() => document.querySelector('#vote-dialog [data-vote-save]').click()); await sleep(900)
+const left = await B.p.evaluate(() => [...document.querySelectorAll('#spend-list .spend-item b')].map((b) => b.textContent))
+check('Delete asks first, then removes the expense for everyone', askDel.open && /Delete this expense/.test(askDel.title) && /Taxi to the pier/.test(askDel.what) && left.join('|') === 'Dinner at the market', JSON.stringify({ askDel, left }))
 for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

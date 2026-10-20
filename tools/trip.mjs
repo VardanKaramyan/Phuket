@@ -12,6 +12,8 @@ export const TRIP = {
     { id: '136-pool-villa-patong-5br', key: 'patong', short: 'Patong villa', from: '2027-01-08', to: '2027-01-14', checkIn: '15:00', checkOut: '11:00' },
     { id: 'luxurious-seaview-villa-rawai', key: 'rawai', short: 'Rawai villa', from: '2027-01-14', to: '2027-01-18', checkIn: '16:00', checkOut: '12:00' },
   ],
+  // the group (the user, 20 Oct 2026), for Spendings; api/votes.js has the same list (PEOPLE)
+  people: ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara'],
   phases: [
     { id: 'group', label: 'Group', from: '2027-01-08', to: '2027-01-18' },
     { id: 'duo', label: 'Two of you', from: '2027-01-19', to: '2027-01-23' },

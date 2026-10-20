@@ -8,6 +8,9 @@
 //   POST /api/votes { name, order: ['<villa id>', …] }           -> the old whole-list order (older copies of the page)
 //   POST /api/votes { name, note: { item: 'ht:<id>' | 'all', text } } -> a shared note on a villa, or for the whole trip
 //   POST /api/votes { name, deleteNote: '<note id>' }            -> deletes a note
+//   POST /api/votes { name, spend: { id?, what, amount, cur, paid, split: [names], date } } -> adds an expense (or
+//        changes it, with its id); paid and split are names of the group (PEOPLE), cur THB, AMD or USD
+//   POST /api/votes { name, deleteSpend: '<expense id>' }         -> deletes an expense
 //   POST /api/votes { device, name?, track: [{ e, x }] }        -> visits and actions for the Stats page
 //   GET  /api/votes?ver=<n>  -> { ver, same: true } when nothing changed since version n (one cheap read), else everything
 //   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page;
@@ -26,6 +29,11 @@ const NOTES = 'guide:notes' // one Redis hash: field "<note id>", value { item, 
 const NOTE_ITEM = /^(all|ht:[a-z0-9][a-z0-9-]{0,80})$/
 const MAX_NOTES = 2000
 const NOTE_LEN = 500
+const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, n, t, en, et }
+const MAX_SPEND = 2000
+// the group, for Spendings (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
+export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara']
+const CURRENCIES = new Set(['THB', 'AMD', 'USD'])
 const VER = 'guide:ver' // a number, +1 on every shared change (phones poll it to know when to reload)
 const LOG = 'guide:log' // a list, newest first: { t, e, x, n, d } (when, what, on which item, name, device)
 const LOG_MAX = 5000
@@ -36,7 +44,7 @@ const NEW_PER_HOUR = 20 // new phone ids one connection may add in an hour
 const DEVICE = /^[a-z0-9]{8,32}$/
 const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
 const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
-const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave']) // shared changes
+const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave', 'spend', 'respend', 'unspend']) // shared changes
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -85,6 +93,19 @@ async function hiddenVillas(db) {
   for (let i = 0; i < flat.length; i += 2) { try { const x = JSON.parse(flat[i + 1]); hidden[flat[i]] = { by: x.n, t: x.t } } catch { /* skip a broken row */ } }
   return hidden
 }
+// the expenses, newest day first (then the newest added)
+async function allSpend(db) {
+  const flat = (await redis(db, ['HGETALL', SPEND])) || []
+  const out = []
+  for (let i = 0; i < flat.length; i += 2) {
+    try {
+      const x = JSON.parse(flat[i + 1])
+      out.push({ id: flat[i], what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, by: x.n, t: x.t, ...(x.en ? { editedBy: x.en, editedT: x.et } : {}) })
+    } catch { /* skip a broken row */ }
+  }
+  return out.sort((a, b) => String(b.date).localeCompare(String(a.date)) || b.t - a.t)
+}
+const spendLabel = (x) => `${x.what || 'an expense'} · ${Number(x.amount || 0).toLocaleString('en-US')} ${x.cur || ''}`.trim()
 async function savedItems(db) {
   const flat = (await redis(db, ['HGETALL', SAVED])) || []
   const saved = {}
@@ -117,7 +138,7 @@ async function logRows(db, n) {
 }
 const version = async (db) => Number((await redis(db, ['GET', VER])) || 0)
 const everything = async (db) => ({
-  votes: await allVotes(db), hidden: await hiddenVillas(db), saved: await savedItems(db), ...(await meta(db)), notes: await allNotes(db),
+  votes: await allVotes(db), hidden: await hiddenVillas(db), saved: await savedItems(db), ...(await meta(db)), notes: await allNotes(db), spend: await allSpend(db),
   ver: await version(db), recent: (await logRows(db, 60)).filter((x) => SHARED.has(x.e)).slice(0, 30),
 })
 async function logPush(db, rows) {
@@ -193,6 +214,51 @@ export async function POST(request) {
       await redis(db, ['HSET', VISITORS, device, JSON.stringify(v)])
       await logPush(db, rows.map((r) => ({ t: now, e: r.e, x: String(r.x || '').replace(/[\u0000-\u001f\u007f]/g, '').slice(0, 100), n: v.n || '', d: device })))
       return reply(200, { ok: true })
+    } catch (e) { return reply(502, { error: e.message }) }
+  }
+  // Spendings: add an expense (with who added it), change one, or delete one. Anyone in the group may change or delete
+  // any expense; the row keeps who added it and who changed it last
+  if (body && (body.spend || body.deleteSpend)) {
+    const who = cleanName(body.name)
+    if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+    try {
+      if (body.deleteSpend) {
+        const id = String(body.deleteSpend).slice(0, 40)
+        const raw = await redis(db, ['HGET', SPEND, id])
+        if (!raw) return reply(404, { error: 'That expense is gone' })
+        let x = {}
+        try { x = JSON.parse(raw) } catch { /* a broken row */ }
+        await redis(db, ['HDEL', SPEND, id])
+        await changed(db, 'unspend', spendLabel(x), who, body.device)
+        return reply(200, await everything(db))
+      }
+      const s = body.spend || {}
+      const what = String(s.what ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim()
+      const amount = Math.round(Number(s.amount) * 100) / 100
+      const cur = String(s.cur || ''), paid = String(s.paid || ''), date = String(s.date || '')
+      const split = Array.isArray(s.split) ? s.split.map(String) : []
+      if (!what || what.length > 80) return reply(400, { error: 'Say what it was, in 1 to 80 characters' })
+      if (!(amount > 0 && amount <= 100000000)) return reply(400, { error: 'An amount above 0, please' })
+      if (!CURRENCIES.has(cur)) return reply(400, { error: 'Baht, drams or dollars, please' })
+      if (!PEOPLE.includes(paid)) return reply(400, { error: 'Who paid? One of the group, please' })
+      if (!split.length || !split.every((p) => PEOPLE.includes(p))) return reply(400, { error: 'Split it between people of the group' })
+      if (!/^20\d\d-[01]\d-[0-3]\d$/.test(date)) return reply(400, { error: 'A date, please' })
+      const row = { what, amount, cur, paid, split: PEOPLE.filter((p) => split.includes(p)), date }
+      if (s.id) {
+        const id = String(s.id).slice(0, 40)
+        const raw = await redis(db, ['HGET', SPEND, id])
+        if (!raw) return reply(404, { error: 'That expense is gone' })
+        let old = {}
+        try { old = JSON.parse(raw) } catch { /* a broken row */ }
+        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now() })])
+        await changed(db, 'respend', spendLabel(row), who, body.device)
+      } else {
+        if ((await redis(db, ['HLEN', SPEND])) >= MAX_SPEND) return reply(507, { error: 'Too many expenses saved' })
+        const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: who, t: Date.now() })])
+        await changed(db, 'spend', spendLabel(row), who, body.device)
+      }
+      return reply(200, await everything(db))
     } catch (e) { return reply(502, { error: e.message }) }
   }
   // shared notes: add one (with the author's name), or delete one by its id

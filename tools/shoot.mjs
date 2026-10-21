@@ -5,7 +5,7 @@ import path from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { chromePath } from './chrome.mjs'
 const [file, outDir, theme = 'light', ...views] = process.argv.slice(2)
-const VIEWS = views.length ? views : ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes']
+const VIEWS = views.length ? views : ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'spend']
 fs.mkdirSync(outDir, { recursive: true })
 const browser = await puppeteer.launch({ executablePath: chromePath(), headless: true, args: ['--no-sandbox', '--allow-file-access-from-files'] })
 const page = await browser.newPage()

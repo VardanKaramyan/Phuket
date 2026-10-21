@@ -40,7 +40,7 @@ node tools/offline-test.mjs                        # serves dist/, stops the ser
 node tools/popup-test.mjs                          # map popups stay tappable at 390, 360 and 320 px
 node tools/map-test.mjs                            # smooth wheel zoom, full screen, offline satellite
 node tools/amd-test.mjs                            # every baht price on the page has its dram amount
-node tools/votes-test.mjs                          # the vote server and the Like / Skip buttons, two people voting
+node tools/votes-test.mjs                          # the vote server, Like / Skip, notes and the Spend tab, two people
 node tools/gallery-test.mjs                        # villa photo galleries: swipe, load on demand, offline, artifact
 node tools/countdown-test.mjs                      # the countdown board and pill: before, during and after the trip
 node tools/new-villas-test.mjs                     # New badges on villas this phone has not seen yet
@@ -59,7 +59,7 @@ Content edits: hand-written copy is in `data/extra.json`. The villa list (Where 
 
 Vercel (17 Oct 2026): the project imports `VardanKaramyan/Phuket` from GitHub, and `vercel.json` tells it to skip the install and build and serve the committed `dist/`. So rebuild locally (`npm run build`), commit `dist/`, and push to the `karamyan` remote; each push to `main` redeploys https://phuket-six.vercel.app.
 
-Votes: `api/votes.js` is a Vercel function (no packages) at `/api/votes` that keeps the group's Like / Skip votes in the Upstash Redis database connected to the project (Vercel → Storage). It finds the database from the variables Vercel created, whatever their prefix (`KV_REST_API_URL`, `STORAGE_REST_API_URL`, or a `rediss://…upstash.io` URL). Never put the token in the repo. Only the website can vote; the single file and the artifact hide the buttons. `node tools/votes-test.mjs` tests the function and the page against a stand-in database.
+Votes: `api/votes.js` is a Vercel function (no packages) at `/api/votes` that keeps the group's Like / Skip votes, notes and expenses (the Spend tab) in the Upstash Redis database connected to the project (Vercel → Storage). It finds the database from the variables Vercel created, whatever their prefix (`KV_REST_API_URL`, `STORAGE_REST_API_URL`, or a `rediss://…upstash.io` URL). Never put the token in the repo. Only the website can vote; the single file and the artifact hide the buttons. `node tools/votes-test.mjs` tests the function and the page against a stand-in database.
 
 Any other static host works too, for example:
 

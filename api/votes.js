@@ -8,15 +8,20 @@
 //   POST /api/votes { name, order: ['<villa id>', …] }           -> the old whole-list order (older copies of the page)
 //   POST /api/votes { name, note: { item: 'ht:<id>' | 'all', text } } -> a shared note on a villa, or for the whole trip
 //   POST /api/votes { name, deleteNote: '<note id>' }            -> deletes a note
-//   POST /api/votes { name, spend: { id?, what, amount, cur, paid, split: [names], date } } -> adds an expense (or
-//        changes it, with its id); paid and split are names of the group (PEOPLE), cur THB, AMD or USD
+//   POST /api/votes { name, spend: { id?, what, amount, cur, paid, split: [names], date, cat?, rate?, shares?, amounts?,
+//        kind? } } -> adds an expense (or changes it, with its id); paid and split are names of the group (PEOPLE), cur
+//        THB, AMD, USD or AED; rate: baht for 1 unit when it was added; shares { name: weight } or amounts { name: amount }
+//        for an uneven split; kind 'pay': a payment from paid to the one person in split; newId: the id for a new one,
+//        made on the phone (sent again, it is added once, or saved as a change when it differs); with keep: { by, t,
+//        editedBy, editedT } (Undo after a delete) it comes back with who added it and when
 //   POST /api/votes { name, deleteSpend: '<expense id>' }         -> deletes an expense
 //   POST /api/votes { device, name?, track: [{ e, x }] }        -> visits and actions for the Stats page
 //   GET  /api/votes?ver=<n>  -> { ver, same: true } when nothing changed since version n (one cheap read), else everything
 //   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page;
 //        with a STATS_KEY environment variable set, it also needs &key=<that key>
 // GET and every POST answer with { votes, hidden, pins: { map, by, t } | null, order, notes: { '<item>': [{ id, text, by, t }] },
-// ver, recent: [the latest shared changes] }; each votes entry also has last: the time of its latest like.
+// spend: [expenses, newest day first], ver, recent: [the latest shared changes] }; each votes entry also has last: the time
+// of its latest like. Saving an expense also answers with its id.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
@@ -29,11 +34,14 @@ const NOTES = 'guide:notes' // one Redis hash: field "<note id>", value { item, 
 const NOTE_ITEM = /^(all|ht:[a-z0-9][a-z0-9-]{0,80})$/
 const MAX_NOTES = 2000
 const NOTE_LEN = 500
-const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, n, t, en, et }
+const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, cat, rate, shares, amounts, kind, n, t, en, et }
 const MAX_SPEND = 2000
-// the group, for Spendings (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
+// the group, for the Spend tab (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
 export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara']
-const CURRENCIES = new Set(['THB', 'AMD', 'USD'])
+const CURRENCIES = new Set(['THB', 'AMD', 'USD', 'AED'])
+const RATE_BAND = { AMD: [0.01, 1], USD: [5, 200], AED: [1, 50] } // baht for 1 unit: far outside is a typo
+const NEW_ID = /^[a-z0-9]{8,24}$/
+export const SPEND_CATS = ['food', 'drinks', 'groceries', 'transport', 'activities', 'stay', 'shopping', 'other']
 const VER = 'guide:ver' // a number, +1 on every shared change (phones poll it to know when to reload)
 const LOG = 'guide:log' // a list, newest first: { t, e, x, n, d } (when, what, on which item, name, device)
 const LOG_MAX = 5000
@@ -44,7 +52,7 @@ const NEW_PER_HOUR = 20 // new phone ids one connection may add in an hour
 const DEVICE = /^[a-z0-9]{8,32}$/
 const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
 const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
-const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave', 'spend', 'respend', 'unspend']) // shared changes
+const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave', 'spend', 'pay', 'respend', 'repay', 'unspend', 'unpay']) // shared changes
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -100,12 +108,30 @@ async function allSpend(db) {
   for (let i = 0; i < flat.length; i += 2) {
     try {
       const x = JSON.parse(flat[i + 1])
-      out.push({ id: flat[i], what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, by: x.n, t: x.t, ...(x.en ? { editedBy: x.en, editedT: x.et } : {}) })
+      out.push({ id: flat[i], what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, by: x.n, t: x.t,
+        ...(x.cat ? { cat: x.cat } : {}), ...(x.rate ? { rate: x.rate } : {}), ...(x.shares ? { shares: x.shares } : {}), ...(x.amounts ? { amounts: x.amounts } : {}),
+        ...(x.kind ? { kind: x.kind } : {}), ...(x.en ? { editedBy: x.en, editedT: x.et } : {}) })
     } catch { /* skip a broken row */ }
   }
   return out.sort((a, b) => String(b.date).localeCompare(String(a.date)) || b.t - a.t)
 }
-const spendLabel = (x) => `${x.what || 'an expense'} · ${Number(x.amount || 0).toLocaleString('en-US')} ${x.cur || ''}`.trim()
+const spendLabel = (x) => `${x.kind === 'pay' ? `${x.paid} paid ${(x.split || [])[0] || ''}` : x.what || 'an expense'} · ${Number(x.amount || 0).toLocaleString('en-US', { minimumFractionDigits: Number.isInteger(Number(x.amount)) ? 0 : 2, maximumFractionDigits: 2 })} ${x.cur || ''}`.trim()
+// a saved row without who and when, to compare with what a phone sends again
+const spendBody = ({ n, t, en, et, ...row }) => row
+// an uneven split: { name: number } for exactly the people in split, each at most 2 decimals; null when it is not one
+function splitMap(m, split, max) {
+  if (m == null) return null
+  if (typeof m !== 'object' || Array.isArray(m)) return false
+  const keys = Object.keys(m)
+  if (keys.length !== split.length || !split.every((p) => Object.hasOwn(m, p))) return false
+  const out = {}
+  for (const p of split) {
+    const v = typeof m[p] === 'number' ? m[p] : NaN
+    if (!Number.isFinite(v) || v <= 0 || v > max || Math.abs(v * 100 - Math.round(v * 100)) > 1e-6) return false
+    out[p] = Math.round(v * 100) / 100
+  }
+  return out
+}
 async function savedItems(db) {
   const flat = (await redis(db, ['HGETALL', SAVED])) || []
   const saved = {}
@@ -216,8 +242,8 @@ export async function POST(request) {
       return reply(200, { ok: true })
     } catch (e) { return reply(502, { error: e.message }) }
   }
-  // Spendings: add an expense (with who added it), change one, or delete one. Anyone in the group may change or delete
-  // any expense; the row keeps who added it and who changed it last
+  // Spending: add an expense or a payment (with who added it), change one, or delete one. Anyone in the group may change
+  // or delete any expense; the row keeps who added it and who changed it last
   if (body && (body.spend || body.deleteSpend)) {
     const who = cleanName(body.name)
     if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
@@ -225,40 +251,69 @@ export async function POST(request) {
       if (body.deleteSpend) {
         const id = String(body.deleteSpend).slice(0, 40)
         const raw = await redis(db, ['HGET', SPEND, id])
-        if (!raw) return reply(404, { error: 'That expense is gone' })
+        if (!raw) return reply(404, { error: 'Someone deleted it' })
         let x = {}
         try { x = JSON.parse(raw) } catch { /* a broken row */ }
         await redis(db, ['HDEL', SPEND, id])
-        await changed(db, 'unspend', spendLabel(x), who, body.device)
+        await changed(db, x.kind === 'pay' ? 'unpay' : 'unspend', spendLabel(x), who, body.device)
         return reply(200, await everything(db))
       }
       const s = body.spend || {}
+      const pay = s.kind === 'pay'
       const what = String(s.what ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim()
-      const amount = Math.round(Number(s.amount) * 100) / 100
+      const amount = typeof s.amount === 'number' ? Math.round(s.amount * 100) / 100 : NaN
       const cur = String(s.cur || ''), paid = String(s.paid || ''), date = String(s.date || '')
       const split = Array.isArray(s.split) ? s.split.map(String) : []
-      if (!what || what.length > 80) return reply(400, { error: 'Say what it was, in 1 to 80 characters' })
+      const people = PEOPLE.filter((p) => split.includes(p)) // each once, in the group's order
+      if (s.kind != null && !pay) return reply(400, { error: 'An expense or a payment, please' })
+      if (what.length > 80 || (!what && !pay)) return reply(400, { error: 'Say what it was, in 1 to 80 characters' })
       if (!(amount > 0 && amount <= 100000000)) return reply(400, { error: 'An amount above 0, please' })
-      if (!CURRENCIES.has(cur)) return reply(400, { error: 'Baht, drams or dollars, please' })
+      if (!CURRENCIES.has(cur)) return reply(400, { error: 'Baht, drams, dollars or dirhams, please' })
       if (!PEOPLE.includes(paid)) return reply(400, { error: 'Who paid? One of the group, please' })
       if (!split.length || !split.every((p) => PEOPLE.includes(p))) return reply(400, { error: 'Split it between people of the group' })
-      if (!/^20\d\d-[01]\d-[0-3]\d$/.test(date)) return reply(400, { error: 'A date, please' })
-      const row = { what, amount, cur, paid, split: PEOPLE.filter((p) => split.includes(p)), date }
+      if (pay && (people.length !== 1 || people[0] === paid)) return reply(400, { error: 'A payment goes from one person to another' })
+      const day = new Date(date + 'T00:00:00Z') // a real day: not 2027-02-30
+      if (!/^20\d\d-\d\d-\d\d$/.test(date) || isNaN(day) || day.toISOString().slice(0, 10) !== date) return reply(400, { error: 'A date, please' })
+      const cat = s.cat == null || s.cat === '' ? '' : String(s.cat)
+      if (cat && (pay || !SPEND_CATS.includes(cat))) return reply(400, { error: 'Unknown category' })
+      // the rate when it was added (baht for 1 unit): a later rate update does not move balances that were settled
+      const rate = cur === 'THB' || s.rate == null ? 0 : typeof s.rate === 'number' ? s.rate : NaN
+      if (rate !== 0 && !(rate >= RATE_BAND[cur][0] && rate <= RATE_BAND[cur][1])) return reply(400, { error: 'That rate looks wrong' })
+      if (s.newId != null && !NEW_ID.test(String(s.newId))) return reply(400, { error: 'A bad id' })
+      // an uneven split: weights (shares) or exact amounts in the expense's currency, for exactly the people in it
+      const shares = splitMap(s.shares, people, 100), amounts = splitMap(s.amounts, people, amount)
+      if (shares === false || amounts === false || (shares && amounts) || (pay && (shares || amounts))) return reply(400, { error: 'Shares or amounts above 0 for exactly the people in the split' })
+      if (amounts && Math.round(Object.values(amounts).reduce((a, v) => a + v, 0) * 100) !== Math.round(amount * 100)) return reply(400, { error: 'The amounts must add up to the total' })
+      const row = { what, amount, cur, paid, split: people, date, ...(cat ? { cat } : {}), ...(rate ? { rate } : {}), ...(shares && new Set(Object.values(shares)).size > 1 ? { shares } : {}), ...(amounts ? { amounts } : {}), ...(pay ? { kind: 'pay' } : {}) }
+      let id = ''
       if (s.id) {
-        const id = String(s.id).slice(0, 40)
+        id = String(s.id).slice(0, 40)
         const raw = await redis(db, ['HGET', SPEND, id])
-        if (!raw) return reply(404, { error: 'That expense is gone' })
+        if (!raw) return reply(404, { error: 'Someone deleted it' })
         let old = {}
         try { old = JSON.parse(raw) } catch { /* a broken row */ }
         await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now() })])
-        await changed(db, 'respend', spendLabel(row), who, body.device)
+        await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
       } else {
+        // newId: made on the phone, so the same expense sent twice (a retry, or a phone that saved it offline and lost
+        // the answer) is added once; sent again with other content (changed on that phone meanwhile), it is a change
+        id = s.newId ? String(s.newId) : Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
         if ((await redis(db, ['HLEN', SPEND])) >= MAX_SPEND) return reply(507, { error: 'Too many expenses saved' })
-        const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
-        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: who, t: Date.now() })])
-        await changed(db, 'spend', spendLabel(row), who, body.device)
+        // keep: Undo after a delete puts it back as it was, with who added (and changed) it and when
+        const k = body.keep && typeof body.keep === 'object' ? body.keep : {}, past = (t) => Number.isFinite(t) && t > 0 && t <= Date.now()
+        const by = cleanName(k.by).slice(0, 40), eb = cleanName(k.editedBy).slice(0, 40)
+        const meta = { n: by || who, t: by && past(k.t) ? k.t : Date.now(), ...(by && eb && past(k.editedT) ? { en: eb, et: k.editedT } : {}) }
+        if (await redis(db, ['HSETNX', SPEND, id, JSON.stringify({ ...row, ...meta })])) await changed(db, pay ? 'pay' : 'spend', spendLabel(row), who, body.device)
+        else {
+          let old = {}
+          try { old = JSON.parse((await redis(db, ['HGET', SPEND, id])) || '{}') } catch { /* a broken row */ }
+          if (JSON.stringify(spendBody(old)) !== JSON.stringify(row)) {
+            await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now() })])
+            await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
+          }
+        }
       }
-      return reply(200, await everything(db))
+      return reply(200, { ...(await everything(db)), id }) // id: the expense saved (Undo deletes it)
     } catch (e) { return reply(502, { error: e.message }) }
   }
   // shared notes: add one (with the author's name), or delete one by its id

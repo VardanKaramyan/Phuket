@@ -106,6 +106,16 @@ const ICON = {
   wallet: '<path d="M17.5 7.5V5.8a1.3 1.3 0 0 0-1.6-1.3L5 7.5"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M20.5 11.5h-4a2 2 0 0 0 0 4h4"/><path d="M16.6 13.5h.01"/>',
   note: '<path d="M5.5 3.5h9l4 4v12a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1z"/><path d="M14.5 3.5v4h4M8 12h8M8 15.5h5"/>',
   down: '<path d="M12 4.5V19M6 13l6 6 6-6"/>',
+  // Spending: the expense categories, Mark paid, Close and the folded Paid by row
+  food: '<path d="M6.5 3v6a2 2 0 0 0 4 0V3M8.5 3v18M17.5 21V3c-2 1.4-3 3.6-3 6.5V13h3"/>',
+  drinks: '<path d="M5 4h14l-7 8.5zM12 12.5V20M8 20h8M7.4 7h9.2"/>',
+  groceries: '<path d="M3 4h2.2l2.3 10.3a1.6 1.6 0 0 0 1.6 1.2h7.7a1.6 1.6 0 0 0 1.5-1.1L20.5 8H6.1"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/>',
+  transport: '<path d="M5 17H3.8a.8.8 0 0 1-.8-.8v-3.4l1.9-5A2 2 0 0 1 6.8 6.5h10.4a2 2 0 0 1 1.9 1.3l1.9 5v3.4a.8.8 0 0 1-.8.8H19M3 12.8h18M9 17h6"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>',
+  shopping: '<path d="M5 8h14l-1 12.5H6zM9 10.5V7a3 3 0 0 1 6 0v3.5"/>',
+  other: '<path d="M6 3.5h12v17l-2.4-1.6-2.4 1.6-2.4-1.6-2.4 1.6L6 20.5zM9 8.5h6M9 12h6M9 15.5h3.5"/>',
+  check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  close: '<path d="M6 6l12 12M18 6L6 18"/>',
+  chev: '<path d="M6 9l6 6 6-6"/>',
 }
 const icon = (n, extraAttr = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extraAttr}>${ICON[n] || ''}</svg>`
 
@@ -634,7 +644,7 @@ function homeView(mode) {
     ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
     ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
-    ...(buildName === 'standalone' ? [['spend', 'wallet', 'Spendings', 'Who paid what, and who owes whom']] : []),
+    ...(buildName === 'standalone' ? [['spend', 'wallet', 'Spending', 'Who paid what, and who owes whom']] : []),
     ['money', 'money', 'Money', bestBrand ? `Best rates: ${bestBrand.name}` : 'Exchange & ATMs'],
     ['info', 'info', 'Essentials', 'Entry, transport, boats, safety, phrases'],
     ...(apps.length ? [['apps', 'apps', 'Apps to install', `${plural(apps.filter((a) => a.priority === 'must').length, 'app')} to set up before you fly, ${apps.length} in all`, 'wide']] : []),
@@ -752,28 +762,47 @@ function notesView() {
 <div class="stack js-only" id="villa-notes-box"><div class="block-title"><h2>${icon('stay')}On the villas</h2><small id="villa-notes-n"></small></div><div id="villa-notes"><p class="note">Add a note on a villa from its card on the Stay tab.</p></div></div>
 </section>`
 }
-// Spendings (website only): what each of the group paid for the group, the balances and who pays whom, kept by the vote
-// server; src/app.js fills it. The people are TRIP.people (tools/trip.mjs)
+// Spending (website only): what the group pays, the balances and who pays whom, kept by the vote server; src/app.js
+// fills it. The people are TRIP.people (tools/trip.mjs); the categories and currencies are the ones api/votes.js takes
+const SPEND_CATS = [['food', 'Food'], ['drinks', 'Drinks'], ['groceries', 'Groceries'], ['transport', 'Transport'], ['activities', 'Activities'], ['stay', 'Stay'], ['shopping', 'Shopping'], ['other', 'Other']]
+const SPEND_ICON = { activities: 'ticket', pay: 'swap' } // drawn with another icon
+const SPEND_CURS = ['THB', 'AMD', 'AED', 'USD']
+// a person: a coloured round with the initial (two words: both initials), in the same colour everywhere (src/app.js too)
+const initials = (p) => { const w = p.split(' '); return w.length > 1 ? w[0][0] + w[1][0] : p[0] }
+const avatar = (p) => `<span class="av p${TRIP.people.indexOf(p)}" aria-hidden="true">${esc(initials(p))}</span>`
 function spendView() {
   if (buildName !== 'standalone') return ''
-  const opts = TRIP.people.map((p) => `<option value="${esc(p)}">${esc(p)}</option>`).join('')
-  const boxes = TRIP.people.map((p) => `<label class="split-box"><input type="checkbox" name="split" value="${esc(p)}" checked><span>${esc(p)}</span></label>`).join('')
-  return `<section class="view" id="spend" aria-labelledby="spend-title">
-<div class="view-head"><span class="eyebrow">Shared with the group</span><h1 class="view-title" id="spend-title">Spendings</h1><p class="lede">Add what you pay for the group. Everyone sees it, and the guide works out who owes whom. Amounts in baht, drams or dollars; drams and dollars count at the guide's rates.</p></div>
-<div class="spend-tiles js-only" id="spend-tiles" hidden></div>
-<p class="js-only"><button class="btn primary" type="button" id="spend-open" aria-expanded="false" aria-controls="spend-form">${icon('plus')}Add expense</button></p>
-<form class="myform js-only" id="spend-form" autocomplete="off" hidden data-noamd>
-<label for="sp-what">What<input id="sp-what" name="what" maxlength="80" required placeholder="e.g. Dinner at the seafood market"></label>
-<div class="row2"><label for="sp-amount">Amount<input id="sp-amount" name="amount" type="number" inputmode="decimal" min="0.01" step="0.01" required placeholder="2400"></label><label for="sp-cur">Currency<select id="sp-cur" name="cur"><option value="THB">Baht</option><option value="AMD">Drams</option><option value="USD">Dollars</option></select></label></div>
-<div class="row2"><label for="sp-paid">Paid by<select id="sp-paid" name="paid" required><option value="">Who paid?</option>${opts}</select></label><label for="sp-date">Day<input id="sp-date" name="date" type="date" required min="2026-10-01" max="2027-02-28"></label></div>
-<fieldset class="split-set"><legend>Split between</legend><div class="split-tools"><button class="chip" type="button" data-split="all">Everyone</button><button class="chip" type="button" data-split="none">Nobody</button></div><div class="split-boxes">${boxes}</div></fieldset>
-<p class="note" id="sp-each" aria-live="polite"></p>
-<div class="actions"><button class="btn primary" type="submit" id="sp-save">${icon('plus')}<span>Save expense</span></button><button class="btn" type="button" id="sp-cancel">Cancel</button></div>
-</form>
-<div class="stack js-only" id="spend-balances-box" hidden><h2 class="block-title">Balances</h2><div class="spend-balances" id="spend-balances"></div></div>
-<div class="stack js-only" id="spend-settle-box" hidden><h2 class="block-title">Settle up <small>the fewest payments</small></h2><ol class="spend-settle" id="spend-settle"></ol></div>
-<div class="stack js-only"><h2 class="block-title">Expenses <small id="spend-n"></small></h2><div class="spend-list" id="spend-list"><p class="note">No expenses yet. Tap Add expense when someone pays for the group.</p></div><p><button class="btn" type="button" id="spend-copy" hidden>Copy everything as text</button></p></div>
-</section>`
+  const people = (attr) => `<div class="people">${TRIP.people.map((p) => `<button class="person" type="button" ${attr}="${esc(p)}" aria-pressed="false">${avatar(p)}<span>${esc(p)}</span></button>`).join('')}</div>`
+  const seg = (id, attr, items, label) => `<div class="seg" id="${id}" role="group" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button type="button" ${attr}="${v}" aria-pressed="${i === 0}">${esc(t)}</button>`).join('')}</div>`
+  return `<section class="view spend" id="spend" aria-labelledby="spend-title">
+<div class="view-head spend-head"><h1 class="view-title" id="spend-title">Spending</h1><label class="cur-pick js-only" hidden><span class="sr-only">Show amounts in</span><select id="spend-cur">${SPEND_CURS.map((c) => `<option>${c}</option>`).join('')}</select></label></div>
+<p class="note" id="spend-off">Open the guide’s website to share expenses with the group.</p>
+<div class="me-card js-only" id="spend-me" hidden></div>
+<div class="js-only spend-body" id="spend-body" hidden>
+${seg('spend-seg', 'data-pane', [['list', 'Expenses'], ['balances', 'Balances'], ['stats', 'Stats']], 'Show')}
+<div class="spend-pane" data-pane-box="list"><div class="chips" role="toolbar" aria-label="Filter expenses"><button class="chip" type="button" data-spend-filter="all" aria-pressed="true">All <span class="n"></span></button><button class="chip" type="button" data-spend-filter="mine" aria-pressed="false">Mine <span class="n"></span></button><button class="chip" type="button" data-spend-filter="person" aria-pressed="false" hidden><span class="t"></span> <span class="n"></span></button></div><div class="spend-list" id="spend-list"></div><button class="link-btn" type="button" id="spend-copy" hidden>Share as text</button></div>
+<div class="spend-pane" data-pane-box="balances" hidden><div class="spend-empty" id="spend-bal-empty" hidden>${icon('other')}<p>No expenses yet</p></div><ul class="bal-chart" id="spend-bal"></ul><div class="block-title" id="spend-settle-h"><h2>Settle up</h2><button class="link-btn" type="button" id="spend-next" hidden></button></div><ul class="settle" id="spend-settle"></ul><div class="block-title" id="spend-paid-h" hidden><h2>Paid back</h2></div><div class="day-rows" id="spend-paid" hidden></div></div>
+<div class="spend-pane" data-pane-box="stats" hidden id="spend-stats"></div>
+</div>
+<button class="fab js-only" type="button" id="spend-add" hidden>${icon('plus')}<span>Add expense</span></button>
+<template id="spend-icons">${[...SPEND_CATS.map(([k]) => k), 'pay', 'check', 'next', 'plus'].map((k) => `<span data-i="${k}">${icon(SPEND_ICON[k] || k)}</span>`).join('')}</template>
+</section>
+<dialog class="sheet js-only" id="spend-sheet" aria-labelledby="sheet-title"><form id="spend-form" novalidate autocomplete="off" data-noamd>
+<div class="sheet-head"><h2 id="sheet-title">New expense</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('close')}</button></div>
+${seg('sp-kind', 'data-kind', [['spend', 'Expense'], ['pay', 'Payment']], 'Expense or payment')}
+<div class="amount-box"><input id="sp-amount" name="amount" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="0" aria-label="Amount">${seg('sp-curs', 'data-cur', SPEND_CURS.map((c) => [c, c]), 'Currency')}
+<p class="conv"><span id="sp-conv"></span><button class="link-btn" type="button" id="sp-rate-btn" hidden></button></p>
+<label class="rate-box" id="sp-rate-box" hidden><span id="sp-rate-l">THB for 1 AED</span><input id="sp-rate" inputmode="decimal" autocomplete="off"></label><p class="rate-warn" id="sp-rate-warn" hidden></p></div>
+<div class="what-row" data-only="spend"><button class="x-ic cat-tile" type="button" id="sp-cat" aria-expanded="false" aria-controls="sp-cats"></button><input id="sp-what" name="what" maxlength="80" enterkeyhint="done" placeholder="What was it?" aria-label="What was it"></div>
+<div class="cat-grid" id="sp-cats" role="group" aria-label="Category" hidden>${SPEND_CATS.map(([k, t]) => `<button type="button" class="cat-chip c-${k}" data-cat="${k}" aria-pressed="false">${icon(SPEND_ICON[k] || k)}<span>${t}</span></button>`).join('')}</div>
+<div class="quick" id="sp-quick" hidden></div>
+<div class="field"><button class="pick-row" type="button" id="sp-paid-row" aria-expanded="false" aria-controls="sp-paid-box"><span class="field-label" id="sp-paid-l">Paid by</span><span class="pick-val" id="sp-paid-val"></span>${icon('chev')}</button><div id="sp-paid-box" role="group" aria-labelledby="sp-paid-l" hidden>${people('data-paid')}</div></div>
+<div class="field" data-only="pay"><span class="field-label" id="sp-to-l">To</span><div role="group" aria-labelledby="sp-to-l">${people('data-to')}</div></div>
+<div class="field" data-only="spend"><div class="field-row"><span class="field-label" id="sp-split-l">Split</span>${seg('sp-mode', 'data-mode', [['equal', 'Equally'], ['shares', 'Shares'], ['amounts', 'Amounts']], 'How to split')}</div><div id="sp-split" role="group" aria-labelledby="sp-split-l"></div><p class="split-sum" id="sp-sum" aria-live="polite"></p></div>
+<div class="field"><span class="field-label">Day</span><div class="day-pick"><button type="button" class="chip" data-day="0" aria-pressed="false">Today</button><button type="button" class="chip" data-day="-1" aria-pressed="false">Yesterday</button><input type="date" id="sp-date" name="date" required min="2026-06-01" max="2027-02-28" aria-label="Day"></div></div>
+<p class="sheet-meta" id="sp-meta" hidden></p>
+<div class="sheet-foot"><p class="sheet-err" id="sp-err" role="alert"></p><button class="btn quiet-danger" type="button" id="sp-delete" hidden>Delete</button><button class="btn primary" type="submit" id="sp-save">Save</button></div>
+</form></dialog>`
 }
 // Stats: filled in by src/app.js from the vote server (website only)
 function statsView() {

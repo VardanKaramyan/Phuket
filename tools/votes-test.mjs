@@ -42,6 +42,7 @@ const upstash = http.createServer((req, res) => {
     const h = hashes.get(key) || new Map(); hashes.set(key, h)
     if (cmd === 'HGETALL') result = [...h].flat()
     else if (cmd === 'HSET') { h.set(a[0], a[1]); result = 1 }
+    else if (cmd === 'HSETNX') { result = h.has(a[0]) ? 0 : (h.set(a[0], a[1]), 1) }
     else if (cmd === 'HDEL') result = a.filter((f) => h.delete(f)).length
     else if (cmd === 'HLEN') result = h.size
     else if (cmd === 'HGET') result = h.has(a[0]) ? h.get(a[0]) : null
@@ -159,7 +160,7 @@ const api = await import(mod + '?store')
   check('anyone can take a save off the list', r.status === 200 && !r.json.saved?.['ev:shelter-phuket'] && r.json.recent?.[0]?.e === 'unsave', JSON.stringify(r.json.saved))
   r = await call(api, 'POST', { item: 'zz:nothing', name: 'Ani', save: true })
   check('refused: saving an unknown item', r.status === 400, String(r.status))
-  // Spendings: an expense with who paid and who shares it; anyone changes or deletes it; only the group's names
+  // Spending: an expense with who paid and who shares it; anyone changes or deletes it; only the group's names
   check('the server and tools/trip.mjs list the same 8 people', JSON.stringify(api.PEOPLE) === JSON.stringify(TRIP.people) && TRIP.people.length === 8, TRIP.people.join(', '))
   r = await call(api, 'POST', { name: 'Ani', device: 'devani000001', spend: { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', split: TRIP.people, date: '2027-01-14' } })
   const sp = r.json.spend?.[0]
@@ -173,6 +174,45 @@ const api = await import(mod + '?store')
   }
   r = await call(api, 'POST', { name: 'Gor', deleteSpend: sp.id })
   check('anyone can delete an expense, and it is news', r.status === 200 && !r.json.spend.length && r.json.recent?.[0]?.e === 'unspend', JSON.stringify(r.json.spend))
+  // AED, the rate of the day and a category; newId: the id made on the phone, so the same expense sent twice is added once
+  const villa = { what: 'Patong villa', amount: 22282.88, cur: 'AED', rate: 9.14, paid: 'Vardan K', split: TRIP.people, date: '2026-10-12', cat: 'stay', newId: 'abc12345xyz' }
+  r = await call(api, 'POST', { name: 'Ani', spend: villa })
+  const v1 = (r.json.spend || []).find((x) => x.id === 'abc12345xyz')
+  check('AED is taken, with its rate and category, under the id the phone made', r.status === 200 && r.json.id === 'abc12345xyz' && v1?.cur === 'AED' && v1.rate === 9.14 && v1.cat === 'stay' && v1.amount === 22282.88, JSON.stringify(v1))
+  const newsBefore = r.json.recent?.length
+  r = await call(api, 'POST', { name: 'Ani', spend: villa })
+  check('the same newId again adds nothing, and is no news', r.status === 200 && r.json.id === 'abc12345xyz' && r.json.spend.filter((x) => x.what === 'Patong villa').length === 1 && r.json.recent?.length === newsBefore && r.json.recent[0].e === 'spend', String(r.json.spend?.length))
+  // a phone changed it before its first send got an answer: the same newId with other content is a change
+  r = await call(api, 'POST', { name: 'Gor', spend: { ...villa, amount: 22282.89 } })
+  const v2 = (r.json.spend || []).filter((x) => x.what === 'Patong villa')
+  check('the same newId with other content is saved as a change', r.status === 200 && v2.length === 1 && v2[0].amount === 22282.89 && v2[0].by === 'Ani' && v2[0].editedBy === 'Gor' && r.json.recent?.[0]?.e === 'respend', JSON.stringify(v2))
+  // a payment: from one person to one other, news of its own
+  r = await call(api, 'POST', { name: 'Ani', spend: { kind: 'pay', what: '', amount: 300, cur: 'THB', paid: 'Artash', split: ['Hovo'], date: '2027-01-15' } })
+  check('a payment from one person to another is saved and is news', r.status === 200 && r.json.spend.some((x) => x.kind === 'pay' && x.paid === 'Artash' && x.split.join() === 'Hovo' && x.what === '') && r.json.recent?.[0]?.e === 'pay' && /Artash paid Hovo · 300 THB/.test(r.json.recent[0].x), JSON.stringify(r.json.recent?.[0]))
+  const payRow = r.json.spend.find((x) => x.kind === 'pay')
+  r = await call(api, 'POST', { name: 'Ani', spend: { kind: 'pay', what: '', amount: 350.5, cur: 'THB', paid: 'Artash', split: ['Hovo'], date: '2027-01-15', id: payRow.id } })
+  check('changing a payment is news about a payment, with its cents', r.status === 200 && r.json.recent?.[0]?.e === 'repay' && /Artash paid Hovo · 350.50 THB/.test(r.json.recent[0].x), JSON.stringify(r.json.recent?.[0]))
+  r = await call(api, 'POST', { name: 'Ani', deleteSpend: payRow.id })
+  check('deleting a payment is news about a payment', r.status === 200 && r.json.recent?.[0]?.e === 'unpay', JSON.stringify(r.json.recent?.[0]))
+  r = await call(api, 'POST', { name: 'Ani', deleteSpend: payRow.id })
+  check('deleting it again: someone deleted it', r.status === 404 && r.json.error === 'Someone deleted it', JSON.stringify(r.json))
+  // an uneven split: weights (shares) or exact amounts; equal shares are an equal split
+  const two = { amount: 1000, cur: 'THB', paid: 'Mes', split: ['Mes', 'Lara'], date: '2027-01-16' }
+  r = await call(api, 'POST', { name: 'Ani', spend: { ...two, what: 'Boat by shares', shares: { Mes: 2, Lara: 1 } } })
+  const bs = (r.json.spend || []).find((x) => x.what === 'Boat by shares')
+  r = await call(api, 'POST', { name: 'Ani', spend: { ...two, what: 'Spa by amounts', amounts: { Mes: 600, Lara: 400 } } })
+  const ba = (r.json.spend || []).find((x) => x.what === 'Spa by amounts')
+  r = await call(api, 'POST', { name: 'Ani', spend: { ...two, what: 'Even shares', shares: { Mes: 1, Lara: 1 } } })
+  const be = (r.json.spend || []).find((x) => x.what === 'Even shares')
+  check('shares and amounts are kept; equal shares are saved as an equal split', bs?.shares?.Mes === 2 && bs.shares.Lara === 1 && ba?.amounts?.Mes === 600 && ba.amounts.Lara === 400 && be && !be.shares, JSON.stringify({ bs: bs?.shares, ba: ba?.amounts, be: be?.shares }))
+  for (const [bad, why] of [[{ kind: 'pay', split: ['Mes'] }, 'a payment to yourself'], [{ kind: 'pay', split: ['Hovo', 'Lara'] }, 'a payment to two people'], [{ kind: 'pay', split: ['Hovo'], shares: { Hovo: 2 } }, 'a payment with shares'],
+    [{ kind: 'gift' }, 'an unknown kind'], [{ cat: 'casino' }, 'an unknown category'], [{ split: ['Mes'], shares: { Mes: 1, Zed: 2 } }, 'shares for someone not in the split'], [{ split: ['Mes', 'Lara'], shares: { Mes: 0, Lara: 1 } }, 'a share of 0'],
+    [{ split: ['Mes', 'Lara'], amounts: { Mes: 600, Lara: 300 } }, 'amounts that do not add up'], [{ split: ['Mes', 'Lara'], amounts: { Mes: 500, Lara: 500 }, shares: { Mes: 1, Lara: 2 } }, 'both shares and amounts'], [{ cur: 'AMD', rate: -1 }, 'a rate below 0'], [{ shares: { Mes: '2' }, split: ['Mes'] }, 'a share that is not a number'],
+    [{ amount: '250' }, 'an amount that is not a number'], [{ date: '2027-02-30' }, 'a day that does not exist'], [{ newId: 'Bad id!' }, 'a badly made newId'], [{ cur: 'USD', rate: 0.5 }, 'a rate far from the real one'],
+    [{ kind: 'pay', split: ['Hovo'], cat: 'food' }, 'a category on a payment'], [{ what: '' }, 'an expense with no title']]) {
+    r = await call(api, 'POST', { name: 'Ani', spend: { what: 'Taxi', amount: 1000, cur: 'THB', paid: 'Mes', split: ['Mes'], date: '2027-01-15', ...bad } })
+    check('refused: ' + why, r.status === 400, r.status + ' ' + JSON.stringify(r.json?.error))
+  }
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
   r = await call(api, 'GET')
   const v0 = r.json.ver
@@ -518,52 +558,267 @@ await C.p.evaluate(() => { localStorage.setItem('pg:favs', JSON.stringify(['pl:b
 await C.p.reload({ waitUntil: 'networkidle0' }); await sleep(1500)
 const moved = (await (await api.GET(new Request('http://x/api/votes'))).json()).saved?.['pl:big-buddha']
 check("a phone's old saves join the group's Saved list, under its name", moved?.by === 'Lilit', JSON.stringify(moved))
-// Spendings: A adds two expenses in the form (her name is known: no dialog); B sees them, the news, the balances and
-// who pays whom; A changes one; B deletes one
+// Spending: each phone says who it is (one of the group), adds expenses in the sheet, and sees the balances and who
+// pays whom; a payment from Settle up, with Undo; changing and deleting (with Undo); shares; the villas in one tap; offline
 const tabsWeb = await A.p.evaluate(() => [...document.querySelectorAll('.tabbar a')].map((a) => a.getAttribute('href')).join(' '))
 const tile = await A.p.evaluate(() => !!document.querySelector('#home .tile[href="#spend"]'))
 check('the website has a Spend tab, and the Trip page links to it', /#notes #spend$/.test(tabsWeb) && tile, tabsWeb)
+const asked = (p) => p.evaluate(async () => { location.hash = 'spend'; await new Promise((r) => setTimeout(r, 300)); return { ask: !!document.querySelector('#spend-me.ask'), add: !document.getElementById('spend-add').hidden } })
+const askA = await asked(A.p), askB = await asked(B.p)
+check('a voting name that is not one of the group (Ani, or Vardan with two Vardans): Who are you, and no Add yet', askA.ask && !askA.add && askB.ask && !askB.add, JSON.stringify({ askA, askB }))
+const pickMe = (p, who) => p.evaluate(async (who) => {
+  document.querySelector('#spend-me [data-me="' + who + '"]').click(); await new Promise((r) => setTimeout(r, 200))
+  return { me: document.querySelector('#spend-me .me-top b')?.textContent, add: !document.getElementById('spend-add').hidden, voter: JSON.parse(localStorage.getItem('pg:voterName')) }
+}, who)
+const meA = await pickMe(A.p, 'Lara'), meB = await pickMe(B.p, 'Hovo')
+check('picking a name shows your card and Add, and keeps the voting name', meA.me === 'Lara' && meA.add && meA.voter === 'Ani' && meB.me === 'Hovo' && meB.voter === 'Vardan', JSON.stringify({ meA, meB }))
+// the sheet: amount, currency, what, paid by, split (equally, or shares), day, Save
 const addSpend = (p, x) => p.evaluate(async (x) => {
-  location.hash = 'spend'; await new Promise((r) => setTimeout(r, 200))
-  document.getElementById('spend-open').click(); await new Promise((r) => setTimeout(r, 100))
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  location.hash = 'spend'; await wait(150)
+  document.querySelector('#spend-seg [data-pane="list"]').click()
+  document.getElementById('spend-add').click(); await wait(150)
   const f = document.getElementById('spend-form')
-  f.querySelector('#sp-what').value = x.what; f.querySelector('#sp-amount').value = String(x.amount); f.querySelector('#sp-cur').value = x.cur
-  f.querySelector('#sp-paid').value = x.paid; f.querySelector('#sp-date').value = x.date
-  if (x.split) f.querySelectorAll('input[name="split"]').forEach((c) => { c.checked = x.split.includes(c.value) })
-  f.querySelector('#sp-save').click()
+  set(f.querySelector('#sp-amount'), String(x.amount))
+  f.querySelector('[data-cur="' + x.cur + '"]').click()
+  set(f.querySelector('#sp-what'), x.what)
+  f.querySelector('[data-paid="' + x.paid + '"]').click()
+  if (x.split) for (const b of [...f.querySelectorAll('#sp-split [data-split-p]')].map((y) => y.dataset.splitP)) {
+    const el = f.querySelector('#sp-split [data-split-p="' + b + '"]')
+    if ((el.getAttribute('aria-pressed') === 'true') !== x.split.includes(b)) el.click()
+  }
+  if (x.shares) { f.querySelector('[data-mode="shares"]').click(); for (const [n, k] of Object.entries(x.shares)) for (let i = 1; i < k; i++) f.querySelector('[data-step="1"][data-p="' + n + '"]').click() }
+  set(f.querySelector('#sp-date'), x.date)
+  f.querySelector('#sp-save').click(); await wait(900)
+  return { open: document.getElementById('spend-sheet').open, err: f.querySelector('#sp-err').textContent }
 }, x)
-await addSpend(A.p, { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', date: '2027-01-14' }); await sleep(900)
-await addSpend(A.p, { what: 'Taxi to the pier', amount: 1000, cur: 'AMD', paid: 'Lara', date: '2027-01-15', split: ['Lara', 'Mes'] }); await sleep(900)
-const aList = await A.p.evaluate(() => ({ items: [...document.querySelectorAll('#spend-list .spend-item b')].map((b) => b.textContent), dialog: document.getElementById('vote-dialog').open, folded: document.getElementById('spend-form').hidden }))
-check('expenses from the form are saved for everyone, newest day first', aList.items.join('|') === 'Taxi to the pier|Dinner at the market' && !aList.dialog && aList.folded, JSON.stringify(aList))
-await B.p.evaluate(() => { location.hash = 'spend'; window.dispatchEvent(new Event('focus')) }); await sleep(1500)
-const bal = await B.p.evaluate(() => {
-  const thb = (t) => Number(((t || '').match(/([\d,]+) THB/) || [0, '0'])[1].replace(/,/g, ''))
-  const rows = Object.fromEntries([...document.querySelectorAll('#spend-balances .bal-row')].map((r) => [r.querySelector('b').textContent, { text: r.querySelector('.bal-amt').textContent, thb: thb(r.querySelector('.bal-amt').textContent) }]))
-  return { rows, moves: [...document.querySelectorAll('#spend-settle li')].map((li) => ({ text: li.textContent, thb: thb(li.textContent) })), perAmd: JSON.parse(document.getElementById('guide-data').textContent).rates.mid.AMD,
-    n: document.querySelectorAll('#spend-list .spend-item').length, news: document.querySelector('.toast')?.textContent || '' }
+const titles = (p) => p.evaluate(() => [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent))
+const shape = await A.p.evaluate(() => ({ outside: !document.querySelector('#spend #spend-sheet') && !!document.getElementById('spend-sheet'), cats: [...document.querySelectorAll('#spend-form [data-cat]')].map((b) => b.dataset.cat) }))
+check('the sheet sits outside the tab, and the page and the server take the same categories', shape.outside && JSON.stringify(shape.cats) === JSON.stringify(api.SPEND_CATS), JSON.stringify(shape))
+const r1 = await addSpend(A.p, { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', date: '2027-01-14' })
+const r2 = await addSpend(A.p, { what: 'Taxi to the pier', amount: 1000, cur: 'AMD', paid: 'Lara', date: '2027-01-15', split: ['Lara', 'Mes'] })
+const aList = { items: await titles(A.p), dialog: await A.p.evaluate(() => document.getElementById('vote-dialog').open) }
+check('expenses from the sheet are saved for everyone, newest day first, with no name dialog', aList.items.join('|') === 'Taxi to the pier|Dinner at the market' && !aList.dialog && !r1.open && !r2.open, JSON.stringify({ aList, r1, r2 }))
+// B shows amounts in baht, for exact numbers
+await B.p.evaluate(() => { const c = document.getElementById('spend-cur'); c.value = 'THB'; c.dispatchEvent(new Event('change')); window.dispatchEvent(new Event('focus')) }); await sleep(1500)
+const balOf = (p) => p.evaluate(() => {
+  const thb = (t) => Number(((t || '').match(/([\d,]+)\sTHB/) || [0, '0'])[1].replace(/,/g, '')) * (/[−-]/.test(t || '') ? -1 : 1)
+  const rows = Object.fromEntries([...document.querySelectorAll('#spend-bal .bal')].map((r) => { const t = r.querySelector('.bal-row b').textContent; return [r.querySelector('.bal-name').textContent, { text: t, thb: thb(t) }] }))
+  const moves = [...document.querySelectorAll('#spend-settle .move')].filter((li) => li.querySelector('[data-settle-from]')).map((li) => ({ from: li.querySelector('[data-settle-from]').dataset.settleFrom, to: li.querySelector('[data-settle-from]').dataset.settleTo, thb: thb(li.querySelector('b').textContent) }))
+  return { rows, moves, perAmd: JSON.parse(document.getElementById('guide-data').textContent).rates.mid.AMD, n: document.querySelectorAll('#spend-list .xrow').length,
+    news: document.querySelector('.toast')?.textContent || '', me: document.querySelector('#spend-me .me-bal')?.textContent || '', tile: document.querySelector('#home .tile[href="#spend"] span')?.textContent || '' }
 })
-check('another phone sees the expenses, with the news', bal.n === 2 && /Ani added an expense: Taxi to the pier/.test(bal.news), bal.news)
-const taxi = 1000 * bal.perAmd // in baht, at the guide's rate
-check('balances: Hovo gets back 2,100 THB, Artash owes 300, Mes owes 300 and half the taxi', /gets back/.test(bal.rows.Hovo.text) && bal.rows.Hovo.thb === 2100 && /owes/.test(bal.rows.Artash.text) && bal.rows.Artash.thb === 300 &&
-  Math.abs(bal.rows.Mes.thb - (300 + taxi / 2)) <= 1 && Math.abs(bal.rows.Lara.thb - (300 + taxi / 2 - taxi)) <= 1, JSON.stringify(Object.fromEntries(Object.entries(bal.rows).map(([k, v]) => [k, v.text]))).slice(0, 320))
+const bal = await balOf(B.p)
+check('another phone sees the expenses, with the news', bal.n === 2 && /Lara added an expense: Taxi to the pier/.test(bal.news), bal.news)
+const taxi = 1000 * bal.perAmd // in baht, at the guide's rate (saved with the expense)
+check('balances: Hovo +2,100 THB, Artash −300, Mes −300 and half the taxi, Lara −300 and half back', bal.rows.Hovo.thb === 2100 && bal.rows.Artash.thb === -300 &&
+  Math.abs(bal.rows.Mes.thb + 300 + taxi / 2) <= 1 && Math.abs(bal.rows.Lara.thb + 300 - taxi / 2) <= 1, JSON.stringify(Object.fromEntries(Object.entries(bal.rows).map(([k, v]) => [k, v.text]))).slice(0, 320))
 const paidBack = bal.moves.reduce((a, m) => a + m.thb, 0)
-check('settle up: 7 payments, all to Hovo, adding up to what he gets back', bal.moves.length === 7 && bal.moves.every((m) => /pays Hovo/.test(m.text)) && Math.abs(paidBack - 2100) <= 7, bal.moves.map((m) => m.text).join(' | ').slice(0, 300))
-const edited = await A.p.evaluate(async () => {
-  const card = [...document.querySelectorAll('#spend-list .spend-item')].find((c) => /Dinner/.test(c.textContent))
-  card.querySelector('[data-spend-edit]').click(); await new Promise((r) => setTimeout(r, 100))
-  const f = document.getElementById('spend-form'), filled = f.querySelector('#sp-amount').value === '2400' && f.querySelector('#sp-paid').value === 'Hovo'
-  f.querySelector('#sp-amount').value = '3200'; f.querySelector('#sp-save').click(); await new Promise((r) => setTimeout(r, 900))
-  const now = [...document.querySelectorAll('#spend-list .spend-item')].find((c) => /Dinner/.test(c.textContent))
-  return { filled, text: now.textContent, n: document.querySelectorAll('#spend-list .spend-item').length }
+check('settle up: 7 payments, all to Hovo, adding up to what he gets back', bal.moves.length === 7 && bal.moves.every((m) => m.to === 'Hovo') && Math.abs(paidBack - 2100) <= 7, JSON.stringify(bal.moves).slice(0, 300))
+check('your card and the Trip tile say what you get back', /You get back/.test(bal.me) && /2,100\sTHB/.test(bal.me) && /You get back 2,100\sTHB/.test(bal.tile), JSON.stringify({ me: bal.me, tile: bal.tile }))
+// Paid on a suggested payment: saved at once (Artash is even), and Undo takes it back
+const paid = await B.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  document.querySelector('#spend-seg [data-pane="balances"]').click()
+  document.querySelector('#spend-settle [data-settle-from="Artash"]').click(); await wait(900)
+  const artash = [...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === 'Artash')
+  const out = { toast: document.querySelector('.toast')?.textContent || '', artash: artash.querySelector('.bal-row b').textContent, moves: document.querySelectorAll('#spend-settle [data-settle-from]').length, rows: [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent) }
+  document.querySelector('.toast .toast-btn').click(); await wait(900)
+  out.undone = { moves: document.querySelectorAll('#spend-settle [data-settle-from]').length, rows: [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent) }
+  return out
 })
-check('Edit fills the form with the expense, and saves the change for everyone', edited.filled && /3,200 THB/.test(edited.text) && /changed by Ani/.test(edited.text) && edited.n === 2, JSON.stringify(edited).slice(0, 200))
+check('Mark paid saves the payment at once: Artash is even, one payment less, and it is in the list', /Artash paid you 300\sTHB/.test(paid.toast) && /even/.test(paid.artash) && paid.moves === 6 && paid.rows.includes('Artash paid you'), JSON.stringify(paid).slice(0, 300))
+check('Undo takes the payment back', paid.undone.moves === 7 && !paid.undone.rows.includes('Artash paid you'), JSON.stringify(paid.undone))
+// a tap on an expense opens it in the sheet; the change is saved for everyone, with who changed it
+const edited = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Dinner/.test(c.textContent)).click(); await wait(200)
+  const f = document.getElementById('spend-form')
+  const filled = { amount: f.querySelector('#sp-amount').value, paid: f.querySelector('[data-paid][aria-pressed="true"]')?.dataset.paid, title: document.getElementById('sheet-title').textContent, del: !document.getElementById('sp-delete').hidden }
+  const a = f.querySelector('#sp-amount'); a.value = '3200'; a.dispatchEvent(new Event('input', { bubbles: true }))
+  f.querySelector('#sp-save').click(); await wait(900)
+  const row = [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Dinner/.test(c.textContent))
+  return { filled, text: row.textContent, n: document.querySelectorAll('#spend-list .xrow').length, by: JSON.parse(localStorage.getItem('pg:spend')).find((x) => /Dinner/.test(x.what)).editedBy }
+})
+check('a tap on an expense opens it filled in; the change is saved for everyone', edited.filled.amount === '2,400' && edited.filled.paid === 'Hovo' && edited.filled.title === 'Change expense' && edited.filled.del && /3,200\sTHB/.test(edited.text) && edited.n === 2 && edited.by === 'Lara', JSON.stringify(edited).slice(0, 300))
+// Delete: gone for everyone at once; Undo brings it back
 await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
-await B.p.evaluate(() => document.querySelector('#spend-list .spend-item [data-spend-del]').click()); await sleep(200)
-const askDel = await B.p.evaluate(() => ({ open: document.getElementById('vote-dialog').open, title: document.getElementById('vote-title').textContent, what: document.getElementById('vote-what').textContent }))
-await B.p.evaluate(() => document.querySelector('#vote-dialog [data-vote-save]').click()); await sleep(900)
-const left = await B.p.evaluate(() => [...document.querySelectorAll('#spend-list .spend-item b')].map((b) => b.textContent))
-check('Delete asks first, then removes the expense for everyone', askDel.open && /Delete this expense/.test(askDel.title) && /Taxi to the pier/.test(askDel.what) && left.join('|') === 'Dinner at the market', JSON.stringify({ askDel, left }))
+const del = await B.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const names = () => [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent)
+  document.querySelector('#spend-seg [data-pane="list"]').click()
+  ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Taxi/.test(c.textContent)).click(); await wait(200)
+  document.getElementById('sp-delete').click(); await wait(900)
+  const out = { after: names(), toast: document.querySelector('.toast')?.textContent || '', sheet: document.getElementById('spend-sheet').open }
+  document.querySelector('.toast .toast-btn').click(); await wait(900)
+  out.back = names()
+  return out
+})
+check('Delete removes it for everyone at once, and Undo brings it back', del.after.join('|') === 'Dinner at the market' && /Deleted: Taxi to the pier/.test(del.toast) && !del.sheet && del.back.join('|') === 'Taxi to the pier|Dinner at the market', JSON.stringify(del))
+// shares: Lara 2, Mes 1; the category comes from the words
+await addSpend(A.p, { what: 'Boat tour', amount: 3000, cur: 'THB', paid: 'Lara', date: '2027-01-16', split: ['Lara', 'Mes'], shares: { Lara: 2 } })
+const sh = await A.p.evaluate(() => {
+  const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.what === 'Boat tour')
+  const row = [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Boat tour/.test(c.textContent))
+  return x && { shares: x.shares, split: x.split, cat: x.cat, icon: row?.querySelector('.x-ic')?.className, row: row?.textContent }
+})
+check('a split by shares is saved with the shares; the category comes from the words; the row says what you lent', sh?.shares?.Lara === 2 && sh.shares.Mes === 1 && sh.split.join() === 'Mes,Lara' && !sh.cat && /c-activities/.test(sh.icon) && /you lent 1,000/.test(sh.row), JSON.stringify(sh))
+// the villas we paid: one tap fills the sheet (AED, Stay, everyone), saved with the rate of the day
+const quick = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  document.getElementById('spend-add').click(); await wait(150)
+  const f = document.getElementById('spend-form'), chips = [...f.querySelectorAll('#sp-quick [data-quick]')].map((b) => b.textContent)
+  f.querySelector('#sp-quick [data-quick]').click(); await wait(100)
+  const filled = { what: f.querySelector('#sp-what').value, amount: f.querySelector('#sp-amount').value, cur: f.querySelector('[data-cur][aria-pressed="true"]').dataset.cur, cat: f.querySelector('[data-cat][aria-pressed="true"]').dataset.cat }
+  f.querySelector('[data-paid="Vardan K"]').click()
+  f.querySelector('#sp-save').click(); await wait(900)
+  const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.what === 'Patong villa')
+  return { chips, filled, saved: x && { amount: x.amount, cur: x.cur, rate: x.rate, cat: x.cat, split: x.split.length }, aed: JSON.parse(document.getElementById('guide-data').textContent).rates.mid.AED }
+})
+check('the villas we paid are one tap away, filled in AED and saved with the rate', quick.chips.length === 2 && /Patong villa · 22,282.88\sAED/.test(quick.chips[0]) && quick.filled.amount === '22,282.88' && quick.filled.cur === 'AED' && quick.filled.cat === 'stay' &&
+  quick.saved?.amount === 22282.88 && quick.saved.cur === 'AED' && quick.saved.rate === quick.aed && quick.saved.split === 8, JSON.stringify(quick))
+// a link to a part of the tab, Stats, and Share as text
+const parts = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  location.hash = 'spend/balances'; await wait(300)
+  const balances = !document.querySelector('[data-pane-box="balances"]').hidden && document.querySelector('#spend-seg [data-pane="balances"]').getAttribute('aria-pressed') === 'true'
+  document.querySelector('#spend-seg [data-pane="stats"]').click(); await wait(100)
+  const stats = { tiles: document.querySelectorAll('#spend-stats .stat-tiles div').length, cats: [...document.querySelectorAll('#spend-stats .hbars .hb-name')].map((x) => x.textContent), hash: location.hash }
+  document.querySelector('#spend-seg [data-pane="list"]').click()
+  window.__shared = null; document.getElementById('spend-copy').click(); await wait(300)
+  return { balances, stats, shared: window.__shared && window.__shared.text }
+})
+check('#spend/balances opens Balances; Stats has the totals and categories', parts.balances && parts.stats.tiles === 3 && parts.stats.cats.includes('Stay') && parts.stats.cats.includes('Food') && parts.stats.hash === '#spend/stats', JSON.stringify(parts.stats))
+check('Share as text sends the expenses, balances and payments', /Dinner at the market/.test(parts.shared || '') && /Settle up:/.test(parts.shared || '') && /Lara/.test(parts.shared || ''), String(parts.shared).slice(0, 200))
+// Back with the sheet open closes it, and the guide still works
+const backSheet = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  location.hash = 'spend'; await wait(200)
+  document.getElementById('spend-add').click(); await wait(200)
+  const opened = document.getElementById('spend-sheet').open
+  history.back(); await wait(500)
+  const out = { opened, open: document.getElementById('spend-sheet').open, hash: location.hash }
+  location.hash = 'events'; await wait(300)
+  out.events = !document.getElementById('events').hidden
+  location.hash = 'spend'; await wait(300)
+  return out
+})
+check('Back with the sheet open closes it, and the guide still works', backSheet.opened && !backSheet.open && backSheet.hash === '#spend' && backSheet.events, JSON.stringify(backSheet))
+// Enter in What was it closes the keyboard and does not save
+const nBefore = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  document.getElementById('spend-add').click(); await wait(150)
+  const f = document.getElementById('spend-form'), set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  set(f.querySelector('#sp-amount'), '500'); set(f.querySelector('#sp-what'), 'Coffee')
+  return JSON.parse(localStorage.getItem('pg:spend')).length
+})
+await A.p.focus('#sp-what'); await A.p.keyboard.press('Enter'); await sleep(700)
+const enter = await A.p.evaluate(async (n) => {
+  const out = { open: document.getElementById('spend-sheet').open, same: JSON.parse(localStorage.getItem('pg:spend')).length === n }
+  document.querySelector('#spend-sheet [data-sheet-close]').click(); await new Promise((r) => setTimeout(r, 200))
+  return out
+}, nBefore)
+check('Enter in What was it does not save', enter.open && enter.same, JSON.stringify(enter))
+// Amounts: Lara 600, Mes 0 (typed), Hovo the rest; Mes is then not in it
+const amounts = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  document.getElementById('spend-add').click(); await wait(150)
+  const f = document.getElementById('spend-form')
+  set(f.querySelector('#sp-amount'), '1000'); set(f.querySelector('#sp-what'), 'Spa for three')
+  f.querySelector('[data-mode="amounts"]').click()
+  for (const b of [...f.querySelectorAll('#sp-split [data-split-p]')].map((y) => y.dataset.splitP)) {
+    const el = f.querySelector('#sp-split [data-split-p="' + b + '"]')
+    if ((el.getAttribute('aria-pressed') === 'true') !== ['Lara', 'Mes', 'Hovo'].includes(b)) el.click()
+  }
+  set(f.querySelector('[data-amt="Lara"]'), '600'); set(f.querySelector('[data-amt="Mes"]'), '0')
+  const sum = f.querySelector('#sp-sum').textContent, hint = f.querySelector('[data-amt="Hovo"]').placeholder
+  f.querySelector('#sp-save').click(); await wait(900)
+  const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.what === 'Spa for three')
+  return { sum, hint, amounts: x && x.amounts, split: x && x.split }
+})
+check('Amounts: a typed 0 is kept, the others share the rest, and nobody with 0 is in it', /Adds up/.test(amounts.sum) && amounts.hint === '400' && amounts.amounts?.Hovo === 400 && amounts.amounts?.Lara === 600 && amounts.split?.join() === 'Hovo,Lara', JSON.stringify(amounts))
+// the same expense twice: the first Save asks, the second adds it
+const dup = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  document.getElementById('spend-add').click(); await wait(150)
+  const f = document.getElementById('spend-form')
+  set(f.querySelector('#sp-amount'), '3200'); f.querySelector('[data-cur="THB"]').click(); set(f.querySelector('#sp-what'), 'Dinner again')
+  f.querySelector('[data-paid="Hovo"]').click(); set(f.querySelector('#sp-date'), '2027-01-14')
+  f.querySelector('#sp-save').click(); await wait(300)
+  const asked = { open: document.getElementById('spend-sheet').open, msg: f.querySelector('#sp-err').textContent }
+  f.querySelector('#sp-save').click(); await wait(900)
+  return { asked, open: document.getElementById('spend-sheet').open, n: JSON.parse(localStorage.getItem('pg:spend')).filter((x) => x.what === 'Dinner again').length }
+})
+check('the same expense twice: Save asks once, then adds it', dup.asked.open && /Already in the list: Dinner at the market/.test(dup.asked.msg) && !dup.open && dup.n === 1, JSON.stringify(dup))
+// Mark paid in drams: saved as the drams on the button, to the satang (Lara is then even)
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+const amdPaid = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const btn = document.querySelector('#spend-me [data-settle-from="Lara"]')
+  if (!btn) return { none: true, card: document.getElementById('spend-me').textContent }
+  const shown = btn.parentElement.querySelector('.move-open b').textContent, to = btn.dataset.settleTo, cents = Number(btn.dataset.cents)
+  btn.click(); await wait(1000)
+  const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.kind === 'pay' && y.paid === 'Lara' && y.split[0] === to)
+  return { shown, cents, saved: x && { amount: x.amount, cur: x.cur, rate: x.rate }, paidBack: document.querySelectorAll('#spend-paid .xrow').length }
+})
+check('Mark paid in drams saves the drams shown, to the satang', !amdPaid.none && amdPaid.saved?.cur === 'AMD' && amdPaid.shown === amdPaid.saved.amount.toLocaleString('en-US') + '\u00a0AMD' && Math.round(amdPaid.saved.amount * amdPaid.saved.rate * 100) === amdPaid.cents && amdPaid.paidBack >= 1, JSON.stringify(amdPaid))
+// a tap on a payment to settle opens it as a payment; half of it is saved, and about half is still owed
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+const part = await B.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const thb = (t) => Number(((t || '').match(/([\d,]+)\sTHB/) || [0, '0'])[1].replace(/,/g, '')) * (/[−-]/.test(t || '') ? -1 : 1)
+  const balOf = (p) => thb([...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === p).querySelector('.bal-row b').textContent)
+  document.querySelector('#spend-seg [data-pane="balances"]').click()
+  const open = document.querySelector('#spend-settle .move-open')
+  if (!open) return { none: true }
+  const from = open.dataset.payFrom, to = open.dataset.payTo, owed = thb(open.querySelector('b').textContent), before = balOf(from)
+  open.click(); await wait(200)
+  const f = document.getElementById('spend-form')
+  const filled = { title: document.getElementById('sheet-title').textContent, from: f.querySelector('#sp-paid-val').textContent, to: f.querySelector('[data-to][aria-pressed="true"]')?.dataset.to, amount: Number(f.querySelector('#sp-amount').value.replace(/,/g, '')) }
+  const half = Math.round(owed / 2), a = f.querySelector('#sp-amount'); a.value = String(half); a.dispatchEvent(new Event('input', { bubbles: true }))
+  f.querySelector('#sp-save').click(); await wait(900)
+  return { from, to, owed, half, filled, before, after: balOf(from) }
+})
+check('a tap on a payment to settle opens it filled in; a part payment counts for that much', !part.none && part.filled.title === 'New payment' && part.filled.from.includes(part.from === 'Hovo' ? 'You' : part.from) && part.filled.to === part.to && Math.round(part.filled.amount) === part.owed && Math.abs(part.after - part.before - part.half) <= 1, JSON.stringify(part))
+// filters: Mine, and With someone from a balance row
+const filters = await B.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const row = [...document.querySelectorAll('#spend-bal .bal-row')].find((r) => r.dataset.p === 'Mes'); row.click(); await wait(100)
+  row.parentElement.querySelector('[data-filter-person]').click(); await wait(200)
+  const chip = document.querySelector('[data-spend-filter="person"]')
+  const want = JSON.parse(localStorage.getItem('pg:spend')).filter((x) => x.paid === 'Mes' || x.split.includes('Mes')).length
+  const out = { chip: chip.hidden ? '' : chip.textContent.trim(), list: !document.querySelector('[data-pane-box="list"]').hidden, rows: document.querySelectorAll('#spend-list .xrow').length === want, want }
+  chip.click(); await wait(100)
+  out.after = document.querySelector('[data-spend-filter="all"]').getAttribute('aria-pressed')
+  return out
+})
+check('See expenses on a balance row filters the list to that person, and the chip takes it back', /^With Mes/.test(filters.chip) && filters.list && filters.rows && filters.after === 'true', JSON.stringify(filters))
+// no connection: the expense stays on this phone, marked Not sent yet, and goes once the connection is back
+apiDown = true
+const off = await addSpend(A.p, { what: 'Water and ice', amount: 120, cur: 'THB', paid: 'Lara', date: '2027-01-16' })
+const queued = await A.p.evaluate(() => ({ unsent: [...document.querySelectorAll('#spend-list .xrow')].filter((c) => c.querySelector('.unsent')).map((c) => c.querySelector('.x-main b').textContent), box: JSON.parse(localStorage.getItem('pg:spendOutbox') || '[]').length, toast: document.querySelector('.toast')?.textContent || '' }))
+check('with no connection, the expense stays on the phone, marked Not sent yet', !off.open && queued.unsent.join() === 'Water and ice' && queued.box === 1 && /Saved on this phone/.test(queued.toast), JSON.stringify({ off, queued }))
+apiDown = false
+await A.p.evaluate(() => window.dispatchEvent(new Event('online'))); await sleep(1500)
+const sentNow = await A.p.evaluate(() => ({ unsent: document.querySelectorAll('#spend-list .unsent').length, box: JSON.parse(localStorage.getItem('pg:spendOutbox') || '[]').length }))
+const onServer = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.filter((x) => x.what === 'Water and ice').length
+check('back online, it is sent once', sentNow.unsent === 0 && sentNow.box === 0 && onServer === 1, JSON.stringify({ sentNow, onServer }))
+apiDown = true
+await addSpend(A.p, { what: 'Wrong one', amount: 90, cur: 'THB', paid: 'Lara', date: '2027-01-16' })
+const dropped = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Wrong one/.test(c.textContent)).click(); await wait(200)
+  const meta = document.getElementById('sp-meta').textContent
+  document.getElementById('sp-delete').click(); await wait(300)
+  return { meta, box: JSON.parse(localStorage.getItem('pg:spendOutbox') || '[]').length, rows: document.querySelectorAll('#spend-list .unsent').length }
+})
+apiDown = false
+await A.p.evaluate(() => window.dispatchEvent(new Event('online'))); await sleep(1200)
+const neverSent = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.filter((x) => x.what === 'Wrong one').length
+check('an unsent expense deleted on the phone never reaches the group', dropped.meta === 'Not sent yet' && dropped.box === 0 && dropped.rows === 0 && neverSent === 0, JSON.stringify({ dropped, neverSent }))
 for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

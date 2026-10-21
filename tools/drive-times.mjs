@@ -10,12 +10,13 @@ import { TRIP } from './trip.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const rd = (f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', f), 'utf8'))
-const NO_ROAD = new Set(['phi-phi', 'koh-yao', 'koh-lanta', 'koh-lipe', 'koh-phangan', 'koh-samui', 'koh-tao', 'krabi', 'surat-thani', 'trang', 'other'])
+const NO_ROAD = new Set(['phi-phi', 'koh-yao', 'koh-lanta', 'koh-lipe', 'koh-phangan', 'koh-samui', 'koh-tao', 'krabi', 'surat-thani', 'trang', 'bangkok', 'ayutthaya', 'other'])
 const ok = (it) => Number.isFinite(+it.lat) && Number.isFinite(+it.lng) && !NO_ROAD.has(it.area) && it.coordConfidence !== 'low'
 const stays = rd('stays.json').items
 const points = [] // [key, lat, lng]
 for (const p of rd('places.json').items) if (ok(p)) points.push(['pl:' + p.id, +p.lat, +p.lng])
 for (const e of rd('events.json').items) if (ok(e)) points.push(['ev:' + e.id, +e.lat, +e.lng])
+if (fs.existsSync(path.join(ROOT, 'data/clubs.json'))) for (const c of rd('clubs.json').items) if (ok(c)) points.push(['cl:' + c.id, +c.lat, +c.lng])
 for (const a of rd('areas.json').items) if (ok(a)) points.push(['ar:' + a.id, +a.lat, +a.lng])
 for (const h of rd('hotels.json').items) if (ok(h)) points.push(['ht:' + h.id, +h.lat, +h.lng])
 for (const b of rd('exchanges.json').brands || []) (b.branches || []).forEach((x, i) => { if (Number.isFinite(+x.lat)) points.push([`mx:${b.id}#${i}`, +x.lat, +x.lng]) })

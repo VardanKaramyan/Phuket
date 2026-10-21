@@ -18,7 +18,7 @@ const AREA_FIX = {
 const slug = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const strip = (s) => (typeof s === 'string' ? s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : s)
 const clean = (o) => (Array.isArray(o) ? o.map(clean) : o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, clean(v)])) : strip(o))
-const normArea = (a) => { const s = slug(a); return AREA_IDS.includes(s) || OFF.includes(s) ? s : AREA_FIX[s] || s || 'other' }
+export const normArea = (a) => { const s = slug(a); return AREA_IDS.includes(s) || OFF.includes(s) ? s : AREA_FIX[s] || s || 'other' }
 const uniq = (a) => Array.from(new Set(a))
 const filled = (v) => v != null && v !== '' && !(Array.isArray(v) && !v.length)
 const links = (...lists) => { const seen = new Set(); return lists.flat().filter((l) => l && l.url && !seen.has(l.url) && seen.add(l.url)) }

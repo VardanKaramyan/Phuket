@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 import * as turf from '@turf/turf'
 import { mergeLateJan } from './merge-late-jan.mjs'
 import { mergeIslandsEvents } from './merge-islands-events.mjs'
+import { mergeBangkok } from './merge-bangkok.mjs'
 import { inTrip } from './trip.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -357,6 +358,8 @@ mergeLateJan(ROOT, log)
 
 // ---- the 19 Oct 2026 research: ports and ferries, islands, island events, boat tours, Phuket events, places ----
 mergeIslandsEvents(ROOT, log)
+// ---- the 21 Oct 2026 research: Bangkok's nights and places, the clubs and festivals ----
+mergeBangkok(ROOT, log)
 // the group no longer goes to Koh Phangan on 10-13 Jan (villas booked in Phuket, 19 Oct 2026)
 {
   const d = rd('places.json')

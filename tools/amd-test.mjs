@@ -66,11 +66,12 @@ const h = fs.readFileSync(file, 'utf8')
 // the page text (the artifact build has no <body> tag: then it starts at the top; styles and scripts are cut out below)
 const body = h.slice(Math.max(0, h.indexOf('<body')), h.indexOf('<script type="application/json"'))
 // the villa price boxes (data-noamd) write their own dram amounts: check those apart (the whole box, up to the
-// end of its breakdown), then leave them out; "price-box paid" is what we paid for a booked villa (AED, then drams and baht)
+// end of its breakdown), then leave them out; "price-box paid" is what we paid for a booked villa (AED, then drams and
+// dollars: one dram amount for the total and one for each row)
 const BOX = /<div class="price-box(?: paid)?" data-noamd>[\s\S]*?<\/dl><\/div>/g
 const boxes = body.match(BOX) || []
-const boxMissing = boxes.filter((x) => (x.match(/THB/g) || []).length !== (x.match(/AMD/g) || []).length)
-if (!boxes.length || boxMissing.length) { failed++; console.log(`  FAIL villa price boxes: ${boxMissing.length} of ${boxes.length} without a dram amount for each baht amount`) }
+const boxMissing = boxes.filter((x) => (x.match(/AMD/g) || []).length !== (/^<div class="price-box paid"/.test(x) ? (x.match(/<dd>/g) || []).length + 1 : (x.match(/THB/g) || []).length))
+if (!boxes.length || boxMissing.length) { failed++; console.log(`  FAIL villa price boxes: ${boxMissing.length} of ${boxes.length} without a dram amount for each baht amount (a paid box: for the total and each row)`) }
 const text = body.replace(BOX, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
 const missed = []
 // (a number right after a / is part of a web address, like pattayamail.com/news/2000-baht-helmet-fine)

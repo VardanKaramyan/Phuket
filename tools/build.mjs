@@ -395,29 +395,34 @@ function priceOf(h) {
 const thb = (n) => n.toLocaleString('en-US') + ' THB'
 // ---------- the price we paid for a booked villa (TRIP.bases → paid) ----------
 // the exact amount in the currency it was paid in (two decimals: 22,282.88 AED), shared out per person and per day; the
-// drams and baht next to it are estimates at the mid-market rate (data/extra.json → rates), rounded like the drams
+// drams next to it are estimates at the mid-market rate (data/extra.json → rates), and the dollars come from the
+// currency's fixed rate to the dollar when it has one (`perUsd`: AED is pegged at 3.6725)
 function paidOf(total, currency, nights, guests, what) {
-  const rate = midRates().find((m) => m.currency === currency)
+  const rates = midRates(), rate = rates.find((m) => m.currency === currency), usd = rates.find((m) => m.currency === 'USD')
   if (!(total > 0) || !(nights > 0) || !(guests > 0)) throw new Error(`tools/trip.mjs: ${what}: paid needs a total above 0, nights and guests`)
   if (!rate) throw new Error(`tools/trip.mjs: ${what} was paid in ${currency}, but there is no ${currency} rate: add it to data/extra.json → rates`)
   // in cents (fils), so the shares round once
   const c = Math.round(total * 100), share = (n) => Math.round(c / n) / 100
-  return { total: c / 100, currency, nights, guests, thbPerUnit: rate.thbPerUnit, rateDate: rate.date, perPersonStay: share(guests), perPerson: share(nights * guests), perNight: share(nights) }
+  // units of the paid currency per dollar: the peg, or else across the baht rates (0: no dollar rate)
+  const pegged = rate.perUsd > 0, perUsd = currency === 'USD' ? 1 : pegged ? rate.perUsd : usd ? usd.thbPerUnit / rate.thbPerUnit : 0
+  return { total: c / 100, currency, nights, guests, thbPerUnit: rate.thbPerUnit, rateDate: rate.date, perUsd, pegged, perPersonStay: share(guests), perPerson: share(nights * guests), perNight: share(nights) }
 }
 const cash = (n, cur) => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + cur
-// the estimates for an amount paid: drams (amd.amount takes whole baht), then baht to 3 significant figures (the rate
-// moves more than that)
+// the other amounts for an amount paid: drams (amd.amount takes whole baht), then whole dollars written like usd() below
+// ("≈$758"; the user, 21 Oct 2026: "for the aed ones - remove thb and replace it with usd"); baht to 3 significant
+// figures instead when we paid in dollars or there is no dollar rate (perUsd 0)
 const paidAmd = (p, n) => amd.amount(Math.round(n * p.thbPerUnit))
-const paidAlt = (p, n) => [amdRate ? paidAmd(p, n) : '', '≈' + Number((n * p.thbPerUnit).toPrecision(3)).toLocaleString('en-US') + ' THB'].filter(Boolean)
+const paidUsd = (p) => p.currency !== 'USD' && p.perUsd > 0
+const paidAlt = (p, n) => [amdRate ? paidAmd(p, n) : '', paidUsd(p) ? '≈$' + Math.round(n / p.perUsd).toLocaleString('en-US') : '≈' + Number((n * p.thbPerUnit).toPrecision(3)).toLocaleString('en-US') + ' THB'].filter(Boolean)
 // one line for the popups, the share previews and the KML: "22,282.88 AED for 6 nights, 2,785.36 AED per person (≈275,000 AMD)"
 const paidLine = (p) => `${cash(p.total, p.currency)} for ${plural(p.nights, 'night')}, ${cash(p.perPersonStay, p.currency)} per person${amdRate ? ' (' + paidAmd(p, p.perPersonStay) + ')' : ''}`
 // the paid price box: the total in the currency we paid, big; then per person for the stay, per person per day and the
-// villa per day, each with its drams and baht on lines of their own (data-noamd: those are written out here, not added
-// by tools/amd.mjs)
+// villa per day, each with its drams and dollars on lines of their own (data-noamd: those are written out here, not
+// added by tools/amd.mjs)
 function paidBox(p, label, rows = ['stay', 'pp', 'night']) {
   const alt = (n) => paidAlt(p, n).map((x) => `<span>${esc(x)}</span>`).join('')
   const ROW = { stay: [`Per person, ${p.nights} days`, p.perPersonStay], pp: ['Per person per day', p.perPerson], night: ['Whole villa per day', p.perNight] }
-  // lines break between the parts, never inside "8 guests", "14–18 Jan" or "≈204,000 THB"
+  // lines break between the parts, never inside "8 guests", "14–18 Jan" or "≈2,200,000 AMD"
   return `<div class="price-box paid" data-noamd><div class="price-head"><div><span class="price-label">${esc(label).replace(/(\d) /g, '$1&nbsp;')}</span><b class="price-total">${cash(p.total, p.currency)}</b><span class="price-alt">${paidAlt(p, p.total).map((x) => esc(x).replace(/ /g, '&nbsp;')).join(' · ')}</span></div></div>` +
     `<dl class="price-split">${rows.map((k) => `<dt>${esc(ROW[k][0])}</dt><dd><b>${cash(ROW[k][1], p.currency)}</b>${alt(ROW[k][1])}</dd>`).join('')}</dl></div>`
 }
@@ -885,7 +890,10 @@ ${b.paid ? paidBox(b.paid, `Paid · ${plural(b.nights, 'night')} · ${b.paid.gue
   // both villas together: the whole stay and each person's share of it
   const total = PAID_ALL ? `<div class="base-total" id="our-villas-total">${paidBox(PAID_ALL, `Both villas · ${plural(PAID_ALL.nights, 'night')} · ${PAID_ALL.guests} guests`, ['stay', 'pp'])}</div>` : ''
   const p = BASES.find((b) => b.paid)?.paid
-  const rateNote = p ? `We paid in ${p.currency}. The drams and baht are estimates (1 ${p.currency} ≈ ${p.thbPerUnit} THB, ${p.rateDate}). ` : ''
+  const sig = (x) => Number(x.toPrecision(3))
+  const rateNote = !p ? '' : `We paid in ${p.currency}. ` +
+    (!paidUsd(p) ? `The baht are estimates: 1 ${p.currency} ≈ ${p.thbPerUnit} THB. ` : p.pegged ? `The dollars use the fixed rate, 1 USD = ${p.perUsd} ${p.currency}. ` : `The dollars are estimates: 1 USD ≈ ${sig(p.perUsd)} ${p.currency}. `) +
+    (amdRate ? `The drams are estimates: 1 ${p.currency} ≈ ${sig(p.thbPerUnit * amdRate.perThb).toLocaleString('en-US')} AMD (${p.rateDate}). ` : '')
   return `<div class="stack" id="our-villas"><h2 class="block-title">Our villas <small>booked</small></h2>${BASES.map(card).join('')}${total}<p class="note">${esc(rateNote)}The pins are Airbnb's approximate ones until the hosts send the exact addresses, so directions may end a few hundred metres off. Directions anywhere in the guide can start from either villa.</p></div>`
 }
 function stayView(mode) {

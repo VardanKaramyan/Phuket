@@ -104,6 +104,9 @@ const xr = rd('data/extra.json', {}).rates || []
 for (const r of xr) {
   if (!(typeof r.thbPerUnit === 'number' && r.thbPerUnit > 0)) warn('extra.rates:' + r.currency, `thbPerUnit must be a number above 0 (baht for 1 ${r.currency})`)
   else if (r.currency === 'AED' && usdThb && Math.abs((r.thbPerUnit * 3.6725) / usdThb - 1) > 0.1) warn('extra.rates:AED', `${r.thbPerUnit} THB per AED is far from ${(usdThb / 3.6725).toFixed(2)} (the USD rate over the 3.6725 peg): upside down or a typo?`)
+  // perUsd: units for 1 dollar, for a currency pegged to it (the paid price boxes show dollars from it)
+  if (r.perUsd !== undefined && !(typeof r.perUsd === 'number' && r.perUsd > 0)) warn('extra.rates:' + r.currency, `perUsd must be a number above 0 (${r.currency} for 1 USD)`)
+  else if (r.currency === 'AED' && r.perUsd !== undefined && r.perUsd !== 3.6725) warn('extra.rates:AED', `perUsd is ${r.perUsd}, but the dirham is pegged at 3.6725 per dollar`)
 }
 for (const b of TRIP.bases || []) {
   if (!b.paid) continue

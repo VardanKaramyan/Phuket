@@ -271,7 +271,7 @@ html:not(.js) .js-only { display: none !important; }
 .price-box .btn { flex: none; }
 .price-box.none { background: var(--alert-soft); }
 .price-box.none .price-total { font-size: 20px; color: var(--alert); white-space: normal; }
-/* the price we paid for a booked villa: amber like the Booked badge; the amount we paid big, the drams and baht under it */
+/* the price we paid for a booked villa: amber like the Booked badge; the amount we paid big, the drams and dollars under it */
 .price-box.paid { background: var(--sun-soft); }
 .price-box.paid .price-label { color: var(--warn-ink); }
 .price-box.paid .price-split { border-top-color: color-mix(in srgb, var(--sun) 40%, transparent); }

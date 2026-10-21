@@ -61,7 +61,8 @@ check('villa nights leave out Koh Phangan parties; full-moon week keeps them', p
 check('cards give the drive from both villas; boat tours do not', /min from the Patong villa · \d+ min from the Rawai villa \(no traffic\)/.test(page.byCar) && !page.tourCar, page.byCar)
 
 // what we paid (TRIP.bases → paid, in AED): per person for the stay, per person per day and the villa per day, on Our
-// villas and on the two villa cards; both villas together; the drams and baht next to it from the AED rate
+// villas and on the two villa cards; both villas together; the drams next to it from the AED rate, and the dollars
+// from the AED's peg (the user asked for dollars instead of baht, 21 Oct 2026)
 // (worked out in fils, hundredths of a dirham, each share rounded once: 22282.53 / 6 is 3,713.76, not the float 3,713.75)
 const cash = (fils, c) => (fils / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + c
 const nightsOf = (x) => Math.round((Date.parse(x.to) - Date.parse(x.from)) / 86400000)
@@ -69,7 +70,8 @@ const filsOf = (x) => Math.round(x.paid.total * 100), guestsOf = (x) => x.guests
 const shares = (f, cur, n, guests) => { const s = (d) => cash(Math.round(f / d), cur); return { n, guests, total: cash(f, cur), stay: s(guests), pp: s(n * guests), night: s(n) } }
 const paidWant = TRIP.bases.map((x) => ({ key: x.key, id: x.id, range: `${Number(x.from.slice(8))}–${Number(x.to.slice(8))} Jan`, ...shares(filsOf(x), x.paid.currency, nightsOf(x), guestsOf(x)) }))
 const both = shares(TRIP.bases.reduce((s, x) => s + filsOf(x), 0), TRIP.bases[0].paid.currency, TRIP.bases.reduce((s, x) => s + nightsOf(x), 0), guestsOf(TRIP.bases[0]))
-const rate = (read('data/extra.json').rates || []).find((r) => r.currency === TRIP.bases[0].paid.currency)?.thbPerUnit
+const paidRate = (read('data/extra.json').rates || []).find((r) => r.currency === TRIP.bases[0].paid.currency) || {}
+const rate = paidRate.thbPerUnit, perUsd = paidRate.perUsd
 const amdPerThb = read('data/extra.json').amdRate.perThb
 const paid = await p.evaluate(() => {
   const t = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '')
@@ -88,13 +90,16 @@ for (const w of paidWant) {
 }
 check('Our villas: both villas together, and each person\'s share', !!paid.both && paid.both.total === both.total && paid.both.label === `Both villas · ${both.n} nights · ${both.guests} guests` &&
   paid.both.rows.length === 2 && paid.both.rows[0].startsWith(`Per person, ${both.n} days = ${both.stay}`) && paid.both.rows[1].startsWith(`Per person per day = ${both.pp}`), JSON.stringify(paid.both))
-// every amount we paid has its drams and baht, near the AED rate (rounded to 2-3 figures, so within 1.5%)
+// every amount we paid (Our villas, both villas, and the two booked cards in the villa list) has its drams, near the AED
+// rate (rounded to 2-3 figures, so within 1.5%), and its whole dollars at the peg, exactly ("≈$758", like the other
+// villa cards); no baht
 const near = (a, b) => Math.abs(a - b) / b < 0.015
 const num = (s) => Number(s.replace(/,/g, ''))
-const lines = [...paid.bases.map((c) => c.box), paid.both].filter(Boolean).flatMap((x) => [x.total + ' ' + x.alt, ...x.rows.map((r) => r.split(' = ')[1])])
-const badLine = lines.filter((l) => { const m = l.replace(/\s/g, '').match(/^([\d,.]+)AED(?:·)?≈([\d,]+)AMD(?:·)?≈([\d,]+)THB$/); return !m || !rate || !near(num(m[3]), num(m[1]) * rate) || !near(num(m[2]), num(m[1]) * rate * amdPerThb) })
-check('the drams and baht next to what we paid come from the AED rate', lines.length === 11 && !badLine.length, badLine.slice(0, 3).join(' | ') || `${lines.length} amounts at ${rate} THB per AED`)
-check('the note says we paid in AED and the rest are estimates', /We paid in AED/.test(paid.note) && new RegExp(`1 AED ≈ ${rate} THB`).test(paid.note), paid.note.slice(0, 90))
+const lines = [...paid.bases.map((c) => c.box), paid.both, ...paid.cards.map((c) => c.box)].filter(Boolean).flatMap((x) => [x.total + ' ' + x.alt, ...x.rows.map((r) => r.split(' = ')[1])])
+const badLine = lines.filter((l) => { const m = l.replace(/\s/g, '').match(/^([\d,.]+)AED(?:·)?≈([\d,]+)AMD(?:·)?≈\$([\d,]+)$/); return !m || !rate || !(perUsd > 0) || num(m[3]) !== Math.round(num(m[1]) / perUsd) || !near(num(m[2]), num(m[1]) * rate * amdPerThb) })
+check('the drams and dollars next to what we paid come from the AED rate and its peg', lines.length === 19 && !badLine.length, badLine.slice(0, 3).join(' | ') || `${lines.length} amounts at ${rate} THB and ${perUsd} per USD: ${lines[0]}`)
+const amdPerUnit = Number((rate * amdPerThb).toPrecision(3)).toLocaleString('en-US')
+check('the note says we paid in AED, the dollars use the fixed rate and the drams are estimates', /We paid in AED/.test(paid.note) && paid.note.includes(`1 USD = ${perUsd} AED`) && paid.note.includes(`1 AED ≈ ${amdPerUnit} AMD`) && !/THB|baht/.test(paid.note), paid.note.slice(0, 160))
 check('the two booked villa cards show what we paid for our nights, not the 8-18 Jan price', paid.cards.length === 2 && paid.cards.every((c) => {
   const w = paidWant.find((x) => 'ht-' + x.id === c.id)
   return !!w && !!c.box && /\bpaid\b/.test(c.box.cls) && c.box.total === w.total && c.box.label === `Paid · ${w.range} · ${w.n} nights · ${w.guests} guests` && c.box.rows.length === 3 && c.box.rows[0].startsWith(`Per person, ${w.n} days = ${w.stay}`) && !c.january

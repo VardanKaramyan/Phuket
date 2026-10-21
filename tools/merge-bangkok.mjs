@@ -14,7 +14,8 @@ const slug = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[^a
 const strip = (s) => (typeof s === 'string' ? s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : s)
 const clean = (o) => (Array.isArray(o) ? o.map(clean) : o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, clean(v)])) : strip(o))
 const uniq = (a) => Array.from(new Set(a))
-const links = (...lists) => { const seen = new Set(); return lists.flat().filter((l) => l && l.url && !seen.has(l.url) && seen.add(l.url)) }
+// web links only (the research comes from web pages: no javascript: or data: links)
+const links = (...lists) => { const seen = new Set(); return lists.flat().filter((l) => l && /^https?:\/\//i.test(l.url) && !seen.has(l.url) && seen.add(l.url)) }
 const score = (v) => Math.max(0, Math.min(5, Math.round(Number(v) || 0)))
 const list = (a) => (a || []).filter(Boolean)
 // Bangkok, and Ayutthaya north of it (a day trip)

@@ -871,7 +871,7 @@ function bangkokBasics() {
   if (!ess.length) return ''
   return `<article class="card basics" id="bkk-basics" data-name="Bangkok basics" data-kind="Place" data-tier="bangkok" data-dur="" data-text="${textOf('bangkok basics', ess.map((x) => x.title + ' ' + x.text))}">
 <div class="body"><h2 class="card-title">Bangkok basics</h2>
-${ess.map((x) => `<h3 class="basics-h">${esc(x.title)}</h3><p class="desc">${esc(x.text)}</p>${(x.links || []).length ? `<p class="card-links">${x.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(' · ')}</p>` : ''}`).join('\n')}
+${ess.map((x) => `<h3 class="basics-h">${esc(x.title)}</h3><p class="desc">${esc(x.text)}</p>${linksHtml(x.links)}`).join('\n')}
 </div></article>`
 }
 // the Places list: Phuket's places, the clubs and festivals (most underground first), then Bangkok with its basics first

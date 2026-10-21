@@ -18,16 +18,23 @@ const uniq = (a) => Array.from(new Set(a))
 const links = (...lists) => { const seen = new Set(); return lists.flat().filter((l) => l && /^https?:\/\//i.test(l.url) && !seen.has(l.url) && seen.add(l.url)) }
 const score = (v) => Math.max(0, Math.min(5, Math.round(Number(v) || 0)))
 const list = (a) => (a || []).filter(Boolean)
+// "HORN (queer techno club, Silom Soi 4)" → "HORN": the card's second line already says what and where it is
+const short = (s) => String(s || '').replace(/\s*\([^)]*\)\s*$/, '').trim() || s
+// the same score as their cards in Music (the research scored them 4: Courage's nights are mostly bass and garage,
+// Unclave plays minimal house)
+const CLUB_SCORE = { 'club-courage-phuket-town': 5, 'club-unclave-phangan': 5 }
 // Bangkok, and Ayutthaya north of it (a day trip)
 const bkkArea = (x) => (Number(x.lat) > 14.2 ? 'ayutthaya' : 'bangkok')
 const TIERS = ['must-see', 'hidden-gem', 'day-trip']
 const CATS = { temple: 'temple', market: 'market', shopping: 'market', food: 'food', nightlife: 'nightlife', viewpoint: 'viewpoint', culture: 'culture', activity: 'activity', nature: 'nature', wellness: 'wellness' }
 const DUR = ['1-2h', '2-3h', 'half-day', 'full-day', 'multi-day', 'evening']
+// read and left out
+const DROP = { 'muuji-festival-2027': 'Japanese pop and indie in Khao Yai, 170 km from Bangkok: not this group\'s music' }
 
 function event(raw, area) {
   const it = clean(raw)
   const e = {
-    ...it, id: slug(it.id || it.name), kind: ['dated', 'recurring', 'venue'].includes(it.kind) ? it.kind : 'venue', area,
+    ...it, id: slug(it.id || it.name), name: short(it.name), kind: ['dated', 'recurring', 'venue'].includes(it.kind) ? it.kind : 'venue', area,
     dates: uniq(list(it.dates).filter((x) => /^\d{4}-\d{2}-\d{2}$/.test(x))).sort(), undergroundScore: score(it.undergroundScore), pick: !!it.pick,
     genres: list(it.genres), links: links(list(it.links)), sources: uniq(list(it.sources)), tips: list(it.tips),
   }
@@ -48,6 +55,7 @@ export function mergeBangkok(ROOT, log) {
   const have = new Set(ev.items.map((e) => e.id))
   const addEvent = (raw, area, from) => {
     const e = event(raw, area)
+    if (DROP[e.id]) { log.push(`bangkok: left out ${e.id} (${DROP[e.id]})`); return }
     if (!e.id || have.has(e.id)) { log.push(`bangkok: ${from} event ${e.id} is already in the guide, left as it is`); return }
     ev.items.push(e); have.add(e.id); log.push(`bangkok: new event ${e.id} [${from}]`)
   }
@@ -87,7 +95,7 @@ export function mergeBangkok(ROOT, log) {
       if (!id.startsWith('club-')) id = 'club-' + id
       const area = normArea(c.area || c.island)
       return {
-        ...c, id, kind: ['club', 'party-series', 'festival'].includes(c.kind) ? c.kind : 'club', area, undergroundScore: score(c.undergroundScore),
+        ...c, id, name: short(c.name), kind: ['club', 'party-series', 'festival'].includes(c.kind) ? c.kind : 'club', area, undergroundScore: CLUB_SCORE[id] ?? score(c.undergroundScore),
         events: uniq([...list(c.events), ...list(newEventIds)].map(slug).concat(area === 'bangkok' ? named(c) : [])).filter((x) => have.has(x)),
         links: links(list(c.links)), sources: uniq(list(c.sources)), tips: list(c.tips),
       }

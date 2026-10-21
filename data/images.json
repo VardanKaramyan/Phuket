@@ -2878,5 +2878,225 @@
   "credit": "Phuket@photographer.net",
   "license": "CC BY 2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Sunset_on_Promthep_Cape,_Phuket_island,_Thailand.jpg"
+ },
+ "events:horn-bangkok": {
+  "file": "assets/img/events-horn-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 2000,
+  "credit": "HORNBKK",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:sacristy-bangkok-raves": {
+  "file": "assets/img/events-sacristy-bangkok-raves.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1987,
+  "credit": "SACRISTY",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:elsewhere-bangkok": {
+  "file": "assets/img/events-elsewhere-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1424,
+  "srcH": 1778,
+  "credit": "Elsewhere",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:dual-bangkok": {
+  "file": "assets/img/events-dual-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "DUAL",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:subwerk-rave-times-bangkok": {
+  "file": "assets/img/events-subwerk-rave-times-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 540,
+  "srcH": 675,
+  "credit": "Rave Times",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:bar-temp-bangkok": {
+  "file": "assets/img/events-bar-temp-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1145,
+  "srcH": 1432,
+  "credit": "Parity BKK",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:avve-bangkok": {
+  "file": "assets/img/events-avve-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "COUNTERCULTURAL",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:outworld-klangkuenstler-fvture-2027-01-23": {
+  "file": "assets/img/events-outworld-klangkuenstler-fvture-2027-01-23.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1206,
+  "srcH": 1709,
+  "credit": "FVTURE / OUTWORLD",
+  "license": "© organiser (event poster)",
+  "source": "ticketmelon.com"
+ },
+ "events:inakoma-fridays-amnesia-bangkok": {
+  "file": "assets/img/events-inakoma-fridays-amnesia-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "INAKOMA",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:culture-cafe-bangkok": {
+  "file": "assets/img/events-culture-cafe-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1080,
+  "credit": "TheThirdTechno / Culture Cafe",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:twelve-x-twelve-bangkok": {
+  "file": "assets/img/events-twelve-x-twelve-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1144,
+  "srcH": 1430,
+  "credit": "12 x 12",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:dirty-rabbit-bangkok": {
+  "file": "assets/img/events-dirty-rabbit-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1920,
+  "credit": "Dirty Rabbit Hidden Bar",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:mustache-bangkok": {
+  "file": "assets/img/events-mustache-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1254,
+  "srcH": 1254,
+  "credit": "Mustache Bangkok",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:clutch-warehouse-bangkok": {
+  "file": "assets/img/events-clutch-warehouse-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "Clutch",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:ambient-bar-bangkok": {
+  "file": "assets/img/events-ambient-bar-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "Hide / Ambient Bar",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:siwilai-radical-club-bangkok": {
+  "file": "assets/img/events-siwilai-radical-club-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1015,
+  "srcH": 1446,
+  "credit": "SR-C",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:entertainment-project-bangkok": {
+  "file": "assets/img/events-entertainment-project-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "Elektronik",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:sing-sing-theater-bangkok": {
+  "file": "assets/img/events-sing-sing-theater-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1350,
+  "credit": "Sing Sing Theater",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:aether-bkk-rooftop": {
+  "file": "assets/img/events-aether-bkk-rooftop.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 864,
+  "srcH": 1080,
+  "credit": "More Rice Records / ÆTHER BKK",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:daft-funk-live-bangkok-2027": {
+  "file": "assets/img/events-daft-funk-live-bangkok-2027.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1498,
+  "srcH": 2000,
+  "credit": "Midnight Sun / Mustache Bangkok",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:centara-rooftop-pool-party-2027-01-09": {
+  "file": "assets/img/events-centara-rooftop-pool-party-2027-01-09.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1124,
+  "srcH": 1399,
+  "credit": "Bangkok Rooftops",
+  "license": "© organiser (RA event flyer)",
+  "source": "ra.co"
+ },
+ "events:bangkok-island-boat": {
+  "file": "assets/img/events-bangkok-island-boat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 400,
+  "srcH": 566,
+  "credit": "Bangkok Island",
+  "license": "© organiser (event poster)",
+  "source": "eventpop.me"
  }
 }

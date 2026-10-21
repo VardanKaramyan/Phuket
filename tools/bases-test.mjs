@@ -25,7 +25,7 @@ check('both booked villas are in the villa list', TRIP.bases.every((b) => stays.
 
 // driving times for every place you drive to
 const drive = read('data/drive-times.json').items
-const ISLANDS = new Set(['phi-phi', 'koh-yao', 'koh-lanta', 'koh-lipe', 'koh-phangan', 'koh-samui', 'koh-tao', 'krabi', 'surat-thani', 'trang', 'other'])
+const ISLANDS = new Set(['phi-phi', 'koh-yao', 'koh-lanta', 'koh-lipe', 'koh-phangan', 'koh-samui', 'koh-tao', 'krabi', 'surat-thani', 'trang', 'bangkok', 'ayutthaya', 'other'])
 const want = read('data/places.json').items.filter((p) => !ISLANDS.has(p.area) && p.coordConfidence !== 'low' && Number.isFinite(+p.lat))
 const noTime = want.filter((p) => !TRIP.bases.every((b) => drive['pl:' + p.id]?.[b.key]?.min >= 0)).map((p) => p.id)
 check('driving times from both villas for every place on Phuket and the mainland', !noTime.length && want.length > 50, `${want.length - noTime.length} of ${want.length}` + (noTime.length ? ', missing ' + noTime.slice(0, 4).join(' ') + ' (run node tools/drive-times.mjs)' : ''))

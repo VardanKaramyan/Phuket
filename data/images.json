@@ -3098,5 +3098,185 @@
   "credit": "Bangkok Island",
   "license": "© organiser (event poster)",
   "source": "eventpop.me"
+ },
+ "places:bkk-grand-palace": {
+  "file": "assets/img/places-bkk-grand-palace.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 852,
+  "credit": "Preecha.MJ",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:0005574_-_Wat_Phra_Kaew_006.jpg"
+ },
+ "places:bkk-wat-pho": {
+  "file": "assets/img/places-bkk-wat-pho.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1920,
+  "credit": "Mastertongapollo",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg"
+ },
+ "places:bkk-wat-arun": {
+  "file": "assets/img/places-bkk-wat-arun.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 854,
+  "credit": "Mastertongapollo",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg"
+ },
+ "places:bkk-golden-mount": {
+  "file": "assets/img/places-bkk-golden-mount.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 855,
+  "credit": "BerryJ",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A8-2.jpg"
+ },
+ "places:bkk-yaowarat-night-food": {
+  "file": "assets/img/places-bkk-yaowarat-night-food.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 961,
+  "credit": "กสิณธร ราชโอรส",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:(2022)_%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%96%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%8A_%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%A7%E0%B8%87%E0%B8%A8%E0%B9%8C_%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_(4).jpg"
+ },
+ "places:bkk-rajadamnern-stadium": {
+  "file": "assets/img/places-bkk-rajadamnern-stadium.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 854,
+  "credit": "Mynameisfootlong",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RajInfront.jpg"
+ },
+ "places:bkk-lumpinee-stadium": {
+  "file": "assets/img/places-bkk-lumpinee-stadium.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 771,
+  "credit": "Mr.Sayompoo Setabhrahmana",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bangkok_Lumpinee_Boxing_Stadium_1.jpg"
+ },
+ "places:bkk-thipsamai": {
+  "file": "assets/img/places-bkk-thipsamai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1280,
+  "credit": "Takeaway",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg"
+ },
+ "places:bkk-talat-noi": {
+  "file": "assets/img/places-bkk-talat-noi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Chainwit.",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Rong_Kuak_Shrine_Talat_Noi_%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%B7%E0%B8%AD%E0%B8%81_%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2_2021_June.jpg"
+ },
+ "places:bkk-chatuchak-weekend-market": {
+  "file": "assets/img/places-bkk-chatuchak-weekend-market.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 854,
+  "credit": "Azreey",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_Jatujak_Market_02.JPG"
+ },
+ "places:bkk-sky-bar-lebua": {
+  "file": "assets/img/places-bkk-sky-bar-lebua.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 798,
+  "srcH": 1200,
+  "credit": "Nik Cyclist from Bangkok, Thailand",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lebua_at_state_tower_(8468453666).jpg"
+ },
+ "places:bkk-thonglor-ekkamai": {
+  "file": "assets/img/places-bkk-thonglor-ekkamai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Sry85",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Soi_Thong_Lor_26_Sep_2012.JPG"
+ },
+ "places:bkk-rca-royal-city-avenue": {
+  "file": "assets/img/places-bkk-rca-royal-city-avenue.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Globe-trotter",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RCA_Plaza_in_Huai_Khwang_District,_Bangkok,_Thailand.jpg"
+ },
+ "places:bkk-ari": {
+  "file": "assets/img/places-bkk-ari.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Dharmadana",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B9%8C.jpg"
+ },
+ "places:bkk-khao-san-road": {
+  "file": "assets/img/places-bkk-khao-san-road.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Marcin Konsek",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2016_Bangkok,_Dystrykt_Phra_Nakhon,_Ulica_Khaosan_(08).jpg"
+ },
+ "places:bkk-ayutthaya-day-trip": {
+  "file": "assets/img/places-bkk-ayutthaya-day-trip.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Average trinmo",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Wat_Chaiwatthanaram_by_drone.jpg"
+ },
+ "places:bkk-damnoen-saduak-maeklong": {
+  "file": "assets/img/places-bkk-damnoen-saduak-maeklong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Roberto Faccenda from Canale CN, Italy",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Understanding_the_%22floating_market%22_(15801439261).jpg"
+ },
+ "places:bkk-pak-khlong-talat": {
+  "file": "assets/img/places-bkk-pak-khlong-talat.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "eric molina from San Francisco, United States",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Flowermarket.jpg"
  }
 }

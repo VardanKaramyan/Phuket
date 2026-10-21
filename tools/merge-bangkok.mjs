@@ -29,7 +29,11 @@ const TIERS = ['must-see', 'hidden-gem', 'day-trip']
 const CATS = { temple: 'temple', market: 'market', shopping: 'market', food: 'food', nightlife: 'nightlife', viewpoint: 'viewpoint', culture: 'culture', activity: 'activity', nature: 'nature', wellness: 'wellness' }
 const DUR = ['1-2h', '2-3h', 'half-day', 'full-day', 'multi-day', 'evening']
 // read and left out
-const DROP = { 'muuji-festival-2027': 'Japanese pop and indie in Khao Yai, 170 km from Bangkok: not this group\'s music' }
+const DROP = {
+  'muuji-festival-2027': 'Japanese pop and indie in Khao Yai, 170 km from Bangkok: not this group\'s music',
+  // clubs that have their own card in Clubs & festivals (and Mustache in Music): not a second time as a place
+  'bkk-mustache-decho-road': 'in Music', 'bkk-subwerk': 'a club card', 'bkk-elsewhere-silom': 'a club card', 'bkk-bar-temp': 'a club card',
+}
 
 function event(raw, area) {
   const it = clean(raw)
@@ -71,6 +75,7 @@ export function mergeBangkok(ROOT, log) {
       const it = clean(raw)
       let id = slug(it.id || it.name)
       if (!id.startsWith('bkk-')) id = 'bkk-' + id
+      if (DROP[id]) { log.push(`bangkok: left out ${id} (${DROP[id]})`); continue }
       if (ids.has(id)) { log.push(`bangkok: place ${id} is already in the guide, left as it is`); continue }
       const food = it.tier === 'food' || it.category === 'food'
       pl.items.push({

@@ -1,5 +1,5 @@
 {
- "generatedOn": "2026-10-20",
+ "generatedOn": "2026-10-21",
  "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap roads; no traffic",
  "bases": {
   "patong": {
@@ -1272,6 +1272,106 @@
    "rawai": {
     "min": 18,
     "km": 14.3
+   }
+  },
+  "cl:club-shelter-phuket": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "cl:club-illuzion-phuket": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "cl:club-cafe-del-mar-phuket": {
+   "patong": {
+    "min": 14,
+    "km": 11.8
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.6
+   }
+  },
+  "cl:club-baba-beach-club-natai": {
+   "patong": {
+    "min": 62,
+    "km": 55.7
+   },
+   "rawai": {
+    "min": 69,
+    "km": 63.4
+   }
+  },
+  "cl:club-courage-phuket-town": {
+   "patong": {
+    "min": 18,
+    "km": 14.3
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.3
+   }
+  },
+  "cl:club-sub-phuket": {
+   "patong": {
+    "min": 18,
+    "km": 14.3
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.3
+   }
+  },
+  "cl:club-enthusiast-place": {
+   "patong": {
+    "min": 23,
+    "km": 20.6
+   },
+   "rawai": {
+    "min": 34,
+    "km": 30.1
+   }
+  },
+  "cl:club-summerset-lounge": {
+   "patong": {
+    "min": 24,
+    "km": 21
+   },
+   "rawai": {
+    "min": 34,
+    "km": 30.4
+   }
+  },
+  "cl:club-sedo-izikura": {
+   "patong": {
+    "min": 17,
+    "km": 14.8
+   },
+   "rawai": {
+    "min": 18,
+    "km": 14.3
+   }
+  },
+  "cl:club-dnb-allstars-thailand": {
+   "patong": {
+    "min": 25,
+    "km": 19.7
+   },
+   "rawai": {
+    "min": 14,
+    "km": 8.9
    }
   },
   "ar:patong": {

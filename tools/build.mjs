@@ -871,15 +871,17 @@ function bangkokBasics() {
   if (!ess.length) return ''
   return `<article class="card basics" id="bkk-basics" data-name="Bangkok basics" data-kind="Place" data-tier="bangkok" data-dur="" data-text="${textOf('bangkok basics', ess.map((x) => x.title + ' ' + x.text))}">
 <div class="body"><h2 class="card-title">Bangkok basics</h2>
-${ess.map((x) => `<h3 class="basics-h">${esc(x.title)}</h3><p class="desc">${esc(x.text)}</p>${linksHtml(x.links)}`).join('\n')}
+<p class="desc">Tap a topic to open it.</p>
+${ess.map((x) => `<details class="more"><summary>${esc(x.title)}</summary><p class="desc">${esc(x.text)}</p>${linksHtml(x.links)}</details>`).join('\n')}
 </div></article>`
 }
-// the Places list: Phuket's places, the clubs and festivals (most underground first), then Bangkok with its basics first
+// the Places list: Phuket's places, the Bangkok basics (first under Bangkok), the clubs and festivals (most underground
+// first), then Bangkok's places
 const clubWhere = (c) => (BKK.includes(c.area) ? 2 : ['koh-phangan', 'koh-samui', 'koh-tao'].includes(c.area) ? 1 : 0)
 const clubsSorted = clubs.slice().sort((a, b) => (b.undergroundScore || 0) - (a.undergroundScore || 0) || clubWhere(a) - clubWhere(b) || a.name.localeCompare(b.name))
 function placesList(mode) {
   const home = placesSorted.filter((p) => !BKK.includes(p.area)), bkk = placesSorted.filter((p) => BKK.includes(p.area))
-  return [...home.map((p) => placeCard(p, mode)), ...clubsSorted.map((c) => clubCard(c, mode)), bangkokBasics(), ...bkk.map((p) => placeCard(p, mode))].filter(Boolean).join('\n')
+  return [...home.map((p) => placeCard(p, mode)), bangkokBasics(), ...clubsSorted.map((c) => clubCard(c, mode)), ...bkk.map((p) => placeCard(p, mode))].filter(Boolean).join('\n')
 }
 function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">

@@ -1,0 +1,1227 @@
+{
+ "generatedOn": "2026-10-21",
+ "items": [
+  {
+   "id": "bkk-grand-palace",
+   "name": "Grand Palace and Wat Phra Kaew (Emerald Buddha)",
+   "nameThai": "พระบรมมหาราชวัง และวัดพระแก้ว",
+   "tier": "must-see",
+   "category": "culture",
+   "area": "bangkok",
+   "description": "The old royal palace and the Temple of the Emerald Buddha share one walled compound by the river: gold spires, painted galleries and throne halls. It is the busiest sight in Bangkok, so come when it opens. Wat Pho is next door and Wat Arun is a short ferry ride away.",
+   "openText": "Daily 8:30-15:30 for entry (ticket sales end at 15:30); the grounds close at 16:30. It can close at short notice for royal ceremonies.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "500 THB for foreigners. The ticket includes Wat Phra Kaew and the Queen Sirikit Museum of Textiles. Buy at the gate or online on the official site.",
+   "bestTime": "8:30, at opening, before the tour groups and the midday heat.",
+   "durationLabel": "2-3h",
+   "durationHours": {"min": 2, "max": 3},
+   "gettingThere": "Chao Phraya Express Boat to Tha Chang pier (N9), then 5-10 minutes on foot. Or MRT Sanam Chai, then 10-15 minutes on foot past Wat Pho.",
+   "tips": [
+    "Strict dress code: no sleeveless, see-through or crop tops, no shorts or mini skirts, no ripped, tight or cycling trousers. Wear long trousers or a long skirt and a T-shirt with sleeves.",
+    "The palace is open every day. If someone outside says it is closed today and offers a cheap tuk-tuk tour, walk on: it is the gem-shop scam.",
+    "Drones are not allowed.",
+    "The royal cremation of Queen Mother Sirikit is at Sanam Luang, next to the palace, on 15-19 Dec 2026. In 2017 the royal crematorium was opened to the public after the King's cremation. If that happens again, expect queues and closed roads around Sanam Luang in early January 2027. Check the official site the day before.",
+    "Do the Grand Palace first, then Wat Pho, then take the ferry to Wat Arun for the late light."
+   ],
+   "links": [
+    {"label": "Official site", "url": "https://www.royalgrandpalace.th/en/home"},
+    {"label": "Practical information and tickets", "url": "https://www.royalgrandpalace.th/en/visit/practical-information"}
+   ],
+   "sources": [
+    "https://www.royalgrandpalace.th/en/visit/practical-information",
+    "https://www.royalgrandpalace.th/en/home",
+    "https://lukfoto.com/visiting-wat-arun-guide/",
+    "https://en.wikivoyage.org/wiki/Bangkok",
+    "https://thethaiger.com/news/national/queen-sirikit-cremation-schedule-confirmed-for-december",
+    "https://bangkokpe.dfa.gov.ph/embassy-headlines/779-philippine-ambassador-attends-the-opening-ceremony-of-the-exhibition-on-the-royal-cremation-ceremony-of-his-majesty-the-late-king-bhumibol-adulyadej-on-2-november-2017",
+    "https://www.google.com/maps/search/?api=1&query=The%20Grand%20Palace%20Bangkok&query_place_id=ChIJPzZsMU6Z4jARQUzvk913bCo"
+   ],
+   "lat": 13.74986,
+   "lng": 100.49158,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Grand Palace, Na Phra Lan Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. Official practical-information page (fetched today): 500 THB for foreigners incl. Wat Phra Kaew and the textile museum, open daily 8:30-15:30, dress-code list, drone ban, online tickets. The official home page lists 8:30-16:30; Lukfoto (checked Oct 2026) says ticket sales end at 15:30 and the grounds stay open to 16:30. Google Maps (80,634 reviews): 8:30-15:30 daily, not marked closed. Fake-closure scam: Wikivoyage Stay safe. Cremation dates 15-19 Dec 2026: The Thaiger (22 Sep 2026). Public opening of the 2017 crematorium: Philippine embassy report (Nov 2017); no 2027 plan announced yet. Walking distances from Google coordinates. Coords: Google listing; OSM way 23482754 is 64 m away.",
+   "placeId": "ChIJPzZsMU6Z4jARQUzvk913bCo"
+  },
+  {
+   "id": "bkk-wat-pho",
+   "name": "Wat Pho (Reclining Buddha)",
+   "nameThai": "วัดพระเชตุพนวิมลมังคลาราม (วัดโพธิ์)",
+   "tier": "must-see",
+   "category": "temple",
+   "area": "bangkok",
+   "description": "The temple next to the Grand Palace, home of the huge gold Reclining Buddha and a well-known Thai massage school. It is calmer than the palace and stays open into the evening.",
+   "openText": "Daily 8:00-19:30 (Google Maps; the temple's own site gives 08:30-19:30).",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "300 THB for foreigners. Thai massage at the temple school costs extra: recent guides give about 340 THB for 30 minutes and about 520 THB for 1 hour; check the price board.",
+   "bestTime": "After 16:00, when the tour groups leave; you can stay until 19:30.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "Chao Phraya boat to Tha Tien pier (N8), about 300 m away. MRT Sanam Chai is about 350 m away. From the Grand Palace walk about 10 minutes south.",
+   "tips": [
+    "Cover your shoulders; women should not wear shorts above the knee (temple rule).",
+    "Massage is walk-in and the pavilions get busy in the afternoon.",
+    "The ferry to Wat Arun leaves from Tha Tien pier, a few minutes' walk away."
+   ],
+   "links": [
+    {"label": "Official site", "url": "https://www.watpho.com/en/home"}
+   ],
+   "sources": [
+    "https://www.watpho.com/en/home",
+    "https://lukfoto.com/visiting-wat-arun-guide/",
+    "https://traveltheworldpages.com/wat-pho-temple-bangkok/",
+    "https://thebettervacation.com/sv/Bangkok-stad/Wat-Phos-officiella-webbplats/",
+    "https://www.google.com/maps/search/?api=1&query=Wat%20Pho%20Bangkok&query_place_id=ChIJgcxFcQWZ4jARLsIR9Qia9H0"
+   ],
+   "lat": 13.74642,
+   "lng": 100.49277,
+   "coordSource": "google-maps-listing+osm-relation",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Pho, Sanam Chai Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. watpho.com: foreign visitors pay 300 Baht, dress advice for women, contact block says 'Working time 08.30-19.30'. Google Maps (38,341 reviews): 8:00-19:30 daily. Lukfoto (checked Oct 2026) also gives 300 THB. Massage prices differ between 2025-2026 guides, so they are a guide only. Distances to Tha Tien pier and MRT Sanam Chai from Google coordinates. Coords: Google listing; OSM relation 11169995 is 9 m away.",
+   "placeId": "ChIJgcxFcQWZ4jARLsIR9Qia9H0"
+  },
+  {
+   "id": "bkk-wat-arun",
+   "name": "Wat Arun (Temple of Dawn)",
+   "nameThai": "วัดอรุณราชวราราม",
+   "tier": "must-see",
+   "category": "temple",
+   "area": "bangkok",
+   "description": "The riverside temple across from Wat Pho, with a tall central prang covered in pieces of Chinese porcelain. You can climb part of the steep steps for a view over the river to the Grand Palace. At sunset it is the classic view from the opposite bank.",
+   "openText": "Daily 8:00-18:00; last entry about 17:30. The prang closes to climbers a little earlier.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "200 THB, cash only at the gate; there is no official online ticket. The cross-river ferry costs a few baht. Sarong rental about 20 THB plus a 100 THB deposit.",
+   "bestTime": "8:00-9:00, or 15:30-17:30 for the light. Then watch the sunset (about 18:05-18:15 in January) from the Tha Tien side.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "Cross-river ferry from Tha Tien pier next to Wat Pho, about 3 minutes, roughly 5:00-19:00. From BTS Saphan Taksin take the express boat upriver to Tha Tien first.",
+   "tips": [
+    "Shoulders and knees must be covered; the rule is enforced more strictly than at Wat Pho.",
+    "Bring small notes: the ticket booth and the ferry often cannot change 1,000 THB notes.",
+    "Do not climb the prang in flip-flops; the steps are steep and slippery after rain.",
+    "Riverside cafes on the Tha Tien side have upper terraces facing the temple for sunset."
+   ],
+   "links": [
+    {"label": "Official Facebook page", "url": "https://www.facebook.com/watarunofficial"}
+   ],
+   "sources": [
+    "https://lukfoto.com/visiting-wat-arun-guide/",
+    "https://thai.tourismthailand.org/Attraction/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%93%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3",
+    "https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok&query_place_id=ChIJaSv_6gaZ4jARnbiUVn6Z_YY"
+   ],
+   "lat": 13.74387,
+   "lng": 100.48844,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Arun Ratchawararam, Bangkok Yai, Bangkok",
+   "verification": "Checked 21 Oct 2026. Lukfoto guide (updated Sep 2026, prices 'checked October 2026'): 200 THB cash only, no official online tickets, 8:00-18:00, last entry about 17:30, sarong 20 THB + 100 THB deposit, ferry from Tha Tien about 5:00-19:00, strict dress code, cafe terraces on the Tha Tien side. TAT Thai page: foreigners 200 THB. Google Maps (45,469 reviews): 8:00-18:00 daily. January sunset times computed for Bangkok with the NOAA solar equations. Coords: Google listing; OSM way 23481741 is 8 m away.",
+   "placeId": "ChIJaSv_6gaZ4jARnbiUVn6Z_YY"
+  },
+  {
+   "id": "bkk-golden-mount",
+   "name": "Golden Mount (Wat Saket)",
+   "nameThai": "ภูเขาทอง วัดสระเกศ",
+   "tier": "hidden-gem",
+   "category": "viewpoint",
+   "area": "bangkok",
+   "description": "A gold chedi on top of an artificial hill in the old town, reached by 344 steps on a gentle slope with places to rest. The top terrace has a 360-degree view over old Bangkok. It is quieter than the big three temples and best near sunset.",
+   "openText": "Daily about 7:30-19:00 (Google Maps says from 7:00).",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "100 THB.",
+   "bestTime": "16:30 to sunset (about 18:05-18:15 in January).",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "Grab or taxi, or the Khlong Saen Saep canal boat to Phan Fa Lilat pier, a short walk away. Thipsamai pad thai is about 200 m away and Khao San Road about 1.2 km.",
+   "tips": [
+    "Cover shoulders, belly and knees; men should not wear tank tops.",
+    "Wear shoes you can climb stairs in.",
+    "Good plan: Golden Mount at sunset, then dinner at Thipsamai."
+   ],
+   "links": [
+    {"label": "TAT page (Thai)", "url": "https://thai.tourismthailand.org/Attraction/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A8-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%97%E0%B8%AD%E0%B8%87"}
+   ],
+   "sources": [
+    "https://lukfoto.com/wat-saket-golden-mount-temple/",
+    "https://www.google.com/maps/search/?api=1&query=Wat%20Saket%20Golden%20Mount&query_place_id=ChIJP-MtN12Z4jARlEBmga-oF4w"
+   ],
+   "lat": 13.75277,
+   "lng": 100.50667,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Saket Golden Mount, Bangkok",
+   "verification": "Checked 21 Oct 2026. Lukfoto Wat Saket guide (figures 'checked October 2026', latest review 7 Oct 2026): 100 THB, 7:30-19:00, 344 steps, dress rules, Saen Saep boat to Phan Fa Lilat pier. Google Maps (8,192 reviews): 7:00-19:00 daily. Distances to Thipsamai and Khao San from Google coordinates. Coords: Google listing; OSM way 88359228 (temple grounds) is 120 m away.",
+   "placeId": "ChIJP-MtN12Z4jARlEBmga-oF4w"
+  },
+  {
+   "id": "bkk-yaowarat-night-food",
+   "name": "Yaowarat (Chinatown) night food",
+   "nameThai": "ถนนเยาวราช",
+   "tier": "must-see",
+   "category": "food",
+   "area": "bangkok",
+   "description": "Chinatown's main road turns into a long open-air food street every evening. Eat peppery rolled-noodle soup (guay jub), grilled seafood, noodles and desserts at stalls and old shophouses, several of them in the Michelin Guide at normal prices. Go hungry and share dishes as a group.",
+   "openText": "Stalls run from about 17:00-18:00 to midnight. Many stalls take Monday off.",
+   "days": ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free to walk. A bowl of guay jub costs about 60-100 THB; seafood restaurants cost more. Bring cash.",
+   "bestTime": "19:00-22:00, Tuesday to Sunday.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 2, "max": 3},
+   "gettingThere": "MRT Wat Mangkon, about 250 m from the corner of Yaowarat Road and Soi Texas (Phadung Dao Road).",
+   "tips": [
+    "Nai Ek Roll Noodles (Yaowarat Soi 9): guay jub with crispy pork, open about 7:30-00:30 daily.",
+    "Guay Jub Ouan Pochana (408 Yaowarat Rd): very peppery guay jub, 10:30-24:00, closed Monday.",
+    "T&K Seafood and Lek Seafood face each other at the Soi Texas corner, from 16:00 to about midnight and 2:00.",
+    "Bar Temp., a vinyl house and techno bar, is about 500 m away (Wednesday to Sunday).",
+    "Keep phones and wallets in front pockets in the crowd."
+   ],
+   "links": [
+    {"label": "Michelin Guide: Yaowarat street food", "url": "https://guide.michelin.com/th/en/article/dining-out/five-incredible-street-food-stalls-in-yaowarat-s-chinatown"}
+   ],
+   "sources": [
+    "https://www.bangkok-spirit.com/guides/yaowarat-chinatown-food/",
+    "https://www.pipahotelbangkok.com/blog/chinatown-bangkok-guide/",
+    "https://guide.michelin.com/th/en/article/dining-out/five-incredible-street-food-stalls-in-yaowarat-s-chinatown",
+    "https://www.google.com/maps/search/?api=1&query=T%20K%20Seafood%20Yaowarat&query_place_id=ChIJLyZrciGZ4jARC1iQWHQDdOU",
+    "https://www.google.com/maps/search/?api=1&query=Nai%20Ek%20Roll%20Noodle&query_place_id=ChIJqf3idSGZ4jAR2rKmc655Qmk",
+    "https://www.google.com/maps/search/?api=1&query=Guay%20Jub%20Ouan%20Pochana&query_place_id=ChIJ_f2SjiGZ4jARZ_oV924fllg",
+    "https://www.google.com/maps/search/?api=1&query=Lek%20Seafood%20Yaowarat&query_place_id=ChIJ9yiUcSGZ4jAR15Dnbu72HKk"
+   ],
+   "lat": 13.74008,
+   "lng": 100.51064,
+   "coordSource": "google-maps-listing (T & K Seafood at the Yaowarat-Phadung Dao corner)+osm-node",
+   "coordConfidence": "high",
+   "gmapsQuery": "Yaowarat Road, Chinatown, Bangkok",
+   "verification": "Checked 21 Oct 2026. Bangkok Spirit 2026 food guide: the street runs roughly 18:00-midnight, many stalls shut on Mondays, guay jub 60-100 THB, Michelin stalls at 60-120 THB. Pipa Hotel guide: many vendors take Mondays off. Michelin Guide article on Yaowarat stalls. Google Maps hours (Oct 2026): Nai Ek 7:30-00:30 daily, Ouan Pochana 10:30-24:00 closed Monday, T&K 16:00-24:00, Lek Seafood 16:00-02:00. Distances from Google coordinates. Pin: T&K Seafood at the heart of the food street; OSM node 3096836189 is 6 m away.",
+   "placeId": "ChIJ95Nh9yGZ4jARAjfcG2uIZFg"
+  },
+  {
+   "id": "bkk-talat-noi",
+   "name": "Talat Noi (old riverside quarter)",
+   "nameThai": "ตลาดน้อย",
+   "tier": "hidden-gem",
+   "category": "culture",
+   "area": "bangkok",
+   "description": "A small riverside quarter next to Chinatown: narrow lanes, old Chinese houses, mechanic workshops, street art and cafes by the water. Look for the So Heng Tai mansion, the Holy Rosary Church (built 1891-1897) and the Chow Sue Kong shrine (about 1804). It fits well before an evening in Yaowarat.",
+   "openText": "Streets always open. The Talat Noi Museum is free and closed on Monday.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free to walk around.",
+   "bestTime": "15:30-18:30, then sunset by the river and dinner in Yaowarat.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 2},
+   "gettingThere": "About 10 minutes on foot from MRT Hua Lamphong, or 10-15 minutes from MRT Wat Mangkon.",
+   "tips": [
+    "Hong Sieng Kong cafe has a shaded river terrace and live music in the evening.",
+    "Clutch, a vinyl bar with big JBL speakers in The Warehouse on Charoen Krung, opens 18:00-2:00 (closed Monday); cover up to about 300 THB.",
+    "People live and work here: keep the lanes clear and ask before photographing people."
+   ],
+   "links": [
+    {"label": "Talat Noi walking guide (Phuket 101)", "url": "https://www.phuket101.net/bangkok/talat-noi-in-bangkok"}
+   ],
+   "sources": [
+    "https://www.phuket101.net/bangkok/talat-noi-in-bangkok",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://www.google.com/maps/search/?api=1&query=Talat%20Noi%20Bangkok&query_place_id=ChIJzeH7rdiY4jAR8IriXbIAAQQ",
+    "https://www.google.com/maps/search/?api=1&query=Clutch%20Bangkok&query_place_id=ChIJ5zuDYWCZ4jARQzFiM65tQIw"
+   ],
+   "lat": 13.73467,
+   "lng": 100.51344,
+   "coordSource": "google-maps-area-listing+osm-boundary",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Talat Noi, Samphanthawong, Bangkok",
+   "verification": "Checked 21 Oct 2026. Phuket 101 Talat Noi guide (updated 7 Aug 2026): lanes, So Heng Tai, Holy Rosary Church (1891-1897), Chow Sue Kong shrine (1804), street art, Hong Sieng Kong cafe with evening live music, Talat Noi Museum free and closed Mondays. Clutch: Google Maps (Tue-Sun 18:00-2:00) and Loopliner (12 Aug 2026: JBL 4350 and McIntosh, covers to about 300 THB). Walking distances from Google coordinates. Coords: Google area pin 'Talat Noi'; OSM subdistrict boundary centre is 145 m away, so medium.",
+   "placeId": "ChIJzeH7rdiY4jAR8IriXbIAAQQ"
+  },
+  {
+   "id": "bkk-chatuchak-weekend-market",
+   "name": "Chatuchak Weekend Market (JJ)",
+   "nameThai": "ตลาดนัดจตุจักร",
+   "tier": "must-see",
+   "category": "market",
+   "area": "bangkok",
+   "description": "A huge weekend market with more than 15,000 stalls in 27 sections: clothes, vintage, art, homeware, plants and street food. On Saturday and Sunday everything is open; on other days only small parts are. It gets very hot and crowded after midday.",
+   "openText": "Whole market Sat-Sun 9:00-18:00. Friday 18:00-24:00 wholesale only. Wednesday and Thursday 7:00-18:00 plant section only.",
+   "days": ["Sat", "Sun"],
+   "feeText": "Free entry. Bring cash and small notes.",
+   "bestTime": "Saturday or Sunday 9:00-11:00.",
+   "durationLabel": "half-day",
+   "durationHours": {"min": 3, "max": 4},
+   "gettingThere": "MRT Kamphaeng Phet (about 350 m) or MRT Chatuchak Park (about 2 minutes to Entrance 2); BTS Mo Chit is next to Chatuchak Park.",
+   "tips": [
+    "On weekdays it is not worth the trip: go to Jodd Fairs in the evening instead.",
+    "Cool down in the air-conditioned MIXT Chatuchak and JJ Mall next door (about 10:00-20:00 daily).",
+    "Agree a meeting point and a time before the group splits up."
+   ],
+   "links": [
+    {"label": "Opening times", "url": "https://www.chatuchakmarket.org/opening-times/"}
+   ],
+   "sources": [
+    "https://www.chatuchakmarket.org/opening-times/",
+    "https://www.chatuchakmarket.org/getting-to-chatuchak-by-mrt/",
+    "https://www.airportels.asia/travel-tips/guide-to-chatuchak-weekend-market-2023-tips-and-tricks/",
+    "https://travjoy.com/blog/chatuchak-weekend-market-a-complete-guide-for-discerning-travellers-sections-timings-and-what-s-worth-buying",
+    "https://www.google.com/maps/search/?api=1&query=Chatuchak%20Weekend%20Market&query_place_id=ChIJ3fiD6BSc4jARS324hNeR8ZE"
+   ],
+   "lat": 13.79978,
+   "lng": 100.55042,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chatuchak Weekend Market, Kamphaeng Phet 2 Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. chatuchakmarket.org opening times: Wed-Thu 7:00-18:00 plants only, Fri 18:00-24:00 wholesale, Sat-Sun 9:00-18:00 whole market, over 15,000 stalls. Airportels 2026 guide: all 27 sections at weekends, MIXT and JJ Mall about 10:00-20:00 daily, best 9:00-11:00. Travjoy 2026 guide gives the same days and hours. chatuchakmarket.org MRT page: Chatuchak Park station, 2 minutes to Entrance 2. Kamphaeng Phet distance from Google coordinates. Google Maps (56,667 reviews) open. Coords: Google listing; OSM way 37911198 is 93 m away.",
+   "placeId": "ChIJ3fiD6BSc4jARS324hNeR8ZE"
+  },
+  {
+   "id": "bkk-jodd-fairs-ratchada",
+   "name": "Jodd Fairs Ratchada (night market)",
+   "nameThai": "จ๊อดแฟร์ รัชดา",
+   "tier": "must-see",
+   "category": "market",
+   "area": "bangkok",
+   "description": "Bangkok's busiest night market for eating, with about 800 stalls, mostly food, plus bars and live music. Try leng saap, a big pile of spicy pork spine in sour broth, and grilled seafood. The old Rama 9 and DanNeramit sites have closed; this is the only Jodd Fairs now.",
+   "openText": "Daily 17:00-01:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free entry. Leng saap from 180 THB (medium, enough for two). Dinner for two about 600-1,200 THB with drinks. Most stalls take cash or Thai QR only.",
+   "bestTime": "17:30-19:00 for free tables and short queues; on Friday and Saturday after 20:00 it is packed.",
+   "durationLabel": "2-3h",
+   "durationHours": {"min": 2, "max": 3},
+   "gettingThere": "MRT Thailand Cultural Centre exit 4, about 3 minutes on foot, next to Big C Place Ratchada. The MRT stops around midnight, so take Grab back if you stay late.",
+   "tips": [
+    "Some map apps still show the closed Rama 9 site. Go to Ratchadaphisek Road, next to Big C.",
+    "Order leng saap one size smaller than you think.",
+    "The RCA clubs are about 2 km away."
+   ],
+   "links": [
+    {"label": "Official Facebook page", "url": "https://www.facebook.com/JoddFairs.Ratchada/"}
+   ],
+   "sources": [
+    "https://www.facebook.com/JoddFairs.Ratchada/",
+    "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+    "https://chillpainai.com/scoop/16640",
+    "https://www.google.com/maps/search/?api=1&query=Jodd%20Fairs%20Ratchada&query_place_id=ChIJk31AdLKf4jARXwt8iVGkqwI"
+   ],
+   "lat": 13.76792,
+   "lng": 100.5712,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Jodd Fairs Ratchada, Ratchadaphisek Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. Official Facebook page JoddFairs.Ratchada: open Monday-Sunday 17:00-01:00. Travjoy 2026 guide: Rama 9 closed in Jan 2025, DanNeramit closed, about 800 stalls, leng saap 180/250/350 THB, dinner for two 600-1,200 THB, cash or Thai QR, MRT Thailand Cultural Centre exit 4. Chillpainai: the Ratchada site opened on 1 Nov 2024. Google Maps (16,995 reviews): 17:00-01:00 daily. Distances from Google coordinates. Coords: Google listing; OSM way 1331925616 is 41 m away.",
+   "placeId": "ChIJk31AdLKf4jARXwt8iVGkqwI"
+  },
+  {
+   "id": "bkk-sky-bar-lebua",
+   "name": "Sky Bar at lebua (State Tower)",
+   "tier": "must-see",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "The open-air bar on the 64th floor of State Tower, with a glowing round bar above the river view. It became famous from The Hangover Part II. Drinks cost about 1,300-1,500 THB before tax, so go once for the sunset view, then drink elsewhere.",
+   "openText": "Daily 17:00-00:30; last drink order 00:15.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "No entry fee, but each person must buy at least one drink. Cocktails 1,300-1,500 THB, mocktails 900 THB, wine from 980 THB a glass, plus 10% service and 7% VAT (drink list, Oct 2026).",
+   "bestTime": "Arrive 17:15-17:45 for the sunset (about 18:05-18:15 in January).",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "About 400 m (5-6 minutes) on foot from BTS Saphan Taksin and Sathorn pier.",
+   "tips": [
+    "Smart casual: no sleeveless shirts for men, no sportswear, flip-flops or swimwear. No large bags; there is no storage.",
+    "Walk-in only, no reservations. Photos are allowed, video is not.",
+    "Cheaper rooftops: Octave at Thong Lo (cocktails about 525-555 THB) or Bar.Yard at the Kimpton Maa-Lai, BK Magazine's best rooftop bar for 2026."
+   ],
+   "links": [
+    {"label": "Official page", "url": "https://lebua.com/restaurants/sky/"},
+    {"label": "Drink list (PDF)", "url": "https://lebua.com/wp-content/uploads/2019/11/Sky-Bar-Drink-list-update-11.10.26.pdf"}
+   ],
+   "sources": [
+    "https://lebua.com/faq/",
+    "https://lebua.com/restaurants/sky/sky-bar-signature-cocktails/",
+    "https://lebua.com/wp-content/uploads/2019/11/Sky-Bar-Drink-list-update-11.10.26.pdf",
+    "https://www.nightlife.run/en/blog/sky-bar-by-lebua-bangkok-review-2026",
+    "https://badawards.bkmagazine.com/rooftop-bars/best-rooftop-bars-in-bangkok-for-2026/",
+    "https://rooftopbangkok.com/bar/octave",
+    "https://www.google.com/maps/search/?api=1&query=Sky%20Bar%20lebua%20Bangkok&query_place_id=ChIJVTBnbMWY4jARzZ5CS7DwHVk"
+   ],
+   "lat": 13.72142,
+   "lng": 100.51688,
+   "coordSource": "google-maps-listing+osm-node",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sky Bar, State Tower, 1055 Silom Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. lebua FAQ (page modified 28 Apr 2025): 64th floor, 17:00-00:30, last drink 00:15, minimum one drink per person, walk-in only, no video, smart casual with the list of things not allowed, no large bags. lebua drink-list PDF (file named 'update-11.10.26'): signature cocktails 1,300-1,500 THB, mocktails 900 THB, wine by the glass from 980 THB, all plus 10% service and 7% VAT. Nightlife.run review (fact-checked 27 Jul 2026): Hangover Part II link and dress code. BK B.A.D. Awards 2026: Bar.Yard best rooftop bar. Google Maps: 17:00-00:30 daily. Distance to BTS Saphan Taksin from Google coordinates. Coords: Google listing; OSM node in State Tower is 15 m away.",
+   "placeId": "ChIJVTBnbMWY4jARzZ5CS7DwHVk"
+  },
+  {
+   "id": "bkk-octave-rooftop",
+   "name": "Octave Rooftop Bar (Thong Lo)",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A rooftop bar on floors 45 to 49 of the Bangkok Marriott Sukhumvit, with an open 360-degree deck on top. Drinks cost less than half of Sky Bar's, it stays open to 2:00 and it is next to the Thonglor bars. DJs play house from about 21:00.",
+   "openText": "Daily 17:00-02:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "No entry fee; at least one drink each. Cocktails about 525-555 THB, local beer 290-320 THB, plus 10% service and 7% VAT. Happy hour 17:00-19:00 with 50% off selected drinks (July 2026).",
+   "bestTime": "17:00-17:30 to get a sunset seat on the 49th floor.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1.5, "max": 2},
+   "gettingThere": "BTS Thong Lo, about 250 m (3-4 minutes) on foot. The hotel is at Sukhumvit Soi 57.",
+   "tips": [
+    "Floors 48 and 49 are for guests aged 20 and over; bring ID.",
+    "Smart casual: no sportswear, flip-flops or sleeveless tops for men.",
+    "Floors 48 and 49 are walk-in; the 45th-floor restaurant takes bookings."
+   ],
+   "links": [
+    {"label": "Reservations (SevenRooms)", "url": "https://www.sevenrooms.com/reservations/octaverooftoploungebarbkkms/goog"},
+    {"label": "Instagram", "url": "https://www.instagram.com/octave_rooftop/"}
+   ],
+   "sources": [
+    "https://badawards.bkmagazine.com/rooftop-bars/best-rooftop-bars-in-bangkok-for-2026/",
+    "https://rooftopbangkok.com/bar/octave",
+    "https://www.sevenrooms.com/reservations/octaverooftoploungebarbkkms/goog",
+    "https://thailandguide.co.uk/attractions/bangkok/octave-rooftop-bar-bangkok/",
+    "https://www.instagram.com/octave_rooftop/",
+    "https://www.google.com/maps/search/?api=1&query=Octave%20Rooftop%20Lounge%20Bar%20Bangkok&query_place_id=ChIJhxshNqWf4jARgYxEW8hBGcE"
+   ],
+   "lat": 13.7235,
+   "lng": 100.58054,
+   "coordSource": "google-maps-listing+osm-hotel-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Octave Rooftop Lounge & Bar, Bangkok Marriott Hotel Sukhumvit",
+   "verification": "Checked 21 Oct 2026. BK Magazine B.A.D. Awards 2026 rooftop list (updated 8 Oct 2026) includes Octave, 'right by Thonglor'. Rooftopbangkok (updated 19 Jul 2026): 17:00-02:00, cocktails about 525-555 THB, local beer 290-320 THB, happy hour 17:00-19:00 with 50% off selected drinks, plus 10% service and 7% VAT. SevenRooms booking page: smart casual, 48th and 49th floors 20+ only. Thailandguide.co.uk: house music from 21:00, floors 48-49 walk-in. Official Instagram: open every day 17:00-02:00. Google Maps (6,224 reviews): 17:00-02:00 daily. Distance to BTS Thong Lo from Google coordinates. Coords: Google listing; OSM hotel way 208693103 is 15 m away.",
+   "placeId": "ChIJhxshNqWf4jARgYxEW8hBGcE"
+  },
+  {
+   "id": "bkk-mahanakhon-skywalk",
+   "name": "Mahanakhon SkyWalk (glass floor, 78th floor)",
+   "nameThai": "มหานคร สกายวอล์ค",
+   "tier": "must-see",
+   "category": "viewpoint",
+   "area": "bangkok",
+   "description": "Thailand's highest observation deck, 314 m up on the King Power Mahanakhon tower in Silom. A fast lift goes to an indoor deck on the 74th floor; above it the open roof on the 78th floor has a glass floor 310 m above the street. Go before sunset and stay for the city lights.",
+   "openText": "Daily 10:00-24:00; last entry 23:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Adults 1,000 THB from 10:00 to 15:30 and 1,200 THB from 15:30 to 19:00 on the official site; the later evening price is not listed. Resellers such as Klook sell tickets from about US$30.",
+   "bestTime": "Arrive about 17:00 for the sunset (about 18:05-18:15 in January) and the night view.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "BTS Chong Nonsi, exit 3.",
+   "tips": [
+    "The 78th-floor rooftop has a bar if you want a drink with the view.",
+    "Elsewhere (after-hours bar) is about 150 m from BTS Chong Nonsi, and the Decho Road clubs are about 10 minutes on foot."
+   ],
+   "links": [
+    {"label": "Official page", "url": "https://kingpowermahanakhon.co.th/experience/mahanakhon-skywalk"},
+    {"label": "Tickets", "url": "https://kpmn.welovebooking.net/book/kpmn/home"}
+   ],
+   "sources": [
+    "https://kingpowermahanakhon.co.th/experience/mahanakhon-skywalk",
+    "https://www.klook.com/en-US/activity/16870-king-power-mahanakhon-skywalk-ticket-bangkok/",
+    "https://www.google.com/maps/search/?api=1&query=Mahanakhon%20SkyWalk&query_place_id=ChIJhUnURACZ4jARwb3dT5UiytA"
+   ],
+   "lat": 13.72401,
+   "lng": 100.52848,
+   "coordSource": "google-maps-listing+osm-building",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mahanakhon SkyWalk, King Power Mahanakhon, Bangkok",
+   "verification": "Checked 21 Oct 2026. Official SkyWalk page: 314 m deck, 63 m2 glass tray at 310 m on the 78th floor, indoor deck on the 74th, adults 1,000 THB (10:00-15:30) and 1,200 THB (15:30-19:00), children/seniors 500-600 THB, open daily 10:00-24:00, last access 23:00, BTS Chong Nonsi exit 3. Klook listing: packages from about US$30 and the 78th-floor rooftop bar. Google Maps: 10:00-24:00 daily. Coords: Google listing; OSM building way 444651219 is 73 m away.",
+   "placeId": "ChIJhUnURACZ4jARwb3dT5UiytA"
+  },
+  {
+   "id": "bkk-thonglor-ekkamai",
+   "name": "Thonglor and Ekkamai (bars and small clubs)",
+   "nameThai": "ทองหล่อ / เอกมัย",
+   "tier": "must-see",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "Two parallel side streets off Sukhumvit, Thonglor (Soi 55) and Ekkamai (Soi 63), with many cocktail bars, rooftops, restaurants and mid-size clubs. The crowds dress up. Thonglor is not a 4am zone, so most places close at 2:00.",
+   "openText": "Bars from about 17:00-18:00; clubs from about 21:00 or 23:00 to 2:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Club covers about 600-1,200 THB.",
+   "bestTime": "Thursday to Saturday; clubs fill after 23:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 6},
+   "gettingThere": "BTS Thong Lo or BTS Ekkamai. Thonglor is about 2.5 km long, so use Grab or a motorbike taxi to move up and down it.",
+   "tips": [
+    "12 x 12 (Ekkamai) is a community-run room of about 50 people for house, techno, disco and jazz, open since 2014 (Tue-Sat 18:00-2:00).",
+    "MUIN, on the 5th floor of Donki Mall Thonglor, is a big Korean-style club with separate EDM, hip-hop and house-techno rooms (Wed-Sun from 21:00).",
+    "Loopliner (Aug 2026) reports a new hard-techno room, Berlin BKK, in the same mall. It is not on Google Maps yet, so check its Instagram first.",
+    "Good order: Octave rooftop at sunset, beef soup at Wattana Panich before 19:00, then bars and clubs.",
+    "Dress: collared shirt and real shoes, no flip-flops.",
+    "Older guides list Beam and De Commune here; both have closed."
+   ],
+   "links": [
+    {"label": "12 x 12 (Instagram)", "url": "https://instagram.com/12x12bkk"},
+    {"label": "MUIN", "url": "http://www.muinbkk.com/home"}
+   ],
+   "sources": [
+    "https://www.timeout.com/bangkok/marriott-bonvoy-reconnect-with-your-city-thonglor",
+    "https://www.nightlifeplus.app/post/best-nightclubs-bars-in-bangkok-the-2026-guide",
+    "https://loopliner.com/news/bangkok-club-closing-times-in-2026-who-actually-gets-to-4am",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://www.myrsvp.com/editorial/best-nightclubs-bangkok/",
+    "https://www.google.com/maps/search/?api=1&query=The%20Commons%20Thonglor&query_place_id=ChIJmZKsCFOe4jARjZUEQW7WV58",
+    "https://www.google.com/maps/search/?api=1&query=12%20x%2012%20Ekkamai&query_place_id=ChIJ02kjc1Ke4jARjolVMGDb3aw",
+    "https://www.google.com/maps/search/?api=1&query=MUIN%20Bangkok%20Club&query_place_id=ChIJKd0ORRyf4jARLznp64VlJWA",
+    "https://www.google.com/maps/search/?api=1&query=BEAM%20Thonglor&query_place_id=ChIJLdy5_FKe4jARBMDX2-Q5dlg"
+   ],
+   "lat": 13.73514,
+   "lng": 100.58223,
+   "coordSource": "google-maps-listing (The Commons Thonglor, mid-Thonglor)+photon-osm",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Thong Lo, Sukhumvit 55, Bangkok",
+   "verification": "Checked 21 Oct 2026. Time Out Thonglor feature (3 Nov 2023): about 2.5 km of Soi Sukhumvit 55, posh bars and clubs; it lists Beam and De Commune, now closed (Beam is marked closed on Google Maps; Loopliner lists De Commune as closed). Nightlifeplus 2026 guide (6 Jul 2026): Thonglor covers 600-1,200 THB, start 23:00-midnight, collared shirt and real shoes. Loopliner (25 Aug 2026): Thonglor still closes at 2am. Loopliner (12 Aug 2026): 12 x 12 since 2014, about fifty people; Berlin BKK new for 2026 at Donki Mall. MyRSVP 2026: MUIN rooms and doors from 21:00. Google Maps: 12 x 12 Tue-Sat 18:00-2:00; MUIN Wed-Sun from 21:00. Pin: The Commons Thonglor (Google); Photon/OSM 22 m. Medium because the item is an area.",
+   "placeId": "ChIJmZKsCFOe4jARjZUEQW7WV58"
+  },
+  {
+   "id": "bkk-sukhumvit-soi-11",
+   "name": "Sukhumvit Soi 11 and Asok (big clubs)",
+   "nameThai": "ซอยสุขุมวิท 11 / อโศก",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "The street with the most clubs in the city, a short walk from BTS Nana, and the easiest first night out: tourists, expats and locals, hip-hop and EDM, covers that usually include a drink. Apt 101 on Sukhumvit Road near Asok won BK Magazine's best nightclub award for 2026. It is fun but not underground.",
+   "openText": "Clubs open about 22:00 and close at 3:00-4:00 (Levels to 3:00, Sugar Club to 4:00 on Google Maps). Apt 101: Tue-Sun 20:00-2:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Covers about 300-600 THB, usually with one drink; weeknights are often free.",
+   "bestTime": "Friday or Saturday after 23:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 5},
+   "gettingThere": "BTS Nana, about 400 m. Apt 101 is about 200 m from BTS Asok.",
+   "tips": [
+    "Levels (6th floor of the Aloft hotel): a big club with three areas.",
+    "Sugar Club: hip-hop every night since 2014; the crowd dresses up.",
+    "Apt 101 (3rd floor, 233 Sukhumvit Rd): a 1970s-penthouse-style club with cocktails and disco and house nights.",
+    "Sing Sing Theater (Soi 45, closed Sunday-Monday, 20+) and Tictactoe (5th floor of EmSphere, Phrom Phong) are the stylish house-music options further east.",
+    "Insanity on Soi 11 has closed, though some guides still list it.",
+    "For underground techno go to Decho Road (Mustache, Subwerk) instead."
+   ],
+   "links": [
+    {"label": "Apt 101", "url": "https://www.apt101club.com/"},
+    {"label": "Levels", "url": "http://www.levelsclub.com/"},
+    {"label": "Sugar Club", "url": "https://www.sugarclub-bangkok.com/"}
+   ],
+   "sources": [
+    "https://www.nightlifeplus.app/post/best-nightclubs-bars-in-bangkok-the-2026-guide",
+    "https://www.myrsvp.com/editorial/best-nightclubs-bangkok/",
+    "https://badawards.bkmagazine.com/nightclubs/best-nightclubs-in-bangkok-for-2026/",
+    "https://www.google.com/maps/search/?api=1&query=Soi%20Sukhumvit%2011&query_place_id=ChIJ5yhiwOae4jARWAUxwZD2wE4",
+    "https://www.google.com/maps/search/?api=1&query=Levels%20Club%20Bangkok&query_place_id=ChIJl7VMGOae4jART2WWLs0Pv0Q",
+    "https://www.google.com/maps/search/?api=1&query=Sugar%20Club%20Bangkok&query_place_id=ChIJ22SE0auf4jARPuAb0KoHRoI",
+    "https://www.google.com/maps/search/?api=1&query=APT%20101%20Club&query_place_id=ChIJ30Iy7SOf4jARUh6OGc3sTKI",
+    "https://www.google.com/maps/search/?api=1&query=Insanity%20Nightclub%20Bangkok&query_place_id=ChIJ-S3s3eOe4jARrRD4X6S5RjE"
+   ],
+   "lat": 13.74422,
+   "lng": 100.55675,
+   "coordSource": "google-maps-street-listing+osm-way",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Soi Sukhumvit 11, Bangkok",
+   "verification": "Checked 21 Oct 2026. Nightlifeplus (6 Jul 2026): highest concentration of clubs, Levels and Sugar Club, covers 300-600 THB usually with a drink, weeknights often free. MyRSVP 2026: Sugar Club hip-hop since 2014 by Nana BTS; Sing Sing house nights, closed Sun-Mon, 20+ with ID. BK B.A.D. Awards (17 Sep 2026): Apt 101 best nightclub; Sing Sing and Tictactoe finalists. Google Maps: Levels 22:00-3:00, Sugar Club 22:00-4:00, Apt 101 Tue-Sun 20:00-2:00; Insanity marked closed. Distances from Google coordinates. Coords: Google street listing; OSM way 156261409 is 187 m away (long street), so medium.",
+   "placeId": "ChIJ5yhiwOae4jARWAUxwZD2wE4"
+  },
+  {
+   "id": "bkk-rca-royal-city-avenue",
+   "name": "RCA (Royal City Avenue): superclubs and VOID",
+   "nameThai": "อาร์ซีเอ (รอยัลซิตี้อเวนิว)",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A short avenue of very large clubs east of the centre, such as Onyx and Route 66, with festival-size sound and lasers. VOID, next to it, plays techno, progressive house and big-room and entered DJ Mag's Top 100 Clubs at number 67 in 2026. RCA is one of the zones where licensed clubs may stay open to 4:00.",
+   "openText": "Clubs nightly from about 21:00-22:00 to 4:00 (Route 66 and Onyx to 4:00, VOID to 3:45 on Google Maps). INAKOMA: Fridays 22:00-4:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Entry depends on the night and the DJ. INAKOMA hard-techno Fridays cost about 300-400 THB with free beer from 22:00 to 24:00.",
+   "bestTime": "Friday or Saturday after midnight.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 5},
+   "gettingThere": "Grab or taxi is easiest. MRT Phra Ram 9 is about 1.2 km away (15 minutes on foot).",
+   "tips": [
+    "Bring your original passport, not a copy: door staff check ID closely.",
+    "VOID: d&b audiotechnik sound, a 26 m LED wall and 16 lasers, international DJs most weekends, tables available.",
+    "INAKOMA plays 140-160 BPM techno, hard groove and schranz with 'no commercial sound'; RA lists its parties at Amnesia on RCA.",
+    "Route 66 has several rooms: hip-hop, EDM and house, and live bands.",
+    "Jodd Fairs night market is about 2 km away for dinner first."
+   ],
+   "links": [
+    {"label": "VOID Club", "url": "https://www.voidclubbkk.com/"},
+    {"label": "INAKOMA", "url": "https://www.inakomaevents.com/"},
+    {"label": "Onyx", "url": "https://onyxbangkok.club/"},
+    {"label": "Route 66", "url": "http://www.route66club.com/"}
+   ],
+   "sources": [
+    "https://www.nightlifeplus.app/post/best-nightclubs-bars-in-bangkok-the-2026-guide",
+    "https://www.myrsvp.com/editorial/best-nightclubs-bangkok/",
+    "https://badawards.bkmagazine.com/nightclubs/best-nightclubs-in-bangkok-for-2026/",
+    "https://loopliner.com/news/bangkok-club-closing-times-in-2026-who-actually-gets-to-4am",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://www.inakomaevents.com/",
+    "https://ra.co/guide/th/bangkok",
+    "https://www.google.com/maps/search/?api=1&query=Royal%20City%20Avenue%20RCA&query_place_id=ChIJP4-LN_We4jAROJrcy2NxdPg",
+    "https://www.google.com/maps/search/?api=1&query=VOID%20Club%20Bangkok&query_place_id=ChIJnSASQQef4jARcpLU7fFqW5U",
+    "https://www.google.com/maps/search/?api=1&query=ONYX%20Bangkok&query_place_id=ChIJwTYzfF-e4jARtBgAisGo--A",
+    "https://www.google.com/maps/search/?api=1&query=Route66%20Bangkok&query_place_id=ChIJszB0Zl-e4jARaFQI0eAScJQ",
+    "https://www.google.com/maps/search/?api=1&query=Amnesia%20RCA%20Bangkok&query_place_id=ChIJ79U-MWWf4jARukJLMD4z3BM"
+   ],
+   "lat": 13.75246,
+   "lng": 100.57493,
+   "coordSource": "google-maps-listing+osm-landuse",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Royal City Avenue (RCA), Huai Khwang, Bangkok",
+   "verification": "Checked 21 Oct 2026. Nightlifeplus (6 Jul 2026): festival-style clubs, bring the original passport. MyRSVP 2026: VOID debuted on the DJ Mag Top 100 at number 67 in 2026, 26 m LED wall, 16 lasers, d&b audiotechnik; Route 66 has several zones. BK B.A.D. Awards 2026: VOID a nightclub finalist. Loopliner (25 Aug 2026): RCA is a 4am zone for licensed venues. inakomaevents.com: Fridays 22:00-04:00, 'FREE DRINKS 300 BAHT', unlimited beer 22:00-24:00, 140-160 BPM; Loopliner (12 Aug 2026) gives 400 THB. RA lists INAKOMA parties at Amnesia. Google Maps hours: Route 66 21:00-4:00, Onyx 22:00-4:00, VOID 21:30-3:45, Amnesia closed Sunday. Distances from Google coordinates. Coords: Google 'Royal City Avenue (RCA)' listing; OSM retail area 176 m away, so medium.",
+   "placeId": "ChIJP4-LN_We4jAROJrcy2NxdPg"
+  },
+  {
+   "id": "bkk-ari",
+   "name": "Ari (cafes, food and small bars)",
+   "nameThai": "อารีย์",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A leafy, relaxed neighbourhood north of the centre, popular with young Thais for coffee, brunch and Thai food, with a handful of small bars at night. There are no big clubs. Come for a slow afternoon, an early dinner or live music.",
+   "openText": "Cafes from the morning; bars in the evening.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free to walk around.",
+   "bestTime": "Late afternoon into the evening; weekend brunch.",
+   "durationLabel": "2-3h",
+   "durationHours": {"min": 2, "max": 4},
+   "gettingThere": "BTS Ari, exit 3 for Soi Ari, where most cafes are.",
+   "tips": [
+    "Bar Luk Krung: live bands playing classic Thai songs, with cocktails made from local flavours.",
+    "Pakalolo Tiki & Vinyl Bar for cocktails and records; Jelly Roll Jazz Club for swing nights and live music.",
+    "Eat khao soi at Ong Thong or southern Thai home cooking at Aim Bangkok.",
+    "Use the BTS: road traffic is heavy at 7:00-9:00 and 17:00-19:30 on weekdays."
+   ],
+   "links": [
+    {"label": "Time Out: Ari guide", "url": "https://www.timeout.com/bangkok/things-to-do/ari"}
+   ],
+   "sources": [
+    "https://www.timeout.com/bangkok/things-to-do/ari",
+    "https://backpackingislife.com/where-to-stay-in-bangkok/",
+    "https://www.google.com/maps/search/?api=1&query=Ari%20BTS%20station&query_place_id=ChIJ32L9iR2c4jARHiq_Nd6a0ng"
+   ],
+   "lat": 13.77969,
+   "lng": 100.54465,
+   "coordSource": "google-maps-listing (BTS Ari station)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Soi Ari, Phaya Thai, Bangkok",
+   "verification": "Checked 21 Oct 2026. Time Out Ari guide (30 May 2026): relaxed, community feel; BTS Ari exit 3 near Soi Ari; avoid weekday rush hours 7-9 and 17:00-19:30; named cafes, restaurants (Ong Thong, Aim Bangkok) and bars (Bar Luk Krung, No Bar Wine Bar, Un-cle Bar, Brooks, Tempo Bar, Pakalolo, Jelly Roll Jazz Club). Backpackingislife (updated Oct 2026): residential Ari, not a main nightlife base. Pin: BTS Ari station on Google Maps; medium because the item is an area.",
+   "placeId": "ChIJ32L9iR2c4jARHiq_Nd6a0ng"
+  },
+  {
+   "id": "bkk-khao-san-road",
+   "name": "Khao San Road (backpacker street)",
+   "nameThai": "ถนนข้าวสาร",
+   "tier": "must-see",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "The famous backpacker street in the old town: open-air bars, buckets of cocktails, dancing on tables, street food and loud music. Fun to see for one night, and close to the Grand Palace and the Rajadamnern stadium. The music is mostly commercial, not underground.",
+   "openText": "Busy every night. Khao San is not a 4am zone, so most bars close around 2:00; a few licensed clubs, such as The Club, list later hours.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free to walk.",
+   "bestTime": "21:00-1:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 2, "max": 4},
+   "gettingThere": "No BTS or MRT nearby. Chao Phraya boat to Phra Arthit pier (about 600 m), or Grab. Rajadamnern Stadium is about 1.3 km away and Thipsamai about 1 km.",
+   "tips": [
+    "Police raided an unlicensed club on Khao San (OK Bar) on 10 Oct 2026 and tested the guests: 31 of 102 were positive for drugs. Do not take anything.",
+    "The Club Khaosan, number 71 in DJ Mag's Top 100 Clubs 2026, opens nightly from about 21:00.",
+    "Check drink prices before you order."
+   ],
+   "links": [
+    {"label": "The Club Khaosan", "url": "http://www.theclubkhaosan.com/"}
+   ],
+   "sources": [
+    "https://www.nightlifeplus.app/post/best-nightclubs-bars-in-bangkok-the-2026-guide",
+    "https://loopliner.com/news/bangkok-club-closing-times-in-2026-who-actually-gets-to-4am",
+    "https://djmag.com/top100clubs/2026/71/club-khaosan",
+    "https://www.khaosodenglish.com/life/nightlife/2026/10/10/khao-san-road-nightclub-raid-finds-31-drug-positive-patrons-minors-and-guns/",
+    "https://backpackingislife.com/where-to-stay-in-bangkok/",
+    "https://www.google.com/maps/search/?api=1&query=Khao%20San%20Road&query_place_id=ChIJDR23yhKZ4jARdqd5AHsct0A",
+    "https://www.google.com/maps/search/?api=1&query=The%20Club%20Khaosan&query_place_id=ChIJI1joEm2Z4jAR1RIdaTWebBQ"
+   ],
+   "lat": 13.75892,
+   "lng": 100.49726,
+   "coordSource": "google-maps-listing+osm-footway",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao San Road, Phra Nakhon, Bangkok",
+   "verification": "Checked 21 Oct 2026. Nightlifeplus (6 Jul 2026): backpacker strip with buckets, open-air bars and dancing on tables, best as a single night. Loopliner (25 Aug 2026): the 2026 Bangkok 4am zones are Ratchadaphisek, Silom and RCA. DJ Mag Top 100 Clubs 2026 page for The Club Khaosan (position 71 in the URL; page blocks fetching). Google Maps: The Club 21:00-4:00 nightly. Khaosod English (10 Oct 2026; seen via search summary because the page blocks fetching): raid on the unlicensed OK Bar, 102 patrons, 31 positive. Backpackingislife (Oct 2026): no train station nearby. Distances from Google coordinates. Coords: Google listing; OSM footway 3 m away.",
+   "placeId": "ChIJDR23yhKZ4jARdqd5AHsct0A"
+  },
+  {
+   "id": "bkk-mustache-decho-road",
+   "name": "Mustache Bangkok (house and techno club)",
+   "tier": "must-see",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A finalist for best nightclub in BK Magazine's 2026 awards, which call it the place for proper ravers and techno heads. A 700-capacity room on Decho Road in Silom with a VOID sound system and regular international DJs. The music is melodic techno, house and tech house; the team dropped hard techno in 2025.",
+   "openText": "Friday and Saturday only: doors 22:00, close 3:30.",
+   "days": ["Fri", "Sat"],
+   "feeText": "Usually presale 350 THB, door 500 THB, both with one drink before midnight. Special nights 500-1,700 THB.",
+   "bestTime": "Arrive by 23:30 so the free drink counts; the floor is fullest after 1:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 5},
+   "gettingThere": "Decho Road, just off Surawong Road: about 600 m (8-10 minutes) on foot from BTS Chong Nonsi or 800 m from MRT Sam Yan.",
+   "tips": [
+    "20+ with real ID (passport). No swim shorts, singlets or flip-flops.",
+    "Subwerk (hard techno) is in the same spot on Decho Road, and Elsewhere for after-hours is about 650 m away.",
+    "The calendar changes fast and some nights move to other venues (in Sept 2026 two nights were at ABUN dance on Sukhumvit Soi 11). Check the website the week you go.",
+    "For January 2027 the only date listed so far is Sat 16 Jan: Daft Funk Live, a Daft Punk tribute band (from 1,700 THB). It is a show, not a techno night.",
+    "Somboon Seafood (Surawong) is 200 m away for dinner before."
+   ],
+   "links": [
+    {"label": "Official site and tickets", "url": "https://mustachebangkok.com/"},
+    {"label": "Resident Advisor", "url": "https://ra.co/clubs/103558"}
+   ],
+   "sources": [
+    "https://mustachebangkok.com/",
+    "https://badawards.bkmagazine.com/nightclubs/best-nightclubs-in-bangkok-for-2026/",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://www.ravetimesth.com/post/best-techno-clubs-in-bangkok-2025-complete-guide",
+    "https://ra.co/guide/th/bangkok",
+    "https://www.google.com/maps/search/?api=1&query=Mustache%20Bangkok&query_place_id=ChIJATe7LoGe4jARsDKWeIcgu9E"
+   ],
+   "lat": 13.72724,
+   "lng": 100.52503,
+   "coordSource": "google-maps-listing+osm-street (Decho Road)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mustache Bangkok, Decho Road, Bang Rak",
+   "verification": "Checked 21 Oct 2026 on mustachebangkok.com: Friday and Saturday only, doors 22:00, close 03:30, 700 capacity, VOID Acoustics, 20+ with real ID, no swim shorts, singlets or flip-flops; presale 350 / door 500 THB incl. one drink before midnight; Halloween nights 500-1,000 THB; Sat 16 Jan 2027 Daft Funk Live from 1,700 THB; reopened 4 Sep 2026 and held takeovers at ABUN dance (Sukhumvit 11) on 11-12 Sep. BK B.A.D. Awards 2026 (17 Sep 2026): nightclub finalist, 'one for the proper ravers'. Loopliner (12 Aug 2026) and the Rave Times guide (updated 1 Aug 2026): melodic techno and house, hard techno dropped in 2025. Google Maps (892 reviews) open; the official site links this place ID. Distances from Google coordinates. Coords: Google listing at the north end of Decho Road; OSM way 707972261 (Decho Road) is within about 10 m.",
+   "placeId": "ChIJATe7LoGe4jARsDKWeIcgu9E"
+  },
+  {
+   "id": "bkk-subwerk",
+   "name": "Subwerk (hard techno and psytrance)",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A 350-capacity club on Decho Road run by Rave Times, the city's biggest techno community. It plays hard techno at 150-160 BPM and psytrance with weekly international guests, and has no tables and no dress code. It calls itself Bangkok's hardest underground club.",
+   "openText": "Friday and Saturday 22:00-3:00.",
+   "days": ["Fri", "Sat"],
+   "feeText": "Early bird 330 THB, presale 400 THB, door 500 THB; no drink included (Oct 2026).",
+   "bestTime": "After midnight.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 5},
+   "gettingThere": "Same spot on Decho Road as Mustache: about 600 m (8-10 minutes) on foot from BTS Chong Nonsi.",
+   "tips": [
+    "20+, ID or passport checked at the door.",
+    "The club asks guests not to smoke weed in front of the club; cannabis flower is a controlled drug in Thailand now.",
+    "Mustache and Subwerk sometimes sell one ticket for both clubs.",
+    "Rave Times also runs a monthly techno pool party at Centara Grand at CentralWorld (next on Sat 21 Nov 2026); check for a January date.",
+    "Subwerk moved to Decho Road in July 2025; ignore older addresses such as President Tower on Phloen Chit."
+   ],
+   "links": [
+    {"label": "Rave Times (tickets)", "url": "https://www.ravetimesth.com/"},
+    {"label": "Resident Advisor", "url": "https://ra.co/clubs/268814"},
+    {"label": "Instagram", "url": "https://www.instagram.com/subwerk_bkk/"}
+   ],
+   "sources": [
+    "https://ra.co/clubs/268814",
+    "https://www.ravetimesth.com/event-details-registration/hard-techno-w-effex-ger-subwerk-club-7",
+    "https://www.ravetimesth.com/",
+    "https://www.ravetimesth.com/post/best-techno-clubs-in-bangkok-2025-complete-guide",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://mustachebangkok.com/",
+    "https://www.tripadvisor.com/Attraction_Review-g293916-d28691288-Reviews-Subwerk_Techno_psy_Bangkok_Club-Bangkok.html",
+    "https://www.google.com/maps/search/?api=1&query=SUBWERK%20Bangkok&query_place_id=ChIJ4RQS5J-f4jARpdqJaiy5aMo"
+   ],
+   "lat": 13.72721,
+   "lng": 100.52505,
+   "coordSource": "google-maps-listing+osm-street (Decho Road)",
+   "coordConfidence": "high",
+   "gmapsQuery": "SUBWERK, 2 Decho Road, Bang Rak, Bangkok",
+   "verification": "Checked 21 Oct 2026. RA club page: 2, 1 and 2/3 Decho Rd, capacity 350, 78 events so far in 2026, Fri/Sat hard-techno nights by Rave Times listed to 31 Oct. Rave Times event page (Sat 24 Oct 2026): 22:00-03:00, early bird 330, presale 400, door 500 THB, no free drink, ID or passport 20+, no weed in public. Rave Times home: pool party at Centara Grand on 21 Nov, NYE party. Rave Times guide (updated 1 Aug 2026): new location since July 2025. Loopliner (12 Aug 2026): 135-160 BPM, no tables, no dress code. Mustache site: joint Mustache x Subwerk ticket on 5 Sep 2026. TripAdvisor shows the old President Tower address. Google Maps (404 reviews): Fri-Sat 22:00-3:00. Coords: Google listing, same spot as Mustache on Decho Road.",
+   "placeId": "ChIJ4RQS5J-f4jARpdqJaiy5aMo"
+  },
+  {
+   "id": "bkk-elsewhere-silom",
+   "name": "Elsewhere (after-hours listening bar, Silom)",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A small after-hours bar on the 9th floor of Trinity Complex in Silom, with a strong sound system and cocktails. It opens only late on Friday and Saturday nights and is busiest from 2:00 to 4:00, with minimal and deep house from local and guest DJs. It is where people go when Mustache and Subwerk close.",
+   "openText": "Friday and Saturday from about midnight to dawn (Google Maps lists 23:00-4:00).",
+   "days": ["Fri", "Sat"],
+   "feeText": "Cover depends on the night; check the RA listing.",
+   "bestTime": "2:00-4:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 2, "max": 4},
+   "gettingThere": "Trinity Complex, Soi Naradhiwas 3 in Silom: about 150 m from BTS Chong Nonsi and about 650 m from Decho Road.",
+   "tips": [
+    "It is a small room (about 60-100 people), so a group of eight should arrive together.",
+    "Trains stop around midnight; plan Grab cars home."
+   ],
+   "links": [
+    {"label": "Resident Advisor", "url": "https://ra.co/clubs/255279"},
+    {"label": "Instagram", "url": "https://www.instagram.com/elsewhere425/"}
+   ],
+   "sources": [
+    "https://ra.co/clubs/255279",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://www.google.com/maps/search/?api=1&query=Elsewhere%20Trinity%20Complex%20Bangkok&query_place_id=ChIJocIQWwCf4jARX4TG6_lGODA"
+   ],
+   "lat": 13.72459,
+   "lng": 100.5305,
+   "coordSource": "google-maps-listing+osm-building (Trinity Complex)",
+   "coordConfidence": "high",
+   "gmapsQuery": "Elsewhere, Trinity Complex, Silom, Bangkok",
+   "verification": "Checked 21 Oct 2026. RA club page: 3 Naradhiwas Rajanagarindra Rd, capacity 100, 'After hours bar with great sound system and cocktails. FRI & SAT - midnight to dawn', 86 events in 2026, next on Fri 23 Oct. Loopliner (12 Aug 2026): 58-capacity listening room on the 9th floor of Trinity Complex, peaking 2-4 AM, bookings from the Perlon and Giegling orbit. Google Maps (97 reviews): Fri-Sat 23:00-04:00. Distances from Google coordinates. Coords: Google listing; OSM Trinity Complex way 231413721 is 40 m away.",
+   "placeId": "ChIJocIQWwCf4jARX4TG6_lGODA"
+  },
+  {
+   "id": "bkk-bar-temp",
+   "name": "Bar Temp. (vinyl house and techno, near Chinatown)",
+   "tier": "hidden-gem",
+   "category": "nightlife",
+   "area": "bangkok",
+   "description": "A one-room, 120-capacity bar near Chinatown, opened in March 2025 by the team behind the More Rice label and people from the closed club Never Normal. DJs play vinyl-only house and techno. It is open Wednesday to Sunday, so it covers the nights when Mustache and Subwerk are closed, and it is close to the Yaowarat food stalls.",
+   "openText": "Wednesday, Thursday and Sunday 19:00-1:00; Friday and Saturday 19:00-3:00. Closed Monday and Tuesday.",
+   "days": ["Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free to 700 THB depending on the night (Aug 2026).",
+   "bestTime": "After dinner in Yaowarat, from about 22:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 2, "max": 4},
+   "gettingThere": "695 Soi 2, Maitri Chit Road: about 325 m from MRT Hua Lamphong and about 500 m from the Yaowarat food street.",
+   "tips": [
+    "Check Instagram @bartemp.bkk for the line-up.",
+    "Other vinyl bars for the same crowd: Clutch in Talat Noi, and Culture Cafe on Sam Sen Road (daily 19:00-3:00, minimal techno and deep house, cocktails about 180 THB)."
+   ],
+   "links": [
+    {"label": "Instagram", "url": "https://www.instagram.com/bartemp.bkk/"},
+    {"label": "Resident Advisor", "url": "https://ra.co/clubs/256041"}
+   ],
+   "sources": [
+    "https://ra.co/news/82330",
+    "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition",
+    "https://ra.co/guide/th/bangkok",
+    "https://www.google.com/maps/search/?api=1&query=Bar%20Temp%20Bangkok&query_place_id=ChIJ0YwjpWCZ4jARKrqMILnnqX4",
+    "https://www.google.com/maps/search/?api=1&query=Culture%20Cafe%20Sam%20Sen%20Bangkok&query_place_id=ChIJMThwEwuZ4jARV9Sx2E9-vIo"
+   ],
+   "lat": 13.73968,
+   "lng": 100.51482,
+   "coordSource": "google-maps-listing",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bar Temp., Maitri Chit Road, Pom Prap, Bangkok",
+   "verification": "Checked 21 Oct 2026. RA news (12 Mar 2025): opening weekend, 120 capacity, founded by the More Rice team with former Never Normal members and Human Spectrum, Wed/Thu/Sun 19:00-01:00 and Fri/Sat 19:00-03:00. Loopliner (12 Aug 2026): vinyl-only house and techno, Wed-Sun, covers from free to 700 THB; Culture Cafe a daily vinyl bar with 180-baht cocktails. Google Maps (64 reviews): same hours, Mon-Tue closed, not marked closed; Culture Cafe 19:00-3:00 daily. Distances from Google coordinates. Coords: Google listing (not in OSM).",
+   "placeId": "ChIJ0YwjpWCZ4jARKrqMILnnqX4"
+  },
+  {
+   "id": "bkk-rajadamnern-stadium",
+   "name": "Rajadamnern Stadium (Muay Thai every night)",
+   "nameThai": "เวทีมวยราชดำเนิน",
+   "tier": "must-see",
+   "category": "activity",
+   "area": "bangkok",
+   "description": "The stadium that calls itself the world's first Muay Thai stadium, on Ratchadamnoen Nok Road in the old town, with fights every night. Saturday is RWS (Rajadamnern World Series), the biggest show: three-round bouts, a five-round main event and free-flowing beer. Other nights have traditional cards.",
+   "openText": "Fights every night. Mon, Tue and Fri: Rajadamnern Knockout; Wed: New Power; Thu: Petchyindee; Sun: Kiatpetch (doors 17:00-18:00). Sat: RWS, doors 18:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "About 1,000 THB (third class), 1,500 (Leo section), 1,800 (Club Class), 2,500 (ringside) and 3,500 (Presidential box); some seats cost more on Saturday RWS nights (prices as of 15 Jul 2026).",
+   "bestTime": "Saturday RWS for the full show; arrive by 19:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 2.5, "max": 4},
+   "gettingThere": "8 Ratchadamnoen Nok Road: about 1.3 km (15-20 minutes) on foot from Khao San Road, or Grab.",
+   "tips": [
+    "Book RWS ahead on the official site; Saturdays sell out.",
+    "Wear light clothes; the stadium is warm.",
+    "The Leo section is the legal betting area: loud and fun to watch."
+   ],
+   "links": [
+    {"label": "Official tickets", "url": "https://rajadamnern.com/tickets/"},
+    {"label": "Official site", "url": "https://rajadamnern.com/"}
+   ],
+   "sources": [
+    "https://rajadamnern.com/",
+    "https://rajadamnern.com/tickets/",
+    "https://rajadamnern.com/seats-type/",
+    "https://muaythaistadiums.com/rajadamnern-stadium-seating-guide/",
+    "https://www.google.com/maps/search/?api=1&query=Rajadamnern%20Stadium&query_place_id=ChIJEyraT0CZ4jAREz5xKJKTLDM"
+   ],
+   "lat": 13.76099,
+   "lng": 100.5088,
+   "coordSource": "google-maps-listing+osm-way",
+   "coordConfidence": "high",
+   "gmapsQuery": "Rajadamnern Stadium, Ratchadamnoen Nok Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. rajadamnern.com: 'World's First Muay Thai Stadium', fights seven nights a week; RWS every Saturday, doors 18:00, three-round bouts with a five-round main event and free-flowing beer; Knockout Mon/Tue/Fri; New Power Wed; Petchyindee Thu; Kiatpetch Sun (doors 17:00; the ticket page says 18:00 for Knockout); address 8 Rajadamnern Nok Rd; dress lightly. The official pages give no prices; prices from the muaythaistadiums.com seating guide (published 21 Jul 2026, prices current as of 15 Jul 2026). Google Maps (10,824 reviews): 17:00-22:00 daily. Distance to Khao San from Google coordinates. Coords: Google listing; OSM stadium way 176753957 is 4 m away.",
+   "placeId": "ChIJEyraT0CZ4jAREz5xKJKTLDM"
+  },
+  {
+   "id": "bkk-lumpinee-stadium",
+   "name": "Lumpinee Stadium (ONE Friday Fights)",
+   "nameThai": "เวทีมวยลุมพินี",
+   "tier": "hidden-gem",
+   "category": "activity",
+   "area": "bangkok",
+   "description": "The 9,500-seat national Muay Thai stadium, now on Ram Intra Road in the north of the city. Every Friday ONE Championship runs ONE Friday Fights, about 14 bouts of Muay Thai, kickboxing and MMA, streamed live. Saturdays have the Lumpinee Stadium Championship.",
+   "openText": "ONE Friday Fights: Fridays, doors 17:30, fights from 18:30. Lumpinee Stadium Championship: Saturday evenings. Some Saturdays also have ONE Fight Night in the morning.",
+   "days": ["Fri", "Sat"],
+   "feeText": "ONE Friday Fights, 2026 prices: Cat 3 1,000 THB, Cat 2 2,500, Cat 1 3,500, ringside 5,000, plus a 30 THB fee; special nights cost more. Saturday cards from about 900 THB through resellers.",
+   "bestTime": "Friday; arrive by 18:00.",
+   "durationLabel": "evening",
+   "durationHours": {"min": 3, "max": 4},
+   "gettingThere": "Far north: MRT Pink Line to Ram Inthra 3 station (change from the BTS at Wat Phra Sri Mahathat), then about 750 m on foot. By Grab allow plenty of time in Friday traffic.",
+   "tips": [
+    "Tickets for 2027 were not on sale yet on 21 Oct 2026. The 2026 series ran from 16 Jan to 18 Dec, so check that your January Friday has a show.",
+    "Buy on the official ticket site (Thai Ticket Major) to avoid reseller mark-ups.",
+    "Cameras, selfie sticks and large bags are not allowed."
+   ],
+   "links": [
+    {"label": "Official tickets (Thai Ticket Major)", "url": "https://www.thaiticketmajor.com/sport/one-lumpinee-2026.html"},
+    {"label": "ONE Championship events", "url": "https://www.onefc.com/events/"}
+   ],
+   "sources": [
+    "https://www.thaiticketmajor.com/sport/one-lumpinee-2026.html",
+    "https://www.onefc.com/events/",
+    "https://lumpineestadium.com/",
+    "https://ftmuaythaitickets.com/product-category/bangkok/lumpinee-stadium-bangkok/",
+    "https://www.muaythaistadium.com/one-lumpinee",
+    "https://www.google.com/maps/search/?api=1&query=Lumpinee%20Boxing%20Stadium&query_place_id=ChIJwXS6niOf4jARlvv0kSxrmY4"
+   ],
+   "lat": 13.86705,
+   "lng": 100.60878,
+   "coordSource": "google-maps-listing+osm-node",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lumpinee Boxing Stadium, Ram Intra Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. Thai Ticket Major official page 'ONE Lumpinee & The Inner Circle': every Friday from 16 Jan to 18 Dec 2026, doors 17:30, show 18:30, Ringside 5,000 / Cat 1 3,500 / Cat 2 2,500 / Cat 3 1,000 THB plus 30 THB fee; 13 and 20 Nov cost more; no cameras, selfie sticks or large bags. onefc.com: Friday Fights at Lumpinee listed to Dec 2026. lumpineestadium.com: fights on Fridays and Saturdays, Saturday Lumpinee Stadium Championship and monthly Saturday-morning ONE Fight Night. ftmuaythaitickets: Saturday championship from 900 THB. muaythaistadium.com: 14 bouts from 18:30. Google Maps: 6 Ram Inthra Rd, '9,500-seat'. Distance to Ram Inthra 3 station (about 760 m) from Google coordinates. Coords: Google listing; OSM node 2962259464 is 7 m away.",
+   "placeId": "ChIJwXS6niOf4jARlvv0kSxrmY4"
+  },
+  {
+   "id": "bkk-thipsamai",
+   "name": "Thipsamai Pad Thai (Pratu Phi)",
+   "nameThai": "ทิพย์สมัย ผัดไทยประตูผี",
+   "tier": "food",
+   "category": "food",
+   "area": "bangkok",
+   "description": "A pad thai shop in the old town that reviews often call the original, with queues every evening. The signature is pad thai wrapped in a thin egg, cooked over high heat at the front, with fresh orange juice. Jay Fai, the street cook with a Michelin star, is a few doors away.",
+   "openText": "Daily 9:00-24:00, closed Tuesday.",
+   "days": ["Mon", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Superb pad thai wrapped in egg about 150 THB; fresh orange juice about 199 THB (2026 review; the juice price changes with the season).",
+   "bestTime": "Before 18:00 or after 21:00 to avoid the longest queue.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1.5},
+   "gettingThere": "313-315 Maha Chai Road: about 200 m from the Golden Mount and about 1 km (12-15 minutes) on foot from Khao San Road.",
+   "tips": [
+    "The queue moves fast, and you can order before you reach the door.",
+    "Jay Fai (327 Maha Chai Road) opens Wed-Sat 9:00-19:30, with very long waits for her crab omelette; most groups skip it.",
+    "Pair it with sunset at the Golden Mount."
+   ],
+   "links": [
+    {"label": "Official site", "url": "https://thipsamai.com/"}
+   ],
+   "sources": [
+    "https://thipsamai.com/",
+    "https://www.trvlogue.com/en/thipsamai-bangkok-pad-thai",
+    "https://www.bangkokpalace.com/experience/10-michelin-street-food-spots/",
+    "https://www.google.com/maps/search/?api=1&query=Thipsamai%20Bangkok&query_place_id=ChIJxU5YeBaZ4jARvm8EVZYGjGk",
+    "https://www.google.com/maps/search/?api=1&query=Raan%20Jay%20Fai&query_place_id=ChIJaxq89xaZ4jARQtKhE1uqq9c"
+   ],
+   "lat": 13.7528,
+   "lng": 100.50482,
+   "coordSource": "google-maps-listing+photon-osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Thipsamai, Maha Chai Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. thipsamai.com: 313-315 Mahachai Road, daily 9:00-24:00, closed Tuesday (special Tuesday opening on 13 Oct 2026); orange juice price varies by season. Trvlogue 2026 review: Superb Pad Thai with egg 150 THB, orange juice 199 THB, busiest 18:00-21:00, order in the queue. Bangkok Palace (2026): Jay Fai holds the city's only Michelin star for a street-food stall. Google Maps: Thipsamai 12,674 reviews, Tuesday closed; Raan Jay Fai Wed-Sat 9:00-19:30. Distances from Google coordinates. Coords: Google listing; Photon/OSM 4 m away.",
+   "placeId": "ChIJxU5YeBaZ4jARvm8EVZYGjGk"
+  },
+  {
+   "id": "bkk-somboon-seafood-surawong",
+   "name": "Somboon Seafood (Surawong): fried curry crab",
+   "nameThai": "สมบูรณ์โภชนา (สุรวงศ์)",
+   "tier": "food",
+   "category": "food",
+   "area": "bangkok",
+   "description": "The Thai-Chinese seafood restaurant known for fried curry crab since 1969, recommended in the Michelin Guide Thailand every year from 2018 to 2026. Michelin calls the Surawong branch its best. It is a big restaurant 200 m from the Decho Road clubs, good for a group dinner before a night out.",
+   "openText": "Daily 11:00-22:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Fried curry crab comes in three sizes; a small one cost 550 THB in May 2024 and may cost more now.",
+   "bestTime": "Dinner 18:00-20:00 before a club night on Decho Road.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1.5, "max": 2},
+   "gettingThere": "169 Surawong Road: about 600 m from MRT Sam Yan and 200 m from Mustache.",
+   "tips": [
+    "Order the fried curry crab, prawns baked with glass noodles, and fried sea bass with fish sauce.",
+    "Book a table for eight: 063-209-6969 or reservation@somboonseafood.com."
+   ],
+   "links": [
+    {"label": "Official site", "url": "http://www.somboonseafood.com/"},
+    {"label": "Michelin Guide", "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somboon-seafood-surawong"}
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somboon-seafood-surawong",
+    "http://www.somboonseafood.com/",
+    "https://www.theworldofstreetfood.com/2024/05/somboon-seafoods-legendary-fried-crab.html",
+    "https://www.google.com/maps/search/?api=1&query=Somboon%20Seafood%20Surawong&query_place_id=ChIJl-fumtGY4jARTrlCA7w6pgI"
+   ],
+   "lat": 13.72824,
+   "lng": 100.52663,
+   "coordSource": "google-maps-listing+osm-node",
+   "coordConfidence": "high",
+   "gmapsQuery": "Somboon Seafood, 169 Surawong Road, Bang Rak, Bangkok",
+   "verification": "Checked 21 Oct 2026. Michelin Guide page (Somboon Seafood, Bang Rak / Surawong): 11:00-22:00 every day, fried crab curry since 1969, 'several branches around town, but this remains the best'. somboonseafood.com (© 2569): 8 Bangkok branches, Surawong address, Michelin Guide Thailand 2018-2026, reservations 063-209-6969 and reservation@somboonseafood.com, signature dishes (curry crab, prawns with glass noodles, fried sea bass with fish sauce). Price: small curry crab 550 THB (theworldofstreetfood, May 2024). Google Maps: 11:00-22:00 daily. Distances from Google coordinates. Coords: Google listing; OSM node 4377059090 is 6 m away.",
+   "placeId": "ChIJl-fumtGY4jARTrlCA7w6pgI"
+  },
+  {
+   "id": "bkk-wattana-panich",
+   "name": "Wattana Panich (long-simmered beef soup, Ekkamai)",
+   "nameThai": "วัฒนาพานิช",
+   "tier": "food",
+   "category": "food",
+   "area": "bangkok",
+   "description": "A third-generation shop on Ekkamai Road known for beef noodle soup from a giant pot that has been kept going, topped up every day, since about 1974. Dark, rich broth with tender beef and tendon. Cheap and quick, and a good start to a Thonglor and Ekkamai night.",
+   "openText": "Daily about 10:00-19:00 (Google Maps, Oct 2026; a 2025 guide says 9:00-19:30). It closes early, so arrive before 18:30.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Beef noodle soup about 100 THB; a big bowl of stewed beef about 150 THB; goat or tendon in Chinese herbs about 200 THB (Apr 2025).",
+   "bestTime": "Late lunch, or 17:00-18:30.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1},
+   "gettingThere": "336 Ekkamai Road (Sukhumvit 63): about 1.6 km north of BTS Ekkamai, so take a motorbike taxi or Grab. About 450 m from Donki Mall Thonglor.",
+   "tips": [
+    "It was in the Michelin Guide in 2018-2019 and is no longer listed, but it is still busy with locals.",
+    "Then walk to Donki Mall Thonglor (MUIN) or the Ekkamai bars."
+   ],
+   "links": [
+    {"label": "Facebook page", "url": "https://www.facebook.com/WattanapanitSeriMarketThenine"}
+   ],
+   "sources": [
+    "https://www.phuket101.net/wattana-panich/",
+    "https://www.google.com/maps/search/?api=1&query=Wattana%20Panich%20Ekkamai&query_place_id=ChIJ-eIsmEme4jARJj2YJYuFOAA"
+   ],
+   "lat": 13.73418,
+   "lng": 100.58765,
+   "coordSource": "google-maps-listing+photon-osm",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wattana Panich, 336 Ekkamai Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. Phuket 101 (updated 27 Apr 2025): 336 Ekkamai Rd, 9:00-19:30 daily, prices (noodle soup about 100, stewed beef about 150, tendon or goat about 200 THB), pot simmering since about 1974, third generation, Michelin Guide 2018-2019 only. Google Maps (4,853 reviews): 10:00-19:00 daily, not marked closed. Distances from Google coordinates. Coords: Google listing; Photon/OSM 8 m away.",
+   "placeId": "ChIJ-eIsmEme4jARJj2YJYuFOAA"
+  },
+  {
+   "id": "bkk-ayutthaya-day-trip",
+   "name": "Ayutthaya day trip (old capital ruins)",
+   "nameThai": "พระนครศรีอยุธยา",
+   "tier": "day-trip",
+   "category": "culture",
+   "area": "bangkok",
+   "description": "The ruins of the old capital, listed by UNESCO as the Historic City of Ayutthaya, about 75 minutes north of Bangkok by train. Brick prangs and old temples fill the island, including Wat Mahathat with its Buddha head in tree roots and Wat Chaiwatthanaram on the far bank. Rent bikes or a tuk-tuk to get around.",
+   "openText": "Temples daily about 8:00-18:00; Wat Mahathat to 18:30.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "80 THB per major temple, or 300 THB for a 7-temple pass. Train about 20-50 THB each way; Grab about 900 THB per car each way.",
+   "bestTime": "Leave Bangkok 7:00-9:00; the ruins are very hot from 11:00 to 15:00.",
+   "durationLabel": "full-day",
+   "durationHours": {"min": 8, "max": 10},
+   "gettingThere": "From Krung Thep Aphiwat (Bang Sue): Bangkok Connex train, 75 minutes, at 09:05 and 18:15 daily and 05:15 on weekdays (50 THB launch fare until 31 Oct 2026, so it may change); or one of about 16 long-distance trains, 50-80 minutes, about 20 THB in third class. Slow trains from Hua Lamphong take 1.5-2 hours. Vans from Mo Chit 2: 150-220 THB. Grab about 900 THB per car.",
+   "tips": [
+    "From Ayutthaya station take the 10 THB ferry to the island and rent bikes there (60-100 THB a day); the last boat is around 17:30.",
+    "Ride Wat Mahathat, Wat Ratchaburana and Wat Phra Si Sanphet in the middle, then Wat Chaiwatthanaram after lunch.",
+    "Back to Bangkok: Bangkok Connex at 14:40 or 19:45, or the 16:48 day train.",
+    "Temple dress rules apply: cover shoulders and knees."
+   ],
+   "links": [
+    {"label": "Bangkok to Ayutthaya guide (Oct 2026)", "url": "https://www.visitthailandtoday.com/guides/bangkok-to-ayutthaya"}
+   ],
+   "sources": [
+    "https://www.visitthailandtoday.com/guides/bangkok-to-ayutthaya",
+    "https://ayutthaya-history.com/ce_admissionfee.html",
+    "https://en.wikipedia.org/wiki/Wat_Mahathat_(Ayutthaya)",
+    "https://www.google.com/maps/search/?api=1&query=Wat%20Mahathat%20Ayutthaya&query_place_id=ChIJ-UkaTEl04jAR2QgEGFAM1dU",
+    "https://www.google.com/maps/search/?api=1&query=Ayutthaya%20railway%20station&query_place_id=ChIJOWdx1bZ14jARb_tBng66WJs",
+    "https://www.google.com/maps/search/?api=1&query=Krung%20Thep%20Aphiwat%20Central%20Terminal&query_place_id=ChIJnayCOG2c4jARhcE4k67qbIw"
+   ],
+   "lat": 14.35694,
+   "lng": 100.56751,
+   "coordSource": "google-maps-listing (Wat Mahathat)+osm-node",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wat Mahathat, Ayutthaya",
+   "verification": "Checked 21 Oct 2026. visitthailandtoday Bangkok-Ayutthaya guide (updated 3 Oct 2026): Bangkok Connex 75 min from Krung Thep Aphiwat, 50 THB launch fare through 31 Oct 2026, departures 09:05, 18:15 and 05:15 weekdays, returns 14:40 and 19:45 (one timetable lists 19:45 as weekdays only); about 16 long-distance trains, 50-80 min, about 20 THB third class; ordinary trains from Hua Lamphong 1.5-2 h; vans 150-220 THB; Grab about 900 THB; ferry 10 THB, last boat about 17:30; bikes 60-100 THB; temples 80 THB each or 300 THB for seven; most sites 8:00-18:00, Wat Mahathat to 18:30; 16:48 day train. ayutthaya-history.com fee page (© 2009-2026): 80 THB and 300 THB pass. Wikipedia: Historic City of Ayutthaya World Heritage listing and the tree-roots Buddha head photo. Google Maps: Wat Mahathat 8:00-18:30. Coords: Google listing; OSM info board 128 m away.",
+   "placeId": "ChIJ-UkaTEl04jAR2QgEGFAM1dU"
+  },
+  {
+   "id": "bkk-damnoen-saduak-maeklong",
+   "name": "Damnoen Saduak floating market and Maeklong railway market",
+   "nameThai": "ตลาดน้ำดำเนินสะดวก และตลาดร่มหุบแม่กลอง",
+   "tier": "day-trip",
+   "category": "market",
+   "area": "bangkok",
+   "description": "Two classic morning sights about 1.5-2 hours south-west of Bangkok. At Damnoen Saduak, vendors sell food from boats on narrow canals; it is popular with tour groups, so go early. At Maeklong, stalls sit on the railway line and pull back their awnings minutes before the train passes.",
+   "openText": "Damnoen Saduak: mornings, about 7:00-13:00. Maeklong trains arrive at 08:30, 11:10, 14:30 and 17:40 and leave at 06:20, 09:00, 11:30 and 15:30.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "No entry fee. Boats at Damnoen Saduak are priced per boat: a rowing boat about 300-400 THB, a longtail about 600 THB for about an hour at Yuwanda Pier. Shared tours from Bangkok start at about US$18 per person.",
+   "bestTime": "Leave Bangkok by 6:30-7:00: Damnoen Saduak by 8:00-9:00, then Maeklong for the 11:10 train (or Maeklong first for the 08:30 train).",
+   "durationLabel": "full-day",
+   "durationHours": {"min": 6, "max": 8},
+   "gettingThere": "Easiest with a tour, or a private van with driver for the group. Public transport: buses from Bangkok's Southern Bus Terminal to Damnoen Saduak; Maeklong by train needs two trains and a ferry via Maha Chai. The two markets are about 13 km apart in a straight line.",
+   "tips": [
+    "Before you pay for a boat, agree whether the price is per boat or per person, the route and the time.",
+    "Touts at the bus drop-off may say a boat tour is the only way to see the market; you can walk past them.",
+    "At Maeklong stand clear of the rails and follow the stall-holders.",
+    "Bring cash in small notes."
+   ],
+   "links": [
+    {"label": "Damnoen Saduak guide (GoAsia, Oct 2026)", "url": "https://goasia.cc/en/article/damnoen-saduak-floating-market"},
+    {"label": "Maeklong railway market guide (GoAsia, Oct 2026)", "url": "https://goasia.cc/en/article/maeklong-railway-market"}
+   ],
+   "sources": [
+    "https://goasia.cc/en/article/damnoen-saduak-floating-market",
+    "https://goasia.cc/en/article/maeklong-railway-market",
+    "https://thaiest.com/blog/damnoen-saduak-floating-market",
+    "https://www.click2gothailand.com/tours/00308",
+    "https://www.google.com/maps/search/?api=1&query=Damnoen%20Saduak%20Floating%20Market&query_place_id=ChIJUR_9ybjX4jAR2-EHiTbQTlg",
+    "https://www.google.com/maps/search/?api=1&query=Maeklong%20Railway%20Market&query_place_id=ChIJ10pbl47T4jAR7qFFA1HY2Ds"
+   ],
+   "lat": 13.52017,
+   "lng": 99.9586,
+   "coordSource": "google-maps-listing+osm-marketplace",
+   "coordConfidence": "high",
+   "gmapsQuery": "Damnoen Saduak Floating Market, Ratchaburi",
+   "verification": "Checked 21 Oct 2026. GoAsia Damnoen Saduak guide (updated 7 Oct 2026, citing a TAT article of 9 Dec 2025): a morning market, arrive early; rowing boat 300-400 THB and longtail 600 THB at Yuwanda Pier; check per person vs per boat. GoAsia Maeklong guide (updated 20 Oct 2026): arrivals 08:30, 11:10, 14:30, 17:40 and departures 06:20, 09:00, 11:30, 15:30; no direct train from Bangkok, route via Wongwian Yai, Maha Chai ferry and Ban Laem. Thaiest guide: buses from the Southern Bus Terminal, 1.5-2 hours, touts at the drop-off. click2gothailand: combined tour from US$17.58. Google Maps: Damnoen Saduak 7:00-13:00 daily; Maeklong market 7:00-16:00. Straight-line distance from Google coordinates. Coords: Google listing; OSM marketplace way 603657447 is 93 m away.",
+   "placeId": "ChIJUR_9ybjX4jAR2-EHiTbQTlg"
+  },
+  {
+   "id": "bkk-bang-krachao",
+   "name": "Bang Krachao (cycling the green lung)",
+   "nameThai": "บางกะเจ้า",
+   "tier": "day-trip",
+   "category": "nature",
+   "area": "bangkok",
+   "description": "Bangkok's 'green lung': a loop of the Chao Phraya River with parks and quiet lanes, a short boat ride from Khlong Toei. Rent bikes at the landing and ride to Sri Nakhon Khuean Khan Park. A slow, green half-day that feels far from the city.",
+   "openText": "Ferry daily 6:00-20:00; park 5:00-19:00; bike shops about 8:00-18:00. Bang Nam Phueng floating market: Saturday and Sunday 7:30-16:00.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Ferry 10-20 THB each way; bikes 30-80 THB a day; the park is free.",
+   "bestTime": "Start by 8:00-9:00, before the heat. On weekends add the floating market for lunch.",
+   "durationLabel": "half-day",
+   "durationHours": {"min": 4, "max": 5},
+   "gettingThere": "MRT Khlong Toei, then a short Grab (or a 30-minute walk) to Wat Khlong Toei Nok pier. Cross by boat; bikes are at the landing.",
+   "tips": [
+    "Keep your return ferry ticket.",
+    "Pay the posted fare: 20 THB on the big boat or 10 THB on the small one each way.",
+    "Bring water and sunscreen."
+   ],
+   "links": [
+    {"label": "Bang Krachao guide (updated Sep 2026)", "url": "https://www.bucketlistly.blog/posts/bang-krachao-travel-guide-things-to-do"}
+   ],
+   "sources": [
+    "https://www.bucketlistly.blog/posts/bang-krachao-travel-guide-things-to-do",
+    "https://www.google.com/maps/search/?api=1&query=Sri%20Nakhon%20Khuean%20Khan%20Park&query_place_id=ChIJ_1wg6Xqf4jARwu_tBPmKbmU",
+    "https://www.google.com/maps/search/?api=1&query=Bang%20Nam%20Phueng%20Floating%20Market&query_place_id=ChIJKwJFMuOh4jARjfm5FZkCxxY",
+    "https://www.google.com/maps/search/?api=1&query=Wat%20Khlong%20Toei%20Nok%20Pier&query_place_id=ChIJ_457fnKf4jAR-bTcKWJ53jI"
+   ],
+   "lat": 13.69684,
+   "lng": 100.56492,
+   "coordSource": "google-maps-listing (Sri Nakhon Khuean Khan Park)+osm-park",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sri Nakhon Khuean Khan Park, Bang Krachao",
+   "verification": "Checked 21 Oct 2026. Bucketlistly guide (updated 26 Sep 2026): MRT Khlong Toei then taxi or a 30-min walk to Wat Khlong Toei Nok pier; boat 20 THB (big) or 10 THB (small) each way, 6:00-20:00, keep the return ticket, do not overpay; bikes 30-80 THB a day, shops about 8:00-18:00; park 5:00-19:00, no entrance fee; Bang Nam Phueng market on Saturdays and Sundays only. Google Maps: park 5:00-19:00 daily; Bang Nam Phueng Sat-Sun 7:30-16:00; pier listing (OSM ferry terminal 5 m away). Coords: Google park listing; OSM park polygon centre 207 m away.",
+   "placeId": "ChIJ_1wg6Xqf4jARwu_tBPmKbmU"
+  },
+  {
+   "id": "bkk-pak-khlong-talat",
+   "name": "Pak Khlong Talat (24-hour flower market)",
+   "nameThai": "ปากคลองตลาด",
+   "tier": "hidden-gem",
+   "category": "market",
+   "area": "bangkok",
+   "description": "Bangkok's big wholesale flower and produce market on Chak Phet Road, near the river and Wat Pho. It never closes, and around midnight the flowers from all over Thailand arrive. A short, colourful stop late at night in the old town.",
+   "openText": "Open 24 hours; the flower trade is busiest around midnight.",
+   "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+   "feeText": "Free.",
+   "bestTime": "22:00-2:00.",
+   "durationLabel": "1-2h",
+   "durationHours": {"min": 1, "max": 1},
+   "gettingThere": "About 300 m from MRT Sanam Chai; about 10 minutes on foot from Wat Pho.",
+   "tips": [
+    "Part of the trade has moved out of town over the years, so it is smaller than it was (Time Out, 2019; may have changed).",
+    "Yodpiman Riverwalk next door has riverside seating (9:00-21:00)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/search/?api=1&query=Pak%20Khlong%20Talat&query_place_id=ChIJL-UmnhyZ4jARuwY-UTadgnI",
+    "https://www.timeout.com/bangkok/things-to-do/bangkok-flower-market-pak-khlong-market",
+    "https://www.google.com/maps/search/?api=1&query=Yodpiman%20Riverwalk&query_place_id=ChIJi8aGSwOZ4jAR_VG0EV0oKII"
+   ],
+   "lat": 13.74168,
+   "lng": 100.49638,
+   "coordSource": "google-maps-listing+osm-marketplace",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pak Khlong Talat flower market, Chak Phet Road, Bangkok",
+   "verification": "Checked 21 Oct 2026. Google Maps listing (16,182 reviews): flower market, open 24 hours, not marked closed. Time Out page (21 Sep 2019, may be out of date): open 24 hours, best at midnight when flowers from around Thailand and imports arrive; parts of the market moved out of town. Yodpiman Riverwalk 9:00-21:00 on Google Maps. Distances to MRT Sanam Chai and Wat Pho from Google coordinates. Coords: Google listing; OSM marketplace way 1423814928 is 6 m away.",
+   "placeId": "ChIJL-UmnhyZ4jARuwY-UTadgnI"
+  }
+ ],
+ "essentials": [
+  {
+   "title": "Getting to Bangkok from Phuket",
+   "text": "Fly. The flight takes 1 h 20 min to 1 h 45 min, with about 50-60 nonstop flights a day from about 06:30 to after 23:00. Don Mueang (DMK) has the low-cost airlines Thai AirAsia, Nok Air and Thai Lion Air; Suvarnabhumi (BKK) has THAI, Bangkok Airways, Thai Vietjet and some Thai AirAsia flights. Google Flights on 21 Oct 2026, one way, Fri 15 Jan 2027: Phuket to DMK from 1,608 THB (Thai AirAsia), 1,673 (Nok Air) or 1,995 (Thai Lion Air); Phuket to BKK from 1,694 (Thai Vietjet), 2,411 (Thai AirAsia), 2,530 (Bangkok Airways) or 2,555 (THAI). Back on Sun 17 Jan from 1,502 THB (BKK, Thai Vietjet) or 1,608 THB (DMK). Low-cost fares are before checked bags. If your flight home leaves from BKK, fly into BKK: crossing between the two airports takes 60-90 minutes. Phuket airport is about 50 min by car from Patong, 55-60 min from Kata and 65-75 min from Rawai; add 20-30 min on high-season evenings and arrive 90 min to 2 h before take-off. From Koh Phangan (after 23 Jan): only Bangkok Airways flies Koh Samui to Bangkok, from 5,900 THB on Sat 23 Jan; Surat Thani to DMK starts at 1,500 THB (Thai AirAsia) but needs the boat and a bus first.",
+   "links": [
+    {"label": "Google Flights: Phuket to Don Mueang, 15 Jan 2027", "url": "https://www.google.com/travel/flights?q=Flights%20to%20DMK%20from%20HKT%20on%202027-01-15%20one%20way&curr=THB&hl=en&gl=th"},
+    {"label": "Google Flights: Phuket to Suvarnabhumi, 15 Jan 2027", "url": "https://www.google.com/travel/flights?q=Flights%20to%20BKK%20from%20HKT%20on%202027-01-15%20one%20way&curr=THB&hl=en&gl=th"},
+    {"label": "Google Flights: Suvarnabhumi to Phuket, 17 Jan 2027", "url": "https://www.google.com/travel/flights?q=Flights%20to%20HKT%20from%20BKK%20on%202027-01-17%20one%20way&curr=THB&hl=en&gl=th"},
+    {"label": "Google Flights: Koh Samui to Bangkok, 23 Jan 2027", "url": "https://www.google.com/travel/flights?q=Flights%20to%20BKK%20from%20USM%20on%202027-01-23%20one%20way&curr=THB&hl=en&gl=th"},
+    {"label": "Google Flights: Surat Thani to Don Mueang, 23 Jan 2027", "url": "https://www.google.com/travel/flights?q=Flights%20to%20DMK%20from%20URT%20on%202027-01-23%20one%20way&curr=THB&hl=en&gl=th"},
+    {"label": "Phuket to Bangkok guide (updated 3 Oct 2026)", "url": "https://www.visitthailandtoday.com/guides/phuket-to-bangkok"}
+   ]
+  },
+  {
+   "title": "From the airport to the city",
+   "text": "Suvarnabhumi (BKK): the Airport Rail Link runs 05:30-24:00, every 10-13 minutes, for 15-45 THB; Phaya Thai (for the BTS) is 45 THB and 27 minutes, and Makkasan connects to the MRT. You can tap a contactless bank card at the gates. A taxi to the centre costs about 400-600 THB including the 50 THB airport fee and about 75 THB in tolls, and takes 45 minutes to over an hour; Grab costs about 400-600 THB from Level 1, Gate 4. Don Mueang (DMK): the SRT Red Line from the skywalk on floor 2 costs 33 THB to Krung Thep Aphiwat for the MRT Blue Line (about 05:00-24:00); bus A1 (30 THB) goes to BTS Mo Chit and bus A2 (30 THB) to Victory Monument; a taxi costs about 250-400 THB plus the 50 THB fee and tolls (the Don Mueang Tollway alone is 90 THB). Eight people with bags need two cars or a van.",
+   "links": [
+    {"label": "Bangkok airport to city (updated 8 Oct 2026)", "url": "https://www.visitthailandtoday.com/guides/bangkok-airport-to-city"},
+    {"label": "Wikivoyage: Bangkok, Get in", "url": "https://en.wikivoyage.org/wiki/Bangkok#Get_in"}
+   ]
+  },
+  {
+   "title": "Getting around Bangkok",
+   "text": "BTS Skytrain: buy single tickets or a Rabbit card (100 THB issue fee; bring your passport). Bank cards do not work at BTS gates yet. Fares depend on distance, from 17 THB; trips that run onto the extensions are capped at 65 THB (since 1 Nov 2025). MRT Metro: tap a contactless Visa or Mastercard at the gate (not Apple Pay or Google Pay). Both run about 06:00-24:00, so after clubs use Grab, Bolt or a metered taxi; eight people need two cars. A single 17-45 THB fare for all lines is planned from 1 Jan 2027, but the rules were not final in Oct 2026. River: the Chao Phraya Express Boat (orange flag) costs about 18-19 THB flat; fares changed several times in 2026 with diesel prices, and some daytime runs use other flag colours, so check the flag and its stops at the pier. The blue-flag tourist boat costs 40 THB a ride or 150 THB for a day pass (Jan 2026) and no longer stops at Tha Tien. The cross-river ferry from Tha Tien to Wat Arun costs a few baht. Tuk-tuks: agree the price before you get in.",
+   "links": [
+    {"label": "Wikivoyage: Bangkok, Get around", "url": "https://en.wikivoyage.org/wiki/Bangkok#Get_around"},
+    {"label": "BTS fare change, 1 Nov 2025 (The Nation)", "url": "https://www.nationthailand.com/news/general/40057608"},
+    {"label": "Rabbit card and BTS tickets (Aug 2026)", "url": "https://littlebigreddot.com/bangkok-bts-ticket-rabbit-card-day-pass/"},
+    {"label": "Unified 17-45 THB fare plan (Thairath, 23 Jun 2026)", "url": "https://en.thairath.co.th/news/politic/2941459"},
+    {"label": "Chao Phraya Express Boat", "url": "https://www.chaophrayaexpressboat.com/"},
+    {"label": "Boat fare cut from 20 Jun 2026 (Bangkok Biz News)", "url": "https://www.bangkokbiznews.com/news/news-update/1238976"},
+    {"label": "Blue-flag tourist boat (Jan 2026)", "url": "https://thaiest.com/thailand/bangkok/blue-flag-boat"},
+    {"label": "Boats and ferry to Wat Arun (Lukfoto, Oct 2026)", "url": "https://lukfoto.com/visiting-wat-arun-guide/"}
+   ]
+  },
+  {
+   "title": "Where to stay for nightlife",
+   "text": "Sukhumvit between Nana/Asok and Thong Lo/Ekkamai is the easiest base: BTS and MRT, the Soi 11 clubs, Thonglor bars and rooftops. The side streets around Nana have a red-light scene. Silom and Sathorn (BTS Sala Daeng or Chong Nonsi, MRT Silom or Sam Yan) are best for the underground clubs: Mustache, Subwerk and Elsewhere are 10-15 minutes on foot, and Sky Bar and the Mahanakhon SkyWalk are close. The Old Town and Khao San are cheap and next to the temples and Rajadamnern, but loud at night and with no train station. The riverside is calm and pretty but has little nightlife. For eight people, book rooms in one hotel or a serviced apartment near a station. Renting a condo apartment for less than 30 days without a hotel licence breaks the Hotel Act and many building rules, and inspections increased in 2025, so choose licensed places.",
+   "links": [
+    {"label": "Where to stay in Bangkok (updated Oct 2026)", "url": "https://backpackingislife.com/where-to-stay-in-bangkok/"},
+    {"label": "Short-term rental rules in Thailand (Dec 2025)", "url": "https://www.thailand-business-news.com/law/221411-legal-issues-surrounding-short-term-rentals-in-thailand"}
+   ]
+  },
+  {
+   "title": "Club nights: closing times, ID and dress",
+   "text": "Closing times in 2026: bars without an entertainment licence close at midnight and licensed clubs at 2:00. Only venues in the Silom, RCA and Ratchadaphisek zones that were licensed before the zone rules may stay open to 4:00; Thonglor closes at 2:00. The old 14:00-17:00 ban on alcohol sales has been lifted. Bring your original passport, not a copy: clubs check ID and the legal drinking age is 20. Covers at the main clubs are about 300-700 THB, often with a drink; presale tickets are cheaper (Mustache 350 instead of 500 THB). Dress: no flip-flops, singlets or swim shorts at Mustache; Thonglor clubs and rooftops want a collared shirt and real shoes; Subwerk has no dress code. BTS and MRT stop around midnight and restart about 06:00, so plan Grab rides home.",
+   "links": [
+    {"label": "Bangkok club closing times in 2026 (Loopliner, 25 Aug 2026)", "url": "https://loopliner.com/news/bangkok-club-closing-times-in-2026-who-actually-gets-to-4am"},
+    {"label": "House and techno clubs, 2026 (Loopliner, 12 Aug 2026)", "url": "https://loopliner.com/news/the-best-house-and-techno-clubs-in-bangkok-2026-edition"},
+    {"label": "Bangkok nightlife areas (Nightlife+, 6 Jul 2026)", "url": "https://www.nightlifeplus.app/post/best-nightclubs-bars-in-bangkok-the-2026-guide"},
+    {"label": "Mustache door rules", "url": "https://mustachebangkok.com/"},
+    {"label": "Subwerk ticket rules", "url": "https://www.ravetimesth.com/event-details-registration/hard-techno-w-effex-ger-subwerk-club-7"}
+   ]
+  },
+  {
+   "title": "Drugs, police raids, cannabis and vapes",
+   "text": "Police raid bars and clubs and can order urine tests for every foreign guest. On 5 Jul 2026 more than 100 tourists at two unlicensed bars in Ratchadamri were tested and one was charged; on 10 Oct 2026, 31 of 102 guests at an unlicensed club on Khao San Road tested positive. A positive test is an offence. Since 23 Jun 2025 cannabis flower is a controlled herb: tourists may not buy, carry or use it without a Thai prescription, and walk-in shops may be operating illegally. E-cigarettes and vapes are banned; in a case reported in April 2026, two tourists paid a 40,000 THB fine after vaping on a beach. Licensed, well-known venues are a safer choice than new pop-up bars.",
+   "links": [
+    {"label": "Ratchadamri bar raid (Thairath, 5 Jul 2026)", "url": "https://en.thairath.co.th/news/crime/2944179"},
+    {"label": "Khao San club raid (Khaosod English, 10 Oct 2026)", "url": "https://www.khaosodenglish.com/life/nightlife/2026/10/10/khao-san-road-nightclub-raid-finds-31-drug-positive-patrons-minors-and-guns/"},
+    {"label": "TAT: cannabis notice for tourists (Jun 2025)", "url": "https://www.tatnews.org/2025/06/cannabis-flower-now-strictly-regulated-in-thailand-important-notice-for-tourists/"},
+    {"label": "Vaping fines (Fox News, Apr 2026)", "url": "https://www.foxnews.com/travel/vacation-hot-spot-cracks-down-vaping-jail-threats-hefty-fines"}
+   ]
+  },
+  {
+   "title": "Scams and safety",
+   "text": "The Grand Palace and the big temples are open every day. Anyone outside who says they are closed and offers a cheap tuk-tuk tour is running the gem-shop scam; the gems are cut glass. Use Grab, or insist on the meter in taxis, and agree tuk-tuk prices first. Do not ask drivers for bar tips: they take you where they get commission. Avoid bars you cannot see into from the street; drink spiking has been reported in some go-go bars. Keep phones and wallets in front pockets in the Chatuchak and Yaowarat crowds. Numbers: Tourist Police 1155 (English, 24 hours), police 191, ambulance 1669.",
+   "links": [
+    {"label": "Wikivoyage: Bangkok, Stay safe", "url": "https://en.wikivoyage.org/wiki/Bangkok#Stay_safe"},
+    {"label": "Gem scam (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Gem_scam"},
+    {"label": "Important phone numbers (Thai government)", "url": "https://www.thailand.go.th/issue-focus-detail/009_152"},
+    {"label": "Grand Palace opening days", "url": "https://www.royalgrandpalace.th/en/visit/practical-information"}
+   ]
+  },
+  {
+   "title": "Weather and what to wear in January",
+   "text": "January is the dry, cooler season: average highs about 33°C and lows about 23°C, with about 2 rainy days in the month (1991-2020 averages). Sunrise is about 06:45 and sunset about 18:05-18:15. Temples (Grand Palace, Wat Pho, Wat Arun, Golden Mount, Ayutthaya) need covered shoulders and knees: no tank tops, crop tops, see-through tops, shorts, mini skirts, or ripped, tight or cycling trousers. Pack light long trousers or a long skirt and a T-shirt with sleeves. For rooftops and clubs wear smart casual clothes and closed shoes, no flip-flops or singlets. Wear shoes with grip for the Wat Arun steps and the 344 steps of the Golden Mount.",
+   "links": [
+    {"label": "Bangkok climate (Wikipedia, NOAA 1991-2020)", "url": "https://en.wikipedia.org/wiki/Bangkok#Climate"},
+    {"label": "Grand Palace dress code", "url": "https://www.royalgrandpalace.th/en/visit/practical-information"},
+    {"label": "Sky Bar dress code (lebua FAQ)", "url": "https://lebua.com/faq/"},
+    {"label": "Golden Mount steps and dress (Lukfoto)", "url": "https://lukfoto.com/wat-saket-golden-mount-temple/"}
+   ]
+  }
+ ]
+}

@@ -285,6 +285,16 @@
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
+  // a tap outside a pop-up (on the dim backdrop) closes it, like Cancel; the add sheet keeps what you typed as a draft
+  document.addEventListener('click', (e) => {
+    const d = e.target
+    if (!(d instanceof HTMLDialogElement) || !d.open) return
+    const r = d.getBoundingClientRect()
+    if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) return
+    const cancel = d.querySelector('[data-vote-cancel]')
+    if (cancel) cancel.click(); else d.close()
+  })
+
   /* ---------- Directions: from one of our villas, or from where you are now ---------- */
   // every Directions link carries its destination (data-dir="lat,lng"); with our villas known, a tap asks where from.
   // The villa you sleep in tonight comes first. Without JavaScript the link itself goes from your current location
@@ -1653,12 +1663,15 @@
     let mine = ''
     if (me && !pay) {
       const total = parts.reduce((a, [, c]) => a + c, 0), part = (parts.find(([p]) => p === me) || [])[1] || 0
-      mine = x.paid === me ? (total - part > 0 ? '<small class="good">you lent ' + esc(moneyNum(total - part, x.cur, rateOf(x))) + '</small>' : '')
-        : part > 0 ? '<small class="bad">your part ' + esc(moneyNum(part, x.cur, rateOf(x))) + '</small>' : '<small>not in it</small>'
+      mine = x.paid === me ? (total - part > 0 ? '<small class="good">you lent ' + esc(money(total - part)) + '</small>' : '')
+        : part > 0 ? '<small class="bad">your part ' + esc(money(part)) + '</small>' : '<small>not in it</small>'
     }
+    // the amount in the currency you chose (Show amounts in), and the original under it when it was another one
+    const shown = x.cur === showCur ? orig(x) : '≈' + money(centsOf(x))
+    const under = x.cur === showCur ? '' : '<small class="x-orig">' + esc(orig(x)) + '</small>'
     return '<button class="xrow" type="button" data-spend-id="' + esc(x.id) + '"><span class="x-ic c-' + cat + '">' + ic(cat) + '</span>' +
       '<span class="x-main"><b>' + esc(title) + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small></span>' +
-      '<span class="x-amt"><b class="num">' + esc(orig(x)) + '</b>' + mine + '</span></button>'
+      '<span class="x-amt"><b class="num">' + esc(shown) + '</b>' + under + mine + '</span></button>'
   }
   // the expenses by day, newest first, with each day's total (payments are not spending)
   function renderList(me) {
@@ -1894,7 +1907,7 @@
     fx('#sp-delete').hidden = !changing
     // the villas not in the list yet, one tap each, while the sheet is still empty
     const empty = !changing && !pay && !fx('#sp-amount').value.trim() && !fx('#sp-what').value.trim()
-    const quick = empty ? PAID_BASES.filter((b) => !rows.some((x) => !isPay(x) && (String(x.what || '').toLowerCase().includes(b.short.toLowerCase()) || (x.cur === b.paid.currency && Number(x.amount) === b.paid.total)))) : []
+    const quick = empty ? PAID_BASES.filter((b) => !rows.some((x) => !isPay(x) && x.cur === b.paid.currency && (String(x.what || '').toLowerCase().includes(b.short.toLowerCase()) || Number(x.amount) === b.paid.total))) : []
     fx('#sp-quick').hidden = !quick.length
     fx('#sp-quick').innerHTML = quick.map((b) => '<button class="cat-chip c-stay" type="button" data-quick="' + PAID_BASES.indexOf(b) + '">' + ic('stay') + esc(b.short + ' · ' + amt(b.paid.total, b.paid.currency)) + '</button>').join('')
     if (whole) renderSplit()
@@ -2015,7 +2028,7 @@
         if (!box.hidden) fx('#sp-rate').focus()
         return
       }
-      st.dirty = true; st.dupOk = false
+      st.dirty = true; st.dupOk = false; st.curOk = false
       if (d.kind) {
         if (d.kind === 'pay' && st.kind !== 'pay') st.curBefore = st.cur
         st.kind = d.kind
@@ -2059,7 +2072,7 @@
     fx('#sp-what').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); e.target.blur() } })
     form.addEventListener('input', (e) => {
       if (!st) return
-      st.dirty = true; st.dupOk = false
+      st.dirty = true; st.dupOk = false; st.curOk = false
       const p = e.target.dataset.amt
       // a typed part is kept, 0 too; an empty field shares the rest
       if (p) { const raw = e.target.value.trim(), v = parseAmount(raw); if (!raw) delete st.locked[p]; else if (v >= 0) st.locked[p] = v }
@@ -2074,6 +2087,14 @@
       if (!s || s.saving) return
       const x = collect(), me = meOf()
       if (!x || !me) return
+      // a villa's price in another currency (AMD and AED sit side by side): say so once; Save again keeps it
+      const villa = !isPay(x) && !s.curOk && PAID_BASES.find((b) => b.paid.currency !== x.cur && Math.abs(Number(x.amount) - b.paid.total) < 0.005)
+      if (villa) {
+        s.curOk = true
+        fx('#sp-err').className = 'sheet-err ask'
+        fx('#sp-err').textContent = 'The ' + villa.short + ' cost ' + amt(villa.paid.total, villa.paid.currency) + ', not ' + x.cur + '. Tap ' + villa.paid.currency + ' above, or Save again to keep ' + x.cur + '.'
+        return
+      }
       // the same expense twice: ask once, and the next Save adds it
       const dup = !x.id && !s.local && !s.dupOk && !isPay(x) && dupOf(x)
       if (dup) {

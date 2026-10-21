@@ -663,7 +663,7 @@ const sh = await A.p.evaluate(() => {
   const row = [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Boat tour/.test(c.textContent))
   return x && { shares: x.shares, split: x.split, cat: x.cat, icon: row?.querySelector('.x-ic')?.className, row: row?.textContent }
 })
-check('a split by shares is saved with the shares; the category comes from the words; the row says what you lent', sh?.shares?.Lara === 2 && sh.shares.Mes === 1 && sh.split.join() === 'Mes,Lara' && !sh.cat && /c-activities/.test(sh.icon) && /you lent 1,000/.test(sh.row), JSON.stringify(sh))
+check('a split by shares is saved with the shares; the category comes from the words; the row says what you lent', sh?.shares?.Lara === 2 && sh.shares.Mes === 1 && sh.split.join() === 'Mes,Lara' && !sh.cat && /c-activities/.test(sh.icon) && /you lent [\d,]+\s(AMD|THB)/.test(sh.row), JSON.stringify(sh))
 // the villas we paid: one tap fills the sheet (AED, Stay, everyone), saved with the rate of the day
 const quick = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -678,6 +678,24 @@ const quick = await A.p.evaluate(async () => {
 })
 check('the villas we paid are one tap away, filled in AED and saved with the rate', quick.chips.length === 2 && /Patong villa · 22,282.88\sAED/.test(quick.chips[0]) && quick.filled.amount === '22,282.88' && quick.filled.cur === 'AED' && quick.filled.cat === 'stay' &&
   quick.saved?.amount === 22282.88 && quick.saved.cur === 'AED' && quick.saved.rate === quick.aed && quick.saved.split === 8, JSON.stringify(quick))
+// the Rawai villa typed by hand with AMD tapped (AMD and AED sit side by side, 21 Oct 2026): Save stops once and says
+// what it cost; with AED it saves; the buttons name each currency under its code
+const wrongCur = await A.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  document.getElementById('spend-add').click(); await wait(150)
+  const f = document.getElementById('spend-form')
+  const names = [...f.querySelectorAll('#sp-curs [data-cur]')].map((b) => b.textContent)
+  set(f.querySelector('#sp-amount'), '12691.51'); f.querySelector('[data-cur="AMD"]').click(); set(f.querySelector('#sp-what'), 'Rawai villa')
+  f.querySelector('[data-paid="Vardan K"]').click()
+  f.querySelector('#sp-save').click(); await wait(400)
+  const asked = { open: document.getElementById('spend-sheet').open, err: f.querySelector('#sp-err').textContent }
+  f.querySelector('[data-cur="AED"]').click(); f.querySelector('#sp-save').click(); await wait(900)
+  const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.what === 'Rawai villa')
+  return { names, asked, closed: !document.getElementById('spend-sheet').open, saved: x && { amount: x.amount, cur: x.cur } }
+})
+check('a villa price in the wrong currency is caught: Save says what it cost, and AED saves it', wrongCur.names.join(' ') === 'THBbaht AMDdram AEDdirham USDdollar' && wrongCur.asked.open && /Rawai villa cost 12,691.51\sAED/.test(wrongCur.asked.err) && /not AMD/.test(wrongCur.asked.err) &&
+  wrongCur.closed && wrongCur.saved?.amount === 12691.51 && wrongCur.saved.cur === 'AED', JSON.stringify(wrongCur))
 // a link to a part of the tab, Stats, and Share as text
 const parts = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))

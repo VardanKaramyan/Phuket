@@ -360,6 +360,11 @@ details.note-add summary svg { width: 16px; height: 16px; }
 .seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; padding: 3px; border-radius: 12px; background: var(--surface-2); }
 .seg button { min-height: 38px; padding: 8px 6px; border: 0; border-radius: 9px; background: transparent; color: var(--ink-2); font: 600 14px/1 var(--font-body); cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--seg-on); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.14); }
+/* currencies: the code, and its name under it (AMD dram, AED dirham) */
+.seg-cur button { display: grid; justify-items: center; gap: 2px; min-height: 46px; padding: 6px 4px; }
+.seg-cur b { font: 700 14px/1 var(--font-body); }
+.seg-cur small { font: 500 11px/1 var(--font-body); color: var(--ink-2); }
+.seg-cur button[aria-pressed="true"] small { color: var(--ink); }
 .spend-body, .spend-pane { display: grid; gap: 12px; }
 .spend-body { gap: 14px; }
 .spend-pane .chips { margin-block: -2px; }
@@ -912,3 +917,4 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .card-links { margin: 0; font-size: 14px; color: var(--ink-2); }
 .card-links a { font-weight: 600; }
 .more .routes { padding-left: 0; margin: 2px 0 12px; gap: 8px; font-size: 14px; }
+.x-amt .x-orig { color: var(--ink-2); }

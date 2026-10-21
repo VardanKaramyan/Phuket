@@ -767,6 +767,9 @@ function notesView() {
 const SPEND_CATS = [['food', 'Food'], ['drinks', 'Drinks'], ['groceries', 'Groceries'], ['transport', 'Transport'], ['activities', 'Activities'], ['stay', 'Stay'], ['shopping', 'Shopping'], ['other', 'Other']]
 const SPEND_ICON = { activities: 'ticket', pay: 'swap' } // drawn with another icon
 const SPEND_CURS = ['THB', 'AMD', 'AED', 'USD']
+// the names under the codes: AMD and AED sit side by side and are easy to mix up (21 Oct 2026, two villas were saved
+// in drams instead of dirhams)
+const CUR_NAME = { THB: 'baht', AMD: 'dram', AED: 'dirham', USD: 'dollar' }
 // a person: a coloured round with the initial (two words: both initials), in the same colour everywhere (src/app.js too)
 const initials = (p) => { const w = p.split(' '); return w.length > 1 ? w[0][0] + w[1][0] : p[0] }
 const avatar = (p) => `<span class="av p${TRIP.people.indexOf(p)}" aria-hidden="true">${esc(initials(p))}</span>`
@@ -775,7 +778,7 @@ function spendView() {
   const people = (attr) => `<div class="people">${TRIP.people.map((p) => `<button class="person" type="button" ${attr}="${esc(p)}" aria-pressed="false">${avatar(p)}<span>${esc(p)}</span></button>`).join('')}</div>`
   const seg = (id, attr, items, label) => `<div class="seg" id="${id}" role="group" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button type="button" ${attr}="${v}" aria-pressed="${i === 0}">${esc(t)}</button>`).join('')}</div>`
   return `<section class="view spend" id="spend" aria-labelledby="spend-title">
-<div class="view-head spend-head"><h1 class="view-title" id="spend-title">Spending</h1><label class="cur-pick js-only" hidden><span class="sr-only">Show amounts in</span><select id="spend-cur">${SPEND_CURS.map((c) => `<option>${c}</option>`).join('')}</select></label></div>
+<div class="view-head spend-head"><h1 class="view-title" id="spend-title">Spending</h1><label class="cur-pick js-only" hidden><span class="sr-only">Show amounts in</span><select id="spend-cur">${SPEND_CURS.map((c) => `<option value="${c}">${c} · ${CUR_NAME[c]}</option>`).join('')}</select></label></div>
 <p class="note" id="spend-off">Open the guide’s website to share expenses with the group.</p>
 <div class="me-card js-only" id="spend-me" hidden></div>
 <div class="js-only spend-body" id="spend-body" hidden>
@@ -790,7 +793,7 @@ ${seg('spend-seg', 'data-pane', [['list', 'Expenses'], ['balances', 'Balances'],
 <dialog class="sheet js-only" id="spend-sheet" aria-labelledby="sheet-title"><form id="spend-form" novalidate autocomplete="off" data-noamd>
 <div class="sheet-head"><h2 id="sheet-title">New expense</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('close')}</button></div>
 ${seg('sp-kind', 'data-kind', [['spend', 'Expense'], ['pay', 'Payment']], 'Expense or payment')}
-<div class="amount-box"><input id="sp-amount" name="amount" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="0" aria-label="Amount">${seg('sp-curs', 'data-cur', SPEND_CURS.map((c) => [c, c]), 'Currency')}
+<div class="amount-box"><input id="sp-amount" name="amount" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="0" aria-label="Amount"><div class="seg seg-cur" id="sp-curs" role="group" aria-label="Currency">${SPEND_CURS.map((c, i) => `<button type="button" data-cur="${c}" aria-pressed="${i === 0}" aria-label="${CUR_NAME[c]}s (${c})"><b>${c}</b><small>${CUR_NAME[c]}</small></button>`).join('')}</div>
 <p class="conv"><span id="sp-conv"></span><button class="link-btn" type="button" id="sp-rate-btn" hidden></button></p>
 <label class="rate-box" id="sp-rate-box" hidden><span id="sp-rate-l">THB for 1 AED</span><input id="sp-rate" inputmode="decimal" autocomplete="off"></label><p class="rate-warn" id="sp-rate-warn" hidden></p></div>
 <div class="what-row" data-only="spend"><button class="x-ic cat-tile" type="button" id="sp-cat" aria-expanded="false" aria-controls="sp-cats"></button><input id="sp-what" name="what" maxlength="80" enterkeyhint="done" placeholder="What was it?" aria-label="What was it"></div>

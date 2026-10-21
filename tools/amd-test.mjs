@@ -66,11 +66,12 @@ const h = fs.readFileSync(file, 'utf8')
 // the page text (the artifact build has no <body> tag: then it starts at the top; styles and scripts are cut out below)
 const body = h.slice(Math.max(0, h.indexOf('<body')), h.indexOf('<script type="application/json"'))
 // the villa price boxes (data-noamd) write their own dram amounts: check those apart (the whole box, up to the
-// end of its breakdown), then leave them out
-const boxes = body.match(/<div class="price-box" data-noamd>[\s\S]*?<\/dl><\/div>/g) || []
+// end of its breakdown), then leave them out; "price-box paid" is what we paid for a booked villa (AED, then drams and baht)
+const BOX = /<div class="price-box(?: paid)?" data-noamd>[\s\S]*?<\/dl><\/div>/g
+const boxes = body.match(BOX) || []
 const boxMissing = boxes.filter((x) => (x.match(/THB/g) || []).length !== (x.match(/AMD/g) || []).length)
 if (!boxes.length || boxMissing.length) { failed++; console.log(`  FAIL villa price boxes: ${boxMissing.length} of ${boxes.length} without a dram amount for each baht amount`) }
-const text = body.replace(/<div class="price-box" data-noamd>[\s\S]*?<\/dl><\/div>/g, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
+const text = body.replace(BOX, ' ').replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<option[\s\S]*?<\/option>/g, ' ').replace(/<[^>]+>/g, '')
 const missed = []
 // (a number right after a / is part of a web address, like pattayamail.com/news/2000-baht-helmet-fine)
 for (const m of text.matchAll(/(?<![\d.,:/])\d[\d,]*(?:-|\s)(?:THB|baht|Baht)\b(?!\s\(≈|,\s≈)/g)) missed.push(text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 15).replace(/\s+/g, ' '))
@@ -78,9 +79,9 @@ const notes = (body.match(/class="amd"/g) || []).length
 if (missed.length) { failed++; console.log(`  FAIL ${path.basename(file)}: ${missed.length} baht prices without a dram amount`); missed.slice(0, 10).forEach((s) => console.log('    | ' + s)) }
 if (notes < 300) { failed++; console.log(`  FAIL ${path.basename(file)}: only ${notes} dram amounts`) }
 const data = JSON.parse(h.match(/<script type="application\/json" id="guide-data">([\s\S]*?)<\/script>/)[1])
-// popup lines with a price, and the villa popups' own price (price + priceAmd)
+// popup lines with a price, and the villa popups' own price (price + priceAmd: a booked villa's price is in AED)
 const pops = data.points.filter((p) => /\d (THB|baht)/.test(p.sub || '') || p.price)
-const popMissed = pops.filter((p) => (p.price ? !/AMD/.test(p.price) : !/AMD/.test(p.sub)))
+const popMissed = pops.filter((p) => (p.price ? !/AMD/.test(p.price + ' ' + (p.priceAmd || '')) : !/AMD/.test(p.sub)))
 if (!pops.length || popMissed.length) { failed++; console.log(`  FAIL map popups: ${popMissed.length} of ${pops.length} prices without a dram amount`) }
 if (!(data.rates && data.rates.mid && data.rates.mid.AMD)) { failed++; console.log('  FAIL converter: no AMD rate') }
 

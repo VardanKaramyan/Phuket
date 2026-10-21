@@ -22,12 +22,12 @@
    ],
    "beachfront": false,
    "ratingText": "Airbnb 4.85 (47 reviews) · Superhost",
-   "website": "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "website": "https://www.airbnb.com/rooms/930761022304341654",
    "websiteLabel": "Airbnb",
    "links": [
     {
-     "label": "Airbnb listing (8 guests, 8-18 Jan)",
-     "url": "https://www.airbnb.com/rooms/930761022304341654?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+     "label": "Airbnb listing",
+     "url": "https://www.airbnb.com/rooms/930761022304341654"
     }
    ],
    "sources": [
@@ -7920,12 +7920,12 @@
    "ratingText": "Airbnb 4.94 (18 reviews)",
    "verification": "Listing live on Airbnb (Villa in Pa Tong · ★4.94 · 5 bedrooms · 7 beds · 4 baths · 18 reviews). Price and availability for 8 adults, 8-18 Jan 2027 read from the booking box, all fees included (18 Oct 2026). Location: Airbnb shows the area only, so the pin is approximate.",
    "beachfront": false,
-   "website": "https://www.airbnb.com/rooms/1586097453594142520?check_in=2027-01-08&check_out=2027-01-18&adults=8",
+   "website": "https://www.airbnb.com/rooms/1586097453594142520",
    "websiteLabel": "Airbnb",
    "links": [
     {
-     "label": "Airbnb listing (8 guests, 8-18 Jan)",
-     "url": "https://www.airbnb.com/rooms/1586097453594142520?check_in=2027-01-08&check_out=2027-01-18&adults=8"
+     "label": "Airbnb listing",
+     "url": "https://www.airbnb.com/rooms/1586097453594142520"
     }
    ],
    "sources": [

@@ -7,10 +7,11 @@ export const TRIP = {
   start: '2027-01-08', end: '2027-01-26', lastNight: '2027-01-25', flight: { day: '2027-01-26', time: '18:20' },
   // the villas the group booked (ids in data/stays.json), 19 Oct 2026: a night belongs to the villa whose stay covers it
   // (from = check-in day, to = check-out day). The two villas' pins are Airbnb's approximate ones until the hosts send
-  // the address.
+  // the address. paid: what the group paid for those nights, in the currency it was paid in (the user, 20 Oct 2026:
+  // AED), shared by `guests`; its rate to baht is in data/extra.json → rates.
   bases: [
-    { id: '136-pool-villa-patong-5br', key: 'patong', short: 'Patong villa', from: '2027-01-08', to: '2027-01-14', checkIn: '15:00', checkOut: '11:00' },
-    { id: 'luxurious-seaview-villa-rawai', key: 'rawai', short: 'Rawai villa', from: '2027-01-14', to: '2027-01-18', checkIn: '16:00', checkOut: '12:00' },
+    { id: '136-pool-villa-patong-5br', key: 'patong', short: 'Patong villa', from: '2027-01-08', to: '2027-01-14', checkIn: '15:00', checkOut: '11:00', paid: { total: 22282.88, currency: 'AED' }, guests: 8 },
+    { id: 'luxurious-seaview-villa-rawai', key: 'rawai', short: 'Rawai villa', from: '2027-01-14', to: '2027-01-18', checkIn: '16:00', checkOut: '12:00', paid: { total: 12691.51, currency: 'AED' }, guests: 8 },
   ],
   // the group (the user, 20 Oct 2026), for Spendings; api/votes.js has the same list (PEOPLE)
   people: ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara'],

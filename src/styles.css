@@ -271,6 +271,13 @@ html:not(.js) .js-only { display: none !important; }
 .price-box .btn { flex: none; }
 .price-box.none { background: var(--alert-soft); }
 .price-box.none .price-total { font-size: 20px; color: var(--alert); white-space: normal; }
+/* the price we paid for a booked villa: amber like the Booked badge; the amount we paid big, the drams and baht under it */
+.price-box.paid { background: var(--sun-soft); }
+.price-box.paid .price-label { color: var(--warn-ink); }
+.price-box.paid .price-split { border-top-color: color-mix(in srgb, var(--sun) 40%, transparent); }
+@media (max-width: 380px) { .price-box.paid .price-alt { font-size: 14px; } }
+#our-villas .base-card > .price-box, #our-villas .base-card > .actions { grid-column: 1 / -1; }
+#our-villas .base-card > .actions { margin-top: 0; }
 
 /* Show on map: the villa's own small map inside the card */
 .mini-map { height: clamp(300px, 55vh, 460px); margin: 6px 0 10px; border-radius: 10px; overflow: hidden; background: var(--map-sea); isolation: isolate; }

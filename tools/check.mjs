@@ -96,6 +96,20 @@ for (const h of ho) {
 }
 const mx = rd('data/exchanges.json', { brands: [] })
 for (const b of mx.brands || []) for (const [i, x] of (b.branches || []).entries()) checkPoint(`money:${b.id}#${i} ${x.name}`, Object.assign({}, x, { area: areaPoly[x.area] || BOXES[x.area] ? x.area : '' }))
+// the hand-kept rates (data/extra.json → rates: baht for 1 unit) and the prices we paid for our villas (TRIP.bases → paid).
+// AED is pegged at 3.6725 to the dollar, so its rate must sit near the USD rate over the peg: this catches a rate typed
+// upside down (open.er-api.com's THB page gives AED per baht, 0.109) or with the point in the wrong place
+const usdThb = ((mx.midMarket || []).find((m) => m && m.currency === 'USD') || {}).thbPerUnit
+const xr = rd('data/extra.json', {}).rates || []
+for (const r of xr) {
+  if (!(typeof r.thbPerUnit === 'number' && r.thbPerUnit > 0)) warn('extra.rates:' + r.currency, `thbPerUnit must be a number above 0 (baht for 1 ${r.currency})`)
+  else if (r.currency === 'AED' && usdThb && Math.abs((r.thbPerUnit * 3.6725) / usdThb - 1) > 0.1) warn('extra.rates:AED', `${r.thbPerUnit} THB per AED is far from ${(usdThb / 3.6725).toFixed(2)} (the USD rate over the 3.6725 peg): upside down or a typo?`)
+}
+for (const b of TRIP.bases || []) {
+  if (!b.paid) continue
+  if (!(b.paid.total > 0) || !(b.guests > 0)) warn('trip.bases:' + b.id, 'paid needs a total above 0, and guests')
+  if (b.paid.currency !== 'AMD' && !(mx.midMarket || []).some((m) => m && m.currency === b.paid.currency) && !xr.some((r) => r.currency === b.paid.currency)) warn('trip.bases:' + b.id, `paid in ${b.paid.currency}, but data/extra.json → rates has no ${b.paid.currency} rate`)
+}
 
 console.log(`checked: ${ev.length} events, ${pl.length} places, ${ar.length} areas, ${ho.length} hotels, ${(mx.brands || []).length} brands`)
 console.log(problems.length ? problems.join('\n') : 'no problems found')

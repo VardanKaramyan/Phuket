@@ -50,7 +50,7 @@
  },
  "placesIntro": "Each place shows how long people usually stay (not the drive), the best time to go and the price. Boat tours compare the island trips, and Piers & ferries lists the boats from each pier. In January the sea on the west coast is calm and clear: the best month for beaches and boat trips.",
  "areasIntro": "Tap an area on the map to read about it. The colors match the cards below. The labelled pins are our villas: Patong (8–14 Jan) and Rawai (14–18 Jan).",
- "stayIntro": "Our villas are booked: the Patong villa from 8 to 14 Jan, then the Rawai villa from 14 to 18 Jan (see Our villas, just below). Add your own bookings so the address is one tap away, even offline. Further down is the villa shortlist from Airbnb and Booking.com, with the full price for 8 guests on 8-18 Jan (checked 16 Oct 2026).",
+ "stayIntro": "Our villas are booked: the Patong villa from 8 to 14 Jan, then the Rawai villa from 14 to 18 Jan. Just below is what we paid and each person's share. Add your own bookings so the address is one tap away, even offline. Further down is the villa shortlist from Airbnb and Booking.com, with the full price for 8 guests on 8-18 Jan (checked 17-18 Oct 2026). Our two villas there show what we paid.",
  "moneyIntro": "Bring clean USD or EUR 100 notes and change them at a money changer, not at the airport or the hotel. ATMs charge 250 to 350 baht for each withdrawal.",
  "dayTips": {
   "2027-01-08": [
@@ -178,5 +178,14 @@
   "perThb": 10.8,
   "date": "17 Oct 2026",
   "source": "mid-market: open.er-api.com 10.77 AMD per THB (17 Oct 2026, 00:02 UTC), FloatRates 10.82 (16 Oct 2026, 20:55 UTC)"
- }
+ },
+ "rates": [
+  {
+   "currency": "AED",
+   "thbPerUnit": 9.14,
+   "date": "20 Oct 2026",
+   "source": "mid-market: open.er-api.com 9.1413 THB per AED (20 Oct 2026, 00:02 UTC), FloatRates 9.147 (20 Oct 2026, 09:55 UTC)",
+   "note": "The villas were paid in AED (the user, 20 Oct 2026). Also in the converter."
+  }
+ ]
 }

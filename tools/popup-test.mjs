@@ -1,4 +1,5 @@
-// Regression test: tap "On map" on several cards in a row and check each map popup is fully tappable.
+// Regression test: tap "On map" on several cards in a row and check each map popup is fully tappable (the last two are
+// our booked villas, whose popups show what we paid).
 // Usage: node tools/popup-test.mjs [html build, default dist/phuket-guide-offline.html]
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -11,7 +12,7 @@ let failures = 0
 for (const [w, h] of [[390, 844], [360, 780], [320, 640]]) {
   const p = await b.newPage(); await p.setViewport({ width: w, height: h, isMobile: true, hasTouch: true })
   await p.goto(url + '#events'); await new Promise((r) => setTimeout(r, 800))
-  const seq = ['ev-circoloco-thailand-2027', 'ev-shelter-phuket', 'ev-courage-bar-phuket-town', 'ev-summerset-lounge-experemint', 'pl-phi-phi-maya-bay', 'pl-big-buddha', 'pl-natural-restaurant-airport', 'ht-chill-beach-bangla-patong', 'ht-luxury-4br-pool-villa-rawai']
+  const seq = ['ev-circoloco-thailand-2027', 'ev-shelter-phuket', 'ev-courage-bar-phuket-town', 'ev-summerset-lounge-experemint', 'pl-phi-phi-maya-bay', 'pl-big-buddha', 'pl-natural-restaurant-airport', 'ht-chill-beach-bangla-patong', 'ht-luxury-4br-pool-villa-rawai', 'ht-136-pool-villa-patong-5br', 'ht-luxurious-seaview-villa-rawai']
   const out = []
   for (const id of seq) {
     const view = id.startsWith('ev') ? 'events' : id.startsWith('pl') ? 'places' : 'stay'

@@ -60,6 +60,54 @@ check('each day says which villa you are in', /Check in at the Patong villa from
 check('villa nights leave out Koh Phangan parties; full-moon week keeps them', page.phangan14 === 0 && page.phangan20 > 0, `14 Jan: ${page.phangan14}, 20 Jan: ${page.phangan20}`)
 check('cards give the drive from both villas; boat tours do not', /min from the Patong villa · \d+ min from the Rawai villa \(no traffic\)/.test(page.byCar) && !page.tourCar, page.byCar)
 
+// what we paid (TRIP.bases → paid, in AED): per person for the stay, per person per day and the villa per day, on Our
+// villas and on the two villa cards; both villas together; the drams and baht next to it from the AED rate
+// (worked out in fils, hundredths of a dirham, each share rounded once: 22282.53 / 6 is 3,713.76, not the float 3,713.75)
+const cash = (fils, c) => (fils / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + c
+const nightsOf = (x) => Math.round((Date.parse(x.to) - Date.parse(x.from)) / 86400000)
+const filsOf = (x) => Math.round(x.paid.total * 100), guestsOf = (x) => x.guests || 8
+const shares = (f, cur, n, guests) => { const s = (d) => cash(Math.round(f / d), cur); return { n, guests, total: cash(f, cur), stay: s(guests), pp: s(n * guests), night: s(n) } }
+const paidWant = TRIP.bases.map((x) => ({ key: x.key, id: x.id, range: `${Number(x.from.slice(8))}–${Number(x.to.slice(8))} Jan`, ...shares(filsOf(x), x.paid.currency, nightsOf(x), guestsOf(x)) }))
+const both = shares(TRIP.bases.reduce((s, x) => s + filsOf(x), 0), TRIP.bases[0].paid.currency, TRIP.bases.reduce((s, x) => s + nightsOf(x), 0), guestsOf(TRIP.bases[0]))
+const rate = (read('data/extra.json').rates || []).find((r) => r.currency === TRIP.bases[0].paid.currency)?.thbPerUnit
+const amdPerThb = read('data/extra.json').amdRate.perThb
+const paid = await p.evaluate(() => {
+  const t = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '')
+  const box = (el) => (el ? { cls: el.className, label: t(el.querySelector('.price-label')), total: t(el.querySelector('.price-total')), alt: t(el.querySelector('.price-alt')), rows: [...el.querySelectorAll('.price-split dt')].map((d) => t(d) + ' = ' + t(d.nextElementSibling)) } : null)
+  return {
+    bases: [...document.querySelectorAll('#our-villas .base-card')].map((c) => ({ id: c.id, box: box(c.querySelector('.price-box')) })),
+    both: box(document.querySelector('#our-villas-total .price-box')), note: t(document.querySelector('#our-villas > p.note')),
+    cards: [...document.querySelectorAll('.pill.booked')].map((x) => { const c = x.closest('.card'); return { id: c.id, box: box(c.querySelector('.price-box')), january: [...c.querySelectorAll('.facts dt')].some((d) => d.textContent === 'January') } }),
+    points: JSON.parse(document.getElementById('guide-data').textContent).points.filter((x) => x.base),
+  }
+})
+for (const w of paidWant) {
+  const c = paid.bases.find((x) => x.id === 'base-' + w.key), r = c?.box?.rows || []
+  check(`Our villas, ${w.key}: what we paid, per person and per day`, !!c?.box && /\bpaid\b/.test(c.box.cls) && c.box.total === w.total && c.box.label === `Paid · ${w.n} nights · ${w.guests} guests` &&
+    r.length === 3 && r[0].startsWith(`Per person, ${w.n} days = ${w.stay}`) && r[1].startsWith(`Per person per day = ${w.pp}`) && r[2].startsWith(`Whole villa per day = ${w.night}`), JSON.stringify(c?.box || 'no paid box'))
+}
+check('Our villas: both villas together, and each person\'s share', !!paid.both && paid.both.total === both.total && paid.both.label === `Both villas · ${both.n} nights · ${both.guests} guests` &&
+  paid.both.rows.length === 2 && paid.both.rows[0].startsWith(`Per person, ${both.n} days = ${both.stay}`) && paid.both.rows[1].startsWith(`Per person per day = ${both.pp}`), JSON.stringify(paid.both))
+// every amount we paid has its drams and baht, near the AED rate (rounded to 2-3 figures, so within 1.5%)
+const near = (a, b) => Math.abs(a - b) / b < 0.015
+const num = (s) => Number(s.replace(/,/g, ''))
+const lines = [...paid.bases.map((c) => c.box), paid.both].filter(Boolean).flatMap((x) => [x.total + ' ' + x.alt, ...x.rows.map((r) => r.split(' = ')[1])])
+const badLine = lines.filter((l) => { const m = l.replace(/\s/g, '').match(/^([\d,.]+)AED(?:·)?≈([\d,]+)AMD(?:·)?≈([\d,]+)THB$/); return !m || !rate || !near(num(m[3]), num(m[1]) * rate) || !near(num(m[2]), num(m[1]) * rate * amdPerThb) })
+check('the drams and baht next to what we paid come from the AED rate', lines.length === 11 && !badLine.length, badLine.slice(0, 3).join(' | ') || `${lines.length} amounts at ${rate} THB per AED`)
+check('the note says we paid in AED and the rest are estimates', /We paid in AED/.test(paid.note) && new RegExp(`1 AED ≈ ${rate} THB`).test(paid.note), paid.note.slice(0, 90))
+check('the two booked villa cards show what we paid for our nights, not the 8-18 Jan price', paid.cards.length === 2 && paid.cards.every((c) => {
+  const w = paidWant.find((x) => 'ht-' + x.id === c.id)
+  return !!w && !!c.box && /\bpaid\b/.test(c.box.cls) && c.box.total === w.total && c.box.label === `Paid · ${w.range} · ${w.n} nights · ${w.guests} guests` && c.box.rows.length === 3 && c.box.rows[0].startsWith(`Per person, ${w.n} days = ${w.stay}`) && !c.january
+}), JSON.stringify(paid.cards.map((c) => [c.id, c.box?.label, c.box?.total, c.january])))
+// (short, so the buttons fit on a 320 px phone: popup-test taps them; no-break spaces keep amounts with their currency)
+const sp = (s) => String(s || '').replace(/\u00a0/g, ' ')
+check('the map popups of our villas give what we paid, its drams and the share per person', paid.points.length === 2 && paid.points.every((x) => {
+  const w = paidWant.find((y) => y.id === x.id)
+  return !!w && x.price === w.total && x.priceNote === 'paid' && /^≈[\d,]+ AMD$/.test(sp(x.priceAmd)) && sp(x.pricePp).startsWith(`${w.stay} per person (≈`) && /\u00a0AMD\)$/.test(x.pricePp)
+}), JSON.stringify(paid.points.map((x) => [x.id, x.price, x.priceNote, sp(x.priceAmd), sp(x.pricePp)])))
+const og = (id) => (fs.readFileSync(path.join(ROOT, 'dist/s/ht-' + id + '.html'), 'utf8').match(/<meta property="og:description" content="([^"]*)"/) || [])[1] || ''
+check('a shared link to a booked villa says what we paid', paidWant.every((w) => og(w.id).startsWith(`Booked ${w.range} · paid ${w.total} for ${w.n} nights, ${w.stay} per person (≈`)), og(paidWant[0].id))
+
 // Directions: where from? tonight's villa first (15 Jan: Rawai), then the other, then where you are now
 const dir = await p.evaluate(async () => {
   location.hash = 'pl-big-buddha'; await new Promise((r) => setTimeout(r, 300))

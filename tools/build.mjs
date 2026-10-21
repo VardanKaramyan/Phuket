@@ -35,8 +35,10 @@ const extra = readJSON('data/extra.json', {}) || {} // hand-written copy: intros
 // dram (AMD) amounts next to every baht price, and AMD first in the converter (data/extra.json → amdRate)
 const amdRate = extra.amdRate && extra.amdRate.perThb > 0 ? extra.amdRate : null
 const amd = amdRate ? makeAmd(amdRate.perThb) : { text: (s) => s, html: (s) => s, amount: () => '' }
+// then USD and EUR (data/exchanges.json), then the hand-kept ones (data/extra.json → rates: AED, the villas were paid in it)
 const midRates = () => (amdRate ? [{ currency: 'AMD', thbPerUnit: 1 / amdRate.perThb, date: amdRate.date }] : [])
   .concat((money.midMarket || []).filter((m) => m && m.thbPerUnit && m.currency !== 'AMD'))
+  .concat((extra.rates || []).filter((m) => m && m.thbPerUnit > 0 && m.currency !== 'AMD' && !(money.midMarket || []).some((x) => x && x.currency === m.currency)))
 const appsDoc = readJSON('data/apps.json', { items: [] }) || { items: [] } // apps and services to install
 const apps = appsDoc.items || []
 
@@ -365,9 +367,13 @@ const DRIVE = (readJSON('data/drive-times.json', { items: {} }) || { items: {} }
 const BASES = TRIP.bases.map((b) => {
   const h = hotels.find((x) => x.id === b.id)
   if (!h) throw new Error(`tools/trip.mjs: the booked villa ${b.id} is not in data/hotels.json`)
-  return { ...b, h, nights: Math.round((Date.parse(b.to) - Date.parse(b.from)) / 86400000) }
+  const nights = Math.round((Date.parse(b.to) - Date.parse(b.from)) / 86400000)
+  return { ...b, h, nights, paid: b.paid ? paidOf(b.paid.total, b.paid.currency, nights, b.guests || STAY_GUESTS, b.id) : null }
 })
 const baseOfVilla = (id) => BASES.find((b) => b.id === id)
+// what we paid for both villas together (when every booked villa has its price, in one currency)
+const PAID_ALL = BASES.length > 1 && BASES.every((b) => b.paid && b.paid.currency === BASES[0].paid.currency && b.paid.guests === BASES[0].paid.guests)
+  ? paidOf(BASES.reduce((s, b) => s + Math.round(b.paid.total * 100), 0) / 100, BASES[0].paid.currency, BASES.reduce((s, b) => s + b.nights, 0), BASES[0].paid.guests, 'both villas') : null
 const baseRange = (b) => `${Number(b.from.slice(8))}–${Number(b.to.slice(8))} Jan`
 const mins = (m) => (m >= 60 ? `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}` : `${m} min`)
 // "3 min from the Patong villa · 22 min from the Rawai villa": only for places you drive to (not islands or boat tours)
@@ -387,6 +393,34 @@ function priceOf(h) {
   return { total, nights, perPerson: r10(total / nights / STAY_GUESTS), perPersonStay: r10(total / STAY_GUESTS), perNight: r10(total / nights) }
 }
 const thb = (n) => n.toLocaleString('en-US') + ' THB'
+// ---------- the price we paid for a booked villa (TRIP.bases → paid) ----------
+// the exact amount in the currency it was paid in (two decimals: 22,282.88 AED), shared out per person and per day; the
+// drams and baht next to it are estimates at the mid-market rate (data/extra.json → rates), rounded like the drams
+function paidOf(total, currency, nights, guests, what) {
+  const rate = midRates().find((m) => m.currency === currency)
+  if (!(total > 0) || !(nights > 0) || !(guests > 0)) throw new Error(`tools/trip.mjs: ${what}: paid needs a total above 0, nights and guests`)
+  if (!rate) throw new Error(`tools/trip.mjs: ${what} was paid in ${currency}, but there is no ${currency} rate: add it to data/extra.json → rates`)
+  // in cents (fils), so the shares round once
+  const c = Math.round(total * 100), share = (n) => Math.round(c / n) / 100
+  return { total: c / 100, currency, nights, guests, thbPerUnit: rate.thbPerUnit, rateDate: rate.date, perPersonStay: share(guests), perPerson: share(nights * guests), perNight: share(nights) }
+}
+const cash = (n, cur) => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + cur
+// the estimates for an amount paid: drams (amd.amount takes whole baht), then baht to 3 significant figures (the rate
+// moves more than that)
+const paidAmd = (p, n) => amd.amount(Math.round(n * p.thbPerUnit))
+const paidAlt = (p, n) => [amdRate ? paidAmd(p, n) : '', '≈' + Number((n * p.thbPerUnit).toPrecision(3)).toLocaleString('en-US') + ' THB'].filter(Boolean)
+// one line for the popups, the share previews and the KML: "22,282.88 AED for 6 nights, 2,785.36 AED per person (≈275,000 AMD)"
+const paidLine = (p) => `${cash(p.total, p.currency)} for ${plural(p.nights, 'night')}, ${cash(p.perPersonStay, p.currency)} per person${amdRate ? ' (' + paidAmd(p, p.perPersonStay) + ')' : ''}`
+// the paid price box: the total in the currency we paid, big; then per person for the stay, per person per day and the
+// villa per day, each with its drams and baht on lines of their own (data-noamd: those are written out here, not added
+// by tools/amd.mjs)
+function paidBox(p, label, rows = ['stay', 'pp', 'night']) {
+  const alt = (n) => paidAlt(p, n).map((x) => `<span>${esc(x)}</span>`).join('')
+  const ROW = { stay: [`Per person, ${p.nights} days`, p.perPersonStay], pp: ['Per person per day', p.perPerson], night: ['Whole villa per day', p.perNight] }
+  // lines break between the parts, never inside "8 guests", "14–18 Jan" or "≈204,000 THB"
+  return `<div class="price-box paid" data-noamd><div class="price-head"><div><span class="price-label">${esc(label).replace(/(\d) /g, '$1&nbsp;')}</span><b class="price-total">${cash(p.total, p.currency)}</b><span class="price-alt">${paidAlt(p, p.total).map((x) => esc(x).replace(/ /g, '&nbsp;')).join(' · ')}</span></div></div>` +
+    `<dl class="price-split">${rows.map((k) => `<dt>${esc(ROW[k][0])}</dt><dd><b>${cash(ROW[k][1], p.currency)}</b>${alt(ROW[k][1])}</dd>`).join('')}</dl></div>`
+}
 // beds for the group (bedrooms / beds / baths from the listing): a bed each is ideal; 4 beds or fewer for 8 is not
 // ("if it's 4 beds it's not ideal", the user, 17 Oct 2026)
 function bedFit(h) {
@@ -423,6 +457,9 @@ function usd(thbAmount) {
 // the villa price: drams first and big (an estimate, from the rate in data/extra.json), then US dollars, then the exact
 // price the listing showed in baht (the one to compare with Airbnb / Booking.com)
 function priceBox(h) {
+  // our booked villas: what we paid for our nights, not the listing's 8-18 Jan price
+  const bv = baseOfVilla(h.id)
+  if (bv && bv.paid) return paidBox(bv.paid, `Paid · ${baseRange(bv)} · ${plural(bv.nights, 'night')} · ${bv.paid.guests} guests`)
   const pr = priceOf(h)
   if (!pr) return `<div class="price-box none"><div><b class="price-total">${esc(h.noRoomsOnTrip)}</b><span class="price-pp">No price for the trip dates</span></div></div>`
   const site = h.websiteLabel || 'Listing'
@@ -463,7 +500,7 @@ ${priceBox(h)}
 ${villaMap(h)}
 <p class="desc">${esc(h.whyStay)}</p>
 ${vibe.length ? `<div class="tags">${vibe.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
-${facts([['January', h.priceText]])}
+${baseOfVilla(h.id)?.paid ? '' : facts([['January', h.priceText]])}
 ${moreBlock('Nearby & more', [h.description !== h.whyStay ? h.description : '', ...(h.tips || [])].filter(has), h.links, [['Nearby', h.nearby]])}
 ${villaNotes(h)}
 ${voteBar('ht:' + h.id, h.name)}
@@ -645,7 +682,9 @@ function shareItems() {
   const out = []
   for (const h of hotels) {
     const pr = priceOf(h)
-    const price = pr ? `${amdRate ? amd.amount(pr.total) + ' (' + thb(pr.total) + ')' : thb(pr.total)} for ${pr.nights} nights, 8 guests, 8–18 Jan` : h.noRoomsOnTrip || ''
+    const bv = baseOfVilla(h.id)
+    const price = bv && bv.paid ? `Booked ${baseRange(bv)} · paid ${paidLine(bv.paid)}`
+      : pr ? `${amdRate ? amd.amount(pr.total) + ' (' + thb(pr.total) + ')' : thb(pr.total)} for ${pr.nights} nights, 8 guests, 8–18 Jan` : h.noRoomsOnTrip || ''
     const rooms = [h.bedrooms > 0 ? plural(+h.bedrooms, 'bedroom') : '', h.beds > 0 ? plural(+h.beds, 'bed') : ''].filter(Boolean).join(', ')
     out.push({ slug: 'ht-' + h.id, hash: 'ht-' + h.id, title: h.name, desc: short([price, rooms, areaName(h.area), h.ratingText].filter(has).join(' · ')), key: 'hotels:' + h.id })
   }
@@ -835,13 +874,19 @@ function ourVillas(mode) {
     const h = b.h, im = images['hotels:' + h.id]
     const src = im && fs.existsSync(P(im.file)) ? (mode === 'inline' ? 'data:image/webp;base64,' + fs.readFileSync(P(im.file)).toString('base64') : 'img/' + path.basename(im.file)) : ''
     const ll = `${+h.lat},${+h.lng}`
+    // the price we paid (TRIP.bases → paid) goes under the photo and the dates, across the whole card
     return `<article class="base-card" id="base-${b.key}">${src ? `<a class="base-thumb" href="#ht-${esc(h.id)}" tabindex="-1" aria-hidden="true"><img src="${src}" alt="" loading="lazy"></a>` : ''}<div class="base-body">
 <span class="eyebrow">${esc(b.short)} · ${plural(b.nights, 'night')}</span><h3><a href="#ht-${esc(h.id)}">${esc(h.name)}</a></h3>
 <p class="base-dates"><b>${esc(dayLabel(b.from))}</b> check-in from ${b.checkIn} → <b>${esc(dayLabel(b.to))}</b> checkout by ${b.checkOut}</p>
-<p class="note">${esc(areaName(h.area))}${DRIVE['airport'] && DRIVE['airport'][b.key] ? ` · the airport ${mins(DRIVE['airport'][b.key].min)} by car (no traffic)` : ''}</p>
-<div class="actions"><a class="btn primary" href="#ht-${esc(h.id)}">See the villa</a><a class="btn" href="${gmaps(ll)}" target="_blank" rel="noopener">${icon('pin')}Map</a><a class="btn" href="${gdir(h.lat, h.lng)}" target="_blank" rel="noopener" data-dir="${ll}" data-dir-name="${esc('the ' + b.short)}" data-dir-skip="${b.key}">${icon('route')}Directions</a></div></div></article>`
+<p class="note">${esc(areaName(h.area))}${DRIVE['airport'] && DRIVE['airport'][b.key] ? ` · the airport ${mins(DRIVE['airport'][b.key].min)} by car (no traffic)` : ''}</p></div>
+${b.paid ? paidBox(b.paid, `Paid · ${plural(b.nights, 'night')} · ${b.paid.guests} guests`) : ''}
+<div class="actions"><a class="btn primary" href="#ht-${esc(h.id)}">See the villa</a><a class="btn" href="${gmaps(ll)}" target="_blank" rel="noopener">${icon('pin')}Map</a><a class="btn" href="${gdir(h.lat, h.lng)}" target="_blank" rel="noopener" data-dir="${ll}" data-dir-name="${esc('the ' + b.short)}" data-dir-skip="${b.key}">${icon('route')}Directions</a></div></article>`
   }
-  return `<div class="stack" id="our-villas"><h2 class="block-title">Our villas <small>booked</small></h2>${BASES.map(card).join('')}<p class="note">The pins are Airbnb's approximate ones until the hosts send the exact addresses, so directions may end a few hundred metres off. Directions anywhere in the guide can start from either villa.</p></div>`
+  // both villas together: the whole stay and each person's share of it
+  const total = PAID_ALL ? `<div class="base-total" id="our-villas-total">${paidBox(PAID_ALL, `Both villas · ${plural(PAID_ALL.nights, 'night')} · ${PAID_ALL.guests} guests`, ['stay', 'pp'])}</div>` : ''
+  const p = BASES.find((b) => b.paid)?.paid
+  const rateNote = p ? `We paid in ${p.currency}. The drams and baht are estimates (1 ${p.currency} ≈ ${p.thbPerUnit} THB, ${p.rateDate}). ` : ''
+  return `<div class="stack" id="our-villas"><h2 class="block-title">Our villas <small>booked</small></h2>${BASES.map(card).join('')}${total}<p class="note">${esc(rateNote)}The pins are Airbnb's approximate ones until the hosts send the exact addresses, so directions may end a few hundred metres off. Directions anywhere in the guide can start from either villa.</p></div>`
 }
 function stayView(mode) {
   const zonesUsed = ZONES.filter(([z]) => hotels.some((h) => zoneOf(h) === z))
@@ -1029,8 +1074,12 @@ function clientData(build) {
     const bv = baseOfVilla(h.id)
     if (pt && pt.id === h.id && pt.t === 'hotel' && bv) Object.assign(pt, { base: bv.key, baseLabel: `${bv.short} · ${baseRange(bv)}` })
     if (pt && pt.id === h.id && pt.t === 'hotel') {
-      // the popup: drams first (an estimate), then US dollars and the listing's baht price
-      if (pr) Object.assign(pt, amdRate
+      // the popup: our booked villas show what we paid (in the currency we paid), its drams and the share per person, kept
+      // short with no-break spaces so the buttons stay above the tab bar on a 320 px phone (the card has the breakdown);
+      // the others drams first (an estimate), then US dollars and the listing's baht price
+      const nb = (x) => String(x).replace(/ /g, ' ')
+      if (bv && bv.paid) Object.assign(pt, { price: cash(bv.paid.total, bv.paid.currency), priceNote: 'paid', priceAmd: nb(paidAlt(bv.paid, bv.paid.total)[0]), pricePp: `${nb(cash(bv.paid.perPersonStay, bv.paid.currency))} per person${amdRate ? ' (' + nb(paidAmd(bv.paid, bv.paid.perPersonStay)) + ')' : ''}` })
+      else if (pr) Object.assign(pt, amdRate
         ? { price: amd.amount(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: [usd(pr.total), thb(pr.total)].filter(Boolean).join(' · '), pricePp: `${amd.amount(pr.perPerson)} per person per day` }
         : { price: thb(pr.total), priceNote: `for ${pr.nights} nights`, priceAmd: '', pricePp: `${thb(pr.perPerson)} per person per day` })
       if (isUrl(h.website)) Object.assign(pt, { web: h.website, webLabel: h.websiteLabel || 'Website' })
@@ -1149,7 +1198,7 @@ function kml() {
 ${folder('Areas', areasK)}
 ${folder('Music & raves', events.map((e) => pm(e.name, `${e.venue || ''}<br>${(e.dates || []).join(', ') || e.recurrence || ''}<br>${e.description || ''}`, e.lat, e.lng, 'p-event', e)).join(''))}
 ${folder('Places to go', places.map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
-${folder('Hotels', hotels.map((h) => pm(h.name, `${HTIER[h.tier] || ''} · ${h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel')).join(''))}
+${folder('Hotels', hotels.map((h) => { const bv = baseOfVilla(h.id); return pm(h.name, `${HTIER[h.tier] || ''} · ${bv && bv.paid ? `Booked ${baseRange(bv)}: paid ${paidLine(bv.paid)}` : h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel') }).join(''))}
 ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => pm(`${b.name} · ${x.name}`, `${x.hoursText || ''}<br>${b.summary || ''}`, x.lat, x.lng, 'p-money'))).join(''))}
 </Document></kml>
 `

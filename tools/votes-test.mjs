@@ -88,16 +88,31 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   check('the password: none → 401, wrong → 401, any case → ok, visits need none', s.join() === '401,401,200,200', s.join())
 }
 {
+  // the names used before the sign-in go to the group's names, once (on a fresh server start), and are mapped on save
+  const t = Date.now(), row = (o) => JSON.stringify({ t, ...o })
+  hashes.clear()
+  hashes.set('guide:votes', new Map([['ht:a-villa\u001fvardan', row({ v: 'like', n: 'Vardan' })], ['ht:b-villa\u001fvirt', row({ v: 'skip', n: 'Virt' })]]))
+  hashes.set('guide:notes', new Map([['n1', row({ item: 'all', text: 'hi', n: 'Vardan' })]]))
+  hashes.set('guide:saved', new Map([['pl:big-buddha', row({ n: 'arshak' })]]))
+  const fresh = await import(mod + '?rename')
+  const j = await (await keyed(fresh.GET)(new Request('http://x/api/votes'))).json()
+  const v = await (await keyed(fresh.POST)(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ item: 'ht:c-villa', name: ' virt ', vote: 'like' }) }))).json()
+  const got = { a: j.votes['ht:a-villa']?.like.join(), b: j.votes['ht:b-villa']?.skip.join(), note: j.notes?.all?.[0]?.by, saved: j.saved?.['pl:big-buddha']?.by, c: v.votes?.['ht:c-villa']?.like.join() }
+  check('old names: Vardan → Vardan K, Virt → Vardan H, Arshak → Artash, and a vote sent as Virt is Vardan H', JSON.stringify(got) === JSON.stringify({ a: 'Vardan K', b: 'Vardan H', note: 'Vardan K', saved: 'Artash', c: 'Vardan H' }), JSON.stringify(got))
+  check('the server and tools/trip.mjs have the same other names', JSON.stringify(fresh.ALIASES) === JSON.stringify(TRIP.aliases), JSON.stringify(fresh.ALIASES))
+  hashes.clear(); strings.clear(); lists.clear()
+}
+{
   let r = await call(api, 'GET')
   check('any prefix works (STORAGE_), empty at first', r.status === 200 && JSON.stringify(r.json.votes) === '{}', JSON.stringify(r.json))
   check('not cached', /no-store/.test(r.headers.get('cache-control') || ''))
   r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: '  Ani  ', vote: 'like' })
   check('a like is saved', r.status === 200 && r.json.votes['ht:mouana-breeze-mai-khao'].like.join() === 'Ani', JSON.stringify(r.json))
-  await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Vardan', vote: 'skip' })
+  await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Davit', vote: 'skip' })
   r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'ani', vote: 'skip' })
   const v = r.json.votes['ht:mouana-breeze-mai-khao']
-  check('one vote per name (any case): Ani moves to Skip', v.like.length === 0 && v.skip.join() === 'Vardan,ani', JSON.stringify(v))
-  r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Vardan', vote: null })
+  check('one vote per name (any case): Ani moves to Skip', v.like.length === 0 && v.skip.join() === 'Davit,ani', JSON.stringify(v))
+  r = await call(api, 'POST', { item: 'ht:mouana-breeze-mai-khao', name: 'Davit', vote: null })
   check('a vote can be taken back', r.json.votes['ht:mouana-breeze-mai-khao'].skip.join() === 'ani', JSON.stringify(r.json.votes))
   r = await call(api, 'GET')
   const gv = r.json.votes['ht:mouana-breeze-mai-khao']
@@ -127,17 +142,17 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   r = await call(api, 'POST', { item: 'ht:fake-1', name: 'Gor', hide: false })
   check('Show again works on a full list', r.status === 200 && !r.json.hidden['ht:fake-1'], String(r.status))
   // the villa order, set with Move up / down, is saved for everyone with who moved last
-  r = await call(api, 'POST', { name: 'Vardan', order: ['mouana-breeze-mai-khao', 'diamond-villa-278', 'alisa-pool-villa'] })
-  check('an order is saved for everyone', r.status === 200 && r.json.order?.ids?.join() === 'mouana-breeze-mai-khao,diamond-villa-278,alisa-pool-villa' && r.json.order.by === 'Vardan', JSON.stringify(r.json.order))
+  r = await call(api, 'POST', { name: 'Davit', order: ['mouana-breeze-mai-khao', 'diamond-villa-278', 'alisa-pool-villa'] })
+  check('an order is saved for everyone', r.status === 200 && r.json.order?.ids?.join() === 'mouana-breeze-mai-khao,diamond-villa-278,alisa-pool-villa' && r.json.order.by === 'Davit', JSON.stringify(r.json.order))
   r = await call(api, 'GET')
   check('GET returns the order', r.json.order?.ids?.length === 3, JSON.stringify(r.json.order))
   // shared notes: on a villa, or for the whole trip ('all'); anyone adds, the note keeps its author and time
   r = await call(api, 'POST', { name: 'Ani', note: { item: 'ht:mouana-breeze-mai-khao', text: '  Ask about the\ndeposit  ' } })
   const n1 = r.json.notes?.['ht:mouana-breeze-mai-khao']?.[0]
   check('a villa note is saved with its author', r.status === 200 && n1?.text === 'Ask about the\ndeposit' && n1.by === 'Ani' && !!n1.id, JSON.stringify(r.json.notes))
-  r = await call(api, 'POST', { name: 'Vardan', note: { item: 'all', text: 'Flights land 14:05' } })
+  r = await call(api, 'POST', { name: 'Davit', note: { item: 'all', text: 'Flights land 14:05' } })
   check('a note for the whole trip is saved', r.json.notes?.all?.[0]?.text === 'Flights land 14:05', JSON.stringify(r.json.notes?.all))
-  r = await call(api, 'POST', { name: 'Vardan', deleteNote: n1.id })
+  r = await call(api, 'POST', { name: 'Davit', deleteNote: n1.id })
   check('refused: deleting someone else\'s note', r.status === 403, String(r.status))
   r = await call(api, 'POST', { name: 'ani', deleteNote: n1.id })
   check('the author can delete their note (any capitals)', r.status === 200 && !r.json.notes['ht:mouana-breeze-mai-khao'], JSON.stringify(r.json.notes))
@@ -147,8 +162,8 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
     const x = await call(api, 'POST', body); check('refused: ' + why, x.status === 400, String(x.status))
   }
   // moved villas keep their place: { pins: { id: position | null } }, merged; two villas never share a position
-  r = await call(api, 'POST', { name: 'Vardan', pins: { 'alisa-pool-villa': 0, 'diamond-villa-278': 3 } })
-  check('pins are saved for everyone', r.status === 200 && r.json.pins?.map?.['alisa-pool-villa'] === 0 && r.json.pins.map['diamond-villa-278'] === 3 && r.json.pins.by === 'Vardan', JSON.stringify(r.json.pins))
+  r = await call(api, 'POST', { name: 'Davit', pins: { 'alisa-pool-villa': 0, 'diamond-villa-278': 3 } })
+  check('pins are saved for everyone', r.status === 200 && r.json.pins?.map?.['alisa-pool-villa'] === 0 && r.json.pins.map['diamond-villa-278'] === 3 && r.json.pins.by === 'Davit', JSON.stringify(r.json.pins))
   r = await call(api, 'POST', { name: 'Ani', pins: { 'la-belle-pool-villa': 3, 'alisa-pool-villa': null } })
   check('a new pin takes the place, null unpins', r.json.pins.map['la-belle-pool-villa'] === 3 && !('diamond-villa-278' in r.json.pins.map) && !('alisa-pool-villa' in r.json.pins.map), JSON.stringify(r.json.pins.map))
   for (const [body, why] of [[{ name: 'V', pins: { a: 5, b: 5 } }, 'two villas in one place'], [{ name: 'V', pins: { 'Bad Id!': 1 } }, 'a pin with a bad id'], [{ name: 'V', pins: { a: -1 } }, 'a negative position'], [{ name: 'V', pins: { a: 1.5 } }, 'a position that is not a whole number'], [{ name: '', pins: { a: 1 } }, 'pins with no name']]) {
@@ -341,10 +356,10 @@ const B = await person()
 await B.p.goto(base + '#stay', { waitUntil: 'networkidle0' }); await sleep(800)
 s = await bar(B.p)
 check('another phone sees the vote', s.like === '1' && s.mine === '' && /Ani/.test(s.names), JSON.stringify(s))
-await vote(B.p, 'skip', 'Vardan')
+await vote(B.p, 'skip', 'Davit')
 await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200) // coming back to the page refreshes
 s = await bar(A.p)
-check('the first phone sees the other vote after a refresh', s.like === '1' && s.skip === '1' && /Vardan/.test(s.names), JSON.stringify(s))
+check('the first phone sees the other vote after a refresh', s.like === '1' && s.skip === '1' && /Davit/.test(s.names), JSON.stringify(s))
 await vote(A.p, 'like')
 s = await bar(A.p)
 check('tapping your own vote again takes it back', s.like === '0' && s.mine === '', JSON.stringify(s))
@@ -531,7 +546,7 @@ check('your own changes do not come back as news', !/Ani liked/.test(ownNews), o
 await A.p.evaluate(() => window.dispatchEvent(new Event('pagehide'))); await sleep(800)
 await A.p.evaluate(() => { location.hash = 'stats' }); await sleep(1500)
 const stats = await A.p.evaluate(() => ({ people: document.querySelector('#stats-body .stats-table')?.innerText || '', tiles: document.querySelector('#stats-body .stats-tiles')?.innerText || '', log: document.querySelector('#stats-body .stats-log')?.innerText || '' }))
-check('the Stats page lists people, visits and the latest activity', /Ani/.test(stats.people) && /Vardan/.test(stats.people) && /People/.test(stats.tiles) && /liked Diamond Villa 278/.test(stats.log) && /opened the guide/.test(stats.log), JSON.stringify(stats).slice(0, 300))
+check('the Stats page lists people, visits and the latest activity', /Ani/.test(stats.people) && /Davit/.test(stats.people) && /People/.test(stats.tiles) && /liked Diamond Villa 278/.test(stats.log) && /opened the guide/.test(stats.log), JSON.stringify(stats).slice(0, 300))
 // Saved for the whole group: A stars a villa (her name is known, so no dialog); B sees it in Saved, with her name
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
 await A.p.evaluate(() => document.querySelector('#ht-alisa-pool-villa .fav').click()); await sleep(900)
@@ -578,13 +593,13 @@ const tile = await A.p.evaluate(() => !!document.querySelector('#home .tile[href
 check('the website has a Spend tab, and the Trip page links to it', /#notes #spend$/.test(tabsWeb) && tile, tabsWeb)
 const asked = (p) => p.evaluate(async () => { location.hash = 'spend'; await new Promise((r) => setTimeout(r, 300)); return { ask: !!document.querySelector('#spend-me.ask'), add: !document.getElementById('spend-add').hidden } })
 const askA = await asked(A.p), askB = await asked(B.p)
-check('a voting name that is not one of the group (Ani, or Vardan with two Vardans): Who are you, and no Add yet', askA.ask && !askA.add && askB.ask && !askB.add, JSON.stringify({ askA, askB }))
+check('a voting name that is not one of the group (Ani, or Davit): Who are you, and no Add yet', askA.ask && !askA.add && askB.ask && !askB.add, JSON.stringify({ askA, askB }))
 const pickMe = (p, who) => p.evaluate(async (who) => {
   document.querySelector('#spend-me [data-me="' + who + '"]').click(); await new Promise((r) => setTimeout(r, 200))
   return { me: document.querySelector('#spend-me .me-top b')?.textContent, add: !document.getElementById('spend-add').hidden, voter: JSON.parse(localStorage.getItem('pg:voterName')) }
 }, who)
 const meA = await pickMe(A.p, 'Lara'), meB = await pickMe(B.p, 'Hovo')
-check('picking a name shows your card and Add, and keeps the voting name', meA.me === 'Lara' && meA.add && meA.voter === 'Ani' && meB.me === 'Hovo' && meB.voter === 'Vardan', JSON.stringify({ meA, meB }))
+check('picking a name shows your card and Add, and keeps the voting name', meA.me === 'Lara' && meA.add && meA.voter === 'Ani' && meB.me === 'Hovo' && meB.voter === 'Davit', JSON.stringify({ meA, meB }))
 // the sheet: amount, currency, what, paid by, split (equally, or shares), day, Save
 const addSpend = (p, x) => p.evaluate(async (x) => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))

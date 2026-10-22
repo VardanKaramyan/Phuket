@@ -50,6 +50,10 @@ const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { wha
 const MAX_SPEND = 2000
 // the group, for the Spend tab (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
 export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara']
+// the names some of them used before the sign-in (TRIP.aliases in tools/trip.mjs): a name sent as one of these is saved
+// as the group's name, and the votes, notes and saves made under them were renamed once (renameOld)
+export const ALIASES = { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash' }
+const aliasOf = (n) => { const a = Object.keys(ALIASES).find((k) => k.toLowerCase() === String(n || '').trim().toLowerCase()); return a ? ALIASES[a] : '' }
 const CURRENCIES = new Set(['THB', 'AMD', 'USD', 'AED'])
 const RATE_BAND = { AMD: [0.01, 1], USD: [5, 200], AED: [1, 50] } // baht for 1 unit: far outside is a typo
 const NEW_ID = /^[a-z0-9]{8,24}$/
@@ -192,6 +196,33 @@ async function changed(db, e, x, name, device) {
 const cleanName = (s) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 const NO_KEY = () => reply(401, { error: 'Wrong password' })
+// once: votes, notes, saves, hidden villas and the villa moves made under an alias go to the group's name (a vote that
+// person already made under that name wins). Marked done in guide:meta, and checked once per server start
+const RENAMED = 'aliasesRenamed'
+let renamed = false
+async function renameOld(db) {
+  if (renamed) return
+  if (await redis(db, ['HGET', META, RENAMED])) { renamed = true; return }
+  const cmds = []
+  const flat = (await redis(db, ['HGETALL', KEY])) || []
+  const fields = new Set(flat.filter((_, i) => i % 2 === 0))
+  for (let i = 0; i < flat.length; i += 2) {
+    const [item, n] = flat[i].split(SEP), p = aliasOf(n)
+    if (!p) continue
+    const to = item + SEP + p.toLowerCase()
+    try { if (!fields.has(to)) cmds.push(['HSET', KEY, to, JSON.stringify({ ...JSON.parse(flat[i + 1]), n: p })]) } catch { /* a broken row: dropped */ }
+    cmds.push(['HDEL', KEY, flat[i]])
+  }
+  for (const H of [NOTES, SAVED, HIDDEN, META]) {
+    const f = (await redis(db, ['HGETALL', H])) || []
+    for (let i = 0; i < f.length; i += 2) {
+      try { const v = JSON.parse(f[i + 1]), p = v && aliasOf(v.n); if (p) cmds.push(['HSET', H, f[i], JSON.stringify({ ...v, n: p })]) } catch { /* not a row with a name */ }
+    }
+  }
+  await Promise.all(cmds.map((c) => redis(db, c)))
+  await redis(db, ['HSET', META, RENAMED, String(Date.now())])
+  renamed = true
+}
 
 export async function GET(request) {
   const db = storage()
@@ -200,6 +231,7 @@ export async function GET(request) {
   if (!keyOk(request)) return NO_KEY()
   if (q.has('auth')) return reply(200, { ok: true })
   try {
+    await renameOld(db)
     if (q.has('stats')) {
       const key = process.env.STATS_KEY
       if (key && q.get('key') !== key) return reply(403, { error: 'The stats need the key' })
@@ -258,6 +290,8 @@ export async function POST(request) {
     } catch (e) { return reply(502, { error: e.message }) }
   }
   if (!keyOk(request)) return NO_KEY()
+  if (body && aliasOf(body.name)) body.name = aliasOf(body.name)
+  try { await renameOld(db) } catch (e) { return reply(502, { error: e.message }) }
   // Spending: add an expense or a payment (with who added it), change one, or delete one. Anyone in the group may change
   // or delete any expense; the row keeps who added it and who changed it last
   if (body && (body.spend || body.deleteSpend)) {

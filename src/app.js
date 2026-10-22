@@ -995,26 +995,46 @@
       const w = reg.installing
       if (w) w.addEventListener('statechange', () => { if (w.state === 'redundant') failMsg() })
       return navigator.serviceWorker.ready
-    }).then(async () => {
+    }).then(() => {
       clearTimeout(timer)
       navigator.storage?.persist?.().catch(() => {})
-      // count what is really in the cache: photos that failed during install are fetched again as you browse online
+      report()
+    }).catch(() => { clearTimeout(timer); setOff('Offline saving is not available in this browser.', false) })
+    // count what is really in this version's cache (the service worker names it after the page's build): photos that
+    // failed during install are fetched again as you browse online
+    const report = async () => {
       let missing = 0, missingSat = 0
       try {
-        const key = (await caches.keys()).find((k) => k.startsWith('guide-') && k !== 'guide-tiles')
-        if (key) {
-          const keys = (await (await caches.open(key)).keys()).map((r) => new URL(r.url).pathname)
-          const sat = keys.filter((p) => p.includes('/sat/')).length
-          missing = Math.max(0, (D.precacheCount || 0) - (keys.length - sat))
-          missingSat = Math.max(0, (D.satCount || 0) - sat)
-        }
+        const key = (await caches.keys()).find((k) => k.startsWith('guide-' + D.buildId + '-'))
+        // a new version of the guide is still saving in the background (the old one's cache has fewer photos): count
+        // once it takes over
+        if (!key) return setOff('Saving this version for offline use…', false)
+        const keys = (await (await caches.open(key)).keys()).map((r) => new URL(r.url).pathname)
+        const sat = keys.filter((p) => p.includes('/sat/')).length
+        missing = Math.max(0, (D.precacheCount || 0) - (keys.length - sat))
+        missingSat = Math.max(0, (D.satCount || 0) - sat)
       } catch { /* cache API not available */ }
+      if (fillRow) fillRow.hidden = !(missing || missingSat)
       if (ios && !standalone) setOff('Saved in Safari for now. Add it to your Home Screen to keep it: Safari clears sites you have not opened for a week.', false)
-      else if (missing > 0) setOff('Saved for offline use, but ' + missing + (missing === 1 ? ' photo is' : ' photos are') + ' missing. Open the guide again on good Wi-Fi.', false)
-      else if (missingSat > 0) setOff('Saved for offline use, but part of the offline satellite map is missing. Open the guide again on good Wi-Fi.', false)
+      else if (missing > 0) setOff('Saved for offline use, but ' + missing + (missing === 1 ? ' photo is' : ' photos are') + ' missing. Download them on good Wi-Fi.', false)
+      else if (missingSat > 0) setOff('Saved for offline use, but part of the offline satellite map is missing. Download it on good Wi-Fi.', false)
       else setOff('Saved for offline use on this phone.', true)
-    }).catch(() => { clearTimeout(timer); setOff('Offline saving is not available in this browser.', false) })
+    }
+    // Download: the service worker fetches only what is missing, then the count runs again
+    const fillRow = $('#offline-fill-row'), fillBtn = $('#offline-fill')
+    fillBtn?.addEventListener('click', async () => {
+      if (!navigator.onLine) return toast('Downloading needs internet.')
+      fillBtn.disabled = true; fillBtn.textContent = 'Downloading…'
+      ;(await navigator.serviceWorker.ready).active?.postMessage('fill')
+    })
+    navigator.serviceWorker.addEventListener('message', async (e) => {
+      if (e.data?.type !== 'filled' || !fillBtn) return
+      await report()
+      fillBtn.disabled = false; fillBtn.textContent = 'Download the missing ones'
+      if (e.data.failed) toast('Some could not be downloaded. Try again on better Wi-Fi.')
+    })
     navigator.serviceWorker.addEventListener('controllerchange', () => {
+      report()
       if (hadController) toast('The guide was updated.', { label: 'Reload', run: () => location.reload() })
     })
   } else if (D.build === 'single') {

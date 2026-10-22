@@ -1430,7 +1430,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 <div class="tiles"><a class="tile" href="#events"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg><b>Music &amp; raves</b><span>19 dated events in your dates</span></a><a class="tile" href="#places"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><b>Places to go</b><span>97 spots · 28 day trips · 13 boat tours</span></a><a class="tile" href="#areas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M9 4.5L3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg><b>Areas &amp; map</b><span>21 areas, drawn on the map</span></a><a class="tile" href="#stay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 18.5v-11M3 14h18v4.5M21 14v-2.5A3.5 3.5 0 0 0 17.5 8H11v6"/><circle cx="7" cy="11" r="1.6"/></svg><b>Where to stay</b><span>29 villas + your own</span></a><a class="tile" href="#money"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5h.01M18 14.5h.01"/></svg><b>Money</b><span>Best rates: Mamy Exchange</span></a><a class="tile" href="#info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/></svg><b>Essentials</b><span>Entry, transport, boats, safety, phrases</span></a><a class="tile wide" href="#apps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg><b>Apps to install</b><span>11 apps to set up before you fly, 54 in all</span></a></div>
 <div class="callout alert"><h3>Before you fly</h3><ul><li><a href="#info-entry">Fill in the free TDAC arrival card in the 3 days before you land, only on tdac.immigration.go.th.</a></li><li><a href="#apps">Install and set up the must-have apps while your home SIM still gets the SMS codes.</a></li><li><a href="#info-phangan-week">Book the Samui flights for 19 and 23 Jan, and a room in Ban Tai for full-moon week.</a></li><li><a href="#events">Buy party tickets early: the cheaper tiers sell out (Argy: on sale Tue 20 Oct, 18:00 Thai time, 15:00 in Yerevan).</a></li><li><a href="#info-boat-tours">Book the boat days early: small-group and private boats sell out in January.</a></li><li><a href="#info-safety-law">Leave vapes and e-cigarettes at home: they are illegal in Thailand.</a></li><li><a href="#info-entry">Check your passport: valid at least 6 months after arrival, with a free page.</a></li></ul><p><a href="#info">Read the essentials</a></p></div>
 <div class="stack js-only"><div class="block-title"><h2>Saved</h2><small id="saved-count"></small></div><div class="agenda-day"><ul id="saved-list"></ul></div></div>
-<div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">This copy needs internet. For the trip, keep the offline file of this guide (phuket-guide-offline.html) on your phone: it works with no internet.</p>
+<div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">This copy needs internet. For the trip, keep the offline file of this guide (phuket-guide-offline.html) on your phone: it works with no internet.</p><p id="offline-fill-row" hidden><button class="btn primary" type="button" id="offline-fill">Download the missing ones</button></p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
 <p class="note">For offline turn-by-turn directions, also download Phuket in the Google Maps app: profile picture → Offline maps → Select your own map.</p></div>
 <footer class="footer-note"><p>Researched on 15-19 Oct 2026. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
@@ -6733,26 +6733,46 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
       const w = reg.installing
       if (w) w.addEventListener('statechange', () => { if (w.state === 'redundant') failMsg() })
       return navigator.serviceWorker.ready
-    }).then(async () => {
+    }).then(() => {
       clearTimeout(timer)
       navigator.storage?.persist?.().catch(() => {})
-      // count what is really in the cache: photos that failed during install are fetched again as you browse online
+      report()
+    }).catch(() => { clearTimeout(timer); setOff('Offline saving is not available in this browser.', false) })
+    // count what is really in this version's cache (the service worker names it after the page's build): photos that
+    // failed during install are fetched again as you browse online
+    const report = async () => {
       let missing = 0, missingSat = 0
       try {
-        const key = (await caches.keys()).find((k) => k.startsWith('guide-') && k !== 'guide-tiles')
-        if (key) {
-          const keys = (await (await caches.open(key)).keys()).map((r) => new URL(r.url).pathname)
-          const sat = keys.filter((p) => p.includes('/sat/')).length
-          missing = Math.max(0, (D.precacheCount || 0) - (keys.length - sat))
-          missingSat = Math.max(0, (D.satCount || 0) - sat)
-        }
+        const key = (await caches.keys()).find((k) => k.startsWith('guide-' + D.buildId + '-'))
+        // a new version of the guide is still saving in the background (the old one's cache has fewer photos): count
+        // once it takes over
+        if (!key) return setOff('Saving this version for offline use…', false)
+        const keys = (await (await caches.open(key)).keys()).map((r) => new URL(r.url).pathname)
+        const sat = keys.filter((p) => p.includes('/sat/')).length
+        missing = Math.max(0, (D.precacheCount || 0) - (keys.length - sat))
+        missingSat = Math.max(0, (D.satCount || 0) - sat)
       } catch { /* cache API not available */ }
+      if (fillRow) fillRow.hidden = !(missing || missingSat)
       if (ios && !standalone) setOff('Saved in Safari for now. Add it to your Home Screen to keep it: Safari clears sites you have not opened for a week.', false)
-      else if (missing > 0) setOff('Saved for offline use, but ' + missing + (missing === 1 ? ' photo is' : ' photos are') + ' missing. Open the guide again on good Wi-Fi.', false)
-      else if (missingSat > 0) setOff('Saved for offline use, but part of the offline satellite map is missing. Open the guide again on good Wi-Fi.', false)
+      else if (missing > 0) setOff('Saved for offline use, but ' + missing + (missing === 1 ? ' photo is' : ' photos are') + ' missing. Download them on good Wi-Fi.', false)
+      else if (missingSat > 0) setOff('Saved for offline use, but part of the offline satellite map is missing. Download it on good Wi-Fi.', false)
       else setOff('Saved for offline use on this phone.', true)
-    }).catch(() => { clearTimeout(timer); setOff('Offline saving is not available in this browser.', false) })
+    }
+    // Download: the service worker fetches only what is missing, then the count runs again
+    const fillRow = $('#offline-fill-row'), fillBtn = $('#offline-fill')
+    fillBtn?.addEventListener('click', async () => {
+      if (!navigator.onLine) return toast('Downloading needs internet.')
+      fillBtn.disabled = true; fillBtn.textContent = 'Downloading…'
+      ;(await navigator.serviceWorker.ready).active?.postMessage('fill')
+    })
+    navigator.serviceWorker.addEventListener('message', async (e) => {
+      if (e.data?.type !== 'filled' || !fillBtn) return
+      await report()
+      fillBtn.disabled = false; fillBtn.textContent = 'Download the missing ones'
+      if (e.data.failed) toast('Some could not be downloaded. Try again on better Wi-Fi.')
+    })
     navigator.serviceWorker.addEventListener('controllerchange', () => {
+      report()
       if (hadController) toast('The guide was updated.', { label: 'Reload', run: () => location.reload() })
     })
   } else if (D.build === 'single') {

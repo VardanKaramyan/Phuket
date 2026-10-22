@@ -46,6 +46,18 @@ async function run(label, port, redirectIndex, reloadPath) {
     }
     return null
   })
+  // Download fetches what is missing: drop 3 saved zoom-14 satellite tiles, reload, press it
+  await page.evaluate(async (c) => { const cache = await caches.open(c); for (const k of (await cache.keys()).filter((r) => r.url.includes('/sat/14/')).slice(0, 3)) await cache.delete(k) }, cached?.cache)
+  await page.goto(base + '/', { waitUntil: 'networkidle0' })
+  const fill = await page.evaluate(async () => {
+    const wait = async (f) => { for (let i = 0; i < 80 && !f(); i++) await new Promise((r) => setTimeout(r, 100)); return f() }
+    const text = () => document.getElementById('offline-state').textContent
+    const before = (await wait(() => !document.getElementById('offline-fill-row').hidden)) && text()
+    document.getElementById('offline-fill').click()
+    await wait(() => /on this phone/.test(text()))
+    return { before, after: text(), buttonHidden: document.getElementById('offline-fill-row').hidden }
+  })
+  console.log(`[${label}] Download: ${JSON.stringify(fill)}`)
   await srv.stop() // the server is gone: nothing can come from the network now
   await page.setOfflineMode(true)
   await page.goto(base + reloadPath, { waitUntil: 'load' }).catch((e) => errors.push('goto: ' + e.message))
@@ -68,7 +80,7 @@ async function run(label, port, redirectIndex, reloadPath) {
   }).catch((e) => ({ error: e.message }))
   await browser.close()
   // the page also reports photos missing from the cache (it compares with the build's count)
-  const ok = cached && result.cards > 100 && result.imgs > 0 && result.imgsLoaded === result.imgs && result.mapPaths > 50 && result.satTiles >= 4 && !/missing/i.test(result.offlineText || '')
+  const ok = cached && /satellite map is missing/.test(fill.before || '') && /on this phone/.test(fill.after) && fill.buttonHidden && result.cards > 100 && result.imgs > 0 && result.imgsLoaded === result.imgs && result.mapPaths > 50 && result.satTiles >= 4 && !/missing/i.test(result.offlineText || '')
   console.log(`[${label}] cache: ${cached ? cached.entries + ' files' : 'NONE'} · after reload with the server stopped: ${JSON.stringify(result)}${errors.length ? ' · errors: ' + errors.join(' | ') : ''}`)
   console.log(`[${label}] ${ok ? 'PASSED' : 'FAILED'}`)
   return ok

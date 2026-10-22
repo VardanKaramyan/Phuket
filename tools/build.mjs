@@ -674,7 +674,7 @@ ${BASES.length ? `<div class="bases-strip" aria-label="Our villas">${BASES.map((
 <div class="tiles">${tiles}</div>
 ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${beforeFly.map((c) => `<li>${c.href ? `<a href="${esc(c.href)}">${esc(c.text)}</a>` : esc(c.text)}</li>`).join('')}</ul><p><a href="#info">Read the essentials</a></p></div>` : ''}
 <div class="stack js-only"><div class="block-title"><h2>Saved</h2><small id="saved-count"></small></div><div class="agenda-day"><ul id="saved-list"></ul></div></div>
-<div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p>
+<div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p><p id="offline-fill-row" hidden><button class="btn primary" type="button" id="offline-fill">Download the missing ones</button></p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
 <p class="note">For offline turn-by-turn directions, also download Phuket in the Google Maps app: profile picture → Offline maps → Select your own map.</p></div>
 <footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only"><a href="#stats">Visits and activity</a>: the website counts visits and what people do in it, for the group.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
@@ -1326,7 +1326,8 @@ fs.writeFileSync(P('dist/manifest.webmanifest'), JSON.stringify({
 }, null, 1))
 const precache = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'phuket-areas.kml',
   ...fs.readdirSync(P('dist/img')).filter((f) => f.endsWith('.webp')).map((f) => 'img/' + f), ...satFiles.map((f) => 'sat/' + f)]
-const version = crypto.createHash('sha1').update(standalone).update(precache.join()).digest('hex').slice(0, 10)
+// the cache is named after the page's build, so the page counts its own photos and not an older version's
+const version = buildId + '-' + crypto.createHash('sha1').update(precache.join()).digest('hex').slice(0, 6)
 fs.writeFileSync(P('dist/sw.js'), fs.readFileSync(P('src/sw.js'), 'utf8').replace('__VERSION__', version).replace('__PRECACHE__', JSON.stringify(precache)))
 
 const kb = (f) => Math.round(fs.statSync(P(f)).size / 1024) + ' KB'

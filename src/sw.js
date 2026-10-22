@@ -33,6 +33,18 @@ self.addEventListener('install', (event) => {
   })())
 })
 
+// the page's Download button: fetch again the photos and satellite tiles that failed during install
+self.addEventListener('message', (event) => {
+  if (event.data !== 'fill') return
+  event.waitUntil((async () => {
+    const c = await caches.open(CACHE)
+    const have = new Set((await c.keys()).map((r) => new URL(r.url).pathname))
+    const todo = PRECACHE.filter((u) => !have.has(new URL(u, self.location).pathname))
+    const done = await Promise.allSettled(todo.map((u) => save(c, u)))
+    event.source?.postMessage({ type: 'filled', failed: done.filter((d) => d.status === 'rejected').length })
+  })())
+})
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()

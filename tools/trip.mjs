@@ -15,6 +15,8 @@ export const TRIP = {
   ],
   // the group (the user, 20 Oct 2026), for the Spend tab; api/votes.js has the same list (PEOPLE)
   people: ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara'],
+  // other names the sign-in screen takes for them (the user, 22 Oct 2026)
+  aliases: { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash' },
   phases: [
     { id: 'group', label: 'Group', from: '2027-01-08', to: '2027-01-18' },
     { id: 'duo', label: 'Two of you', from: '2027-01-19', to: '2027-01-23' },

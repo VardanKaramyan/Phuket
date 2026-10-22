@@ -75,7 +75,16 @@ const call = async (api, method, body) => {
 }
 process.env.STORAGE_REST_API_URL = `http://127.0.0.1:${upPort}`
 process.env.STORAGE_REST_API_TOKEN = 'test-token'
-const api = await import(mod + '?store')
+const rawApi = await import(mod + '?store')
+// the group's password: the checks below send it, like a signed-in phone (the page part sends it from its storage)
+const PASSWORD = 'vardan55555'
+const keyed = (f) => (req) => req.headers.has('x-guide-key') ? f(req) : f(new Request(req, { headers: { ...Object.fromEntries(req.headers), 'x-guide-key': PASSWORD } }))
+const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
+{
+  const raw = (q, body, key) => rawApi[body ? 'POST' : 'GET'](new Request('http://x/api/votes' + q, { method: body ? 'POST' : 'GET', headers: { 'Content-Type': 'application/json', ...(key ? { 'x-guide-key': key } : {}) }, body: body && JSON.stringify(body) }))
+  const s = [(await raw('')).status, (await raw('', { item: 'ht:mouana', name: 'Ani', vote: 'like' }, 'nope')).status, (await raw('?auth=1', null, ' Vardan55555 ')).status, (await raw('', { device: 'devnokey0001', track: [{ e: 'visit' }] })).status]
+  check('the password: none → 401, wrong → 401, any case → ok, visits need none', s.join() === '401,401,200,200', s.join())
+}
 {
   let r = await call(api, 'GET')
   check('any prefix works (STORAGE_), empty at first', r.status === 200 && JSON.stringify(r.json.votes) === '{}', JSON.stringify(r.json))
@@ -236,7 +245,7 @@ const api = await import(mod + '?store')
   process.env.STATS_KEY = 'trip-secret'
   const noKey = await api.GET(new Request('http://x/api/votes?stats=1'))
   const withKey = await api.GET(new Request('http://x/api/votes?stats=1&key=trip-secret'))
-  check('STATS_KEY: no key → 401, the right key → the stats', noKey.status === 401 && withKey.status === 200, noKey.status + ' / ' + withKey.status)
+  check('STATS_KEY: no key → 403, the right key → the stats', noKey.status === 403 && withKey.status === 200, noKey.status + ' / ' + withKey.status)
   delete process.env.STATS_KEY
   // a full visitor list: only phones idle for 14 days or more make room; recent ones are never pushed out
   const vis = hashes.get('guide:visitors')
@@ -273,7 +282,8 @@ const site = http.createServer(async (req, res) => {
     if (apiDown) { res.writeHead(503); return res.end('{}') }
     let body = ''
     for await (const c of req) body += c
-    const r = await api[req.method](new Request('http://x' + req.url, { method: req.method, headers: { 'Content-Type': 'application/json' }, body: req.method === 'POST' ? body : undefined }))
+    const key = req.headers['x-guide-key'] ? { 'x-guide-key': req.headers['x-guide-key'] } : {}
+    const r = await rawApi[req.method](new Request('http://x' + req.url, { method: req.method, headers: { 'Content-Type': 'application/json', ...key }, body: req.method === 'POST' ? body : undefined }))
     res.writeHead(r.status, Object.fromEntries(r.headers)); return res.end(await r.text())
   }
   let p = decodeURIComponent(u.pathname); if (p.endsWith('/')) p += 'index.html'
@@ -286,9 +296,10 @@ const port = await listen(site)
 const base = `http://127.0.0.1:${port}/`
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const b = await puppeteer.launch({ executablePath: chromePath(), headless: true })
-const person = async () => {
+const person = async (signedIn = true) => {
   const ctx = await b.createBrowserContext() // its own storage: another phone
   const p = await ctx.newPage(); const errors = []
+  if (signedIn) await p.evaluateOnNewDocument((k) => { try { if (!localStorage.getItem('pg:guideKey')) localStorage.setItem('pg:guideKey', JSON.stringify(k)) } catch { /* a frame with no storage */ } }, PASSWORD)
   p.on('pageerror', (e) => errors.push(e.message))
   await p.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true })
   return { p, ctx, errors }
@@ -837,7 +848,19 @@ apiDown = false
 await A.p.evaluate(() => window.dispatchEvent(new Event('online'))); await sleep(1200)
 const neverSent = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.filter((x) => x.what === 'Wrong one').length
 check('an unsent expense deleted on the phone never reaches the group', dropped.meta === 'Not sent yet' && dropped.box === 0 && dropped.rows === 0 && neverSent === 0, JSON.stringify({ dropped, neverSent }))
-for (const x of [A, B, C]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
+// a phone with no password: the server says 401, the sign-in screen comes up and takes a name of the group (or its
+// other name) and the password
+const G = await person(false)
+await G.p.goto(base, { waitUntil: 'load' }); await sleep(1500)
+const gateTry = (name, pass) => G.p.evaluate(async (name, pass) => {
+  document.getElementById('gate-name').value = name; document.getElementById('gate-pass').value = pass
+  document.getElementById('gate-form').requestSubmit(); await new Promise((r) => setTimeout(r, 400))
+  return { shown: !document.getElementById('gate').hidden, err: document.getElementById('gate-err').textContent, me: JSON.parse(localStorage.getItem('pg:voterName') || '""') }
+}, name, pass)
+const gate0 = await G.p.evaluate(() => !document.getElementById('gate').hidden && document.querySelector('.gate-title').textContent)
+const gates = [await gateTry('Ani', PASSWORD), await gateTry('virt', 'wrong'), await gateTry(' Virt ', 'Vardan55555')]
+check('sign-in: DU OV ES? comes up, a stranger and a wrong password are refused, Virt is Vardan H', gate0 === 'DU OV ES?' && /Not on the list/.test(gates[0].err) && gates[1].shown && /Wrong/.test(gates[1].err) && !gates[2].shown && gates[2].me === 'Vardan H', JSON.stringify({ gate0, gates }))
+for (const x of [A, B, C, G]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')
 process.exitCode = failed ? 1 : 0

@@ -677,7 +677,7 @@ ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${be
 <div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p><p id="offline-fill-row" hidden><button class="btn primary" type="button" id="offline-fill">Download the missing ones</button></p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
 <p class="note">For offline turn-by-turn directions, also download Phuket in the Google Maps app: profile picture → Offline maps → Select your own map.</p></div>
-<footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only"><a href="#stats">Visits and activity</a>: the website counts visits and what people do in it, for the group.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
+<footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only" id="signed-in" hidden>Signed in as <b></b>. <button class="link-btn" type="button" id="sign-out">Not you?</button></p><p class="js-only"><a href="#stats">Visits and activity</a>: the website counts visits and what people do in it, for the group.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
 </section>`
 }
 
@@ -1103,7 +1103,11 @@ function chrome(body) {
 <button class="back-to-map js-only" id="back-to-map" type="button" hidden>${icon('back')}Back to map</button>
 <button class="back-to-map js-only" id="back-to-card" type="button" hidden>${icon('back')}<span>Back to villa</span></button>
 <dialog class="vote-dialog dir-dialog" id="dir-dialog" aria-labelledby="dir-title"><form method="dialog"><h2 id="dir-title">Directions</h2><p class="vote-what" id="dir-what"></p><div class="dir-options" id="dir-options"></div><div class="actions"><button class="btn" type="submit">Cancel</button></div></form></dialog>
-<dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
+${buildName === 'standalone' ? `<div class="gate" id="gate" hidden><form class="gate-box" id="gate-form"><h1 class="gate-title">DU OV ES?</h1><p class="gate-hint">PAROLY IM ANUNNA U HING HAT HING</p>
+<label for="gate-name">Name<input id="gate-name" name="username" maxlength="40" autocomplete="username" autocapitalize="words" required></label>
+<label for="gate-pass">Password<input id="gate-pass" name="password" type="password" maxlength="80" autocomplete="current-password" autocapitalize="none" required></label>
+<p class="gate-err" id="gate-err" role="alert"></p><button class="btn primary" type="submit">Enter</button></form></div>
+` : ''}<dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
 <h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
 <label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
 <p class="note" id="vote-note">Everyone with the guide sees the names. One vote per name.</p>

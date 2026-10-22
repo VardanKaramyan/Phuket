@@ -18,11 +18,23 @@
 //   POST /api/votes { device, name?, track: [{ e, x }] }        -> visits and actions for the Stats page
 //   GET  /api/votes?ver=<n>  -> { ver, same: true } when nothing changed since version n (one cheap read), else everything
 //   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page;
-//        with a STATS_KEY environment variable set, it also needs &key=<that key>
+//        with a STATS_KEY environment variable set, it also needs &key=<that key> (403 without it)
+//   GET  /api/votes?auth=1  -> { ok: true } when the password is right (the sign-in screen)
+// Everything but the visits (track) needs the group's password in an X-Guide-Key header, or it answers 401.
 // GET and every POST answer with { votes, hidden, pins: { map, by, t } | null, order, notes: { '<item>': [{ id, text, by, t }] },
 // spend: [expenses, newest day first], ver, recent: [the latest shared changes] }; each votes entry also has last: the time
 // of its latest like. Saving an expense also answers with its id.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
+import { createHash } from 'node:crypto'
+
+// the group's password, asked with the name on the sign-in screen: kept as its SHA-256 (any case, spaces trimmed), so
+// the password itself is not in the code; a GUIDE_PASSWORD environment variable on Vercel replaces it
+const PASSWORD_SHA = '2cb2d46750539012abd550eace6da18bd934fea18e4da729ad182fce874a4df9'
+const sha = (s) => createHash('sha256').update(String(s ?? '').trim().toLowerCase()).digest('hex')
+const keyOk = (request) => {
+  const k = request?.headers?.get?.('x-guide-key') || ''
+  return !!k && sha(k) === (process.env.GUIDE_PASSWORD ? sha(process.env.GUIDE_PASSWORD) : PASSWORD_SHA)
+}
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
 const SAVED = 'guide:saved' // one Redis hash: field "<item>", value { n, t } (who saved it for the group, when)
@@ -93,7 +105,7 @@ async function allVotes(db) {
   }
   return votes
 }
-const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type' }
+const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type, X-Guide-Key' }
 const reply = (status, body) => new Response(JSON.stringify(body), { status, headers: HEADERS })
 async function hiddenVillas(db) {
   const flat = (await redis(db, ['HGETALL', HIDDEN])) || []
@@ -179,15 +191,18 @@ async function changed(db, e, x, name, device) {
 }
 const cleanName = (s) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
+const NO_KEY = () => reply(401, { error: 'Wrong password' })
 
 export async function GET(request) {
   const db = storage()
   if (!db) return NO_DB()
   const q = new URL(request?.url || 'http://x/').searchParams
+  if (!keyOk(request)) return NO_KEY()
+  if (q.has('auth')) return reply(200, { ok: true })
   try {
     if (q.has('stats')) {
       const key = process.env.STATS_KEY
-      if (key && q.get('key') !== key) return reply(401, { error: 'The stats need the key' })
+      if (key && q.get('key') !== key) return reply(403, { error: 'The stats need the key' })
       const flat = (await redis(db, ['HGETALL', VISITORS])) || []
       const visitors = {}
       // the phone type only, not the whole browser string
@@ -242,6 +257,7 @@ export async function POST(request) {
       return reply(200, { ok: true })
     } catch (e) { return reply(502, { error: e.message }) }
   }
+  if (!keyOk(request)) return NO_KEY()
   // Spending: add an expense or a payment (with who added it), change one, or delete one. Anyone in the group may change
   // or delete any expense; the row keeps who added it and who changed it last
   if (body && (body.spend || body.deleteSpend)) {

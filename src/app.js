@@ -1153,6 +1153,40 @@
   const voterName = () => store.get('voterName', '')
   const same = (a, b) => a.toLowerCase() === b.toLowerCase()
   const mineOf = (it) => { const me = voterName(); return !me ? null : it.like.some((n) => same(n, me)) ? 'like' : it.skip.some((n) => same(n, me)) ? 'skip' : null }
+  // the sign-in screen (DU OV ES?): the website asks once for a name of the group and the group's password, which goes
+  // with every call to the server (it answers 401 without it). The name is then the name for votes, notes and expenses
+  const gate = canVote ? $('#gate') : null
+  const keyHead = () => { const k = store.get('guideKey', ''); return k ? { 'X-Guide-Key': k } : {} }
+  const whoIs = (s) => {
+    const n = s.replace(/\s+/g, ' ').trim(), alias = Object.keys(D.trip.aliases || {}).find((a) => same(a, n))
+    return alias ? D.trip.aliases[alias] : (D.trip.people || []).find((p) => same(p, n)) || ''
+  }
+  function signedIn() {
+    const me = store.get('guideName', ''), line = $('#signed-in')
+    if (line) { line.hidden = !me; $('b', line).textContent = me }
+  }
+  function showGate() {
+    if (!gate || !gate.hidden) return
+    gate.hidden = false; document.documentElement.classList.add('gated')
+    $('#gate-name').value = store.get('guideName', ''); $('#gate-pass').value = ''
+    $(store.get('guideName', '') ? '#gate-pass' : '#gate-name').focus()
+  }
+  if (gate) {
+    $('#gate-form').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const err = $('#gate-err'), name = whoIs($('#gate-name').value), key = $('#gate-pass').value.trim()
+      if (!name) { err.textContent = 'Not on the list. Type your name.'; return }
+      let r = null
+      try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key }, cache: 'no-store' }) } catch { /* offline: let them in, the server checks it once online */ }
+      if (r && r.status === 401) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
+      store.set('guideKey', key); store.set('guideName', name); store.set('voterName', name); store.set('spendMe', name)
+      err.textContent = ''; gate.hidden = true; document.documentElement.classList.remove('gated')
+      signedIn(); ver = 0; loadVotes(); renderVotes(); renderNotes(); renderSpend()
+    })
+    $('#sign-out')?.addEventListener('click', () => { store.set('guideName', ''); store.set('guideKey', ''); signedIn(); showGate() })
+    signedIn()
+    if (location.protocol === 'https:' && !(store.get('guideKey', '') && store.get('guideName', ''))) showGate()
+  }
   const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's')
   function renderVotes() {
     if (!votes) return
@@ -1274,7 +1308,8 @@
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return
     try {
-      const r = await fetch(D.votes + (ver ? '?ver=' + ver : ''), { cache: 'no-store' })
+      const r = await fetch(D.votes + (ver ? '?ver=' + ver : ''), { cache: 'no-store', headers: keyHead() })
+      if (r.status === 401) return showGate()
       if (!r.ok) throw new Error('votes ' + r.status)
       const j = await r.json()
       if (!j.same) applyShared(j)
@@ -1336,7 +1371,8 @@
   async function post(body, ms) {
     const ctl = ms && window.AbortController ? new AbortController() : null, timer = ctl && setTimeout(() => ctl.abort(), ms)
     try {
-      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ device, ...body }), signal: ctl ? ctl.signal : undefined })
+      const r = await fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json', ...keyHead() }, body: JSON.stringify({ device, ...body }), signal: ctl ? ctl.signal : undefined })
+      if (r.status === 401) showGate()
       if (!r.ok) { const e = new Error((await r.json().catch(() => ({}))).error || 'post ' + r.status); e.status = r.status; throw e }
       return r.json()
     } finally { clearTimeout(timer) }
@@ -1349,6 +1385,7 @@
     $('#vote-what').textContent = what
     $('#vote-note').textContent = note
     $('#vote-name').value = voterName()
+    $('#vote-name').readOnly = !!store.get('guideName', '') // signed in: votes go under that name
     $('[data-vote-save]', dlg).textContent = save
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '')
     ;(voterName() ? $('[data-vote-save]', dlg) : $('#vote-name')).focus()
@@ -2230,8 +2267,9 @@
     box.innerHTML = '<p class="note">Loading…</p>'
     try {
       // a password set as STATS_KEY on Vercel: asked once, kept on this phone
-      let r = await fetch(D.votes + '?stats=1&key=' + encodeURIComponent(store.get('statsKey', '')), { cache: 'no-store' })
-      if (r.status === 401) {
+      let r = await fetch(D.votes + '?stats=1&key=' + encodeURIComponent(store.get('statsKey', '')), { cache: 'no-store', headers: keyHead() })
+      if (r.status === 401) { box.innerHTML = ''; return showGate() }
+      if (r.status === 403) {
         box.innerHTML = '<form class="myform" id="stats-key-form"><label for="stats-key">Password for the stats<input id="stats-key" type="password" autocomplete="current-password" required></label><button class="btn primary" type="submit">Show the stats</button></form>'
         $('#stats-key-form').addEventListener('submit', (e) => { e.preventDefault(); store.set('statsKey', $('#stats-key').value); renderStats() })
         $('#stats-key').focus()

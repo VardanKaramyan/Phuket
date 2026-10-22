@@ -575,6 +575,15 @@ html.sheet-open { overflow: hidden; }
 .picks a { font-weight: 700; }
 .picks span { color: var(--ink-2); }
 .picks small { display: block; color: var(--ink-2); font-size: 13px; }
+/* the sign-in screen on the website: the name and the group's password */
+.gate { position: fixed; inset: 0; z-index: 1100; display: grid; place-items: center; padding: 24px 16px; overflow-y: auto; background: var(--bg); }
+html.gated { overflow: hidden; }
+.gate-box { display: grid; gap: 12px; width: min(380px, 100%); }
+.gate-title { font: 700 clamp(48px, 15vw, 76px)/1 var(--font-display); letter-spacing: 0.02em; }
+.gate-hint { margin: 0 0 8px; font: 700 clamp(24px, 7vw, 32px)/1.15 var(--font-display); letter-spacing: 0.03em; color: var(--sea-text); }
+.gate label { display: grid; gap: 4px; font-size: 14px; color: var(--ink-2); }
+.gate input { font: inherit; font-size: 16px; color: var(--ink); padding: 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); }
+.gate-err { margin: 0; min-height: 1.5em; font-weight: 600; color: var(--warn-ink); }
 .vote-dialog { border: 0; border-radius: var(--radius); padding: 18px; width: min(360px, calc(100vw - 32px)); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
 .vote-dialog::backdrop { background: rgb(0 0 0 / 0.45); }
 .vote-dialog form { display: grid; gap: 10px; }

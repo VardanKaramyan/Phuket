@@ -76,13 +76,15 @@ const call = async (api, method, body) => {
 process.env.STORAGE_REST_API_URL = `http://127.0.0.1:${upPort}`
 process.env.STORAGE_REST_API_TOKEN = 'test-token'
 const rawApi = await import(mod + '?store')
-// the group's password: the checks below send it, like a signed-in phone (the page part sends it from its storage)
-const PASSWORD = 'vardan55555'
+// a test password in place of the group's (GUIDE_PASSWORD replaces it): the checks below send it, like a signed-in
+// phone (the page part sends it from its storage)
+const PASSWORD = 'test-pass55'
+process.env.GUIDE_PASSWORD = PASSWORD
 const keyed = (f) => (req) => req.headers.has('x-guide-key') ? f(req) : f(new Request(req, { headers: { ...Object.fromEntries(req.headers), 'x-guide-key': PASSWORD } }))
 const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
 {
   const raw = (q, body, key) => rawApi[body ? 'POST' : 'GET'](new Request('http://x/api/votes' + q, { method: body ? 'POST' : 'GET', headers: { 'Content-Type': 'application/json', ...(key ? { 'x-guide-key': key } : {}) }, body: body && JSON.stringify(body) }))
-  const s = [(await raw('')).status, (await raw('', { item: 'ht:mouana', name: 'Ani', vote: 'like' }, 'nope')).status, (await raw('?auth=1', null, ' Vardan55555 ')).status, (await raw('', { device: 'devnokey0001', track: [{ e: 'visit' }] })).status]
+  const s = [(await raw('')).status, (await raw('', { item: 'ht:mouana', name: 'Ani', vote: 'like' }, 'nope')).status, (await raw('?auth=1', null, ' Test-Pass55 ')).status, (await raw('', { device: 'devnokey0001', track: [{ e: 'visit' }] })).status]
   check('the password: none → 401, wrong → 401, any case → ok, visits need none', s.join() === '401,401,200,200', s.join())
 }
 {
@@ -858,7 +860,7 @@ const gateTry = (name, pass) => G.p.evaluate(async (name, pass) => {
   return { shown: !document.getElementById('gate').hidden, err: document.getElementById('gate-err').textContent, me: JSON.parse(localStorage.getItem('pg:voterName') || '""') }
 }, name, pass)
 const gate0 = await G.p.evaluate(() => !document.getElementById('gate').hidden && document.querySelector('.gate-title').textContent)
-const gates = [await gateTry('Ani', PASSWORD), await gateTry('virt', 'wrong'), await gateTry(' Virt ', 'Vardan55555')]
+const gates = [await gateTry('Ani', PASSWORD), await gateTry('virt', 'wrong'), await gateTry(' Virt ', 'TEST-PASS55')]
 check('sign-in: DU OV ES? comes up, a stranger and a wrong password are refused, Virt is Vardan H', gate0 === 'DU OV ES?' && /Not on the list/.test(gates[0].err) && gates[1].shown && /Wrong/.test(gates[1].err) && !gates[2].shown && gates[2].me === 'Vardan H', JSON.stringify({ gate0, gates }))
 for (const x of [A, B, C, G]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()

@@ -377,6 +377,14 @@ async function approveAll() {
   check('a failed sign-in is logged with the name tried', fail?.n === 'Vardan K' && fail.s === 401 && fail.ip === '203.0.113.7', JSON.stringify(fail))
   check('visits: the signed-in name, the screen (known fields only) and the taps', seen?.n === 'Vahe' && seen.v === 1 && seen.info?.sw === 390 && !('bogus' in seen.info) && au.audit.some((x) => x.e === 'tap' && x.n === 'Vahe') && au.visitors?.devvahik0001?.ip === '203.0.113.7' && au.visitors.devvahik0001.place === 'Pa Tong, 83, TH', JSON.stringify({ seen, phone: au.visitors?.devvahik0001 }))
   await as('Vahik', { item: 'pl:big-buddha', vote: null })
+  // a real password (group or admin) typed with a name it does not match is never written to the log; genuine wrong guesses are
+  const gate = (name, key) => rawApi.GET(new Request('http://x/api/votes?auth=1', { headers: { 'x-guide-key': key, 'x-guide-name': encodeURIComponent(name), 'x-real-ip': '198.51.100.70' } }))
+  await gate('Hovo', ADMIN_PASS) // the admin password, wrong for Hovo
+  await gate('Mesmystery', PASSWORD) // the group password, with a name not on the list
+  await gate('Lara', 'guessguess') // a genuine wrong guess
+  const au3 = (await as('Vardan K', null, '?audit=1')).json.audit
+  const hv = au3.find((x) => x.e === 'signin-fail' && x.n === 'Hovo'), zz = au3.find((x) => x.e === 'signin-unknown' && x.n === 'Mesmystery'), lr = au3.find((x) => x.e === 'signin-fail' && x.n === 'Lara')
+  check('a real password is never written to the log; a genuine wrong guess is', hv && !hv.pw && zz && !zz.pw && lr && lr.pw === 'guessguess', JSON.stringify({ hv: hv && hv.pw, zz: zz && zz.pw, lr: lr && lr.pw }))
   // a full visitor list: only phones idle for 14 days or more make room; recent ones are never pushed out
   const vis = hashes.get('guide:visitors')
   const day = 86400000, now0 = Date.now()

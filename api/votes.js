@@ -80,6 +80,9 @@ async function adminKeyOk(db, request, k) {
 const header = (request, k) => request?.headers?.get?.(k) || ''
 // the caller's IP: the header Vercel sets itself first (it replaces any X-Forwarded-For a client sends)
 const ipOf = (request) => (header(request, 'x-vercel-forwarded-for') || header(request, 'x-real-ip') || header(request, 'x-forwarded-for')).split(',')[0].trim().slice(0, 64)
+// a typed password that is in fact a real one (the group's, or the admin's) is never written to the log, even when it was
+// typed with a name it does not match (so the real secret never lands in the activity log)
+const isSecretPw = (k) => !!k && (groupKeyOk(k) || (process.env.ADMIN_PASSWORD ? sha(k) === sha(process.env.ADMIN_PASSWORD) : adminSeen.get(sha(k)) === true))
 const decode = (s) => { try { return decodeURIComponent(s) } catch { return s } }
 // one of the group, from a name as typed or an old alias; '' for anyone else
 const personOf = (n) => { const s = cleanName(n); return aliasOf(s) || PEOPLE.find((p) => p.toLowerCase() === s.toLowerCase()) || '' }
@@ -316,7 +319,37 @@ async function resetPays(db) {
   if (drop.length) await changed(db, 'reset-pays', drop.length + ' payments', ADMIN, '')
   paysReset = true
 }
-const once = async (db) => { await renameOld(db); await resetPays(db) }
+// a password already in the log that is in fact the group's or the admin's is blanked; re-runs when a password changes
+const AUDIT_SCRUBBED = 'auditScrubbed'
+let scrubbedSig = ''
+async function scrubAudit(db) {
+  const sig = sha('scrub2|' + ADMIN_SALT + ADMIN_HASH + '|' + (process.env.GUIDE_PASSWORD ? sha(process.env.GUIDE_PASSWORD) : PASSWORD_SHA) + '|' + (process.env.ADMIN_PASSWORD ? sha(process.env.ADMIN_PASSWORD) : ''))
+  if (scrubbedSig === sig) return
+  if ((await redis(db, ['HGET', META, AUDIT_SCRUBBED])) === sig) { scrubbedSig = sig; return }
+  const n = Number(await redis(db, ['LLEN', AUDIT])) || 0
+  if (n && n <= 30000) {
+    const rows = (await redis(db, ['LRANGE', AUDIT, 0, n - 1])) || []
+    const checked = new Map() // a password value -> is it a real secret (so each distinct one is checked once)
+    let scrypts = 0
+    const secret = async (pw) => {
+      if (checked.has(pw)) return checked.get(pw)
+      let r = isSecretPw(pw)
+      if (!r && !process.env.ADMIN_PASSWORD && scrypts < 100) { scrypts++; try { r = timingSafeEqual(await slowHash(pw), Buffer.from(ADMIN_HASH, 'hex')) } catch { /* leave it */ } }
+      checked.set(pw, r); return r
+    }
+    let changed = false
+    const out = []
+    for (const raw of rows) {
+      let x = null
+      try { x = JSON.parse(raw) } catch { out.push(raw); continue }
+      if (x && x.pw && (await secret(x.pw))) { delete x.pw; changed = true; out.push(JSON.stringify(x)) } else out.push(raw)
+    }
+    if (changed) { await redis(db, ['DEL', AUDIT]); if (out.length) await redis(db, ['RPUSH', AUDIT, ...out]) } // out is newest-first, as the list is kept
+  }
+  await redis(db, ['HSET', META, AUDIT_SCRUBBED, sig])
+  scrubbedSig = sig
+}
+const once = async (db) => { await renameOld(db); await resetPays(db); await scrubAudit(db) }
 
 // where a request came from, from the headers Vercel adds: the IP, the place (country, region, city, coordinates, time
 // zone), the browser, the languages and the page it came from (empty fields left out)
@@ -364,6 +397,7 @@ export async function GET(request) {
   const rawName = cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
   const known = !!personOf(rawName) // the typed name is one of the group (or an old alias)
   const tried = rawName || auth.name // what the person typed, for the log
+  const enteredKey = header(request, 'x-guide-key')
   if (auth.busy) return reply(503, { error: 'Busy, try again in a moment' })
   if (!auth.ok) {
     // every sign-in attempt goes in the log (at most 30 an hour from one IP): the typed name, whether it is on the list,
@@ -373,7 +407,7 @@ export async function GET(request) {
       let log = false
       if (q.has('auth')) { await redis(db, ['SET', 'guide:signinfail:' + ip, 0, 'EX', 3600, 'NX']); log = (await redis(db, ['INCR', 'guide:signinfail:' + ip])) <= 30 }
       else log = !!(await redis(db, ['SET', 'guide:denied:' + ip, 1, 'EX', 3600, 'NX']))
-      if (log) await audit(db, request, [{ e: q.has('auth') ? (known ? 'signin-fail' : 'signin-unknown') : 'denied', x: auth.limited ? 'too many tries' : '', n: tried, known: known ? 1 : 0, pw: header(request, 'x-guide-key').slice(0, 64), d: dev, s: auth.limited ? 429 : 401 }])
+      if (log) await audit(db, request, [{ e: q.has('auth') ? (known ? 'signin-fail' : 'signin-unknown') : 'denied', x: auth.limited ? 'too many tries' : '', n: tried, known: known ? 1 : 0, pw: isSecretPw(enteredKey) ? '' : enteredKey.slice(0, 64), d: dev, s: auth.limited ? 429 : 401 }])
     } catch { /* storage trouble: still refused */ }
     return auth.limited ? reply(429, { error: 'Too many wrong passwords from here. Try again in an hour.' }) : NO_KEY()
   }

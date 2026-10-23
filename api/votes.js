@@ -32,7 +32,7 @@
 // spend: [expenses, newest day first], ver, recent: [the latest shared changes] }; each votes entry also has last: the time
 // of its latest like. Saving an expense also answers with its id.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
-import { createHash, scryptSync, timingSafeEqual } from 'node:crypto'
+import { createHash, scrypt, timingSafeEqual } from 'node:crypto'
 
 // the group's password, asked with the name on the sign-in screen: kept as its SHA-256 (any case, spaces trimmed), so
 // the password itself is not in the code; a GUIDE_PASSWORD environment variable on Vercel replaces it
@@ -46,28 +46,37 @@ export const ADMIN = 'Vardan K'
 const ADMIN_SALT = 'be25e6483c2dea7ec3eeb272584fb057'
 const ADMIN_HASH = 'ffdfa26b7f577853bf1a698fa90c6d48c45fb73033bd33e86e709b8bd09c84d8'
 const SCRYPT = { N: 65536, r: 8, p: 1, maxmem: 96 * 1024 * 1024 }
+const slowHash = (k) => new Promise((ok, no) => scrypt(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT, (e, key) => (e ? no(e) : ok(key))))
 const adminSeen = new Map() // a password tried (its SHA-256) → right or not: the slow hash once per server start
-function adminKeyOk(k) {
-  if (!k) return false
-  if (process.env.ADMIN_PASSWORD) return sha(k) === sha(process.env.ADMIN_PASSWORD)
+const ADMIN_TRIES = 10 // different wrong admin passwords one IP may try in an hour (the same one again does not count)
+// the admin's password: a password not tried yet on this server costs the slow hash, so one IP gets ADMIN_TRIES new
+// wrong ones an hour, counted before the hash runs; limited: true once they are used up
+async function adminKeyOk(db, request, k) {
+  if (!k) return { ok: false }
+  if (process.env.ADMIN_PASSWORD) return { ok: sha(k) === sha(process.env.ADMIN_PASSWORD) }
   const h = sha(k)
-  if (!adminSeen.has(h)) {
-    if (adminSeen.size > 100) adminSeen.clear()
-    adminSeen.set(h, timingSafeEqual(scryptSync(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT), Buffer.from(ADMIN_HASH, 'hex')))
-  }
-  return adminSeen.get(h)
+  if (adminSeen.has(h)) return { ok: adminSeen.get(h) }
+  const rate = 'guide:adminfail:' + (ipOf(request) || 'x')
+  if (db && Number((await redis(db, ['GET', rate])) || 0) >= ADMIN_TRIES) return { ok: false, limited: true }
+  const ok = timingSafeEqual(await slowHash(k), Buffer.from(ADMIN_HASH, 'hex'))
+  if (adminSeen.size > 200) adminSeen.clear()
+  adminSeen.set(h, ok)
+  if (!ok && db) { await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX']); await redis(db, ['INCR', rate]) }
+  return { ok }
 }
 const header = (request, k) => request?.headers?.get?.(k) || ''
+// the caller's IP: the header Vercel sets itself first (it replaces any X-Forwarded-For a client sends)
+const ipOf = (request) => (header(request, 'x-vercel-forwarded-for') || header(request, 'x-real-ip') || header(request, 'x-forwarded-for')).split(',')[0].trim().slice(0, 64)
 const decode = (s) => { try { return decodeURIComponent(s) } catch { return s } }
 // one of the group, from a name as typed or an old alias; '' for anyone else
 const personOf = (n) => { const s = cleanName(n); return aliasOf(s) || PEOPLE.find((p) => p.toLowerCase() === s.toLowerCase()) || '' }
 // who is calling: the name signed in on the phone (X-Guide-Name; older pages send it only in the body) and the password.
 // Vardan K only with his own password, the others with the group's; name is '' for a name outside the group (an older page).
 // A header name outside the group does not hide the body's name: whoever the request would act as is the one checked
-function authOf(request, bodyName) {
+async function authOf(db, request, bodyName) {
   const k = header(request, 'x-guide-key'), h = header(request, 'x-guide-name')
   const name = personOf(h ? decode(h) : '') || personOf(bodyName)
-  if (name === ADMIN) { const ok = adminKeyOk(k); return { ok, name, admin: ok } }
+  if (name === ADMIN) { const a = await adminKeyOk(db, request, k); return { ok: a.ok, name, admin: a.ok, limited: !!a.limited } }
   return { ok: groupKeyOk(k), name, admin: false }
 }
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
@@ -284,7 +293,7 @@ const once = async (db) => { await renameOld(db); await resetPays(db) }
 // zone), the browser, the languages and the page it came from (empty fields left out)
 function clientOf(request) {
   const h = (k) => header(request, k)
-  const out = { ip: (h('x-real-ip') || h('x-forwarded-for').split(',')[0]).trim().slice(0, 64), ua: h('user-agent').slice(0, 300), c: h('x-vercel-ip-country').slice(0, 4), r: h('x-vercel-ip-country-region').slice(0, 8),
+  const out = { ip: ipOf(request), ua: h('user-agent').slice(0, 300), c: h('x-vercel-ip-country').slice(0, 4), r: h('x-vercel-ip-country-region').slice(0, 8),
     ci: decode(h('x-vercel-ip-city')).slice(0, 60), la: h('x-vercel-ip-latitude').slice(0, 12), lo: h('x-vercel-ip-longitude').slice(0, 12), tz: h('x-vercel-ip-timezone').slice(0, 40), lang: h('accept-language').slice(0, 40), ref: h('referer').slice(0, 160) }
   return Object.fromEntries(Object.entries(out).filter(([, v]) => v))
 }
@@ -320,15 +329,21 @@ export async function GET(request) {
   const db = storage()
   if (!db) return NO_DB()
   const q = new URL(request?.url || 'http://x/').searchParams
-  const auth = authOf(request, '')
+  let auth
+  try { auth = await authOf(db, request, '') } catch (e) { return reply(502, { error: e.message }) }
   const dev = DEVICE.test(header(request, 'x-guide-device')) ? header(request, 'x-guide-device') : ''
   const tried = auth.name || cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
   if (!auth.ok) {
-    // a failed sign-in always goes in the log; other refused calls once an hour per phone (an old page keeps asking)
+    // failed sign-ins go in the log (at most 30 an hour from one IP); other refused calls once an hour per IP (an old
+    // page keeps asking)
     try {
-      if (q.has('auth') || (await redis(db, ['SET', 'guide:denied:' + (dev || clientOf(request).ip || 'x'), 1, 'EX', 3600, 'NX']))) await audit(db, request, [{ e: q.has('auth') ? 'signin-fail' : 'denied', n: tried, d: dev, s: 401 }])
-    } catch { /* storage trouble: still 401 */ }
-    return NO_KEY()
+      const ip = ipOf(request) || 'x'
+      let log = false
+      if (q.has('auth')) { await redis(db, ['SET', 'guide:signinfail:' + ip, 0, 'EX', 3600, 'NX']); log = (await redis(db, ['INCR', 'guide:signinfail:' + ip])) <= 30 }
+      else log = !!(await redis(db, ['SET', 'guide:denied:' + ip, 1, 'EX', 3600, 'NX']))
+      if (log) await audit(db, request, [{ e: q.has('auth') ? 'signin-fail' : 'denied', x: auth.limited ? 'too many tries' : '', n: tried, d: dev, s: auth.limited ? 429 : 401 }])
+    } catch { /* storage trouble: still refused */ }
+    return auth.limited ? reply(429, { error: 'Too many wrong passwords from here. Try again in an hour.' }) : NO_KEY()
   }
   if (q.has('auth')) { await audit(db, request, [{ e: 'signin', n: auth.name, v: 1, d: dev, s: 200 }]); return reply(200, { ok: true, name: auth.name, admin: auth.admin }) }
   try {
@@ -364,7 +379,8 @@ export async function POST(request) {
   if (!db) return NO_DB()
   let body
   try { body = await request.json() } catch { return reply(400, { error: 'Send JSON: { item, name, vote }' }) }
-  const auth = authOf(request, body?.name)
+  let auth
+  try { auth = await authOf(db, request, body?.name) } catch (e) { return reply(502, { error: e.message }) }
   const ctx = {} // what the handler found out for the log (the row a confirm or delete was about)
   const res = await handle(db, request, body, auth, ctx)
   // every request in the activity log (the visits log their own rows, with the phone's details)
@@ -389,7 +405,7 @@ async function handle(db, request, body, auth, ctx) {
       try { v = raw ? JSON.parse(raw) : null } catch { v = null }
       if (!v) {
         // a new phone: at most NEW_PER_HOUR from one connection, so nobody can flood the list with made-up ids
-        const ip = String(request.headers.get('x-forwarded-for') || 'unknown').split(',')[0].trim().slice(0, 64)
+        const ip = ipOf(request) || 'unknown'
         const rate = 'guide:newdev:' + ip
         await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX']) // the counter and its 1-hour expiry in one step
         const n = await redis(db, ['INCR', rate])
@@ -408,7 +424,7 @@ async function handle(db, request, body, auth, ctx) {
       v.last = now
       v.visits += rows.filter((r) => r.e === 'visit').length
       // the name signed in on that phone (its password sent along: a beacon cannot send headers), or the name it gave
-      const ta = authOf({ headers: new Headers({ 'x-guide-key': String(body.key || '').slice(0, 100), 'x-guide-name': encodeURIComponent(String(body.name || '').slice(0, 40)) }) }, '')
+      const ta = await authOf(db, { headers: new Headers({ 'x-guide-key': String(body.key || '').slice(0, 100), 'x-guide-name': encodeURIComponent(String(body.name || '').slice(0, 40)), 'x-real-ip': ipOf(request) }) }, '')
       const signed = ta.ok && ta.name ? ta.name : ''
       if (signed || who) v.n = signed || who
       if (signed) v.names = [...new Set([...(Array.isArray(v.names) ? v.names : []), signed])].slice(-8)
@@ -424,7 +440,7 @@ async function handle(db, request, body, auth, ctx) {
       return reply(200, { ok: true })
     } catch (e) { return reply(502, { error: e.message }) }
   }
-  if (!auth.ok) return NO_KEY()
+  if (!auth.ok) return auth.limited ? reply(429, { error: 'Too many wrong passwords from here. Try again in an hour.' }) : NO_KEY()
   // the signed-in name is the name for everything (an older page: the name in the body, an old alias mapped)
   if (body && auth.name) body.name = auth.name
   else if (body && aliasOf(body.name)) body.name = aliasOf(body.name)

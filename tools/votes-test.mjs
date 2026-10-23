@@ -139,6 +139,15 @@ async function approveAll() {
   // a name outside the group in the header does not let the body's name be Vardan K with the group's password
   const spoof = await rawApi.POST(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-guide-key': PASSWORD, 'x-guide-name': 'Bob' }, body: JSON.stringify({ name: 'vardan k', item: 'pl:big-buddha', vote: 'like' }) }))
   check('nobody acts as Vardan K without his password, whatever the header says', spoof.status === 401, String(spoof.status))
+  // the real (slow) admin password check: 10 different wrong passwords an hour from one IP, then 429 before the hash runs;
+  // the same wrong one again does not count
+  delete process.env.ADMIN_PASSWORD
+  const tryAdmin = async (key) => (await rawApi.GET(new Request('http://x/api/votes?auth=1', { headers: { 'x-guide-key': key, 'x-guide-name': 'Vardan%20K', 'x-real-ip': '203.0.113.99' } }))).status
+  const tries = []
+  for (let i = 0; i < 10; i++) tries.push(await tryAdmin('guess-' + i))
+  tries.push(await tryAdmin('guess-0'), await tryAdmin('guess-new'))
+  process.env.ADMIN_PASSWORD = ADMIN_PASS
+  check('the admin password: 10 new wrong ones an hour from one IP, then 429; a repeat does not count', tries.slice(0, 11).every((x) => x === 401) && tries[11] === 429 && strings.get('guide:adminfail:203.0.113.99') === '10', tries.join())
   hashes.clear(); strings.clear(); lists.clear()
 }
 {

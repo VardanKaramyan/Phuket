@@ -313,11 +313,22 @@ const adultRank = (p) => Object.keys(WHERE_NAME).indexOf(adultWhere(p)) * 2 + (p
 // the areas in the researchers' order (Patong, near the first villa, first; then Kata and Karon, the Rawai side, …)
 const adultArea = new Map()
 adultItems.forEach((p) => { if (!adultArea.has(p.area)) adultArea.set(p.area, adultArea.size) })
-// by place, the nightlife before the shops, then by area; the picks first, then quality and value for the price, the
-// kind, the rating
-const adultSorted = adultItems.slice().sort((a, b) => adultRank(a) - adultRank(b) || adultArea.get(a.area) - adultArea.get(b.area) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) ||
-  ((b.qualityScore || 0) + (b.valueScore || 0)) - ((a.qualityScore || 0) + (a.valueScore || 0)) ||
-  Object.keys(ADULT_KIND).indexOf(a.category) - Object.keys(ADULT_KIND).indexOf(b.category) || bayes(b) - bayes(a))
+// the weed shops, best first in each place (the user, 23 Oct 2026: "sorted weed places from best to worst"): quality plus
+// value for the price (each out of 5, from what buyers say), half a point for a researcher's top pick, then the rating
+const weedScore = (p) => (p.qualityScore || 0) + (p.valueScore || 0) + (p.pick ? 0.5 : 0)
+const WEED_PLACES = { phuket: 'on Phuket', 'koh-phangan': 'on Koh Phangan', 'koh-samui': 'on Koh Samui', 'koh-tao': 'on Koh Tao', bangkok: 'in Bangkok' }
+const weedPlace = (p) => (BKK.includes(p.area) ? 'bangkok' : WEED_PLACES[p.area] ? p.area : 'phuket')
+const weedOrder = (p) => Object.keys(WEED_PLACES).indexOf(weedPlace(p))
+// by place, the nightlife before the shops; the nightlife by area and kind, the shops best first
+const adultSorted = adultItems.slice().sort((a, b) => adultRank(a) - adultRank(b) || (a.category === 'cannabis'
+  ? weedOrder(a) - weedOrder(b) || weedScore(b) - weedScore(a) || bayes(b) - bayes(a)
+  : adultArea.get(a.area) - adultArea.get(b.area) || Object.keys(ADULT_KIND).indexOf(a.category) - Object.keys(ADULT_KIND).indexOf(b.category) || bayes(b) - bayes(a)))
+// "No. 3 of 25 on Phuket" on each shop
+const weedRank = new Map()
+for (const k of Object.keys(WEED_PLACES)) {
+  const shops = adultSorted.filter((p) => p.category === 'cannabis' && weedPlace(p) === k)
+  shops.forEach((p, i) => weedRank.set(p.id, `No. ${i + 1} of ${shops.length} ${WEED_PLACES[k]}`))
+}
 const daysText = (p) => ((p.days || []).length === 6 ? 'Closed ' + WEEK.find((d) => !p.days.includes(d)) : (p.days || []).length && p.days.length < 7 ? 'Only ' + p.days.join(', ') : '')
 function adultCard(p, mode) {
   const weed = p.category === 'cannabis'
@@ -329,7 +340,7 @@ function adultCard(p, mode) {
 ${imgTag('places:' + p.id, p.name, mode, weed ? '✿' : '18+')}<div class="tag-top"><span class="pill adult">${esc(kind)}</span>${p.pick ? '<span class="pill must">Top pick</span>' : ''}</div></div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc([areaName(p.area) || p.island, kind].filter(has).join(' · '))}</p></div></div>
-${stars || scores ? `<p class="rating">${stars}${scores ? `<span>${esc(scores)}</span>` : ''}</p>` : ''}
+${stars || scores ? `<p class="rating">${weed && weedRank.has(p.id) ? `<span class="rank">${esc(weedRank.get(p.id))}</span>` : ''}${stars}${scores ? `<span>${esc(scores)}</span>` : ''}</p>` : ''}
 <p class="desc">${esc(p.description)}</p>
 ${facts(weed ? [['Price', p.feeText], ['Quality', p.quality], ['Buyers say', p.usersSay], ['Open', open], ['By car', driveText('pl:' + p.id, p)]] : [['Price', p.feeText], ['Open', open], ['By car', driveText('pl:' + p.id, p)]])}
 ${moreBlock('Tips & links', p.tips, p.links, weed ? [['Lounge', p.lounge]] : [])}
@@ -922,7 +933,8 @@ function weedBasics() {
   const pg = adult.priceGuide || {}
   const where = { phuket: 'on Phuket', 'koh-phangan': 'on Koh Phangan', 'koh-samui': 'on Koh Samui', bangkok: 'in Bangkok' }
   const prices = Object.keys(where).filter((k) => has(pg[k])).map((k) => ({ title: `What a gram costs ${where[k]}`, text: pg[k] }))
-  return basicsCard('weed-basics', 'Weed basics', [...prices, ...((adult.basics || {}).weed || [])], 'data-tier="adult weed" data-only="tier" data-where="phuket islands bangkok"')
+  const ranked = { title: 'How the shops are ranked', text: 'Best first in each place: Phuket, Koh Phangan, Koh Samui, Bangkok. The rank adds the Quality and Value scores (each out of 5, from what buyers say on Reddit and in reviews: good weed, and a good price for it), and half a point for a Top pick, the best shops in their area. Equal scores go by the Google rating and how many reviews it has. Almost every shop shows 4.8 to 5.0 on Google, so the stars alone say little.' }
+  return basicsCard('weed-basics', 'Weed basics', [...prices, ranked, ...((adult.basics || {}).weed || [])], 'data-tier="adult weed" data-only="tier" data-where="phuket islands bangkok"')
 }
 // the Places list: Phuket's places, the Bangkok basics (first under Bangkok), the clubs and festivals (most underground
 // first), Bangkok's places, then 18+ and Weed

@@ -221,13 +221,29 @@
     const empty = document.querySelector('[data-empty="' + id + '"]')
     const search = bar && $('input[type="search"]', bar)
     const match = (card, group, value) => {
-      if (value === 'all') return true
+      // a card with data-only="tier" (18+ and Weed) shows only under its own tab, never under All
+      if (value === 'all') return card.dataset.only !== group
       if (value === 'saved') return favs.has(card.dataset.favCard)
       if (value === 'liked') return likedItems.has(card.dataset.favCard)
       const v = card.dataset[group] || ''
       return v.split(' ').includes(value)
     }
+    // a row with data-when="tier:adult weed" shows only while the tier row is on one of those ("tier:!adult weed": only
+    // while it is not); a hidden row goes back to its first chip, so it does not filter what you cannot see
+    const syncRows = () => {
+      if (bar) $$('.chips[data-when]', bar).forEach((row) => {
+        const [g, vals] = row.dataset.when.split(':')
+        const on = vals.replace('!', '').split(' ').includes(state[g]) !== vals.startsWith('!')
+        row.hidden = !on
+        const first = $('.chip[data-group]', row)
+        if (!on && first && state[first.dataset.group] !== first.dataset.value) {
+          state[first.dataset.group] = first.dataset.value
+          $$('.chip[data-group]', row).forEach((c) => c.setAttribute('aria-pressed', String(c === first)))
+        }
+      })
+    }
     const apply = () => {
+      syncRows()
       let shown = 0
       cards.forEach((card) => {
         let ok = !isHiddenStay(card) && Object.entries(state).every(([g, v]) => match(card, g, v))
@@ -494,7 +510,9 @@
     Object.values(markers).forEach((m) => m.setStyle(dotStyle(m.kind)))
     map.getContainer().classList.toggle('dim-tiles', base === 'streets' && isDark())
   }
-  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun' }
+  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun', adult: '--orchid' }
+  // hidden gems and 18+ places have layers of their own; other pins go by their type
+  const layerOf = (kind, t) => (kind === 'gem' || kind === 'adult' ? kind : t)
   function dotStyle(kind) {
     return { radius: kind === 'event' ? 7 : 6, color: cssVar('--surface'), weight: 2, fillColor: cssVar(DOT[kind] || '--sea'), fillOpacity: 1 }
   }
@@ -701,7 +719,7 @@
         layers.areas.addLayer(L.marker([a.label[0], a.label[1]], { interactive: false, keyboard: false, icon: L.divIcon({ className: 'area-label', html: '<span data-rank="' + (a.rank || 0) + '">' + esc(a.short || a.name) + '</span>', iconSize: [0, 0] }) }))
       },
     })
-    ;['event', 'place', 'gem', 'hotel', 'money'].forEach((t) => { layers[t] = L.layerGroup() })
+    ;['event', 'place', 'gem', 'hotel', 'money', 'adult'].forEach((t) => { layers[t] = L.layerGroup() })
     layers.base = L.layerGroup().addTo(map) // our villas: always shown, in a pane above the other pins
     map.createPane('basePane').style.zIndex = 450
     ;['event', 'place', 'gem', 'hotel'].forEach((t) => layers[t].addTo(map))
@@ -710,7 +728,7 @@
       const m = L.circleMarker([p.lat, p.lng], dotStyle(p.k)).bindPopup(() => popupHtml(p), popupOpts())
       m.kind = p.k
       m.bindTooltip(esc(p.name), { direction: 'top', offset: [0, -6] })
-      layers[p.k === 'gem' ? 'gem' : p.t].addLayer(m)
+      layers[layerOf(p.k, p.t)].addLayer(m)
       markers[p.t + ':' + p.id] = m
       if (p.base) {
         const home = L.circleMarker([p.lat, p.lng], { pane: 'basePane', radius: 10, color: cssVar('--surface'), weight: 3, fillColor: cssVar('--sun'), fillOpacity: 1 }).bindPopup(() => popupHtml(p), popupOpts())
@@ -809,7 +827,7 @@
     const m = markers[key]
     if (!m) return
     const t = key.split(':')[0]
-    const chip = $('.layerbar .chip[data-layer~="' + (m.kind === 'gem' ? 'gem' : t) + '"]')
+    const chip = $('.layerbar .chip[data-layer~="' + layerOf(m.kind, t) + '"]')
     if (chip && chip.getAttribute('aria-pressed') !== 'true') chip.click()
     map.closePopup()
     const ll = m.getLatLng()

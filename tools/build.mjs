@@ -25,6 +25,9 @@ const places = readJSON('data/places.json', { items: [] }).items || []
 // Places → Clubs & festivals, and the Bangkok basics (the 21 Oct 2026 research, tools/merge-bangkok.mjs)
 const clubs = readJSON('data/clubs.json', { items: [] }).items || []
 const bangkok = readJSON('data/bangkok.json', {}) || {}
+// Places → 18+ and Weed: the law-free basics and the price guides (the 23 Oct 2026 research, tools/merge-adult.mjs);
+// the venues and shops themselves are places with tier 'adult'
+const adult = readJSON('data/adult.json', {}) || {}
 const areasDoc = readJSON('data/areas.json', { items: [] })
 const areas = areasDoc.items || []
 const hotels = readJSON('data/hotels.json', { items: [] }).items || []
@@ -298,6 +301,42 @@ function pierBody(p) {
   return facts([['Boats to', routeDests(r).join(', ')], ['Fees', p.feeText], ['Best time', p.bestTime], ['By car', driveText('pl:' + p.id, p)]]) + boats + cardLinks('Boat tours from here:', toursFrom(p))
 }
 const placeIndex = new Map(places.map((p, i) => [p.id, i]))
+// Places → 18+ and Weed: adult nightlife and the cannabis shops (category 'cannabis'), on Phuket, the Gulf islands and in
+// Bangkok. They show only under their own tabs (data-only), where a Where row replaces the length row
+const ADULT_KIND = { 'bar-street': 'Bar street', 'go-go': 'Go-go bar', cabaret: 'Cabaret show', show: 'Adult show', 'gentlemens-club': 'Gentlemen’s club', massage: 'Massage', lgbtq: 'LGBTQ+', kratom: 'Kratom bar', 'party-drugs-warning': 'Warning', activity: '18+ activity', other: '18+', cannabis: 'Weed shop' }
+const adultWhere = (p) => (BKK.includes(p.area) ? 'bangkok' : ['koh-phangan', 'koh-samui', 'koh-tao'].includes(p.area) ? 'islands' : 'phuket')
+const WHERE_NAME = { phuket: 'Phuket', islands: 'Koh Phangan & Samui', bangkok: 'Bangkok' }
+// the Google rating weighted by its count: 4.9 from 12 reviews ranks below 4.7 from 900
+const bayes = (p) => ((p.rating || 0) * (p.reviews || 0) + 4.3 * 50) / ((p.reviews || 0) + 50)
+const adultItems = places.filter((p) => p.tier === 'adult')
+const adultRank = (p) => Object.keys(WHERE_NAME).indexOf(adultWhere(p)) * 2 + (p.category === 'cannabis' ? 1 : 0)
+// the areas in the researchers' order (Patong, near the first villa, first; then Kata and Karon, the Rawai side, …)
+const adultArea = new Map()
+adultItems.forEach((p) => { if (!adultArea.has(p.area)) adultArea.set(p.area, adultArea.size) })
+// by place, the nightlife before the shops, then by area; the picks first, then quality and value for the price, the
+// kind, the rating
+const adultSorted = adultItems.slice().sort((a, b) => adultRank(a) - adultRank(b) || adultArea.get(a.area) - adultArea.get(b.area) || (b.pick ? 1 : 0) - (a.pick ? 1 : 0) ||
+  ((b.qualityScore || 0) + (b.valueScore || 0)) - ((a.qualityScore || 0) + (a.valueScore || 0)) ||
+  Object.keys(ADULT_KIND).indexOf(a.category) - Object.keys(ADULT_KIND).indexOf(b.category) || bayes(b) - bayes(a))
+const daysText = (p) => ((p.days || []).length === 6 ? 'Closed ' + WEEK.find((d) => !p.days.includes(d)) : (p.days || []).length && p.days.length < 7 ? 'Only ' + p.days.join(', ') : '')
+function adultCard(p, mode) {
+  const weed = p.category === 'cannabis'
+  const kind = ADULT_KIND[p.category] || '18+'
+  const stars = p.rating ? `<span>${icon('star')}<b>${esc(trimNum(p.rating))}</b> ${p.reviews ? `${esc(p.reviews.toLocaleString('en-US'))} Google reviews` : 'on Google'}</span>` : ''
+  const scores = weed ? [p.qualityScore ? `Quality ${p.qualityScore}/5` : '', p.valueScore ? `Value ${p.valueScore}/5` : ''].filter(has).join(' · ') : ''
+  const open = [p.openText, daysText(p)].filter(has).join(' · ')
+  return `<article class="card" id="pl-${esc(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="${weed ? 'Weed shop' : '18+'}" data-tier="${weed ? 'adult weed' : 'adult'}" data-only="tier" data-where="${adultWhere(p)}" data-dur="evening" data-text="${textOf(p.name, kind, areaName(p.area), p.island)}">
+${imgTag('places:' + p.id, p.name, mode, weed ? '✿' : '18+')}<div class="tag-top"><span class="pill adult">${esc(kind)}</span>${p.pick ? '<span class="pill must">Top pick</span>' : ''}</div></div>
+<div class="body">
+<div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc([areaName(p.area) || p.island, kind].filter(has).join(' · '))}</p></div></div>
+${stars || scores ? `<p class="rating">${stars}${scores ? `<span>${esc(scores)}</span>` : ''}</p>` : ''}
+<p class="desc">${esc(p.description)}</p>
+${facts(weed ? [['Price', p.feeText], ['Quality', p.quality], ['Buyers say', p.usersSay], ['Open', open], ['By car', driveText('pl:' + p.id, p)]] : [['Price', p.feeText], ['Open', open], ['By car', driveText('pl:' + p.id, p)]])}
+${moreBlock('Tips & links', p.tips, p.links, weed ? [['Lounge', p.lounge]] : [])}
+${voteBar('pl:' + p.id, p.name)}
+${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
+</div></article>`
+}
 // piers come last, after food: in All they are a reference list, not places to visit
 const placesSorted = places.slice().sort((a, b) => BKK.includes(a.area) - BKK.includes(b.area) || (a.tier === 'pier') - (b.tier === 'pier') || (a.category === 'food') - (b.category === 'food') || (tierOrder[a.tier] ?? 3) - (tierOrder[b.tier] ?? 3) || placeIndex.get(a.id) - placeIndex.get(b.id))
 const trimNum = (x) => String(Math.round(x * 10) / 10)
@@ -321,7 +360,7 @@ function placeCard(p, mode) {
   const [tierLabel, tierCls] = TIER[p.tier] || ['Place', 'soft']
   // Bangkok's places sit under their own tab only
   const tierKeys = BKK.includes(p.area) ? 'bangkok' : [p.tier, p.category === 'food' ? 'food' : ''].filter(Boolean).join(' ')
-  const days = (p.days || []).length === 6 ? 'Closed ' + WEEK.find((d) => !p.days.includes(d)) : (p.days || []).length && p.days.length < 7 ? 'Only ' + p.days.join(', ') : ''
+  const days = daysText(p)
   const sub = [areaName(p.area), cap(p.category)].filter(has).join(' · ')
   return `<article class="card" id="pl-${esc(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
 ${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class="pill ${p.category === 'food' ? 'food' : tierCls}">${p.category === 'food' ? 'Food' : tierLabel}</span></div>${p.tier === 'pier' ? '' : `<div class="tag-bottom"><span class="pill">${icon('clock')}${esc(durLabel)}</span></div>`}</div>
@@ -648,7 +687,7 @@ function homeView(mode) {
   const bestBrand = brands[0]
   const tiles = [
     ['events', 'events', 'Music & raves', plural(datedEvents.filter((e) => e.window === 'in').length, 'dated event') + ' in your dates'],
-    ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
+    ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier', 'adult'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
     ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
     ...(buildName === 'standalone' ? [['spend', 'wallet', 'Spending', 'Who paid what, and who owes whom']] : []),
@@ -822,8 +861,9 @@ function statsView() {
 </section>`
 }
 // links: values that have their own address (#<list>/<value>, e.g. #stay/liked), so a filtered list can be shared
-function chipRow(listId, group, items, label, links = [], after = '') {
-  return `<div class="chips" role="toolbar" aria-label="${esc(label)}">${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}"${links.includes(v) ? ' data-link' : ''} aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}${after}</div>`
+// attrs: e.g. data-when="tier:adult weed" shows the row only while the tier row is on one of those (src/app.js)
+function chipRow(listId, group, items, label, links = [], after = '', attrs = '') {
+  return `<div class="chips" role="toolbar" aria-label="${esc(label)}"${attrs}>${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}"${links.includes(v) ? ' data-link' : ''} aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}${after}</div>`
 }
 const shareListBtn = `<button class="chip share-list js-only" type="button" data-share-list hidden>${icon('share')}Share</button>`
 function eventsView(mode) {
@@ -865,30 +905,42 @@ ${moreBlock('Getting there, tips & links', c.tips, c.links, [['Getting there', c
 ${actionRow({ item: c })}
 </div></article>`
 }
-// Places → Bangkok, first card: getting there and around, where to stay, safety
-function bangkokBasics() {
-  const ess = bangkok.essentials || []
-  if (!ess.length) return ''
-  return `<article class="card basics" id="bkk-basics" data-name="Bangkok basics" data-kind="Place" data-tier="bangkok" data-dur="" data-text="${textOf('bangkok basics', ess.map((x) => x.title + ' ' + x.text))}">
-<div class="body"><h2 class="card-title">Bangkok basics</h2>
+// a card of topics that fold open, first under its tab
+function basicsCard(id, title, topics, attrs) {
+  if (!topics.length) return ''
+  return `<article class="card basics" id="${id}" data-name="${esc(title)}" data-kind="Place" ${attrs} data-dur="" data-text="${textOf(title, topics.map((x) => x.title + ' ' + x.text))}">
+<div class="body"><h2 class="card-title">${esc(title)}</h2>
 <p class="desc">Tap a topic to open it.</p>
-${ess.map((x) => `<details class="more"><summary>${esc(x.title)}</summary><p class="desc">${esc(x.text)}</p>${linksHtml(x.links)}</details>`).join('\n')}
+${topics.map((x) => `<details class="more"><summary>${esc(x.title)}</summary><p class="desc">${esc(x.text)}</p>${linksHtml(x.links)}</details>`).join('\n')}
 </div></article>`
 }
+// Places → Bangkok, first card: getting there and around, where to stay, safety
+const bangkokBasics = () => basicsCard('bkk-basics', 'Bangkok basics', bangkok.essentials || [], 'data-tier="bangkok"')
+// Places → 18+ and Weed, first cards: the 18+ basics (under 18+), then the weed basics with what a gram costs in each place
+const adultBasics = () => basicsCard('adult-basics', '18+ basics', (adult.basics || {}).adult || [], 'data-tier="adult" data-only="tier" data-where="phuket islands bangkok"')
+function weedBasics() {
+  const pg = adult.priceGuide || {}
+  const where = { phuket: 'on Phuket', 'koh-phangan': 'on Koh Phangan', 'koh-samui': 'on Koh Samui', bangkok: 'in Bangkok' }
+  const prices = Object.keys(where).filter((k) => has(pg[k])).map((k) => ({ title: `What a gram costs ${where[k]}`, text: pg[k] }))
+  return basicsCard('weed-basics', 'Weed basics', [...prices, ...((adult.basics || {}).weed || [])], 'data-tier="adult weed" data-only="tier" data-where="phuket islands bangkok"')
+}
 // the Places list: Phuket's places, the Bangkok basics (first under Bangkok), the clubs and festivals (most underground
-// first), then Bangkok's places
+// first), Bangkok's places, then 18+ and Weed
 const clubWhere = (c) => (BKK.includes(c.area) ? 2 : ['koh-phangan', 'koh-samui', 'koh-tao'].includes(c.area) ? 1 : 0)
 const clubsSorted = clubs.slice().sort((a, b) => (b.undergroundScore || 0) - (a.undergroundScore || 0) || clubWhere(a) - clubWhere(b) || a.name.localeCompare(b.name))
 function placesList(mode) {
-  const home = placesSorted.filter((p) => !BKK.includes(p.area)), bkk = placesSorted.filter((p) => BKK.includes(p.area))
-  return [...home.map((p) => placeCard(p, mode)), bangkokBasics(), ...clubsSorted.map((c) => clubCard(c, mode)), ...bkk.map((p) => placeCard(p, mode))].filter(Boolean).join('\n')
+  const rest = placesSorted.filter((p) => p.tier !== 'adult')
+  const home = rest.filter((p) => !BKK.includes(p.area)), bkk = rest.filter((p) => BKK.includes(p.area))
+  return [...home.map((p) => placeCard(p, mode)), bangkokBasics(), ...clubsSorted.map((c) => clubCard(c, mode)), ...bkk.map((p) => placeCard(p, mode)),
+    adultBasics(), weedBasics(), ...adultSorted.map((p) => adultCard(p, mode))].filter(Boolean).join('\n')
 }
 function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">${esc(extra.placesIntro || 'Each place shows how long it takes, the best time to go and what it costs. In January the west-coast sea is calm and clear.')}</p></div>
 <div class="toolbar" data-toolbar="places">
-${chipRow('places', 'tier', [['all', 'All'], ...(clubs.length ? [['club', 'Clubs & festivals']] : []), ...([...places, ...clubs].some((x) => BKK.includes(x.area)) ? [['bangkok', 'Bangkok']] : []), ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
-${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed')}
+${chipRow('places', 'tier', [['all', 'All'], ...(clubs.length ? [['club', 'Clubs & festivals']] : []), ...([...places, ...clubs].some((x) => BKK.includes(x.area) && x.tier !== 'adult') ? [['bangkok', 'Bangkok']] : []), ...(adultItems.length ? [['adult', '18+']] : []), ...(adultItems.some((p) => p.category === 'cannabis') ? [['weed', 'Weed']] : []), ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
+${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed', [], '', adultItems.length ? ' data-when="tier:!adult weed"' : '')}
+${adultItems.length ? chipRow('places', 'where', [['all', 'Everywhere'], ...Object.keys(WHERE_NAME).filter((k) => adultItems.some((p) => adultWhere(p) === k)).map((k) => [k, WHERE_NAME[k]])], 'Filter by place', [], '', ' data-when="tier:adult weed" hidden') : ''}
 <input class="search" type="search" id="places-search" placeholder="Search beaches, temples, markets…" aria-label="Search places">
 </div>
 <div class="list" data-list="places">${placesList(mode)}</div>
@@ -938,7 +990,7 @@ function areasView(mode, opts) {
 <button class="chip" type="button" data-layer="event" aria-pressed="true"><i style="background:var(--pulse)"></i>Music</button>
 <button class="chip" type="button" data-layer="place gem" aria-pressed="true"><i style="background:var(--sea)"></i><i style="background:var(--leaf)"></i>Places</button>
 <button class="chip" type="button" data-layer="hotel" aria-pressed="true"><i style="background:var(--violet)"></i>Villas</button>
-<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>
+<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>${adultItems.length ? '\n<button class="chip" type="button" data-layer="adult" aria-pressed="false"><i style="background:var(--orchid)"></i>18+</button>' : ''}
 </div>
 </div>
 <p class="map-credit js-only" id="map-credit"></p>
@@ -1157,7 +1209,9 @@ function clientData(build) {
   // the venue name only: the pin already shows where it is
   const popVenue = (v) => String(v || '').split(',')[0].trim()
   events.forEach((e) => { const ds = (e.dates || []).filter(inTrip); add('event', 'event', e, e.id, e.name, [popVenue(e.venue), ds.length ? popDates(ds) : popPattern(e.recurrence)].filter(has).join(' · '), 'ev-' + e.id) })
-  places.forEach((p) => add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : durText(p)].filter(has).join(' · '), 'pl-' + p.id))
+  places.forEach((p) => p.tier === 'adult'
+    ? add('place', 'adult', p, p.id, p.name, [ADULT_KIND[p.category], p.rating ? `${trimNum(p.rating)} on Google` : ''].filter(has).join(' · '), 'pl-' + p.id)
+    : add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : durText(p)].filter(has).join(' · '), 'pl-' + p.id))
   // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
   hotels.forEach((h) => {
     add('hotel', 'hotel', h, h.id, h.name, [HTIER[h.tier], h.beds > 0 ? plural(h.beds, 'bed') : '', h.noRoomsOnTrip].filter(has).join(' · '), 'ht-' + h.id)
@@ -1286,10 +1340,11 @@ function kml() {
   const pm = (name, desc, lat, lng, style, it) => (Number.isFinite(+lat) && !(it && lowConf(it)) ? `<Placemark><name>${esc(name)}</name><description>${cdata(desc)}</description><styleUrl>#${style}</styleUrl><Point><coordinates>${lng},${lat},0</coordinates></Point></Placemark>` : '')
   const folder = (name, inner) => `<Folder><name>${esc(name)}</name>${inner}</Folder>`
   return `<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}${pinStyle('p-adult', '#c4285f')}
 ${folder('Areas', areasK)}
 ${folder('Music & raves', events.map((e) => pm(e.name, `${e.venue || ''}<br>${(e.dates || []).join(', ') || e.recurrence || ''}<br>${e.description || ''}`, e.lat, e.lng, 'p-event', e)).join(''))}
-${folder('Places to go', places.map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
+${folder('Places to go', places.filter((p) => p.tier !== 'adult').map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
+${adultItems.length ? folder('18+ and weed', adultSorted.map((p) => pm(p.name, `${ADULT_KIND[p.category] || ''}<br>${p.description || ''}`, p.lat, p.lng, 'p-adult', p)).join('')) : ''}
 ${folder('Hotels', hotels.map((h) => { const bv = baseOfVilla(h.id); return pm(h.name, `${HTIER[h.tier] || ''} · ${bv && bv.paid ? `Booked ${baseRange(bv)}: paid ${paidLine(bv.paid)}` : h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel') }).join(''))}
 ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => pm(`${b.name} · ${x.name}`, `${x.hoursText || ''}<br>${b.summary || ''}`, x.lat, x.lng, 'p-money'))).join(''))}
 </Document></kml>

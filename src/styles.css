@@ -932,3 +932,10 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .club-evs ul { margin: 0 0 6px; padding-left: 18px; }
 .club-evs li { margin: 3px 0; font-size: 14px; }
 .club-evs li span { color: var(--ink-2); }
+
+/* Places → 18+ and Weed */
+.pill.adult { background: var(--orchid); color: var(--surface); }
+.card .rating { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 2px 0 6px; font-size: 14px; color: var(--ink-2); }
+.card .rating span { display: inline-flex; align-items: center; gap: 4px; }
+.card .rating svg { width: 15px; height: 15px; color: var(--sun); fill: currentColor; }
+.card .rating b { color: var(--ink); }

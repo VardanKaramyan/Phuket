@@ -3278,5 +3278,125 @@
   "credit": "eric molina from San Francisco, United States",
   "license": "CC BY 2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Flowermarket.jpg"
+ },
+ "places:adult-bangla-road": {
+  "file": "assets/img/places-adult-bangla-road.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2400,
+  "srcH": 1800,
+  "credit": "Karelj, Wikimedia Commons",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Bangla_Road_Patong_Thajsko_2018_4.jpg"
+ },
+ "places:adult-simon-cabaret": {
+  "file": "assets/img/places-adult-simon-cabaret.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 4032,
+  "srcH": 3024,
+  "credit": "shankar s., Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Photography_during_the_Simon_Cabaret_show_is_not_allowed_but_the_performers_line_up_afterwards.jpg"
+ },
+ "places:adult-bkk-nana-plaza": {
+  "file": "assets/img/places-adult-bkk-nana-plaza.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 3024,
+  "srcH": 3555,
+  "credit": "Yu tptw",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Nana_Plaza,_Bangkok_2023.jpg"
+ },
+ "places:adult-bkk-soi-cowboy": {
+  "file": "assets/img/places-adult-bkk-soi-cowboy.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 4032,
+  "srcH": 3024,
+  "credit": "Yu tptw",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Soi_Cowboy_2023_01.jpg"
+ },
+ "places:adult-bkk-calypso-cabaret": {
+  "file": "assets/img/places-adult-bkk-calypso-cabaret.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 640,
+  "srcH": 960,
+  "credit": "Calypso Cabaret",
+  "license": "venue's own site",
+  "source": "https://calypsocabaret.com/"
+ },
+ "places:adult-bkk-golden-dome-cabaret": {
+  "file": "assets/img/places-adult-bkk-golden-dome-cabaret.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 801,
+  "credit": "Golden Dome Cabaret",
+  "license": "venue's own site",
+  "source": "https://goldendomecabaret.com/"
+ },
+ "places:adult-bkk-silom-soi-4": {
+  "file": "assets/img/places-adult-bkk-silom-soi-4.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 630,
+  "credit": "The Balcony Pub",
+  "license": "venue's own site",
+  "source": "http://www.balconypub.com/"
+ },
+ "places:adult-kpg-haad-rin-bar-strip": {
+  "file": "assets/img/places-adult-kpg-haad-rin-bar-strip.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1067,
+  "srcH": 1600,
+  "credit": "Joe Stump (joestump), via Flickr",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Full_Moon_Party_Ko_Pha_Ngan.jpg"
+ },
+ "places:adult-smi-soi-green-mango": {
+  "file": "assets/img/places-adult-smi-soi-green-mango.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1024,
+  "srcH": 833,
+  "credit": "Per Meistrup",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Soi_Green_Mango_Songkran-2023_IMG20230412232800_w1024.jpg"
+ },
+ "places:adult-smi-paris-follies": {
+  "file": "assets/img/places-adult-smi-paris-follies.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 524,
+  "srcH": 774,
+  "credit": "Paris Follies Cabaret",
+  "license": "venue's own site",
+  "source": "https://www.parisfolliescabaret.com/"
+ },
+ "places:adult-bkk-patpong": {
+  "file": "assets/img/places-adult-bkk-patpong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1824,
+  "srcH": 1368,
+  "credit": "nakhon100",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Patpong_Night_Bazaar_(5828832361).jpg"
+ },
+ "places:adult-bkk-thaniya": {
+  "file": "assets/img/places-adult-bkk-thaniya.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1368,
+  "srcH": 1824,
+  "credit": "nakhon100",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Soi_Thaniya_By_Night_(5828832343).jpg"
  }
 }

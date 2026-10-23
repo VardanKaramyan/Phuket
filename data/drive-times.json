@@ -1,5 +1,5 @@
 {
- "generatedOn": "2026-10-21",
+ "generatedOn": "2026-10-23",
  "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap roads; no traffic",
  "bases": {
   "patong": {
@@ -1032,6 +1032,486 @@
    "rawai": {
     "min": 21,
     "km": 17.6
+   }
+  },
+  "pl:adult-bangla-road": {
+   "patong": {
+    "min": 3,
+    "km": 2.5
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.4
+   }
+  },
+  "pl:adult-soi-seadragon": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.7
+   }
+  },
+  "pl:adult-soi-freedom": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.6
+   }
+  },
+  "pl:adult-kata-centre-beer-bars": {
+   "patong": {
+    "min": 9,
+    "km": 8.7
+   },
+   "rawai": {
+    "min": 12,
+    "km": 9.6
+   }
+  },
+  "pl:adult-rawai-bar-strip": {
+   "patong": {
+    "min": 21,
+    "km": 17.5
+   },
+   "rawai": {
+    "min": 4,
+    "km": 2.3
+   }
+  },
+  "pl:adult-suzy-wongs": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.7
+   }
+  },
+  "pl:adult-suzy-wongs-2-devils-playground": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.7
+   }
+  },
+  "pl:adult-suzy-wongs-3": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.6
+   }
+  },
+  "pl:adult-harem-club": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.6
+   }
+  },
+  "pl:adult-rock-hards-crazy-girls": {
+   "patong": {
+    "min": 4,
+    "km": 2.8
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.8
+   }
+  },
+  "pl:adult-stripper-101": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 23,
+    "km": 19.7
+   }
+  },
+  "pl:adult-simon-cabaret": {
+   "patong": {
+    "min": 1,
+    "km": 1.2
+   },
+   "rawai": {
+    "min": 19,
+    "km": 17.4
+   }
+  },
+  "pl:adult-wake-up-club-adult-show": {
+   "patong": {
+    "min": 2,
+    "km": 1.4
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20
+   }
+  },
+  "pl:adult-zenithy-gentlemens-club": {
+   "patong": {
+    "min": 4,
+    "km": 2.7
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.6
+   }
+  },
+  "pl:adult-moulin-rouge-phuket": {
+   "patong": {
+    "min": 3,
+    "km": 2.5
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "pl:adult-christin-massage": {
+   "patong": {
+    "min": 3,
+    "km": 2.4
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.2
+   }
+  },
+  "pl:adult-paradise-complex": {
+   "patong": {
+    "min": 3,
+    "km": 1.9
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.5
+   }
+  },
+  "pl:adult-zag-club": {
+   "patong": {
+    "min": 4,
+    "km": 1.9
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.5
+   }
+  },
+  "pl:adult-cruise-club": {
+   "patong": {
+    "min": 3,
+    "km": 1.9
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.5
+   }
+  },
+  "pl:adult-patong-paragon-shooting-range": {
+   "patong": {
+    "min": 3,
+    "km": 1.9
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.5
+   }
+  },
+  "pl:adult-phuket-shooters": {
+   "patong": {
+    "min": 21,
+    "km": 18.4
+   },
+   "rawai": {
+    "min": 11,
+    "km": 7.6
+   }
+  },
+  "pl:adult-phuket-shooting-range": {
+   "patong": {
+    "min": 16,
+    "km": 14.4
+   },
+   "rawai": {
+    "min": 7,
+    "km": 4.9
+   }
+  },
+  "pl:adult-xventure-shooting-range": {
+   "patong": {
+    "min": 18,
+    "km": 16.4
+   },
+   "rawai": {
+    "min": 8,
+    "km": 5.7
+   }
+  },
+  "pl:weed-lokal-apothecary-patong": {
+   "patong": {
+    "min": 3,
+    "km": 1.9
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.5
+   }
+  },
+  "pl:weed-good-stuff-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.5
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.1
+   }
+  },
+  "pl:weed-duckside-patong": {
+   "patong": {
+    "min": 1,
+    "km": 0.6
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.4
+   }
+  },
+  "pl:weed-jointed-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2.2
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.7
+   }
+  },
+  "pl:weed-coughfee-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.9
+   }
+  },
+  "pl:weed-zupreme-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.5
+   },
+   "rawai": {
+    "min": 22,
+    "km": 20.1
+   }
+  },
+  "pl:weed-weeden-bangla-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2.5
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "pl:weed-drewissharing-patong": {
+   "patong": {
+    "min": 2,
+    "km": 1.8
+   },
+   "rawai": {
+    "min": 23,
+    "km": 20.4
+   }
+  },
+  "pl:weed-good-kush-bar-kata": {
+   "patong": {
+    "min": 12,
+    "km": 10.5
+   },
+   "rawai": {
+    "min": 11,
+    "km": 8.5
+   }
+  },
+  "pl:weed-weeden-karon": {
+   "patong": {
+    "min": 9,
+    "km": 8.3
+   },
+   "rawai": {
+    "min": 12,
+    "km": 10
+   }
+  },
+  "pl:weed-lalaland-rawai": {
+   "patong": {
+    "min": 19,
+    "km": 16.9
+   },
+   "rawai": {
+    "min": 4,
+    "km": 2.6
+   }
+  },
+  "pl:weed-green-ghost-rawai": {
+   "patong": {
+    "min": 19,
+    "km": 16.7
+   },
+   "rawai": {
+    "min": 4,
+    "km": 2.6
+   }
+  },
+  "pl:weed-growland-rawai": {
+   "patong": {
+    "min": 16,
+    "km": 14.4
+   },
+   "rawai": {
+    "min": 7,
+    "km": 4.9
+   }
+  },
+  "pl:weed-amsterdam-coffee-shop-nai-harn": {
+   "patong": {
+    "min": 16,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 7,
+    "km": 4.3
+   }
+  },
+  "pl:weed-phuket-high-nai-harn": {
+   "patong": {
+    "min": 17,
+    "km": 16
+   },
+   "rawai": {
+    "min": 7,
+    "km": 3.8
+   }
+  },
+  "pl:weed-the-high-cloud-chalong": {
+   "patong": {
+    "min": 15,
+    "km": 14.6
+   },
+   "rawai": {
+    "min": 5,
+    "km": 4
+   }
+  },
+  "pl:weed-ganja-boyz-chalong": {
+   "patong": {
+    "min": 17,
+    "km": 15.9
+   },
+   "rawai": {
+    "min": 7,
+    "km": 5.1
+   }
+  },
+  "pl:weed-wesmoke-cafe-chalong": {
+   "patong": {
+    "min": 20,
+    "km": 18.4
+   },
+   "rawai": {
+    "min": 10,
+    "km": 7.6
+   }
+  },
+  "pl:weed-amsterjam-old-town": {
+   "patong": {
+    "min": 17,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 17,
+    "km": 13.5
+   }
+  },
+  "pl:weed-tuamae-organic420-wichit": {
+   "patong": {
+    "min": 15,
+    "km": 12.8
+   },
+   "rawai": {
+    "min": 15,
+    "km": 12.6
+   }
+  },
+  "pl:weed-grandma-jazz-kamala": {
+   "patong": {
+    "min": 10,
+    "km": 9
+   },
+   "rawai": {
+    "min": 30,
+    "km": 26.8
+   }
+  },
+  "pl:weed-duckside-shop-farm-kamala": {
+   "patong": {
+    "min": 14,
+    "km": 11.4
+   },
+   "rawai": {
+    "min": 33,
+    "km": 29.1
+   }
+  },
+  "pl:weed-chillium-bang-tao": {
+   "patong": {
+    "min": 20,
+    "km": 16.8
+   },
+   "rawai": {
+    "min": 39,
+    "km": 34.6
+   }
+  },
+  "pl:weed-daddys-nai-yang": {
+   "patong": {
+    "min": 39,
+    "km": 35.3
+   },
+   "rawai": {
+    "min": 46,
+    "km": 43
+   }
+  },
+  "pl:weed-420-cannabis-nai-yang": {
+   "patong": {
+    "min": 39,
+    "km": 34.9
+   },
+   "rawai": {
+    "min": 46,
+    "km": 42.6
    }
   },
   "ev:shelter-phuket": {

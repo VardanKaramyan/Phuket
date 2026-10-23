@@ -77,6 +77,19 @@ const pl = await p.evaluate(async () => {
   return { id: card.id, name: card.dataset.name, shared: window.__shared }
 })
 check('Share on a place gives its share page', pl.shared && pl.shared.url === base + 's/' + pl.id && pl.shared.title === pl.name, JSON.stringify(pl))
+// Places → 18+: its cards stay out of All; under 18+ they show, with the Where row in place of the length row
+const adult = await p.evaluate(async () => {
+  const bar = document.querySelector('[data-toolbar="places"]'), chip = bar.querySelector('.chip[data-group="tier"][data-value="adult"]')
+  if (!chip) return null
+  const shown = () => [...document.querySelectorAll('[data-list="places"] > .card')].filter((c) => !c.hidden)
+  const row = (g) => bar.querySelector(`.chip[data-group="${g}"]`).closest('.chips').hidden
+  const all = shown().filter((c) => c.dataset.only).length
+  chip.click(); await new Promise((r) => setTimeout(r, 150))
+  const on = shown(), out = { all, adult: on.length, other: on.filter((c) => !c.dataset.only).length, where: !row('where'), dur: !row('dur') }
+  bar.querySelector('.chip[data-group="tier"][data-value="all"]').click()
+  return out
+})
+check('18+ cards only under 18+, with the Where row', !adult || (adult.all === 0 && adult.adult > 10 && adult.other === 0 && adult.where && !adult.dur), JSON.stringify(adult))
 const evShare = await p.evaluate(async () => {
   location.hash = 'events'; await new Promise((r) => setTimeout(r, 300))
   const card = document.querySelector('#events .card[id^="ev-"]')

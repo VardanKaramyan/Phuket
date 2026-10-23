@@ -51,9 +51,10 @@ const read = (p) => p.evaluate(() => {
   check('the top bar has the same flaps, counting down live', r.top === r.d + ':' + r.h + ':' + r.m + ':' + r.s && r.topBig >= 17, r.top + ', ' + Math.round(r.topBig) + ' px tall')
   check('the top bar fits a 320 px phone (nothing overlaps)', r.topFits, String(r.topFits))
   check('the board fits a 320 px phone', r.fits, JSON.stringify(r.fits))
-  // the next second: the seconds digit flips (its flap animates), the pill follows
-  const flipped = await p.waitForFunction(() => document.querySelector('#countdown .pc-s .flap.go'), { timeout: 2500, polling: 'raf' }).then(() => true, () => false)
-  await sleep(800)
+  // the next second: the seconds digit flips (its flap animates), the pill follows. Wait for the digit to change from the
+  // one read: the flip before that read can still be animating (650 ms), and catching it raced the next tick
+  const flipped = await p.waitForFunction((s) => [...document.querySelectorAll('#countdown [data-cd="s"] .flap')].map((f) => f.dataset.v).join('') !== s && document.querySelector('#countdown .pc-s .flap.go'), { timeout: 2500, polling: 'raf' }, r.s).then(() => true, () => false)
+  await sleep(100)
   const r2 = await read(p)
   check('a second later the seconds digit flips, in the pass and the top bar', flipped && r2.s !== r.s && r2.top !== r.top && r2.top.endsWith(r2.s), r.top + ' → ' + r2.top)
   if (errors.length) check('no page errors', false, errors.join(' | '))

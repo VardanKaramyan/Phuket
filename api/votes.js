@@ -326,24 +326,21 @@ async function scrubAudit(db) {
   const sig = sha('scrub2|' + ADMIN_SALT + ADMIN_HASH + '|' + (process.env.GUIDE_PASSWORD ? sha(process.env.GUIDE_PASSWORD) : PASSWORD_SHA) + '|' + (process.env.ADMIN_PASSWORD ? sha(process.env.ADMIN_PASSWORD) : ''))
   if (scrubbedSig === sig) return
   if ((await redis(db, ['HGET', META, AUDIT_SCRUBBED])) === sig) { scrubbedSig = sig; return }
+  // one instance at a time (two cold instances must not rewrite the list at once); another holding it just skips this run,
+  // and the done marker short-circuits every later call once it finishes. No slow hashing here: a real password is caught
+  // by isSecretPw (the group's, the env admin's, or an admin password already seen), which is enough — forward logging
+  // never writes a real password any more, and an old, now-changed password left in the log is no longer a secret
+  if (!(await redis(db, ['SET', 'guide:scrublock', sig, 'EX', 120, 'NX']))) return
   const n = Number(await redis(db, ['LLEN', AUDIT])) || 0
   if (n && n <= 30000) {
     const rows = (await redis(db, ['LRANGE', AUDIT, 0, n - 1])) || []
-    const checked = new Map() // a password value -> is it a real secret (so each distinct one is checked once)
-    let scrypts = 0
-    const secret = async (pw) => {
-      if (checked.has(pw)) return checked.get(pw)
-      let r = isSecretPw(pw)
-      if (!r && !process.env.ADMIN_PASSWORD && scrypts < 100) { scrypts++; try { r = timingSafeEqual(await slowHash(pw), Buffer.from(ADMIN_HASH, 'hex')) } catch { /* leave it */ } }
-      checked.set(pw, r); return r
-    }
     let changed = false
-    const out = []
-    for (const raw of rows) {
+    const out = rows.map((raw) => {
       let x = null
-      try { x = JSON.parse(raw) } catch { out.push(raw); continue }
-      if (x && x.pw && (await secret(x.pw))) { delete x.pw; changed = true; out.push(JSON.stringify(x)) } else out.push(raw)
-    }
+      try { x = JSON.parse(raw) } catch { return raw }
+      if (x && x.pw && isSecretPw(x.pw)) { delete x.pw; changed = true; return JSON.stringify(x) }
+      return raw
+    })
     if (changed) { await redis(db, ['DEL', AUDIT]); if (out.length) await redis(db, ['RPUSH', AUDIT, ...out]) } // out is newest-first, as the list is kept
   }
   await redis(db, ['HSET', META, AUDIT_SCRUBBED, sig])

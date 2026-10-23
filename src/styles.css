@@ -16,6 +16,7 @@
   --sun-soft: #f7e7c6;
   --leaf: #23804f;
   --leaf-soft: #d8efe1;
+  --weed: #86b812;
   --alert: #b3361a;
   --alert-soft: #f8e1d9;
   --night: #0f1c2b;
@@ -48,7 +49,7 @@
   :root:not([data-theme="light"]) {
     --bg: #09151a; --surface: #10222a; --surface-2: #172d36; --ink: #e3eeec; --ink-2: #93a9af; --line: #213a43;
     --sea: #39c0cb; --on-sea: #032328; --sea-soft: #12343b; --orchid: #ff6f9c; --sun: #f2b54e; --sun-soft: #3a2e17;
-    --leaf: #52c58c; --leaf-soft: #133325; --alert: #ff8a65; --alert-soft: #3d1d14;
+    --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --alert: #ff8a65; --alert-soft: #3d1d14;
     --night: #12233a; --night-2: #1a3049; --night-ink: #eaf2f6; --night-muted: #9fb4c6; --night-line: #2c4a68;
     --pulse: #ff6f9c; --violet: #8f8af0; --on-pulse: #22050f; --map-sea: #0d2a33; --map-land: #1b2f2f; --map-line: #36585c; --map-road: #3d5658; --sea-text: #39c0cb; --warn-ink: #f2b54e; --good-ink: #52c58c; --on-leaf: #04210f; --blue: #79aef0; --seg-on: #2e4a55;
     --scrim: rgb(0 0 0 / 0.6); --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);
@@ -58,7 +59,7 @@
 :root[data-theme="dark"] {
   --bg: #09151a; --surface: #10222a; --surface-2: #172d36; --ink: #e3eeec; --ink-2: #93a9af; --line: #213a43;
   --sea: #39c0cb; --on-sea: #032328; --sea-soft: #12343b; --orchid: #ff6f9c; --sun: #f2b54e; --sun-soft: #3a2e17;
-  --leaf: #52c58c; --leaf-soft: #133325; --alert: #ff8a65; --alert-soft: #3d1d14;
+  --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --alert: #ff8a65; --alert-soft: #3d1d14;
   --night: #12233a; --night-2: #1a3049; --night-ink: #eaf2f6; --night-muted: #9fb4c6; --night-line: #2c4a68;
   --pulse: #ff6f9c; --violet: #8f8af0; --on-pulse: #22050f; --map-sea: #0d2a33; --map-land: #1b2f2f; --map-line: #36585c; --map-road: #3d5658; --sea-text: #39c0cb; --warn-ink: #f2b54e; --good-ink: #52c58c; --on-leaf: #04210f; --blue: #79aef0; --seg-on: #2e4a55;
   --scrim: rgb(0 0 0 / 0.6); --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);

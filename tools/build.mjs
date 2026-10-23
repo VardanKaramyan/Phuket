@@ -990,7 +990,7 @@ function areasView(mode, opts) {
 <button class="chip" type="button" data-layer="event" aria-pressed="true"><i style="background:var(--pulse)"></i>Music</button>
 <button class="chip" type="button" data-layer="place gem" aria-pressed="true"><i style="background:var(--sea)"></i><i style="background:var(--leaf)"></i>Places</button>
 <button class="chip" type="button" data-layer="hotel" aria-pressed="true"><i style="background:var(--violet)"></i>Villas</button>
-<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>${adultItems.length ? '\n<button class="chip" type="button" data-layer="adult" aria-pressed="false"><i style="background:var(--orchid)"></i>18+</button>' : ''}
+${adultItems.some((p) => p.category === 'cannabis') ? '<button class="chip" type="button" data-layer="weed" aria-pressed="true"><i style="background:var(--weed)"></i>Weed</button>\n' : ''}<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>${adultItems.some((p) => p.category !== 'cannabis') ? '\n<button class="chip" type="button" data-layer="adult" aria-pressed="false"><i style="background:var(--orchid)"></i>18+</button>' : ''}
 </div>
 </div>
 <p class="map-credit js-only" id="map-credit"></p>
@@ -1210,7 +1210,7 @@ function clientData(build) {
   const popVenue = (v) => String(v || '').split(',')[0].trim()
   events.forEach((e) => { const ds = (e.dates || []).filter(inTrip); add('event', 'event', e, e.id, e.name, [popVenue(e.venue), ds.length ? popDates(ds) : popPattern(e.recurrence)].filter(has).join(' · '), 'ev-' + e.id) })
   places.forEach((p) => p.tier === 'adult'
-    ? add('place', 'adult', p, p.id, p.name, [ADULT_KIND[p.category], p.rating ? `${trimNum(p.rating)} on Google` : ''].filter(has).join(' · '), 'pl-' + p.id)
+    ? add('place', p.category === 'cannabis' ? 'weed' : 'adult', p, p.id, p.name, [ADULT_KIND[p.category], p.rating ? `${trimNum(p.rating)} on Google` : ''].filter(has).join(' · '), 'pl-' + p.id)
     : add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : durText(p)].filter(has).join(' · '), 'pl-' + p.id))
   // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
   hotels.forEach((h) => {
@@ -1340,11 +1340,11 @@ function kml() {
   const pm = (name, desc, lat, lng, style, it) => (Number.isFinite(+lat) && !(it && lowConf(it)) ? `<Placemark><name>${esc(name)}</name><description>${cdata(desc)}</description><styleUrl>#${style}</styleUrl><Point><coordinates>${lng},${lat},0</coordinates></Point></Placemark>` : '')
   const folder = (name, inner) => `<Folder><name>${esc(name)}</name>${inner}</Folder>`
   return `<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}${pinStyle('p-adult', '#c4285f')}
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}${pinStyle('p-adult', '#c4285f')}${pinStyle('p-weed', '#86b812')}
 ${folder('Areas', areasK)}
 ${folder('Music & raves', events.map((e) => pm(e.name, `${e.venue || ''}<br>${(e.dates || []).join(', ') || e.recurrence || ''}<br>${e.description || ''}`, e.lat, e.lng, 'p-event', e)).join(''))}
 ${folder('Places to go', places.filter((p) => p.tier !== 'adult').map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
-${adultItems.length ? folder('18+ and weed', adultSorted.map((p) => pm(p.name, `${ADULT_KIND[p.category] || ''}<br>${p.description || ''}`, p.lat, p.lng, 'p-adult', p)).join('')) : ''}
+${adultItems.length ? folder('18+ and weed', adultSorted.map((p) => pm(p.name, `${ADULT_KIND[p.category] || ''}<br>${p.description || ''}`, p.lat, p.lng, p.category === 'cannabis' ? 'p-weed' : 'p-adult', p)).join('')) : ''}
 ${folder('Hotels', hotels.map((h) => { const bv = baseOfVilla(h.id); return pm(h.name, `${HTIER[h.tier] || ''} · ${bv && bv.paid ? `Booked ${baseRange(bv)}: paid ${paidLine(bv.paid)}` : h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel') }).join(''))}
 ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => pm(`${b.name} · ${x.name}`, `${x.hoursText || ''}<br>${b.summary || ''}`, x.lat, x.lng, 'p-money'))).join(''))}
 </Document></kml>

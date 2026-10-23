@@ -510,9 +510,9 @@
     Object.values(markers).forEach((m) => m.setStyle(dotStyle(m.kind)))
     map.getContainer().classList.toggle('dim-tiles', base === 'streets' && isDark())
   }
-  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun', adult: '--orchid' }
-  // hidden gems and 18+ places have layers of their own; other pins go by their type
-  const layerOf = (kind, t) => (kind === 'gem' || kind === 'adult' ? kind : t)
+  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun', adult: '--orchid', weed: '--weed' }
+  // hidden gems, 18+ places and weed shops have layers of their own; other pins go by their type
+  const layerOf = (kind, t) => (['gem', 'adult', 'weed'].includes(kind) ? kind : t)
   function dotStyle(kind) {
     return { radius: kind === 'event' ? 7 : 6, color: cssVar('--surface'), weight: 2, fillColor: cssVar(DOT[kind] || '--sea'), fillOpacity: 1 }
   }
@@ -719,10 +719,10 @@
         layers.areas.addLayer(L.marker([a.label[0], a.label[1]], { interactive: false, keyboard: false, icon: L.divIcon({ className: 'area-label', html: '<span data-rank="' + (a.rank || 0) + '">' + esc(a.short || a.name) + '</span>', iconSize: [0, 0] }) }))
       },
     })
-    ;['event', 'place', 'gem', 'hotel', 'money', 'adult'].forEach((t) => { layers[t] = L.layerGroup() })
+    ;['event', 'place', 'gem', 'hotel', 'money', 'adult', 'weed'].forEach((t) => { layers[t] = L.layerGroup() })
     layers.base = L.layerGroup().addTo(map) // our villas: always shown, in a pane above the other pins
     map.createPane('basePane').style.zIndex = 450
-    ;['event', 'place', 'gem', 'hotel'].forEach((t) => layers[t].addTo(map))
+    ;['event', 'place', 'gem', 'hotel', 'weed'].forEach((t) => layers[t].addTo(map))
     D.points.forEach((p) => {
       // the popup is built when it opens, so it fits the map's size at that moment (full screen or not)
       const m = L.circleMarker([p.lat, p.lng], dotStyle(p.k)).bindPopup(() => popupHtml(p), popupOpts())

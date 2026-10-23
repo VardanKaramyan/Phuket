@@ -49,19 +49,27 @@ const SCRYPT = { N: 65536, r: 8, p: 1, maxmem: 96 * 1024 * 1024 }
 const slowHash = (k) => new Promise((ok, no) => scrypt(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT, (e, key) => (e ? no(e) : ok(key))))
 const adminSeen = new Map() // a password tried (its SHA-256) → right or not: the slow hash once per server start
 const ADMIN_TRIES = 10 // different wrong admin passwords one IP may try in an hour (the same one again does not count)
+let hashing = 0 // slow hashes running on this server right now (at most 3)
 // the admin's password: a password not tried yet on this server costs the slow hash, so one IP gets ADMIN_TRIES new
-// wrong ones an hour, counted before the hash runs; limited: true once they are used up
+// ones an hour. The try is counted in one step before the hash runs (requests at the same moment cannot all slip
+// through), and handed back when the password was right; limited: true once they are used up
 async function adminKeyOk(db, request, k) {
   if (!k) return { ok: false }
   if (process.env.ADMIN_PASSWORD) return { ok: sha(k) === sha(process.env.ADMIN_PASSWORD) }
   const h = sha(k)
   if (adminSeen.has(h)) return { ok: adminSeen.get(h) }
   const rate = 'guide:adminfail:' + (ipOf(request) || 'x')
-  if (db && Number((await redis(db, ['GET', rate])) || 0) >= ADMIN_TRIES) return { ok: false, limited: true }
-  const ok = timingSafeEqual(await slowHash(k), Buffer.from(ADMIN_HASH, 'hex'))
+  if (db) {
+    await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX'])
+    if ((await redis(db, ['INCR', rate])) > ADMIN_TRIES) return { ok: false, limited: true }
+  }
+  if (hashing >= 3) return { ok: false, limited: true }
+  hashing++
+  let ok = false
+  try { ok = timingSafeEqual(await slowHash(k), Buffer.from(ADMIN_HASH, 'hex')) } finally { hashing-- }
   if (adminSeen.size > 200) adminSeen.clear()
   adminSeen.set(h, ok)
-  if (!ok && db) { await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX']); await redis(db, ['INCR', rate]) }
+  if (ok && db) await redis(db, ['DECR', rate])
   return { ok }
 }
 const header = (request, k) => request?.headers?.get?.(k) || ''

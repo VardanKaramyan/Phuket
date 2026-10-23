@@ -25,10 +25,10 @@ const upstash = http.createServer((req, res) => {
     const [cmd, key, ...a] = JSON.parse(body)
     let result
     if (cmd === 'EXPIRE') { res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result: 1 })) }
-    if (['GET', 'SET', 'INCR'].includes(cmd)) {
+    if (['GET', 'SET', 'INCR', 'DECR'].includes(cmd)) {
       if (cmd === 'GET') result = strings.has(key) ? strings.get(key) : null
       else if (cmd === 'SET') { if (a.includes('NX') && strings.has(key)) result = null; else { strings.set(key, String(a[0])); result = 'OK' } }
-      else { const n = Number(strings.get(key) || 0) + 1; strings.set(key, String(n)); result = n }
+      else { const n = Number(strings.get(key) || 0) + (cmd === 'DECR' ? -1 : 1); strings.set(key, String(n)); result = n }
       res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result }))
     }
     if (['LPUSH', 'LTRIM', 'LRANGE', 'LLEN'].includes(cmd)) {
@@ -147,7 +147,7 @@ async function approveAll() {
   for (let i = 0; i < 10; i++) tries.push(await tryAdmin('guess-' + i))
   tries.push(await tryAdmin('guess-0'), await tryAdmin('guess-new'))
   process.env.ADMIN_PASSWORD = ADMIN_PASS
-  check('the admin password: 10 new wrong ones an hour from one IP, then 429; a repeat does not count', tries.slice(0, 11).every((x) => x === 401) && tries[11] === 429 && strings.get('guide:adminfail:203.0.113.99') === '10', tries.join())
+  check('the admin password: 10 new wrong ones an hour from one IP, then 429; a repeat does not count', tries.slice(0, 11).every((x) => x === 401) && tries[11] === 429 && strings.get('guide:adminfail:203.0.113.99') === '11', tries.join())
   hashes.clear(); strings.clear(); lists.clear()
 }
 {

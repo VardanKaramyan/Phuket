@@ -8441,6 +8441,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
       try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key, 'X-Guide-Name': encodeURIComponent(name), 'X-Guide-Device': device }, cache: 'no-store' }) } catch { /* offline: let them in, the server checks it once online */ }
       if (r && r.status === 401) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
       if (r && r.status === 429) { err.textContent = 'Too many wrong passwords. Try again in an hour.'; return }
+      if (r && !r.ok) { err.textContent = 'The server is busy. Try again in a moment.'; return }
       let admin = false
       if (r && r.ok) { try { admin = !!(await r.json()).admin } catch { /* an older server */ } }
       store.set('guideKey', key); store.set('guideName', name); store.set('guideAdmin', admin); store.set('voterName', name); store.set('spendMe', name)

@@ -981,8 +981,8 @@ check('a tap on your payment to settle opens it filled in, from you; a part paym
 // filters: Mine, and With someone from a balance row
 const filters = await B.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
-  const row = [...document.querySelectorAll('#spend-bal .bal-row')].find((r) => r.dataset.p === 'Mes'); row.click(); await wait(100)
-  row.parentElement.querySelector('[data-filter-person]').click(); await wait(200)
+  // one step: the list may be drawn again (a 5-second refresh) between two clicks
+  document.querySelector('#spend-bal [data-filter-person="Mes"]').click(); await wait(200)
   const chip = document.querySelector('[data-spend-filter="person"]')
   const want = JSON.parse(localStorage.getItem('pg:spend')).filter((x) => x.paid === 'Mes' || x.split.includes('Mes')).length
   const out = { chip: chip.hidden ? '' : chip.textContent.trim(), list: !document.querySelector('[data-pane-box="list"]').hidden, rows: document.querySelectorAll('#spend-list .xrow').length === want, want }

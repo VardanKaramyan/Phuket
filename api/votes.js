@@ -49,10 +49,16 @@ const SCRYPT = { N: 65536, r: 8, p: 1, maxmem: 96 * 1024 * 1024 }
 const slowHash = (k) => new Promise((ok, no) => scrypt(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT, (e, key) => (e ? no(e) : ok(key))))
 const adminSeen = new Map() // a password tried (its SHA-256) → right or not: the slow hash once per server start
 const ADMIN_TRIES = 10 // different wrong admin passwords one IP may try in an hour (the same one again does not count)
-let hashing = 0 // slow hashes running on this server right now (at most 3)
+let hashing = 0 // slow hashes running on this server right now (at most 3; others wait for a free one, up to 8 s)
+async function hashSlot() {
+  for (const until = Date.now() + 8000; hashing >= 3;) { if (Date.now() > until) return false; await new Promise((r) => setTimeout(r, 50)) }
+  hashing++
+  return true
+}
 // the admin's password: a password not tried yet on this server costs the slow hash, so one IP gets ADMIN_TRIES new
 // ones an hour. The try is counted in one step before the hash runs (requests at the same moment cannot all slip
-// through), and handed back when the password was right; limited: true once they are used up
+// through), and handed back when the password was right; limited: true once they are used up; busy: true (the try
+// handed back) when no hash slot came free in time
 async function adminKeyOk(db, request, k) {
   if (!k) return { ok: false }
   if (process.env.ADMIN_PASSWORD) return { ok: sha(k) === sha(process.env.ADMIN_PASSWORD) }
@@ -63,8 +69,7 @@ async function adminKeyOk(db, request, k) {
     await redis(db, ['SET', rate, 0, 'EX', 3600, 'NX'])
     if ((await redis(db, ['INCR', rate])) > ADMIN_TRIES) return { ok: false, limited: true }
   }
-  if (hashing >= 3) return { ok: false, limited: true }
-  hashing++
+  if (!(await hashSlot())) { if (db) await redis(db, ['DECR', rate]); return { ok: false, busy: true } }
   let ok = false
   try { ok = timingSafeEqual(await slowHash(k), Buffer.from(ADMIN_HASH, 'hex')) } finally { hashing-- }
   if (adminSeen.size > 200) adminSeen.clear()
@@ -84,7 +89,7 @@ const personOf = (n) => { const s = cleanName(n); return aliasOf(s) || PEOPLE.fi
 async function authOf(db, request, bodyName) {
   const k = header(request, 'x-guide-key'), h = header(request, 'x-guide-name')
   const name = personOf(h ? decode(h) : '') || personOf(bodyName)
-  if (name === ADMIN) { const a = await adminKeyOk(db, request, k); return { ok: a.ok, name, admin: a.ok, limited: !!a.limited } }
+  if (name === ADMIN) { const a = await adminKeyOk(db, request, k); return { ok: a.ok, name, admin: a.ok, limited: !!a.limited, busy: !!a.busy } }
   return { ok: groupKeyOk(k), name, admin: false }
 }
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
@@ -341,6 +346,7 @@ export async function GET(request) {
   try { auth = await authOf(db, request, '') } catch (e) { return reply(502, { error: e.message }) }
   const dev = DEVICE.test(header(request, 'x-guide-device')) ? header(request, 'x-guide-device') : ''
   const tried = auth.name || cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
+  if (auth.busy) return reply(503, { error: 'Busy, try again in a moment' })
   if (!auth.ok) {
     // failed sign-ins go in the log (at most 30 an hour from one IP); other refused calls once an hour per IP (an old
     // page keeps asking)
@@ -448,6 +454,7 @@ async function handle(db, request, body, auth, ctx) {
       return reply(200, { ok: true })
     } catch (e) { return reply(502, { error: e.message }) }
   }
+  if (auth.busy) return reply(503, { error: 'Busy, try again in a moment' })
   if (!auth.ok) return auth.limited ? reply(429, { error: 'Too many wrong passwords from here. Try again in an hour.' }) : NO_KEY()
   // the signed-in name is the name for everything (an older page: the name in the body, an old alias mapped)
   if (body && auth.name) body.name = auth.name

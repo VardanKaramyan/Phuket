@@ -17,6 +17,9 @@ export const TRIP = {
   people: ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara'],
   // other names the sign-in screen takes for them (the user, 22 Oct 2026)
   aliases: { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash' },
+  // signs in with his own password, approves expenses and payments, sees the stats and the activity log (the user, 23 Oct
+  // 2026); api/votes.js has the same name (ADMIN)
+  admin: 'Vardan K',
   phases: [
     { id: 'group', label: 'Group', from: '2027-01-08', to: '2027-01-18' },
     { id: 'duo', label: 'Two of you', from: '2027-01-19', to: '2027-01-23' },

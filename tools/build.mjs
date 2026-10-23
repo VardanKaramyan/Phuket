@@ -727,7 +727,7 @@ ${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${be
 <div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p><p id="offline-fill-row" hidden><button class="btn primary" type="button" id="offline-fill">Download the missing ones</button></p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
 <p class="note">For offline turn-by-turn directions, also download Phuket in the Google Maps app: profile picture → Offline maps → Select your own map.</p></div>
-<footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only" id="signed-in" hidden>Signed in as <b></b>. <button class="link-btn" type="button" id="sign-out">Not you?</button></p><p class="js-only"><a href="#stats">Visits and activity</a>: the website counts visits and what people do in it, for the group.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
+<footer class="footer-note">${buildName === 'standalone' ? '<p class="js-only" id="signed-in" hidden>Signed in as <b></b>. <button class="link-btn" type="button" id="sign-out">Not you?</button></p><p class="js-only" data-admin-only hidden>Admin: <a href="#admin">Activity log</a> · <a href="#stats">Visits and activity</a>. Only you see these.</p>' : ''}<p>Researched on ${esc(extra.researchedOn || '15 Oct 2026')}. Lineups, prices and opening hours change: check the official link before you go.</p><p>Map data © OpenStreetMap contributors (ODbL). Photos: Wikimedia Commons contributors and the venues’ own sites, credited on each photo.</p></footer>
 </section>`
 }
 
@@ -837,6 +837,7 @@ function spendView() {
   return `<section class="view spend" id="spend" aria-labelledby="spend-title">
 <div class="view-head spend-head"><h1 class="view-title" id="spend-title">Spending</h1><label class="cur-pick js-only" hidden><span class="sr-only">Show amounts in</span><select id="spend-cur">${SPEND_CURS.map((c) => `<option value="${c}">${c} · ${CUR_NAME[c]}</option>`).join('')}</select></label></div>
 <p class="note" id="spend-off">Open the guide’s website to share expenses with the group.</p>
+<div class="todo-card js-only" id="spend-todo" hidden></div>
 <div class="me-card js-only" id="spend-me" hidden></div>
 <div class="js-only spend-body" id="spend-body" hidden>
 ${seg('spend-seg', 'data-pane', [['list', 'Expenses'], ['balances', 'Balances'], ['stats', 'Stats']], 'Show')}
@@ -863,6 +864,15 @@ ${seg('sp-kind', 'data-kind', [['spend', 'Expense'], ['pay', 'Payment']], 'Expen
 <p class="sheet-meta" id="sp-meta" hidden></p>
 <div class="sheet-foot"><p class="sheet-err" id="sp-err" role="alert"></p><button class="btn quiet-danger" type="button" id="sp-delete" hidden>Delete</button><button class="btn primary" type="submit" id="sp-save">Save</button></div>
 </form></dialog>`
+}
+// Admin (website only, Vardan K): the activity log, filled in by src/app.js from the vote server (?audit=1): who did what,
+// when, from which IP, place and device, with filters, people and devices
+function adminView() {
+  if (buildName !== 'standalone') return ''
+  return `<section class="view admin" id="admin" aria-labelledby="admin-title">
+<div class="view-head"><span class="eyebrow">Admin · ${esc(TRIP.admin || '')} only</span><h1 class="view-title" id="admin-title">Activity log</h1><p class="lede">Every sign-in, tap, view, vote, note and expense, with who, when, where and on which phone.</p></div>
+<div id="admin-body"><p class="note">Open the guide's website to see the log.</p></div>
+</section>`
 }
 // Stats: filled in by src/app.js from the vote server (website only)
 function statsView() {
@@ -1299,7 +1309,7 @@ const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 function page(build) {
   buildName = build
   const mode = build === 'single' ? 'inline' : 'file'
-  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), spendView(), statsView()].join('\n')))
+  const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), spendView(), statsView(), adminView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
   const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
   const leaflet = build === 'artifact'

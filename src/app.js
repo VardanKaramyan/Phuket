@@ -4,7 +4,7 @@
   const D = JSON.parse(document.getElementById('guide-data').textContent)
   const $ = (s, el = document) => el.querySelector(s)
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
-  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'spend', 'stats']
+  const VIEWS = ['home', 'events', 'places', 'areas', 'stay', 'money', 'info', 'apps', 'notes', 'spend', 'stats', 'admin']
   // kept for this tab only (it survives a refresh): where you were on the page and on the map
   const session = {
     get(k) { try { return JSON.parse(sessionStorage.getItem('pg:' + k) || 'null') } catch { return null } },
@@ -456,6 +456,7 @@
     if (view !== current) track('view', view)
     if (focusEl) track('card', focusEl.id)
     if (view === 'stats' && current !== 'stats') renderStats()
+    if (view === 'admin' && current !== 'admin') renderAdmin()
     // a view that this build does not have (e.g. #apps before data/apps.json exists) falls back to home
     if (!VIEWS.includes(view) || !document.getElementById(view)) view = 'home'
     pageview(view, focusEl)
@@ -1115,11 +1116,11 @@
   let seenT = store.get('seenT', 0) // the newest shared change this phone has seen
   let firstAnnounce = true
   // other people's changes, as they happen: "Ani liked Mouana Breeze", with Show to go to it
-  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list', spend: 'added an expense:', pay: 'added a payment:', respend: 'changed an expense:', repay: 'changed a payment:', unspend: 'deleted an expense:', unpay: 'deleted a payment:' }
+  const DID = { like: 'liked', skip: 'skipped', unvote: 'took back a vote on', hide: 'hid', show: 'brought back', move: 'moved', reset: 'reset the place of', note: 'added a note on', unnote: 'deleted a note on', save: 'saved', unsave: 'took off the saved list', spend: 'added an expense:', pay: 'added a payment:', respend: 'changed an expense:', repay: 'changed a payment:', unspend: 'deleted an expense:', unpay: 'deleted a payment:', got: 'confirmed getting', approve: 'approved', reject: 'rejected' }
   const cardOf = (x) => { const m = /^(ht|ev|pl):(.+)$/.exec(x || ''); return m ? document.getElementById(m[1] + '-' + m[2]) : null }
   function describe(r) {
     const who = r.n || 'Someone'
-    if (/^(re|un)?(spend|pay)$/.test(r.e)) return who + ' ' + DID[r.e] + ' ' + (r.x || '')
+    if (/^((re|un)?(spend|pay)|got|approve|reject)$/.test(r.e)) return who + ' ' + DID[r.e] + ' ' + (r.x || '')
     if (r.x === 'all') return r.e === 'reset' ? who + ' reset all villa positions' : who + (r.e === 'note' ? ' added a group note' : r.e === 'unnote' ? ' deleted a group note' : ' changed something')
     const c = cardOf(r.x)
     return who + ' ' + (DID[r.e] || r.e) + ' ' + (c ? c.dataset.name : 'a villa')
@@ -1133,7 +1134,7 @@
     if (!fresh.length || (first && !hadSeen)) return // a first visit: no flood of old news
     const r = fresh[0], c = cardOf(r.x)
     const text = (first ? 'Since your last visit: ' : '') + describe(r) + (fresh.length > 1 ? ' (+' + (fresh.length - 1) + ' more)' : '')
-    const to = c ? c.id : /^(re|un)?(spend|pay)$/.test(r.e) && document.getElementById('spend') ? 'spend/expenses' : r.x === 'all' && document.getElementById('notes') ? 'notes' : '' // a group note: the Notes tab
+    const to = c ? c.id : /^((re|un)?(spend|pay)|got|approve|reject)$/.test(r.e) && document.getElementById('spend') ? 'spend/expenses' : r.x === 'all' && document.getElementById('notes') ? 'notes' : '' // a group note: the Notes tab
     // news waits while an Undo or the add sheet is on screen, and only the newest waits
     newsNext = { text, to }
     const show = () => {
@@ -1149,9 +1150,18 @@
   // what people do in the guide, for the Stats page: sent in small batches (and when the page is closed)
   const queue = []
   let flushTimer = 0
+  // what the phone is, for the admin's log: screen, languages, time zone, platform, home-screen app or not
+  function phoneInfo() {
+    const n = navigator, c = n.connection || {}, ua = n.userAgentData
+    return { sw: screen.width, sh: screen.height, dpr: devicePixelRatio, vw: innerWidth, vh: innerHeight, tz: (Intl.DateTimeFormat().resolvedOptions() || {}).timeZone, lang: n.language,
+      langs: (n.languages || []).slice(0, 4).join(','), plat: (ua && ua.platform) || n.platform, mob: ua ? ua.mobile : undefined, touch: n.maxTouchPoints,
+      pwa: matchMedia('(display-mode: standalone)').matches || !!n.standalone, mem: n.deviceMemory, cores: n.hardwareConcurrency, conn: c.effectiveType,
+      theme: root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') }
+  }
   function flush(closing) {
     if (!queue.length || !navigator.onLine) return
-    const body = JSON.stringify({ device, name: voterName(), track: queue.splice(0, 30) })
+    // the signed-in name with its password (a beacon cannot send headers), so the log knows it is really that person
+    const body = JSON.stringify({ device, name: store.get('guideName', '') || voterName(), key: store.get('guideKey', ''), info: phoneInfo(), track: queue.splice(0, 30) })
     if (closing && navigator.sendBeacon) { navigator.sendBeacon(D.votes, new Blob([body], { type: 'application/json' })); return }
     fetch(D.votes, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, keepalive: true }).catch(() => {})
   }
@@ -1163,6 +1173,20 @@
   }
   addEventListener('pagehide', () => flush(true))
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(true) })
+  // what people tap and search, for the admin's log: buttons and links by their label, with the card they are on
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest && e.target.closest('button, a, summary'); if (!el || el.closest('#gate, #admin')) return // not the sign-in, nor the admin reading the log
+    const href = el.tagName === 'A' ? el.getAttribute('href') || '' : '', out = /^https?:/.test(href)
+    const label = (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 50)
+    const where = el.closest('.card[id], section[id], dialog[id]')
+    track(out ? 'link' : 'tap', [label, out ? href.replace(/^https?:\/\/(www\.)?/, '').slice(0, 50) : href, where && where.id].filter(Boolean).join(' · '))
+  }, true)
+  document.addEventListener('input', (e) => {
+    const t = e.target
+    if (!t.matches || !t.matches('input[type="search"]')) return
+    clearTimeout(t.trackTimer)
+    t.trackTimer = setTimeout(() => { if (t.value.trim()) track('search', t.id + ': ' + t.value.trim().slice(0, 60)) }, 1500)
+  })
   const dlg = $('#vote-dialog')
   const VOTE = { like: 'Like', skip: 'Skip' }
   const canVote = !!D.votes && /^https?:$/.test(location.protocol) && !!dlg
@@ -1174,7 +1198,11 @@
   // the sign-in screen (DU OV ES?): the website asks once for a name of the group and the group's password, which goes
   // with every call to the server (it answers 401 without it). The name is then the name for votes, notes and expenses
   const gate = canVote ? $('#gate') : null
-  const keyHead = () => { const k = store.get('guideKey', ''); return k ? { 'X-Guide-Key': k } : {} }
+  const keyHead = () => { const k = store.get('guideKey', ''), n = store.get('guideName', ''); return k ? { 'X-Guide-Key': k, ...(n ? { 'X-Guide-Name': encodeURIComponent(n) } : {}), 'X-Guide-Device': device } : {} }
+  // the admin (Vardan K, signed in with his own password): approves expenses and payments, sees the stats and the log
+  const ADMIN = (D.trip && D.trip.admin) || ''
+  const isAdmin = () => !!ADMIN && store.get('guideName', '') === ADMIN && !!store.get('guideAdmin', false)
+  const syncAdmin = () => $$('[data-admin-only]').forEach((el) => { el.hidden = !isAdmin() })
   const whoIs = (s) => {
     const n = s.replace(/\s+/g, ' ').trim(), alias = Object.keys(D.trip.aliases || {}).find((a) => same(a, n))
     return alias ? D.trip.aliases[alias] : (D.trip.people || []).find((p) => same(p, n)) || ''
@@ -1195,14 +1223,17 @@
       const err = $('#gate-err'), name = whoIs($('#gate-name').value), key = $('#gate-pass').value.trim()
       if (!name) { err.textContent = 'Not on the list. Type your name.'; return }
       let r = null
-      try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key }, cache: 'no-store' }) } catch { /* offline: let them in, the server checks it once online */ }
+      try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key, 'X-Guide-Name': encodeURIComponent(name), 'X-Guide-Device': device }, cache: 'no-store' }) } catch { /* offline: let them in, the server checks it once online */ }
       if (r && r.status === 401) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
-      store.set('guideKey', key); store.set('guideName', name); store.set('voterName', name); store.set('spendMe', name)
+      let admin = false
+      if (r && r.ok) { try { admin = !!(await r.json()).admin } catch { /* an older server */ } }
+      store.set('guideKey', key); store.set('guideName', name); store.set('guideAdmin', admin); store.set('voterName', name); store.set('spendMe', name)
       err.textContent = ''; gate.hidden = true; document.documentElement.classList.remove('gated')
-      signedIn(); ver = 0; loadVotes(); renderVotes(); renderNotes(); renderSpend()
+      signedIn(); syncAdmin(); ver = 0; loadVotes(); renderVotes(); renderNotes(); renderSpend()
     })
-    $('#sign-out')?.addEventListener('click', () => { store.set('guideName', ''); store.set('guideKey', ''); signedIn(); showGate() })
+    $('#sign-out')?.addEventListener('click', () => { store.set('guideName', ''); store.set('guideKey', ''); store.set('guideAdmin', false); signedIn(); syncAdmin(); showGate() })
     signedIn()
+    syncAdmin()
     if (location.protocol === 'https:' && !(store.get('guideKey', '') && store.get('guideName', ''))) showGate()
   }
   const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's')
@@ -1336,6 +1367,7 @@
   // what the server sent: everyone's votes and the villas hidden for everyone
   function applyShared(j) {
     if (j.ver) ver = j.ver
+    if (j.you) { store.set('guideAdmin', !!j.you.admin); syncAdmin() }
     if (j.recent) announce(j.recent)
     votes = j.votes || {}; store.set('votes', votes)
     if (j.notes) { notes = j.notes; store.set('notes', notes); renderNotes() }
@@ -1549,6 +1581,12 @@
   const rateOf = (x) => (x.cur === 'THB' ? 1 : x.rate > 0 ? x.rate : midOf(x.cur))
   const centsOf = (x) => Math.round(Number(x.amount) * rateOf(x) * 100)
   const isPay = (x) => x.kind === 'pay'
+  // what counts in the balances (the user, 23 Oct 2026): an expense once the admin approved it, a payment once its
+  // receiver said they got it and the admin approved it; not a rejected one, nor one not sent yet
+  const toOf = (x) => (x.split || [])[0] || ''
+  const counts = (x) => !x.pending && !x.no && !!x.ok && (!isPay(x) || !!x.got)
+  // who may change or delete a row: who added it, who paid it, or the admin (a payment: who paid it, or the admin)
+  const mayChange = (x, me) => !!me && (isAdmin() || x.paid === me || (!isPay(x) && same(x.by || '', me)) || !!x.pending)
   // each person's part of an expense in satang, adding up to the whole: by weight (shares), by amount, or equal; the
   // satang left over by rounding go to the largest remainders (then to the first in the group's order)
   function partsOf(x) {
@@ -1616,7 +1654,17 @@
     return { amount, cur, rate: cents / 100 / amount }
   }
   const orig = (x) => amt(Number(x.amount), x.cur)
-  const meOf = () => { const m = store.get('spendMe', ''), v = voterName(); return PEOPLE.includes(m) ? m : (v && PEOPLE.find((p) => same(p, v))) || '' }
+  // you: the name signed in on this phone (the website), else the one picked here
+  const meOf = () => { const g = store.get('guideName', ''); if (PEOPLE.includes(g)) return g; const m = store.get('spendMe', ''), v = voterName(); return PEOPLE.includes(m) ? m : (v && PEOPLE.find((p) => same(p, v))) || '' }
+  // a row that does not count yet: who it waits for, or who said no
+  function waitOf(x, me) {
+    if (x.pending) return ''
+    if (x.no) return isPay(x) && x.no.by !== ADMIN ? you(x.no.by, me, true) + ' said not received' : 'Rejected by ' + you(x.no.by, me)
+    const need = [isPay(x) && !x.got ? toOf(x) : '', !x.ok ? ADMIN : ''].filter(Boolean)
+    return need.length ? 'Waiting for ' + [...new Set(need)].map((p) => you(p, me)).join(' and ') : ''
+  }
+  // what waits for you: payments to you that you have not confirmed, and for the admin everything not approved yet
+  const todoOf = (me) => (!me ? [] : rows.filter((x) => !x.pending && !x.no && ((isPay(x) && toOf(x) === me && !x.got) || (isAdmin() && !x.ok))))
   // a person: a coloured round with the initial (two words: both initials), the same colour as on the built page
   const initials = (p) => { const w = p.split(' '); return w.length > 1 ? w[0][0] + w[1][0] : p[0] }
   const av = (p) => '<span class="av p' + PEOPLE.indexOf(p) + '" aria-hidden="true">' + esc(initials(p)) + '</span>'
@@ -1631,7 +1679,7 @@
   // after the group's days (from 19 Jan most costs are for two), a new expense starts with the people of the last one
   const groupEnd = ((D.trip.phases || []).find((p) => p.id === 'group') || {}).to || D.trip.end
   // what the list was last drawn from (the Spend tab is drawn again only when it changes)
-  const sigOf = (list) => list.map((x) => x.id + ':' + (x.editedT || x.t)).join()
+  const sigOf = (list) => list.map((x) => x.id + ':' + (x.editedT || x.t) + ':' + ['ok', 'got', 'no'].map((k) => (x[k] ? 1 : 0)).join('')).join()
   let filter = 'all', picking = false, spendSig = sigOf(spend), draft = null
   const paying = new Set() // payments being sent: from|to|cents
   const spendBox = $('#spend')
@@ -1696,7 +1744,7 @@
     if (!spendBox || !canVote) return
     $('#spend-off').hidden = true
     rows = shownSpend()
-    const me = meOf(), b = balancesOf(rows), moves = settleUp(b)
+    const me = meOf(), b = balancesOf(rows.filter(counts)), moves = settleUp(b)
     // the rows a tap opened stay open
     const open = new Set($$('#spend-bal .bal-row[aria-expanded="true"]').map((r) => r.dataset.p))
     $('#spend-body').hidden = false
@@ -1704,16 +1752,66 @@
     $('#spend-cur').value = showCur
     $('#spend-add').hidden = !me
     renderMe(me, b, moves)
+    renderTodo(me)
     renderList(me)
     renderBalances(me, b, moves, open)
     renderSpendStats(b)
     // the Trip page's tile: where you stand
-    if (tileLine) tileLine.textContent = me && rows.length ? (evenOf(me, b, moves) ? 'You are even' : (b[me].net > 0 ? 'You get back ' : 'You owe ') + money(Math.abs(b[me].net))) : tileText
+    if (tileLine) tileLine.textContent = me && rows.some(counts) ? (evenOf(me, b, moves) ? 'You are even' : (b[me].net > 0 ? 'You get back ' : 'You owe ') + money(Math.abs(b[me].net))) : tileText
   }
-  // a payment to settle: who pays whom and how much (a tap opens it as a payment you can change), and Mark paid
-  const moveLi = (m, me) => '<li class="move">' + (me ? '<button class="move-open" type="button" data-pay-from="' + esc(m.from) + '" data-pay-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc(you(m.from, me, true) + ' pays ' + you(m.to, me) + ' ' + money(m.cents)) + '">' : '<span class="move-open">') +
-    '<span class="move-who">' + av(m.from) + '<span>' + esc(you(m.from, me, true)) + '</span>' + ic('next') + av(m.to) + '<span>' + esc(you(m.to, me)) + '</span></span><b class="num">' + esc(money(m.cents)) + '</b>' + (me ? '</button>' : '</span>') +
-    (me ? '<button class="btn small" type="button" data-settle-from="' + esc(m.from) + '" data-settle-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc('Mark paid: ' + you(m.from, me, true) + ' to ' + you(m.to, me) + ', ' + money(m.cents)) + '"' + (paying.has(m.from + '|' + m.to + '|' + m.cents) ? ' disabled>Saving…' : '>' + ic('check') + 'Mark paid') + '</button>' : '') + '</li>'
+  // a payment to settle: who pays whom and how much (a tap opens it as a payment you can change), and Mark paid; only who
+  // pays can mark it paid, and while one is waiting for its receiver and the admin it says so instead
+  const moveLi = (m, me) => {
+    const mine = !!me && m.from === me
+    const sent = rows.filter((x) => isPay(x) && !counts(x) && !x.no && !x.pending && x.paid === m.from && toOf(x) === m.to)
+    return '<li class="move" data-from="' + esc(m.from) + '" data-to="' + esc(m.to) + '">' + (mine ? '<button class="move-open" type="button" data-pay-from="' + esc(m.from) + '" data-pay-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc(you(m.from, me, true) + ' pays ' + you(m.to, me) + ' ' + money(m.cents)) + '">' : '<span class="move-open">') +
+      '<span class="move-who">' + av(m.from) + '<span>' + esc(you(m.from, me, true)) + '</span>' + ic('next') + av(m.to) + '<span>' + esc(you(m.to, me)) + '</span></span><b class="num">' + esc(money(m.cents)) + '</b>' + (mine ? '</button>' : '</span>') +
+      (sent.length ? '<span class="wait-pill">' + esc(waitOf(sent[0], me)) + '</span>'
+        : mine ? '<button class="btn small" type="button" data-settle-from="' + esc(m.from) + '" data-settle-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc('Mark paid: ' + you(m.from, me, true) + ' to ' + you(m.to, me) + ', ' + money(m.cents)) + '"' + (paying.has(m.from + '|' + m.to + '|' + m.cents) ? ' disabled>Saving…' : '>' + ic('check') + 'Mark paid') + '</button>' : '') + '</li>'
+  }
+  // To confirm: a payment to you ("Vahik paid you": Got it or Not received), and for the admin every expense and payment
+  // not approved yet (Approve or Reject; a payment to him: Got it, which approves it too)
+  function renderTodo(me) {
+    const box = $('#spend-todo'); if (!box) return
+    const list = todoOf(me).sort((a, c) => (isPay(c) && toOf(c) === me) - (isPay(a) && toOf(a) === me) || String(c.date).localeCompare(String(a.date)))
+    box.hidden = !list.length
+    syncTodoBadge(list, me)
+    if (!list.length) { box.innerHTML = ''; return }
+    const li = (x) => {
+      const pay = isPay(x), toMe = pay && toOf(x) === me
+      const title = pay ? you(x.paid, me, true) + ' paid ' + you(toOf(x), me) : (x.by ? you(x.by, me, true) + ' added: ' : '') + x.what
+      const sub = [orig(x), dayWord(x.date)].concat(pay ? (toMe ? [] : [x.got ? you(toOf(x), me, true) + ' got it' : you(toOf(x), me, true) + ' has not confirmed yet']) : [you(x.paid, me, true) + ' paid', 'for ' + whoOf(PEOPLE.filter((p) => (x.split || []).includes(p)), me)])
+      const yes = toMe ? 'Got it' : 'Approve', no = toMe ? 'Not received' : 'Reject'
+      return '<li>' + (pay ? av(x.paid) : '<span class="x-ic c-' + catOf(x) + '">' + ic(catOf(x)) + '</span>') + '<div class="todo-main"><b>' + esc(title) + '</b><small class="num">' + esc(sub.join(' · ')) + '</small></div>' +
+        '<div class="todo-btns"><button class="btn small primary" type="button" data-confirm="' + esc(x.id) + '">' + ic('check') + yes + '</button><button class="btn small" type="button" data-reject="' + esc(x.id) + '">' + no + '</button></div></li>'
+    }
+    const many = isAdmin() && list.filter((x) => !isPay(x) || toOf(x) === me || x.got).length > 1
+    box.innerHTML = '<div class="todo-head"><h2>To confirm <span class="n">' + list.length + '</span></h2>' + (many ? '<button class="link-btn" type="button" data-confirm-all>Approve all</button>' : '') + '</div>' +
+      '<p class="note">' + (isAdmin() ? 'Nothing counts in the balances until you approve it. A payment also needs its receiver.' : 'A payment counts once you confirm it and ' + esc(ADMIN) + ' approves it.') + '</p><ul class="todo">' + list.map(li).join('') + '</ul>'
+  }
+  // the Spend tab's count, and news when something new waits for you
+  let todoDot = null
+  function syncTodoBadge(list, me) {
+    const tab = $('.tabbar a[href="#spend"]')
+    if (tab && !todoDot) { todoDot = document.createElement('span'); todoDot.className = 'tab-new'; tab.appendChild(todoDot) }
+    if (todoDot) { todoDot.hidden = !list.length; todoDot.textContent = list.length }
+    if (tab) tab.setAttribute('aria-label', 'Spend' + (list.length ? ', ' + list.length + ' to confirm' : ''))
+    const seen = new Set(store.get('todoSeen', [])), fresh = list.filter((x) => !seen.has(x.id))
+    store.set('todoSeen', list.map((x) => x.id))
+    if (!fresh.length || !me) return
+    const x = fresh[0], pay = isPay(x)
+    const text = (pay && toOf(x) === me ? x.paid + ' says they paid you ' + orig(x) + '. Did you get it?' : (pay ? x.paid + ' paid ' + toOf(x) + ' ' + orig(x) : (x.by || 'Someone') + ' added ' + x.what + ', ' + orig(x)) + '. It needs your approval.') + (fresh.length > 1 ? ' (+' + (fresh.length - 1) + ' more)' : '')
+    newsNext = { text, to: 'spend' }
+    if (!newsTimer) { newsTimer = setTimeout(function wait() { newsTimer = 0; if (!newsNext) return; if (Date.now() < holdNews || document.querySelector('#spend-sheet[open]')) { newsTimer = setTimeout(wait, 1000); return } const n = newsNext; newsNext = null; toast(n.text, { label: 'Show', run: () => { $('#toast').hidden = true; location.hash = n.to; requestAnimationFrame(() => $('#spend-todo')?.scrollIntoView({ block: 'start' })) } }, true) }, 300) }
+  }
+  async function confirmRow(id, yes) {
+    const me = meOf(), x = rows.find((y) => y.id === id)
+    if (!me || !x) return
+    try {
+      applyShared(await post({ name: me, [yes ? 'confirm' : 'reject']: id }))
+      toast(yes ? (isPay(x) && toOf(x) === me && !isAdmin() ? 'Confirmed. It counts once ' + ADMIN + ' approves it.' : counts(rows.find((y) => y.id === id) || {}) ? 'Approved: it counts now' : 'Approved. It counts once ' + toOf(x) + ' confirms it.') : isPay(x) && toOf(x) === me ? 'Marked as not received' : 'Rejected', undefined, true) // news must not cover it
+    } catch (e) { toast(e.status === 403 || e.status === 404 ? e.message : navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
+  }
   // the top card: who you are (asked once), what you owe or get back, and your payments to settle
   function renderMe(me, b, moves) {
     const box = $('#spend-me')
@@ -1734,7 +1832,7 @@
   function rowOf(x, me, withDay) {
     const pay = isPay(x), parts = partsOf(x), cat = pay ? 'pay' : catOf(x), split = x.split || []
     const title = pay ? you(x.paid, me, true) + ' paid ' + you(split[0], me) : x.what
-    const who = whoOf(PEOPLE.filter((p) => split.includes(p)), me)
+    const who = whoOf(PEOPLE.filter((p) => split.includes(p)), me), wait = waitOf(x, me)
     let mine = ''
     if (me && !pay) {
       const total = parts.reduce((a, [, c]) => a + c, 0), part = (parts.find(([p]) => p === me) || [])[1] || 0
@@ -1744,8 +1842,8 @@
     // the amount in the currency you chose (Show amounts in), and the original under it when it was another one
     const shown = x.cur === showCur ? orig(x) : '≈' + money(centsOf(x))
     const under = x.cur === showCur ? '' : '<small class="x-orig">' + esc(orig(x)) + '</small>'
-    return '<button class="xrow" type="button" data-spend-id="' + esc(x.id) + '"><span class="x-ic c-' + cat + '">' + ic(cat) + '</span>' +
-      '<span class="x-main"><b>' + esc(title) + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small></span>' +
+    return '<button class="xrow' + (counts(x) ? '' : ' waiting') + '" type="button" data-spend-id="' + esc(x.id) + '"><span class="x-ic c-' + cat + '">' + ic(cat) + '</span>' +
+      '<span class="x-main"><b>' + esc(title) + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + (wait ? '<span class="' + (x.no ? 'said-no' : 'wait') + '">' + esc(wait) + '</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small></span>' +
       '<span class="x-amt"><b class="num">' + esc(shown) + '</b>' + under + mine + '</span></button>'
   }
   // the expenses by day, newest first, with each day's total (payments are not spending)
@@ -1769,7 +1867,7 @@
       return
     }
     const dayTotal = {}
-    rows.forEach((x) => { if (!isPay(x)) dayTotal[x.date] = (dayTotal[x.date] || 0) + centsOf(x) })
+    rows.forEach((x) => { if (!isPay(x) && counts(x)) dayTotal[x.date] = (dayTotal[x.date] || 0) + centsOf(x) })
     let day = '', html = ''
     for (const x of shown) {
       if (x.date !== day) html += (day ? '</div>' : '') + '<h3 class="day-h"><span>' + esc(dayWord(day = x.date)) + '</span>' + (dayTotal[day] ? '<span class="num">' + esc(money(dayTotal[day])) + '</span>' : '') + '</h3><div class="day-rows">'
@@ -1804,8 +1902,8 @@
   }
   const cap1 = (s) => s.charAt(0).toUpperCase() + s.slice(1)
   function renderSpendStats(b) {
-    const box = $('#spend-stats'), ex = rows.filter((x) => !isPay(x))
-    if (!ex.length) { box.innerHTML = '<div class="spend-empty">' + ic('other') + '<p>No expenses yet</p></div>'; return }
+    const box = $('#spend-stats'), ex = rows.filter((x) => !isPay(x) && counts(x))
+    if (!ex.length) { box.innerHTML = '<div class="spend-empty">' + ic('other') + '<p>' + (rows.some((x) => !isPay(x)) ? 'No approved expenses yet' : 'No expenses yet') + '</p></div>'; return }
     const total = ex.reduce((a, x) => a + centsOf(x), 0)
     const byCat = {}, byDay = {}
     ex.forEach((x) => { const c = catOf(x), v = centsOf(x); byCat[c] = (byCat[c] || 0) + v; byDay[x.date] = (byDay[x.date] || 0) + v })
@@ -1844,7 +1942,8 @@
     try {
       const j = await post({ name: me, spend: x }, 15000)
       applyShared(j)
-      toast(you(from, me, true) + ' paid ' + you(to, me) + ' ' + amt(p.amount, p.cur), j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
+      const need = [to, isAdmin() ? '' : ADMIN].filter((n, i, a) => n && a.indexOf(n) === i).join(' and ')
+      toast('Sent: ' + amt(p.amount, p.cur) + ' to ' + to + '. It counts once ' + need + ' confirm' + (need.includes(' and ') ? '' : 's') + '.', j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
     } catch (e) {
       if (e.status >= 400 && e.status < 500) toast(e.message || 'Could not save it.')
       else keepOnPhone(me, x, 'Saved on this phone. It goes to the group later.')
@@ -1966,6 +2065,8 @@
     fx('#sp-paid-l').textContent = pay ? 'From' : 'Paid by'
     fx('#sp-paid-val').innerHTML = av(st.paid) + '<b>' + esc(you(st.paid, me, true)) + '</b>'
     fx('#sp-paid-row').setAttribute('aria-expanded', String(!fx('#sp-paid-box').hidden))
+    fx('#sp-paid-row').disabled = pay && !isAdmin() // a payment is from you: only the admin adds one for someone else
+    if (pay && !isAdmin()) fx('#sp-paid-box').hidden = true
     $$('[data-paid]', form).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.paid === st.paid)))
     $$('[data-to]', form).forEach((b) => { b.setAttribute('aria-pressed', String(b.dataset.to === st.to)); b.disabled = b.dataset.to === st.paid })
     // the category: a tile by What was it (guessed from the words until someone picks one); a tap opens the 8
@@ -2107,6 +2208,7 @@
       if (d.kind) {
         if (d.kind === 'pay' && st.kind !== 'pay') st.curBefore = st.cur
         st.kind = d.kind
+        if (st.kind === 'pay' && !isAdmin()) { st.paid = meOf(); if (st.to === st.paid) st.to = '' }
         if (st.kind === 'pay') prefillPay()
         else if (st.exact && !st.typed) { fx('#sp-amount').value = ''; st.exact = null; st.cur = st.curBefore || st.cur; st.rate = midOf(st.cur) }
         syncSheet(true); return
@@ -2239,7 +2341,13 @@
         if (!voterName() || (was && same(voterName(), was))) store.set('voterName', d.me) // filled in here: it follows
         store.set('spendMe', d.me); picking = false; renderSpend()
       }
-      else if ('meChange' in d) { picking = true; renderSpend() }
+      else if ('meChange' in d) { if (store.get('guideName', '') && $('#sign-out')) $('#sign-out').click(); else { picking = true; renderSpend() } }
+      else if (d.confirm) confirmRow(d.confirm, true)
+      else if (d.reject) confirmRow(d.reject, false)
+      else if ('confirmAll' in d) {
+        const me = meOf(), ids = todoOf(me).filter((x) => !isPay(x) || toOf(x) === me || x.got).map((x) => x.id)
+        ;(async () => { let n = 0; for (const id of ids) { try { applyShared(await post({ name: me, confirm: id })); n++ } catch { break } } toast(n === ids.length ? 'Approved ' + n : 'Approved ' + n + ' of ' + ids.length + '. Try the rest again.') })()
+      }
       else if (d.settleFrom) settle(d.settleFrom, d.settleTo, Number(d.cents))
       else if (d.payFrom) openSheet(null, 'pay', { from: d.payFrom, to: d.payTo, cents: Number(d.cents) })
       else if (d.nextPaid) openSheet(null, 'spend', { paid: d.nextPaid })
@@ -2248,15 +2356,16 @@
       else if (d.filterPerson) { filter = 'p:' + d.filterPerson; renderList(meOf()); setPane('list', true); $('#spend-seg').scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }) }
       else if (d.paneGo) { setPane(d.paneGo, true); $('#spend-seg').scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }) }
       else if (d.spendId) {
-        const x = rows.find((y) => y.id === d.spendId)
-        if (x && meOf()) openSheet(x)
+        const x = rows.find((y) => y.id === d.spendId), me = meOf()
+        if (x && me && !mayChange(x, me)) toast([waitOf(x, me) || 'Approved', (isPay(x) ? 'Only ' + x.paid : 'Only ' + [...new Set([x.by, x.paid].filter(Boolean))].join(', ')) + ' or ' + ADMIN + ' can change it'].join('. ') + '.')
+        else if (x && me) openSheet(x)
         else { const card = $('#spend-me'); card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' }); card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash') }
       }
       else if (t.classList.contains('bal-row')) { const more = t.nextElementSibling, open = t.getAttribute('aria-expanded') !== 'true'; t.setAttribute('aria-expanded', String(open)); more.hidden = !open }
     })
     // Share as text: the share sheet on a phone, else copied
     $('#spend-copy').addEventListener('click', async () => {
-      const b = balancesOf(rows), moves = settleUp(b)
+      const b = balancesOf(rows.filter(counts)), moves = settleUp(b)
       const text = ['Spending, Phuket trip', ...rows.map((x) => [dayWord(x.date), isPay(x) ? x.paid + ' paid ' + (x.split || [])[0] : x.what, orig(x), isPay(x) ? '' : x.paid + ' paid', isPay(x) ? '' : whoOf(PEOPLE.filter((p) => (x.split || []).includes(p)), '')].filter(Boolean).join(' · ')), '',
         'Balances:', ...PEOPLE.map((p) => p + ': ' + (evenOf(p, b, moves) ? 'even' : (b[p].net > 0 ? 'gets back ' : 'owes ') + money(Math.abs(b[p].net)))), '',
         'Settle up:', ...moves.map((m) => m.from + ' pays ' + m.to + ' ' + money(m.cents))].join('\n')
@@ -2274,7 +2383,7 @@
   const SAID = { visit: 'opened the guide', view: 'opened', card: 'looked at', map: 'opened the map of', share: 'shared', photos: 'browsed the photos of', ...DID }
   function itemLabel(e, x) {
     if (e === 'visit') return ''
-    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Essentials', apps: 'Apps', notes: 'Notes', spend: 'Spend', stats: 'Stats' }[x] || x) + ' tab'
+    if (e === 'view') return ({ home: 'Trip', events: 'Music', places: 'Places', areas: 'Areas', stay: 'Stay', money: 'Money', info: 'Essentials', apps: 'Apps', notes: 'Notes', spend: 'Spend', stats: 'Stats', admin: 'Admin' }[x] || x) + ' tab'
     const id = String(x || '').replace(/^mini:/, '').replace(/^(ht|ev|pl|mx):/, '$1-').replace(/^(hotel|event|place|money):/, (m, k) => ({ hotel: 'ht-', event: 'ev-', place: 'pl-', money: 'mx-' }[k]))
     const el = document.getElementById(id)
     return x === 'all' ? 'Group notes' : el ? el.dataset.name || el.querySelector('h2, h3')?.textContent || id : String(x || '')
@@ -2284,15 +2393,10 @@
     if (!canVote) { box.innerHTML = '<p class="note">The stats are on the website only.</p>'; return }
     box.innerHTML = '<p class="note">Loading…</p>'
     try {
-      // a password set as STATS_KEY on Vercel: asked once, kept on this phone
-      let r = await fetch(D.votes + '?stats=1&key=' + encodeURIComponent(store.get('statsKey', '')), { cache: 'no-store', headers: keyHead() })
+      // only the admin: anyone else gets 403
+      const r = await fetch(D.votes + '?stats=1', { cache: 'no-store', headers: keyHead() })
       if (r.status === 401) { box.innerHTML = ''; return showGate() }
-      if (r.status === 403) {
-        box.innerHTML = '<form class="myform" id="stats-key-form"><label for="stats-key">Password for the stats<input id="stats-key" type="password" autocomplete="current-password" required></label><button class="btn primary" type="submit">Show the stats</button></form>'
-        $('#stats-key-form').addEventListener('submit', (e) => { e.preventDefault(); store.set('statsKey', $('#stats-key').value); renderStats() })
-        $('#stats-key').focus()
-        return
-      }
+      if (r.status === 403) { box.innerHTML = '<p class="note">Only ' + esc(ADMIN) + ' can see the stats.</p>'; return }
       if (!r.ok) throw new Error('stats ' + r.status)
       const { visitors = {}, log = [] } = await r.json()
       const kind = (d) => (visitors[d] && visitors[d].kind) || 'device'
@@ -2320,6 +2424,121 @@
         '<p class="note">Counted on the website since the stats were added (17 Oct 2026). Phones show up by the name used to vote or add a note.</p>'
     } catch { box.innerHTML = '<p class="note">' + (navigator.onLine ? 'Could not load the stats. Try again in a minute.' : 'The stats need internet.') + '</p>' }
   }
+
+  /* ---------- Admin: the activity log (website only, the admin): who did what, when, from which IP, place and phone ---------- */
+  const ADM_SAID = { open: 'opened the guide', visit: 'opened the guide at', view: 'opened the tab', card: 'looked at', map: 'opened on the map', photos: 'browsed the photos of', share: 'shared', tap: 'tapped', link: 'opened the link', search: 'searched for',
+    signin: 'signed in', 'signin-fail': 'failed to sign in: wrong password', denied: 'was refused', like: 'liked', skip: 'skipped', unvote: 'took back a vote on', save: 'saved', unsave: 'took off the saved list', hide: 'hid', show: 'brought back',
+    move: 'moved', order: 'reordered the villas', reset: 'reset the place of', note: 'wrote a note on', unnote: 'deleted a note', spend: 'added an expense:', respend: 'changed an expense:', pay: 'added a payment:', repay: 'changed a payment:',
+    unspend: 'deleted', confirm: 'confirmed', reject: 'rejected', bad: 'sent something broken' }
+  const ADM_KINDS = [['all', 'All'], ['money', 'Money'], ['votes', 'Votes & saves'], ['notes', 'Notes'], ['browse', 'Browsing'], ['signin', 'Sign-ins']]
+  const admKind = (e) => (/^((re|un)?(spend|pay)|confirm|reject)$/.test(e) ? 'money' : /^(like|skip|unvote|save|unsave|hide|show|move|order|reset)$/.test(e) ? 'votes' : /^(un)?note$/.test(e) ? 'notes' : /^(signin|signin-fail|denied)$/.test(e) ? 'signin' : 'browse')
+  // a browser string in words: the phone and its system, and the browser (or the app the link was opened in)
+  function uaWords(ua) {
+    ua = String(ua || '')
+    const m = (re) => (re.exec(ua) || [])[1] || ''
+    const model = m(/Android [\d.]+; ([^;)]+)/).replace(/ Build.*$/, '')
+    const os = /iPad/.test(ua) ? 'iPad' : /iPhone/.test(ua) ? 'iPhone' + (m(/OS (\d+[_\d]*)/) ? ', iOS ' + m(/OS (\d+[_\d]*)/).replace(/_/g, '.') : '')
+      : /Android/.test(ua) ? 'Android ' + m(/Android ([\d.]+)/) + (model && !/^(K|wv)$/.test(model) ? ', ' + model : '')
+        : /Mac OS X/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : /CrOS/.test(ua) ? 'Chromebook' : /Linux/.test(ua) ? 'Linux' : ua ? 'Other device' : ''
+    const br = /Instagram/.test(ua) ? 'in Instagram' : /FBAN|FBAV|FB_IAB/.test(ua) ? 'in Facebook' : /Telegram/.test(ua) ? 'in Telegram' : /WhatsApp/.test(ua) ? 'in WhatsApp' : /Line\//.test(ua) ? 'in LINE'
+      : /HeadlessChrome/.test(ua) ? 'headless Chrome (a bot or a test)' : /CriOS/.test(ua) ? 'Chrome' : /FxiOS|Firefox\//.test(ua) ? 'Firefox' : /SamsungBrowser/.test(ua) ? 'Samsung Internet' : /Edg(A|iOS)?\//.test(ua) ? 'Edge'
+        : /OPR\/|Opera/.test(ua) ? 'Opera' : /YaBrowser/.test(ua) ? 'Yandex' : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : /bot|crawl|spider|preview/i.test(ua) ? 'a bot' : ''
+    return [os, br].filter(Boolean).join(' · ')
+  }
+  const placeOf = (x) => [x.ci, x.r, x.c].filter(Boolean).join(', ')
+  const localDay = (t) => { const d = new Date(t); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0') }
+  let adm = null // the loaded log: { rows, visitors, total, kind, who, q, tab }
+  async function renderAdmin(more) {
+    const box = $('#admin-body'); if (!box) return
+    if (!canVote) { box.innerHTML = '<p class="note">The log is on the website only.</p>'; return }
+    if (!isAdmin()) { box.innerHTML = '<p class="note">Only ' + esc(ADMIN) + ' can see the log.</p>'; return }
+    if (!more) box.innerHTML = '<p class="note">Loading…</p>'
+    try {
+      const r = await fetch(D.votes + '?audit=1&n=1000&from=' + (more && adm ? adm.rows.length : 0), { cache: 'no-store', headers: keyHead() })
+      if (r.status === 401) { box.innerHTML = ''; return showGate() }
+      if (r.status === 403) { box.innerHTML = '<p class="note">Only ' + esc(ADMIN) + ' can see the log.</p>'; return }
+      if (!r.ok) throw new Error('audit ' + r.status)
+      const j = await r.json()
+      if (!more || !adm) adm = { rows: [], visitors: {}, total: 0, kind: (adm && adm.kind) || 'all', who: (adm && adm.who) || '', q: (adm && adm.q) || '', tab: (adm && adm.tab) || 'log' }
+      adm.rows = adm.rows.concat(j.audit || [])
+      adm.total = j.total || adm.rows.length
+      if (j.visitors) adm.visitors = j.visitors
+      drawAdmin()
+    } catch { if (!more) box.innerHTML = '<p class="note">' + (navigator.onLine ? 'Could not load the log. Try again in a minute.' : 'The log needs internet.') + '</p>' }
+  }
+  function drawAdmin() {
+    const box = $('#admin-body'), a = adm
+    const today = localDay(Date.now())
+    const vis = (x) => a.visitors[x.d] || {}
+    const nameOf = (x) => x.n || vis(x).n || ''
+    const devOf = (x) => uaWords(x.ua || vis(x).ua)
+    // per person: actions, last seen, phones, IPs, places, failed sign-ins
+    const people = {}
+    for (const x of a.rows) {
+      const n = nameOf(x) || 'Unknown'
+      const p = (people[n] ||= { n, count: 0, last: 0, devs: new Set(), ips: new Set(), places: new Set(), fails: 0 })
+      p.count++; p.last = Math.max(p.last, x.t || 0)
+      if (x.d) p.devs.add(x.d)
+      if (x.ip) p.ips.add(x.ip)
+      if (placeOf(x)) p.places.add(placeOf(x))
+      if (x.e === 'signin-fail') p.fails++
+    }
+    const plist = Object.values(people).sort((p, q) => q.last - p.last)
+    const todayRows = a.rows.filter((x) => localDay(x.t) === today)
+    const tiles = [['Actions today', todayRows.length], ['People today', new Set(todayRows.map((x) => nameOf(x) || x.d || x.ip)).size], ['Phones', Object.keys(a.visitors).length], ['Failed sign-ins', a.rows.filter((x) => x.e === 'signin-fail').length]]
+    const q = a.q.toLowerCase()
+    const shown = a.rows.filter((x) => (a.kind === 'all' || admKind(x.e) === a.kind) && (!a.who || (nameOf(x) || 'Unknown') === a.who) &&
+      (!q || [nameOf(x), x.e, ADM_SAID[x.e], x.x, x.ip, placeOf(x), x.ua, x.d].join(' ').toLowerCase().includes(q)))
+    // the item in words: a card, villa or tab by its name; a tap, link, search or expense as it was logged
+    const what = (x) => { const raw = /^(tap|link|search|signin|signin-fail|denied|open|bad|confirm|reject|(re|un)?(spend|pay))$/.test(x.e); const label = raw ? x.x || '' : itemLabel(x.e, x.x); return (ADM_SAID[x.e] || x.e) + (label ? ' ' + label : '') }
+    const row = (x, k) => {
+      const i = x.info || vis(x).info || {}, n = nameOf(x)
+      const facts = [
+        ['When', new Date(x.t).toLocaleString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit' })],
+        ['Name', n ? n + (x.v ? ' (signed in)' : ' (as given, not checked)') : 'Not signed in'],
+        ['IP', x.ip], ['Place', placeOf(x)], ['Coordinates', x.la && x.lo ? x.la + ', ' + x.lo : ''],
+        ['Time zone', [x.tz, i.tz && i.tz !== x.tz ? 'phone set to ' + i.tz : ''].filter(Boolean).join(' · ')],
+        ['Device', devOf(x)], ['Screen', i.sw ? i.sw + '×' + i.sh + (i.dpr ? ' at ' + i.dpr + 'x' : '') + (i.vw ? ', window ' + i.vw + '×' + i.vh : '') : ''],
+        ['Phone', [i.plat, i.mob === true ? 'mobile' : '', i.touch ? 'touch' : '', i.mem ? i.mem + ' GB memory' : '', i.cores ? i.cores + ' cores' : '', i.pwa ? 'opened from the home screen' : '', i.conn ? i.conn + ' connection' : '', i.theme ? i.theme + ' theme' : ''].filter(Boolean).join(', ')],
+        ['Languages', [x.lang, i.langs].filter(Boolean).join(' · ')], ['Phone id', x.d], ['Answer', x.s ? String(x.s) : ''], ['From page', x.ref], ['Browser', x.ua],
+      ].filter(([, v]) => v)
+      const map = x.la && x.lo ? '<a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(x.la + ',' + x.lo) + '">Show the place on Google Maps</a>' : ''
+      return '<li class="adm-row k-' + admKind(x.e) + (x.e === 'signin-fail' || x.s >= 400 ? ' bad' : '') + '"><button class="adm-sum" type="button" data-adm-row="' + k + '" aria-expanded="false">' +
+        '<time>' + esc(new Date(x.t).toLocaleTimeString('en-GB')) + '</time>' + (PEOPLE.includes(n) ? av(n) : '<span class="av unknown" aria-hidden="true">?</span>') +
+        '<span class="adm-what"><span><b>' + esc(n || 'Someone') + '</b> ' + esc(what(x)) + '</span><small>' + esc([placeOf(x), devOf(x), x.ip].filter(Boolean).join(' · ')) + '</small></span></button>' +
+        '<div class="adm-more" hidden><dl class="facts">' + facts.map(([k2, v]) => '<dt>' + esc(k2) + '</dt><dd>' + esc(v) + '</dd>').join('') + '</dl>' + map + '</div></li>'
+    }
+    let html = '', d = ''
+    shown.slice(0, 600).forEach((x, k) => { if (localDay(x.t) !== d) { d = localDay(x.t); html += '<li class="adm-day">' + esc(dayWord(d)) + '</li>' } html += row(x, k) })
+    const avOf = (n) => (PEOPLE.includes(n) ? av(n) : '<span class="av unknown" aria-hidden="true">?</span>')
+    const personCard = (p) => '<button class="adm-person" type="button" data-adm-who="' + esc(p.n) + '" aria-pressed="' + (a.who === p.n) + '">' + avOf(p.n) +
+      '<span><b>' + esc(p.n) + '</b><small>Last seen ' + esc(when(p.last)) + ' · ' + p.count + (p.count === 1 ? ' action' : ' actions') + '</small><small>' +
+      esc([p.devs.size + (p.devs.size === 1 ? ' phone' : ' phones'), p.ips.size + (p.ips.size === 1 ? ' IP' : ' IPs'), [...p.places].slice(0, 2).join('; '), p.fails ? p.fails + ' failed sign-ins' : ''].filter(Boolean).join(' · ')) + '</small></span></button>'
+    const phones = Object.entries(a.visitors).sort((x, y) => (y[1].last || 0) - (x[1].last || 0)).map(([id, v]) => '<tr><td><b>' + esc(v.n || 'Unknown') + '</b><small>' + esc(id) + '</small></td><td>' + esc(uaWords(v.ua)) +
+      (v.info && v.info.sw ? '<small>' + esc(v.info.sw + '×' + v.info.sh + (v.info.tz ? ' · ' + v.info.tz : '')) + '</small>' : '') + '</td><td>' + esc(v.ip || '') + '<small>' + esc(v.place || '') + '</small></td><td>' + esc(when(v.last || v.first)) + '<small>' + (v.visits || 0) + ' visits</small></td></tr>').join('')
+    box.innerHTML = '<div class="stats-tiles">' + tiles.map(([k, v]) => '<div><b>' + esc(String(v)) + '</b><span>' + esc(k) + '</span></div>').join('') + '</div>' +
+      '<div class="seg adm-seg" role="group" aria-label="Show">' + [['log', 'Log'], ['people', 'People'], ['phones', 'Phones']].map(([v, t]) => '<button type="button" data-adm-tab="' + v + '" aria-pressed="' + (a.tab === v) + '">' + t + '</button>').join('') + '</div>' +
+      (a.tab === 'people' ? '<div class="adm-people">' + plist.map(personCard).join('') + '</div><p class="note">Tap someone to see only what they did.</p>'
+        : a.tab === 'phones' ? '<div class="stats-table"><table><thead><tr><th>Who</th><th>Device</th><th>IP and place</th><th>Last seen</th></tr></thead><tbody>' + (phones || '<tr><td colspan="4">Nobody yet.</td></tr>') + '</tbody></table></div>'
+          : '<div class="chips" role="toolbar" aria-label="Filter the log">' + ADM_KINDS.map(([v, t]) => '<button class="chip" type="button" data-adm-kind="' + v + '" aria-pressed="' + (a.kind === v) + '">' + esc(t) + ' <span class="n">' + (v === 'all' ? a.rows.length : a.rows.filter((x) => admKind(x.e) === v).length) + '</span></button>').join('') + '</div>' +
+            '<div class="adm-filter"><select id="adm-who" aria-label="Person"><option value="">Everyone</option>' + plist.map((p) => '<option' + (a.who === p.n ? ' selected' : '') + '>' + esc(p.n) + '</option>').join('') + '</select>' +
+            '<input class="search" type="search" id="adm-q" placeholder="Search names, IPs, places, items" value="' + esc(a.q) + '" aria-label="Search the log"></div>' +
+            '<ul class="adm-log">' + (html || '<li class="adm-day">Nothing matches.</li>') + '</ul>' +
+            (shown.length > 600 ? '<p class="note">The newest 600 of ' + shown.length + ' are shown. The filters narrow it down.</p>' : '') +
+            (a.rows.length < a.total ? '<button class="btn" type="button" data-adm-more>Load older (' + (a.total - a.rows.length) + ' more)</button>' : '<p class="note">That is everything: ' + a.total + (a.total === 1 ? ' entry' : ' entries') + '. The log keeps the newest 20,000.</p>'))
+    const qi = $('#adm-q')
+    if (qi) qi.addEventListener('input', () => { clearTimeout(qi.timer); qi.timer = setTimeout(() => { a.q = qi.value.trim(); const at = qi.selectionStart; drawAdmin(); const n = $('#adm-q'); if (n) { n.focus(); n.setSelectionRange(at, at) } }, 250) })
+    $('#adm-who')?.addEventListener('change', (e) => { a.who = e.target.value; drawAdmin() })
+  }
+  document.getElementById('admin')?.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b || !adm) return
+    const d = b.dataset
+    if (d.admRow != null) { const more = b.nextElementSibling, open = b.getAttribute('aria-expanded') !== 'true'; b.setAttribute('aria-expanded', String(open)); more.hidden = !open }
+    else if (d.admKind) { adm.kind = d.admKind; drawAdmin() }
+    else if (d.admTab) { adm.tab = d.admTab; drawAdmin() }
+    else if (d.admWho) { adm.who = adm.who === d.admWho ? '' : d.admWho; adm.tab = 'log'; drawAdmin() }
+    else if ('admMore' in d) { b.disabled = true; b.textContent = 'Loading…'; renderAdmin(true) }
+  })
 
   /* ---------- Share a villa: the phone's share sheet, or a copy to paste in a chat ---------- */
   document.addEventListener('click', async (e) => {

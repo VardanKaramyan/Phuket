@@ -82,6 +82,22 @@ const PASSWORD = 'test-pass55'
 process.env.GUIDE_PASSWORD = PASSWORD
 const keyed = (f) => (req) => req.headers.has('x-guide-key') ? f(req) : f(new Request(req, { headers: { ...Object.fromEntries(req.headers), 'x-guide-key': PASSWORD } }))
 const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
+// the admin (Vardan K) signs in with his own password: a test one here (ADMIN_PASSWORD replaces the real one)
+const ADMIN_PASS = 'admin-test-9'
+process.env.ADMIN_PASSWORD = ADMIN_PASS
+// a call from a signed-in phone: the name in X-Guide-Name and that person's password
+const as = async (name, body, q = '', extra = {}) => {
+  const r = await rawApi[body ? 'POST' : 'GET'](new Request('http://x/api/votes' + q, { method: body ? 'POST' : 'GET', headers: { 'Content-Type': 'application/json', 'x-guide-key': name === 'Vardan K' ? ADMIN_PASS : PASSWORD, 'x-guide-name': encodeURIComponent(name), ...extra }, body: body ? JSON.stringify(body) : undefined }))
+  return { status: r.status, json: await r.json().catch(() => null) }
+}
+// everyone confirms: each payment's receiver says they got it, and the admin approves every row
+async function approveAll() {
+  for (const x of (await as('Vardan K')).json.spend) {
+    if (x.no) continue
+    if (x.kind === 'pay' && !x.got) await as(x.split[0], { confirm: x.id })
+    if (!x.ok) await as('Vardan K', { confirm: x.id })
+  }
+}
 {
   const raw = (q, body, key) => rawApi[body ? 'POST' : 'GET'](new Request('http://x/api/votes' + q, { method: body ? 'POST' : 'GET', headers: { 'Content-Type': 'application/json', ...(key ? { 'x-guide-key': key } : {}) }, body: body && JSON.stringify(body) }))
   const s = [(await raw('')).status, (await raw('', { item: 'ht:mouana', name: 'Ani', vote: 'like' }, 'nope')).status, (await raw('?auth=1', null, ' Test-Pass55 ')).status, (await raw('', { device: 'devnokey0001', track: [{ e: 'visit' }] })).status]
@@ -100,6 +116,29 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   const got = { a: j.votes['ht:a-villa']?.like.join(), b: j.votes['ht:b-villa']?.skip.join(), note: j.notes?.all?.[0]?.by, saved: j.saved?.['pl:big-buddha']?.by, c: v.votes?.['ht:c-villa']?.like.join() }
   check('old names: Vardan → Vardan K, Virt → Vardan H, Arshak → Artash, and a vote sent as Virt is Vardan H', JSON.stringify(got) === JSON.stringify({ a: 'Vardan K', b: 'Vardan H', note: 'Vardan K', saved: 'Artash', c: 'Vardan H' }), JSON.stringify(got))
   check('the server and tools/trip.mjs have the same other names', JSON.stringify(fresh.ALIASES) === JSON.stringify(TRIP.aliases), JSON.stringify(fresh.ALIASES))
+  check('the server and tools/trip.mjs have the same admin', fresh.ADMIN === TRIP.admin && TRIP.people.includes(TRIP.admin), String(fresh.ADMIN))
+  hashes.clear(); strings.clear(); lists.clear()
+}
+{
+  // once (23 Oct 2026: nobody had really paid): every payment is deleted; the expenses stay and wait for the admin
+  const row = (o) => JSON.stringify({ what: '', amount: 300, cur: 'THB', paid: 'Mes', date: '2027-01-15', n: 'Mes', t: 1, ...o })
+  hashes.set('guide:spend', new Map([['p1', row({ kind: 'pay', split: ['Hovo'] })], ['e1', row({ what: 'Dinner', split: ['Mes', 'Hovo'] })]]))
+  const fresh = await import(mod + '?resetpays')
+  const j = await (await keyed(fresh.GET)(new Request('http://x/api/votes'))).json()
+  hashes.get('guide:spend').set('p2', row({ kind: 'pay', split: ['Lara'] }))
+  const again = await import(mod + '?resetpays2')
+  const j2 = await (await keyed(again.GET)(new Request('http://x/api/votes'))).json()
+  check('once: the payments are deleted, the expenses stay and wait for the admin', j.spend.map((x) => x.id).join() === 'e1' && !j.spend[0].ok && j2.spend.some((x) => x.id === 'p2'), JSON.stringify({ first: j.spend, second: j2.spend.map((x) => x.id) }))
+  hashes.clear(); strings.clear(); lists.clear()
+}
+{
+  // passwords: Vardan K only with his own, nobody else with his; the sign-in says who is the admin
+  const auth = async (name, key) => { const r = await rawApi.GET(new Request('http://x/api/votes?auth=1', { headers: { 'x-guide-key': key, 'x-guide-name': encodeURIComponent(name) } })); return r.status + (r.ok ? ':' + (await r.json()).admin : '') }
+  const got = [await auth('Vardan K', PASSWORD), await auth('Vardan K', ' ' + ADMIN_PASS.toUpperCase() + ' '), await auth('Vardan', ADMIN_PASS), await auth('Vahik', ADMIN_PASS), await auth('Vahik', PASSWORD)]
+  check('Vardan K signs in only with his own password (any case), the others only with the group\'s', got.join() === '401,200:true,200:true,401,200:false', got.join())
+  // a name outside the group in the header does not let the body's name be Vardan K with the group's password
+  const spoof = await rawApi.POST(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-guide-key': PASSWORD, 'x-guide-name': 'Bob' }, body: JSON.stringify({ name: 'vardan k', item: 'pl:big-buddha', vote: 'like' }) }))
+  check('nobody acts as Vardan K without his password, whatever the header says', spoof.status === 401, String(spoof.status))
   hashes.clear(); strings.clear(); lists.clear()
 }
 {
@@ -191,15 +230,29 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   r = await call(api, 'POST', { name: 'Ani', device: 'devani000001', spend: { what: 'Dinner at the market', amount: 2400, cur: 'THB', paid: 'Hovo', split: TRIP.people, date: '2027-01-14' } })
   const sp = r.json.spend?.[0]
   check('an expense is saved for everyone, with who added it, and is news', r.status === 200 && sp?.what === 'Dinner at the market' && sp.amount === 2400 && sp.paid === 'Hovo' && sp.split.length === 8 && sp.by === 'Ani' && r.json.recent?.[0]?.e === 'spend' && /Dinner at the market · 2,400 THB/.test(r.json.recent[0].x), JSON.stringify(sp))
-  r = await call(api, 'POST', { name: 'Gor', spend: { id: sp.id, what: 'Dinner at the market', amount: 2500, cur: 'THB', paid: 'Hovo', split: ['Lara', 'Hovo', 'Hovo'], date: '2027-01-14' } })
+  check('a new expense waits for the admin', !sp?.ok, JSON.stringify(sp))
+  const dinner = (o) => ({ id: sp.id, what: 'Dinner at the market', amount: 2500, cur: 'THB', paid: 'Hovo', split: ['Lara', 'Hovo', 'Hovo'], date: '2027-01-14', ...o })
+  r = await call(api, 'POST', { name: 'Gor', spend: dinner() })
+  check('someone else cannot change an expense, and hears who can', r.status === 403 && r.json.error === 'Only Ani, Hovo or Vardan K can change this', JSON.stringify(r.json))
+  r = await as('Hovo', { spend: dinner() })
   const sp2 = (r.json.spend || []).find((x) => x.id === sp.id)
-  check('anyone can change an expense: it keeps who added it and says who changed it', r.status === 200 && sp2?.amount === 2500 && sp2.split.join() === 'Hovo,Lara' && sp2.by === 'Ani' && sp2.editedBy === 'Gor' && r.json.spend.length === 1 && r.json.recent?.[0]?.e === 'respend', JSON.stringify(sp2))
+  check('who paid it can change it: it keeps who added it and says who changed it', r.status === 200 && sp2?.amount === 2500 && sp2.split.join() === 'Hovo,Lara' && sp2.by === 'Ani' && sp2.editedBy === 'Hovo' && r.json.spend.length === 1 && r.json.recent?.[0]?.e === 'respend', JSON.stringify(sp2))
+  r = await as('Mes', { confirm: sp.id })
+  check('only the admin approves an expense', r.status === 403 && r.json.error === 'Only Vardan K can approve expenses', JSON.stringify(r.json))
+  r = await as('Vardan K', { confirm: sp.id })
+  check('the admin approves it, and it is news', r.json.spend.find((x) => x.id === sp.id)?.ok?.by === 'Vardan K' && r.json.recent?.[0]?.e === 'approve', JSON.stringify(r.json.spend))
+  r = await as('Hovo', { spend: dinner({ amount: 2600 }) })
+  check('a change by anyone but the admin sends it back to waiting', r.status === 200 && !r.json.spend.find((x) => x.id === sp.id)?.ok, JSON.stringify(r.json.spend))
+  r = await as('Vardan K', { spend: dinner({ amount: 2500 }) })
+  check('a change by the admin is approved at once', r.json.spend.find((x) => x.id === sp.id)?.ok?.by === 'Vardan K', JSON.stringify(r.json.spend))
   for (const [bad, why] of [[{ paid: 'Nobody' }, 'a payer outside the group'], [{ split: [] }, 'an empty split'], [{ split: ['Hovo', 'Zed'] }, 'a split with someone outside the group'], [{ cur: 'EUR' }, 'another currency'], [{ amount: 0 }, 'a zero amount'], [{ what: 'x'.repeat(81) }, 'an 81-character description'], [{ date: 'soon' }, 'a bad date']]) {
     r = await call(api, 'POST', { name: 'Ani', spend: { what: 'Taxi', amount: 300, cur: 'THB', paid: 'Mes', split: ['Mes'], date: '2027-01-15', ...bad } })
     check('refused: ' + why, r.status === 400, String(r.status))
   }
   r = await call(api, 'POST', { name: 'Gor', deleteSpend: sp.id })
-  check('anyone can delete an expense, and it is news', r.status === 200 && !r.json.spend.length && r.json.recent?.[0]?.e === 'unspend', JSON.stringify(r.json.spend))
+  check('someone else cannot delete an expense', r.status === 403 && /can delete this/.test(r.json.error), JSON.stringify(r.json))
+  r = await call(api, 'POST', { name: 'Ani', deleteSpend: sp.id })
+  check('who added it can delete it, and it is news', r.status === 200 && !r.json.spend.length && r.json.recent?.[0]?.e === 'unspend', JSON.stringify(r.json.spend))
   // AED, the rate of the day and a category; newId: the id made on the phone, so the same expense sent twice is added once
   const villa = { what: 'Patong villa', amount: 22282.88, cur: 'AED', rate: 9.14, paid: 'Vardan K', split: TRIP.people, date: '2026-10-12', cat: 'stay', newId: 'abc12345xyz' }
   r = await call(api, 'POST', { name: 'Ani', spend: villa })
@@ -209,19 +262,46 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   r = await call(api, 'POST', { name: 'Ani', spend: villa })
   check('the same newId again adds nothing, and is no news', r.status === 200 && r.json.id === 'abc12345xyz' && r.json.spend.filter((x) => x.what === 'Patong villa').length === 1 && r.json.recent?.length === newsBefore && r.json.recent[0].e === 'spend', String(r.json.spend?.length))
   // a phone changed it before its first send got an answer: the same newId with other content is a change
-  r = await call(api, 'POST', { name: 'Gor', spend: { ...villa, amount: 22282.89 } })
+  r = await call(api, 'POST', { name: 'Ani', spend: { ...villa, amount: 22282.89 } })
   const v2 = (r.json.spend || []).filter((x) => x.what === 'Patong villa')
-  check('the same newId with other content is saved as a change', r.status === 200 && v2.length === 1 && v2[0].amount === 22282.89 && v2[0].by === 'Ani' && v2[0].editedBy === 'Gor' && r.json.recent?.[0]?.e === 'respend', JSON.stringify(v2))
-  // a payment: from one person to one other, news of its own
-  r = await call(api, 'POST', { name: 'Ani', spend: { kind: 'pay', what: '', amount: 300, cur: 'THB', paid: 'Artash', split: ['Hovo'], date: '2027-01-15' } })
-  check('a payment from one person to another is saved and is news', r.status === 200 && r.json.spend.some((x) => x.kind === 'pay' && x.paid === 'Artash' && x.split.join() === 'Hovo' && x.what === '') && r.json.recent?.[0]?.e === 'pay' && /Artash paid Hovo · 300 THB/.test(r.json.recent[0].x), JSON.stringify(r.json.recent?.[0]))
+  check('the same newId with other content is saved as a change', r.status === 200 && v2.length === 1 && v2[0].amount === 22282.89 && v2[0].by === 'Ani' && v2[0].editedBy === 'Ani' && r.json.recent?.[0]?.e === 'respend', JSON.stringify(v2))
+  // a payment: only from who made it; it counts once its receiver got it and the admin approved it
+  const pay = (o) => ({ kind: 'pay', what: '', amount: 300, cur: 'THB', paid: 'Artash', split: ['Hovo'], date: '2027-01-15', ...o })
+  r = await call(api, 'POST', { name: 'Ani', spend: pay() })
+  check('a payment only from who made it', r.status === 403 && r.json.error === 'You can only add a payment you made', JSON.stringify(r.json))
+  r = await as('Artash', { spend: pay() })
   const payRow = r.json.spend.find((x) => x.kind === 'pay')
-  r = await call(api, 'POST', { name: 'Ani', spend: { kind: 'pay', what: '', amount: 350.5, cur: 'THB', paid: 'Artash', split: ['Hovo'], date: '2027-01-15', id: payRow.id } })
+  check('a payment from one person to another is saved, waits for both, and is news', r.status === 200 && payRow?.paid === 'Artash' && payRow.split.join() === 'Hovo' && payRow.what === '' && !payRow.ok && !payRow.got && r.json.recent?.[0]?.e === 'pay' && /Artash paid Hovo · 300 THB/.test(r.json.recent[0].x), JSON.stringify(payRow))
+  r = await as('Artash', { spend: pay({ amount: 350.5, id: payRow.id }) })
   check('changing a payment is news about a payment, with its cents', r.status === 200 && r.json.recent?.[0]?.e === 'repay' && /Artash paid Hovo · 350.50 THB/.test(r.json.recent[0].x), JSON.stringify(r.json.recent?.[0]))
-  r = await call(api, 'POST', { name: 'Ani', deleteSpend: payRow.id })
+  const payNow = (j) => j.spend.find((x) => x.id === payRow.id) || {}
+  r = await as('Lara', { confirm: payRow.id })
+  const lara = r
+  r = await as('Hovo', { confirm: payRow.id })
+  const got = payNow(r.json)
+  r = await as('Vardan K', { confirm: payRow.id })
+  const both = payNow(r.json)
+  check('only the receiver or the admin confirms; the receiver\'s "got it" and the admin\'s approval are both kept', lara.status === 403 && lara.json.error === 'Only Hovo or Vardan K can confirm this payment' && got.got?.by === 'Hovo' && !got.ok && both.got?.by === 'Hovo' && both.ok?.by === 'Vardan K' && r.json.recent?.[0]?.e === 'approve', JSON.stringify({ lara: lara.json, got, both }))
+  r = await as('Hovo', { reject: payRow.id })
+  const no = payNow(r.json)
+  check('the receiver can say not received: it stops counting', no.no?.by === 'Hovo' && !no.ok && !no.got && r.json.recent?.[0]?.e === 'reject', JSON.stringify(no))
+  r = await as('Hovo', { deleteSpend: payRow.id })
+  check('only who paid (or the admin) deletes a payment', r.status === 403 && r.json.error === 'Only Artash or Vardan K can delete this', JSON.stringify(r.json))
+  r = await as('Artash', { deleteSpend: payRow.id })
   check('deleting a payment is news about a payment', r.status === 200 && r.json.recent?.[0]?.e === 'unpay', JSON.stringify(r.json.recent?.[0]))
-  r = await call(api, 'POST', { name: 'Ani', deleteSpend: payRow.id })
+  r = await as('Artash', { deleteSpend: payRow.id })
   check('deleting it again: someone deleted it', r.status === 404 && r.json.error === 'Someone deleted it', JSON.stringify(r.json))
+  // a payment to the admin: his one tap is both; his own expense counts at once; the signed-in name wins over the body's
+  r = await as('Mes', { spend: pay({ paid: 'Mes', split: ['Vardan K'], amount: 100 }) })
+  const toAdmin = r.json.spend.find((x) => x.kind === 'pay' && x.paid === 'Mes')
+  r = await as('Vardan K', { confirm: toAdmin.id })
+  const adminGot = r.json.spend.find((x) => x.id === toAdmin.id)
+  r = await as('Vardan K', { spend: { what: 'Fuel', amount: 500, cur: 'THB', paid: 'Mes', split: ['Mes', 'Lara'], date: '2027-01-15' } })
+  const fuel = r.json.spend.find((x) => x.what === 'Fuel')
+  r = await as('Mes', { item: 'pl:big-buddha', name: 'Lara', vote: 'like' })
+  check('a payment to the admin: one tap is both; his own expense is approved at once; the signed-in name is the name', adminGot?.got?.by === 'Vardan K' && adminGot.ok?.by === 'Vardan K' && fuel?.ok?.by === 'Vardan K' && r.json.votes['pl:big-buddha']?.like.join() === 'Mes', JSON.stringify({ adminGot, fuel, vote: r.json.votes['pl:big-buddha'] }))
+  for (const x of [toAdmin, fuel]) await as('Vardan K', { deleteSpend: x.id })
+  await as('Mes', { item: 'pl:big-buddha', vote: null })
   // an uneven split: weights (shares) or exact amounts; equal shares are an equal split
   const two = { amount: 1000, cur: 'THB', paid: 'Mes', split: ['Mes', 'Lara'], date: '2027-01-16' }
   r = await call(api, 'POST', { name: 'Ani', spend: { ...two, what: 'Boat by shares', shares: { Mes: 2, Lara: 1 } } })
@@ -254,16 +334,27 @@ const api = { ...rawApi, GET: keyed(rawApi.GET), POST: keyed(rawApi.POST) }
   r = await call(api, 'POST', { device: 'devani000001', name: 'Ani', track: [{ e: 'visit', x: '#stay' }, { e: 'view', x: 'stay' }, { e: 'share', x: 'ht:alisa-pool-villa' }] })
   check('tracked actions are saved', r.status === 200 && r.json.ok === true, JSON.stringify(r.json))
   await call(api, 'POST', { device: 'devani000001', track: [{ e: 'visit', x: '#home' }] })
-  const st = await (await api.GET(new Request('http://x/api/votes?stats=1'))).json()
+  const st = (await as('Vardan K', null, '?stats=1')).json
   const ani = st.visitors?.devani000001
   check('stats: visitors with visits and name, and the activity log', ani?.visits === 2 && ani.n === 'Ani' && st.log.some((x) => x.e === 'share' && x.d === 'devani000001') && st.log.some((x) => x.e === 'like'), JSON.stringify({ ani, log: st.log.length }))
   check('stats send the phone type, not the browser details', ani && !('ua' in ani) && typeof ani.kind === 'string', JSON.stringify(ani))
-  // with STATS_KEY set (Vercel environment variable), the stats need ?key=
-  process.env.STATS_KEY = 'trip-secret'
-  const noKey = await api.GET(new Request('http://x/api/votes?stats=1'))
-  const withKey = await api.GET(new Request('http://x/api/votes?stats=1&key=trip-secret'))
-  check('STATS_KEY: no key → 403, the right key → the stats', noKey.status === 403 && withKey.status === 200, noKey.status + ' / ' + withKey.status)
-  delete process.env.STATS_KEY
+  const notAdmin = [(await as('Vahik', null, '?stats=1')).status, (await api.GET(new Request('http://x/api/votes?stats=1'))).status]
+  check('the stats are for the admin only', notAdmin.join() === '403,403', notAdmin.join())
+  // the activity log: the admin only; every request with the name, the IP and the place from Vercel's headers, the
+  // browser and the phone; failed sign-ins too
+  const geo = { 'x-forwarded-for': '203.0.113.7, 10.0.0.1', 'x-vercel-ip-city': 'Pa%20Tong', 'x-vercel-ip-country': 'TH', 'x-vercel-ip-country-region': '83', 'x-vercel-ip-latitude': '7.8961', 'x-vercel-ip-longitude': '98.2969', 'x-vercel-ip-timezone': 'Asia/Bangkok',
+    'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1' }
+  await as('Vahik', { item: 'pl:big-buddha', vote: 'like', device: 'devvahik0001' }, '', geo)
+  await rawApi.GET(new Request('http://x/api/votes?auth=1', { headers: { 'x-guide-key': 'wrong', 'x-guide-name': 'Vardan%20K', ...geo } }))
+  await rawApi.POST(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json', ...geo }, body: JSON.stringify({ device: 'devvahik0001', name: 'Vahik', key: PASSWORD, info: { sw: 390, sh: 844, tz: 'Asia/Bangkok', bogus: 'x' }, track: [{ e: 'visit', x: '#home' }, { e: 'tap', x: 'Like · pl-big-buddha' }] }) }))
+  const noLog = (await as('Vahik', null, '?audit=1')).status
+  const au = (await as('Vardan K', null, '?audit=1')).json
+  const like = au.audit.find((x) => x.e === 'like' && x.n === 'Vahik'), fail = au.audit.find((x) => x.e === 'signin-fail'), seen = au.audit.find((x) => x.e === 'visit' && x.d === 'devvahik0001')
+  check('the log is for the admin only', noLog === 403 && au.total >= au.audit.length && au.audit.length > 3, noLog + ' ' + au.total)
+  check('each entry has the name, IP, place, time zone, browser and phone', like?.ip === '203.0.113.7' && like.ci === 'Pa Tong' && like.c === 'TH' && like.la === '7.8961' && like.tz === 'Asia/Bangkok' && /iPhone/.test(like.ua) && like.v === 1 && like.d === 'devvahik0001' && like.s === 200, JSON.stringify(like))
+  check('a failed sign-in is logged with the name tried', fail?.n === 'Vardan K' && fail.s === 401 && fail.ip === '203.0.113.7', JSON.stringify(fail))
+  check('visits: the signed-in name, the screen (known fields only) and the taps', seen?.n === 'Vahik' && seen.v === 1 && seen.info?.sw === 390 && !('bogus' in seen.info) && au.audit.some((x) => x.e === 'tap' && x.n === 'Vahik') && au.visitors?.devvahik0001?.ip === '203.0.113.7' && au.visitors.devvahik0001.place === 'Pa Tong, 83, TH', JSON.stringify({ seen, phone: au.visitors?.devvahik0001 }))
+  await as('Vahik', { item: 'pl:big-buddha', vote: null })
   // a full visitor list: only phones idle for 14 days or more make room; recent ones are never pushed out
   const vis = hashes.get('guide:visitors')
   const day = 86400000, now0 = Date.now()
@@ -299,8 +390,8 @@ const site = http.createServer(async (req, res) => {
     if (apiDown) { res.writeHead(503); return res.end('{}') }
     let body = ''
     for await (const c of req) body += c
-    const key = req.headers['x-guide-key'] ? { 'x-guide-key': req.headers['x-guide-key'] } : {}
-    const r = await rawApi[req.method](new Request('http://x' + req.url, { method: req.method, headers: { 'Content-Type': 'application/json', ...key }, body: req.method === 'POST' ? body : undefined }))
+    const pass = Object.fromEntries(['x-guide-key', 'x-guide-name', 'x-guide-device', 'user-agent'].filter((k) => req.headers[k]).map((k) => [k, req.headers[k]]))
+    const r = await rawApi[req.method](new Request('http://x' + req.url, { method: req.method, headers: { 'Content-Type': 'application/json', 'x-forwarded-for': '198.51.100.4', 'x-vercel-ip-city': 'Rawai', 'x-vercel-ip-country': 'TH', ...pass }, body: req.method === 'POST' ? body : undefined }))
     res.writeHead(r.status, Object.fromEntries(r.headers)); return res.end(await r.text())
   }
   let p = decodeURIComponent(u.pathname); if (p.endsWith('/')) p += 'index.html'
@@ -545,7 +636,14 @@ check('your own changes do not come back as news', !/Ani liked/.test(ownNews), o
 // Stats: A's actions are sent when the page is hidden; the Stats page lists people and the latest activity
 await A.p.evaluate(() => window.dispatchEvent(new Event('pagehide'))); await sleep(800)
 await A.p.evaluate(() => { location.hash = 'stats' }); await sleep(1500)
+const statsNo = await A.p.evaluate(() => document.getElementById('stats-body').textContent)
+check('the Stats page is for the admin only', /Only Vardan K can see the stats/.test(statsNo), statsNo)
+// the same phone signed in as the admin (then back to how it was)
+const asAdmin = (p, on) => p.evaluate((on, pass) => { for (const [k, v] of Object.entries(on ? { guideName: 'Vardan K', guideKey: pass[1], guideAdmin: true } : { guideName: '', guideKey: pass[0], guideAdmin: false })) localStorage.setItem('pg:' + k, JSON.stringify(v)) }, on, [PASSWORD, ADMIN_PASS])
+await asAdmin(A.p, true)
+await A.p.evaluate(() => { location.hash = 'home' }); await sleep(200); await A.p.evaluate(() => { location.hash = 'stats' }); await sleep(1500)
 const stats = await A.p.evaluate(() => ({ people: document.querySelector('#stats-body .stats-table')?.innerText || '', tiles: document.querySelector('#stats-body .stats-tiles')?.innerText || '', log: document.querySelector('#stats-body .stats-log')?.innerText || '' }))
+await asAdmin(A.p, false)
 check('the Stats page lists people, visits and the latest activity', /Ani/.test(stats.people) && /Davit/.test(stats.people) && /People/.test(stats.tiles) && /liked Diamond Villa 278/.test(stats.log) && /opened the guide/.test(stats.log), JSON.stringify(stats).slice(0, 300))
 // Saved for the whole group: A stars a villa (her name is known, so no dialog); B sees it in Saved, with her name
 await A.p.evaluate(() => { location.hash = 'stay' }); await sleep(300)
@@ -628,36 +726,63 @@ const r1 = await addSpend(A.p, { what: 'Dinner at the market', amount: 2400, cur
 const r2 = await addSpend(A.p, { what: 'Taxi to the pier', amount: 1000, cur: 'AMD', paid: 'Lara', date: '2027-01-15', split: ['Lara', 'Mes'] })
 const aList = { items: await titles(A.p), dialog: await A.p.evaluate(() => document.getElementById('vote-dialog').open) }
 check('expenses from the sheet are saved for everyone, newest day first, with no name dialog', aList.items.join('|') === 'Taxi to the pier|Dinner at the market' && !aList.dialog && !r1.open && !r2.open, JSON.stringify({ aList, r1, r2 }))
+const waiting = await A.p.evaluate(() => ({ wait: [...document.querySelectorAll('#spend-list .xrow .wait')].map((x) => x.textContent), me: document.querySelector('#spend-me .me-bal')?.textContent || '' }))
+check('a new expense waits for the admin and does not count yet', waiting.wait.length === 2 && waiting.wait.every((t) => t === 'Waiting for Vardan K') && /even/.test(waiting.me), JSON.stringify(waiting))
+await approveAll()
 // B shows amounts in baht, for exact numbers
 await B.p.evaluate(() => { const c = document.getElementById('spend-cur'); c.value = 'THB'; c.dispatchEvent(new Event('change')); window.dispatchEvent(new Event('focus')) }); await sleep(1500)
 const balOf = (p) => p.evaluate(() => {
   const thb = (t) => Number(((t || '').match(/([\d,]+)\sTHB/) || [0, '0'])[1].replace(/,/g, '')) * (/[−-]/.test(t || '') ? -1 : 1)
   const rows = Object.fromEntries([...document.querySelectorAll('#spend-bal .bal')].map((r) => { const t = r.querySelector('.bal-row b').textContent; return [r.querySelector('.bal-name').textContent, { text: t, thb: thb(t) }] }))
-  const moves = [...document.querySelectorAll('#spend-settle .move')].filter((li) => li.querySelector('[data-settle-from]')).map((li) => ({ from: li.querySelector('[data-settle-from]').dataset.settleFrom, to: li.querySelector('[data-settle-from]').dataset.settleTo, thb: thb(li.querySelector('b').textContent) }))
+  const moves = [...document.querySelectorAll('#spend-settle .move[data-from]')].map((li) => ({ from: li.dataset.from, to: li.dataset.to, thb: thb(li.querySelector('b').textContent) }))
   return { rows, moves, perAmd: JSON.parse(document.getElementById('guide-data').textContent).rates.mid.AMD, n: document.querySelectorAll('#spend-list .xrow').length,
     news: document.querySelector('.toast')?.textContent || '', me: document.querySelector('#spend-me .me-bal')?.textContent || '', tile: document.querySelector('#home .tile[href="#spend"] span')?.textContent || '' }
 })
 const bal = await balOf(B.p)
-check('another phone sees the expenses, with the news', bal.n === 2 && /Lara added an expense: Taxi to the pier/.test(bal.news), bal.news)
+check('another phone sees the expenses, with the news (here: the admin approved them)', bal.n === 2 && /Vardan K approved (Taxi to the pier|Dinner at the market)/.test(bal.news), bal.news)
 const taxi = 1000 * bal.perAmd // in baht, at the guide's rate (saved with the expense)
 check('balances: Hovo +2,100 THB, Artash −300, Mes −300 and half the taxi, Lara −300 and half back', bal.rows.Hovo.thb === 2100 && bal.rows.Artash.thb === -300 &&
   Math.abs(bal.rows.Mes.thb + 300 + taxi / 2) <= 1 && Math.abs(bal.rows.Lara.thb + 300 - taxi / 2) <= 1, JSON.stringify(Object.fromEntries(Object.entries(bal.rows).map(([k, v]) => [k, v.text]))).slice(0, 320))
 const paidBack = bal.moves.reduce((a, m) => a + m.thb, 0)
 check('settle up: 7 payments, all to Hovo, adding up to what he gets back', bal.moves.length === 7 && bal.moves.every((m) => m.to === 'Hovo') && Math.abs(paidBack - 2100) <= 7, JSON.stringify(bal.moves).slice(0, 300))
 check('your card and the Trip tile say what you get back', /You get back/.test(bal.me) && /2,100\sTHB/.test(bal.me) && /You get back 2,100\sTHB/.test(bal.tile), JSON.stringify({ me: bal.me, tile: bal.tile }))
-// Paid on a suggested payment: saved at once (Artash is even), and Undo takes it back
-const paid = await B.p.evaluate(async () => {
-  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+// Mark paid: only who pays has it; saved at once but waiting (the balance stays); Undo takes it back
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+const laraBal = () => [...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === 'Lara').querySelector('.bal-row b').textContent
+const paid = await A.p.evaluate(async (laraBal) => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms)), lara = new Function('return (' + laraBal + ')()')
+  location.hash = 'spend'; await wait(100)
   document.querySelector('#spend-seg [data-pane="balances"]').click()
-  document.querySelector('#spend-settle [data-settle-from="Artash"]').click(); await wait(900)
-  const artash = [...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === 'Artash')
-  const out = { toast: document.querySelector('.toast')?.textContent || '', artash: artash.querySelector('.bal-row b').textContent, moves: document.querySelectorAll('#spend-settle [data-settle-from]').length, rows: [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent) }
+  const others = [...document.querySelectorAll('#spend-settle [data-settle-from]')].filter((b) => b.dataset.settleFrom !== 'Lara').length
+  const before = lara()
+  document.querySelector('#spend-settle [data-settle-from="Lara"]').click(); await wait(900)
+  const li = document.querySelector('#spend-settle [data-pay-from="Lara"]')?.closest('.move')
+  const out = { others, before, toast: document.querySelector('.toast')?.textContent || '', after: lara(), pill: li?.querySelector('.wait-pill')?.textContent || '', btn: !!li?.querySelector('[data-settle-from]') }
   document.querySelector('.toast .toast-btn').click(); await wait(900)
-  out.undone = { moves: document.querySelectorAll('#spend-settle [data-settle-from]').length, rows: [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent) }
+  out.undone = { btn: !!document.querySelector('#spend-settle [data-settle-from="Lara"]'), pays: JSON.parse(localStorage.getItem('pg:spend')).filter((x) => x.kind === 'pay').length }
+  document.querySelector('#spend-settle [data-settle-from="Lara"]').click(); await wait(900)
+  return out
+}, laraBal.toString())
+check('only who pays sees Mark paid', paid.others === 0 && paid.undone.btn !== undefined, JSON.stringify(paid))
+check('Mark paid saves it at once, but it waits: the balance stays and the move says for whom', /^Sent: [\d,.]+\s\w+ to Hovo\. It counts once Hovo and Vardan K confirm\./.test(paid.toast) && paid.after === paid.before && paid.pill === 'Waiting for Hovo and Vardan K' && !paid.btn, JSON.stringify(paid))
+check('Undo takes the payment back', paid.undone.btn && paid.undone.pays === 0, JSON.stringify(paid.undone))
+// the receiver: To confirm with a count on the Spend tab and news; Got it; then the admin approves and it counts
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1500)
+const conf = await B.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  location.hash = 'spend'; await wait(200)
+  const box = document.getElementById('spend-todo')
+  const out = { shown: !box.hidden, text: box.textContent, badge: document.querySelector('.tabbar a[href="#spend"] .tab-new')?.textContent || '', news: document.querySelector('.toast')?.textContent || '' }
+  box.querySelector('[data-confirm]').click(); await wait(900)
+  out.after = { shown: !document.getElementById('spend-todo').hidden, toast: document.querySelector('.toast')?.textContent || '' }
   return out
 })
-check('Mark paid saves the payment at once: Artash is even, one payment less, and it is in the list', /Artash paid you 300\sTHB/.test(paid.toast) && /even/.test(paid.artash) && paid.moves === 6 && paid.rows.includes('Artash paid you'), JSON.stringify(paid).slice(0, 300))
-check('Undo takes the payment back', paid.undone.moves === 7 && !paid.undone.rows.includes('Artash paid you'), JSON.stringify(paid.undone))
+check('the receiver sees it to confirm, with a count on the Spend tab and news', conf.shown && /Lara paid you/.test(conf.text) && conf.badge === '1' && /Lara says they paid you/.test(conf.news), JSON.stringify(conf).slice(0, 400))
+check('Got it: off the list, and it still waits for the admin', !conf.after.shown && /It counts once Vardan K approves it/.test(conf.after.toast), JSON.stringify(conf.after))
+await approveAll()
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+const settled = await A.p.evaluate((laraBal) => ({ lara: new Function('return (' + laraBal + ')()')(), rows: [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent) }), laraBal.toString())
+check('once the admin approves it counts: Lara is even, and it is in the list', /even/.test(settled.lara) && settled.rows.includes('You paid Hovo'), JSON.stringify(settled))
 // a tap on an expense opens it in the sheet; the change is saved for everyone, with who changed it
 const edited = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -667,14 +792,20 @@ const edited = await A.p.evaluate(async () => {
   const a = f.querySelector('#sp-amount'); a.value = '3200'; a.dispatchEvent(new Event('input', { bubbles: true }))
   f.querySelector('#sp-save').click(); await wait(900)
   const row = [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Dinner/.test(c.textContent))
-  return { filled, text: row.textContent, n: document.querySelectorAll('#spend-list .xrow').length, by: JSON.parse(localStorage.getItem('pg:spend')).find((x) => /Dinner/.test(x.what)).editedBy }
+  return { filled, text: row.textContent, n: [...document.querySelectorAll('#spend-list .xrow .x-main b')].filter((b) => !/ paid /.test(b.textContent)).length, by: JSON.parse(localStorage.getItem('pg:spend')).find((x) => /Dinner/.test(x.what)).editedBy }
 })
 check('a tap on an expense opens it filled in; the change is saved for everyone', edited.filled.amount === '2,400' && edited.filled.paid === 'Hovo' && edited.filled.title === 'Change expense' && edited.filled.del && /3,200\sTHB/.test(edited.text) && edited.n === 2 && edited.by === 'Lara', JSON.stringify(edited).slice(0, 300))
-// Delete: gone for everyone at once; Undo brings it back
+// someone else's expense: a tap says who may change it; Delete (by who added it): gone for everyone, and Undo brings it back
 await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
-const del = await B.p.evaluate(async () => {
+const notMine = await B.p.evaluate(async () => {
+  document.querySelector('#spend-seg [data-pane="list"]').click()
+  ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Taxi/.test(c.textContent)).click(); await new Promise((r) => setTimeout(r, 200))
+  return { sheet: document.getElementById('spend-sheet').open, toast: document.querySelector('.toast')?.textContent || '' }
+})
+check('a tap on someone else\'s expense says who may change it', !notMine.sheet && /Only Lara or Vardan K can change it/.test(notMine.toast), JSON.stringify(notMine))
+const del = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
-  const names = () => [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent)
+  const names = () => [...document.querySelectorAll('#spend-list .xrow .x-main b')].map((b) => b.textContent).filter((t) => !/ paid /.test(t))
   document.querySelector('#spend-seg [data-pane="list"]').click()
   ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Taxi/.test(c.textContent)).click(); await wait(200)
   document.getElementById('sp-delete').click(); await wait(900)
@@ -724,7 +855,9 @@ const wrongCur = await A.p.evaluate(async () => {
 })
 check('a villa price in the wrong currency is caught: Save says what it cost, and AED saves it', wrongCur.names.join(' ') === 'THBbaht AMDdram AEDdirham USDdollar' && wrongCur.asked.open && /Rawai villa cost 12,691.51\sAED/.test(wrongCur.asked.err) && /not AMD/.test(wrongCur.asked.err) &&
   wrongCur.closed && wrongCur.saved?.amount === 12691.51 && wrongCur.saved.cur === 'AED', JSON.stringify(wrongCur))
-// a link to a part of the tab, Stats, and Share as text
+// a link to a part of the tab, Stats (approved expenses), and Share as text
+await approveAll()
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
 const parts = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
   location.hash = 'spend/balances'; await wait(300)
@@ -799,7 +932,8 @@ const dup = await A.p.evaluate(async () => {
   return { asked, open: document.getElementById('spend-sheet').open, n: JSON.parse(localStorage.getItem('pg:spend')).filter((x) => x.what === 'Dinner again').length }
 })
 check('the same expense twice: Save asks once, then adds it', dup.asked.open && /Already in the list: Dinner at the market/.test(dup.asked.msg) && !dup.open && dup.n === 1, JSON.stringify(dup))
-// Mark paid in drams: saved as the drams on the button, to the satang (Lara is then even)
+// Mark paid in drams: saved as the drams on the button, to the satang
+await approveAll()
 await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
 const amdPaid = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -811,24 +945,30 @@ const amdPaid = await A.p.evaluate(async () => {
   return { shown, cents, saved: x && { amount: x.amount, cur: x.cur, rate: x.rate }, paidBack: document.querySelectorAll('#spend-paid .xrow').length }
 })
 check('Mark paid in drams saves the drams shown, to the satang', !amdPaid.none && amdPaid.saved?.cur === 'AMD' && amdPaid.shown === amdPaid.saved.amount.toLocaleString('en-US') + '\u00a0AMD' && Math.round(amdPaid.saved.amount * amdPaid.saved.rate * 100) === amdPaid.cents && amdPaid.paidBack >= 1, JSON.stringify(amdPaid))
-// a tap on a payment to settle opens it as a payment; half of it is saved, and about half is still owed
-await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
-const part = await B.p.evaluate(async () => {
-  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+// a tap on your payment to settle opens it as a payment (from you, fixed); half of it is saved, and once confirmed it
+// counts for that much
+await as('Hovo', { spend: { what: 'Snacks', amount: 800, cur: 'THB', paid: 'Hovo', split: TRIP.people, date: '2027-01-16', cat: 'food' } })
+await approveAll()
+await A.p.evaluate(() => { const c = document.getElementById('spend-cur'); c.value = 'THB'; c.dispatchEvent(new Event('change')); window.dispatchEvent(new Event('focus')) }); await sleep(1300)
+const thbOf = (p) => { const t = [...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === p).querySelector('.bal-row b').textContent; return Number(((t || '').match(/([\d,]+)\sTHB/) || [0, '0'])[1].replace(/,/g, '')) * (/[−-]/.test(t || '') ? -1 : 1) }
+const part = await A.p.evaluate(async (thbOf) => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms)), balOf = new Function('p', 'return (' + thbOf + ')(p)')
   const thb = (t) => Number(((t || '').match(/([\d,]+)\sTHB/) || [0, '0'])[1].replace(/,/g, '')) * (/[−-]/.test(t || '') ? -1 : 1)
-  const balOf = (p) => thb([...document.querySelectorAll('#spend-bal .bal')].find((r) => r.querySelector('.bal-name').textContent === p).querySelector('.bal-row b').textContent)
   document.querySelector('#spend-seg [data-pane="balances"]').click()
-  const open = document.querySelector('#spend-settle .move-open')
+  const open = document.querySelector('#spend-settle .move-open[data-pay-from]')
   if (!open) return { none: true }
   const from = open.dataset.payFrom, to = open.dataset.payTo, owed = thb(open.querySelector('b').textContent), before = balOf(from)
   open.click(); await wait(200)
   const f = document.getElementById('spend-form')
-  const filled = { title: document.getElementById('sheet-title').textContent, from: f.querySelector('#sp-paid-val').textContent, to: f.querySelector('[data-to][aria-pressed="true"]')?.dataset.to, amount: Number(f.querySelector('#sp-amount').value.replace(/,/g, '')) }
+  const filled = { title: document.getElementById('sheet-title').textContent, from: f.querySelector('#sp-paid-val').textContent, fixed: f.querySelector('#sp-paid-row').disabled, to: f.querySelector('[data-to][aria-pressed="true"]')?.dataset.to, amount: Number(f.querySelector('#sp-amount').value.replace(/,/g, '')) }
   const half = Math.round(owed / 2), a = f.querySelector('#sp-amount'); a.value = String(half); a.dispatchEvent(new Event('input', { bubbles: true }))
   f.querySelector('#sp-save').click(); await wait(900)
-  return { from, to, owed, half, filled, before, after: balOf(from) }
-})
-check('a tap on a payment to settle opens it filled in; a part payment counts for that much', !part.none && part.filled.title === 'New payment' && part.filled.from.includes(part.from === 'Hovo' ? 'You' : part.from) && part.filled.to === part.to && Math.round(part.filled.amount) === part.owed && Math.abs(part.after - part.before - part.half) <= 1, JSON.stringify(part))
+  return { from, to, owed, half, filled, before, waiting: balOf(from) }
+}, thbOf.toString())
+await approveAll()
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+part.after = part.none ? 0 : await A.p.evaluate((thbOf, from) => new Function('p', 'return (' + thbOf + ')(p)')(from), thbOf.toString(), part.from)
+check('a tap on your payment to settle opens it filled in, from you; a part payment counts for that much once confirmed', !part.none && part.from === 'Lara' && part.filled.title === 'New payment' && part.filled.from.includes('You') && part.filled.fixed && part.filled.to === part.to && Math.round(part.filled.amount) === part.owed && part.waiting === part.before && Math.abs(part.after - part.before - part.half) <= 1, JSON.stringify(part))
 // filters: Mine, and With someone from a balance row
 const filters = await B.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -877,6 +1017,27 @@ const gateTry = (name, pass) => G.p.evaluate(async (name, pass) => {
 const gate0 = await G.p.evaluate(() => !document.getElementById('gate').hidden && document.querySelector('.gate-title').textContent)
 const gates = [await gateTry('Ani', PASSWORD), await gateTry('virt', 'wrong'), await gateTry(' Virt ', 'TEST-PASS55')]
 check('sign-in: DU OV ES? comes up, a stranger and a wrong password are refused, Virt is Vardan H', gate0 === 'DU OV ES?' && /Not on the list/.test(gates[0].err) && gates[1].shown && /Wrong/.test(gates[1].err) && !gates[2].shown && gates[2].me === 'Vardan H', JSON.stringify({ gate0, gates }))
+// anyone but the admin: no admin links, and the log says it is his
+const notAdmin = await G.p.evaluate(async () => { const link = document.querySelector('[data-admin-only]').hidden; location.hash = 'admin'; await new Promise((r) => setTimeout(r, 500)); return { link, text: document.getElementById('admin-body').textContent } })
+check('anyone else: no admin links, and the log is for Vardan K only', notAdmin.link === true && /Only Vardan K/.test(notAdmin.text), JSON.stringify(notAdmin))
+// Vardan K: only with his own password; then the admin links, the log (every action, with the IP and the place), people
+await G.p.evaluate(() => document.getElementById('sign-out').click()); await sleep(300)
+const adminGate = [await gateTry('Vardan K', PASSWORD), await gateTry('vardan k', ADMIN_PASS)]
+const admin = await G.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const link = !document.querySelector('[data-admin-only]').hidden
+  location.hash = 'home'; await wait(200); location.hash = 'admin'; await wait(1500)
+  const text = document.getElementById('admin-body').textContent, rows = document.querySelectorAll('#admin .adm-row').length
+  const fail = [...document.querySelectorAll('#admin .adm-row')].find((r) => /failed to sign in/.test(r.textContent))
+  fail?.querySelector('.adm-sum').click(); await wait(100)
+  const more = fail?.querySelector('.adm-more:not([hidden])')?.textContent || ''
+  document.querySelector('#admin [data-adm-tab="people"]').click(); await wait(100)
+  const people = [...document.querySelectorAll('#admin .adm-person b')].map((b) => b.textContent)
+  location.hash = 'stats'; await wait(1200)
+  return { link, rows, more, people, stats: document.querySelectorAll('#stats .stats-tiles div').length, admin: JSON.parse(localStorage.getItem('pg:guideAdmin')) }
+})
+check('Vardan K signs in only with his own password', adminGate[0].shown && /Wrong/.test(adminGate[0].err) && !adminGate[1].shown && adminGate[1].me === 'Vardan K' && admin.admin === true, JSON.stringify(adminGate))
+check('the admin: the links, the log with every action and its IP and place, people, and the stats', admin.link && admin.rows > 20 && /198\.51\.100\.4/.test(admin.more) && /Rawai, TH/.test(admin.more) && /Vardan K/.test(admin.more) && admin.people.includes('Vardan K') && admin.stats > 3, JSON.stringify({ ...admin, more: admin.more.slice(0, 200) }))
 for (const x of [A, B, C, G]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

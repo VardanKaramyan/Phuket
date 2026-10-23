@@ -14,26 +14,61 @@
 //        for an uneven split; kind 'pay': a payment from paid to the one person in split; newId: the id for a new one,
 //        made on the phone (sent again, it is added once, or saved as a change when it differs); with keep: { by, t,
 //        editedBy, editedT } (Undo after a delete) it comes back with who added it and when
-//   POST /api/votes { name, deleteSpend: '<expense id>' }         -> deletes an expense
-//   POST /api/votes { device, name?, track: [{ e, x }] }        -> visits and actions for the Stats page
+//   POST /api/votes { name, deleteSpend: '<expense id>' }         -> deletes an expense (who added it, who paid it, or the admin)
+//   POST /api/votes { name, confirm: '<id>' } / { name, reject: '<id>' } -> a payment's receiver says they got it (or not);
+//        the admin approves (or rejects) any expense or payment. An expense counts once the admin approved it, a payment
+//        once its receiver and the admin both did (ok, got, no on the row: { by, t })
+//   POST /api/votes { device, name?, key?, info?, track: [{ e, x }] } -> visits and actions for the Stats page and the log
 //   GET  /api/votes?ver=<n>  -> { ver, same: true } when nothing changed since version n (one cheap read), else everything
-//   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page;
-//        with a STATS_KEY environment variable set, it also needs &key=<that key> (403 without it)
-//   GET  /api/votes?auth=1  -> { ok: true } when the password is right (the sign-in screen)
-// Everything but the visits (track) needs the group's password in an X-Guide-Key header, or it answers 401.
+//   GET  /api/votes?stats=1  -> { visitors: { <device>: { n, first, last, visits, kind } }, log: [...] } for the Stats page
+//   GET  /api/votes?audit=1&from=<i>&n=<count> -> { audit: [...], total, visitors } the activity log (the admin only)
+//   GET  /api/votes?auth=1  -> { ok: true, name, admin } when the name and password are right (the sign-in screen)
+// Everything but the visits (track) needs the password in an X-Guide-Key header, or it answers 401: the group's, or for
+// Vardan K (the admin) his own. The page also sends the signed-in name (X-Guide-Name) and its device id (X-Guide-Device).
+// The stats and the activity log answer only the admin (403 for anyone else). Every request goes into the activity log
+// (guide:audit) with the name, the IP, the place from Vercel's headers (country, region, city, coordinates, time zone),
+// the browser and the device.
 // GET and every POST answer with { votes, hidden, pins: { map, by, t } | null, order, notes: { '<item>': [{ id, text, by, t }] },
 // spend: [expenses, newest day first], ver, recent: [the latest shared changes] }; each votes entry also has last: the time
 // of its latest like. Saving an expense also answers with its id.
 // One vote per name and item; names match without case ("Ani" and "ani" are the same person).
-import { createHash } from 'node:crypto'
+import { createHash, scryptSync, timingSafeEqual } from 'node:crypto'
 
 // the group's password, asked with the name on the sign-in screen: kept as its SHA-256 (any case, spaces trimmed), so
 // the password itself is not in the code; a GUIDE_PASSWORD environment variable on Vercel replaces it
 const PASSWORD_SHA = '2cb2d46750539012abd550eace6da18bd934fea18e4da729ad182fce874a4df9'
 const sha = (s) => createHash('sha256').update(String(s ?? '').trim().toLowerCase()).digest('hex')
-const keyOk = (request) => {
-  const k = request?.headers?.get?.('x-guide-key') || ''
-  return !!k && sha(k) === (process.env.GUIDE_PASSWORD ? sha(process.env.GUIDE_PASSWORD) : PASSWORD_SHA)
+const groupKeyOk = (k) => !!k && sha(k) === (process.env.GUIDE_PASSWORD ? sha(process.env.GUIDE_PASSWORD) : PASSWORD_SHA)
+// Vardan K, the admin (the user, 23 Oct 2026): he signs in with his own password, approves every expense and payment,
+// and is the only one who sees the stats and the activity log. His password is kept as a slow scrypt hash with its salt
+// (any case, spaces trimmed), so this public file does not give it away; an ADMIN_PASSWORD environment variable replaces it
+export const ADMIN = 'Vardan K'
+const ADMIN_SALT = 'be25e6483c2dea7ec3eeb272584fb057'
+const ADMIN_HASH = 'ffdfa26b7f577853bf1a698fa90c6d48c45fb73033bd33e86e709b8bd09c84d8'
+const SCRYPT = { N: 65536, r: 8, p: 1, maxmem: 96 * 1024 * 1024 }
+const adminSeen = new Map() // a password tried (its SHA-256) → right or not: the slow hash once per server start
+function adminKeyOk(k) {
+  if (!k) return false
+  if (process.env.ADMIN_PASSWORD) return sha(k) === sha(process.env.ADMIN_PASSWORD)
+  const h = sha(k)
+  if (!adminSeen.has(h)) {
+    if (adminSeen.size > 100) adminSeen.clear()
+    adminSeen.set(h, timingSafeEqual(scryptSync(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT), Buffer.from(ADMIN_HASH, 'hex')))
+  }
+  return adminSeen.get(h)
+}
+const header = (request, k) => request?.headers?.get?.(k) || ''
+const decode = (s) => { try { return decodeURIComponent(s) } catch { return s } }
+// one of the group, from a name as typed or an old alias; '' for anyone else
+const personOf = (n) => { const s = cleanName(n); return aliasOf(s) || PEOPLE.find((p) => p.toLowerCase() === s.toLowerCase()) || '' }
+// who is calling: the name signed in on the phone (X-Guide-Name; older pages send it only in the body) and the password.
+// Vardan K only with his own password, the others with the group's; name is '' for a name outside the group (an older page).
+// A header name outside the group does not hide the body's name: whoever the request would act as is the one checked
+function authOf(request, bodyName) {
+  const k = header(request, 'x-guide-key'), h = header(request, 'x-guide-name')
+  const name = personOf(h ? decode(h) : '') || personOf(bodyName)
+  if (name === ADMIN) { const ok = adminKeyOk(k); return { ok, name, admin: ok } }
+  return { ok: groupKeyOk(k), name, admin: false }
 }
 const KEY = 'guide:votes' // one Redis hash: field "<item>\u001f<name in lower case>", value { v, n, t }
 const HIDDEN = 'guide:hidden' // one Redis hash: field "ht:<id>", value { n, t } (who hid it, when)
@@ -46,7 +81,7 @@ const NOTES = 'guide:notes' // one Redis hash: field "<note id>", value { item, 
 const NOTE_ITEM = /^(all|ht:[a-z0-9][a-z0-9-]{0,80})$/
 const MAX_NOTES = 2000
 const NOTE_LEN = 500
-const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, cat, rate, shares, amounts, kind, n, t, en, et }
+const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, cat, rate, shares, amounts, kind, n, t, en, et, ok, got, no }
 const MAX_SPEND = 2000
 // the group, for the Spend tab (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
 export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara']
@@ -61,14 +96,18 @@ export const SPEND_CATS = ['food', 'drinks', 'groceries', 'transport', 'activiti
 const VER = 'guide:ver' // a number, +1 on every shared change (phones poll it to know when to reload)
 const LOG = 'guide:log' // a list, newest first: { t, e, x, n, d } (when, what, on which item, name, device)
 const LOG_MAX = 5000
+// the activity log for the admin: every request, newest first: { t, e, x, n, v (the name was signed in), d, s (the answer's
+// status), ip, ua, c, r, ci, la, lo, tz (country, region, city, coordinates, time zone), lang, ref, info (the screen and so on) }
+const AUDIT = 'guide:audit'
+const AUDIT_MAX = 20000
 const VISITORS = 'guide:visitors' // one Redis hash: field "<device>", value { n, first, last, visits, ua }
 const MAX_VISITORS = 2000
 const IDLE_DAYS = 14 // a full visitor list only makes room from phones not seen for this long
 const NEW_PER_HOUR = 20 // new phone ids one connection may add in an hour
 const DEVICE = /^[a-z0-9]{8,32}$/
 const phoneKind = (ua) => (/iPhone|iPad/.test(ua) ? 'iPhone' : /Android/.test(ua) ? 'Android' : /Macintosh/.test(ua) ? 'Mac' : /Windows/.test(ua) ? 'Windows' : 'device')
-const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos']) // actions the page reports
-const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave', 'spend', 'pay', 'respend', 'repay', 'unspend', 'unpay']) // shared changes
+const TRACKED = new Set(['visit', 'view', 'card', 'map', 'share', 'photos', 'tap', 'link', 'search']) // actions the page reports
+const SHARED = new Set(['like', 'skip', 'unvote', 'hide', 'show', 'move', 'reset', 'note', 'unnote', 'save', 'unsave', 'spend', 'pay', 'respend', 'repay', 'unspend', 'unpay', 'got', 'approve', 'reject']) // shared changes
 const SEP = '\u001f'
 const ITEM = /^(ht|ev|pl):[a-z0-9][a-z0-9-]{0,80}$/
 const MAX_VOTES = 20000
@@ -109,7 +148,7 @@ async function allVotes(db) {
   }
   return votes
 }
-const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type, X-Guide-Key' }
+const HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type, X-Guide-Key, X-Guide-Name, X-Guide-Device' }
 const reply = (status, body) => new Response(JSON.stringify(body), { status, headers: HEADERS })
 async function hiddenVillas(db) {
   const flat = (await redis(db, ['HGETALL', HIDDEN])) || []
@@ -126,14 +165,15 @@ async function allSpend(db) {
       const x = JSON.parse(flat[i + 1])
       out.push({ id: flat[i], what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, by: x.n, t: x.t,
         ...(x.cat ? { cat: x.cat } : {}), ...(x.rate ? { rate: x.rate } : {}), ...(x.shares ? { shares: x.shares } : {}), ...(x.amounts ? { amounts: x.amounts } : {}),
-        ...(x.kind ? { kind: x.kind } : {}), ...(x.en ? { editedBy: x.en, editedT: x.et } : {}) })
+        ...(x.kind ? { kind: x.kind } : {}), ...(x.en ? { editedBy: x.en, editedT: x.et } : {}),
+        ...Object.fromEntries(['ok', 'got', 'no'].filter((k) => x[k] && x[k].n).map((k) => [k, { by: x[k].n, t: x[k].t }])) })
     } catch { /* skip a broken row */ }
   }
   return out.sort((a, b) => String(b.date).localeCompare(String(a.date)) || b.t - a.t)
 }
 const spendLabel = (x) => `${x.kind === 'pay' ? `${x.paid} paid ${(x.split || [])[0] || ''}` : x.what || 'an expense'} · ${Number(x.amount || 0).toLocaleString('en-US', { minimumFractionDigits: Number.isInteger(Number(x.amount)) ? 0 : 2, maximumFractionDigits: 2 })} ${x.cur || ''}`.trim()
-// a saved row without who and when, to compare with what a phone sends again
-const spendBody = ({ n, t, en, et, ...row }) => row
+// a saved row without who and when (and the approvals), to compare with what a phone sends again
+const spendBody = ({ n, t, en, et, ok, got, no, ...row }) => row
 // an uneven split: { name: number } for exactly the people in split, each at most 2 decimals; null when it is not one
 function splitMap(m, split, max) {
   if (m == null) return null
@@ -223,18 +263,90 @@ async function renameOld(db) {
   await redis(db, ['HSET', META, RENAMED, String(Date.now())])
   renamed = true
 }
+// once (the user, 23 Oct 2026: "everything was marked as paid. reset that. nobody actually paid"): every payment is
+// deleted; the expenses saved before approvals existed have none, so they wait for the admin
+const PAYS_RESET = 'paysReset'
+let paysReset = false
+async function resetPays(db) {
+  if (paysReset) return
+  if (await redis(db, ['HGET', META, PAYS_RESET])) { paysReset = true; return }
+  const flat = (await redis(db, ['HGETALL', SPEND])) || []
+  const drop = []
+  for (let i = 0; i < flat.length; i += 2) { try { if (JSON.parse(flat[i + 1]).kind === 'pay') drop.push(flat[i]) } catch { /* a broken row stays */ } }
+  if (drop.length) await redis(db, ['HDEL', SPEND, ...drop])
+  await redis(db, ['HSET', META, PAYS_RESET, JSON.stringify({ t: Date.now(), deleted: drop.length })])
+  if (drop.length) await changed(db, 'reset-pays', drop.length + ' payments', ADMIN, '')
+  paysReset = true
+}
+const once = async (db) => { await renameOld(db); await resetPays(db) }
+
+// where a request came from, from the headers Vercel adds: the IP, the place (country, region, city, coordinates, time
+// zone), the browser, the languages and the page it came from (empty fields left out)
+function clientOf(request) {
+  const h = (k) => header(request, k)
+  const out = { ip: (h('x-real-ip') || h('x-forwarded-for').split(',')[0]).trim().slice(0, 64), ua: h('user-agent').slice(0, 300), c: h('x-vercel-ip-country').slice(0, 4), r: h('x-vercel-ip-country-region').slice(0, 8),
+    ci: decode(h('x-vercel-ip-city')).slice(0, 60), la: h('x-vercel-ip-latitude').slice(0, 12), lo: h('x-vercel-ip-longitude').slice(0, 12), tz: h('x-vercel-ip-timezone').slice(0, 40), lang: h('accept-language').slice(0, 40), ref: h('referer').slice(0, 160) }
+  return Object.fromEntries(Object.entries(out).filter(([, v]) => v))
+}
+// rows for the activity log, with where the request came from; the log never breaks a request
+async function audit(db, request, rows) {
+  if (!rows.length) return
+  const base = { t: Date.now(), ...clientOf(request) }
+  try {
+    await redis(db, ['LPUSH', AUDIT, ...rows.map((r) => JSON.stringify({ ...base, ...Object.fromEntries(Object.entries(r).filter(([, v]) => v !== '' && v != null)) }))])
+    await redis(db, ['LTRIM', AUDIT, 0, AUDIT_MAX - 1])
+  } catch { /* storage trouble: the request itself still answers */ }
+}
+// what the page says about the phone (sent with its visits): a few short values only
+const INFO = ['sw', 'sh', 'dpr', 'vw', 'vh', 'tz', 'lang', 'langs', 'plat', 'mob', 'touch', 'pwa', 'mem', 'cores', 'conn', 'theme']
+const infoOf = (o) => (o && typeof o === 'object' ? Object.fromEntries(INFO.filter((k) => o[k] != null && o[k] !== '').map((k) => [k, typeof o[k] === 'number' || typeof o[k] === 'boolean' ? o[k] : String(o[k]).slice(0, 80)])) : null)
+// what a POST does, for the log: the action and its item
+function actionOf(b) {
+  if (!b || typeof b !== 'object') return ['bad', '']
+  if (b.spend) { const s = b.spend; return [(s.id ? 're' : '') + (s.kind === 'pay' ? 'pay' : 'spend'), s.kind === 'pay' || s.what ? spendLabel({ kind: s.kind, paid: s.paid, split: s.split, what: s.what, amount: s.amount, cur: s.cur }) : ''] }
+  if (b.deleteSpend) return ['unspend', String(b.deleteSpend)]
+  if (b.confirm) return ['confirm', String(b.confirm)]
+  if (b.reject) return ['reject', String(b.reject)]
+  if (b.note) return ['note', String(b.note.item || '') + ': ' + String(b.note.text || '').slice(0, 80)]
+  if (b.deleteNote) return ['unnote', String(b.deleteNote)]
+  if (b.pins) return ['move', Object.keys(b.pins).join(', ')]
+  if (Array.isArray(b.order)) return ['order', '']
+  if ('save' in b) return [b.save ? 'save' : 'unsave', String(b.item || '')]
+  if ('hide' in b) return [b.hide ? 'hide' : 'show', String(b.item || '')]
+  return [b.vote || 'unvote', String(b.item || '')]
+}
 
 export async function GET(request) {
   const db = storage()
   if (!db) return NO_DB()
   const q = new URL(request?.url || 'http://x/').searchParams
-  if (!keyOk(request)) return NO_KEY()
-  if (q.has('auth')) return reply(200, { ok: true })
+  const auth = authOf(request, '')
+  const dev = DEVICE.test(header(request, 'x-guide-device')) ? header(request, 'x-guide-device') : ''
+  const tried = auth.name || cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
+  if (!auth.ok) {
+    // a failed sign-in always goes in the log; other refused calls once an hour per phone (an old page keeps asking)
+    try {
+      if (q.has('auth') || (await redis(db, ['SET', 'guide:denied:' + (dev || clientOf(request).ip || 'x'), 1, 'EX', 3600, 'NX']))) await audit(db, request, [{ e: q.has('auth') ? 'signin-fail' : 'denied', n: tried, d: dev, s: 401 }])
+    } catch { /* storage trouble: still 401 */ }
+    return NO_KEY()
+  }
+  if (q.has('auth')) { await audit(db, request, [{ e: 'signin', n: auth.name, v: 1, d: dev, s: 200 }]); return reply(200, { ok: true, name: auth.name, admin: auth.admin }) }
   try {
-    await renameOld(db)
+    await once(db)
+    if ((q.has('stats') || q.has('audit')) && !auth.admin) { await audit(db, request, [{ e: 'denied', x: q.has('audit') ? 'log' : 'stats', n: auth.name, v: auth.name ? 1 : 0, d: dev, s: 403 }]); return reply(403, { error: 'Only ' + ADMIN + ' can see this' }) }
+    if (q.has('audit')) {
+      // the activity log, newest first, a page at a time; the phones (with their full browser string) on the first page
+      const from = Math.max(0, Math.floor(Number(q.get('from')) || 0)), n = Math.min(2000, Math.max(1, Math.floor(Number(q.get('n')) || 500)))
+      const rows = ((await redis(db, ['LRANGE', AUDIT, from, from + n - 1])) || []).map((x) => { try { return JSON.parse(x) } catch { return null } }).filter(Boolean)
+      const out = { audit: rows, from, total: Number(await redis(db, ['LLEN', AUDIT])) || 0 }
+      if (!from) {
+        const flat = (await redis(db, ['HGETALL', VISITORS])) || []
+        out.visitors = {}
+        for (let i = 0; i < flat.length; i += 2) { try { out.visitors[flat[i]] = JSON.parse(flat[i + 1]) } catch { /* broken */ } }
+      }
+      return reply(200, out)
+    }
     if (q.has('stats')) {
-      const key = process.env.STATS_KEY
-      if (key && q.get('key') !== key) return reply(403, { error: 'The stats need the key' })
       const flat = (await redis(db, ['HGETALL', VISITORS])) || []
       const visitors = {}
       // the phone type only, not the whole browser string
@@ -242,7 +354,8 @@ export async function GET(request) {
       return reply(200, { visitors, log: await logRows(db, 2000), ver: await version(db) })
     }
     if (q.has('ver')) { const v = await version(db); if (String(v) === q.get('ver')) return reply(200, { ver: v, same: true }) }
-    return reply(200, await everything(db))
+    else await audit(db, request, [{ e: 'open', n: auth.name, v: auth.name ? 1 : 0, d: dev, s: 200 }]) // a page's first load
+    return reply(200, { ...(await everything(db)), you: { name: auth.name, admin: auth.admin } })
   } catch (e) { return reply(502, { error: e.message }) }
 }
 
@@ -251,6 +364,18 @@ export async function POST(request) {
   if (!db) return NO_DB()
   let body
   try { body = await request.json() } catch { return reply(400, { error: 'Send JSON: { item, name, vote }' }) }
+  const auth = authOf(request, body?.name)
+  const ctx = {} // what the handler found out for the log (the row a confirm or delete was about)
+  const res = await handle(db, request, body, auth, ctx)
+  // every request in the activity log (the visits log their own rows, with the phone's details)
+  if (!(body && Array.isArray(body.track))) {
+    const [e, x] = actionOf(body), dev = String(body?.device || header(request, 'x-guide-device') || '')
+    await audit(db, request, [{ e, x: ctx.x || x, n: auth.ok && auth.name ? auth.name : cleanName(body?.name).slice(0, 40), v: auth.ok && auth.name ? 1 : 0, d: DEVICE.test(dev) ? dev : '', s: res.status }])
+  }
+  return res
+}
+
+async function handle(db, request, body, auth, ctx) {
   // visits and actions for the Stats page (not a shared change: no new version)
   if (body && Array.isArray(body.track)) {
     const device = String(body.device || '')
@@ -282,28 +407,66 @@ export async function POST(request) {
       v = v || { first: now, visits: 0 }
       v.last = now
       v.visits += rows.filter((r) => r.e === 'visit').length
-      if (who) v.n = who
-      v.ua = String(request.headers.get('user-agent') || '').slice(0, 160)
+      // the name signed in on that phone (its password sent along: a beacon cannot send headers), or the name it gave
+      const ta = authOf({ headers: new Headers({ 'x-guide-key': String(body.key || '').slice(0, 100), 'x-guide-name': encodeURIComponent(String(body.name || '').slice(0, 40)) }) }, '')
+      const signed = ta.ok && ta.name ? ta.name : ''
+      if (signed || who) v.n = signed || who
+      if (signed) v.names = [...new Set([...(Array.isArray(v.names) ? v.names : []), signed])].slice(-8)
+      const where = clientOf(request), info = infoOf(body.info)
+      v.ua = where.ua || ''
+      v.ip = where.ip || ''
+      v.place = [where.ci, where.r, where.c].filter(Boolean).join(', ')
+      if (info) v.info = info
       await redis(db, ['HSET', VISITORS, device, JSON.stringify(v)])
-      await logPush(db, rows.map((r) => ({ t: now, e: r.e, x: String(r.x || '').replace(/[\u0000-\u001f\u007f]/g, '').slice(0, 100), n: v.n || '', d: device })))
+      const clean = (s) => String(s || '').replace(/[\u0000-\u001f\u007f]/g, '').slice(0, 100)
+      await logPush(db, rows.map((r) => ({ t: now, e: r.e, x: clean(r.x), n: v.n || '', d: device })))
+      await audit(db, request, rows.map((r) => ({ e: r.e, x: clean(r.x), n: signed || who, v: signed ? 1 : 0, d: device, ...(r.e === 'visit' && info ? { info } : {}) })))
       return reply(200, { ok: true })
     } catch (e) { return reply(502, { error: e.message }) }
   }
-  if (!keyOk(request)) return NO_KEY()
-  if (body && aliasOf(body.name)) body.name = aliasOf(body.name)
-  try { await renameOld(db) } catch (e) { return reply(502, { error: e.message }) }
-  // Spending: add an expense or a payment (with who added it), change one, or delete one. Anyone in the group may change
-  // or delete any expense; the row keeps who added it and who changed it last
-  if (body && (body.spend || body.deleteSpend)) {
+  if (!auth.ok) return NO_KEY()
+  // the signed-in name is the name for everything (an older page: the name in the body, an old alias mapped)
+  if (body && auth.name) body.name = auth.name
+  else if (body && aliasOf(body.name)) body.name = aliasOf(body.name)
+  try { await once(db) } catch (e) { return reply(502, { error: e.message }) }
+  // Spending: add an expense or a payment (with who added it), change one, delete one, or confirm or reject one. A payment
+  // is added only by who paid it; an expense by anyone. Who added it, who paid it and the admin may change or delete it.
+  // An expense counts once the admin approved it (ok), a payment once its receiver (got) and the admin did; a change by
+  // anyone but the admin sends it back to waiting. The row keeps who added it and who changed it last
+  if (body && (body.spend || body.deleteSpend || body.confirm || body.reject)) {
     const who = cleanName(body.name)
     if (!who || who.length > 40) return reply(400, { error: 'A name of 1 to 40 characters, please' })
+    const admin = !!auth.admin, same = (a, b) => String(a || '').toLowerCase() === String(b || '').toLowerCase()
+    const mayChange = (x) => admin || same(x.paid, who) || (x.kind !== 'pay' && same(x.n, who))
+    const onlyWho = (x) => 'Only ' + [...new Set([...(x.kind !== 'pay' && x.n ? [x.n] : []), x.paid, ADMIN].filter(Boolean))].join(', ').replace(/, ([^,]*)$/, ' or $1')
+    const mark = () => ({ n: who, t: Date.now() })
     try {
+      if (body.confirm || body.reject) {
+        const id = String(body.confirm || body.reject).slice(0, 40)
+        const raw = await redis(db, ['HGET', SPEND, id])
+        if (!raw) return reply(404, { error: 'Someone deleted it' })
+        let x = {}
+        try { x = JSON.parse(raw) } catch { return reply(404, { error: 'Someone deleted it' }) }
+        ctx.x = spendLabel(x)
+        const pay = x.kind === 'pay', to = pay ? (x.split || [])[0] : '', receiver = pay && same(to, who)
+        if (!admin && !receiver) return reply(403, { error: pay ? 'Only ' + to + ' or ' + ADMIN + ' can confirm this payment' : 'Only ' + ADMIN + ' can approve expenses' })
+        if (body.confirm) {
+          if (receiver) x.got = mark()
+          if (admin) x.ok = mark()
+          delete x.no
+        } else { x.no = mark(); delete x.ok; delete x.got }
+        await redis(db, ['HSET', SPEND, id, JSON.stringify(x)])
+        await changed(db, body.reject ? 'reject' : admin ? 'approve' : 'got', spendLabel(x), who, body.device)
+        return reply(200, await everything(db))
+      }
       if (body.deleteSpend) {
         const id = String(body.deleteSpend).slice(0, 40)
         const raw = await redis(db, ['HGET', SPEND, id])
         if (!raw) return reply(404, { error: 'Someone deleted it' })
         let x = {}
-        try { x = JSON.parse(raw) } catch { /* a broken row */ }
+        try { x = JSON.parse(raw) } catch { /* a broken row: anyone may clear it */ }
+        ctx.x = spendLabel(x)
+        if (x.paid && !mayChange(x)) return reply(403, { error: onlyWho(x) + ' can delete this' })
         await redis(db, ['HDEL', SPEND, id])
         await changed(db, x.kind === 'pay' ? 'unpay' : 'unspend', spendLabel(x), who, body.device)
         return reply(200, await everything(db))
@@ -334,7 +497,11 @@ export async function POST(request) {
       const shares = splitMap(s.shares, people, 100), amounts = splitMap(s.amounts, people, amount)
       if (shares === false || amounts === false || (shares && amounts) || (pay && (shares || amounts))) return reply(400, { error: 'Shares or amounts above 0 for exactly the people in the split' })
       if (amounts && Math.round(Object.values(amounts).reduce((a, v) => a + v, 0) * 100) !== Math.round(amount * 100)) return reply(400, { error: 'The amounts must add up to the total' })
+      if (pay && !admin && !same(paid, who)) return reply(403, { error: 'You can only add a payment you made' })
       const row = { what, amount, cur, paid, split: people, date, ...(cat ? { cat } : {}), ...(rate ? { rate } : {}), ...(shares && new Set(Object.values(shares)).size > 1 ? { shares } : {}), ...(amounts ? { amounts } : {}), ...(pay ? { kind: 'pay' } : {}) }
+      // the approvals a saved row gets: the admin's own approval, and his "got it" when a payment is to him; anyone
+      // else's save waits for them
+      const marks = () => (admin ? { ok: mark(), ...(pay && people[0] === ADMIN ? { got: mark() } : {}) } : {})
       let id = ''
       if (s.id) {
         id = String(s.id).slice(0, 40)
@@ -342,7 +509,8 @@ export async function POST(request) {
         if (!raw) return reply(404, { error: 'Someone deleted it' })
         let old = {}
         try { old = JSON.parse(raw) } catch { /* a broken row */ }
-        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now() })])
+        if (old.paid && !mayChange(old)) return reply(403, { error: onlyWho(old) + ' can change this' })
+        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now(), ...marks() })])
         await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
       } else {
         // newId: made on the phone, so the same expense sent twice (a retry, or a phone that saved it offline and lost
@@ -352,13 +520,14 @@ export async function POST(request) {
         // keep: Undo after a delete puts it back as it was, with who added (and changed) it and when
         const k = body.keep && typeof body.keep === 'object' ? body.keep : {}, past = (t) => Number.isFinite(t) && t > 0 && t <= Date.now()
         const by = cleanName(k.by).slice(0, 40), eb = cleanName(k.editedBy).slice(0, 40)
-        const meta = { n: by || who, t: by && past(k.t) ? k.t : Date.now(), ...(by && eb && past(k.editedT) ? { en: eb, et: k.editedT } : {}) }
+        const meta = { n: by || who, t: by && past(k.t) ? k.t : Date.now(), ...(by && eb && past(k.editedT) ? { en: eb, et: k.editedT } : {}), ...marks() }
         if (await redis(db, ['HSETNX', SPEND, id, JSON.stringify({ ...row, ...meta })])) await changed(db, pay ? 'pay' : 'spend', spendLabel(row), who, body.device)
         else {
           let old = {}
           try { old = JSON.parse((await redis(db, ['HGET', SPEND, id])) || '{}') } catch { /* a broken row */ }
           if (JSON.stringify(spendBody(old)) !== JSON.stringify(row)) {
-            await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now() })])
+            if (old.paid && !mayChange(old)) return reply(403, { error: onlyWho(old) + ' can change this' })
+            await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now(), ...marks() })])
             await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
           }
         }

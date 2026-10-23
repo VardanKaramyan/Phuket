@@ -14,9 +14,9 @@ export const TRIP = {
     { id: 'luxurious-seaview-villa-rawai', key: 'rawai', short: 'Rawai villa', from: '2027-01-14', to: '2027-01-18', checkIn: '16:00', checkOut: '12:00', paid: { total: 12691.51, currency: 'AED' }, guests: 8 },
   ],
   // the group (the user, 20 Oct 2026), for the Spend tab; api/votes.js has the same list (PEOPLE)
-  people: ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara'],
+  people: ['Vardan K', 'Artash', 'Hovo', 'Vahe', 'Vardan H', 'Mes', 'Armen', 'Lara'],
   // other names the sign-in screen takes for them (the user, 22 Oct 2026)
-  aliases: { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash' },
+  aliases: { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash', Vahik: 'Vahe' },
   // signs in with his own password, approves expenses and payments, sees the stats and the activity log (the user, 23 Oct
   // 2026); api/votes.js has the same name (ADMIN)
   admin: 'Vardan K',

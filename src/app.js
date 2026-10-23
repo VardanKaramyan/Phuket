@@ -1207,6 +1207,29 @@
     const n = s.replace(/\s+/g, ' ').trim(), alias = Object.keys(D.trip.aliases || {}).find((a) => same(a, n))
     return alias ? D.trip.aliases[alias] : (D.trip.people || []).find((p) => same(p, n)) || ''
   }
+  // the edit distance between two strings (for "maybe you are …")
+  function editDist(a, b) {
+    const m = a.length, n = b.length
+    if (!m) return n
+    if (!n) return m
+    let prev = Array.from({ length: n + 1 }, (_, i) => i)
+    for (let i = 1; i <= m; i++) {
+      const cur = [i]
+      for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1))
+      prev = cur
+    }
+    return prev[n]
+  }
+  // a typed name close to a group name or an old alias: the canonical name, when it is near enough (a small misspelling);
+  // '' when it is something else entirely
+  function nameGuess(s) {
+    const q = s.replace(/\s+/g, ' ').trim().toLowerCase()
+    if (!q) return ''
+    const cands = [...(D.trip.people || []).map((p) => [p, p]), ...Object.entries(D.trip.aliases || {})]
+    let best = '', bestD = Infinity
+    for (const [label, canon] of cands) { const d = editDist(q, String(label).toLowerCase()); if (d < bestD) { bestD = d; best = canon } }
+    return best && bestD <= 2 && bestD <= Math.ceil(Math.max(q.length, best.length) * 0.5) ? best : ''
+  }
   function signedIn() {
     const me = store.get('guideName', ''), line = $('#signed-in')
     if (line) { line.hidden = !me; $('b', line).textContent = me }
@@ -1218,20 +1241,39 @@
     $(store.get('guideName', '') ? '#gate-pass' : '#gate-name').focus()
   }
   if (gate) {
+    const enterAs = (name, admin) => {
+      store.set('guideKey', $('#gate-pass').value.trim()); store.set('guideName', name); store.set('guideAdmin', !!admin); store.set('voterName', name); store.set('spendMe', name)
+      $('#gate-err').innerHTML = ''; gate.hidden = true; document.documentElement.classList.remove('gated')
+      signedIn(); syncAdmin(); ver = 0; loadVotes(); renderVotes(); renderNotes(); renderSpend()
+    }
     $('#gate-form').addEventListener('submit', async (e) => {
       e.preventDefault()
-      const err = $('#gate-err'), name = whoIs($('#gate-name').value), key = $('#gate-pass').value.trim()
-      if (!name) { err.textContent = 'Not on the list. Type your name.'; return }
+      const err = $('#gate-err'), entered = $('#gate-name').value.replace(/\s+/g, ' ').trim(), key = $('#gate-pass').value.trim()
+      err.innerHTML = ''
+      const name = whoIs(entered)
+      // ask the server, which logs the attempt (the typed name, whether it is on the list, and a wrong password; the real
+      // one is never written). Send the name as typed, so the log shows exactly that
       let r = null
-      try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key, 'X-Guide-Name': encodeURIComponent(name), 'X-Guide-Device': device }, cache: 'no-store' }) } catch { /* offline: let them in, the server checks it once online */ }
-      if (r && r.status === 401) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
+      try { r = await fetch(D.votes + '?auth=1', { headers: { 'X-Guide-Key': key, 'X-Guide-Name': encodeURIComponent(entered), 'X-Guide-Device': device }, cache: 'no-store' }) } catch { /* offline */ }
       if (r && r.status === 429) { err.textContent = 'Too many wrong passwords. Try again in an hour.'; return }
-      if (r && !r.ok) { err.textContent = 'The server is busy. Try again in a moment.'; return }
-      let admin = false
-      if (r && r.ok) { try { admin = !!(await r.json()).admin } catch { /* an older server */ } }
-      store.set('guideKey', key); store.set('guideName', name); store.set('guideAdmin', admin); store.set('voterName', name); store.set('spendMe', name)
-      err.textContent = ''; gate.hidden = true; document.documentElement.classList.remove('gated')
-      signedIn(); syncAdmin(); ver = 0; loadVotes(); renderVotes(); renderNotes(); renderSpend()
+      if (r && r.status === 503) { err.textContent = 'The server is busy. Try again in a moment.'; return }
+      // a name that is not on the list: never let in. If it is a close misspelling, suggest the right one; otherwise refuse
+      if (!name) {
+        const guess = nameGuess(entered)
+        if (guess) {
+          err.innerHTML = 'Maybe you are <button type="button" class="link-btn" id="gate-guess"></button>?'
+          $('#gate-guess').textContent = guess
+          $('#gate-guess').onclick = () => { $('#gate-name').value = guess; err.innerHTML = ''; $('#gate-pass').focus() }
+        } else err.textContent = 'CHEM ANACHUM QEZ'
+        return
+      }
+      if (!r) { enterAs(name, false); return } // offline: let them in, the server checks the password next time online
+      if (r.status === 401) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
+      if (!r.ok) { err.textContent = 'The server is busy. Try again in a moment.'; return }
+      let body = {}
+      try { body = await r.json() } catch { /* an older server */ }
+      if (body.ok === false) { err.textContent = 'Wrong password.'; $('#gate-pass').select(); return }
+      enterAs(body.name || name, !!body.admin)
     })
     $('#sign-out')?.addEventListener('click', () => { store.set('guideName', ''); store.set('guideKey', ''); store.set('guideAdmin', false); signedIn(); syncAdmin(); showGate() })
     signedIn()
@@ -2359,7 +2401,12 @@
       else if (d.paneGo) { setPane(d.paneGo, true); $('#spend-seg').scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }) }
       else if (d.spendId) {
         const x = rows.find((y) => y.id === d.spendId), me = meOf()
-        if (x && me && !mayChange(x, me)) toast([waitOf(x, me) || 'Approved', (isPay(x) ? 'Only ' + x.paid : 'Only ' + [...new Set([x.by, x.paid].filter(Boolean))].join(', ')) + ' or ' + ADMIN + ' can change it'].join('. ') + '.')
+        if (x && me && !mayChange(x, me)) {
+          // who may change it, each name once (so it never says "Vardan K or Vardan K")
+          const who2 = [...new Set([isPay(x) ? x.paid : x.by, x.paid, ADMIN].filter(Boolean))]
+          const whoStr = who2.length > 1 ? who2.slice(0, -1).join(', ') + ' or ' + who2.at(-1) : who2[0]
+          toast([waitOf(x, me) || 'Approved', 'Only ' + whoStr + ' can change it'].join('. ') + '.')
+        }
         else if (x && me) openSheet(x)
         else { const card = $('#spend-me'); card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' }); card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash') }
       }
@@ -2429,11 +2476,11 @@
 
   /* ---------- Admin: the activity log (website only, the admin): who did what, when, from which IP, place and phone ---------- */
   const ADM_SAID = { open: 'opened the guide', visit: 'opened the guide at', view: 'opened the tab', card: 'looked at', map: 'opened on the map', photos: 'browsed the photos of', share: 'shared', tap: 'tapped', link: 'opened the link', search: 'searched for',
-    signin: 'signed in', 'signin-fail': 'failed to sign in: wrong password', denied: 'was refused', like: 'liked', skip: 'skipped', unvote: 'took back a vote on', save: 'saved', unsave: 'took off the saved list', hide: 'hid', show: 'brought back',
+    signin: 'signed in', 'signin-fail': 'failed to sign in: wrong password', 'signin-unknown': 'tried a name not on the list', denied: 'was refused', like: 'liked', skip: 'skipped', unvote: 'took back a vote on', save: 'saved', unsave: 'took off the saved list', hide: 'hid', show: 'brought back',
     move: 'moved', order: 'reordered the villas', reset: 'reset the place of', note: 'wrote a note on', unnote: 'deleted a note', spend: 'added an expense:', respend: 'changed an expense:', pay: 'added a payment:', repay: 'changed a payment:',
     unspend: 'deleted', confirm: 'confirmed', reject: 'rejected', bad: 'sent something broken' }
   const ADM_KINDS = [['all', 'All'], ['money', 'Money'], ['votes', 'Votes & saves'], ['notes', 'Notes'], ['browse', 'Browsing'], ['signin', 'Sign-ins']]
-  const admKind = (e) => (/^((re|un)?(spend|pay)|confirm|reject)$/.test(e) ? 'money' : /^(like|skip|unvote|save|unsave|hide|show|move|order|reset)$/.test(e) ? 'votes' : /^(un)?note$/.test(e) ? 'notes' : /^(signin|signin-fail|denied)$/.test(e) ? 'signin' : 'browse')
+  const admKind = (e) => (/^((re|un)?(spend|pay)|confirm|reject)$/.test(e) ? 'money' : /^(like|skip|unvote|save|unsave|hide|show|move|order|reset)$/.test(e) ? 'votes' : /^(un)?note$/.test(e) ? 'notes' : /^(signin|signin-fail|signin-unknown|denied)$/.test(e) ? 'signin' : 'browse')
   // a browser string in words: the phone and its system, and the browser (or the app the link was opened in)
   function uaWords(ua) {
     ua = String(ua || '')
@@ -2461,7 +2508,7 @@
       if (r.status === 403) { box.innerHTML = '<p class="note">Only ' + esc(ADMIN) + ' can see the log.</p>'; return }
       if (!r.ok) throw new Error('audit ' + r.status)
       const j = await r.json()
-      if (!more || !adm) adm = { rows: [], visitors: {}, total: 0, kind: (adm && adm.kind) || 'all', who: (adm && adm.who) || '', q: (adm && adm.q) || '', tab: (adm && adm.tab) || 'log' }
+      if (!more || !adm) adm = { rows: [], visitors: {}, total: 0, kind: (adm && adm.kind) || 'all', who: (adm && adm.who) || '', q: (adm && adm.q) || '', tab: (adm && adm.tab) || 'overview' }
       adm.rows = adm.rows.concat(j.audit || [])
       adm.total = j.total || adm.rows.length
       if (j.visitors) adm.visitors = j.visitors
@@ -2492,7 +2539,7 @@
     const shown = a.rows.filter((x) => (a.kind === 'all' || admKind(x.e) === a.kind) && (!a.who || (nameOf(x) || 'Unknown') === a.who) &&
       (!q || [nameOf(x), x.e, ADM_SAID[x.e], x.x, x.ip, placeOf(x), x.ua, x.d].join(' ').toLowerCase().includes(q)))
     // the item in words: a card, villa or tab by its name; a tap, link, search or expense as it was logged
-    const what = (x) => { const raw = /^(tap|link|search|signin|signin-fail|denied|open|bad|confirm|reject|(re|un)?(spend|pay))$/.test(x.e); const label = raw ? x.x || '' : itemLabel(x.e, x.x); return (ADM_SAID[x.e] || x.e) + (label ? ' ' + label : '') }
+    const what = (x) => { const raw = /^(tap|link|search|signin|signin-fail|signin-unknown|denied|open|bad|confirm|reject|(re|un)?(spend|pay))$/.test(x.e); const label = raw ? x.x || '' : itemLabel(x.e, x.x); return (ADM_SAID[x.e] || x.e) + (label ? ' ' + label : '') }
     const row = (x, k) => {
       const i = x.info || vis(x).info || {}, n = nameOf(x)
       const facts = [
@@ -2502,7 +2549,7 @@
         ['Time zone', [x.tz, i.tz && i.tz !== x.tz ? 'phone set to ' + i.tz : ''].filter(Boolean).join(' · ')],
         ['Device', devOf(x)], ['Screen', i.sw ? i.sw + '×' + i.sh + (i.dpr ? ' at ' + i.dpr + 'x' : '') + (i.vw ? ', window ' + i.vw + '×' + i.vh : '') : ''],
         ['Phone', [i.plat, i.mob === true ? 'mobile' : '', i.touch ? 'touch' : '', i.mem ? i.mem + ' GB memory' : '', i.cores ? i.cores + ' cores' : '', i.pwa ? 'opened from the home screen' : '', i.conn ? i.conn + ' connection' : '', i.theme ? i.theme + ' theme' : ''].filter(Boolean).join(', ')],
-        ['Languages', [x.lang, i.langs].filter(Boolean).join(' · ')], ['Phone id', x.d], ['Answer', x.s ? String(x.s) : ''], ['From page', x.ref], ['Browser', x.ua],
+        ['Languages', [x.lang, i.langs].filter(Boolean).join(' · ')], ['Phone id', x.d], ['Answer', x.s ? String(x.s) : ''], ['Password tried', x.pw], ['From page', x.ref], ['Browser', x.ua],
       ].filter(([, v]) => v)
       const map = x.la && x.lo ? '<a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(x.la + ',' + x.lo) + '">Show the place on Google Maps</a>' : ''
       return '<li class="adm-row k-' + admKind(x.e) + (x.e === 'signin-fail' || x.s >= 400 ? ' bad' : '') + '"><button class="adm-sum" type="button" data-adm-row="' + k + '" aria-expanded="false">' +
@@ -2518,16 +2565,43 @@
       esc([p.devs.size + (p.devs.size === 1 ? ' phone' : ' phones'), p.ips.size + (p.ips.size === 1 ? ' IP' : ' IPs'), [...p.places].slice(0, 2).join('; '), p.fails ? p.fails + ' failed sign-ins' : ''].filter(Boolean).join(' · ')) + '</small></span></button>'
     const phones = Object.entries(a.visitors).sort((x, y) => (y[1].last || 0) - (x[1].last || 0)).map(([id, v]) => '<tr><td><b>' + esc(v.n || 'Unknown') + '</b><small>' + esc(id) + '</small></td><td>' + esc(uaWords(v.ua)) +
       (v.info && v.info.sw ? '<small>' + esc(v.info.sw + '×' + v.info.sh + (v.info.tz ? ' · ' + v.info.tz : '')) + '</small>' : '') + '</td><td>' + esc(v.ip || '') + '<small>' + esc(v.place || '') + '</small></td><td>' + esc(when(v.last || v.first)) + '<small>' + (v.visits || 0) + ' visits</small></td></tr>').join('')
+    // Overview (what the Visits page used to show): counts, the villas looked at most and the tabs opened
+    const cnt = (pred) => a.rows.filter(pred).length
+    const sums = [['Likes', cnt((x) => x.e === 'like')], ['Notes', cnt((x) => x.e === 'note')], ['Shares', cnt((x) => x.e === 'share')], ['Expenses & payments', cnt((x) => /^(spend|pay)$/.test(x.e))], ['Sign-ins', cnt((x) => x.e === 'signin')], ['Failed / unknown', cnt((x) => /^signin-(fail|unknown)$/.test(x.e))]]
+    const seen = {}
+    for (const x of a.rows) if (['card', 'map', 'photos', 'share', 'like'].includes(x.e)) { const l = itemLabel(x.e, x.x); if (/Villa|BR|Pool|House|Townhouse|Home/i.test(l) || String(x.x).includes('ht')) seen[l] = (seen[l] || 0) + 1 }
+    const topSeen = Object.entries(seen).sort((pA, pB) => pB[1] - pA[1]).slice(0, 8)
+    const tabsOpened = {}
+    for (const x of a.rows) if (x.e === 'view') { const l = itemLabel('view', x.x); tabsOpened[l] = (tabsOpened[l] || 0) + 1 }
+    const overview = '<div class="stats-tiles">' + sums.map(([k, v]) => '<div><b>' + esc(String(v)) + '</b><span>' + esc(k) + '</span></div>').join('') + '</div>' +
+      (topSeen.length ? '<h2 class="block-title">Villas looked at most</h2><ol class="picks">' + topSeen.map(([l, nn]) => '<li>' + esc(l) + ' <span>' + nn + '</span></li>').join('') + '</ol>' : '') +
+      (Object.keys(tabsOpened).length ? '<h2 class="block-title">Tabs opened</h2><p class="stats-tabs">' + Object.entries(tabsOpened).sort((pA, pB) => pB[1] - pA[1]).map(([l, nn]) => esc(l) + ' <b>' + nn + '</b>').join(' · ') + '</p>' : '') +
+      '<p class="note">Counted over what is loaded (Load older on the Log brings in more). Names show once someone signs in.</p>'
+    // Sign-ins: every attempt, and the credentials typed on a failed one (a correct password is never written)
+    const signins = a.rows.filter((x) => /^signin(-fail|-unknown)?$/.test(x.e))
+    const signRow = (x) => {
+      const res = x.e === 'signin' ? ['Signed in', 'good'] : x.e === 'signin-fail' ? ['Wrong password', 'bad'] : ['Name not on the list', 'bad']
+      return '<tr class="' + res[1] + '"><td>' + esc(when(x.t)) + '</td><td><span class="sign-res ' + res[1] + '">' + esc(res[0]) + '</span></td>' +
+        '<td><b>' + esc(x.n || '(blank)') + '</b></td><td>' + (x.pw ? '<code>' + esc(x.pw) + '</code>' : (x.e === 'signin' ? '<small>correct</small>' : '—')) + '</td>' +
+        '<td>' + esc(placeOf(x) || '') + '<small>' + esc(x.ip || '') + '</small></td><td>' + esc(uaWords(x.ua)) + '</td></tr>'
+    }
+    const signinsHtml = '<p class="note">Every sign-in and every failed or unknown attempt. A wrong password is shown; a correct one is never saved.</p>' +
+      '<div class="stats-table"><table><thead><tr><th>When</th><th>Result</th><th>Name typed</th><th>Password</th><th>Place / IP</th><th>Device</th></tr></thead><tbody>' +
+      (signins.map(signRow).join('') || '<tr><td colspan="6">No sign-ins yet.</td></tr>') + '</tbody></table></div>'
+    const logHtml = '<div class="chips" role="toolbar" aria-label="Filter the log">' + ADM_KINDS.map(([v, t]) => '<button class="chip" type="button" data-adm-kind="' + v + '" aria-pressed="' + (a.kind === v) + '">' + esc(t) + ' <span class="n">' + (v === 'all' ? a.rows.length : a.rows.filter((x) => admKind(x.e) === v).length) + '</span></button>').join('') + '</div>' +
+      '<div class="adm-filter"><select id="adm-who" aria-label="Person"><option value="">Everyone</option>' + plist.map((pp) => '<option' + (a.who === pp.n ? ' selected' : '') + '>' + esc(pp.n) + '</option>').join('') + '</select>' +
+      '<input class="search" type="search" id="adm-q" placeholder="Search names, IPs, places, items" value="' + esc(a.q) + '" aria-label="Search the log"></div>' +
+      '<ul class="adm-log">' + (html || '<li class="adm-day">Nothing matches.</li>') + '</ul>' +
+      (shown.length > 600 ? '<p class="note">The newest 600 of ' + shown.length + ' are shown. The filters narrow it down.</p>' : '') +
+      (a.rows.length < a.total ? '<button class="btn" type="button" data-adm-more>Load older (' + (a.total - a.rows.length) + ' more)</button>' : '<p class="note">That is everything: ' + a.total + (a.total === 1 ? ' entry' : ' entries') + '. The log keeps the newest 20,000.</p>')
+    const TABS = [['overview', 'Overview'], ['log', 'Log'], ['signins', 'Sign-ins'], ['people', 'People'], ['phones', 'Phones']]
     box.innerHTML = '<div class="stats-tiles">' + tiles.map(([k, v]) => '<div><b>' + esc(String(v)) + '</b><span>' + esc(k) + '</span></div>').join('') + '</div>' +
-      '<div class="seg adm-seg" role="group" aria-label="Show">' + [['log', 'Log'], ['people', 'People'], ['phones', 'Phones']].map(([v, t]) => '<button type="button" data-adm-tab="' + v + '" aria-pressed="' + (a.tab === v) + '">' + t + '</button>').join('') + '</div>' +
-      (a.tab === 'people' ? '<div class="adm-people">' + plist.map(personCard).join('') + '</div><p class="note">Tap someone to see only what they did.</p>'
-        : a.tab === 'phones' ? '<div class="stats-table"><table><thead><tr><th>Who</th><th>Device</th><th>IP and place</th><th>Last seen</th></tr></thead><tbody>' + (phones || '<tr><td colspan="4">Nobody yet.</td></tr>') + '</tbody></table></div>'
-          : '<div class="chips" role="toolbar" aria-label="Filter the log">' + ADM_KINDS.map(([v, t]) => '<button class="chip" type="button" data-adm-kind="' + v + '" aria-pressed="' + (a.kind === v) + '">' + esc(t) + ' <span class="n">' + (v === 'all' ? a.rows.length : a.rows.filter((x) => admKind(x.e) === v).length) + '</span></button>').join('') + '</div>' +
-            '<div class="adm-filter"><select id="adm-who" aria-label="Person"><option value="">Everyone</option>' + plist.map((p) => '<option' + (a.who === p.n ? ' selected' : '') + '>' + esc(p.n) + '</option>').join('') + '</select>' +
-            '<input class="search" type="search" id="adm-q" placeholder="Search names, IPs, places, items" value="' + esc(a.q) + '" aria-label="Search the log"></div>' +
-            '<ul class="adm-log">' + (html || '<li class="adm-day">Nothing matches.</li>') + '</ul>' +
-            (shown.length > 600 ? '<p class="note">The newest 600 of ' + shown.length + ' are shown. The filters narrow it down.</p>' : '') +
-            (a.rows.length < a.total ? '<button class="btn" type="button" data-adm-more>Load older (' + (a.total - a.rows.length) + ' more)</button>' : '<p class="note">That is everything: ' + a.total + (a.total === 1 ? ' entry' : ' entries') + '. The log keeps the newest 20,000.</p>'))
+      '<div class="seg adm-seg" role="group" aria-label="Show">' + TABS.map(([v, t]) => '<button type="button" data-adm-tab="' + v + '" aria-pressed="' + (a.tab === v) + '">' + t + '</button>').join('') + '</div>' +
+      (a.tab === 'overview' ? overview
+        : a.tab === 'signins' ? signinsHtml
+          : a.tab === 'people' ? '<div class="adm-people">' + plist.map(personCard).join('') + '</div><p class="note">Tap someone to see only what they did.</p>'
+            : a.tab === 'phones' ? '<div class="stats-table"><table><thead><tr><th>Who</th><th>Device</th><th>IP and place</th><th>Last seen</th></tr></thead><tbody>' + (phones || '<tr><td colspan="4">Nobody yet.</td></tr>') + '</tbody></table></div>'
+              : logHtml)
     const qi = $('#adm-q')
     if (qi) qi.addEventListener('input', () => { clearTimeout(qi.timer); qi.timer = setTimeout(() => { a.q = qi.value.trim(); const at = qi.selectionStart; drawAdmin(); const n = $('#adm-q'); if (n) { n.focus(); n.setSelectionRange(at, at) } }, 250) })
     $('#adm-who')?.addEventListener('change', (e) => { a.who = e.target.value; drawAdmin() })

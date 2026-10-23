@@ -43,8 +43,8 @@ const groupKeyOk = (k) => !!k && sha(k) === (process.env.GUIDE_PASSWORD ? sha(pr
 // and is the only one who sees the stats and the activity log. His password is kept as a slow scrypt hash with its salt
 // (any case, spaces trimmed), so this public file does not give it away; an ADMIN_PASSWORD environment variable replaces it
 export const ADMIN = 'Vardan K'
-const ADMIN_SALT = 'be25e6483c2dea7ec3eeb272584fb057'
-const ADMIN_HASH = 'ffdfa26b7f577853bf1a698fa90c6d48c45fb73033bd33e86e709b8bd09c84d8'
+const ADMIN_SALT = '87d83fd417906b655e1b4238eb6dd4c9'
+const ADMIN_HASH = '920c920815081ba754d1e149502efd542c1433d0c880c868a44f62f3643464b1'
 const SCRYPT = { N: 65536, r: 8, p: 1, maxmem: 96 * 1024 * 1024 }
 const slowHash = (k) => new Promise((ok, no) => scrypt(String(k).trim().toLowerCase(), ADMIN_SALT, 32, SCRYPT, (e, key) => (e ? no(e) : ok(key))))
 const adminSeen = new Map() // a password tried (its SHA-256) → right or not: the slow hash once per server start
@@ -106,10 +106,10 @@ const NOTE_LEN = 500
 const SPEND = 'guide:spend' // one Redis hash: field "<expense id>", value { what, amount, cur, paid, split, date, cat, rate, shares, amounts, kind, n, t, en, et, ok, got, no }
 const MAX_SPEND = 2000
 // the group, for the Spend tab (the same list as TRIP.people in tools/trip.mjs; votes-test checks they match)
-export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahik', 'Vardan H', 'Mes', 'Armen', 'Lara']
+export const PEOPLE = ['Vardan K', 'Artash', 'Hovo', 'Vahe', 'Vardan H', 'Mes', 'Armen', 'Lara']
 // the names some of them used before the sign-in (TRIP.aliases in tools/trip.mjs): a name sent as one of these is saved
 // as the group's name, and the votes, notes and saves made under them were renamed once (renameOld)
-export const ALIASES = { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash' }
+export const ALIASES = { Virt: 'Vardan H', Vardan: 'Vardan K', Arshak: 'Artash', Vahik: 'Vahe' }
 const aliasOf = (n) => { const a = Object.keys(ALIASES).find((k) => k.toLowerCase() === String(n || '').trim().toLowerCase()); return a ? ALIASES[a] : '' }
 const CURRENCIES = new Set(['THB', 'AMD', 'USD', 'AED'])
 const RATE_BAND = { AMD: [0.01, 1], USD: [5, 200], AED: [1, 50] } // baht for 1 unit: far outside is a typo
@@ -258,13 +258,16 @@ async function changed(db, e, x, name, device) {
 const cleanName = (s) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, '').replace(/\s+/g, ' ').trim()
 const NO_DB = () => reply(503, { error: 'Voting is not set up: connect an Upstash Redis database to the Vercel project.' })
 const NO_KEY = () => reply(401, { error: 'Wrong password' })
-// once: votes, notes, saves, hidden villas and the villa moves made under an alias go to the group's name (a vote that
-// person already made under that name wins). Marked done in guide:meta, and checked once per server start
+// once per set of aliases (and of people): names made under an old alias go to the group's name (Virt -> Vardan H), and
+// a renamed member's old name is moved over too (Vahik -> Vahe, 24 Oct 2026): votes, notes, saves, hidden villas, the
+// villa moves and the spend rows (paid, split and who added, changed or confirmed them). A vote already under the new
+// name wins. The signature of ALIASES and PEOPLE is kept in guide:meta, so adding an alias or renaming a member re-runs it
 const RENAMED = 'aliasesRenamed'
-let renamed = false
+let renamedSig = ''
 async function renameOld(db) {
-  if (renamed) return
-  if (await redis(db, ['HGET', META, RENAMED])) { renamed = true; return }
+  const sig = sha(JSON.stringify(ALIASES) + '|' + PEOPLE.join(','))
+  if (renamedSig === sig) return
+  if ((await redis(db, ['HGET', META, RENAMED])) === sig) { renamedSig = sig; return }
   const cmds = []
   const flat = (await redis(db, ['HGETALL', KEY])) || []
   const fields = new Set(flat.filter((_, i) => i % 2 === 0))
@@ -281,9 +284,22 @@ async function renameOld(db) {
       try { const v = JSON.parse(f[i + 1]), p = v && aliasOf(v.n); if (p) cmds.push(['HSET', H, f[i], JSON.stringify({ ...v, n: p })]) } catch { /* not a row with a name */ }
     }
   }
+  // the spend rows: paid and the split list are canonical names, and ok/got/no/n/en hold names too
+  const sp = (await redis(db, ['HGETALL', SPEND])) || []
+  for (let i = 0; i < sp.length; i += 2) {
+    try {
+      const x = JSON.parse(sp[i + 1]); let ch = false
+      const fix = (name) => { const p = aliasOf(name); if (p) { ch = true; return p } return name }
+      if (x.paid) x.paid = fix(x.paid)
+      if (Array.isArray(x.split)) x.split = x.split.map(fix)
+      for (const k of ['n', 'en']) if (x[k]) x[k] = fix(x[k])
+      for (const k of ['ok', 'got', 'no']) if (x[k] && x[k].by) x[k].by = fix(x[k].by)
+      if (ch) cmds.push(['HSET', SPEND, sp[i], JSON.stringify(x)])
+    } catch { /* a broken row: left as it is */ }
+  }
   await Promise.all(cmds.map((c) => redis(db, c)))
-  await redis(db, ['HSET', META, RENAMED, String(Date.now())])
-  renamed = true
+  await redis(db, ['HSET', META, RENAMED, sig])
+  renamedSig = sig
 }
 // once (the user, 23 Oct 2026: "everything was marked as paid. reset that. nobody actually paid"): every payment is
 // deleted; the expenses saved before approvals existed have none, so they wait for the admin
@@ -345,21 +361,28 @@ export async function GET(request) {
   let auth
   try { auth = await authOf(db, request, '') } catch (e) { return reply(502, { error: e.message }) }
   const dev = DEVICE.test(header(request, 'x-guide-device')) ? header(request, 'x-guide-device') : ''
-  const tried = auth.name || cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
+  const rawName = cleanName(decode(header(request, 'x-guide-name'))).slice(0, 40)
+  const known = !!personOf(rawName) // the typed name is one of the group (or an old alias)
+  const tried = rawName || auth.name // what the person typed, for the log
   if (auth.busy) return reply(503, { error: 'Busy, try again in a moment' })
   if (!auth.ok) {
-    // failed sign-ins go in the log (at most 30 an hour from one IP); other refused calls once an hour per IP (an old
-    // page keeps asking)
+    // every sign-in attempt goes in the log (at most 30 an hour from one IP): the typed name, whether it is on the list,
+    // and the wrong password that was tried (the real password is never written). Other refused calls: once an hour per IP
     try {
       const ip = ipOf(request) || 'x'
       let log = false
       if (q.has('auth')) { await redis(db, ['SET', 'guide:signinfail:' + ip, 0, 'EX', 3600, 'NX']); log = (await redis(db, ['INCR', 'guide:signinfail:' + ip])) <= 30 }
       else log = !!(await redis(db, ['SET', 'guide:denied:' + ip, 1, 'EX', 3600, 'NX']))
-      if (log) await audit(db, request, [{ e: q.has('auth') ? 'signin-fail' : 'denied', x: auth.limited ? 'too many tries' : '', n: tried, d: dev, s: auth.limited ? 429 : 401 }])
+      if (log) await audit(db, request, [{ e: q.has('auth') ? (known ? 'signin-fail' : 'signin-unknown') : 'denied', x: auth.limited ? 'too many tries' : '', n: tried, known: known ? 1 : 0, pw: header(request, 'x-guide-key').slice(0, 64), d: dev, s: auth.limited ? 429 : 401 }])
     } catch { /* storage trouble: still refused */ }
     return auth.limited ? reply(429, { error: 'Too many wrong passwords from here. Try again in an hour.' }) : NO_KEY()
   }
-  if (q.has('auth')) { await audit(db, request, [{ e: 'signin', n: auth.name, v: 1, d: dev, s: 200 }]); return reply(200, { ok: true, name: auth.name, admin: auth.admin }) }
+  // the password was right. If the typed name is not on the list, do not let them in (the real password with a stranger's
+  // name is logged, without writing the password), and tell the client it is unknown
+  if (q.has('auth')) {
+    await audit(db, request, [{ e: known ? 'signin' : 'signin-unknown', x: known ? '' : 'correct password, name not on the list', n: tried, known: known ? 1 : 0, v: known ? 1 : 0, d: dev, s: 200 }])
+    return reply(200, { ok: known, name: auth.name, admin: auth.admin && known, known })
+  }
   try {
     await once(db)
     if ((q.has('stats') || q.has('audit')) && !auth.admin) { await audit(db, request, [{ e: 'denied', x: q.has('audit') ? 'log' : 'stats', n: auth.name, v: auth.name ? 1 : 0, d: dev, s: 403 }]); return reply(403, { error: 'Only ' + ADMIN + ' can see this' }) }

@@ -991,3 +991,13 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .admin .stats-table td small { display: block; color: var(--ink-2); font-size: 12px; }
 .admin [data-adm-more] { margin-top: 12px; }
 @media (max-width: 420px) { .adm-sum { grid-template-columns: 54px auto minmax(0, 1fr); gap: 8px; } .adm-more { padding-left: 14px; } }
+
+/* Admin: the combined screen (Overview, Log, Sign-ins, People, Phones) */
+.adm-seg { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; scrollbar-width: none; }
+.adm-seg::-webkit-scrollbar { display: none; }
+.adm-seg button { padding: 8px 14px; white-space: nowrap; }
+.sign-res { display: inline-block; padding: 2px 8px; border-radius: 999px; font: 600 12px/1.5 var(--font-display); white-space: nowrap; }
+.sign-res.good { background: var(--leaf-soft); color: var(--good-ink); }
+.sign-res.bad { background: var(--alert-soft); color: var(--alert); }
+.admin .stats-table code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px; color: var(--alert); word-break: break-all; }
+.admin .stats-table tr.bad td:first-child { box-shadow: inset 3px 0 0 var(--alert); }

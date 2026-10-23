@@ -117,6 +117,7 @@ async function approveAll() {
   check('old names: Vardan → Vardan K, Virt → Vardan H, Arshak → Artash, and a vote sent as Virt is Vardan H', JSON.stringify(got) === JSON.stringify({ a: 'Vardan K', b: 'Vardan H', note: 'Vardan K', saved: 'Artash', c: 'Vardan H' }), JSON.stringify(got))
   check('the server and tools/trip.mjs have the same other names', JSON.stringify(fresh.ALIASES) === JSON.stringify(TRIP.aliases), JSON.stringify(fresh.ALIASES))
   check('the server and tools/trip.mjs have the same admin', fresh.ADMIN === TRIP.admin && TRIP.people.includes(TRIP.admin), String(fresh.ADMIN))
+  check('Vahik is now an alias of Vahe, and Vahe is on the list', fresh.ALIASES.Vahik === 'Vahe' && fresh.PEOPLE.includes('Vahe') && !fresh.PEOPLE.includes('Vahik'), fresh.PEOPLE.join(', '))
   hashes.clear(); strings.clear(); lists.clear()
 }
 {
@@ -129,6 +130,18 @@ async function approveAll() {
   const again = await import(mod + '?resetpays2')
   const j2 = await (await keyed(again.GET)(new Request('http://x/api/votes'))).json()
   check('once: the payments are deleted, the expenses stay and wait for the admin', j.spend.map((x) => x.id).join() === 'e1' && !j.spend[0].ok && j2.spend.some((x) => x.id === 'p2'), JSON.stringify({ first: j.spend, second: j2.spend.map((x) => x.id) }))
+  hashes.clear(); strings.clear(); lists.clear()
+}
+{
+  // a renamed member (Vahik -> Vahe): a vote, a note and a spend split all move to the new name once
+  const t = Date.now(), row = (o) => JSON.stringify({ t, ...o })
+  hashes.set('guide:votes', new Map([['ht:a-villa\u001fvahik', row({ v: 'like', n: 'Vahik' })]]))
+  hashes.set('guide:notes', new Map([['n9', row({ item: 'all', text: 'hi', n: 'Vahik' })]]))
+  hashes.set('guide:spend', new Map([['e9', row({ what: 'Dinner', amount: 800, cur: 'THB', paid: 'Vahik', split: ['Vahik', 'Hovo'], date: '2027-01-14', n: 'Vahik', ok: { n: 'Vardan K', t } })]]))
+  const fresh = await import(mod + '?vahe')
+  const j = await (await keyed(fresh.GET)(new Request('http://x/api/votes'))).json()
+  const sp = j.spend[0]
+  check('Vahik is renamed to Vahe across votes, notes and the spend rows', j.votes['ht:a-villa']?.like.join() === 'Vahe' && j.notes?.all?.[0]?.by === 'Vahe' && sp?.paid === 'Vahe' && sp.split.join() === 'Vahe,Hovo' && sp.by === 'Vahe', JSON.stringify({ v: j.votes['ht:a-villa'], note: j.notes?.all?.[0]?.by, sp }))
   hashes.clear(); strings.clear(); lists.clear()
 }
 {
@@ -358,11 +371,11 @@ async function approveAll() {
   await rawApi.POST(new Request('http://x/api/votes', { method: 'POST', headers: { 'Content-Type': 'application/json', ...geo }, body: JSON.stringify({ device: 'devvahik0001', name: 'Vahik', key: PASSWORD, info: { sw: 390, sh: 844, tz: 'Asia/Bangkok', bogus: 'x' }, track: [{ e: 'visit', x: '#home' }, { e: 'tap', x: 'Like · pl-big-buddha' }] }) }))
   const noLog = (await as('Vahik', null, '?audit=1')).status
   const au = (await as('Vardan K', null, '?audit=1')).json
-  const like = au.audit.find((x) => x.e === 'like' && x.n === 'Vahik'), fail = au.audit.find((x) => x.e === 'signin-fail'), seen = au.audit.find((x) => x.e === 'visit' && x.d === 'devvahik0001')
+  const like = au.audit.find((x) => x.e === 'like' && x.n === 'Vahe'), fail = au.audit.find((x) => x.e === 'signin-fail'), seen = au.audit.find((x) => x.e === 'visit' && x.d === 'devvahik0001')
   check('the log is for the admin only', noLog === 403 && au.total >= au.audit.length && au.audit.length > 3, noLog + ' ' + au.total)
   check('each entry has the name, IP, place, time zone, browser and phone', like?.ip === '203.0.113.7' && like.ci === 'Pa Tong' && like.c === 'TH' && like.la === '7.8961' && like.tz === 'Asia/Bangkok' && /iPhone/.test(like.ua) && like.v === 1 && like.d === 'devvahik0001' && like.s === 200, JSON.stringify(like))
   check('a failed sign-in is logged with the name tried', fail?.n === 'Vardan K' && fail.s === 401 && fail.ip === '203.0.113.7', JSON.stringify(fail))
-  check('visits: the signed-in name, the screen (known fields only) and the taps', seen?.n === 'Vahik' && seen.v === 1 && seen.info?.sw === 390 && !('bogus' in seen.info) && au.audit.some((x) => x.e === 'tap' && x.n === 'Vahik') && au.visitors?.devvahik0001?.ip === '203.0.113.7' && au.visitors.devvahik0001.place === 'Pa Tong, 83, TH', JSON.stringify({ seen, phone: au.visitors?.devvahik0001 }))
+  check('visits: the signed-in name, the screen (known fields only) and the taps', seen?.n === 'Vahe' && seen.v === 1 && seen.info?.sw === 390 && !('bogus' in seen.info) && au.audit.some((x) => x.e === 'tap' && x.n === 'Vahe') && au.visitors?.devvahik0001?.ip === '203.0.113.7' && au.visitors.devvahik0001.place === 'Pa Tong, 83, TH', JSON.stringify({ seen, phone: au.visitors?.devvahik0001 }))
   await as('Vahik', { item: 'pl:big-buddha', vote: null })
   // a full visitor list: only phones idle for 14 days or more make room; recent ones are never pushed out
   const vis = hashes.get('guide:visitors')
@@ -1024,8 +1037,11 @@ const gateTry = (name, pass) => G.p.evaluate(async (name, pass) => {
   return { shown: !document.getElementById('gate').hidden, err: document.getElementById('gate-err').textContent, me: JSON.parse(localStorage.getItem('pg:voterName') || '""') }
 }, name, pass)
 const gate0 = await G.p.evaluate(() => !document.getElementById('gate').hidden && document.querySelector('.gate-title').textContent)
-const gates = [await gateTry('Ani', PASSWORD), await gateTry('virt', 'wrong'), await gateTry(' Virt ', 'TEST-PASS55')]
-check('sign-in: DU OV ES? comes up, a stranger and a wrong password are refused, Virt is Vardan H', gate0 === 'DU OV ES?' && /Not on the list/.test(gates[0].err) && gates[1].shown && /Wrong/.test(gates[1].err) && !gates[2].shown && gates[2].me === 'Vardan H', JSON.stringify({ gate0, gates }))
+const gSuggest = await gateTry('Hoov', 'x') // close to Hovo
+const gUnknown = await gateTry('Zoragyux', 'x') // nothing like a group name
+const gWrong = await gateTry('virt', 'wrong')
+const gOk = await gateTry(' Virt ', 'TEST-PASS55')
+check('sign-in: DU OV ES? comes up; a close name is suggested, a stranger gets CHEM ANACHUM, a wrong password refused, Virt is Vardan H', gate0 === 'DU OV ES?' && /Maybe you are/.test(gSuggest.err) && /Hovo/.test(gSuggest.err) && gSuggest.shown && /CHEM ANACHUM/.test(gUnknown.err) && gUnknown.shown && gWrong.shown && /Wrong/.test(gWrong.err) && !gOk.shown && gOk.me === 'Vardan H', JSON.stringify({ gate0, gSuggest, gUnknown, gWrong, gOk }))
 // anyone but the admin: no admin links, and the log says it is his
 const notAdmin = await G.p.evaluate(async () => { const link = document.querySelector('[data-admin-only]').hidden; location.hash = 'admin'; await new Promise((r) => setTimeout(r, 500)); return { link, text: document.getElementById('admin-body').textContent } })
 check('anyone else: no admin links, and the log is for Vardan K only', notAdmin.link === true && /Only Vardan K/.test(notAdmin.text), JSON.stringify(notAdmin))
@@ -1036,17 +1052,21 @@ const admin = await G.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
   const link = !document.querySelector('[data-admin-only]').hidden
   location.hash = 'home'; await wait(200); location.hash = 'admin'; await wait(1500)
-  const text = document.getElementById('admin-body').textContent, rows = document.querySelectorAll('#admin .adm-row').length
-  const fail = [...document.querySelectorAll('#admin .adm-row')].find((r) => /failed to sign in/.test(r.textContent))
+  document.querySelector('#admin [data-adm-tab="log"]').click(); await wait(150)
+  const rows = document.querySelectorAll('#admin .adm-row').length
+  const fail = [...document.querySelectorAll('#admin .adm-row')].find((r) => /failed to sign in|name not on the list/.test(r.textContent))
   fail?.querySelector('.adm-sum').click(); await wait(100)
   const more = fail?.querySelector('.adm-more:not([hidden])')?.textContent || ''
+  document.querySelector('#admin [data-adm-tab="signins"]').click(); await wait(150)
+  const signins = document.querySelector('#admin .stats-table')?.textContent || ''
   document.querySelector('#admin [data-adm-tab="people"]').click(); await wait(100)
   const people = [...document.querySelectorAll('#admin .adm-person b')].map((b) => b.textContent)
-  location.hash = 'stats'; await wait(1200)
-  return { link, rows, more, people, stats: document.querySelectorAll('#stats .stats-tiles div').length, admin: JSON.parse(localStorage.getItem('pg:guideAdmin')) }
+  document.querySelector('#admin [data-adm-tab="overview"]').click(); await wait(100)
+  const overview = document.querySelectorAll('#admin .stats-tiles div').length
+  return { link, rows, more, signins, people, overview, admin: JSON.parse(localStorage.getItem('pg:guideAdmin')) }
 })
 check('Vardan K signs in only with his own password', adminGate[0].shown && /Wrong/.test(adminGate[0].err) && !adminGate[1].shown && adminGate[1].me === 'Vardan K' && admin.admin === true, JSON.stringify(adminGate))
-check('the admin: the links, the log with every action and its IP and place, people, and the stats', admin.link && admin.rows > 20 && /198\.51\.100\.4/.test(admin.more) && /Rawai, TH/.test(admin.more) && /Vardan K/.test(admin.more) && admin.people.includes('Vardan K') && admin.stats > 3, JSON.stringify({ ...admin, more: admin.more.slice(0, 200) }))
+check('the admin: the links, the log with IP and place, the sign-ins with the password tried, people, and the overview', admin.link && admin.rows > 20 && /198\.51\.100\.4/.test(admin.more) && /Rawai, TH/.test(admin.more) && /Vardan K/.test(admin.more) && /wrong|test-pass/.test(admin.signins) && admin.people.includes('Vardan K') && admin.overview >= 4 && admin.admin === true, JSON.stringify({ ...admin, more: admin.more.slice(0, 160), signins: admin.signins.slice(0, 160) }))
 for (const x of [A, B, C, G]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

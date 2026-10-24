@@ -644,29 +644,14 @@ html.map-popup #back-to-card { display: none; }
 .pc-digits { display: flex; gap: 3px; }
 .pc-sep { height: 1.3em; line-height: 1.25em; opacity: 0.45; animation: pc-blink 1s steps(2, jump-none) infinite; }
 @keyframes pc-blink { 50% { opacity: 0.1; } }
-/* the whole tile is one continuous gradient, so there is no seam across the middle of a digit; only the fold panels that
-   animate carry their own halves */
-.flap { position: relative; display: block; width: 0.8em; height: 1.3em; perspective: 4em; color: #fff3d6; border-radius: 0.16em; background: linear-gradient(#26363c, #10181b); box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.45), 0 0.2em 0.45em rgba(0, 0, 0, 0.28); outline: 1px solid color-mix(in srgb, var(--bg) 10%, transparent); }
+/* each digit is one solid tile with one continuous gradient: no seam anywhere, at rest or mid-change */
+.flap { position: relative; display: block; width: 0.8em; height: 1.3em; color: #fff3d6; border-radius: 0.16em; background: linear-gradient(#26363c, #10181b); box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.45), 0 0.2em 0.45em rgba(0, 0, 0, 0.28); outline: 1px solid color-mix(in srgb, var(--bg) 10%, transparent); overflow: hidden; }
 .pc-s .flap { color: #ffc24d; } /* seconds in amber, like an airport board */
-.flap > span { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; }
-.f-top { top: 0; border-radius: 0.16em 0.16em 0 0; } /* transparent: the tile gradient shows through, no seam */
-.f-bot { bottom: 0; border-radius: 0 0 0.16em 0.16em; }
-.f-up { top: 0; border-radius: 0.16em 0.16em 0 0; background: linear-gradient(#26363c, #1a272b); }
-.f-down { bottom: 0; border-radius: 0 0 0.16em 0.16em; background: linear-gradient(#1a272b, #10181b); }
-.flap > .f-face { top: 0; height: 100%; z-index: 1; } /* the whole digit in one piece, over the split halves, at rest */
-.flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; padding-top: 0.12em; } /* the font's digits sit high in their line */
-.f-top b, .f-up b { top: 0; }
-.f-bot b, .f-down b { bottom: 0; }
-.f-face b { height: 100%; top: 0; } /* the full digit, centred, with no split line through it */
-.f-fold { display: none; z-index: 2; backface-visibility: hidden; }
-.flap.go .f-fold { display: block; }
-.flap.go .f-face { display: none; } /* during the flip the split halves and folds take over */
-.f-up { transform-origin: 50% 100%; }
-.f-down { transform-origin: 50% 0; transform: rotateX(90deg); }
-.flap.go .f-up { animation: flap-up 0.3s ease-in forwards; }
-.flap.go .f-down { animation: flap-down 0.3s 0.28s cubic-bezier(0.3, 1.6, 0.6, 1) forwards; }
-@keyframes flap-up { to { transform: rotateX(-90deg); filter: brightness(0.55); } }
-@keyframes flap-down { from { transform: rotateX(90deg); filter: brightness(0.55); } to { transform: rotateX(0); filter: none; } }
+.f-face { position: absolute; inset: 0; }
+.flap b { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 700; padding-top: 0.12em; } /* the font's digits sit high in their line */
+/* a digit ticks in as one piece when it changes, so there is never a split line mid-change */
+.flap.go b { animation: pc-tick 0.3s cubic-bezier(0.3, 1.1, 0.5, 1); }
+@keyframes pc-tick { 0% { transform: translateY(-48%); opacity: 0; } 55% { opacity: 1; } 100% { transform: translateY(0); } }
 .pass-cut { height: 14px; background: radial-gradient(circle at 0 50%, var(--bg) 7px, transparent 7.5px) left / 14px 14px no-repeat, radial-gradient(circle at 100% 50%, var(--bg) 7px, transparent 7.5px) right / 14px 14px no-repeat; position: relative; }
 .pass-cut::after { content: ""; position: absolute; left: 16px; right: 16px; top: 50%; border-top: 2px dashed color-mix(in srgb, var(--bg) 35%, transparent); }
 .pass-bottom { padding: 10px 14px 16px; display: grid; gap: 10px; }

@@ -82,9 +82,8 @@
   function makeFlap(v) {
     const f = document.createElement('span')
     f.className = 'flap'
-    // f-face is the whole digit in one piece (shown at rest, so there is no seam through the number); the split halves and
-    // the folds are only shown during the flip, where a hairline would never be noticed
-    f.innerHTML = '<span class="f-face"><b></b></span><span class="f-top"><b></b></span><span class="f-bot"><b></b></span><span class="f-fold f-up"><b></b></span><span class="f-fold f-down"><b></b></span>'
+    // one piece per digit (no split anywhere), so there is never a seam; it ticks in as a whole when it changes
+    f.innerHTML = '<span class="f-face"><b></b></span>'
     setFlap(f, v, false)
     return f
   }
@@ -92,13 +91,12 @@
     const old = f.dataset.v
     if (old === v) return
     f.dataset.v = v
-    const [face, top, bot, up, down] = [...f.children].map((c) => c.firstElementChild)
-    top.textContent = v; down.textContent = v; up.textContent = old ?? v
+    f.firstElementChild.firstElementChild.textContent = v
     clearTimeout(f.flapTimer)
-    if (!animate || old === undefined) { bot.textContent = v; face.textContent = v; f.classList.remove('go'); return }
-    bot.textContent = old // until the new bottom half has dropped over it
+    if (!animate || old === undefined) { f.classList.remove('go'); return }
+    // the whole digit ticks in as one piece (no split line while it changes)
     f.classList.remove('go'); void f.offsetWidth; f.classList.add('go')
-    f.flapTimer = setTimeout(() => { bot.textContent = v; face.textContent = v; f.classList.remove('go') }, 650)
+    f.flapTimer = setTimeout(() => f.classList.remove('go'), 340)
   }
   function setDigits(box, str, animate) {
     if (box.children.length !== str.length) { box.replaceChildren(...[...str].map(makeFlap)); return }

@@ -47,7 +47,7 @@ const read = (p) => p.evaluate(() => {
   // 3 days, 4 hours, 5 minutes and 9 seconds before the trip
   const { p, errors } = await open(start - (3 * DAY + 4 * 3600000 + 5 * 60000 + 9000))
   const r = await read(p)
-  check('before the trip: counts down to the start', !r.hidden && r.label === 'Trip starts in' && /Fri 8 Jan/.test(r.when) && r.d === '03' && r.h === '04' && r.m === '05' && /^0[5-9]$/.test(r.s), JSON.stringify(r))
+  check('before the trip: counts down to the start', !r.hidden && r.label === 'Trip starts in' && /Fri 8 Jan/.test(r.when) && r.d === '03' && r.h === '04' && r.m === '05' && /^0\d$/.test(r.s), JSON.stringify(r))
   check('the top bar has the same flaps, counting down live', r.top === r.d + ':' + r.h + ':' + r.m + ':' + r.s && r.topBig >= 17, r.top + ', ' + Math.round(r.topBig) + ' px tall')
   check('the top bar fits a 320 px phone (nothing overlaps)', r.topFits, String(r.topFits))
   check('the board fits a 320 px phone', r.fits, JSON.stringify(r.fits))

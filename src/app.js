@@ -1841,7 +1841,7 @@
       const title = pay ? you(x.paid, me, true) + ' paid ' + you(toOf(x), me) : (x.by ? you(x.by, me, true) + ' added: ' : '') + x.what
       const sub = [orig(x), dayWord(x.date)].concat(pay ? (toMe ? [] : [x.got ? you(toOf(x), me, true) + ' got it' : you(toOf(x), me, true) + ' has not confirmed yet']) : [you(x.paid, me, true) + ' paid', 'for ' + whoOf(PEOPLE.filter((p) => (x.split || []).includes(p)), me)])
       const yes = toMe ? 'Got it' : 'Approve', no = toMe ? 'Not received' : 'Reject'
-      return '<li>' + (pay ? av(x.paid) : '<span class="x-ic c-' + catOf(x) + '">' + ic(catOf(x)) + '</span>') + '<div class="todo-main"><b>' + esc(title) + '</b><small class="num">' + esc(sub.join(' · ')) + '</small></div>' +
+      return '<li>' + (pay ? av(x.paid) : '<span class="x-ic c-' + catOf(x) + '">' + ic(catOf(x)) + '</span>') + '<div class="todo-main"><b>' + esc(title) + '</b><small class="num">' + esc(sub.join(' · ')) + '</small>' + (x.photo || x.loc ? '<button class="link-btn todo-receipt" type="button" data-receipt="' + esc(x.id) + '">' + ic(x.photo ? 'camera' : 'pin') + (x.photo ? 'Receipt' : esc(placeName(x.loc.lat, x.loc.lng))) + '</button>' : '') + '</div>' +
         '<div class="todo-btns"><button class="btn small primary" type="button" data-confirm="' + esc(x.id) + '">' + ic('check') + yes + '</button><button class="btn small" type="button" data-reject="' + esc(x.id) + '">' + no + '</button></div></li>'
     }
     const many = isAdmin() && list.filter((x) => !isPay(x) || toOf(x) === me || x.got).length > 1
@@ -1888,6 +1888,24 @@
         (mine.length ? '<ul class="moves">' + mine.slice(0, 3).map((m) => moveLi(m, me)).join('') + '</ul>' : '') +
         (mine.length > 3 ? '<button class="link-btn" type="button" data-pane-go="balances">All ' + mine.length + ' payments</button>' : '') : '')
   }
+  // a place in words: the nearest place in the guide (within 400 m), else the area of Phuket it is in, else the numbers
+  const placeCache = new Map()
+  function placeName(lat, lng) {
+    const key = lat.toFixed(5) + ',' + lng.toFixed(5)
+    if (placeCache.has(key)) return placeCache.get(key)
+    const m = (aLat, aLng) => { const x = (aLng - lng) * Math.cos(((aLat + lat) / 2) * Math.PI / 180), y = aLat - lat; return Math.sqrt(x * x + y * y) * 111320 }
+    let best = null, bd = Infinity
+    for (const p of D.points || []) { if (p.t === 'money') continue; const d = m(p.lat, p.lng); if (d < bd) { bd = d; best = p } }
+    let out = ''
+    if (best && bd < 400) out = 'Near ' + best.name
+    else {
+      let ba = null, bad = Infinity
+      for (const a of D.areas || []) if (a.label) { const d = m(a.label[0], a.label[1]); if (d < bad) { bad = d; ba = a } }
+      out = ba && bad < 12000 ? 'In ' + (ba.short || ba.name) : lat.toFixed(4) + ', ' + lng.toFixed(4)
+    }
+    placeCache.set(key, out)
+    return out
+  }
   function rowOf(x, me, withDay) {
     const pay = isPay(x), parts = partsOf(x), cat = pay ? 'pay' : catOf(x), split = x.split || []
     const title = pay ? you(x.paid, me, true) + ' paid ' + you(split[0], me) : x.what
@@ -1902,7 +1920,7 @@
     const shown = x.cur === showCur ? orig(x) : '≈' + money(centsOf(x))
     const under = x.cur === showCur ? '' : '<small class="x-orig">' + esc(orig(x)) + '</small>'
     return '<button class="xrow' + (counts(x) ? '' : ' waiting') + '" type="button" data-spend-id="' + esc(x.id) + '"><span class="x-ic c-' + cat + '">' + ic(cat) + '</span>' +
-      '<span class="x-main"><b>' + esc(title) + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + (wait ? '<span class="' + (x.no ? 'said-no' : 'wait') + '">' + esc(wait) + '</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small></span>' +
+      '<span class="x-main"><b>' + esc(title) + (x.photo ? '<span class="x-photo" aria-label="with a receipt photo">' + ic('camera') + '</span>' : '') + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + (wait ? '<span class="' + (x.no ? 'said-no' : 'wait') + '">' + esc(wait) + '</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small>' + (x.loc ? '<small class="x-place">' + ic('pin') + esc(placeName(x.loc.lat, x.loc.lng)) + '</small>' : '') + '</span>' +
       '<span class="x-amt"><b class="num">' + esc(shown) + '</b>' + under + mine + '</span></button>'
   }
   // the expenses by day, newest first, with each day's total (payments are not spending)
@@ -2056,6 +2074,9 @@
       : { newId: newSpendId(), kind: kind || 'spend', cur: CURS.includes(store.get('spendLastCur', 'THB')) ? store.get('spendLastCur', 'THB') : 'THB', paid: (pre && (pre.paid || pre.from)) || me, to: (pre && pre.to) || '', split: new Set(dayIn(0) > groupEnd && last.length ? last : PEOPLE), mode: 'equal', shares: {}, locked: {}, cat: '', picked: false }
     if (!x) st.rate = midOf(st.cur)
     st.opener = document.activeElement
+    Object.assign(st, { photoNew: null, photoRemoved: false, hadPhoto: !!(x && x.photo && !x.pending), loc: x && x.loc ? x.loc : null, locDirty: false })
+    fx('#sp-photo-img').removeAttribute('src'); fx('#sp-photo-img').dataset.for = ''
+    fx('#sp-noloc-text').textContent = 'No location in the photo.'
     fx('#sp-amount').value = x ? fmtAmount(Number(x.amount)) : ''
     fx('#sp-what').value = x && !isPay(x) ? x.what : ''
     fx('#sp-date').value = x ? x.date : dayIn(0)
@@ -2147,6 +2168,7 @@
     fx('#sp-quick').innerHTML = quick.map((b) => '<button class="cat-chip c-stay" type="button" data-quick="' + PAID_BASES.indexOf(b) + '">' + ic('stay') + esc(b.short + ' · ' + amt(b.paid.total, b.paid.currency)) + '</button>').join('')
     if (whole) renderSplit()
     syncNumbers()
+    syncReceipt()
   }
   function renderSplit() {
     const box = fx('#sp-split')
@@ -2198,6 +2220,117 @@
     if (!free && rest > 0) { sum.textContent = amt(rest / 100, cur) + ' left'; sum.classList.add('bad'); return }
     sum.innerHTML = ic('check') + 'Adds up to ' + esc(amt(total, cur)); sum.classList.add('good')
   }
+  /* receipt photos: shrunk on the phone the moment one is picked (with the place read from the photo first), sent with
+     the expense on Save, and fetched only when someone opens one */
+  const receiptCache = new Map() // expense id -> data URL, so a photo is fetched once
+  async function loadReceipt(id) {
+    if (receiptCache.has(id)) return receiptCache.get(id)
+    const r = await fetch(D.votes + '?receipt=' + encodeURIComponent(id), { cache: 'no-store', headers: keyHead() })
+    if (r.status === 401) { showGate(); throw new Error('sign in') }
+    if (!r.ok) throw new Error('photo ' + r.status)
+    const { data } = await r.json()
+    receiptCache.set(id, data)
+    return data
+  }
+  // the GPS position written in a JPEG photo (EXIF), or null: phones often leave it out of photos picked in a browser
+  function exifGps(buf) {
+    try {
+      const v = new DataView(buf)
+      if (v.getUint16(0) !== 0xffd8) return null
+      for (let o = 2; o + 10 < v.byteLength;) {
+        const marker = v.getUint16(o), len = v.getUint16(o + 2)
+        if (marker === 0xffe1 && v.getUint32(o + 4) === 0x45786966) { // APP1 "Exif"
+          const t = o + 10, le = v.getUint16(t) === 0x4949
+          const u16 = (p) => v.getUint16(p, le), u32 = (p) => v.getUint32(p, le)
+          const ifd = (p) => { const out = {}; for (let i = 0, n = u16(p); i < n; i++) { const e = p + 2 + i * 12; out[u16(e)] = e } return out }
+          const ifd0 = ifd(t + u32(t + 4))
+          if (!ifd0[0x8825]) return null
+          const g = ifd(t + u32(ifd0[0x8825] + 8))
+          const deg = (e) => { if (!e) return NaN; const p = t + u32(e + 8), r = (i) => u32(p + i * 8) / u32(p + i * 8 + 4); return r(0) + r(1) / 60 + r(2) / 3600 }
+          const ref = (e) => (e ? String.fromCharCode(v.getUint8(e + 8)) : '')
+          let lat = deg(g[2]), lng = deg(g[4])
+          if (!Number.isFinite(lat) || !Number.isFinite(lng) || (!lat && !lng)) return null
+          if (ref(g[1]) === 'S') lat = -lat
+          if (ref(g[3]) === 'W') lng = -lng
+          return Math.abs(lat) <= 90 && Math.abs(lng) <= 180 ? { lat, lng } : null
+        }
+        if ((marker & 0xff00) !== 0xff00 || marker === 0xffda) break // start of the image data: no Exif before it
+        o += 2 + len
+      }
+    } catch { /* not a photo we can read the place from */ }
+    return null
+  }
+  // the photo as a JPEG of at most 1600 px a side, about 150-300 KB (lower quality while it is still too big); the place
+  // is read from the original first, because re-drawing it drops everything but the picture
+  async function shrinkPhoto(file) {
+    const gps = /jpe?g/i.test(file.type || '') || !file.type ? exifGps(await file.arrayBuffer()) : null
+    let img, url = ''
+    try { img = await createImageBitmap(file, { imageOrientation: 'from-image' }) } catch {
+      url = URL.createObjectURL(file)
+      img = await new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = url }).finally(() => setTimeout(() => URL.revokeObjectURL(url), 0))
+    }
+    const w0 = img.width, h0 = img.height, k = Math.min(1, 1600 / Math.max(w0, h0))
+    const c = document.createElement('canvas')
+    c.width = Math.max(1, Math.round(w0 * k)); c.height = Math.max(1, Math.round(h0 * k))
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height)
+    if (img.close) img.close()
+    let q = 0.72, data = c.toDataURL('image/jpeg', q)
+    while (data.length > 560000 && q > 0.4) { q -= 0.1; data = c.toDataURL('image/jpeg', q) }
+    if (!/^data:image\/jpeg/.test(data)) throw new Error('no jpeg')
+    return { data, size: Math.round((data.length - 23) * 0.75), gps }
+  }
+  // the photo full size, with where it was: anyone signed in may open it
+  const rv = $('#receipt-view')
+  async function openReceipt(x, note) {
+    if (!rv) return
+    const me = meOf(), img = $('#rv-img'), wait = $('#rv-wait')
+    $('#rv-title').textContent = isPay(x) ? you(x.paid, me, true) + ' paid ' + you(toOf(x), me) : x.what || 'Receipt'
+    img.hidden = true; img.removeAttribute('src')
+    wait.hidden = !x.photo; wait.textContent = 'Loading the photo…'
+    $('#rv-place').hidden = !x.loc
+    if (x.loc) { $('#rv-place-text').textContent = placeName(x.loc.lat, x.loc.lng) + (x.loc.src === 'phone' ? ' (where the phone was)' : ''); $('#rv-map').href = gmaps(x.loc.lat + ',' + x.loc.lng) }
+    $('#rv-note').hidden = !note; $('#rv-note').textContent = note || ''
+    if (rv.showModal) rv.showModal(); else rv.setAttribute('open', '')
+    if (!x.photo) return
+    try { img.src = x.photoData || await loadReceipt(x.id); img.hidden = false; wait.hidden = true } catch { wait.textContent = navigator.onLine ? 'Could not load the photo.' : 'The photo needs internet.' }
+  }
+  if (rv) {
+    $('[data-rv-close]', rv).addEventListener('click', () => rv.close())
+    rv.addEventListener('click', (e) => { if (e.target === rv) rv.close() })
+  }
+  // the Receipt part of the sheet, from st
+  function syncReceipt() {
+    if (!st || !form) return
+    const fresh = !!st.photoNew, old = !fresh && st.hadPhoto && !st.photoRemoved, img = fx('#sp-photo-img')
+    fx('#sp-photo-prev').hidden = !(fresh || old)
+    $('span', fx('#sp-photo-btn')).textContent = fresh || old ? 'Replace photo' : 'Add photo'
+    if (fresh) { img.src = st.photoNew.data; img.dataset.for = 'new'; fx('#sp-photo-size').textContent = 'Shrunk to ' + Math.max(1, Math.round(st.photoNew.size / 1024)) + ' KB · sent when you save' }
+    else if (old) {
+      fx('#sp-photo-size').textContent = 'Saved with the expense'
+      if (img.dataset.for !== st.id) {
+        const id = st.id
+        img.removeAttribute('src'); img.dataset.for = id
+        loadReceipt(id).then((d) => { if (st && st.id === id && !st.photoNew) img.src = d }).catch(() => { if (st && st.id === id) fx('#sp-photo-size').textContent = 'Saved with the expense (shows with internet)' })
+      }
+    }
+    const loc = st.loc
+    fx('#sp-loc').hidden = !loc
+    if (loc) { fx('#sp-loc-text').textContent = placeName(loc.lat, loc.lng) + (loc.src === 'phone' ? ' (where the phone was)' : ' (from the photo)'); fx('#sp-loc-map').href = gmaps(loc.lat + ',' + loc.lng) }
+    fx('#sp-noloc').hidden = !(fresh && !loc) // a new photo with no place in it: offer the phone's
+  }
+  // where the phone is now, for a photo with no place in it; quiet: only when location is already allowed
+  function useHere(s, quiet) {
+    if (!navigator.geolocation) { if (!quiet) toast('Location is not available on this phone'); return }
+    if (!quiet) fx('#sp-noloc-text').textContent = 'Finding where you are…'
+    navigator.geolocation.getCurrentPosition((pos) => {
+      if (st !== s) return
+      s.loc = { lat: pos.coords.latitude, lng: pos.coords.longitude, src: 'phone' }; s.locDirty = true; s.dirty = true
+      syncReceipt()
+    }, () => { fx('#sp-noloc-text').textContent = 'No location in the photo.'; if (!quiet) toast('Location is not available. Allow it for the guide in the phone settings.') }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 120000 })
+  }
+  const autoHere = (s) => { if (navigator.permissions) navigator.permissions.query({ name: 'geolocation' }).then((r) => { if (r.state === 'granted') useHere(s, true) }).catch(() => {}) }
+  // a photo cannot wait on the phone for internet: an expense saved offline goes without it
+  const withoutPhoto = (x) => { const had = !!x.receipt; delete x.receipt; return had }
   // the sheet as an expense or payment to send, or an error shown in it
   function collect() {
     const err = (m, el) => { fx('#sp-err').className = 'sheet-err'; fx('#sp-err').textContent = m; if (el) fx(el).focus(); return null }
@@ -2209,6 +2342,9 @@
     const x = { amount, cur: st.cur, paid: st.paid, date }
     if (st.id) x.id = st.id; else x.newId = st.newId
     if (st.cur !== 'THB') x.rate = st.rate
+    if (st.photoNew) x.receipt = st.photoNew.data
+    else if (st.photoRemoved) x.receipt = null
+    if (st.locDirty) x.loc = st.loc ? { lat: st.loc.lat, lng: st.loc.lng, src: st.loc.src } : null
     if (st.kind === 'pay') {
       if (!st.to || st.to === st.paid) return err('Pick who got the money')
       // the amount that was filled in to settle, unchanged: the rate that settles it to the satang
@@ -2263,6 +2399,10 @@
         if (!box.hidden) fx('#sp-rate').focus()
         return
       }
+      if (t.id === 'sp-photo-open') { openReceipt({ ...(st.x || {}), id: st.id, what: fx('#sp-what').value.trim() || 'Receipt', kind: st.kind, paid: st.paid, split: [st.to], photo: 1, photoData: st.photoNew ? st.photoNew.data : null, loc: st.loc }); return }
+      if (t.id === 'sp-photo-del') { st.photoNew = null; st.photoRemoved = st.hadPhoto; st.dirty = true; syncReceipt(); return }
+      if (t.id === 'sp-loc-del') { st.loc = null; st.locDirty = true; st.dirty = true; syncReceipt(); return }
+      if (t.id === 'sp-loc-here') { useHere(st, false); return }
       st.dirty = true; st.dupOk = false; st.curOk = false
       if (d.kind) {
         if (d.kind === 'pay' && st.kind !== 'pay') st.curBefore = st.cur
@@ -2306,6 +2446,23 @@
       if (st && st.kind === 'spend' && !fx('#sp-what').value.trim()) fx('#sp-what').focus(); else e.target.blur()
     })
     fx('#sp-what').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); e.target.blur() } })
+    fx('#sp-photo').addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0], s = st
+      e.target.value = '' // the same photo can be picked again
+      if (!file || !s) return
+      fx('#sp-photo-prev').hidden = false; fx('#sp-photo-size').textContent = 'Shrinking…'
+      try {
+        const p = await shrinkPhoto(file)
+        if (st !== s) return
+        s.photoNew = { data: p.data, size: p.size }; s.photoRemoved = false; s.dirty = true
+        if (p.gps) { s.loc = { lat: p.gps.lat, lng: p.gps.lng, src: 'photo' }; s.locDirty = true } else if (!s.loc) autoHere(s)
+        syncReceipt()
+      } catch {
+        if (st !== s) return
+        fx('#sp-err').className = 'sheet-err'; fx('#sp-err').textContent = 'This photo cannot be read here. Try another one, or a screenshot of it.'
+        syncReceipt()
+      }
+    })
     form.addEventListener('input', (e) => {
       if (!st) return
       st.dirty = true; st.dupOk = false; st.curOk = false
@@ -2343,20 +2500,22 @@
       if (!isPay(x)) store.set('spendLastSplit', x.split)
       if (s.local) {
         // not sent yet: changed on this phone (it was sent meanwhile: the change goes as a change, same id)
-        if (!outbox.some((o) => o.spend.newId === s.local)) { delete x.newId; x.id = s.local; s.id = s.local; s.local = '' } else { s.saved = true; keepOnPhone(me, x, 'Changed on this phone'); closeSheet(); flushOutbox(); return }
+        if (!outbox.some((o) => o.spend.newId === s.local)) { delete x.newId; x.id = s.local; s.id = s.local; s.local = '' } else { s.saved = true; keepOnPhone(me, x, withoutPhoto(x) ? 'Changed on this phone, without the photo (a photo needs internet)' : 'Changed on this phone'); closeSheet(); flushOutbox(); return }
       }
       s.saving = true; setSaving(true)
       try {
-        const j = await post({ name: me, spend: x }, 15000)
+        const j = await post({ name: me, spend: x }, x.receipt ? 30000 : 15000)
         s.saved = true
+        if (x.receipt && (x.id || j.id)) receiptCache.set(x.id || j.id, x.receipt)
+        if (x.receipt === null && x.id) receiptCache.delete(x.id)
         if (st === s) closeSheet()
         applyShared(j)
         if (navigator.vibrate) navigator.vibrate(15)
-        toast(x.id ? 'Saved' : isPay(x) ? 'Payment added' : 'Expense added', !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
+        toast((x.id ? 'Saved' : isPay(x) ? 'Payment added' : 'Expense added') + (x.receipt ? ' with the photo' : ''), !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
         refocus(x.id ? '[data-spend-id="' + CSS.escape(x.id) + '"]' : '#spend-add')
       } catch (er) {
         const mine = st === s
-        if (!x.id && !(er.status >= 400 && er.status < 500)) { s.saved = true; if (mine) closeSheet(); keepOnPhone(me, x, 'Saved on this phone. It goes to the group later.') }
+        if (!x.id && !(er.status >= 400 && er.status < 500)) { s.saved = true; if (mine) closeSheet(); keepOnPhone(me, x, withoutPhoto(x) ? 'Saved on this phone without the photo (a photo needs internet). It goes to the group later.' : 'Saved on this phone. It goes to the group later.') }
         else if (er.status === 404) { s.saved = true; if (mine) closeSheet(); toast(er.message); loadVotes() }
         else if (mine) { fx('#sp-err').className = 'sheet-err'; fx('#sp-err').textContent = er.status >= 400 && er.status < 500 ? er.message : navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.' }
         else toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.')
@@ -2383,7 +2542,7 @@
   async function restore(x) {
     $('#toast').hidden = true; holdNews = 0
     const back = { what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, newId: /^[a-z0-9]{8,24}$/.test(x.id) ? x.id : newSpendId() }
-    ;['cat', 'rate', 'shares', 'amounts', 'kind'].forEach((k) => { if (x[k]) back[k] = x[k] })
+    ;['cat', 'rate', 'shares', 'amounts', 'kind', 'loc'].forEach((k) => { if (x[k]) back[k] = x[k] })
     try { applyShared(await post({ name: meOf(), spend: back, keep: { by: x.by, t: x.t, editedBy: x.editedBy, editedT: x.editedT } })); toast('Back in the list') } catch { failed() }
   }
   if (spendBox && canVote) {
@@ -2401,6 +2560,7 @@
         store.set('spendMe', d.me); picking = false; renderSpend()
       }
       else if ('meChange' in d) { if (store.get('guideName', '') && $('#sign-out')) $('#sign-out').click(); else { picking = true; renderSpend() } }
+      else if (d.receipt) { const x = rows.find((y) => y.id === d.receipt); if (x) openReceipt(x) }
       else if (d.confirm) confirmRow(d.confirm, true)
       else if (d.reject) confirmRow(d.reject, false)
       else if ('confirmAll' in d) {
@@ -2420,7 +2580,8 @@
           // who may change it, each name once (so it never says "Vardan K or Vardan K")
           const who2 = [...new Set([isPay(x) ? x.paid : x.by, x.paid, ADMIN].filter(Boolean))]
           const whoStr = who2.length > 1 ? who2.slice(0, -1).join(', ') + ' or ' + who2.at(-1) : who2[0]
-          toast([waitOf(x, me) || 'Approved', 'Only ' + whoStr + ' can change it'].join('. ') + '.')
+          const why = [waitOf(x, me) || 'Approved', 'Only ' + whoStr + ' can change it'].join('. ') + '.'
+          if (x.photo || x.loc) openReceipt(x, why); else toast(why)
         }
         else if (x && me) openSheet(x)
         else { const card = $('#spend-me'); card.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' }); card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash') }

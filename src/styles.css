@@ -384,6 +384,10 @@ details.note-add summary svg { width: 16px; height: 16px; }
 .x-main b { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: anywhere; font: 600 15px/1.25 var(--font-body); }
 .x-main small, .x-amt small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; color: var(--ink-2); }
 .x-main small { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; white-space: normal; }
+.x-photo { display: inline-block; margin-left: 6px; vertical-align: -2px; color: var(--sea-text); }
+.x-photo svg { width: 15px; height: 15px; }
+.x-main .x-place { display: flex; align-items: center; gap: 3px; -webkit-line-clamp: unset; white-space: nowrap; }
+.x-place svg { flex: none; width: 13px; height: 13px; }
 .x-amt { justify-items: end; text-align: right; }
 .x-amt b { white-space: nowrap; font: 600 15px/1.2 var(--font-display); }
 .x-amt small.good { color: var(--good-ink); }
@@ -521,6 +525,26 @@ html.sheet-open { overflow: hidden; }
 .day-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .day-pick .chip { min-height: 44px; padding: 0 12px; font-size: 13.5px; }
 .day-pick input { flex: 1 1 130px; min-width: 0; min-height: 44px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font: 400 16px/1.2 var(--font-body); appearance: none; -webkit-appearance: none; }
+/* the receipt photo in the sheet: picked, shrunk and shown before Save */
+.receipt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.receipt-add { position: relative; cursor: pointer; }
+.receipt-add input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 0; }
+.receipt-add:focus-within { outline: 2px solid var(--sea); outline-offset: 2px; }
+.receipt-prev { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.receipt-prev[hidden] { display: none; }
+.receipt-thumb { flex: none; width: 56px; height: 56px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); overflow: hidden; cursor: zoom-in; }
+.receipt-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.receipt-thumb img:not([src]) { visibility: hidden; }
+.receipt-info { display: grid; gap: 0; min-width: 0; }
+.receipt-info small { font-size: 12.5px; color: var(--ink-2); }
+.receipt-info .link-btn { padding: 4px 0; font-size: 13.5px; }
+.receipt-loc { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 2px 6px; margin: 0; font-size: 13.5px; color: var(--ink); }
+.receipt-acts { grid-column: 2; display: flex; align-items: center; gap: 16px; }
+.receipt-noloc { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; margin: 0; font-size: 13.5px; color: var(--ink-2); }
+.receipt-loc[hidden], .receipt-noloc[hidden] { display: none; }
+.receipt-loc svg { width: 16px; height: 16px; margin-top: 1px; color: var(--sea-text); }
+.receipt-loc a { color: var(--sea-text); font-weight: 500; }
+.receipt-loc .link-btn, .receipt-noloc .link-btn { padding: 4px 0; font-size: 13.5px; }
 .sheet-meta { font-size: 12.5px; color: var(--ink-2); }
 .sheet-err { color: var(--alert); font-size: 14px; font-weight: 500; }
 .sheet-err.ask { color: var(--warn-ink); }
@@ -943,6 +967,23 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .todo li .av, .todo li .x-ic { width: 34px; height: 34px; }
 .todo-main b { display: block; font-size: 15px; }
 .todo-main small { color: var(--ink-2); font-size: 13px; }
+.todo-receipt { display: inline-flex; align-items: center; gap: 4px; padding: 4px 0 0; font-size: 13.5px; }
+.todo-receipt svg { width: 15px; height: 15px; }
+/* a receipt photo, full size, with where it was */
+.receipt-view { width: min(560px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 0; border: 0; border-radius: var(--radius); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); overflow: hidden; }
+.receipt-view[open] { display: flex; flex-direction: column; }
+.receipt-view::backdrop { background: rgb(0 0 0 / 0.6); }
+.rv-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 10px 8px 16px; }
+.rv-head h2 { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 18px; }
+.rv-head .icon-btn { border: 0; background: var(--surface-2); border-radius: 50%; width: 38px; height: 38px; }
+.rv-body { display: grid; gap: 10px; padding: 0 16px 16px; overflow-y: auto; }
+.rv-body img { display: block; width: 100%; height: auto; max-height: 70dvh; object-fit: contain; border-radius: 10px; background: var(--surface-2); }
+.rv-body .note { margin: 0; }
+.rv-place { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 2px 6px; margin: 0; font-size: 14px; }
+.rv-place a { grid-column: 2; justify-self: start; }
+.rv-place[hidden], .rv-body img[hidden], .rv-body .note[hidden] { display: none; }
+.rv-place svg { width: 17px; height: 17px; margin-top: 1px; color: var(--sea-text); }
+.rv-place a { color: var(--sea-text); font-weight: 500; }
 .todo-btns { grid-column: 2; display: flex; flex-wrap: wrap; gap: 8px; }
 .xrow.waiting .x-amt b { color: var(--ink-2); font-weight: 600; }
 .xrow .wait { color: var(--warn-ink); font-weight: 600; }

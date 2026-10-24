@@ -3,6 +3,7 @@
 // Usage: node tools/votes-test.mjs
 import http from 'node:http'
 import fs from 'node:fs'
+import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import puppeteer from 'puppeteer-core'
@@ -25,6 +26,7 @@ const upstash = http.createServer((req, res) => {
     const [cmd, key, ...a] = JSON.parse(body)
     let result
     if (cmd === 'EXPIRE') { res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result: 1 })) }
+    if (cmd === 'DEL') { result = [key, ...a].filter((k) => [strings, hashes, lists].map((m) => m.delete(k)).some(Boolean)).length; res.writeHead(200, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ result })) }
     if (['GET', 'SET', 'INCR', 'DECR'].includes(cmd)) {
       if (cmd === 'GET') result = strings.has(key) ? strings.get(key) : null
       else if (cmd === 'SET') { if (a.includes('NX') && strings.has(key)) result = null; else { strings.set(key, String(a[0])); result = 'OK' } }
@@ -340,6 +342,51 @@ async function approveAll() {
     [{ kind: 'pay', split: ['Hovo'], cat: 'food' }, 'a category on a payment'], [{ what: '' }, 'an expense with no title']]) {
     r = await call(api, 'POST', { name: 'Ani', spend: { what: 'Taxi', amount: 1000, cur: 'THB', paid: 'Mes', split: ['Mes'], date: '2027-01-15', ...bad } })
     check('refused: ' + why, r.status === 400, r.status + ' ' + JSON.stringify(r.json?.error))
+  }
+  // receipt photos: kept under their own key (not in every answer), with a place; a photo or a place alone does not
+  // need approving again; only who may change the expense sets one; deleting the expense deletes it, Undo brings it back
+  {
+    const jpg = 'data:image/jpeg;base64,' + '/9j/' + 'A'.repeat(4000), jpg2 = 'data:image/jpeg;base64,' + '/9j/' + 'B'.repeat(3000)
+    const lunch = { what: 'Receipt lunch', amount: 900, cur: 'THB', paid: 'Mes', split: ['Mes', 'Lara'], date: '2027-01-17', newId: 'rcptlunch0001' }
+    r = await as('Armen', { spend: { ...lunch, receipt: jpg, loc: { lat: 7.8964321987, lng: 98.2961, src: 'photo' } } })
+    const row = (j) => (j.spend || []).find((x) => x.id === 'rcptlunch0001') || {}
+    let x = row(r.json)
+    check('a receipt photo is saved apart: the row says photo and where, the answers do not carry the photo', r.status === 200 && x.photo === 1 && x.loc?.lat === 7.896432 && x.loc.lng === 98.2961 && x.loc.src === 'photo' && !JSON.stringify(r.json).includes('AAAA'), JSON.stringify(x))
+    r = await as('Lara', null, '?receipt=rcptlunch0001')
+    check('anyone signed in opens the photo', r.status === 200 && r.json.data === jpg, r.status + ' ' + String(r.json?.data).slice(0, 40))
+    r = { status: (await rawApi.GET(new Request('http://x/api/votes?receipt=rcptlunch0001'))).status }
+    check('the photo needs signing in', r.status === 401, String(r.status))
+    await as('Vardan K', { confirm: 'rcptlunch0001' })
+    r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, receipt: jpg2, loc: { lat: 7.9, lng: 98.3, src: 'phone' } } })
+    x = row(r.json)
+    const photo2 = (await as('Lara', null, '?receipt=rcptlunch0001')).json?.data
+    check('a new photo and place alone keep the approval', r.status === 200 && x.ok?.by === 'Vardan K' && x.photo === 1 && x.loc?.src === 'phone' && photo2 === jpg2, JSON.stringify(x))
+    r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950 } })
+    x = row(r.json)
+    check('changing the amount needs approving again; the photo and place stay when left out', r.status === 200 && !x.ok && x.amount === 950 && x.photo === 1 && x.loc?.lat === 7.9, JSON.stringify(x))
+    r = await as('Lara', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950, receipt: jpg } })
+    const lara = r
+    r = await as('Lara', { spend: { ...lunch, amount: 950, receipt: jpg } }) // the same newId, sent again with a photo
+    check('only who may change the expense sets its photo (a resend with the same id too)', lara.status === 403 && r.status === 403 && (await as('Lara', null, '?receipt=rcptlunch0001')).json?.data === jpg2, lara.status + ' ' + r.status)
+    for (const [bad, why] of [[{ receipt: 'data:image/gif;base64,R0lGOD' }, 'a GIF'], [{ receipt: 'data:image/jpeg;base64,' + 'A'.repeat(1000001) }, 'a photo too big'], [{ receipt: 'data:image/jpeg;base64,<script>' }, 'a photo that is not base64'],
+      [{ receipt: 'https://example.com/a.jpg' }, 'a link in place of a photo'], [{ loc: { lat: 120, lng: 98 } }, 'a place off the globe'], [{ loc: { lat: 'x', lng: 98 } }, 'a place that is not numbers']]) {
+      r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950, ...bad } })
+      check('refused: ' + why, r.status === 400, r.status + ' ' + JSON.stringify(r.json?.error))
+    }
+    r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950, receipt: null, loc: null } })
+    x = row(r.json)
+    const gone = await as('Lara', null, '?receipt=rcptlunch0001')
+    check('null removes the photo and the place', r.status === 200 && !x.photo && !x.loc && gone.status === 404, JSON.stringify({ x, gone: gone.status }))
+    r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950, receipt: jpg } })
+    const before = row(r.json)
+    r = await as('Armen', { deleteSpend: 'rcptlunch0001' })
+    const deleted = await as('Lara', null, '?receipt=rcptlunch0001')
+    r = await as('Armen', { spend: { what: before.what, amount: before.amount, cur: before.cur, paid: before.paid, split: before.split, date: before.date, newId: 'rcptlunch0001' }, keep: { by: before.by, t: before.t } })
+    x = row(r.json)
+    const back = await as('Lara', null, '?receipt=rcptlunch0001')
+    check('deleting the expense deletes its photo; Undo brings it back', deleted.status === 404 && x.photo === 1 && back.json?.data === jpg && !strings.has('guide:receipt-undo:rcptlunch0001'), JSON.stringify({ deleted: deleted.status, x, back: back.status }))
+    await as('Armen', { deleteSpend: 'rcptlunch0001' })
+    check('the photo sizes are kept to the photos there are', !hashes.get('guide:receipts')?.has('rcptlunch0001'), JSON.stringify([...(hashes.get('guide:receipts') || [])]))
   }
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
   r = await call(api, 'GET')
@@ -1037,6 +1084,86 @@ apiDown = false
 await A.p.evaluate(() => window.dispatchEvent(new Event('online'))); await sleep(1200)
 const neverSent = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.filter((x) => x.what === 'Wrong one').length
 check('an unsent expense deleted on the phone never reaches the group', dropped.meta === 'Not sent yet' && dropped.box === 0 && dropped.rows === 0 && neverSent === 0, JSON.stringify({ dropped, neverSent }))
+// a receipt photo: picked in the sheet, shrunk at once (to 1600 px, the place read from it first), shown with where it
+// was, sent on Save; the row has a camera mark and the place; someone who cannot change it sees the photo
+{
+  // a big photo from a phone: a JPEG with the GPS place in its Exif (by Patong beach)
+  const big = await A.p.evaluate(() => {
+    const c = document.createElement('canvas'); c.width = 3000; c.height = 2250
+    const g = c.getContext('2d')
+    for (let y = 0; y < c.height; y += 25) for (let x = 0; x < c.width; x += 25) { g.fillStyle = `rgb(${(x * 7 + y) % 255},${(y * 3) % 255},${(x ^ y) % 255})`; g.fillRect(x, y, 25, 25) }
+    g.fillStyle = '#fff'; g.font = 'bold 200px sans-serif'; g.fillText('BILL 900', 300, 1100)
+    return c.toDataURL('image/jpeg', 0.95)
+  })
+  const withGps = (jpeg, lat, lng) => {
+    const rat = (v) => { const d = Math.floor(v), m = Math.floor((v - d) * 60); return [[d, 1], [m, 1], [Math.round(((v - d) * 60 - m) * 60000), 1000]] }
+    const t = Buffer.alloc(128)
+    t.write('II', 0); t.writeUInt16LE(42, 2); t.writeUInt32LE(8, 4)
+    t.writeUInt16LE(1, 8); t.writeUInt16LE(0x8825, 10); t.writeUInt16LE(4, 12); t.writeUInt32LE(1, 14); t.writeUInt32LE(26, 18) // IFD0: where the GPS part is
+    t.writeUInt16LE(4, 26)
+    ;[[1, 2, 2, 'N'], [2, 5, 3, 80], [3, 2, 2, 'E'], [4, 5, 3, 104]].forEach(([tag, type, n, v], i) => { const e = 28 + i * 12; t.writeUInt16LE(tag, e); t.writeUInt16LE(type, e + 2); t.writeUInt32LE(n, e + 4); if (typeof v === 'string') t.write(v + '\0', e + 8); else t.writeUInt32LE(v, e + 8) })
+    ;[[80, lat], [104, lng]].forEach(([at, v]) => rat(v).forEach(([a, b], i) => { t.writeUInt32LE(a, at + i * 8); t.writeUInt32LE(b, at + i * 8 + 4) }))
+    const app1 = Buffer.concat([Buffer.from([0xff, 0xe1, 0, 0]), Buffer.from('Exif\0\0', 'binary'), t])
+    app1.writeUInt16BE(app1.length - 2, 2)
+    return Buffer.concat([jpeg.subarray(0, 2), app1, jpeg.subarray(2)])
+  }
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'receipt-'))
+  const file = path.join(dir, 'bill.jpg'), plain = path.join(dir, 'screenshot.png')
+  fs.writeFileSync(file, withGps(Buffer.from(big.split(',')[1], 'base64'), 7.8961, 98.2963))
+  fs.writeFileSync(plain, Buffer.from((await A.p.evaluate(() => { const c = document.createElement('canvas'); c.width = 600; c.height = 900; const g = c.getContext('2d'); g.fillStyle = '#eee'; g.fillRect(0, 0, 600, 900); return c.toDataURL('image/png') })).split(',')[1], 'base64'))
+  const original = fs.statSync(file).size
+  await A.p.evaluate(async () => {
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms)), set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+    location.hash = 'spend'; await wait(150)
+    document.querySelector('#spend-seg [data-pane="list"]').click()
+    document.getElementById('spend-add').click(); await wait(150)
+    const f = document.getElementById('spend-form')
+    set(f.querySelector('#sp-amount'), '900'); f.querySelector('[data-cur="THB"]').click(); set(f.querySelector('#sp-what'), 'Lunch with a receipt'); f.querySelector('[data-paid="Lara"]').click()
+  })
+  await (await A.p.$('#sp-photo')).uploadFile(file)
+  await A.p.waitForFunction(() => /Shrunk to/.test(document.getElementById('sp-photo-size').textContent), { timeout: 15000 }).catch(() => {})
+  const picked = await A.p.evaluate(async () => {
+    const img = document.getElementById('sp-photo-img'); await img.decode().catch(() => {})
+    return { prev: !document.getElementById('sp-photo-prev').hidden, w: img.naturalWidth, h: img.naturalHeight, size: document.getElementById('sp-photo-size').textContent, btn: document.querySelector('#sp-photo-btn span').textContent, loc: document.getElementById('sp-loc').hidden ? '' : document.getElementById('sp-loc-text').textContent, map: document.getElementById('sp-loc-map').href, noloc: !document.getElementById('sp-noloc').hidden }
+  })
+  check('a picked photo is shrunk at once (1600 px, a few hundred KB), with the place from the photo and a map link', picked.prev && picked.w === 1600 && picked.h === 1200 && /Shrunk to \d+ KB/.test(picked.size) && Number(picked.size.match(/\d+/)[0]) <= 560 && picked.btn === 'Replace photo' && /^(Near|In) /.test(picked.loc) && /from the photo/.test(picked.loc) && /query=7\.8961/.test(picked.map) && !picked.noloc, JSON.stringify({ ...picked, original }))
+  await A.p.evaluate(() => { const f = document.getElementById('spend-form'); f.scrollTop = f.scrollHeight })
+  await A.p.screenshot({ path: path.join(dir, 'sheet.png') })
+  await A.p.evaluate(async () => { document.getElementById('sp-save').click(); await new Promise((r) => setTimeout(r, 1500)) })
+  const sv = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.find((x) => x.what === 'Lunch with a receipt') || {}
+  const photo = (await as('Hovo', null, '?receipt=' + sv.id)).json?.data || ''
+  const bytes = Buffer.from(photo.split(',')[1] || '', 'base64')
+  check('Save sends the shrunk photo (no Exif left in it) and the place', sv.photo === 1 && sv.loc?.src === 'photo' && Math.abs(sv.loc.lat - 7.8961) < 1e-4 && Math.abs(sv.loc.lng - 98.2963) < 1e-4 && /^data:image\/jpeg;base64,/.test(photo) && photo.length < 760000 && bytes.length < original / 2 && !bytes.includes(Buffer.from('Exif')), JSON.stringify({ sv, photo: photo.length, original }))
+  const listed = await A.p.evaluate(() => { const r = [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Lunch with a receipt/.test(c.textContent)); return { cam: !!r?.querySelector('.x-photo svg'), place: r?.querySelector('.x-place')?.textContent || '' } })
+  check('the row has a camera mark and the place', listed.cam && /^(Near|In) /.test(listed.place), JSON.stringify(listed))
+  // Hovo cannot change it: a tap shows the photo, the place and who can change it
+  await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
+  const seen = await B.p.evaluate(async () => {
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+    location.hash = 'spend'; await wait(150); document.querySelector('#spend-seg [data-pane="list"]').click()
+    ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Lunch with a receipt/.test(c.textContent)).click(); await wait(1200)
+    const img = document.getElementById('rv-img')
+    return { open: document.getElementById('receipt-view').open, sheet: document.getElementById('spend-sheet').open, img: !img.hidden && img.naturalWidth, place: document.getElementById('rv-place-text').textContent, note: document.getElementById('rv-note').textContent }
+  })
+  await B.p.screenshot({ path: path.join(dir, 'viewer.png') })
+  check('someone who cannot change it sees the photo, where it was, and who can change it', seen.open && !seen.sheet && seen.img === 1600 && /^(Near|In) /.test(seen.place) && /Only Lara or Vardan K can change it/.test(seen.note), JSON.stringify(seen))
+  await B.p.evaluate(() => document.querySelector('[data-rv-close]').click())
+  // a photo with no place in it (a screenshot): Use where I am now fills it from the phone
+  await A.p.evaluate(async () => { [...document.querySelectorAll('#spend-list .xrow')].find((c) => /Lunch with a receipt/.test(c.textContent)).click(); await new Promise((r) => setTimeout(r, 300)) })
+  const reopened = await A.p.evaluate(async () => { await new Promise((r) => setTimeout(r, 800)); return { size: document.getElementById('sp-photo-size').textContent, src: (document.getElementById('sp-photo-img').getAttribute('src') || '').slice(0, 23), loc: document.getElementById('sp-loc-text').textContent } })
+  await A.ctx.overridePermissions(base, ['geolocation']); await A.p.setGeolocation({ latitude: 7.8421, longitude: 98.3389 })
+  await (await A.p.$('#sp-photo')).uploadFile(plain)
+  await A.p.waitForFunction(() => /Shrunk to/.test(document.getElementById('sp-photo-size').textContent), { timeout: 15000 }).catch(() => {})
+  await A.p.evaluate(async () => { document.getElementById('sp-loc-del').click(); await new Promise((r) => setTimeout(r, 100)) })
+  const noPlace = await A.p.evaluate(() => !document.getElementById('sp-noloc').hidden)
+  await A.p.evaluate(async () => { document.getElementById('sp-loc-here').click(); await new Promise((r) => setTimeout(r, 800)) })
+  const here = await A.p.evaluate(() => document.getElementById('sp-loc').hidden ? '' : document.getElementById('sp-loc-text').textContent)
+  await A.p.evaluate(async () => { document.getElementById('sp-save').click(); await new Promise((r) => setTimeout(r, 1500)) })
+  const sv2 = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.find((x) => x.id === sv.id) || {}
+  check('opening it again shows the saved photo; a photo with no place: Use where I am now', reopened.size === 'Saved with the expense' && reopened.src === 'data:image/jpeg;base64,' && /from the photo/.test(reopened.loc) && noPlace && /where the phone was/.test(here) && sv2.loc?.src === 'phone' && Math.abs(sv2.loc.lat - 7.8421) < 1e-4 && sv2.photo === 1, JSON.stringify({ reopened, noPlace, here, loc: sv2.loc }))
+  await as('Vardan K', { deleteSpend: sv.id })
+  if (process.env.KEEP_SHOTS) console.log('  screenshots in ' + dir); else fs.rmSync(dir, { recursive: true, force: true })
+}
 // a phone with no password: the server says 401, the sign-in screen comes up and takes a name of the group (or its
 // other name) and the password
 const G = await person(false)

@@ -87,6 +87,7 @@ const ICON = {
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/>',
   star: '<path d="M12 3.6l2.6 5.3 5.8.85-4.2 4.1 1 5.8L12 16.9l-5.2 2.75 1-5.8-4.2-4.1 5.8-.85z"/>',
   pin: '<path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
+  camera: '<path d="M4 8.2h3.2l1.6-2.4h6.4l1.6 2.4H20V19H4z"/><circle cx="12" cy="13.3" r="3.3"/>',
   route: '<path d="M5 19.5c0-5.5 3.8-7 7-7h7.5M16 9l3.5 3.5L16 16"/>',
   ext: '<path d="M14 4h6v6M20 4l-8.5 8.5M18.5 14v4.5a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18.5V7a1.5 1.5 0 0 1 1.5-1.5H10"/>',
   clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/>',
@@ -846,7 +847,7 @@ ${seg('spend-seg', 'data-pane', [['list', 'Expenses'], ['balances', 'Balances'],
 <div class="spend-pane" data-pane-box="stats" hidden id="spend-stats"></div>
 </div>
 <button class="fab js-only" type="button" id="spend-add" hidden>${icon('plus')}<span>Add expense</span></button>
-<template id="spend-icons">${[...SPEND_CATS.map(([k]) => k), 'pay', 'check', 'next', 'plus'].map((k) => `<span data-i="${k}">${icon(SPEND_ICON[k] || k)}</span>`).join('')}</template>
+<template id="spend-icons">${[...SPEND_CATS.map(([k]) => k), 'pay', 'check', 'next', 'plus', 'camera', 'pin'].map((k) => `<span data-i="${k}">${icon(SPEND_ICON[k] || k)}</span>`).join('')}</template>
 </section>
 <dialog class="sheet js-only" id="spend-sheet" aria-labelledby="sheet-title"><form id="spend-form" novalidate autocomplete="off" data-noamd>
 <div class="sheet-head"><h2 id="sheet-title">New expense</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('close')}</button></div>
@@ -861,9 +862,17 @@ ${seg('sp-kind', 'data-kind', [['spend', 'Expense'], ['pay', 'Payment']], 'Expen
 <div class="field" data-only="pay"><span class="field-label" id="sp-to-l">To</span><div role="group" aria-labelledby="sp-to-l">${people('data-to')}</div></div>
 <div class="field" data-only="spend"><div class="field-row"><span class="field-label" id="sp-split-l">Split</span>${seg('sp-mode', 'data-mode', [['equal', 'Equally'], ['shares', 'Shares'], ['amounts', 'Amounts']], 'How to split')}</div><div id="sp-split" role="group" aria-labelledby="sp-split-l"></div><p class="split-sum" id="sp-sum" aria-live="polite"></p></div>
 <div class="field"><span class="field-label">Day</span><div class="day-pick"><button type="button" class="chip" data-day="0" aria-pressed="false">Today</button><button type="button" class="chip" data-day="-1" aria-pressed="false">Yesterday</button><input type="date" id="sp-date" name="date" required min="2026-06-01" max="2027-02-28" aria-label="Day"></div></div>
+<div class="field receipt-field"><span class="field-label" id="sp-photo-l">Receipt</span>
+<div class="receipt-row"><label class="btn small receipt-add" id="sp-photo-btn">${icon('camera')}<span>Add photo</span><input type="file" id="sp-photo" accept="image/*" aria-labelledby="sp-photo-l"></label>
+<div class="receipt-prev" id="sp-photo-prev" hidden><button class="receipt-thumb" type="button" id="sp-photo-open" aria-label="Open the receipt photo"><img id="sp-photo-img" alt=""></button><div class="receipt-info"><small id="sp-photo-size"></small><button class="link-btn" type="button" id="sp-photo-del">Remove photo</button></div></div></div>
+<p class="receipt-loc" id="sp-loc" hidden>${icon('pin')}<span id="sp-loc-text"></span><span class="receipt-acts"><a id="sp-loc-map" target="_blank" rel="noopener">Map</a><button class="link-btn" type="button" id="sp-loc-del">Remove place</button></span></p>
+<p class="receipt-noloc" id="sp-noloc" hidden><span id="sp-noloc-text">No location in the photo.</span> <button class="link-btn" type="button" id="sp-loc-here">Use where I am now</button></p>
+</div>
 <p class="sheet-meta" id="sp-meta" hidden></p>
 <div class="sheet-foot"><p class="sheet-err" id="sp-err" role="alert"></p><button class="btn quiet-danger" type="button" id="sp-delete" hidden>Delete</button><button class="btn primary" type="submit" id="sp-save">Save</button></div>
-</form></dialog>`
+</form></dialog>
+<dialog class="receipt-view js-only" id="receipt-view" aria-labelledby="rv-title"><div class="rv-head"><h2 id="rv-title">Receipt</h2><button class="icon-btn" type="button" data-rv-close aria-label="Close">${icon('close')}</button></div>
+<div class="rv-body"><p class="note" id="rv-wait">Loading the photo…</p><img id="rv-img" alt="Receipt photo" hidden><p class="rv-place" id="rv-place" hidden>${icon('pin')}<span id="rv-place-text"></span> <a id="rv-map" target="_blank" rel="noopener">Open in Google Maps</a></p><p class="note" id="rv-note" hidden></p></div></dialog>`
 }
 // Admin (website only, Vardan K): the activity log, filled in by src/app.js from the vote server (?audit=1): who did what,
 // when, from which IP, place and device, with filters, people and devices

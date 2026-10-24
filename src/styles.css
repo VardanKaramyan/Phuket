@@ -653,11 +653,14 @@ html.map-popup #back-to-card { display: none; }
 .f-bot { bottom: 0; border-radius: 0 0 0.16em 0.16em; }
 .f-up { top: 0; border-radius: 0.16em 0.16em 0 0; background: linear-gradient(#26363c, #1a272b); }
 .f-down { bottom: 0; border-radius: 0 0 0.16em 0.16em; background: linear-gradient(#1a272b, #10181b); }
+.flap > .f-face { top: 0; height: 100%; z-index: 1; } /* the whole digit in one piece, over the split halves, at rest */
 .flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; padding-top: 0.12em; } /* the font's digits sit high in their line */
 .f-top b, .f-up b { top: 0; }
 .f-bot b, .f-down b { bottom: 0; }
+.f-face b { height: 100%; top: 0; } /* the full digit, centred, with no split line through it */
 .f-fold { display: none; z-index: 2; backface-visibility: hidden; }
 .flap.go .f-fold { display: block; }
+.flap.go .f-face { display: none; } /* during the flip the split halves and folds take over */
 .f-up { transform-origin: 50% 100%; }
 .f-down { transform-origin: 50% 0; transform: rotateX(90deg); }
 .flap.go .f-up { animation: flap-up 0.3s ease-in forwards; }

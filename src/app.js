@@ -111,9 +111,11 @@
     const t = Math.floor(left / 1000)
     const d = Math.floor(t / 86400), h = Math.floor(t / 3600) % 24, m = Math.floor(t / 60) % 60, sec = t % 60
     if (before && pill) {
-      // the top bar: a small copy of the board, with the same flaps
+      // the top bar: a small copy of the board, with the same flaps. The build renders it already (so the first paint
+      // shows the clock, not the "Jan 2027" chip); here we only rebuild it if it is not there yet
+      root.classList.add('cd-live')
       if (!pill.classList.contains('live')) {
-        pill.classList.add('live'); root.classList.add('cd-live')
+        pill.classList.add('live')
         pill.innerHTML = '<span class="tb-board" aria-hidden="true">' + [['d', 'Days'], ['h', 'Hrs'], ['m', 'Min'], ['s', 'Sec']].map(([k, l], i) =>
           (i ? '<span class="pc-sep">:</span>' : '') + '<span class="tb-unit pc-' + k + '"><span class="pc-digits" data-cd="' + k + '"></span><small>' + l + '</small></span>').join('') + '</span>'
       }

@@ -1465,7 +1465,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .admin .stats-table tr.bad td:first-child { box-shadow: inset 3px 0 0 var(--alert); }</style>
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="#home"><span class="brand-mark">HKT</span><span class="brand-text"><b>Phuket</b><small>8–26 Jan</small></span></a>
-<a class="status-pill" id="trip-status" href="#home">Jan 2027</a>
+<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip"><span class="tb-board" aria-hidden="true"><span class="tb-unit pc-d"><span class="pc-digits" data-cd="d"><span class="flap"><span class="f-face"><b>7</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Days</small></span><span class="pc-sep">:</span><span class="tb-unit pc-h"><span class="pc-digits" data-cd="h"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Hrs</small></span><span class="pc-sep">:</span><span class="tb-unit pc-m"><span class="pc-digits" data-cd="m"><span class="flap"><span class="f-face"><b>5</b></span></span><span class="flap"><span class="f-face"><b>3</b></span></span></span><small>Min</small></span><span class="pc-sep">:</span><span class="tb-unit pc-s"><span class="pc-digits" data-cd="s"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Sec</small></span></span></a>
 <a class="icon-btn" href="#info" aria-label="Essentials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/></svg></a>
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
 </div></header>
@@ -7302,9 +7302,11 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     const t = Math.floor(left / 1000)
     const d = Math.floor(t / 86400), h = Math.floor(t / 3600) % 24, m = Math.floor(t / 60) % 60, sec = t % 60
     if (before && pill) {
-      // the top bar: a small copy of the board, with the same flaps
+      // the top bar: a small copy of the board, with the same flaps. The build renders it already (so the first paint
+      // shows the clock, not the "Jan 2027" chip); here we only rebuild it if it is not there yet
+      root.classList.add('cd-live')
       if (!pill.classList.contains('live')) {
-        pill.classList.add('live'); root.classList.add('cd-live')
+        pill.classList.add('live')
         pill.innerHTML = '<span class="tb-board" aria-hidden="true">' + [['d', 'Days'], ['h', 'Hrs'], ['m', 'Min'], ['s', 'Sec']].map(([k, l], i) =>
           (i ? '<span class="pc-sep">:</span>' : '') + '<span class="tb-unit pc-' + k + '"><span class="pc-digits" data-cd="' + k + '"></span><small>' + l + '</small></span>').join('') + '</span>'
       }

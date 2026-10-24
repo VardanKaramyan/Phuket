@@ -484,6 +484,8 @@ check('the first phone sees the other vote after a refresh', s.like === '1' && s
 await vote(A.p, 'like')
 s = await bar(A.p)
 check('tapping your own vote again takes it back', s.like === '0' && s.mine === '', JSON.stringify(s))
+// B refreshes first, so it has A's taken-back vote (its own 5-second refresh may not have come yet)
+await B.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1200)
 const picks = await B.p.evaluate(async () => { location.hash = 'stay'; await new Promise((r) => setTimeout(r, 300)); return document.getElementById('group-picks')?.textContent || '' })
 check('Group picks ranks the liked villa', /Light & Hope/.test(picks) && /1 like/.test(picks), JSON.stringify(picks.slice(0, 160)))
 // folded away by default; the summary says how many; a tap opens it

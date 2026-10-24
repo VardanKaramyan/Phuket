@@ -1165,11 +1165,21 @@ ${groups}
 </section>`
 }
 
+// the top bar countdown, rendered now (build time) so the first paint shows the clock, not a text chip; src/app.js keeps
+// it ticking. Only before the trip; during/after, the plain pill (app.js then shows "Day n" / "Trip done")
+const TRIP_START_MS = Date.parse(TRIP.start + 'T00:00:00+07:00')
+const beforeTrip = Date.now() < TRIP_START_MS
+function topClockHtml() {
+  const t = Math.floor(Math.max(0, TRIP_START_MS - Date.now()) / 1000)
+  const parts = [['d', Math.floor(t / 86400), 'Days'], ['h', Math.floor(t / 3600) % 24, 'Hrs'], ['m', Math.floor(t / 60) % 60, 'Min'], ['s', t % 60, 'Sec']]
+  const flaps = (v) => [...String(v).padStart(2, '0')].map((c) => `<span class="flap"><span class="f-face"><b>${c}</b></span></span>`).join('')
+  return `<span class="tb-board" aria-hidden="true">${parts.map(([k, v, label], i) => `${i ? '<span class="pc-sep">:</span>' : ''}<span class="tb-unit pc-${k}"><span class="pc-digits" data-cd="${k}">${flaps(v)}</span><small>${label}</small></span>`).join('')}</span>`
+}
 function chrome(body) {
   const tab = (id, ic, label) => `<li><a href="#${id}">${icon(ic)}<span>${label}</span></a></li>`
   return `<header class="topbar"><div class="topbar-in">
 <a class="brand" href="#home"><span class="brand-mark">HKT</span><span class="brand-text"><b>Phuket</b><small>${TRIP_LABEL.short}</small></span></a>
-<a class="status-pill" id="trip-status" href="#home">Jan 2027</a>
+${beforeTrip ? `<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip">${topClockHtml()}</a>` : '<a class="status-pill" id="trip-status" href="#home">Jan 2027</a>'}
 <a class="icon-btn" href="#info" aria-label="Essentials">${icon('info')}</a>
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark">${icon('theme')}</button>
 </div></header>
@@ -1323,7 +1333,7 @@ function page(build) {
   const tail = `<script type="application/json" id="guide-data">${data}</script>\n${satData}${leaflet}\n<script>${appJs}</script>`
   if (build === 'artifact') return `${title}\n${boot}\n<style>${css}</style>\n${body}\n${tail}\n`
   const head = `<!doctype html>
-<html lang="en">
+<html lang="en"${beforeTrip ? ' class="cd-live"' : ''}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

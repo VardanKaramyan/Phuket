@@ -250,8 +250,8 @@ const everything = async (db) => ({
 })
 async function logPush(db, rows) {
   if (!rows.length) return
-  await redis(db, ['LPUSH', LOG, ...rows.map((r) => JSON.stringify(r))])
-  await redis(db, ['LTRIM', LOG, 0, LOG_MAX - 1])
+  // trimmed only once it is over its size (LPUSH answers the new length): one command per write instead of two
+  if ((await redis(db, ['LPUSH', LOG, ...rows.map((r) => JSON.stringify(r))])) > LOG_MAX) await redis(db, ['LTRIM', LOG, 0, LOG_MAX - 1])
 }
 // a shared change: in the activity log, and the version goes up so every phone reloads
 async function changed(db, e, x, name, device) {
@@ -361,8 +361,8 @@ async function audit(db, request, rows) {
   if (!rows.length) return
   const base = { t: Date.now(), ...clientOf(request) }
   try {
-    await redis(db, ['LPUSH', AUDIT, ...rows.map((r) => JSON.stringify({ ...base, ...Object.fromEntries(Object.entries(r).filter(([, v]) => v !== '' && v != null)) }))])
-    await redis(db, ['LTRIM', AUDIT, 0, AUDIT_MAX - 1])
+    const len = await redis(db, ['LPUSH', AUDIT, ...rows.map((r) => JSON.stringify({ ...base, ...Object.fromEntries(Object.entries(r).filter(([, v]) => v !== '' && v != null)) }))])
+    if (len > AUDIT_MAX) await redis(db, ['LTRIM', AUDIT, 0, AUDIT_MAX - 1]) // trimmed only once over its size
   } catch { /* storage trouble: the request itself still answers */ }
 }
 // what the page says about the phone (sent with its visits): a few short values only

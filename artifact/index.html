@@ -1465,7 +1465,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .admin .stats-table tr.bad td:first-child { box-shadow: inset 3px 0 0 var(--alert); }</style>
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="#home"><span class="brand-mark">HKT</span><span class="brand-text"><b>Phuket</b><small>8–26 Jan</small></span></a>
-<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip"><span class="tb-board" aria-hidden="true"><span class="tb-unit pc-d"><span class="pc-digits" data-cd="d"><span class="flap"><span class="f-face"><b>7</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Days</small></span><span class="pc-sep">:</span><span class="tb-unit pc-h"><span class="pc-digits" data-cd="h"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Hrs</small></span><span class="pc-sep">:</span><span class="tb-unit pc-m"><span class="pc-digits" data-cd="m"><span class="flap"><span class="f-face"><b>5</b></span></span><span class="flap"><span class="f-face"><b>3</b></span></span></span><small>Min</small></span><span class="pc-sep">:</span><span class="tb-unit pc-s"><span class="pc-digits" data-cd="s"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Sec</small></span></span></a>
+<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip"><span class="tb-board" aria-hidden="true"><span class="tb-unit pc-d"><span class="pc-digits" data-cd="d"><span class="flap"><span class="f-face"><b>7</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Days</small></span><span class="pc-sep">:</span><span class="tb-unit pc-h"><span class="pc-digits" data-cd="h"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Hrs</small></span><span class="pc-sep">:</span><span class="tb-unit pc-m"><span class="pc-digits" data-cd="m"><span class="flap"><span class="f-face"><b>2</b></span></span><span class="flap"><span class="f-face"><b>2</b></span></span></span><small>Min</small></span><span class="pc-sep">:</span><span class="tb-unit pc-s"><span class="pc-digits" data-cd="s"><span class="flap"><span class="f-face"><b>5</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Sec</small></span></span></a>
 <a class="icon-btn" href="#info" aria-label="Essentials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/></svg></a>
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
 </div></header>
@@ -8362,7 +8362,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     if (!D.votes || !/^https?:$/.test(location.protocol)) return
     queue.push({ e, x: String(x || '').slice(0, 100) })
     clearTimeout(flushTimer)
-    if (queue.length >= 20) flush(); else flushTimer = setTimeout(flush, 6000)
+    if (queue.length >= 20) flush(); else flushTimer = setTimeout(flush, 20000) // in batches, to save database commands
   }
   addEventListener('pagehide', () => flush(true))
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(true) })
@@ -8591,8 +8591,10 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     }
   }
   // every few seconds: one small question (has anything changed since version ver?), and everything only if it has
+  let lastPoll = 0
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return
+    lastPoll = Date.now()
     try {
       const r = await fetch(D.votes + (ver ? '?ver=' + ver : ''), { cache: 'no-store', headers: keyHead() })
       if (r.status === 401) return showGate()
@@ -8784,10 +8786,21 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     renderNotes()
     syncPinUI()
     loadVotes()
-    // other people's changes: when the guide comes back to the front, and every 5 s while it is on screen
+    // other people's changes: when the guide comes back to the front, and while it is on screen every 5 s if you are
+    // using it (a tap, key or scroll in the last minute), every 20 s after a minute idle, every 60 s after 5 minutes.
+    // A touch after a pause asks at once. Each check is one database command, so idle phones cost much less
     window.addEventListener('focus', loadVotes)
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
-    setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 5000)
+    let lastActive = Date.now(), pollTimer = 0
+    const pollGap = () => { const idle = Date.now() - lastActive; return idle < 60000 ? 5000 : idle < 300000 ? 20000 : 60000 }
+    const schedulePoll = () => { clearTimeout(pollTimer); pollTimer = setTimeout(() => { if (document.visibilityState === 'visible') loadVotes(); schedulePoll() }, pollGap()) }
+    const wake = () => {
+      const wasIdle = Date.now() - lastActive > 60000
+      lastActive = Date.now()
+      if (wasIdle) { if (Date.now() - lastPoll > 5000) loadVotes(); schedulePoll() }
+    }
+    ;['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((ev) => addEventListener(ev, wake, { passive: true, capture: true }))
+    schedulePoll()
     track('visit', location.hash || '#home')
   }
 

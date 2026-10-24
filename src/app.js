@@ -1171,7 +1171,7 @@
     if (!D.votes || !/^https?:$/.test(location.protocol)) return
     queue.push({ e, x: String(x || '').slice(0, 100) })
     clearTimeout(flushTimer)
-    if (queue.length >= 20) flush(); else flushTimer = setTimeout(flush, 6000)
+    if (queue.length >= 20) flush(); else flushTimer = setTimeout(flush, 20000) // in batches, to save database commands
   }
   addEventListener('pagehide', () => flush(true))
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(true) })
@@ -1400,8 +1400,10 @@
     }
   }
   // every few seconds: one small question (has anything changed since version ver?), and everything only if it has
+  let lastPoll = 0
   async function loadVotes() {
     if (!canVote || !navigator.onLine) return
+    lastPoll = Date.now()
     try {
       const r = await fetch(D.votes + (ver ? '?ver=' + ver : ''), { cache: 'no-store', headers: keyHead() })
       if (r.status === 401) return showGate()
@@ -1593,10 +1595,21 @@
     renderNotes()
     syncPinUI()
     loadVotes()
-    // other people's changes: when the guide comes back to the front, and every 5 s while it is on screen
+    // other people's changes: when the guide comes back to the front, and while it is on screen every 5 s if you are
+    // using it (a tap, key or scroll in the last minute), every 20 s after a minute idle, every 60 s after 5 minutes.
+    // A touch after a pause asks at once. Each check is one database command, so idle phones cost much less
     window.addEventListener('focus', loadVotes)
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loadVotes() })
-    setInterval(() => { if (document.visibilityState === 'visible') loadVotes() }, 5000)
+    let lastActive = Date.now(), pollTimer = 0
+    const pollGap = () => { const idle = Date.now() - lastActive; return idle < 60000 ? 5000 : idle < 300000 ? 20000 : 60000 }
+    const schedulePoll = () => { clearTimeout(pollTimer); pollTimer = setTimeout(() => { if (document.visibilityState === 'visible') loadVotes(); schedulePoll() }, pollGap()) }
+    const wake = () => {
+      const wasIdle = Date.now() - lastActive > 60000
+      lastActive = Date.now()
+      if (wasIdle) { if (Date.now() - lastPoll > 5000) loadVotes(); schedulePoll() }
+    }
+    ;['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((ev) => addEventListener(ev, wake, { passive: true, capture: true }))
+    schedulePoll()
     track('visit', location.hash || '#home')
   }
 

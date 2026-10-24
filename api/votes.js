@@ -114,7 +114,7 @@ const NOTE_LEN = 500
 // 'guide:receipts' keeps each one's size, so the photos together stay well inside the database's space
 const RECEIPT = 'guide:receipt:'
 const RECEIPTS = 'guide:receipts'
-const RECEIPT_UNDO = 'guide:receipt-undo:' // a deleted expense's photo, for 15 minutes, so Undo brings it back
+const RECEIPT_UNDO = 'guide:receipt-undo:' // a deleted expense's photo, for 15 minutes, so Undo brings it back: { by, data }
 const RECEIPT_MAX = 1000000 // characters of one data URL (about 700 KB of image; the phone sends about 150-300 KB)
 const RECEIPTS_TOTAL = 150000000 // characters of all of them together (about 110 MB of images)
 const RECEIPT_RE = /^data:image\/(jpeg|webp|png);base64,[A-Za-z0-9+/]+=*$/
@@ -218,10 +218,16 @@ async function setReceipt(db, id, data) {
   if (data) { await redis(db, ['SET', RECEIPT + id, data]); await redis(db, ['HSET', RECEIPTS, id, String(data.length)]) }
   else { await redis(db, ['DEL', RECEIPT + id]); await redis(db, ['HDEL', RECEIPTS, id]) }
 }
+// the room left: the photos, and the copies kept for Undo ('undo:<id>' = '<size>:<until>', counted until they expire)
 async function receiptRoom(db, id, size) {
-  const flat = (await redis(db, ['HGETALL', RECEIPTS])) || []
+  const flat = (await redis(db, ['HGETALL', RECEIPTS])) || [], now = Date.now(), old = []
   let total = 0
-  for (let i = 0; i < flat.length; i += 2) if (flat[i] !== id) total += Number(flat[i + 1]) || 0
+  for (let i = 0; i < flat.length; i += 2) {
+    if (flat[i] === id) continue
+    const [n, until] = String(flat[i + 1]).split(':')
+    if (until && Number(until) < now) old.push(flat[i]); else total += Number(n) || 0
+  }
+  if (old.length) await redis(db, ['HDEL', RECEIPTS, ...old])
   return total + size <= RECEIPTS_TOTAL
 }
 // an uneven split: { name: number } for exactly the people in split, each at most 2 decimals; null when it is not one
@@ -582,7 +588,12 @@ async function handle(db, request, body, auth, ctx) {
         ctx.x = spendLabel(x)
         if (x.paid && !mayChange(x)) return reply(403, { error: onlyWho(x) + ' can delete this' })
         await redis(db, ['HDEL', SPEND, id])
-        if (x.photo) { const data = await redis(db, ['GET', RECEIPT + id]); if (data) await redis(db, ['SET', RECEIPT_UNDO + id, data, 'EX', 900]); await setReceipt(db, id, null) }
+        if (x.photo) {
+          // kept for Undo by who deleted it, and still counted in the room for photos until it expires
+          const data = await redis(db, ['GET', RECEIPT + id])
+          if (data) { await redis(db, ['SET', RECEIPT_UNDO + id, JSON.stringify({ by: who, data }), 'EX', 900]); await redis(db, ['HSET', RECEIPTS, 'undo:' + id, data.length + ':' + (Date.now() + 900000)]) }
+          await setReceipt(db, id, null)
+        }
         await changed(db, x.kind === 'pay' ? 'unpay' : 'unspend', spendLabel(x), who, body.device)
         return reply(200, await everything(db))
       }
@@ -655,11 +666,14 @@ async function handle(db, request, body, auth, ctx) {
         const k = body.keep && typeof body.keep === 'object' ? body.keep : {}, past = (t) => Number.isFinite(t) && t > 0 && t <= Date.now()
         const by = cleanName(k.by).slice(0, 40), eb = cleanName(k.editedBy).slice(0, 40)
         const meta = { n: by || who, t: by && past(k.t) ? k.t : Date.now(), ...(by && eb && past(k.editedT) ? { en: eb, et: k.editedT } : {}), ...marks() }
-        // Undo after a delete: the photo kept for it comes back with the row
-        const undone = body.keep && receipt === undefined ? await redis(db, ['GET', RECEIPT_UNDO + id]) : null
+        // Undo after a delete: the photo kept for it comes back with the row (only for who deleted it, or the admin)
+        let undone = null
+        if (body.keep && receipt === undefined) {
+          try { const u = JSON.parse((await redis(db, ['GET', RECEIPT_UNDO + id])) || 'null'); if (u && (admin || same(u.by, who))) undone = u.data } catch { /* nothing kept */ }
+        }
         if (await redis(db, ['HSETNX', SPEND, id, JSON.stringify({ ...row, ...extras(), ...(undone ? { photo: 1 } : {}), ...meta })])) {
           if (receipt) await setReceipt(db, id, receipt)
-          if (undone) { await setReceipt(db, id, undone); await redis(db, ['DEL', RECEIPT_UNDO + id]) }
+          if (undone) { await setReceipt(db, id, undone); await redis(db, ['DEL', RECEIPT_UNDO + id]); await redis(db, ['HDEL', RECEIPTS, 'undo:' + id]) }
           await changed(db, pay ? 'pay' : 'spend', spendLabel(row), who, body.device)
         } else {
           let old = {}

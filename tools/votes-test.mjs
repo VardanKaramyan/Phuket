@@ -380,12 +380,17 @@ async function approveAll() {
     r = await as('Armen', { spend: { ...lunch, id: 'rcptlunch0001', newId: undefined, amount: 950, receipt: jpg } })
     const before = row(r.json)
     r = await as('Armen', { deleteSpend: 'rcptlunch0001' })
-    const deleted = await as('Lara', null, '?receipt=rcptlunch0001')
+    const deleted = await as('Lara', null, '?receipt=rcptlunch0001'), counted = hashes.get('guide:receipts')?.get('undo:rcptlunch0001') || ''
     r = await as('Armen', { spend: { what: before.what, amount: before.amount, cur: before.cur, paid: before.paid, split: before.split, date: before.date, newId: 'rcptlunch0001' }, keep: { by: before.by, t: before.t } })
     x = row(r.json)
     const back = await as('Lara', null, '?receipt=rcptlunch0001')
-    check('deleting the expense deletes its photo; Undo brings it back', deleted.status === 404 && x.photo === 1 && back.json?.data === jpg && !strings.has('guide:receipt-undo:rcptlunch0001'), JSON.stringify({ deleted: deleted.status, x, back: back.status }))
+    check('deleting the expense deletes its photo (its Undo copy still counts in the room); Undo brings it back', deleted.status === 404 && /^4027:\d+$/.test(counted) && x.photo === 1 && back.json?.data === jpg && !strings.has('guide:receipt-undo:rcptlunch0001') && !hashes.get('guide:receipts')?.has('undo:rcptlunch0001'), JSON.stringify({ deleted: deleted.status, counted, x, back: back.status }))
+    // someone else re-adding a deleted expense with its id does not get its photo
     await as('Armen', { deleteSpend: 'rcptlunch0001' })
+    r = await as('Lara', { spend: { what: before.what, amount: before.amount, cur: before.cur, paid: before.paid, split: before.split, date: before.date, newId: 'rcptlunch0001' }, keep: { by: before.by, t: before.t } })
+    x = row(r.json)
+    check('only who deleted it gets the photo back with Undo', r.status === 200 && !x.photo && (await as('Lara', null, '?receipt=rcptlunch0001')).status === 404, JSON.stringify(x))
+    await as('Vardan K', { deleteSpend: 'rcptlunch0001' })
     check('the photo sizes are kept to the photos there are', !hashes.get('guide:receipts')?.has('rcptlunch0001'), JSON.stringify([...(hashes.get('guide:receipts') || [])]))
   }
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply

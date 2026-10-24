@@ -657,7 +657,6 @@ border-bottom: 1px solid var(--line);
 .tb-board .pc-digits { gap: 2px; }
 .tb-board .pc-sep { color: var(--ink-2); height: 1.2em; line-height: 1.2em; }
 .tb-board .flap { width: 0.74em; height: 1.2em; }
-.tb-board .flap::after { height: 1px; top: calc(50% - 0.5px); background: rgba(0, 0, 0, 0.35); }
 .tb-board .flap { border-radius: 0.2em; box-shadow: 0 0.06em 0 rgba(0, 0, 0, 0.4), 0 0.12em 0.3em rgba(0, 0, 0, 0.22); }
 @media (max-width: 559px) { .cd-live .brand-text { display: none; } }
 .icon-btn { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; cursor: pointer; flex: none; }
@@ -1160,7 +1159,6 @@ html.map-popup #back-to-card { display: none; }
 .flap b { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; font-weight: 700; padding-top: 0.12em; }
 .f-top b, .f-up b { top: 0; }
 .f-bot b, .f-down b { bottom: 0; }
-.flap::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 1px); height: 2px; background: rgba(0, 0, 0, 0.6); z-index: 3; }
 .f-fold { display: none; z-index: 2; backface-visibility: hidden; }
 .flap.go .f-fold { display: block; }
 .f-up { transform-origin: 50% 100%; }

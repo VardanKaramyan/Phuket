@@ -384,7 +384,7 @@ async function approveAll() {
     r = await as('Armen', { spend: { what: before.what, amount: before.amount, cur: before.cur, paid: before.paid, split: before.split, date: before.date, newId: 'rcptlunch0001' }, keep: { by: before.by, t: before.t } })
     x = row(r.json)
     const back = await as('Lara', null, '?receipt=rcptlunch0001')
-    check('deleting the expense deletes its photo (its Undo copy still counts in the room); Undo brings it back', deleted.status === 404 && /^4027:\d+$/.test(counted) && x.photo === 1 && back.json?.data === jpg && !strings.has('guide:receipt-undo:rcptlunch0001') && !hashes.get('guide:receipts')?.has('undo:rcptlunch0001'), JSON.stringify({ deleted: deleted.status, counted, x, back: back.status }))
+    check('deleting the expense deletes its photo (its Undo copy still counts in the room); Undo brings it back', deleted.status === 404 && /^4027:\d+$/.test(counted) && x.photo === 1 && back.json?.data === jpg && !strings.has('guide:spend-undo:rcptlunch0001') && !hashes.get('guide:receipts')?.has('undo:rcptlunch0001'), JSON.stringify({ deleted: deleted.status, counted, x, back: back.status }))
     // someone else re-adding a deleted expense with its id does not get its photo
     await as('Armen', { deleteSpend: 'rcptlunch0001' })
     r = await as('Lara', { spend: { what: before.what, amount: before.amount, cur: before.cur, paid: before.paid, split: before.split, date: before.date, newId: 'rcptlunch0001' }, keep: { by: before.by, t: before.t } })
@@ -392,6 +392,32 @@ async function approveAll() {
     check('only who deleted it gets the photo back with Undo', r.status === 200 && !x.photo && (await as('Lara', null, '?receipt=rcptlunch0001')).status === 404, JSON.stringify(x))
     await as('Vardan K', { deleteSpend: 'rcptlunch0001' })
     check('the photo sizes are kept to the photos there are', !hashes.get('guide:receipts')?.has('rcptlunch0001'), JSON.stringify([...(hashes.get('guide:receipts') || [])]))
+  }
+  // the admin adds an expense for someone else: it is theirs (they may change it), with who entered it; nobody else may
+  {
+    const taxi = { what: 'Taxi for Hovo', amount: 400, cur: 'THB', paid: 'Hovo', split: ['Hovo', 'Mes'], date: '2027-01-18' }
+    r = await as('Armen', { spend: { ...taxi, by: 'Hovo' } })
+    check('only the admin adds an expense for someone else', r.status === 403 && r.json.error === 'Only Vardan K can add an expense for someone else', JSON.stringify(r.json))
+    for (const [bad, why] of [[{ by: 'Zed' }, 'someone not in the group'], [{ kind: 'pay', what: '', split: ['Mes'], by: 'Hovo' }, 'a payment']]) {
+      r = await as('Vardan K', { spend: { ...taxi, ...bad } })
+      check('refused: added for ' + why, r.status === 400, r.status + ' ' + JSON.stringify(r.json?.error))
+    }
+    r = await as('Vardan K', { spend: { ...taxi, by: 'Hovo', newId: 'forhovo00001' } })
+    const fx = (j) => (j.spend || []).find((x) => x.id === 'forhovo00001') || {}
+    let x = fx(r.json)
+    check('the admin adds it for Hovo: added by Hovo, entered by Vardan K, approved, and the news says for whom', r.status === 200 && x.by === 'Hovo' && x.via === 'Vardan K' && x.ok?.by === 'Vardan K' && r.json.recent?.[0]?.e === 'spend' && r.json.recent[0].n === 'Vardan K' && /\(for Hovo\)/.test(r.json.recent[0].x), JSON.stringify({ x, news: r.json.recent?.[0] }))
+    r = await as('Hovo', { spend: { ...taxi, amount: 450, id: 'forhovo00001' } })
+    x = fx(r.json)
+    check('Hovo may change an expense added for him', r.status === 200 && x.amount === 450 && x.by === 'Hovo' && x.via === 'Vardan K' && x.editedBy === 'Hovo', JSON.stringify(x))
+    // Undo puts back who added it from what the server kept, not from what the phone says
+    r = await as('Hovo', { deleteSpend: 'forhovo00001' })
+    r = await as('Hovo', { spend: { ...taxi, amount: 450, newId: 'forhovo00001' }, keep: { by: 'Lara', t: 1 } })
+    x = fx(r.json)
+    check('Undo brings back who added it and who entered it (the phone cannot say another name)', r.status === 200 && x.by === 'Hovo' && x.via === 'Vardan K' && x.t > 1, JSON.stringify(x))
+    r = await as('Armen', { spend: { ...taxi, what: 'Fake undo', newId: 'fakeundo0001' }, keep: { by: 'Lara', t: 1 } })
+    x = (r.json.spend || []).find((y) => y.id === 'fakeundo0001') || {}
+    check('an Undo with nothing deleted is added by who sends it', r.status === 200 && x.by === 'Armen' && !x.via, JSON.stringify(x))
+    for (const id of ['forhovo00001', 'fakeundo0001']) await as('Vardan K', { deleteSpend: id })
   }
   // live updates: every shared change bumps a version and goes in the activity log; ?ver= answers "same" cheaply
   r = await call(api, 'GET')
@@ -1209,6 +1235,30 @@ const admin = await G.p.evaluate(async () => {
 })
 check('Vardan K signs in only with his own password', adminGate[0].shown && /Wrong/.test(adminGate[0].err) && !adminGate[1].shown && adminGate[1].me === 'Vardan K' && admin.admin === true, JSON.stringify(adminGate))
 check('the admin: the links, the log with IP and place, the sign-ins with the password tried, people, and the overview', admin.link && admin.rows > 20 && /198\.51\.100\.4/.test(admin.more) && /Rawai, TH/.test(admin.more) && /Vardan K/.test(admin.more) && /wrong|test-pass/.test(admin.signins) && admin.people.includes('Vardan K') && admin.overview >= 4 && admin.admin === true, JSON.stringify({ ...admin, more: admin.more.slice(0, 160), signins: admin.signins.slice(0, 160) }))
+// the admin's sheet: Added by (only his, only for a new expense); picking Hovo makes Hovo the payer too, until Paid by is picked
+const forHovo = await G.p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms)), set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }
+  location.hash = 'spend'; await wait(300)
+  document.querySelector('#spend-seg [data-pane="list"]').click()
+  document.getElementById('spend-add').click(); await wait(200)
+  const f = document.getElementById('spend-form'), field = f.querySelector('#sp-by-field')
+  const shown = !field.hidden, before = f.querySelector('#sp-by-val').textContent
+  f.querySelector('#sp-by-row').click(); await wait(50)
+  f.querySelector('[data-by="Hovo"]').click(); await wait(50)
+  const paid = f.querySelector('#sp-paid-val').textContent, by = f.querySelector('#sp-by-val').textContent
+  set(f.querySelector('#sp-amount'), '300'); f.querySelector('[data-cur="THB"]').click(); set(f.querySelector('#sp-what'), 'Water for Hovo')
+  f.querySelector('#sp-save').click(); await wait(1200)
+  const toast = document.querySelector('.toast')?.textContent || ''
+  ;[...document.querySelectorAll('#spend-list .xrow')].find((c) => /Water for Hovo/.test(c.textContent)).click(); await wait(300)
+  const meta = f.querySelector('#sp-meta').textContent, onChange = !f.querySelector('#sp-by-field').hidden
+  document.querySelector('#spend-sheet [data-sheet-close]').click(); await wait(100)
+  return { shown, before, paid, by, toast, meta, onChange }
+})
+const hovoRow = (await (await api.GET(new Request('http://x/api/votes'))).json()).spend.find((x) => x.what === 'Water for Hovo') || {}
+check('the admin adds an expense for Hovo: Added by in his sheet, Hovo paid by default, saved as Hovo\'s, entered by him', forHovo.shown && /You/.test(forHovo.before) && /Hovo/.test(forHovo.by) && /Hovo/.test(forHovo.paid) && /Expense added for Hovo/.test(forHovo.toast) && hovoRow.by === 'Hovo' && hovoRow.via === 'Vardan K' && hovoRow.paid === 'Hovo' && /Added by Hovo \(entered by you\)/.test(forHovo.meta) && !forHovo.onChange, JSON.stringify({ forHovo, hovoRow }))
+const others = await A.p.evaluate(async () => { location.hash = 'spend'; await new Promise((r) => setTimeout(r, 200)); document.getElementById('spend-add').click(); await new Promise((r) => setTimeout(r, 200)); const h = document.getElementById('sp-by-field').hidden; document.querySelector('#spend-sheet [data-sheet-close]').click(); return h })
+check('nobody else sees Added by', others === true, String(others))
+if (hovoRow.id) await as('Vardan K', { deleteSpend: hovoRow.id })
 for (const x of [A, B, C, G]) if (x.errors.length) check('no page errors', false, x.errors.join(' | '))
 await b.close(); site.close(); upstash.close()
 console.log(failed ? `VOTES TEST FAILED: ${failed}` : 'VOTES TEST PASSED')

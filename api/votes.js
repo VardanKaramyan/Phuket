@@ -17,7 +17,8 @@
 //   POST /api/votes { name, deleteSpend: '<expense id>' }         -> deletes an expense (who added it, who paid it, or the admin)
 //        spend may also carry receipt: a data URL (a photo of the bill, shrunk on the phone: JPEG, WebP or PNG) to set or
 //        replace it, or null to remove it, and loc: { lat, lng, src: 'photo' | 'phone' } (where it was) or null; left out,
-//        both stay as they are. The photo is kept under its own key and the row only says photo: 1
+//        both stay as they are. The photo is kept under its own key and the row only says photo: 1. A new expense
+//        may carry by: '<name>' (the admin only): added for that person, who may then change it like their own
 //   GET  /api/votes?receipt=<expense id> -> { data } the receipt photo (anyone signed in)
 //   POST /api/votes { name, confirm: '<id>' } / { name, reject: '<id>' } -> a payment's receiver says they got it (or not);
 //        the admin approves (or rejects) any expense or payment. An expense counts once the admin approved it, a payment
@@ -114,7 +115,9 @@ const NOTE_LEN = 500
 // 'guide:receipts' keeps each one's size, so the photos together stay well inside the database's space
 const RECEIPT = 'guide:receipt:'
 const RECEIPTS = 'guide:receipts'
-const RECEIPT_UNDO = 'guide:receipt-undo:' // a deleted expense's photo, for 15 minutes, so Undo brings it back: { by, data }
+// a deleted expense's who-added-it-and-when (and its photo), for 15 minutes, so Undo puts it back as it was:
+// { by: who deleted it, n, t, en, et, nb, data }
+const SPEND_UNDO = 'guide:spend-undo:'
 const RECEIPT_MAX = 1000000 // characters of one data URL (about 700 KB of image; the phone sends about 150-300 KB)
 const RECEIPTS_TOTAL = 150000000 // characters of all of them together (about 110 MB of images)
 const RECEIPT_RE = /^data:image\/(jpeg|webp|png);base64,[A-Za-z0-9+/]+=*$/
@@ -203,7 +206,7 @@ async function allSpend(db) {
       out.push({ id: flat[i], what: x.what, amount: x.amount, cur: x.cur, paid: x.paid, split: x.split, date: x.date, by: x.n, t: x.t,
         ...(x.cat ? { cat: x.cat } : {}), ...(x.rate ? { rate: x.rate } : {}), ...(x.shares ? { shares: x.shares } : {}), ...(x.amounts ? { amounts: x.amounts } : {}),
         ...(x.kind ? { kind: x.kind } : {}), ...(x.en ? { editedBy: x.en, editedT: x.et } : {}),
-        ...(x.photo ? { photo: 1 } : {}), ...(x.loc ? { loc: x.loc } : {}),
+        ...(x.photo ? { photo: 1 } : {}), ...(x.loc ? { loc: x.loc } : {}), ...(x.nb ? { via: x.nb } : {}),
         ...Object.fromEntries(['ok', 'got', 'no'].filter((k) => x[k] && x[k].n).map((k) => [k, { by: x[k].n, t: x[k].t }])) })
     } catch { /* skip a broken row */ }
   }
@@ -212,7 +215,7 @@ async function allSpend(db) {
 const spendLabel = (x) => `${x.kind === 'pay' ? `${x.paid} paid ${(x.split || [])[0] || ''}` : x.what || 'an expense'} · ${Number(x.amount || 0).toLocaleString('en-US', { minimumFractionDigits: Number.isInteger(Number(x.amount)) ? 0 : 2, maximumFractionDigits: 2 })} ${x.cur || ''}`.trim()
 // the money part of a saved row (without who and when, the approvals, the photo and the place), to compare with what a
 // phone sends: a new photo or place alone is not a change that needs approving again
-const spendBody = ({ n, t, en, et, ok, got, no, photo, loc, ...row }) => row
+const spendBody = ({ n, t, en, et, nb, ok, got, no, photo, loc, ...row }) => row
 // store, replace or remove an expense's receipt photo, keeping the sizes so all of them stay inside RECEIPTS_TOTAL
 async function setReceipt(db, id, data) {
   if (data) { await redis(db, ['SET', RECEIPT + id, data]); await redis(db, ['HSET', RECEIPTS, id, String(data.length)]) }
@@ -588,12 +591,11 @@ async function handle(db, request, body, auth, ctx) {
         ctx.x = spendLabel(x)
         if (x.paid && !mayChange(x)) return reply(403, { error: onlyWho(x) + ' can delete this' })
         await redis(db, ['HDEL', SPEND, id])
-        if (x.photo) {
-          // kept for Undo by who deleted it, and still counted in the room for photos until it expires
-          const data = await redis(db, ['GET', RECEIPT + id])
-          if (data) { await redis(db, ['SET', RECEIPT_UNDO + id, JSON.stringify({ by: who, data }), 'EX', 900]); await redis(db, ['HSET', RECEIPTS, 'undo:' + id, data.length + ':' + (Date.now() + 900000)]) }
-          await setReceipt(db, id, null)
-        }
+        // kept for Undo by who deleted it; the photo still counts in the room for photos until it expires
+        const data = x.photo ? await redis(db, ['GET', RECEIPT + id]) : null
+        await redis(db, ['SET', SPEND_UNDO + id, JSON.stringify({ by: who, n: x.n, t: x.t, en: x.en, et: x.et, nb: x.nb, ...(data ? { data } : {}) }), 'EX', 900])
+        if (data) await redis(db, ['HSET', RECEIPTS, 'undo:' + id, data.length + ':' + (Date.now() + 900000)])
+        if (x.photo) await setReceipt(db, id, null)
         await changed(db, x.kind === 'pay' ? 'unpay' : 'unspend', spendLabel(x), who, body.device)
         return reply(200, await everything(db))
       }
@@ -624,6 +626,10 @@ async function handle(db, request, body, auth, ctx) {
       if (shares === false || amounts === false || (shares && amounts) || (pay && (shares || amounts))) return reply(400, { error: 'Shares or amounts above 0 for exactly the people in the split' })
       if (amounts && Math.round(Object.values(amounts).reduce((a, v) => a + v, 0) * 100) !== Math.round(amount * 100)) return reply(400, { error: 'The amounts must add up to the total' })
       if (pay && !admin && !same(paid, who)) return reply(403, { error: 'You can only add a payment you made' })
+      // by: a new expense added for someone else (only the admin), so it is theirs to change
+      const forWho = s.by == null || s.by === '' || s.id || same(String(s.by), who) ? '' : String(s.by)
+      if (forWho && !admin) return reply(403, { error: 'Only ' + ADMIN + ' can add an expense for someone else' })
+      if (forWho && (pay || !PEOPLE.includes(forWho))) return reply(400, { error: 'Add it for one of the group' })
       // the receipt photo: a data URL to set or replace it, null to remove it, left out to keep it
       const receipt = s.receipt === undefined ? undefined : s.receipt === null ? null : String(s.receipt)
       if (receipt && (receipt.length > RECEIPT_MAX || !RECEIPT_RE.test(receipt))) return reply(400, { error: 'A photo (JPEG, WebP or PNG) of up to about 700 KB, please' })
@@ -645,7 +651,8 @@ async function handle(db, request, body, auth, ctx) {
       // the approvals after a change: kept when only the photo or the place changed, else the admin's (or none)
       const marksAfter = (old) => (JSON.stringify(spendBody(old)) === JSON.stringify(row) ? Object.fromEntries(['ok', 'got', 'no'].filter((k) => old[k]).map((k) => [k, old[k]])) : marks())
       if (receipt && !(await receiptRoom(db, String(s.id || s.newId || ''), receipt.length))) return reply(413, { error: 'There is no more room for receipt photos' })
-      if (receipt !== undefined || loc !== undefined) ctx.x = spendLabel(row) + (receipt ? ' · with a photo' : receipt === null ? ' · photo removed' : '') + (loc ? ' · with a place' : '')
+      const label = spendLabel(row) + (forWho ? ' (for ' + forWho + ')' : '')
+      if (receipt !== undefined || loc !== undefined || forWho) ctx.x = label + (receipt ? ' · with a photo' : receipt === null ? ' · photo removed' : '') + (loc ? ' · with a place' : '')
       let id = ''
       if (s.id) {
         id = String(s.id).slice(0, 40)
@@ -654,7 +661,7 @@ async function handle(db, request, body, auth, ctx) {
         let old = {}
         try { old = JSON.parse(raw) } catch { /* a broken row */ }
         if (old.paid && !mayChange(old)) return reply(403, { error: onlyWho(old) + ' can change this' })
-        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, ...extras(old), n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now(), ...marksAfter(old) })])
+        await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, ...extras(old), n: old.n || who, t: old.t || Date.now(), ...(old.nb ? { nb: old.nb } : {}), en: who, et: Date.now(), ...marksAfter(old) })])
         if (receipt !== undefined) await setReceipt(db, id, receipt)
         await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
       } else {
@@ -662,19 +669,18 @@ async function handle(db, request, body, auth, ctx) {
         // the answer) is added once; sent again with other content (changed on that phone meanwhile), it is a change
         id = s.newId ? String(s.newId) : Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
         if ((await redis(db, ['HLEN', SPEND])) >= MAX_SPEND) return reply(507, { error: 'Too many expenses saved' })
-        // keep: Undo after a delete puts it back as it was, with who added (and changed) it and when
-        const k = body.keep && typeof body.keep === 'object' ? body.keep : {}, past = (t) => Number.isFinite(t) && t > 0 && t <= Date.now()
-        const by = cleanName(k.by).slice(0, 40), eb = cleanName(k.editedBy).slice(0, 40)
-        const meta = { n: by || who, t: by && past(k.t) ? k.t : Date.now(), ...(by && eb && past(k.editedT) ? { en: eb, et: k.editedT } : {}), ...marks() }
-        // Undo after a delete: the photo kept for it comes back with the row (only for who deleted it, or the admin)
-        let undone = null
-        if (body.keep && receipt === undefined) {
-          try { const u = JSON.parse((await redis(db, ['GET', RECEIPT_UNDO + id])) || 'null'); if (u && (admin || same(u.by, who))) undone = u.data } catch { /* nothing kept */ }
-        }
+        // keep: Undo after a delete puts it back as it was, with who added (and changed) it and when, and its photo,
+        // from what the server kept (only for who deleted it, or the admin; what the phone sends is not trusted)
+        let undo = null
+        if (body.keep) { try { const u = JSON.parse((await redis(db, ['GET', SPEND_UNDO + id])) || 'null'); if (u && (admin || same(u.by, who))) undo = u } catch { /* nothing kept */ } }
+        const undone = undo && receipt === undefined ? undo.data || null : null
+        const meta = undo ? { n: undo.n || who, t: undo.t || Date.now(), ...(undo.en ? { en: undo.en, et: undo.et } : {}), ...(undo.nb ? { nb: undo.nb } : {}), ...marks() }
+          : { n: forWho || who, t: Date.now(), ...(forWho ? { nb: who } : {}), ...marks() }
         if (await redis(db, ['HSETNX', SPEND, id, JSON.stringify({ ...row, ...extras(), ...(undone ? { photo: 1 } : {}), ...meta })])) {
           if (receipt) await setReceipt(db, id, receipt)
-          if (undone) { await setReceipt(db, id, undone); await redis(db, ['DEL', RECEIPT_UNDO + id]); await redis(db, ['HDEL', RECEIPTS, 'undo:' + id]) }
-          await changed(db, pay ? 'pay' : 'spend', spendLabel(row), who, body.device)
+          if (undone) await setReceipt(db, id, undone)
+          if (undo) { await redis(db, ['DEL', SPEND_UNDO + id]); await redis(db, ['HDEL', RECEIPTS, 'undo:' + id]) }
+          await changed(db, pay ? 'pay' : 'spend', label, who, body.device)
         } else {
           let old = {}
           try { old = JSON.parse((await redis(db, ['HGET', SPEND, id])) || '{}') } catch { /* a broken row */ }
@@ -683,7 +689,7 @@ async function handle(db, request, body, auth, ctx) {
           if (moved || receipt !== undefined) {
             if (old.paid && !mayChange(old)) return reply(403, { error: onlyWho(old) + ' can change this' })
             if (moved) {
-              await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, ...extras(old), n: old.n || who, t: old.t || Date.now(), en: who, et: Date.now(), ...marksAfter(old) })])
+              await redis(db, ['HSET', SPEND, id, JSON.stringify({ ...row, ...extras(old), n: old.n || who, t: old.t || Date.now(), ...(old.nb ? { nb: old.nb } : {}), en: who, et: Date.now(), ...marksAfter(old) })])
               await changed(db, pay ? 'repay' : 'respend', spendLabel(row), who, body.device)
             }
             if (receipt !== undefined) await setReceipt(db, id, receipt)

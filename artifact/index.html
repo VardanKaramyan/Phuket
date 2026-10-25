@@ -1504,7 +1504,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .admin .stats-table tr.bad td:first-child { box-shadow: inset 3px 0 0 var(--alert); }</style>
 <header class="topbar"><div class="topbar-in">
 <a class="brand" href="#home"><span class="brand-mark">HKT</span><span class="brand-text"><b>Phuket</b><small>8–26 Jan</small></span></a>
-<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip"><span class="tb-board" aria-hidden="true"><span class="tb-unit pc-d"><span class="pc-digits" data-cd="d"><span class="flap"><span class="f-face"><b>7</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Days</small></span><span class="pc-sep">:</span><span class="tb-unit pc-h"><span class="pc-digits" data-cd="h"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>3</b></span></span></span><small>Hrs</small></span><span class="pc-sep">:</span><span class="tb-unit pc-m"><span class="pc-digits" data-cd="m"><span class="flap"><span class="f-face"><b>4</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Min</small></span><span class="pc-sep">:</span><span class="tb-unit pc-s"><span class="pc-digits" data-cd="s"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>0</b></span></span></span><small>Sec</small></span></span></a>
+<a class="status-pill live" id="trip-status" href="#home" aria-label="counting down to the trip"><span class="tb-board" aria-hidden="true"><span class="tb-unit pc-d"><span class="pc-digits" data-cd="d"><span class="flap"><span class="f-face"><b>7</b></span></span><span class="flap"><span class="f-face"><b>4</b></span></span></span><small>Days</small></span><span class="pc-sep">:</span><span class="tb-unit pc-h"><span class="pc-digits" data-cd="h"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>6</b></span></span></span><small>Hrs</small></span><span class="pc-sep">:</span><span class="tb-unit pc-m"><span class="pc-digits" data-cd="m"><span class="flap"><span class="f-face"><b>5</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Min</small></span><span class="pc-sep">:</span><span class="tb-unit pc-s"><span class="pc-digits" data-cd="s"><span class="flap"><span class="f-face"><b>0</b></span></span><span class="flap"><span class="f-face"><b>5</b></span></span></span><small>Sec</small></span></span></a>
 <a class="icon-btn" href="#info" aria-label="Essentials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/></svg></a>
 <button class="icon-btn js-only" type="button" id="theme-btn" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
 </div></header>
@@ -8986,7 +8986,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
   function shownSpend() {
     const have = new Set(spend.map((x) => x.id)), local = outbox.filter((o) => !have.has(o.spend.newId)) // the server has it: its row shows
     if (!local.length) return spend
-    return local.map((o) => ({ ...o.spend, id: 'local:' + o.spend.newId, by: o.name, t: o.t, pending: true })).concat(spend)
+    return local.map((o) => ({ ...o.spend, id: 'local:' + o.spend.newId, by: o.spend.by || o.name, t: o.t, pending: true })).concat(spend)
       .sort((a, b) => String(b.date).localeCompare(String(a.date)) || (b.t || 0) - (a.t || 0))
   }
   function keepOnPhone(name, x, msg) {
@@ -9304,6 +9304,8 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
       : { newId: newSpendId(), kind: kind || 'spend', cur: CURS.includes(store.get('spendLastCur', 'THB')) ? store.get('spendLastCur', 'THB') : 'THB', paid: (pre && (pre.paid || pre.from)) || me, to: (pre && pre.to) || '', split: new Set(dayIn(0) > groupEnd && last.length ? last : PEOPLE), mode: 'equal', shares: {}, locked: {}, cat: '', picked: false }
     if (!x) st.rate = midOf(st.cur)
     st.opener = document.activeElement
+    st.by = x && x.pending ? x.by || me : me // not sent yet: still new, so still for whom it was
+    st.paidPicked = !!x || !!(pre && (pre.paid || pre.from))
     Object.assign(st, { photoNew: null, photoRemoved: false, hadPhoto: !!(x && x.photo && !x.pending), loc: x && x.loc ? x.loc : null, locDirty: false })
     fx('#sp-photo-img').removeAttribute('src'); fx('#sp-photo-img').dataset.for = ''
     fx('#sp-noloc-text').textContent = 'No location in the photo.'
@@ -9312,10 +9314,11 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     fx('#sp-date').value = x ? x.date : dayIn(0)
     fx('#sp-err').textContent = ''
     fx('#sp-meta').hidden = !x
-    fx('#sp-meta').textContent = !x ? '' : x.pending ? 'Not sent yet' : 'Added by ' + you(x.by || 'someone', me) + (x.editedBy ? ' · changed by ' + you(x.editedBy, me) : '')
+    fx('#sp-meta').textContent = !x ? '' : x.pending ? 'Not sent yet' : 'Added by ' + you(x.by || 'someone', me) + (x.via ? ' (entered by ' + you(x.via, me) + ')' : '') + (x.editedBy ? ' · changed by ' + you(x.editedBy, me) : '')
     fx('#sp-rate-box').hidden = true
     fx('#sp-cats').hidden = true
     fx('#sp-paid-box').hidden = true
+    fx('#sp-by-box').hidden = true
     setSaving(false)
     if (pre && pre.cents) fillPay(pre.cents)
     else if (st.kind === 'pay' && !x) prefillPay()
@@ -9334,7 +9337,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     st = { ...d.s, dirty: true, discard: false, saved: false, opener: document.activeElement }
     fx('#sp-amount').value = d.amount; fx('#sp-what').value = d.what; fx('#sp-date').value = d.date
     fx('#sp-err').textContent = ''; fx('#sp-meta').hidden = true
-    fx('#sp-rate-box').hidden = true; fx('#sp-cats').hidden = true; fx('#sp-paid-box').hidden = true
+    fx('#sp-rate-box').hidden = true; fx('#sp-cats').hidden = true; fx('#sp-paid-box').hidden = true; fx('#sp-by-box').hidden = true
     setSaving(false)
     syncSheet(true)
     sheet.showModal(); form.scrollTop = 0; root.classList.add('sheet-open'); history.pushState({ sheet: 1 }, ''); kb()
@@ -9378,6 +9381,13 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     fx('#sp-paid-row').disabled = pay && !isAdmin() // a payment is from you: only the admin adds one for someone else
     if (pay && !isAdmin()) fx('#sp-paid-box').hidden = true
     $$('[data-paid]', form).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.paid === st.paid)))
+    // Added by: the admin adds an expense for someone else (it is theirs then, to change or delete)
+    const forAny = isAdmin() && !st.id && !pay
+    fx('#sp-by-field').hidden = !forAny
+    if (!forAny) { fx('#sp-by-box').hidden = true; st.by = me }
+    fx('#sp-by-val').innerHTML = av(st.by) + '<b>' + esc(you(st.by, me, true)) + '</b>'
+    fx('#sp-by-row').setAttribute('aria-expanded', String(!fx('#sp-by-box').hidden))
+    $$('[data-by]', form).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.by === st.by)))
     $$('[data-to]', form).forEach((b) => { b.setAttribute('aria-pressed', String(b.dataset.to === st.to)); b.disabled = b.dataset.to === st.paid })
     // the category: a tile by What was it (guessed from the words until someone picks one); a tap opens the 8
     const cat = st.picked ? st.cat : guessCat(fx('#sp-what').value), tile = fx('#sp-cat')
@@ -9586,6 +9596,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
     let split = PEOPLE.filter((p) => st.split.has(p))
     if (!split.length) return err('Pick who shares it')
     x.what = what
+    if (st.by && st.by !== meOf() && isAdmin() && !st.id) x.by = st.by
     if (st.picked) x.cat = st.cat
     if (st.mode === 'shares') {
       const sh = Object.fromEntries(split.map((p) => [p, st.shares[p] || 1]))
@@ -9620,6 +9631,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
       const d = t.dataset
       // opening or closing a part is not a change
       if (t.id === 'sp-paid-row') { fx('#sp-paid-box').hidden = !fx('#sp-paid-box').hidden; syncSheet(false); return }
+      if (t.id === 'sp-by-row') { fx('#sp-by-box').hidden = !fx('#sp-by-box').hidden; syncSheet(false); return }
       if (t.id === 'sp-cat') { fx('#sp-cats').hidden = !fx('#sp-cats').hidden; syncSheet(false); return }
       if (t.id === 'sp-rate-btn') {
         const box = fx('#sp-rate-box')
@@ -9647,7 +9659,8 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
         st.cur = d.cur; st.curPicked = true; st.rate = midOf(d.cur); st.rateTyped = false; fx('#sp-rate-box').hidden = true
         if (st.kind === 'pay' && st.exact && !st.typed) fillPay(st.exact.cents, d.cur)
       } else if (d.cat) { st.cat = d.cat; st.picked = true; fx('#sp-cats').hidden = true }
-      else if (d.paid) { st.paid = d.paid; fx('#sp-paid-box').hidden = true; if (st.to === st.paid) st.to = ''; if (st.kind === 'pay' && !st.x) prefillPay() }
+      else if (d.by) { st.by = d.by; fx('#sp-by-box').hidden = true; if (!st.paidPicked) st.paid = d.by }
+      else if (d.paid) { st.paid = d.paid; st.paidPicked = true; fx('#sp-paid-box').hidden = true; if (st.to === st.paid) st.to = ''; if (st.kind === 'pay' && !st.x) prefillPay() }
       else if (d.to) { st.to = d.to; st.toPicked = true; if (!st.x && !st.typed) prefillPay() }
       else if (d.mode) { st.mode = d.mode; syncSheet(true); return }
       else if (d.splitSet) { st.split = new Set(d.splitSet === 'all' ? PEOPLE : lastSplit()); syncSheet(true); return }
@@ -9741,7 +9754,7 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
         if (st === s) closeSheet()
         applyShared(j)
         if (navigator.vibrate) navigator.vibrate(15)
-        toast((x.id ? 'Saved' : isPay(x) ? 'Payment added' : 'Expense added') + (x.receipt ? ' with the photo' : ''), !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
+        toast((x.id ? 'Saved' : isPay(x) ? 'Payment added' : 'Expense added') + (x.by ? ' for ' + x.by : '') + (x.receipt ? ' with the photo' : ''), !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
         refocus(x.id ? '[data-spend-id="' + CSS.escape(x.id) + '"]' : '#spend-add')
       } catch (er) {
         const mine = st === s

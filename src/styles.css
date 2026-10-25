@@ -231,6 +231,9 @@ details.more summary { cursor: pointer; padding-block: 11px; font: 600 13px/1.4 
 details.more summary::-webkit-details-marker { display: none; }
 details.more summary::after { content: "+"; font-size: 16px; }
 details.more[open] summary::after { content: "–"; }
+.ug-scale { max-width: 68ch; margin-top: 12px; }
+.ug-scale ul { display: grid; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; font-size: 14px; color: var(--ink-2); }
+.ug-scale b { margin-right: 4px; color: var(--ink); font-variant-numeric: tabular-nums; }
 details.more ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 5px; font-size: 14.5px; }
 .links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 14px; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 2px; }

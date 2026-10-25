@@ -91,6 +91,10 @@ for (const c of cl) {
   if (!c.description) warn('clubs:' + c.id, 'no description')
   for (const id of c.events || []) if (!ev.some((e) => e.id === id)) warn('clubs:' + c.id, `night ${id} is not in data/events.json`)
 }
+// every night and club has its underground score by the user's taste (data/underground.json)
+const ug = rd('data/underground.json', { events: {}, clubs: {} })
+for (const e of ev) if (!(ug.events || {})[e.id]) warn('events:' + e.id, 'no score in data/underground.json')
+for (const c of cl) if (!(ug.clubs || {})[c.id]) warn('clubs:' + c.id, 'no score in data/underground.json')
 const ar = rd('data/areas.json', { items: [] }).items
 checkIds('areas', ar)
 for (const id of Object.keys(areaPoly)) if (!ar.find((a) => a.id === id)) warn('areas', `no write-up for area "${id}"`)

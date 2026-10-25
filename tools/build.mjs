@@ -25,6 +25,10 @@ const places = readJSON('data/places.json', { items: [] }).items || []
 // Places → Clubs & festivals, and the Bangkok basics (the 21 Oct 2026 research, tools/merge-bangkok.mjs)
 const clubs = readJSON('data/clubs.json', { items: [] }).items || []
 const bangkok = readJSON('data/bangkok.json', {}) || {}
+// how underground each night and club is, by the user's taste (Berghain / Bassiani / Amsterdam style first): over the
+// score the research gave (data/underground.json, 25 Oct 2026)
+const underground = readJSON('data/underground.json', { scale: [], events: {}, clubs: {} })
+for (const [list, map] of [[events, underground.events || {}], [clubs, underground.clubs || {}]]) for (const x of list) if (map[x.id]) x.undergroundScore = map[x.id][0]
 // Places → 18+ and Weed: the law-free basics and the price guides (the 23 Oct 2026 research, tools/merge-adult.mjs);
 // the venues and shops themselves are places with tier 'adult'
 const adult = readJSON('data/adult.json', {}) || {}
@@ -897,10 +901,12 @@ function chipRow(listId, group, items, label, links = [], after = '', attrs = ''
   return `<div class="chips" role="toolbar" aria-label="${esc(label)}"${attrs}>${items.map(([v, t], i) => `<button class="chip" type="button" data-group="${group}" data-value="${v}"${links.includes(v) ? ' data-link' : ''} aria-pressed="${i === 0}">${esc(t)} <span class="n"></span></button>`).join('')}${after}</div>`
 }
 const shareListBtn = `<button class="chip share-list js-only" type="button" data-share-list hidden>${icon('share')}Share</button>`
+// what Underground n/5 means (the Music page)
+const ugScale = () => (underground.scale || []).length ? `<details class="more ug-scale" id="ug-scale"><summary>How Underground is rated</summary><ul>${underground.scale.map(([n, t]) => `<li><b>${n}/5</b> ${esc(t)}</li>`).join('')}</ul></details>` : ''
 function eventsView(mode) {
   const intro = extra.eventsIntro || 'Phuket’s scene is mostly beach clubs. For darker, Berlin-style raves, Koh Phangan is the place: a short flight to Samui and a 30-minute boat.'
   return `<section class="view" id="events" aria-labelledby="events-title">
-<div class="view-head"><span class="eyebrow">${TRIP_LABEL.long} · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p></div>
+<div class="view-head"><span class="eyebrow">${TRIP_LABEL.long} · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p>${ugScale()}</div>
 ${extra.eventsCallout ? `<div class="callout"><h3>${esc(extra.eventsCallout.title)}</h3>${(extra.eventsCallout.groups || [{ items: extra.eventsCallout.items }]).map((g) => `${g.title ? `<h4 class="callout-sub">${esc(g.title)}</h4>` : ''}<ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`).join('')}</div>` : ''}
 <div class="toolbar" data-toolbar="events">
 ${chipRow('events', 'f', [['all', 'All'], ['in', 'In my dates'], ['pick', 'Top picks'], ['recurring', 'Weekly & clubs'], ['dated', 'One-off events'], ['saved', 'Saved']], 'Filter events', ['saved'], shareListBtn)}

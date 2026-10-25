@@ -414,6 +414,10 @@ async function approveAll() {
     r = await as('Hovo', { spend: { ...taxi, amount: 450, newId: 'forhovo00001' }, keep: { by: 'Lara', t: 1 } })
     x = fx(r.json)
     check('Undo brings back who added it and who entered it (the phone cannot say another name)', r.status === 200 && x.by === 'Hovo' && x.via === 'Vardan K' && x.t > 1, JSON.stringify(x))
+    await as('Vardan K', { deleteSpend: 'forhovo00001' })
+    r = await as('Vardan K', { spend: { ...taxi, amount: 999, newId: 'forhovo00001' }, keep: { by: 'Hovo', t: 1 } })
+    x = fx(r.json)
+    check('an Undo with other numbers is not put back under Hovo\'s name: it is a new expense of who sent it', r.status === 200 && x.amount === 999 && x.by === 'Vardan K' && !x.via, JSON.stringify(x))
     r = await as('Armen', { spend: { ...taxi, what: 'Fake undo', newId: 'fakeundo0001' }, keep: { by: 'Lara', t: 1 } })
     x = (r.json.spend || []).find((y) => y.id === 'fakeundo0001') || {}
     check('an Undo with nothing deleted is added by who sends it', r.status === 200 && x.by === 'Armen' && !x.via, JSON.stringify(x))

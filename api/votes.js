@@ -116,7 +116,7 @@ const NOTE_LEN = 500
 const RECEIPT = 'guide:receipt:'
 const RECEIPTS = 'guide:receipts'
 // a deleted expense's who-added-it-and-when (and its photo), for 15 minutes, so Undo puts it back as it was:
-// { by: who deleted it, n, t, en, et, nb, data }
+// { by: who deleted it, body: the money part, n, t, en, et, nb, data }
 const SPEND_UNDO = 'guide:spend-undo:'
 const RECEIPT_MAX = 1000000 // characters of one data URL (about 700 KB of image; the phone sends about 150-300 KB)
 const RECEIPTS_TOTAL = 150000000 // characters of all of them together (about 110 MB of images)
@@ -593,7 +593,7 @@ async function handle(db, request, body, auth, ctx) {
         await redis(db, ['HDEL', SPEND, id])
         // kept for Undo by who deleted it; the photo still counts in the room for photos until it expires
         const data = x.photo ? await redis(db, ['GET', RECEIPT + id]) : null
-        await redis(db, ['SET', SPEND_UNDO + id, JSON.stringify({ by: who, n: x.n, t: x.t, en: x.en, et: x.et, nb: x.nb, ...(data ? { data } : {}) }), 'EX', 900])
+        await redis(db, ['SET', SPEND_UNDO + id, JSON.stringify({ by: who, body: spendBody(x), n: x.n, t: x.t, en: x.en, et: x.et, nb: x.nb, ...(data ? { data } : {}) }), 'EX', 900])
         if (data) await redis(db, ['HSET', RECEIPTS, 'undo:' + id, data.length + ':' + (Date.now() + 900000)])
         if (x.photo) await setReceipt(db, id, null)
         await changed(db, x.kind === 'pay' ? 'unpay' : 'unspend', spendLabel(x), who, body.device)
@@ -670,9 +670,10 @@ async function handle(db, request, body, auth, ctx) {
         id = s.newId ? String(s.newId) : Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
         if ((await redis(db, ['HLEN', SPEND])) >= MAX_SPEND) return reply(507, { error: 'Too many expenses saved' })
         // keep: Undo after a delete puts it back as it was, with who added (and changed) it and when, and its photo,
-        // from what the server kept (only for who deleted it, or the admin; what the phone sends is not trusted)
+        // from what the server kept: only for who deleted it (or the admin), and only unchanged (else it is a new
+        // expense of the sender's, so nobody can put other numbers under someone else's name)
         let undo = null
-        if (body.keep) { try { const u = JSON.parse((await redis(db, ['GET', SPEND_UNDO + id])) || 'null'); if (u && (admin || same(u.by, who))) undo = u } catch { /* nothing kept */ } }
+        if (body.keep) { try { const u = JSON.parse((await redis(db, ['GET', SPEND_UNDO + id])) || 'null'); if (u && (admin || same(u.by, who)) && JSON.stringify(u.body) === JSON.stringify(row)) undo = u } catch { /* nothing kept */ } }
         const undone = undo && receipt === undefined ? undo.data || null : null
         const meta = undo ? { n: undo.n || who, t: undo.t || Date.now(), ...(undo.en ? { en: undo.en, et: undo.et } : {}), ...(undo.nb ? { nb: undo.nb } : {}), ...marks() }
           : { n: forWho || who, t: Date.now(), ...(forWho ? { nb: who } : {}), ...marks() }

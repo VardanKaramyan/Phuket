@@ -731,6 +731,16 @@ html.map-popup #back-to-card { display: none; }
 .callout-sub { margin-top: 6px; font: 600 11px/1.2 var(--font-display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--sea-text); }
 .callout a { color: var(--sea-text); }
 .callout.alert a { color: var(--ink); }
+/* a long panel, closed at first: the title with a +, a tap opens it */
+.fold > summary { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 10px; padding-right: 26px; position: relative; cursor: pointer; list-style: none; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font: 400 22px/1 var(--font-display); color: var(--sea-text); }
+.fold[open] > summary::after { content: "–"; }
+.fold > summary small { font-size: 13px; color: var(--ink-2); }
+.fold.callout { gap: 0; }
+.fold .fold-body { display: grid; gap: 6px; padding-top: 10px; }
+.reco.fold > summary { display: grid; gap: 4px; }
+.reco.fold > summary::after { color: inherit; }
 
 /* ---------- map ---------- */
 .mapbox { position: relative; isolation: isolate; margin-inline: -16px; height: min(calc(100svh - var(--tabbar-h) - env(safe-area-inset-bottom, 0px) - 290px), 640px); min-height: 330px; background: var(--map-sea); border-block: 1px solid var(--line); overflow: hidden; }

@@ -497,6 +497,8 @@
     }
     const el = document.getElementById(id)
     if (!el) return show('home')
+    // a link to a closed panel (or something inside one): open it
+    for (let d = el.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) d.open = true
     const view = el.closest('.view')
     if (el.classList.contains('agenda-day')) { userPickedDay = true; selectDay(el.dataset.day, false) }
     show(view ? view.id : 'home', el)

@@ -727,7 +727,7 @@ ${BASES.length ? `<div class="bases-strip" aria-label="Our villas">${BASES.map((
 <div class="block-title"><h2>Day by day</h2><button class="chip js-only" type="button" id="agenda-all" aria-pressed="false">Show all days</button></div>
 <div class="agenda" id="agenda">${agenda}</div>
 <div class="tiles">${tiles}</div>
-${beforeFly.length ? `<div class="callout alert"><h3>Before you fly</h3><ul>${beforeFly.map((c) => `<li>${c.href ? `<a href="${esc(c.href)}">${esc(c.text)}</a>` : esc(c.text)}</li>`).join('')}</ul><p><a href="#info">Read the essentials</a></p></div>` : ''}
+${beforeFly.length ? fold('Before you fly', `<ul>${beforeFly.map((c) => `<li>${c.href ? `<a href="${esc(c.href)}">${esc(c.text)}</a>` : esc(c.text)}</li>`).join('')}</ul><p><a href="#info">Read the essentials</a></p>`, 'alert', plural(beforeFly.length, 'thing')) : ''}
 <div class="stack js-only"><div class="block-title"><h2>Saved</h2><small id="saved-count"></small></div><div class="agenda-day"><ul id="saved-list"></ul></div></div>
 <div class="callout" id="offline-box"><h3>Offline use</h3><p class="offline-state" id="offline-state">${OFFLINE_TEXT[buildName] || ''}</p><p id="offline-fill-row" hidden><button class="btn primary" type="button" id="offline-fill">Download the missing ones</button></p>
 <div id="install-tip" hidden><p id="install-ios">iPhone: tap Share, then “Add to Home Screen”. Open it once with internet. After that it works offline.</p><p id="install-android">Android: tap ⋮, then “Add to Home screen” or “Install app”.</p></div>
@@ -895,6 +895,9 @@ function statsView() {
 <div id="stats-body"><p class="note">Open the guide's website to see the stats.</p></div>
 </section>`
 }
+// a long panel (a plan, tips, a checklist): closed at first, the title shows with a +, a tap opens it (25 Oct 2026,
+// the user: "make all the long panels like plan for n days etc to be collapsed by default")
+const fold = (title, inner, cls = '', note = '') => `<details class="callout fold ${cls}"><summary><h3>${esc(title)}</h3>${note ? `<small>${esc(note)}</small>` : ''}</summary><div class="fold-body">${inner}</div></details>`
 // links: values that have their own address (#<list>/<value>, e.g. #stay/liked), so a filtered list can be shared
 // attrs: e.g. data-when="tier:adult weed" shows the row only while the tier row is on one of those (src/app.js)
 function chipRow(listId, group, items, label, links = [], after = '', attrs = '') {
@@ -907,7 +910,7 @@ function eventsView(mode) {
   const intro = extra.eventsIntro || 'Phuket’s scene is mostly beach clubs. For darker, Berlin-style raves, Koh Phangan is the place: a short flight to Samui and a 30-minute boat.'
   return `<section class="view" id="events" aria-labelledby="events-title">
 <div class="view-head"><span class="eyebrow">${TRIP_LABEL.long} · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p>${ugScale()}</div>
-${extra.eventsCallout ? `<div class="callout"><h3>${esc(extra.eventsCallout.title)}</h3>${(extra.eventsCallout.groups || [{ items: extra.eventsCallout.items }]).map((g) => `${g.title ? `<h4 class="callout-sub">${esc(g.title)}</h4>` : ''}<ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`).join('')}</div>` : ''}
+${extra.eventsCallout ? fold(extra.eventsCallout.title, (extra.eventsCallout.groups || [{ items: extra.eventsCallout.items }]).map((g) => `${g.title ? `<h4 class="callout-sub">${esc(g.title)}</h4>` : ''}<ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`).join(''), '', 'Night by night') : ''}
 <div class="toolbar" data-toolbar="events">
 ${chipRow('events', 'f', [['all', 'All'], ['in', 'In my dates'], ['pick', 'Top picks'], ['recurring', 'Weekly & clubs'], ['dated', 'One-off events'], ['saved', 'Saved']], 'Filter events', ['saved'], shareListBtn)}
 ${chipRow('events', 'phase', [['all', 'All my days'], ...TRIP.phases.map((p) => [p.id, `${p.label} · ${phaseRange(p)}`])], 'Filter by part of the trip')}
@@ -916,7 +919,7 @@ ${chipRow('events', 'where', [['all', 'Everywhere'], ['phuket', 'Phuket & Natai'
 </div>
 <div class="list" data-list="events">${eventsSorted.map((e) => eventCard(e, mode)).join('\n')}</div>
 <p class="empty" data-empty="events" hidden>No events match these filters.</p>
-${extra.eventsFooter ? `<div class="callout sun"><h3>${esc(extra.eventsFooter.title)}</h3><ul>${extra.eventsFooter.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+${extra.eventsFooter ? fold(extra.eventsFooter.title, `<ul>${extra.eventsFooter.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`, 'sun', plural(extra.eventsFooter.items.length, 'tip')) : ''}
 </section>`
 }
 // a club, a party series or a festival (Places → Clubs & festivals): the music, the door, the nights, how underground it
@@ -1033,7 +1036,7 @@ ${adultItems.some((p) => p.category === 'cannabis') ? '<button class="chip" type
 </div>
 <p class="map-credit js-only" id="map-credit"></p>
 <div class="staticmap">${staticMapSvg()}</div>
-${(extra.areasRecommendation || []).length || has(areasDoc.recommendation) ? `<div class="reco"><span class="eyebrow">For you</span><h3>Best bases for this trip</h3>${(extra.areasRecommendation || [areasDoc.recommendation]).map((x) => `<p>${esc(x)}</p>`).join('')}</div>` : ''}
+${(extra.areasRecommendation || []).length || has(areasDoc.recommendation) ? `<details class="reco fold"><summary><span class="eyebrow">For you</span><h3>Best bases for this trip</h3></summary><div class="fold-body">${(extra.areasRecommendation || [areasDoc.recommendation]).map((x) => `<p>${esc(x)}</p>`).join('')}</div></details>` : ''}
 ${kmlNote}
 <div class="toolbar" data-toolbar="areas">
 ${chipRow('areas', 'best', [['all', 'All areas'], ...tags.map((t) => [t, cap(t.replace(/-/g, ' '))])], 'Filter areas by what they are best for')}
@@ -1104,7 +1107,7 @@ function moneyView(mode) {
   const best = brands[0]
   const mid = midRates()
   const curOpts = mid.map((m) => `<option value="${esc(m.currency)}">${esc(m.currency)}</option>`).join('')
-  const listBlock = (title, arr, cls = '') => (arr || []).filter(has).length ? `<div class="callout ${cls}"><h3>${esc(title)}</h3><ul>${arr.filter(has).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''
+  const listBlock = (title, arr, cls = '') => (arr || []).filter(has).length ? fold(title, `<ul>${arr.filter(has).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`, cls, plural(arr.filter(has).length, 'tip')) : ''
   const atm = money.atm || {}
   return `<section class="view" id="money" aria-labelledby="money-title">
 <div class="view-head"><span class="eyebrow"><a href="#info">Essentials</a> · Baht ฿ · exchange · ATMs</span><h1 class="view-title" id="money-title">Money</h1><p class="lede">${esc(extra.moneyIntro || 'Cash is king at markets, taxis and small bars. Change cash at a money changer, not at the airport or your hotel.')}</p></div>
@@ -1116,7 +1119,7 @@ ${mid.length ? `<div class="converter js-only" id="converter"><span class="eyebr
 <p class="note" id="conv-note"></p></div>` : ''}
 ${amdRate ? `<p class="note">Dram amounts in this guide use ${amdRate.perThb} AMD per baht (mid-market, ${esc(amdRate.date)}).</p>` : ''}
 <div class="list">${brands.map((b) => brandCard(b, mode)).join('\n')}</div>
-${atm.feeText || (atm.tips || []).length ? `<div class="callout"><h3>ATMs</h3>${has(atm.feeText) ? `<p>${esc(atm.feeText)}</p>` : ''}${(atm.cheapest || []).length ? `<p><b>Cheapest:</b> ${esc(atm.cheapest.join('; '))}</p>` : ''}${(atm.tips || []).length ? `<ul>${atm.tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>` : ''}
+${atm.feeText || (atm.tips || []).length ? fold('ATMs', `${has(atm.feeText) ? `<p>${esc(atm.feeText)}</p>` : ''}${(atm.cheapest || []).length ? `<p><b>Cheapest:</b> ${esc(atm.cheapest.join('; '))}</p>` : ''}${(atm.tips || []).length ? `<ul>${atm.tips.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}`, '', 'Fees and the cheapest ones') : ''}
 ${listBlock('Cards', money.cards)}
 ${listBlock('Tips', money.tips, 'sun')}
 ${listBlock('Avoid', money.avoid, 'alert')}
@@ -1125,14 +1128,14 @@ ${(money.sources || []).length ? `<details class="more"><summary>Sources</summar
 }
 function infoView() {
   const nums = (info.emergencyNumbers || []).map((n) => `<a href="tel:${esc(String(n.number).replace(/[^0-9+]/g, ''))}"><b class="${String(n.number).length > 6 ? 'long' : ''}">${esc(n.number)}</b><span>${esc(n.label)}${has(n.note) ? ' · ' + esc(n.note) : ''}</span></a>`).join('')
-  const secs = (info.sections || []).map((s, i) => `<details class="acc"${i === 0 ? ' open' : ''} id="info-${esc(s.id)}"><summary>${esc(s.title)}</summary><div class="acc-body">${(s.items || []).map((it) => `<div class="fact"><h4>${esc(it.title)}${it.critical ? ' <span class="pill bad">Must know</span>' : ''}</h4><p>${esc(it.text)}</p>${linksHtml(it.links)}</div>`).join('')}</div></details>`).join('')
+  const secs = (info.sections || []).map((s, i) => `<details class="acc" id="info-${esc(s.id)}"><summary>${esc(s.title)}</summary><div class="acc-body">${(s.items || []).map((it) => `<div class="fact"><h4>${esc(it.title)}${it.critical ? ' <span class="pill bad">Must know</span>' : ''}</h4><p>${esc(it.text)}</p>${linksHtml(it.links)}</div>`).join('')}</div></details>`).join('')
   const phrases = (info.phrases || []).map((p) => `<div class="phrase"><b>${esc(p.en)}</b><span class="say">${esc(p.say)}</span><span class="th" lang="th">${esc(p.thai)}</span></div>`).join('')
   return `<section class="view" id="info" aria-labelledby="info-title">
 <div class="view-head"><span class="eyebrow">Checked ${esc(info.asOf || 'Oct 2026')}</span><h1 class="view-title" id="info-title">Essentials</h1><p class="lede">Money, entry rules, getting around, boats and islands, safety and a few words of Thai.</p></div>
 <div class="tiles info-tiles"><a class="tile" href="#money">${icon('money')}<b>Money</b><span>${esc(brands[0] ? "Best rates: " + brands[0].name : "Exchange & ATMs")} · converter</span></a>${apps.length ? `<a class="tile" href="#apps">${icon('apps')}<b>Apps to install</b><span>${esc(plural(apps.filter((a) => a.priority === 'must').length, 'app') + ' before you fly')}</span></a>` : ''}</div>
 ${nums ? `<h2 class="block-title">Emergency numbers</h2><div class="sos">${nums}</div>` : ''}
 <div class="stack">${secs}</div>
-${phrases ? `<h2 class="block-title">Useful Thai <small>men end with “krap”, women with “ka”</small></h2><div class="phrases">${phrases}</div>` : ''}
+${phrases ? `<details class="acc" id="info-thai"><summary><span>Useful Thai <small>men end with “krap”, women with “ka”</small></span></summary><div class="acc-body"><div class="phrases">${phrases}</div></div></details>` : ''}
 ${(info.sources || []).length ? `<details class="more"><summary>Sources</summary><p class="sources">${info.sources.filter(isUrl).map((u) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a>`).join(' · ')}</p></details>` : ''}
 </section>`
 }

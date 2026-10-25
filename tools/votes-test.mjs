@@ -1239,6 +1239,24 @@ const admin = await G.p.evaluate(async () => {
 })
 check('Vardan K signs in only with his own password', adminGate[0].shown && /Wrong/.test(adminGate[0].err) && !adminGate[1].shown && adminGate[1].me === 'Vardan K' && admin.admin === true, JSON.stringify(adminGate))
 check('the admin: the links, the log with IP and place, the sign-ins with the password tried, people, and the overview', admin.link && admin.rows > 20 && /198\.51\.100\.4/.test(admin.more) && /Rawai, TH/.test(admin.more) && /Vardan K/.test(admin.more) && /wrong|test-pass/.test(admin.signins) && admin.people.includes('Vardan K') && admin.overview >= 4 && admin.admin === true, JSON.stringify({ ...admin, more: admin.more.slice(0, 160), signins: admin.signins.slice(0, 160) }))
+// signed in, the guide knows the name: Like goes at once (no name box), with Undo; Hide for everyone still asks, with no name box
+const oneTap = await G.p.evaluate(async (id) => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  location.hash = 'stay'; await wait(300)
+  const bar = document.querySelector('#' + id + ' .votes'), like = bar.querySelector('[data-vote-btn="like"]')
+  like.click(); await wait(800)
+  const dialog = document.getElementById('vote-dialog').open, pressed = like.getAttribute('aria-pressed'), toast = document.querySelector('.toast')?.textContent || ''
+  const votes = JSON.parse(localStorage.getItem('pg:votes') || '{}')['ht:' + id.slice(3)]
+  const saved = !!votes && votes.like.includes('Vardan K')
+  ;[...document.querySelectorAll('.toast button')].find((b) => b.textContent === 'Undo')?.click(); await wait(800)
+  const after = like.getAttribute('aria-pressed')
+  document.querySelector('#' + id + ' [data-hide-stay]')?.click(); await wait(200)
+  const hide = { open: document.getElementById('vote-dialog').open, nameBox: !document.getElementById('vote-name-l').hidden }
+  document.querySelector('[data-vote-cancel]')?.click()
+  return { dialog, pressed, toast, saved, after, hide }
+}, ID)
+const likedOnServer = (await (await api.GET(new Request('http://x/api/votes'))).json()).votes['ht:' + ID.slice(3)]?.like || []
+check('signed in: Like goes in one tap (no name box) with Undo; Hide for everyone still asks, without a name box', !oneTap.dialog && oneTap.pressed === 'true' && /^Like saved/.test(oneTap.toast) && !/for Vardan K/.test(oneTap.toast) && /Undo/.test(oneTap.toast) && oneTap.saved && oneTap.after === 'false' && !likedOnServer.includes('Vardan K') && oneTap.hide.open && !oneTap.hide.nameBox, JSON.stringify({ oneTap, likedOnServer }))
 // the admin's sheet: Added by (only his, only for a new expense); picking Hovo makes Hovo the payer too, until Paid by is picked
 const forHovo = await G.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms)), set = (el, v) => { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })) }

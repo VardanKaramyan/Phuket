@@ -1475,18 +1475,34 @@
       return r.json()
     } finally { clearTimeout(timer) }
   }
-  const failed = () => toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.')
-  // run: instead of sending bodies, do this with the name (moving a villa)
-  function openDialog({ title, what, save, note, body, done, run }) {
-    pending = { body, done, run }
+  const failed = () => toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.', undefined, true) // news must not cover it
+  // run: instead of sending bodies, do this with the name (moving a villa). Signed in, the guide knows who you are:
+  // it goes at once under that name, and only a change for the whole group (confirm) still asks, without a name box
+  function openDialog({ title, what, save, note, body, done, run, undo, confirm }) {
+    pending = { body, done, run, undo }
+    const signed = store.get('guideName', '')
+    if (signed && !confirm) { sendPending(signed); return }
     $('#vote-title').textContent = title
     $('#vote-what').textContent = what
     $('#vote-note').textContent = note
-    $('#vote-name').value = voterName()
-    $('#vote-name').readOnly = !!store.get('guideName', '') // signed in: votes go under that name
+    $('#vote-name').value = signed || voterName()
+    $('#vote-name-l').hidden = !!signed
     $('[data-vote-save]', dlg).textContent = save
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '')
     ;(voterName() ? $('[data-vote-save]', dlg) : $('#vote-name')).focus()
+  }
+  async function sendPending(name) {
+    if (!pending) return
+    const { body, done, run, undo } = pending
+    pending = null
+    if (run) { store.set('voterName', name); run(name); return }
+    const bodies = body(name) // before the name is remembered: taking back a vote compares with the last name
+    store.set('voterName', name)
+    const sendAll = async (list) => { let j = null; for (const b of list) j = await post(b); if (j) applyShared(j); if (list.some((b) => 'vote' in b && String(b.item).startsWith('ht:'))) sortStays(true, true) } // your like moves the villa now
+    try {
+      await sendAll(bodies)
+      toast(done(name, bodies[0] || {}), undo ? { label: 'Undo', run: () => sendAll(undo(name)).then(() => toast('Undone')).catch(failed) } : undefined)
+    } catch { failed() }
   }
   // Hide / Show again on the website: for the whole group, with a name like a vote (id '*': every hidden villa)
   function askShared(what, id) {
@@ -1495,8 +1511,8 @@
     const name = id === '*' ? 'Every hidden villa' : document.getElementById('ht-' + id)?.dataset.name || 'This villa'
     const send = (hide) => (n) => ids.map((x) => ({ item: 'ht:' + x, name: n, hide }))
     openDialog(what === 'hide'
-      ? { title: 'Hide for everyone', what: name, save: 'Hide', note: 'It goes off the list and the map for the whole group. Anyone can show it again.', body: send(true), done: () => 'Hidden for everyone: ' + name }
-      : { title: 'Show again for everyone', what: name, save: 'Show again', note: 'It comes back on the list and the map for the whole group.', body: send(false), done: () => (id === '*' ? 'All villas are back for everyone' : 'Back on the list for everyone') })
+      ? { confirm: true, title: 'Hide for everyone', what: name, save: 'Hide', note: 'It goes off the list and the map for the whole group. Anyone can show it again.', body: send(true), done: () => 'Hidden for everyone: ' + name }
+      : { confirm: true, title: 'Show again for everyone', what: name, save: 'Show again', note: 'It comes back on the list and the map for the whole group.', body: send(false), done: () => (id === '*' ? 'All villas are back for everyone' : 'Back on the list for everyone') })
   }
   // Save (the star) on the website: for the whole group, with your name (asked once). It shows at once, then the
   // server's list replaces it
@@ -1533,11 +1549,13 @@
       const b = e.target.closest('[data-vote-btn]'); if (!b) return
       const bar = b.closest('[data-vote-item]'), v = b.dataset.voteBtn, item = bar.dataset.voteItem
       const remove = b.getAttribute('aria-pressed') === 'true'
+      const before = $('[data-vote-btn][aria-pressed="true"]', bar)?.dataset.voteBtn || null // for Undo
       openDialog({
         title: remove ? 'Take back your ' + VOTE[v] : VOTE[v], what: bar.dataset.voteName, save: remove ? 'Take back' : 'Save vote', note: NOTE_VOTE,
         // a different name is a different person: for them it is a new vote, not taking one back
         body: (n) => [{ item, name: n, vote: remove && same(n, voterName()) ? null : v }],
-        done: (n, sent) => (sent.vote ? VOTE[sent.vote] + ' saved for ' + n : 'Vote taken back'),
+        done: (n, sent) => (sent.vote ? VOTE[sent.vote] + ' saved' + (store.get('guideName', '') ? '' : ' for ' + n) : 'Vote taken back'),
+        undo: (n) => [{ item, name: n, vote: before }],
       })
     })
     $('[data-vote-cancel]', dlg).addEventListener('click', () => { pending = null; dlg.close() })
@@ -1564,7 +1582,7 @@
       const ids = one ? [one.closest('.card').dataset.stay] : Object.keys((pins && pins.map) || {})
       if (!ids.length) return
       if (voterName()) { unpin(ids, voterName()); return }
-      openDialog({ title: all ? 'Reset all positions' : 'Reset position', what: one ? one.closest('.card').dataset.name : 'Every villa moved by hand', save: 'Reset',
+      openDialog({ confirm: true, title: all ? 'Reset all positions' : 'Reset position', what: one ? one.closest('.card').dataset.name : 'Every villa moved by hand', save: 'Reset',
         note: 'It goes back to its place by likes, for the whole group.', run: (n) => unpin(ids, n) })
     })
     // Move up / down: one tap once the guide knows your name (the first time it asks, like a vote)
@@ -1578,18 +1596,8 @@
       e.preventDefault()
       const name = $('#vote-name').value.replace(/\s+/g, ' ').trim()
       if (!name || !pending) return
-      const { body, done, run } = pending
-      if (run) { store.set('voterName', name); pending = null; dlg.close(); run(name); return }
-      const bodies = body(name) // before the name is remembered: taking back a vote compares with the last name
-      store.set('voterName', name)
-      pending = null; dlg.close()
-      try {
-        let j = null
-        for (const b of bodies) j = await post(b)
-        if (j) applyShared(j)
-        if (bodies.some((b) => 'vote' in b && String(b.item).startsWith('ht:'))) sortStays(true, true) // your like moves the villa now
-        toast(done(name, bodies[0] || {}))
-      } catch { toast(navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
+      if (dlg.open) dlg.close()
+      sendPending(name)
     })
     renderVotes()
     renderNotes()

@@ -1203,7 +1203,7 @@ ${buildName === 'standalone' ? `<div class="gate" id="gate" hidden><form class="
 <p class="gate-err" id="gate-err" role="alert"></p><button class="btn primary" type="submit">Enter</button></form></div>
 ` : ''}<dialog class="vote-dialog" id="vote-dialog" aria-labelledby="vote-title"><form id="vote-form" method="dialog">
 <h2 id="vote-title">Like</h2><p class="vote-what" id="vote-what"></p>
-<label for="vote-name">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
+<label for="vote-name" id="vote-name-l">Your name<input id="vote-name" name="name" maxlength="40" autocomplete="given-name" required placeholder="e.g. Ani"></label>
 <p class="note" id="vote-note">Everyone with the guide sees the names. One vote per name.</p>
 <div class="actions"><button class="btn primary" type="submit" data-vote-save>Save vote</button><button class="btn" type="button" data-vote-cancel>Cancel</button></div>
 </form></dialog>

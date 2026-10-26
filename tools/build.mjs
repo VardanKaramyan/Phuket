@@ -909,7 +909,7 @@ const ugScale = () => (underground.scale || []).length ? `<details class="more u
 function eventsView(mode) {
   const intro = extra.eventsIntro || 'Phuket’s scene is mostly beach clubs. For darker, Berlin-style raves, Koh Phangan is the place: a short flight to Samui and a 30-minute boat.'
   return `<section class="view" id="events" aria-labelledby="events-title">
-<div class="view-head"><span class="eyebrow">${TRIP_LABEL.long} · underground first</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p>${ugScale()}</div>
+<div class="view-head"><span class="eyebrow">${TRIP_LABEL.long}</span><h1 class="view-title" id="events-title">Music & raves</h1><p class="lede">${esc(intro)}</p>${ugScale()}</div>
 ${extra.eventsCallout ? fold(extra.eventsCallout.title, (extra.eventsCallout.groups || [{ items: extra.eventsCallout.items }]).map((g) => `${g.title ? `<h4 class="callout-sub">${esc(g.title)}</h4>` : ''}<ul>${g.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`).join(''), '', 'Night by night') : ''}
 <div class="toolbar" data-toolbar="events">
 ${chipRow('events', 'f', [['all', 'All'], ['in', 'In my dates'], ['pick', 'Top picks'], ['recurring', 'Weekly & clubs'], ['dated', 'One-off events'], ['saved', 'Saved']], 'Filter events', ['saved'], shareListBtn)}

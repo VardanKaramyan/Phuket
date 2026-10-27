@@ -1,0 +1,2005 @@
+{
+ "generatedOn": "2026-10-27",
+ "region": "fastfood",
+ "scopeNote": "Burgers, fried chicken and pizza by the slice that people praise on Phuket (Patong, Kata and Karon, Rawai and Nai Harn, Phuket Town and Koh Kaew, Surin and Si Sunthon), Koh Phangan and Bangkok, plus 12 chain outlets near the villas, Phuket Town, the airport, Thong Sala and central Bangkok; halal places left out.",
+ "basics": [
+  {
+   "title": "Fast food in Thailand",
+   "text": "KFC is the biggest chain (more than 700 outlets), followed by McDonald's, Burger King, Thailand's own The Pizza Company, Pizza Hut, Domino's, Subway and Texas Chicken; Shake Shack is in Bangkok only, and we found no Five Guys in Thailand. The Thai menus add rice bowls with spicy or kaprao chicken, McDonald's pork burgers (Samurai Pork Burger 109 THB), Hat Yai-style and tom yum fried chicken and pork congee at Burger King, and corn or pineapple pies. Most mall outlets keep mall hours (about 10:00-22:00); drive-thru branches and several Patong, Khao San and Sukhumvit outlets are open 24 hours.",
+   "links": [
+    {
+     "label": "McDonald's Thailand prices (THAIest)",
+     "url": "https://thaiest.com/en/thai-food/reviews/mcdonald-s-in-thailand"
+    },
+    {
+     "label": "KFC Thailand prices (THAIest)",
+     "url": "https://thaiest.com/en/thai-food/reviews/kfc-in-thailand"
+    },
+    {
+     "label": "Burger King Thailand prices (THAIest)",
+     "url": "https://thaiest.com/en/thai-food/reviews/burger-king-in-thailand"
+    }
+   ]
+  },
+  {
+   "title": "Delivery, 7-Eleven and what a meal costs",
+   "text": "Grab (GrabFood) and LINE MAN deliver from the chains and from most burger shops in this list; the chains also take orders on their own numbers: McDonald's 1711, KFC 1150, The Pizza Company 1112. At any hour, 7-Eleven heats a ham and cheese toastie for about 30-45 THB. In 2026 a chain meal costs about 150-250 THB (a Big Mac set was 220 THB in late 2024, and Numbeo puts a fast-food meal in Bangkok at about 250 THB in Oct 2026), while a burger at a craft burger shop costs 250-600 THB.",
+   "links": [
+    {
+     "label": "Fast-food meal price in Bangkok, 2026 (combien-coute, Numbeo data)",
+     "url": "https://www.combien-coute.net/mcdo/thailande/bangkok/"
+    },
+    {
+     "label": "Phuket burger price guide (Phuket Expat Guide, Aug 2026)",
+     "url": "https://phuketexpatguide.com/blog/phuket-burger-guide/"
+    },
+    {
+     "label": "The Pizza Company online orders",
+     "url": "https://www.1112.com/"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "food-big-boys-burger-club-patong",
+   "name": "Big Boys' Burger Club (Patong Beach)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "late-night"
+   ],
+   "area": "patong",
+   "district": "Patong (Thawewong Road, So Patong Tower)",
+   "island": "Phuket",
+   "lat": 7.8919634,
+   "lng": 98.294693,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Big Boys' Burger Club Patong Beach, 110/2 Thawewong Road, Patong",
+   "placeId": "ChIJSVcCbgA7UDARvrvtWIez7IA",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 2393,
+   "reviewsSource": "Google count quoted by Phuket 101, Jan 2025",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": null,
+     "reviews": null,
+     "note": "Ranked #1 in Patong Beach, as reported by Phuket 101 (Jan 2025)",
+     "url": "https://www.phuket101.net/big-boys-burger-club-patong-beach/"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Carolina Moo pork burger 245 THB, Blues Brothers 355 THB, Y.O.L.O. double with bacon 525 THB (Phuket 101, Jan 2025).",
+   "dishes": [
+    "Carolina Moo: slow-cooked pork shoulder in BBQ sauce",
+    "Y.O.L.O.: double patty, cheese and bacon",
+    "The Big Boy, the signature burger with bacon"
+   ],
+   "praise": "Phuket 101 (Jan 2025) says it has become a favourite with locals and visitors, with friendly, quick staff and burgers that are not too big to handle; it reports Google 4.9 from about 2,400 reviews and #1 in Patong on Tripadvisor.",
+   "watchOut": "A 4.9 from thousands of reviews is unusually high, so expect a busy tourist place rather than a secret. Burgers cost two or three times a chain meal.",
+   "description": "A Phuket burger chain with Australian beef, a pulled pork burger and bacon burgers, a short walk from the Patong villa.",
+   "openText": "Daily 12:00-24:00 (Phuket 101).",
+   "days": [],
+   "bestTime": "Lunch after the beach, or before Bangla Road.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "The Jungceylon branch (garden side, Rat-U-Thit 200 Pee Road) is the closest to the villa, about 0.6 km; Google shows it at 4.9 too.",
+    "About 0.8 km from the villa; the beach branch has an outdoor terrace."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 review",
+     "url": "https://www.phuket101.net/big-boys-burger-club-patong-beach/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/bigboysburgerclub"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/big-boys-burger-club-patong-beach/",
+    "https://www.google.com/maps/place/Big+Boys%27+Burger+Club+-+Patong+Beach/data=!4m7!3m6!1s0x30503b006e025749:0x80ecb38758edbbbe!8m2!3d7.8919634!4d98.294693!16s%2Fg%2F11w9px3frv!19sChIJSVcCbgA7UDARvrvtWIez7IA"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list: Patong Beach branch 4.9 with pin and place id, Jungceylon branch 4.9). Phuket 101 review updated Jan 2025 (prices, hours, review count, Tripadvisor rank). Hours not re-read on Google.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-burgerboyz-patong",
+   "name": "Burgerboyz (late-night burgers)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "late-night",
+    "budget"
+   ],
+   "area": "patong",
+   "district": "Patong (Soi Kok Nam, north of the centre)",
+   "island": "Phuket",
+   "lat": 7.900476,
+   "lng": 98.3004722,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Burgerboyz, Soi Koknam, Patong",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 298,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor (via Wanderlog)",
+     "rating": 5.0,
+     "reviews": 29,
+     "note": "",
+     "url": "https://wanderlog.com/place/details/2614357/burgerboyz"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online; reviewers on Wanderlog call it affordable (Oct 2026).",
+   "dishes": [
+    "Beef burgers with fries or onion rings",
+    "Hot dog, the late-night order reviewers suggest"
+   ],
+   "praise": "Wanderlog's review summary (Oct 2026) mentions quick service, friendly staff and a clean small shop; a few reviewers find portions small for the price.",
+   "watchOut": "A small street-style shop, not a sit-down restaurant. About 1.6 km north of the villa, so take a short tuk-tuk or Grab at night.",
+   "description": "A small burger shop in north Patong that cooks until 02:00, for food after the bars.",
+   "openText": "Daily about 13:00-02:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "After midnight.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://wanderlog.com/place/details/2614357/burgerboyz",
+    "https://www.google.com/maps/place/Burgerboyz/@7.900476,98.3004722,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a9859a0ff91:0xa323439fae9d4c6b!8m2!3d7.900476!4d98.3004722!16s%2Fg%2F11f403ysgt"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open, closes 02:00, pin). Wanderlog page Oct 2026 (Google 298 reviews, Tripadvisor 5.0 from 29). No press write-up found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-eat-burgers-beers-karon",
+   "name": "EAT. Burgers & Beers",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "karon",
+   "district": "Karon (Patak Road)",
+   "island": "Phuket",
+   "lat": 7.8341058,
+   "lng": 98.2987226,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "EAT. Burgers & Beers, 250/1 Patak Road, Karon",
+   "placeId": "ChIJPa_RQsclUDARiKl5WUE-UvM",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online. For scale, smash burgers in Phuket cost about 180-350 THB (Phuket Expat Guide, Aug 2026).",
+   "dishes": [
+    "Viking double smash burger",
+    "More than 20 craft beers from Thailand and abroad"
+   ],
+   "praise": "Time Out Phuket (Jun 2026) puts it on its list of the best burger restaurants in Phuket and calls the Viking double smash the popular order.",
+   "watchOut": "Google 4.9 with no review count shown to us; Time Out is the only independent write-up found. Closed on Mondays.",
+   "description": "A smash burger and craft beer bar in Karon, one of Time Out's 2026 Phuket burger picks.",
+   "openText": "Tue-Sun 13:00-22:00, closed Monday (Time Out, Jun 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Early evening, with a beer.",
+   "score": 4,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Time Out Phuket burger list",
+     "url": "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints"
+    }
+   ],
+   "sources": [
+    "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints",
+    "https://phuketexpatguide.com/blog/phuket-burger-guide/",
+    "https://www.google.com/maps/place/EAT.+Burgers+%26+Beers/data=!4m7!3m6!1s0x305025c742d1af3d:0xf3523e415979a988!8m2!3d7.8341058!4d98.2987226!16s%2Fg%2F11wpzv4tbq!19sChIJPa_RQsclUDARiKl5WUE-UvM"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list: 4.9, pin, place id; hours not read). Time Out Phuket, Jun 2026 (address 250/1 Patak Road, hours, closed Monday).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-sugar-shack-kata",
+   "name": "Sugar Shack (Kata)",
+   "nameThai": "ร้านอาหาร ชูการ์แช็ค",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "kata",
+   "district": "Kata (Kata Road)",
+   "island": "Phuket",
+   "lat": 7.8239828,
+   "lng": 98.2989481,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sugar Shack, 98 Moo 4 Kata Road, Kata Beach",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 629,
+   "reviewsSource": "Google count quoted by Phuket 101, Jan 2025",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online (Phuket 101, Jan 2025).",
+   "dishes": [
+    "Burgers, the house speciality",
+    "Ribs and steaks"
+   ],
+   "praise": "Phuket 101 (Jan 2025) says its burgers are 'often considered among the best in Phuket' and notes generous portions.",
+   "watchOut": "Small: about eight tables, so a group of 8 may need to split or take away.",
+   "description": "A small open-air burger and grill place on Kata Road, liked by locals and visitors.",
+   "openText": "Daily 11:00-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch or an early dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Phuket 101 review",
+     "url": "https://www.phuket101.net/sugar-shack/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/sugar-shack/",
+    "https://www.google.com/maps/place/Sugar+Shack/@7.8239828,98.2989481,17z/data=!3m1!4b1!4m6!3m5!1s0x30502525c3f4dda9:0xf9f556d8e16b30a7!8m2!3d7.8239828!4d98.2989481!16s%2Fg%2F11vklp3dzp"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 11:00-23:00, pin). Phuket 101 review updated Jan 2025.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-treasure-burger-rawai",
+   "name": "Treasure Burger",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "rawai",
+   "district": "Rawai (Soi Saiyuan, by the Art Village)",
+   "island": "Phuket",
+   "lat": 7.7920127,
+   "lng": 98.3164754,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Treasure Burger, Soi Naya 2, Rawai",
+   "placeId": "",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online.",
+   "dishes": [
+    "Cheese and bacon burger",
+    "Smash burgers",
+    "Mt'spicy: spicy mayo, jalapenos and house chilli jam"
+   ],
+   "praise": "Time Out Phuket (Jun 2026) lists it among the best burger places on the island and singles out its own bun, a mix of brioche and Japanese milk bread; it notes the burgers sell fast on Friday nights.",
+   "watchOut": "Closed on Mondays. Google 4.9 with no count shown to us.",
+   "description": "A small burger shop in Rawai's Art Village, about 2.5 km from the Rawai villa.",
+   "openText": "Tue-Sun 12:30-22:00, closed Monday (Google Maps and Time Out, Oct 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Weeknights; Friday evenings sell out.",
+   "score": 4,
+   "pick": true,
+   "tips": [],
+   "links": [
+    {
+     "label": "Time Out Phuket",
+     "url": "https://www.timeout.com/phuket/restaurants/treasure-burger"
+    }
+   ],
+   "sources": [
+    "https://www.timeout.com/phuket/restaurants/treasure-burger",
+    "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints",
+    "https://www.google.com/maps/place/Treasure+Burger+Phuket/@7.7920127,98.3164754,17z/data=!3m1!4b1!4m6!3m5!1s0x305029396a2103df:0x6064d8f6b91ddc02!8m2!3d7.7920127!4d98.3164754!16s%2Fg%2F11t7dw2szg"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, open, 12:30-22:00, pin, 95 Soi Saiyuan). Time Out Phuket, Jun 2026 (two pages).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-smash-brothers-rawai",
+   "name": "Smash Brothers Burgers",
+   "nameThai": "สแมท เบอร์เกอร์",
+   "kind": "fast-food",
+   "tags": [
+    "late-night"
+   ],
+   "area": "rawai",
+   "district": "Rawai (Soi Saiyuan)",
+   "island": "Phuket",
+   "lat": 7.7921737,
+   "lng": 98.3201121,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Smash Brothers Burgers, 69/9 Soi Saiyuan, Rawai",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 207,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online.",
+   "dishes": [
+    "Smash burgers with the house burger sauce"
+   ],
+   "praise": "Wanderlog's review summary (Oct 2026) repeats 'juicy and well-seasoned patties' and quick, friendly service; some visitors had mixed experiences.",
+   "watchOut": "Evening only. Evidence is mostly Google and Wanderlog reviews.",
+   "description": "A smash burger shop in Rawai that opens in the evening and cooks until 02:00, about 2 km from the Rawai villa.",
+   "openText": "Daily about 18:00-02:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Late evening.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.smashbrosburgers.com/"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/11973377/smash-brothers-burgers-สแมท-เบอรเกอร",
+    "https://www.google.com/maps/place/Smash+Brothers+Burgers/@7.7921737,98.3201121,17z/data=!3m1!4b1!4m6!3m5!1s0x30502f5c39038653:0x7f27b5fd4c0c2723!8m2!3d7.7921737!4d98.3201121!16s%2Fg%2F11kpstmj3j"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 18:00-02:00, pin). Wanderlog Oct 2026 (Google 207 reviews, Tripadvisor 4.5 from 4).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pan-burger",
+   "name": "PAN Burger",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "pork"
+   ],
+   "area": "koh-kaew",
+   "district": "Koh Kaew (Thepkrasattri Road, north of Phuket Town)",
+   "island": "Phuket",
+   "lat": 7.9547711,
+   "lng": 98.38406,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "PAN Burger, 9/31 Thepkrasattri Road, Soi Supicha, Koh Kaew, Phuket",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 346,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Kurobuta pork burger 295 THB, Bacon double cheese (Wagyu) 370 THB, Gorgonzola cheese burger 435 THB, sets 440-595 THB (own website, Oct 2026).",
+   "dishes": [
+    "Kurobuta pork burger, also in a sriracha version",
+    "Gorgonzola cheese burger on a Wagyu patty",
+    "Double cheese and bacon",
+    "Truffle fries"
+   ],
+   "praise": "Time Out Phuket (Jun 2026) calls the Gorgonzola burger 'a standout'; Wanderlog reviewers name 'In a Pickle' and a pork bacon cheeseburger, with one complaint about a dry patty.",
+   "watchOut": "Closed one day a week and the day differs between listings (Google showed it closed on Tuesday 27 Oct 2026; Wanderlog lists Thursday). Check before the drive.",
+   "description": "A chef-run burger shop with Wagyu and Kurobuta pork burgers, on the main road between Phuket Town and the airport.",
+   "openText": "About 10:30-21:00 (Google and Wanderlog) or to 23:00 (own website); closed one weekday, see the warning.",
+   "days": [],
+   "bestTime": "On the way to or from the airport.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "About 10 km north of Phuket Town on Thepkrasattri Road: an easy stop on the airport run."
+   ],
+   "links": [
+    {
+     "label": "Website and menu",
+     "url": "https://panburgerthailand.com/"
+    },
+    {
+     "label": "Time Out Phuket",
+     "url": "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints"
+    }
+   ],
+   "sources": [
+    "https://panburgerthailand.com/",
+    "https://wanderlog.com/place/details/7636249/pan-burger-phuket",
+    "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints",
+    "https://www.google.com/maps/place/PAN+Burger+Phuket/@7.9547711,98.38406,17z/data=!3m1!4b1!4m6!3m5!1s0x305031ac8d389b49:0x4720157020c65607!8m2!3d7.9547711!4d98.38406!16s%2Fg%2F11t6y_gk49"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, closed that Tuesday, opens 10:30 Wednesday, pin). Own website Oct 2026 (menu and prices). Wanderlog (346 Google reviews, hours with Thursday closed). Time Out Phuket, Jun 2026.",
+   "imageCandidates": [
+    {
+     "url": "https://img1.wsimg.com/isteam/ip/924bb19b-8cf0-427e-8ace-342fbfa1f9a8/my%20way%20close%20up.jpg/:/rs=w:600,h:600,cg:true,m/cr=w:600,h:600",
+     "page": "https://panburgerthailand.com/",
+     "credit": "PAN Burger",
+     "license": "Restaurant's own website"
+    }
+   ]
+  },
+  {
+   "id": "food-five-loaves-burgers",
+   "name": "Five Loaves Burgers (Phuket Town)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "phuket-town",
+   "district": "Phuket Old Town (Phang Nga Road)",
+   "island": "Phuket",
+   "lat": 7.8836031,
+   "lng": 98.3930768,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Five Loaves Burgers, 169/1 Phang Nga Road, Phuket Town",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1269,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor (via Wanderlog)",
+     "rating": 4.5,
+     "reviews": 97,
+     "note": "",
+     "url": "https://wanderlog.com/place/details/1394731/five-loaves-burgers-phuket-town"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online; reviewers call them fair (Wanderlog, Oct 2026).",
+   "dishes": [
+    "Australian beef burgers with the house special sauce",
+    "Chicken wings",
+    "Passion fruit soda"
+   ],
+   "praise": "Wanderlog reviewers (Oct 2026) praise the Australian beef patties, the special sauce, the wings and the friendly staff.",
+   "watchOut": "Closed on Sundays.",
+   "description": "A long-running burger cafe in the Old Town with over a thousand Google reviews.",
+   "openText": "Mon-Sat 11:30-22:00, closed Sunday (Google Maps and Wanderlog, Oct 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Lunch during an Old Town walk.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/fiveloavesburgersphuket/"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/1394731/five-loaves-burgers-phuket-town",
+    "https://www.google.com/maps/place/FIVE+Loaves+Burgers:+Phuket+Town/@7.8836031,98.3930768,17z/data=!3m1!4b1!4m6!3m5!1s0x305031f9a8a95023:0x38b637a7127079af!8m2!3d7.8836031!4d98.3930768!16s%2Fg%2F11c7srdrl3"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, 11:30-22:00, pin). Wanderlog Oct 2026 (1,269 Google reviews, Tripadvisor 4.5 from 97, closed Sunday).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-juicy-lucy-phuket-town",
+   "name": "Juicy Lucy Burger & Bar",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "late-night"
+   ],
+   "area": "phuket-town",
+   "district": "Phuket Old Town (Yaowarat Road)",
+   "island": "Phuket",
+   "lat": 7.8854611,
+   "lng": 98.3874771,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Juicy Lucy Burger & Bar, 87 Yaowarat Road, Phuket Town",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1085,
+   "reviewsSource": "Google count quoted by Phuket 101, Sep 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online.",
+   "dishes": [
+    "Thin smashed patties of Australian grass-fed Black Angus on soft buns",
+    "Black pepper coleslaw"
+   ],
+   "praise": "Phuket 101 (updated Sep 2026) praises the meat and quotes a reviewer who called the patties 'the best encountered in 35 years of travel'.",
+   "watchOut": "",
+   "description": "A smash burger bar on Yaowarat Road in the Old Town that stays open to midnight.",
+   "openText": "Daily 11:00-24:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Evening, after the Old Town walk.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Phuket 101 review",
+     "url": "https://www.phuket101.net/juicy-lucy-burger-bar/"
+    },
+    {
+     "label": "Facebook",
+     "url": "http://www.facebook.com/juicylucy.phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/juicy-lucy-burger-bar/",
+    "https://www.google.com/maps/place/Juicy+Lucy+Burger+and+Bar/@7.8854611,98.3874771,17z/data=!3m1!4b1!4m6!3m5!1s0x305031da9d91aecd:0x1f3f972dfcbddb99!8m2!3d7.8854611!4d98.3874771!16s%2Fg%2F11h1z801kx"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open, 11:00-24:00, pin). Phuket 101 review updated 14 Sep 2026 (4.4 from 1,085).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-korean-town-phuket",
+   "name": "Korea Town Phuket (Korean fried chicken)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "phuket-town",
+   "district": "Wichit (by Central Phuket)",
+   "island": "Phuket",
+   "lat": 7.88763,
+   "lng": 98.3663883,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Korea Town Phuket, 79/43 Wichit, near Central Phuket",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 592,
+   "reviewsSource": "Google count quoted by Phuket 101, Oct 2024",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online.",
+   "dishes": [
+    "Snow Onion Chicken, the signature Korean fried chicken",
+    "Choongman Chicken: crisp Korean fried chicken"
+   ],
+   "praise": "Phuket 101 (Oct 2024) calls it good, original Korean food in a modern room and names the Snow Onion Chicken as the dish to order.",
+   "watchOut": "The newest independent write-up found is from 2024.",
+   "description": "A Korean food hall by Central Phuket with a Korean fried chicken counter, handy on a mall day.",
+   "openText": "Daily 11:30-22:30 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "With a Central Phuket visit.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Phuket 101 review",
+     "url": "https://www.phuket101.net/korean-town-phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/korean-town-phuket/",
+    "https://www.google.com/maps/place/Korea+town+Phuket/@7.88763,98.3663883,17z/data=!3m1!4b1!4m6!3m5!1s0x305031ca6fe640b9:0x4ecc22f4251b3b0a!8m2!3d7.88763!4d98.3663883!16s%2Fg%2F11rd_703hx"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, 11:30-22:30, pin by Central Phuket). Phuket 101 review updated Oct 2024.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-millionaire-burgers",
+   "name": "Millionaire Burgers (Surin)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "late-night"
+   ],
+   "area": "surin",
+   "district": "Surin Beach (second branch at Laguna, Bang Tao)",
+   "island": "Phuket",
+   "lat": 7.9764559,
+   "lng": 98.2803335,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Millionaire Burgers, 106 Surin Beach, Choeng Thale, Phuket",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online; the own website says the pork burger is 'one of the cheapest on the menu' (Oct 2026).",
+   "dishes": [
+    "The Notorious P.I.G.: 12-hour slow-cooked pork, Asian slaw, pickled chilli, sesame",
+    "Mr Chow: Korean fried chicken with kimchi and gochujang",
+    "Loaded fries"
+   ],
+   "praise": "Time Out Phuket (Jun 2026) puts it first on its list of Phuket's best burger restaurants and names the P.I.G. pork burger and the loaded fries.",
+   "watchOut": "Google 4.8 with no count shown to us.",
+   "description": "A burger shop at Surin Beach (and Laguna) with a slow-cooked pork burger and a Korean fried chicken burger.",
+   "openText": "Daily 11:30-23:30 at Surin (Google Maps, Oct 2026); Time Out gives 11:30-22:30 for both branches.",
+   "days": [],
+   "bestTime": "After a beach afternoon at Surin or Bang Tao.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Laguna branch: 56 Lagoon Road, Cherng Talay (Time Out)."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://millionaireburgers.com/"
+    },
+    {
+     "label": "Time Out Phuket burger list",
+     "url": "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints"
+    }
+   ],
+   "sources": [
+    "https://millionaireburgers.com/",
+    "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints",
+    "https://www.google.com/maps/place/Millionaire+Burgers+-+Surin/@7.9764559,98.2803335,17z/data=!3m1!4b1!4m6!3m5!1s0x305039c6a7438735:0x7ba4ddca56fce965!8m2!3d7.9764559!4d98.2803335!16s%2Fg%2F11svg1jm3c"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 11:30-23:30, pin at 106 Surin Beach). Own website (menu items). Time Out Phuket, Jun 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ooo-burger",
+   "name": "OOO Burger & Pizza",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "thalang",
+   "district": "Si Sunthon (Srisoonthorn Road, by Wat Manik)",
+   "island": "Phuket",
+   "lat": 7.9792862,
+   "lng": 98.338923,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "OOO Burger, 30/99 Srisoonthorn Road, Si Sunthon, Thalang",
+   "placeId": "",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online.",
+   "dishes": [
+    "Aussie beef burger",
+    "Hand-cut, double-fried fries",
+    "Pizza"
+   ],
+   "praise": "Time Out Phuket (Jun 2026) lists it among the island's best burgers: it began as a roadside cart and is now an independent favourite.",
+   "watchOut": "Popular burgers can sell out, so go early. Google 4.9 with no count shown to us. Closes at 21:00.",
+   "description": "A casual burger and pizza shop inland from Bang Tao that grew out of a roadside cart.",
+   "openText": "Daily 10:30-21:00 (Google Maps and Time Out, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch.",
+   "score": 4,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://www.timeout.com/phuket/restaurants/phukets-6-best-burger-joints",
+    "https://www.google.com/maps/place/OOO+Burger+%26+Pizza/@7.9792862,98.338923,17z/data=!3m1!4b1!4m6!3m5!1s0x305037ce618abd2d:0x8c11c01b95e8739a!8m2!3d7.9792862!4d98.338923!16s%2Fg%2F11nmlgd2wy"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, open, 10:30-21:00, pin). Time Out Phuket, Jun 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mythai-burgers",
+   "name": "Mythai Burgers (Chaloklum)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "koh-phangan",
+   "district": "Chaloklum",
+   "island": "Koh Phangan",
+   "lat": 9.7879231,
+   "lng": 99.997013,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mythai Burgers, Chaloklum, Koh Phangan",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Burgers 150-250 THB (The Backpacking Family, Jun 2026).",
+   "dishes": [
+    "Gourmet beef burgers with house dressings, with a Bavarian and Danish touch"
+   ],
+   "praise": "The Backpacking Family's 2026 Koh Phangan guide says these are 'genuinely the best burgers you can find in Koh Phangan'.",
+   "watchOut": "In a village backstreet in the north of the island, far from Thong Sala and Haad Rin.",
+   "description": "A guesthouse kitchen in Chaloklum known on the island for its burgers.",
+   "openText": "Daily 12:00-22:30 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch on a trip to the north coast.",
+   "score": 4,
+   "pick": true,
+   "tips": [],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/mythaiguesthousekohphangan"
+    }
+   ],
+   "sources": [
+    "https://thebackpackingfamily.com/the-best-koh-phangan-restaurants/",
+    "https://www.google.com/maps/place/MYTHAI+BURGERS+Chaloklum/@9.7879231,99.997013,17z/data=!3m1!4b1!4m6!3m5!1s0x3055037244b62501:0xb7b652210b18ff51!8m2!3d9.7879231!4d99.997013!16s%2Fg%2F11p025l1f2"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 12:00-22:30, pin). The Backpacking Family Koh Phangan guide, Jun 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-le-burger-shack-thong-sala",
+   "name": "LE Burger Shack (Thong Sala)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [],
+   "area": "koh-phangan",
+   "district": "Thong Sala (Phangan Food Court)",
+   "island": "Koh Phangan",
+   "lat": 9.7095068,
+   "lng": 99.9910532,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "LE Burger Shack, Phangan Food Court, Thong Sala",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 244,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "A meal costs about 400-500 THB, says one reviewer (Wanderlog, Oct 2026); extra toppings are charged.",
+   "dishes": [
+    "Grass-fed beef burgers",
+    "Triple-cooked fries with parmesan and truffle",
+    "Milkshakes"
+   ],
+   "praise": "Wanderlog reviewers (Oct 2026) praise the burgers and the triple-cooked fries, one calling it 'the best I had in Thailand'; a critical review found the burger small for the price.",
+   "watchOut": "Salad, tomato and pickles cost extra. The menu may be shorter in Full Moon week.",
+   "description": "An artisan burger stall in the Thong Sala food court, by the pier and the night market.",
+   "openText": "Daily 12:00-22:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Before the Thong Sala night market.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A second branch is in Haad Rin (Google 4.6)."
+   ],
+   "links": [
+    {
+     "label": "Instagram",
+     "url": "https://www.instagram.com/leburgershack/"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/4957452/le-burger-shack-thong-sala-artisan-burgers",
+    "https://www.google.com/maps/place/LE+Burger+Shack+THONG+SALA+-+ARTISAN+BURGERS/@9.7095068,99.9910532,17z/data=!3m1!4b1!4m6!3m5!1s0x3054ff8df647bba3:0x5db90bc88c7b9009!8m2!3d9.7095068!4d99.9910532!16s%2Fg%2F11t7mwtbh_"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open, 12:00-22:00, pin; Haad Rin branch 4.6 in a search list). Wanderlog Oct 2026 (244 Google reviews).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-no-drama-burger",
+   "name": "No Drama Burger",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Silom (BTS Chong Nonsi)",
+   "island": "Bangkok",
+   "lat": 13.7241971,
+   "lng": 100.5296519,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "No Drama Burger, 190 Phiphat 2, Silom, Bangkok",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "PBB burger (pork bacon patty and a bacon slice) 299 THB, smash triple cheeseburger 399 THB (Time Out, Dec 2024).",
+   "dishes": [
+    "PBB: pork bacon patty with a bacon slice",
+    "Smash cheeseburger with dry-aged beef",
+    "Smash triple cheeseburger"
+   ],
+   "praise": "Time Out Bangkok (Jun 2025) calls the smash cheeseburger 'hot, fast and well-balanced' and 'one of the best-value smash burgers in the city'; it is also on Time Out's Dec 2024 best burgers list.",
+   "watchOut": "Tiny shop with few seats, and burgers are made in limited numbers. Hours differ between listings (Google 11:00-23:00, Time Out 11:00-21:00).",
+   "description": "A tiny Silom smash burger shop with a pork bacon burger, rated by Time Out for value.",
+   "openText": "Daily 11:00-23:00 (Google Maps, Oct 2026); Time Out lists 11:00-21:00.",
+   "days": [],
+   "bestTime": "Lunch, before it sells out.",
+   "score": 4,
+   "pick": true,
+   "tips": [],
+   "links": [
+    {
+     "label": "Time Out Bangkok",
+     "url": "https://www.timeout.com/bangkok/restaurants/no-drama-burger"
+    },
+    {
+     "label": "Website",
+     "url": "http://www.nodramaburger.com/"
+    }
+   ],
+   "sources": [
+    "https://www.timeout.com/bangkok/restaurants/no-drama-burger",
+    "https://www.timeout.com/bangkok/restaurants/bangkoks-7-best-smash-burgers",
+    "https://www.timeout.com/bangkok/restaurants/the-best-burgers-in-bangkok",
+    "https://www.google.com/maps/place/No+Drama+Burger+-+Bangkok+Premium+Smash+Burger/@13.7241971,100.5296519,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f4493a8806f:0xf9009c6ab906a6a4!8m2!3d13.7241971!4d100.5296519!16s%2Fg%2F11sstn_qjh"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, 11:00-23:00, pin). Time Out Bangkok smash burger list (Jun 2025) and best burgers list (Dec 2024, prices).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-easy-burger",
+   "name": "Easy Burger (Phrom Phong)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "late-night"
+   ],
+   "area": "bangkok",
+   "district": "Phrom Phong (Sukhumvit Soi 33)",
+   "island": "Bangkok",
+   "lat": 13.7319562,
+   "lng": 100.5678533,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Easy Burger, 593/1 Sukhumvit Soi 33, Bangkok",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published as text on the own website (menu shown as pictures).",
+   "dishes": [
+    "Classic smash burger on a potato bun",
+    "Bacon cheese, BBQ bacon and bacon blue burgers",
+    "Tater tots and chopped cheese fries"
+   ],
+   "praise": "Time Out Bangkok lists it on both its smash burger list (Jun 2025) and best burgers list (Dec 2024): dry-aged patties on potato buns, with a monthly special.",
+   "watchOut": "Hours have changed over time: Google shows 07:00-03:00 (Oct 2026), Time Out lists 11:00-02:00, and a 2024 listing had it closed Tuesday and Wednesday.",
+   "description": "A small American-style smash burger shop off Sukhumvit that serves until the early hours.",
+   "openText": "Daily 07:00-03:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Late, after a night on Sukhumvit.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "A second shop is in On Nut (Sukhumvit 50)."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "http://www.easyburgerbkk.com/"
+    },
+    {
+     "label": "Time Out smash burgers",
+     "url": "https://www.timeout.com/bangkok/restaurants/bangkoks-7-best-smash-burgers"
+    }
+   ],
+   "sources": [
+    "http://www.easyburgerbkk.com/",
+    "https://www.timeout.com/bangkok/restaurants/bangkoks-7-best-smash-burgers",
+    "https://www.timeout.com/bangkok/restaurants/the-best-burgers-in-bangkok",
+    "https://www.google.com/maps/place/Easy+Burger+(Phrom+Phong)/@13.7319562,100.5678533,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f56e7760757:0x4fbdc71fc98ba299!8m2!3d13.7319562!4d100.5678533!16s%2Fg%2F11jsbdnf72"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open, 07:00-03:00, pin). Own website (menu names, branches). Time Out Bangkok, Jun 2025 and Dec 2024.",
+   "imageCandidates": [
+    {
+     "url": "https://www.easyburgerbkk.com/wp-content/uploads/2023/06/Phrom-Phong-450-min.jpg",
+     "page": "http://www.easyburgerbkk.com/",
+     "credit": "Easy Burger",
+     "license": "Restaurant's own website"
+    }
+   ]
+  },
+  {
+   "id": "food-smizzle-burger",
+   "name": "Smizzle Burger (Bambini Villa)",
+   "nameThai": "สมิชเซิล เบอร์เกอร์",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "late-night"
+   ],
+   "area": "bangkok",
+   "district": "Sukhumvit 26 (Bambini Villa)",
+   "island": "Bangkok",
+   "lat": 13.7194509,
+   "lng": 100.570527,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Smizzle Burger, Bambini Villa, 18 Soi Athakravi, Sukhumvit 26, Bangkok",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 699,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Oklahoma onion smash 270 THB, Crusty Blondy with a cheddar crisp 290 THB (Time Out, Jun 2025); BK Magazine (2021) listed the Oklahoma with a pork patty for less than the beef one.",
+   "dishes": [
+    "Oklahoma: double smash with onions, also with a pork patty",
+    "Crusty Blondy with a cheddar crisp",
+    "Melt-cheese fries"
+   ],
+   "praise": "First on Time Out Bangkok's smash burger list (Jun 2025); Wanderlog reviewers praise the homemade buns, and one (Sep 2025) liked the smashed pork patty.",
+   "watchOut": "Ask for the pork patty; it is not always on the printed menu.",
+   "description": "A smash burger shop in the Bambini Villa food court off Sukhumvit 26 that offers pork as well as beef patties.",
+   "openText": "Daily 10:00-02:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner or late.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Other branches: Ari (Soi Si Fa) and, by a reviewer's note, EmQuartier."
+   ],
+   "links": [
+    {
+     "label": "Time Out smash burgers",
+     "url": "https://www.timeout.com/bangkok/restaurants/bangkoks-7-best-smash-burgers"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/smizzleburger/"
+    }
+   ],
+   "sources": [
+    "https://www.timeout.com/bangkok/restaurants/bangkoks-7-best-smash-burgers",
+    "https://www.bkmagazine.com/restaurant/smizzle-burger",
+    "https://wanderlog.com/place/details/3729486/smizzle-burger",
+    "https://www.google.com/maps/place/Smizzle+Burger+-+Bambini+Villa/@13.7194509,100.570527,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f3900f836a5:0x7c53543a271a2214!8m2!3d13.7194509!4d100.570527!16s%2Fg%2F11rwhq149n"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 10:00-02:00, pin). Time Out Bangkok, Jun 2025. Wanderlog (699 Google reviews, Sep 2025 review). BK Magazine page (2021) for the pork option.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-billys-smokehouse",
+   "name": "Billy's Smokehouse",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Phloen Chit (Mahatun Plaza)",
+   "island": "Bangkok",
+   "lat": 13.7421557,
+   "lng": 100.5492469,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Billy's Smokehouse, Mahatun Plaza, 888 Ploenchit Road, Bangkok",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Pulled pork burger 355 THB, bacon triple cheeseburger 590 THB, pork spare ribs 650 THB half or 1,100 THB whole, pork platter for 4 2,200 THB; plus 10% service and 7% VAT (own website, Oct 2026).",
+   "dishes": [
+    "Bacon triple cheeseburger",
+    "Pulled pork burger",
+    "Smoked pork spare ribs",
+    "Pork platter for 4"
+   ],
+   "praise": "On Time Out Bangkok's best burgers list (Dec 2024) for its Wagyu patties and a bacon triple cheeseburger with five bacon strips.",
+   "watchOut": "Prices add 17% for service and VAT.",
+   "description": "A Texas-style smokehouse with burgers, pork ribs and platters for four, near BTS Phloen Chit.",
+   "openText": "Daily 11:00-22:00 (own website and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner for the group: two pork platters feed 8.",
+   "score": 4,
+   "pick": true,
+   "tips": [],
+   "links": [
+    {
+     "label": "Website and menu",
+     "url": "https://billys-smokehouse.com/"
+    }
+   ],
+   "sources": [
+    "https://billys-smokehouse.com/",
+    "https://www.timeout.com/bangkok/restaurants/the-best-burgers-in-bangkok",
+    "https://www.google.com/maps/place/Billy%E2%80%99s+Smokehouse/@13.7421557,100.5492469,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f35569ec33d:0xc6d0c08f21c8321a!8m2!3d13.7421557!4d100.5492469!16s%2Fg%2F11f5k2c6pv"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, 11:00-22:00, pin). Own website Oct 2026 (menu and prices). Time Out Bangkok, Dec 2024.",
+   "imageCandidates": [
+    {
+     "url": "https://billys-smokehouse.com/images/food/triple-cheeseburger.png",
+     "page": "https://billys-smokehouse.com/",
+     "credit": "Billy's Smokehouse",
+     "license": "Restaurant's own website"
+    }
+   ]
+  },
+  {
+   "id": "food-25-degrees-bangkok",
+   "name": "25 Degrees Burger Bar (Pullman Hotel G)",
+   "nameThai": "เทวนตี้ไฟ้ว์ ดีกรี เบอร์เกอร์",
+   "kind": "fast-food",
+   "tags": [
+    "late-night"
+   ],
+   "area": "bangkok",
+   "district": "Silom (Pullman Bangkok Hotel G)",
+   "island": "Bangkok",
+   "lat": 13.7258262,
+   "lng": 100.5258636,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "25 Degrees Burger Bar, Pullman Bangkok Hotel G, 188 Silom Road, Bangkok",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Menu prices are in PDFs not readable online; a buy one, get one free signature burger runs 00:00-05:00 daily (operator's website, Oct 2026).",
+   "dishes": [
+    "Signature burgers",
+    "Frita burger with sirloin and chorizo (Sep-Oct 2026 special)",
+    "Milkshakes"
+   ],
+   "praise": "The hotel's page says Lifestyle Asia named it Best Burger in Bangkok.",
+   "watchOut": "Hotel prices. The award claim comes from the hotel and one roundup; we did not see the Lifestyle Asia page.",
+   "description": "A diner-style burger bar in a Silom hotel that is open 24 hours, with a two-for-one deal after midnight.",
+   "openText": "Open 24 hours (Google Maps and hotel website, Oct 2026).",
+   "days": [],
+   "bestTime": "After midnight, for the two-for-one burgers.",
+   "score": 4,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Hotel page",
+     "url": "https://www.pullmanbangkokhotelg.com/dining/25-degrees/"
+    },
+    {
+     "label": "Menu",
+     "url": "https://randblab.com/25-degrees-bangkok/"
+    }
+   ],
+   "sources": [
+    "https://www.pullmanbangkokhotelg.com/dining/25-degrees/",
+    "https://randblab.com/25-degrees-bangkok/",
+    "https://www.google.com/maps/place/25+Degrees+Burger+Bar/@13.7258262,100.5258636,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d24efa64ed:0x3614844a055e181a!8m2!3d13.7258262!4d100.5258636!16s%2Fg%2F11cffm7_g"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open 24 hours, pin). Hotel and operator pages Oct 2026 (24 hours, late deal, award).",
+   "imageCandidates": [
+    {
+     "url": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/21/2023/06/23101730/PV_25-Degrees-0110-724x357.jpg",
+     "page": "https://www.pullmanbangkokhotelg.com/dining/25-degrees/",
+     "credit": "Pullman Bangkok Hotel G",
+     "license": "Hotel's own website"
+    }
+   ]
+  },
+  {
+   "id": "food-shake-shack-centralworld",
+   "name": "Shake Shack (centralwOrld)",
+   "nameThai": "เชค แช็ค เซ็นทรัลเวิลด์",
+   "kind": "fast-food",
+   "tags": [
+    "pork",
+    "chain"
+   ],
+   "area": "bangkok",
+   "district": "Siam and Ratchaprasong (centralwOrld)",
+   "island": "Bangkok",
+   "lat": 13.7474488,
+   "lng": 100.5399428,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Shake Shack centralwOrld, Ratchadamri Road, Bangkok",
+   "placeId": "",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1731,
+   "reviewsSource": "Google count shown on Wanderlog, Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "ShackBurger 230 THB single, 340 THB double; SmokeShack with bacon 275 THB single, 385 THB double; shakes 190 THB (Thailand Magazine, 2025).",
+   "dishes": [
+    "SmokeShack: cheeseburger with bacon and cherry peppers",
+    "Jaew BBQ Pork Burger (Bangkok special)",
+    "Mango sticky rice shake"
+   ],
+   "praise": "Wanderlog reviewers (Oct 2026) like the SmokeShack and the chicken bites; some find it pricey next to the local chains.",
+   "watchOut": "Mall prices for a chain burger. Five Guys has no branch in Thailand that we could find.",
+   "description": "Shake Shack's first Thai branch, with a Bangkok menu that adds a jaew BBQ pork burger and Thai dessert shakes.",
+   "openText": "Daily 10:00-22:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "With a Siam shopping day.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Other Bangkok branches: One Bangkok, The EmSphere (Sukhumvit) and Megabangna."
+   ],
+   "links": [
+    {
+     "label": "Shake Shack Thailand",
+     "url": "http://www.shakeshack.co.th/"
+    }
+   ],
+   "sources": [
+    "https://thailandmagazine.com/bangkok/eat-drink/shake-shack/",
+    "https://wanderlog.com/place/details/6834758/shake-shack-at-centralworld",
+    "https://www.google.com/maps/place/Shake+Shack+CentralWorld/@13.7474488,100.5399428,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f75862fdb27:0x5c57eca22fe367d9!8m2!3d13.7474488!4d100.5399428!16s%2Fg%2F11txkwm7sc"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.3, open, 10:00-22:00, pin). Thailand Magazine (2025, prices and Bangkok menu). Wanderlog (1,731 Google reviews). OpenStreetMap shows the same outlet.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-soho-pizza",
+   "name": "Soho Pizza (Sukhumvit Soi 11)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "late-night",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Nana (Sukhumvit Soi 11)",
+   "island": "Bangkok",
+   "lat": 13.7446249,
+   "lng": 100.5568501,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Soho Pizza, 26/3 Sukhumvit Soi 11, Bangkok",
+   "placeId": "",
+   "rating": 4.1,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "NY combo of 2 slices and a drink 289 THB; two 12-inch pies 599 THB (LINE page, Oct 2026). Slices started at 120 THB in 2019 (Time Out).",
+   "dishes": [
+    "New York-style pizza by the slice",
+    "18-inch thin-crust pies"
+   ],
+   "praise": "Time Out Bangkok calls it one of very few places in the city for New York-style pizza and a grab-and-go stop for people heading home late.",
+   "watchOut": "Mainly takeaway, with a few seats. The Time Out review is from 2019; the 2026 hours come from the shop's LINE page and Google.",
+   "description": "A New York-style slice shop on Soi 11 that stays open until 05:00.",
+   "openText": "Daily 09:00-05:00 (LINE page and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "02:00, after Soi 11.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Branches in Thonglor (to 04:00) and The Commons Saladaeng (to 24:00); delivery about 30 minutes."
+   ],
+   "links": [
+    {
+     "label": "LINE page",
+     "url": "https://page.line.me/602elikz"
+    },
+    {
+     "label": "Website",
+     "url": "http://www.sohopizza.co.th/"
+    }
+   ],
+   "sources": [
+    "https://page.line.me/602elikz",
+    "https://www.timeout.com/bangkok/restaurants/soho-pizza",
+    "https://www.google.com/maps/place/Soho+Pizza+(Sukhumvit+11)/@13.7446249,100.5568501,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f9403668023:0x6781902db7fdb96b!8m2!3d13.7446249!4d100.5568501!16s%2Fg%2F11fjmb__6s"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.1, open, closes 05:00, pin). Soho Pizza LINE page Oct 2026 (branches, hours, combos). Time Out Bangkok, 2019.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pelicana-siam",
+   "name": "Pelicana Chicken (Siamscape)",
+   "nameThai": "",
+   "kind": "fast-food",
+   "tags": [
+    "chain"
+   ],
+   "area": "bangkok",
+   "district": "Siam (Siamscape, 3rd floor)",
+   "island": "Bangkok",
+   "lat": 13.7444457,
+   "lng": 100.5309091,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pelicana Chicken Thailand, Siamscape, Phaya Thai Road, Bangkok",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published as text online (menu flipbook on the website).",
+   "dishes": [
+    "Korean fried chicken in about 10 sauces, such as honey, smoky hot and gangjeong",
+    "Korean fried chicken with jasmine rice",
+    "Fried chicken burgers"
+   ],
+   "praise": "Pelicana, a well-known Korean fried chicken chain, opened its first Thai branch here in January 2025 (Khaosod English, Avinews); Google shows 4.8.",
+   "watchOut": "We found no independent review of the Bangkok branch yet, only launch news and the Google rating.",
+   "description": "The first Thai branch of the Korean fried chicken chain Pelicana, a short walk from Siam BTS.",
+   "openText": "Daily 11:00-21:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch on a Siam shopping day.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [
+    {
+     "label": "Pelicana Thailand",
+     "url": "https://pelicana.co/"
+    }
+   ],
+   "sources": [
+    "https://pelicana.co/",
+    "https://www.khaosodenglish.com/news/business/2025/01/11/korean-fried-chicken-giant-pelicana-debuts-in-thailand/amp/",
+    "https://avinews.com/en/pelicana-joins-thailands-competitive-fried-chicken-market/?noamp=mobile",
+    "https://www.google.com/maps/place/Pelicana+Chicken+Thailand/@13.7444457,100.5309091,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fdf4ae1d6f7:0x8433fa937649e2dd!8m2!3d13.7444457!4d100.5309091!16s%2Fg%2F11wxvnzyrz"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 11:00-21:00, pin at 215 Phaya Thai Road, 3rd floor). Own website (Siamscape, 3rd floor). Launch news via search snippets, Jan 2025.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-patong-bangla",
+   "name": "McDonald's Twilight of Bangla (Patong, 24 hours)",
+   "nameThai": "แมคโดนัลด์ทไวไลท์ออฟบางลา",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "late-night",
+    "budget"
+   ],
+   "area": "patong",
+   "district": "Patong (Bangla Road)",
+   "island": "Phuket",
+   "lat": 7.893945,
+   "lng": 98.2958415,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's Twilight of Bangla, 5/1 Bangla Road, Patong",
+   "placeId": "",
+   "rating": 3.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "Busy and messy after 01:00 when the bars empty.",
+   "description": "The 24-hour McDonald's in the middle of Bangla Road, 0.9 km from the Patong villa.",
+   "openText": "Open 24 hours (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "After the bars.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Another 24-hour McDonald's is on Thawewong (beach) Road, just south of Bangla, and there are McDonald's outlets at Jungceylon (OpenStreetMap).",
+    "Delivery: 1711 or the McDonald's app."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/McDonald's+Twilight+of+Bangla/@7.893945,98.2958415,17z/data=!3m1!4b1!4m6!3m5!1s0x30503abca3e490cf:0x4f402a38e357306b!8m2!3d7.893945!4d98.2958415!16s%2Fg%2F1hc14pw7g",
+    "https://thaiest.com/en/thai-food/reviews/mcdonald-s-in-thailand"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (3.7, open 24 hours, pin). OpenStreetMap tags it 24/7 too. Menu prices from THAIest (Dec 2024).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-burger-king-jungceylon",
+   "name": "Burger King Jungceylon (Patong)",
+   "nameThai": "เบอร์เกอร์ คิง",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "late-night",
+    "budget"
+   ],
+   "area": "patong",
+   "district": "Patong (Jungceylon, Rat-U-Thit 200 Pee Road side)",
+   "island": "Phuket",
+   "lat": 7.8917349,
+   "lng": 98.2995802,
+   "coordSource": "OpenStreetMap (Overpass), read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Burger King Jungceylon, Rat-U-Thit 200 Pee Road, Patong",
+   "placeId": "",
+   "rating": 3.7,
+   "ratingSource": "Google, as shown on Intravel (2025)",
+   "reviews": 912,
+   "reviewsSource": "Google count shown on Intravel (2025)",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Hat Yai-style and tom yum fried chicken 49 THB a piece, gai klua kruea (salted fried chicken) with sticky rice 79 THB, pork congee breakfast 39-59 THB, BBQ bacon cheese burger 169 THB, Whopper 189 THB (THAIest price list, Nov 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Hat Yai-style or tom yum fried chicken",
+    "BBQ bacon cheese burger",
+    "Pork congee (breakfast)",
+    "Whopper"
+   ],
+   "praise": "",
+   "watchOut": "Listings disagree on the hours: 24 hours (OpenStreetMap) or 11:00-03:00 (Intravel). Either way it is open long after midnight.",
+   "description": "Burger King at the Jungceylon mall entrance near Bangla, about 0.6 km from the Patong villa; it serves Thai fried chicken and pork as well as Whoppers.",
+   "openText": "Very late: 24 hours per OpenStreetMap, 11:00-03:00 per Intravel (2025).",
+   "days": [],
+   "bestTime": "Late night.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A second Burger King listed as 24 hours is a few steps away at the inland end of Bangla Road (OpenStreetMap)."
+   ],
+   "links": [],
+   "sources": [
+    "https://intravel.net/phuket/restaurants-cafes/burger-king-jungceylon",
+    "https://www.openstreetmap.org/node/4170949014",
+    "https://thaiest.com/en/thai-food/reviews/burger-king-in-thailand"
+   ],
+   "verification": "Not read on Google Maps (our search hit a different place and the read budget was used up). Pin and 24/7 tag from OpenStreetMap; Intravel listing (Google 3.7 from 912, hours 11:00-03:00). Menu from THAIest (Nov 2024).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kfc-jungceylon",
+   "name": "KFC Jungceylon (Patong)",
+   "nameThai": "เคเอฟซี",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "budget"
+   ],
+   "area": "patong",
+   "district": "Patong (Jungceylon)",
+   "island": "Phuket",
+   "lat": 7.8909223,
+   "lng": 98.2999052,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "KFC Jungceylon, 181 Rat-U-Thit 200 Pee Road, Patong",
+   "placeId": "",
+   "rating": 3.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Zabb spicy chicken rice bowl and green curry crispy chicken rice bowl 79 THB, Hot & Spicy chicken 55 THB a piece, Wingz Zabb 2 pieces 49 THB, egg tart 35 THB; box sets 179-189 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Hot & Spicy fried chicken",
+    "Zabb spicy chicken rice bowl",
+    "Green curry crispy chicken rice bowl",
+    "Egg tart"
+   ],
+   "praise": "",
+   "watchOut": "Follows mall hours, so it closes at 23:00.",
+   "description": "The KFC closest to the Patong villa, about 0.5 km away in Jungceylon.",
+   "openText": "Daily 11:00-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Afternoon snack.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Delivery: 1150 or the KFC app."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/KFC+Jungceylon/@7.8909223,98.2999052,17z/data=!3m1!4b1!4m6!3m5!1s0x30503abca8795647:0xb9ac46b5027fb5fa!8m2!3d7.8909223!4d98.2999052!16s%2Fg%2F11cn936cxz",
+    "https://thaiest.com/en/thai-food/reviews/kfc-in-thailand"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (3.5, open, 11:00-23:00, pin). OpenStreetMap shows two more KFCs in central Patong. Menu from THAIest (Dec 2024).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pizza-company-bangla",
+   "name": "The Pizza Company (Bangla Road)",
+   "nameThai": "เดอะ พิซซ่า คอมปะนี",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "group-friendly"
+   ],
+   "area": "patong",
+   "district": "Patong (Bangla Road, inland end)",
+   "island": "Phuket",
+   "lat": 7.8933276,
+   "lng": 98.2981147,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Pizza Company Bangla, 39 Soi Bangla Road, Patong",
+   "placeId": "ChIJF-oO4Ik7UDAR0549bfI4yaw",
+   "rating": 4.0,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Regular pizzas 149-399 THB (Hawaiian 359 THB, Seafood Deluxe 399 THB), Jumbo Puff 149 THB, Thai-style keemao spaghetti 129-169 THB (THAIest, 2024).",
+   "dishes": [
+    "Pizzas with ham (Hawaiian) or seafood",
+    "Keemao (drunken noodle style) spaghetti",
+    "Chicken wings"
+   ],
+   "praise": "",
+   "watchOut": "Hours not read; most branches open 10:00-22:00 (THAIest).",
+   "description": "Thailand's own pizza chain (Minor Food), with Thai-style toppings and spaghetti; easy for a group order.",
+   "openText": "Most branches 10:00-22:00 (THAIest); this branch's hours not confirmed.",
+   "days": [],
+   "bestTime": "Group order to the villa.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Delivery: 1112 or 1112.com. A second Patong branch is at 94/1 Thawewong Road (Google 3.9)."
+   ],
+   "links": [
+    {
+     "label": "Order online",
+     "url": "https://www.1112.com/"
+    }
+   ],
+   "sources": [
+    "https://thaiest.com/en/thai-food/reviews/the-pizza-company-in-thailand",
+    "https://www.openstreetmap.org/node/3707008817"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list: Bangla branch 4.0 with pin and place id, Thawewong Road branch 3.9; hours not read). OpenStreetMap shows three outlets in central Patong.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-nai-harn",
+   "name": "McDonald's Nai Harn (Soi Naya)",
+   "nameThai": "แมคโดนัลด์",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "budget"
+   ],
+   "area": "nai-harn",
+   "district": "Nai Harn (Soi Naya)",
+   "island": "Phuket",
+   "lat": 7.787101,
+   "lng": 98.3174547,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's Nai Harn, Soi Naya, Rawai",
+   "placeId": "ChIJz_beJgApUDARntw1H0VWWyU",
+   "rating": 3.0,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "Hours not read. Low Google rating (3.0), as is common for chain outlets.",
+   "description": "The nearest established McDonald's to the Rawai villa, about 2.6 km away on Soi Naya.",
+   "openText": "Hours not confirmed.",
+   "days": [],
+   "bestTime": "",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Google also lists McDonald's Rawai Beach (3.7, about 3.4 km) and a new McDonald's at Verve Commons on Wiset Road, about 1.3 km from the villa, with no reviews yet on 27 Oct 2026: check if it has opened."
+   ],
+   "links": [],
+   "sources": [
+    "https://thaiest.com/en/thai-food/reviews/mcdonald-s-in-thailand"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list of McDonald's around the Rawai villa: pins, ratings and place ids; hours not read). Not in OpenStreetMap.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kfc-homepro-chalong",
+   "name": "KFC HomePro (Chalong)",
+   "nameThai": "เคเอฟซี",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "budget"
+   ],
+   "area": "chalong",
+   "district": "Chalong (HomePro, Chao Fa West Road)",
+   "island": "Phuket",
+   "lat": 7.8246898,
+   "lng": 98.3397293,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "KFC HomePro Phuket, Chao Fa West Road, Chalong",
+   "placeId": "ChIJDSd7pg8vUDARxDYwj6eqFuY",
+   "rating": 3.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Zabb spicy chicken rice bowl and green curry crispy chicken rice bowl 79 THB, Hot & Spicy chicken 55 THB a piece, Wingz Zabb 2 pieces 49 THB, egg tart 35 THB; box sets 179-189 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Hot & Spicy fried chicken",
+    "Zabb spicy chicken rice bowl",
+    "Green curry crispy chicken rice bowl",
+    "Egg tart"
+   ],
+   "praise": "",
+   "watchOut": "Hours not read; it likely follows the HomePro store.",
+   "description": "The nearest KFC to the Rawai villa, about 2.7 km north at the HomePro store.",
+   "openText": "Hours not confirmed.",
+   "days": [],
+   "bestTime": "",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "KFC Lotus's Chalong (Google 3.9) is 4.4 km away; KFC Caltex Chao Fa is on the road to Phuket Town. Five Star fried and grilled chicken kiosks are closer, near Nai Harn (OpenStreetMap)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.openstreetmap.org/node/571499860",
+    "https://thaiest.com/en/thai-food/reviews/kfc-in-thailand"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list of KFCs around the Rawai villa: pin, rating, place id; hours not read). OpenStreetMap has the same KFC on Chao Fa West Road.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-central-phuket",
+   "name": "McDonald's Drive-Thru (Central Phuket)",
+   "nameThai": "แมคโดนัลด์",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "late-night",
+    "budget"
+   ],
+   "area": "phuket-town",
+   "district": "Wichit (Central Phuket, bypass road)",
+   "island": "Phuket",
+   "lat": 7.8944591,
+   "lng": 98.3685783,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's with Drive Thru, 89 Chalermprakiat Ratchakan Thi 9 Road, Central Phuket",
+   "placeId": "ChIJU5mK1MYxUDARj04neUEJhRw",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "",
+   "description": "A drive-thru McDonald's by Central Phuket on the bypass road, open 24 hours, on the way between the beaches and the airport.",
+   "openText": "Open 24 hours (OpenStreetMap; drive-thru branches in Thailand are 24 hours, THAIest).",
+   "days": [],
+   "bestTime": "Any hour, by car.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "The KFC drive-thru next door is listed 09:00-01:00 (OpenStreetMap); there are also a McDonald's and a KFC (1st floor) inside Central Phuket."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.openstreetmap.org/node/6212264382",
+    "https://thaiest.com/en/thai-food/reviews/mcdonald-s-in-thailand"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list: 4.2, pin, place id; hours not read). OpenStreetMap tags it 24/7.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-burger-king-phuket-airport",
+   "name": "Burger King (Phuket Airport, domestic terminal)",
+   "nameThai": "เบอร์เกอร์ คิง",
+   "kind": "fast-food",
+   "tags": [
+    "chain"
+   ],
+   "area": "mai-khao",
+   "district": "Phuket Airport (domestic terminal, 3rd floor)",
+   "island": "Phuket",
+   "lat": 8.1073852,
+   "lng": 98.3056618,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Burger King, Phuket International Airport, Domestic Terminal 3rd Floor",
+   "placeId": "",
+   "rating": 3.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Thai menu: Hat Yai-style and tom yum fried chicken 49 THB a piece, gai klua kruea (salted fried chicken) with sticky rice 79 THB, pork congee breakfast 39-59 THB, BBQ bacon cheese burger 169 THB, Whopper 189 THB (THAIest price list, Nov 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026). Airport prices are usually higher.",
+   "dishes": [
+    "Hat Yai-style or tom yum fried chicken",
+    "BBQ bacon cheese burger",
+    "Pork congee (breakfast)",
+    "Whopper"
+   ],
+   "praise": "",
+   "watchOut": "Card payment only at this outlet (OpenStreetMap, Mar 2025).",
+   "description": "Burger King in the domestic terminal at Phuket Airport, for a meal before the flight.",
+   "openText": "Daily 07:00-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Before a domestic flight.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "OpenStreetMap also shows a McDonald's (4th floor) and Subway outlets in the terminals."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Burger+King/@8.1073852,98.3056618,17z/data=!3m1!4b1!4m6!3m5!1s0x3050462718e936e5:0x424be8d484c01b6d!8m2!3d8.1073852!4d98.3056618!16s%2Fg%2F11gzcmc9z",
+    "https://www.openstreetmap.org/node/5582559630"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (3.4, open, 07:00-23:00, pin). OpenStreetMap (level 3, cards only, checked Mar 2025).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kfc-thong-sala",
+   "name": "KFC Thong Sala (Koh Phangan)",
+   "nameThai": "เคเอฟซี",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala (main road from the pier)",
+   "island": "Koh Phangan",
+   "lat": 9.711707,
+   "lng": 99.990493,
+   "coordSource": "OpenStreetMap (Overpass), read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "KFC Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": null,
+   "ratingSource": null,
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Zabb spicy chicken rice bowl and green curry crispy chicken rice bowl 79 THB, Hot & Spicy chicken 55 THB a piece, Wingz Zabb 2 pieces 49 THB, egg tart 35 THB; box sets 179-189 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Hot & Spicy fried chicken",
+    "Zabb spicy chicken rice bowl",
+    "Green curry crispy chicken rice bowl",
+    "Egg tart"
+   ],
+   "praise": "",
+   "watchOut": "Not checked on Google Maps; hours not confirmed.",
+   "description": "The only big-chain fast food we found on Koh Phangan: a KFC in Thong Sala near the pier, with a Dunkin' next door.",
+   "openText": "Hours not confirmed.",
+   "days": [],
+   "bestTime": "",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "We found no McDonald's or Burger King on Koh Phangan."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.openstreetmap.org/node/3652999562"
+   ],
+   "verification": "OpenStreetMap only (node on route 3073 in Thong Sala, read 27 Oct 2026). Our Google search landed on a KFC in Surat Thani, and the read budget was then used up.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-khao-san",
+   "name": "McDonald's Khao San Road (24 hours)",
+   "nameThai": "แมคโดนัลด์",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "late-night",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Khao San Road (west end)",
+   "island": "Bangkok",
+   "lat": 13.7594619,
+   "lng": 100.4963076,
+   "coordSource": "Google Maps pin from a search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's, 67 Khaosan Road, Bangkok",
+   "placeId": "ChIJ8YpALwCZ4jAR9anMGKiA9Sk",
+   "rating": 2.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "Very busy and low rated (Google 2.8); it is here for the hours.",
+   "description": "The 24-hour McDonald's on Khao San Road.",
+   "openText": "Open 24 hours (OpenStreetMap).",
+   "days": [],
+   "bestTime": "Late night.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A second McDonald's at the east end of Khao San rates higher (Google 3.9); two Burger Kings nearby are listed as 24 hours, and a Domino's is open 10:00-22:00 (OpenStreetMap)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.openstreetmap.org/node/2077991914"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (search list: 67 Khaosan Road 2.8, east-end branch 3.9, pins and place ids; hours not read). OpenStreetMap tags 67 Khaosan Road 24/7.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-siam-paragon",
+   "name": "McDonald's Siam Paragon",
+   "nameThai": "แมคโดนัลด์ สาขาสยามพารากอน",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Siam (Siam Paragon, ground floor)",
+   "island": "Bangkok",
+   "lat": 13.7459341,
+   "lng": 100.5344344,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's Siam Paragon, 991 Rama I Road, Bangkok",
+   "placeId": "",
+   "rating": 4.1,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "",
+   "description": "McDonald's on the ground floor of Siam Paragon, by BTS Siam.",
+   "openText": "Daily 08:30-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "KFC and Burger King are next to it at Siam (OpenStreetMap); Shake Shack centralwOrld is 0.6 km east and Pelicana fried chicken is at Siamscape."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/McDonald's+Siam+Paragon/@13.7459341,100.5344344,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecdffe7601d:0xc780a8e2de013bb5!8m2!3d13.7459341!4d100.5344344!16s%2Fg%2F1hd_jrq2z"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.1, open, 08:30-23:00, pin).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mcdonalds-grand-five-nana",
+   "name": "McDonald's Grand Five (Nana, 24 hours)",
+   "nameThai": "แมคโดนัลด์ แกรนด์ไฟว์ นานา",
+   "kind": "fast-food",
+   "tags": [
+    "chain",
+    "late-night",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Sukhumvit (Nana, near Soi 5)",
+   "island": "Bangkok",
+   "lat": 13.7417597,
+   "lng": 100.554017,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "McDonald's Grand Five Nana, 87/1 Sukhumvit Road, Bangkok",
+   "placeId": "",
+   "rating": 3.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Thai menu: Samurai Pork Burger 109 THB (set 180), pork burger 49 THB, kaprao rice with fried chicken 79 THB, McFried Chicken (original or spicy) 45 THB a piece, corn pie and pineapple pie 35 THB; Big Mac set 220 THB (THAIest price list, Dec 2024). In 2026 expect about 150-250 THB for a set meal (Numbeo puts a fast-food meal in Bangkok at about 250 THB, Oct 2026).",
+   "dishes": [
+    "Samurai Pork Burger",
+    "Kaprao (holy basil) rice with fried chicken",
+    "McFried Chicken, spicy",
+    "Corn pie or pineapple pie"
+   ],
+   "praise": "",
+   "watchOut": "",
+   "description": "A 24-hour McDonald's on Sukhumvit Road by BTS Nana.",
+   "openText": "Open 24 hours (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Late night on Sukhumvit.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A Burger King near Sukhumvit Soi 3 is also listed as 24 hours (OpenStreetMap), and Soho Pizza on Soi 11 sells slices until 05:00."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/McDonald's+-+GRAND+FIVE+NANA/@13.7417597,100.554017,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fc0283b876d:0x4f3d3c4c36bf5d49!8m2!3d13.7417597!4d100.554017!16s%2Fg%2F1hc3kx84"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (3.9, open 24 hours, pin). OpenStreetMap tags it 24/7.",
+   "imageCandidates": []
+  }
+ ],
+ "existingChecked": [
+  {
+   "id": "the-kitchen-patong",
+   "verdict": "kept",
+   "note": "Not re-read here (it was checked today by the Phuket west researcher); not duplicated. Still the late burger and pizza option by Bangla, to 03:00."
+  },
+  {
+   "id": "food-food-factory-ban-tai",
+   "verdict": "kept",
+   "note": "Not re-read here; not duplicated. Wanderlog says its team also runs a fast-food outlet in Haad Rin."
+  },
+  {
+   "id": "food-haad-rin-night-street-food",
+   "verdict": "kept",
+   "note": "Not re-read here; not duplicated."
+  },
+  {
+   "id": "food-polo-fried-chicken",
+   "verdict": "kept",
+   "note": "Not re-read here; not duplicated. Time Out Bangkok still lists it in its Jul 2026 fried chicken guide."
+  },
+  {
+   "id": "food-smokin-pug",
+   "verdict": "kept",
+   "note": "Not re-read here; not duplicated."
+  },
+  {
+   "id": "food-hogfather",
+   "verdict": "kept",
+   "note": "Not re-read here; not duplicated."
+  }
+ ],
+ "notIncluded": [
+  {
+   "name": "Prime Burger (Patong, Rawai, Central Phuket, Porto de Phuket; also Sukhumvit, Bangkok)",
+   "reason": "Halal: reviewers call it the best halal burger in Phuket. The user does not want halal places."
+  },
+  {
+   "name": "Madcow Burger (Phuket Old Town)",
+   "reason": "Halal-friendly menu with beef bacon (Time Out, Jun 2026); left out as halal."
+  },
+  {
+   "name": "Frida Eat & Drink, Le Brooklyn and Amena Burger (Patong)",
+   "reason": "Halal burger places."
+  },
+  {
+   "name": "Haroy (Hat Yai fried chicken, Chula Soi 14, Bangkok)",
+   "reason": "Praised by Time Out (Jul 2026), but Hat Yai fried chicken is a Muslim tradition and the brand has opened in Malaysia; we could not confirm it is not halal, so it is left out."
+  },
+  {
+   "name": "Chicken Corner (Haad Rin, Koh Phangan)",
+   "reason": "Could not find it on Google Maps; the only 'Chicken Corner' listed is a new stall in the Thong Sala food court with no track record."
+  },
+  {
+   "name": "Burger Box Rawai",
+   "reason": "Bacon burger praised, but only 34 Google reviews (Wanderlog)."
+  },
+  {
+   "name": "Big Boys' Burger Club (Rawai branch)",
+   "reason": "Listed as a branch in one guide, not checked; the Patong branch is in the list."
+  },
+  {
+   "name": "Bang Bang Burgers (Sukhumvit Soi 11), Goodburgs (Sukhumvit 71), Barney's Burger Joint (Ari), Cast Iron Burgerhaus (Ari)",
+   "reason": "On Time Out Bangkok lists (2024-2025) but cut for length and Google read budget; Barney's closes at 20:00 and often sells out."
+  },
+  {
+   "name": "Korean Bomb Chicken (Patong)",
+   "reason": "Wongnai listing showed it temporarily closed."
+  },
+  {
+   "name": "Five Guys",
+   "reason": "No branch in Thailand found (Oct 2026)."
+  },
+  {
+   "name": "McDonald's Verve Commons (Wiset Road, Rawai)",
+   "reason": "On Google with no reviews on 27 Oct 2026; possibly new or not yet open. Mentioned as a tip on the Nai Harn McDonald's."
+  },
+  {
+   "name": "Texas Chicken, Domino's, Subway and Pizza Hut outlets",
+   "reason": "Exist in Phuket and Bangkok (OpenStreetMap: Texas Chicken near Karon, Subway at the airport, Domino's on Khao San) but no read budget left to check them; mentioned in basics and tips."
+  }
+ ]
+}

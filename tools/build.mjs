@@ -361,7 +361,7 @@ ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
 }
 // Places → Food: every place with category 'food' (the older ones too), only under Food, where a Where row and a Kind
 // row replace the length row; best first in each place
-const FOOD_KIND = { thai: 'Thai', 'southern-thai': 'Southern Thai', noodles: 'Noodles', seafood: 'Seafood', pork: 'Pork', grill: 'Grill & BBQ', isaan: 'Isaan', 'street-food': 'Street food', market: 'Market', dessert: 'Dessert', cafe: 'Cafe', bakery: 'Bakery', 'fine-dining': 'Fine dining', international: 'International' }
+const FOOD_KIND = { thai: 'Thai', 'southern-thai': 'Southern Thai', noodles: 'Noodles', seafood: 'Seafood', pork: 'Pork', grill: 'Grill & BBQ', isaan: 'Isaan', 'street-food': 'Street food', market: 'Market', dessert: 'Dessert', cafe: 'Cafe', coffee: 'Coffee', bakery: 'Bakery', 'fast-food': 'Fast food', 'fine-dining': 'Fine dining', international: 'International' }
 const FOOD_WHERE = { patong: 'Patong', 'kata-karon': 'Kata & Karon', south: 'Rawai & Chalong', town: 'Phuket Town', north: 'Kamala to the airport', andaman: 'Krabi & Phang Nga', gulf: 'Phangan & Samui', bangkok: 'Bangkok' }
 const FOOD_AREAS = { patong: ['patong'], 'kata-karon': ['karon', 'kata', 'kata-noi'], south: ['rawai', 'nai-harn', 'promthep', 'chalong', 'cape-panwa'], town: ['phuket-town', 'kathu', 'koh-kaew'], north: ['kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'thalang', 'ao-po'], andaman: ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'natai', 'koh-lipe', 'trang'], gulf: ['koh-phangan', 'koh-samui', 'koh-tao', 'surat-thani'], bangkok: BKK }
 const foodWhere = (p) => Object.keys(FOOD_AREAS).find((k) => FOOD_AREAS[k].includes(p.area)) || 'town'

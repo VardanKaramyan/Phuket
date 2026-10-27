@@ -251,16 +251,6 @@
    "note": "From the place's Michelin Guide page; looked at by hand on 27 Oct 2026."
   },
   {
-   "key": "places:food-roti-taew-nam",
-   "ok": true,
-   "file": "assets/raw/places-food-roti-taew-nam.jpg",
-   "url": "https://prod-pics.guide.michelin.com/api/public/content/19d8e6f8bcf342b0adeb613836528853.jpeg?format=jpeg&w=1200",
-   "page": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-taew-nam",
-   "credit": "© Michelin Guide",
-   "license": "guide page",
-   "note": "From the place's Michelin Guide page; looked at by hand on 27 Oct 2026."
-  },
-  {
    "key": "places:food-o-cha-rot",
    "ok": true,
    "file": "assets/raw/places-food-o-cha-rot.jpg",
@@ -306,16 +296,6 @@
    "file": "assets/raw/places-food-krua-kao-kuk.jpg",
    "url": "https://prod-pics.guide.michelin.com/api/public/content/b1f39827221a4ca7884dcb788794b5b3.jpeg?format=jpeg&w=1200",
    "page": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-kao-kuk",
-   "credit": "© Michelin Guide",
-   "license": "guide page",
-   "note": "From the place's Michelin Guide page; looked at by hand on 27 Oct 2026."
-  },
-  {
-   "key": "places:food-roti-chaofa",
-   "ok": true,
-   "file": "assets/raw/places-food-roti-chaofa.jpg",
-   "url": "https://prod-pics.guide.michelin.com/api/public/content/ece2711f1dd14a25ab173773bcaa2c51.jpeg?format=jpeg&w=1200",
-   "page": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-chaofa",
    "credit": "© Michelin Guide",
    "license": "guide page",
    "note": "From the place's Michelin Guide page; looked at by hand on 27 Oct 2026."
@@ -1277,6 +1257,156 @@
    "url": "https://www.bartelsinternational.com/share.jpg",
    "page": "https://www.bartelsinternational.com/",
    "credit": "© Bartels",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-graph-coffee-phuket",
+   "ok": true,
+   "file": "assets/raw/places-food-graph-coffee-phuket.png",
+   "url": "https://static.wixstatic.com/media/74e890_974950f62730426da093a8a94e107854~mv2.png",
+   "page": "http://graphcoffeeco.com/",
+   "credit": "© GRAPH Phuket",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-hock-hoe-lee-rawai",
+   "ok": true,
+   "file": "assets/raw/places-food-hock-hoe-lee-rawai.jpg",
+   "url": "https://static.wixstatic.com/media/6f4e8b_d092f124c7a94a44add3f7bde8b0151e~mv2.jpg",
+   "page": "http://www.hockhoelee.com/",
+   "credit": "© Hock Hoe Lee Specialty Coffee & Kitchen",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-bubbas-ban-tai",
+   "ok": true,
+   "file": "assets/raw/places-food-bubbas-ban-tai.jpg",
+   "url": "https://bubbascoffee.com/cdn/shop/files/thong-sala.jpg?crop=center&amp;height=2267&amp;v=1784483052&amp;width=2267",
+   "page": "https://bubbascoffee.com/",
+   "credit": "© Bubba's Coffee Baan Tai",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-roastery-village-samui",
+   "ok": true,
+   "file": "assets/raw/places-food-roastery-village-samui.jpg",
+   "url": "https://www.roasteryvillage.com/assets/img/rv-shop-3.jpg",
+   "page": "https://www.roasteryvillage.com/",
+   "credit": "© Roastery Village",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-roots-thonglor",
+   "ok": true,
+   "file": "assets/raw/places-food-roots-thonglor.jpg",
+   "url": "https://rootsbkk.com/wp-content/uploads/2018/05/05-workshop_08.jpg",
+   "page": "https://rootsbkk.com/",
+   "credit": "© Roots at theCOMMONS",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-factory-coffee",
+   "ok": true,
+   "file": "assets/raw/places-food-factory-coffee.jpg",
+   "url": "https://factorybkk.com/cdn/shop/files/DSCF9590.jpg?v=1767326916",
+   "page": "https://factorybkk.com/",
+   "credit": "© Factory Coffee",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-ceresia-coffee-roasters",
+   "ok": true,
+   "file": "assets/raw/places-food-ceresia-coffee-roasters.jpg",
+   "url": "https://ceresiacoffeeroasters.com/wp-content/uploads/2026/03/CeresiaGoogoo_0041-e1788243394995.jpg",
+   "page": "https://ceresiacoffeeroasters.com/",
+   "credit": "© Ceresia Coffee Roasters",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-pacamara-thonglor",
+   "ok": true,
+   "file": "assets/raw/places-food-pacamara-thonglor.jpg",
+   "url": "https://pacamaracoffee.com/sites/default/files/styles/news_large_image_mobile/public/2024-01/Picture1_1.png.jpg?itok=hCjlSagf",
+   "page": "https://pacamaracoffee.com/en/catalog/beverage",
+   "credit": "© Pacamara Coffee Roasters Thonglor 25",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-kaizen-coffee",
+   "ok": true,
+   "file": "assets/raw/places-food-kaizen-coffee.jpg",
+   "url": "https://framerusercontent.com/images/CA5qoxbm62HnYQDIJ9gV2iejihc.jpg",
+   "page": "https://www.kaizencoffee.com/locations",
+   "credit": "© Kaizen Coffee Ekamai",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-samadool",
+   "ok": true,
+   "file": "assets/raw/places-food-samadool.jpg",
+   "url": "http://www.samadoolcoffee.com/cdn/shop/files/98843931-00B3-4DEB-89D5-7D4DB7CBD0D9.jpg?v=1620203782",
+   "page": "https://www.samadoolcoffee.com/",
+   "credit": "© Samadool Coffee",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-pan-burger",
+   "ok": true,
+   "file": "assets/raw/places-food-pan-burger.jpg",
+   "url": "https://img1.wsimg.com/isteam/ip/924bb19b-8cf0-427e-8ace-342fbfa1f9a8/my%20way%20close%20up.jpg/:/rs=w:600,h:600,cg:true,m/cr=w:600,h:600",
+   "page": "https://panburgerthailand.com/",
+   "credit": "© PAN Burger",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-millionaire-burgers",
+   "ok": true,
+   "file": "assets/raw/places-food-millionaire-burgers.jpg",
+   "url": "https://img1.wsimg.com/isteam/ip/b7725532-9a3b-4814-99c9-51d9b131f97c/blob-b7afa3b.png",
+   "page": "https://millionaireburgers.com/",
+   "credit": "© Millionaire Burgers",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-easy-burger",
+   "ok": true,
+   "file": "assets/raw/places-food-easy-burger.jpg",
+   "url": "https://www.easyburgerbkk.com/wp-content/uploads/2023/10/cheeseburger-min.jpg",
+   "page": "https://www.easyburgerbkk.com/",
+   "credit": "© Easy Burger",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-billys-smokehouse",
+   "ok": true,
+   "file": "assets/raw/places-food-billys-smokehouse.png",
+   "url": "https://billys-smokehouse.com/images/food/triple-cheeseburger.png",
+   "page": "https://billys-smokehouse.com/",
+   "credit": "© Billy's Smokehouse",
+   "license": "official site",
+   "note": "From the place's own website; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "places:food-25-degrees-bangkok",
+   "ok": true,
+   "file": "assets/raw/places-food-25-degrees-bangkok.jpg",
+   "url": "https://www.randblab.com/wp-content/uploads/2022/12/308408335_5329679690487463_3018019426978783431_n.jpg",
+   "page": "https://www.randblab.com/25-degrees-bangkok/",
+   "credit": "© 25 Degrees Burger Bar",
    "license": "official site",
    "note": "From the place's own website; looked at by hand on 27 Oct 2026."
   }

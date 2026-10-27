@@ -3939,6 +3939,16 @@
   "license": "Public domain",
   "source": "https://commons.wikimedia.org/wiki/File:Bualoy_kaiwan_-_Thai_food.JPG"
  },
+ "dish:specialty-coffee": {
+  "file": "assets/img/dish-specialty-coffee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 852,
+  "credit": "Kim Sanso, Wikimedia Commons",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Latte_art_4.jpg"
+ },
  "places:food-acqua-kalim": {
   "file": "assets/img/places-food-acqua-kalim.webp",
   "w": 640,
@@ -4189,16 +4199,6 @@
   "license": "guide page",
   "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/a-pong-mae-sunee"
  },
- "places:food-roti-taew-nam": {
-  "file": "assets/img/places-food-roti-taew-nam.webp",
-  "w": 640,
-  "h": 360,
-  "srcW": 1200,
-  "srcH": 1200,
-  "credit": "© Michelin Guide",
-  "license": "guide page",
-  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-taew-nam"
- },
  "places:food-o-cha-rot": {
   "file": "assets/img/places-food-o-cha-rot.webp",
   "w": 640,
@@ -4248,16 +4248,6 @@
   "credit": "© Michelin Guide",
   "license": "guide page",
   "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-kao-kuk"
- },
- "places:food-roti-chaofa": {
-  "file": "assets/img/places-food-roti-chaofa.webp",
-  "w": 640,
-  "h": 360,
-  "srcW": 1200,
-  "srcH": 1200,
-  "credit": "© Michelin Guide",
-  "license": "guide page",
-  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-chaofa"
  },
  "places:food-jadjan-ko-daeng": {
   "file": "assets/img/places-food-jadjan-ko-daeng.webp",
@@ -5218,5 +5208,155 @@
   "credit": "© Bartels",
   "license": "official site",
   "source": "https://www.bartelsinternational.com/"
+ },
+ "places:food-graph-coffee-phuket": {
+  "file": "assets/img/places-food-graph-coffee-phuket.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2084,
+  "srcH": 2084,
+  "credit": "© GRAPH Phuket",
+  "license": "official site",
+  "source": "http://graphcoffeeco.com/"
+ },
+ "places:food-hock-hoe-lee-rawai": {
+  "file": "assets/img/places-food-hock-hoe-lee-rawai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 3456,
+  "srcH": 2304,
+  "credit": "© Hock Hoe Lee Specialty Coffee & Kitchen",
+  "license": "official site",
+  "source": "http://www.hockhoelee.com/"
+ },
+ "places:food-bubbas-ban-tai": {
+  "file": "assets/img/places-food-bubbas-ban-tai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2267,
+  "srcH": 2267,
+  "credit": "© Bubba's Coffee Baan Tai",
+  "license": "official site",
+  "source": "https://bubbascoffee.com/"
+ },
+ "places:food-roastery-village-samui": {
+  "file": "assets/img/places-food-roastery-village-samui.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1100,
+  "srcH": 1100,
+  "credit": "© Roastery Village",
+  "license": "official site",
+  "source": "https://www.roasteryvillage.com/"
+ },
+ "places:food-roots-thonglor": {
+  "file": "assets/img/places-food-roots-thonglor.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 810,
+  "srcH": 477,
+  "credit": "© Roots at theCOMMONS",
+  "license": "official site",
+  "source": "https://rootsbkk.com/"
+ },
+ "places:food-factory-coffee": {
+  "file": "assets/img/places-food-factory-coffee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 4160,
+  "srcH": 6240,
+  "credit": "© Factory Coffee",
+  "license": "official site",
+  "source": "https://factorybkk.com/"
+ },
+ "places:food-ceresia-coffee-roasters": {
+  "file": "assets/img/places-food-ceresia-coffee-roasters.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 784,
+  "credit": "© Ceresia Coffee Roasters",
+  "license": "official site",
+  "source": "https://ceresiacoffeeroasters.com/"
+ },
+ "places:food-pacamara-thonglor": {
+  "file": "assets/img/places-food-pacamara-thonglor.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 560,
+  "srcH": 551,
+  "credit": "© Pacamara Coffee Roasters Thonglor 25",
+  "license": "official site",
+  "source": "https://pacamaracoffee.com/en/catalog/beverage"
+ },
+ "places:food-kaizen-coffee": {
+  "file": "assets/img/places-food-kaizen-coffee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 3024,
+  "srcH": 4032,
+  "credit": "© Kaizen Coffee Ekamai",
+  "license": "official site",
+  "source": "https://www.kaizencoffee.com/locations"
+ },
+ "places:food-samadool": {
+  "file": "assets/img/places-food-samadool.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 945,
+  "credit": "© Samadool Coffee",
+  "license": "official site",
+  "source": "https://www.samadoolcoffee.com/"
+ },
+ "places:food-pan-burger": {
+  "file": "assets/img/places-food-pan-burger.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 600,
+  "srcH": 600,
+  "credit": "© PAN Burger",
+  "license": "official site",
+  "source": "https://panburgerthailand.com/"
+ },
+ "places:food-millionaire-burgers": {
+  "file": "assets/img/places-food-millionaire-burgers.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1706,
+  "srcH": 2560,
+  "credit": "© Millionaire Burgers",
+  "license": "official site",
+  "source": "https://millionaireburgers.com/"
+ },
+ "places:food-easy-burger": {
+  "file": "assets/img/places-food-easy-burger.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 500,
+  "srcH": 500,
+  "credit": "© Easy Burger",
+  "license": "official site",
+  "source": "https://www.easyburgerbkk.com/"
+ },
+ "places:food-billys-smokehouse": {
+  "file": "assets/img/places-food-billys-smokehouse.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 1080,
+  "credit": "© Billy's Smokehouse",
+  "license": "official site",
+  "source": "https://billys-smokehouse.com/"
+ },
+ "places:food-25-degrees-bangkok": {
+  "file": "assets/img/places-food-25-degrees-bangkok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2048,
+  "srcH": 1365,
+  "credit": "© 25 Degrees Burger Bar",
+  "license": "official site",
+  "source": "https://www.randblab.com/25-degrees-bangkok/"
  }
 }

@@ -64,10 +64,21 @@ export const FOOD_CATS = [
     ['ice', 'Ice cream & shaved ice', /ice cream|bingsu|kakigori|shaved ice|gelato|sorbet/],
     ['cake', 'Cakes & chocolate', /cake|\btarts?\b|\bpies?\b|croissant|pastr|chocolate|brownie|eclair|honey toast|cr[eè]me br[uû]l[eé]e|tiramisu|cinnamon|brioche|croffle|strudel/],
   ] },
-  { key: 'cafe', label: 'Cafes & bakeries', all: 'All cafes', tile: 'coffee', in: (p) => ['cafe', 'bakery'].includes(p.foodKind), subs: [
-    ['coffee', 'Coffee', (p, t) => p.foodKind === 'cafe' || /coffee|kopi|espresso/.test(t.all)],
+  // fast food (the user, 27 Oct 2026: "no fast food? like burgers and kfc and like that?"): its own places, the chains, and
+  // a burger or fried chicken place of another kind
+  { key: 'fast', label: 'Fast food', all: 'All fast food', tile: 'burger', in: (p, t) => p.foodKind === 'fast-food' || (p.foodTags || []).includes('chain') || (!['fine-dining', 'market', 'cafe', 'coffee', 'bakery'].includes(p.foodKind) && /burger|fried chicken|gai tod|kai tod/.test(t.sig)), subs: [
+    ['burgers', 'Burgers', /burger|cheeseburger|smash/],
+    ['chicken', 'Fried chicken', /fried chicken|gai tod|kai tod|chicken wings|wings|nuggets|zinger|chicken bucket/],
+    ['pizza', 'Pizza', (p, t) => p.foodKind === 'fast-food' && /pizza/.test(t.all)],
+    ['chains', 'KFC, McDonald\'s & co', (p) => (p.foodTags || []).includes('chain')],
+  ] },
+  // coffee (the user, 27 Oct 2026: "add coffe. like 3rd wave speciality rosteries and coffee"); the bakeries stay here
+  { key: 'cafe', label: 'Coffee', all: 'All coffee', tile: 'specialty-coffee', in: (p) => ['cafe', 'coffee', 'bakery'].includes(p.foodKind), subs: [
+    ['roaster', 'Roasters', (p) => (p.foodTags || []).includes('roaster')],
+    ['specialty', 'Specialty coffee', (p, t) => p.foodKind === 'coffee' || /pour.?over|single.origin|filter|v60|chemex|aeropress|flat white|cold brew|espresso|dirty\b|cortado|specialty/.test(t.all)],
+    ['kopi', 'Old-style Thai coffee', (p, t) => /kopi|hainanese|oliang|o-liang|cha chak|kopitiam|old-style|phuket-style iced coffee|thai coffee|thai iced coffee/.test(t.all)],
     ['bakery', 'Bakeries', (p, t) => p.foodKind === 'bakery' || /sourdough|croissant|bread|bakery|pastr|cinnamon roll|brioche/.test(t.all)],
-    ['breakfast', 'Breakfast', (p) => (p.foodTags || []).includes('breakfast')],
+    ['breakfast', 'Breakfast & brunch', (p) => (p.foodTags || []).includes('breakfast')],
     ['view', 'With a view', (p) => (p.foodTags || []).includes('view')],
   ] },
   { key: 'fine', label: 'Special dinners', all: 'All special dinners', tile: 'tasting-menu', in: (p) => p.foodKind === 'fine-dining' || ['1 star', '2 stars', '3 stars'].includes(p.michelin), subs: [
@@ -79,7 +90,6 @@ export const FOOD_CATS = [
     ['italian', 'Italian & pizza', /pizza|pasta|italian|tortell|linguine|tagliatelle|risotto|gelato|lasagn|carbonara|fettuccine/],
     ['europe', 'European', /french|german|georgian|swiss|bistro|schweinshaxe|sp[aä]tzle|khinkali|khachapuri|onion soup|pork chop|mediterranean|moussaka|kebab|mezze/],
     ['asian', 'Asian & Indian', /dim sum|cantonese|siu mai|korean|japanese|indian|biryani|nasi/],
-    ['burgers', 'Burgers & late food', /burger|fries/],
   ] },
 ]
 // tasting menus whose description names Thai produce but cook another cuisine
@@ -96,7 +106,6 @@ export const FOOD_GOOD = [
   ['view', 'Views', (p) => (p.foodTags || []).some((t) => t === 'view' || t === 'beachfront')],
   ['local', 'Where locals eat', (p) => (p.foodTags || []).includes('local-favourite')],
   ['veg', 'Vegetarian', (p) => (p.foodTags || []).includes('vegetarian-friendly')],
-  ['halal', 'Halal', (p) => (p.foodTags || []).includes('halal')],
 ]
 
 const textsOf = (p) => {
@@ -145,14 +154,16 @@ export const DISH_LABEL = {
   'oyster-omelette': 'Oyster omelette', 'gaeng-som': 'Gaeng som', 'kua-kling': 'Khua kling', massaman: 'Massaman curry', crab: 'Crab', prawns: 'Prawns', squid: 'Squid',
   clams: 'Clams', fish: 'Fish', curry: 'Thai curry', 'som-tam': 'Som tam', 'gai-yang': 'Gai yang', 'fried-chicken': 'Fried chicken', 'mango-sticky-rice': 'Mango sticky rice',
   roti: 'Roti', 'thai-pancakes': 'Thai pancakes', 'o-aew': 'O-aew', 'shaved-ice': 'Shaved ice', 'ice-cream': 'Ice cream', chocolate: 'Chocolate', 'thai-sweets': 'Thai sweets',
-  coffee: 'Coffee', bakery: 'Bakery', steak: 'Steak', burger: 'Burger', 'tasting-menu': 'Tasting menu', 'night-market': 'Night market', 'thai-food': 'Thai food',
+  coffee: 'Coffee', 'specialty-coffee': 'Specialty coffee', bakery: 'Bakery', steak: 'Steak', burger: 'Burger', 'tasting-menu': 'Tasting menu', 'night-market': 'Night market', 'thai-food': 'Thai food',
 }
-const KIND_DISH = { 'fine-dining': 'tasting-menu', market: 'night-market', cafe: 'coffee', bakery: 'bakery' }
+const KIND_DISH = { 'fine-dining': 'tasting-menu', market: 'night-market', cafe: 'coffee', coffee: 'specialty-coffee', bakery: 'bakery' }
 export function dishOf(p) {
   // a tasting menu is not one dish: its stand-in is a plated course; a market's is a market; a cafe's is coffee
   const kind = p.category === 'market' ? 'market' : p.foodKind
   if (KIND_DISH[kind]) return KIND_DISH[kind]
   if (kind === 'grill' && /korean/.test(low(p.description))) return 'korean-bbq'
+  // a fast-food place: its burger, chicken or pizza, else a burger
+  if (kind === 'fast-food') { const d = [p.name, ...(p.dishes || []).slice(0, 2)].map(low).join(' ; '); return /fried chicken|gai tod|kai tod|wings|kfc|texas chicken/.test(d) && !/burger/.test(d.split(' ; ').slice(0, 2).join(' ')) ? 'fried-chicken' : /pizza/.test(d) && !/burger/.test(d) ? 'pizza' : 'burger' }
   for (const d of [...(p.dishes || []).slice(0, 3), p.name].map(low)) {
     let best = null
     for (const [key, re] of DISH) { const m = d.match(re); if (m && (!best || m.index < best.at)) best = { key, at: m.index } }

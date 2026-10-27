@@ -1,0 +1,1565 @@
+{
+  "generatedOn": "2026-10-27",
+  "region": "coffee",
+  "scopeNote": "Specialty (third-wave) coffee shops and roasters: 16 on Phuket (Old Town, Patong, Kata, Rawai, Chalong, Kamala, Bang Tao), 4 on Koh Phangan, 2 on Koh Samui, 1 in Ao Nang (Krabi) and 1 in Khao Lak.",
+  "basics": [
+    {
+      "title": "Coffee in Thailand",
+      "text": "Thailand grows its own coffee: arabica in the northern hills of Chiang Rai, Chiang Mai and Nan (Doi Chang and Doi Tung are the best known names), and robusta in the south, mostly around Chumphon, Surat Thani and Ranong. A Thai iced coffee is sweet by default, with sugar and condensed milk: say 'wan noi' (less sweet) or 'mai sai nam tan' (no sugar), or order an Americano or a pour-over in a specialty shop. In 2026 a specialty espresso drink costs about 80-130 THB and a pour-over or signature drink 100-180 THB; a sweet iced coffee from a street stall is about 40-60 THB.",
+      "links": [
+        {
+          "label": "The Way to Coffee: specialty coffee in Thailand (Jan 2026)",
+          "url": "https://www.thewaytocoffee.com/specialtycoffeeblog/specialty-coffee-in-thailand"
+        },
+        {
+          "label": "Wikipedia: Coffee production in Thailand",
+          "url": "https://en.wikipedia.org/wiki/Coffee_production_in_Thailand"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "food-campus-coffee-roasters",
+      "name": "Campus Coffee Roasters",
+      "nameThai": "ร้านกาแฟมหาวิทยาลัย",
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Krabi Road)",
+      "island": "Phuket",
+      "lat": 7.8850541,
+      "lng": 98.387357,
+      "coordSource": "Google Maps pin (Campus Coffee Roasters - Phuket Old town), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Campus Coffee Roasters, 6 Krabi Road, Talat Nuea, Phuket Town",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Espresso 80 THB, flat white 85 THB, Honey Espresso on the Rock 100 THB (menu in Daniel Food Diary, Apr 2023); cold brew 100 THB, Dirty 100 THB, pour-over up to 130 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Pour-over of a northern Thai single origin (you choose a Thai or an imported bean)",
+        "Honey Espresso on the Rock",
+        "Flat white with the Ocean Blend (Chiang Mai and Ethiopian beans, light roast)",
+        "Dirty",
+        "Cold brew"
+      ],
+      "praise": "The name every Phuket coffee list starts with: The Way to Coffee (Nov 2025) calls it the place to begin, and the Thai Holiday Guide (Jul 2026, facts checked Oct 2026) puts it first. It roasts its own beans, mostly from northern Thailand, and came fifth at the International Coffee Roast Master Thailand 2019 (Daniel Food Diary).",
+      "watchOut": "Small and often full by mid morning.",
+      "description": "A small-batch roaster with an espresso bar and a slow bar in an old pharmacy building in the Old Town. It started with a university student roasting at home.",
+      "openText": "Daily 08:00-18:00 (Google Maps, Thai Holiday Guide 2026).",
+      "days": [],
+      "bestTime": "Before 10:00 for a table.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "For drip coffee they ask Thai or imported bean: try the Thai one.",
+        "Bags of their beans are on sale at the counter.",
+        "There is a second shop in north Patong, 300 m from the Patong villa."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Campus+Coffee+Roasters+-+Phuket+Old+town/@7.8850541,98.387357,17z/data=!3m1!4b1!4m6!3m5!1s0x305031f1a0c226bb:0x19cbce1f13036c48!8m2!3d7.8850541!4d98.387357!16s%2Fg%2F11c44fdt8l"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://www.instagram.com/campuscoffeeroasters/"
+        }
+      ],
+      "sources": [
+        "https://www.thewaytocoffee.com/best-cafes-phuket/",
+        "https://www.thaiholidayguide.com/best-cafes-phuket/",
+        "https://danielfooddiary.com/2023/04/23/campuscoffeeroasters/",
+        "https://www.expique.com/best-coffee-roasters-in-phuket/"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin, hours 08:00-18:00); Thai Holiday Guide updated Jul 2026 with prices; The Way to Coffee Nov 2025; Daniel Food Diary Apr 2023 for the menu and the roasting story.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-dou-brew",
+      "name": "Dou Brew Coffee & Craft (Double Brew Coffee Roaster)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "dessert"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Soi Romanee)",
+      "island": "Phuket",
+      "lat": 7.8853583,
+      "lng": 98.3890557,
+      "coordSource": "Google Maps pin (Double Brew Coffee Roaster), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Double Brew Coffee Roaster, 15 Soi Rommani, Talat Yai, Phuket Town",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Americano 105 THB hot, 110 THB iced; signature chocolate 120 THB, double dark chocolate 180 THB (Phuket 101, Sep 2026). Flat white or filter 80-120 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Nitro cold brew (the house drink)",
+        "Drip or AeroPress of their northern Thai arabica",
+        "The Burgundy: nitro cold brew tea",
+        "Double dark chocolate drink from Thai cacao",
+        "Bean-to-bar chocolate bars and bonbons to take away"
+      ],
+      "praise": "Phuket 101 (updated Sep 2026): beans roasted at the back of the shop, mostly Thai arabica from the north, 'unusual on a street where many cafes buy in'. Also on the Thai Holiday Guide 2026 list.",
+      "watchOut": "Soi Romanee fills with photo groups later in the day. Coffee and cake only, no meals.",
+      "description": "A small coffee shop and craft chocolate bar on Soi Romanee that roasts its own coffee and makes chocolate from Thai cacao.",
+      "openText": "Mon-Fri 08:00-18:00, Sat-Sun 08:00-19:00 (Phuket 101, Sep 2026); Google showed 08:00-19:00 on a Tuesday.",
+      "days": [],
+      "bestTime": "Morning, before the soi gets busy.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Google Maps lists it as \"Double Brew Coffee Roaster\".",
+        "Take a bar of the Thai cacao chocolate home."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Double+Brew+Coffee+Roaster/@7.8853583,98.3890557,17z/data=!3m1!4b1!4m6!3m5!1s0x30503125aea9cc99:0x1b5a2a778ec9b28!8m2!3d7.8853583!4d98.3890557!16s%2Fg%2F11f62t7p6n"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/dou-brew-coffee-craft/",
+        "https://www.thaiholidayguide.com/best-cafes-phuket/"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin; the listing at 15 Soi Rommani is named Double Brew Coffee Roaster); Phuket 101 page updated 5 Sep 2026 (roasting, beans, prices, hours).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-graph-coffee-phuket",
+      "name": "GRAPH Phuket",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Phang Nga Road)",
+      "island": "Phuket",
+      "lat": 7.883695,
+      "lng": 98.3905286,
+      "coordSource": "Google Maps pin (GRAPH Phuket), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "GRAPH Phuket, 121 Phang Nga Road, Talat Yai, Phuket Town",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Magma 145 THB, Graph No.29 and Downtown 155 THB, Monochrome 165 THB, canele or madeleines 75 THB (menu in Daniel Food Diary, Aug 2026).",
+      "dishes": [
+        "Monochrome: espresso, activated charcoal, vanilla and milk",
+        "Graph No.29: nitro cold brew with pineapple and lime",
+        "Downtown: cold brew with lime, mint and ginger ale",
+        "Magma: espresso with avocado and almond milk",
+        "Filter or espresso of their own roast"
+      ],
+      "praise": "The Phuket branch of GRAPH, one of Chiang Mai's best known roasters (roasting its own beans since 2017, with a focus on Thai specialty coffee). Daniel Food Diary (Aug 2026): it 'takes coffee seriously without making the experience feel too stiff'. Barista Magazine picked it among four Phuket cafes and says it is always full.",
+      "watchOut": "Pricier than other Old Town shops; the signature drinks are the point here.",
+      "description": "A branch of the Chiang Mai roaster GRAPH in an Old Town shophouse near the On On Hotel, with modern, carefully made drinks.",
+      "openText": "Daily 08:30-17:30 (Google Maps, Thai Holiday Guide 2026).",
+      "days": [],
+      "bestTime": "Before 10:00 for a seat.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ask which beans are on filter that day; the list changes with the season.",
+        "Momus, the cafe next door, was also in the Barista Magazine piece."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/GRAPH+Phuket/@7.883695,98.3905286,17z/data=!3m1!4b1!4m6!3m5!1s0x3050317fb734aa5b:0xd9cc9986086ce556!8m2!3d7.883695!4d98.3905286!16s%2Fg%2F11s5tlg7w1"
+        },
+        {
+          "label": "GRAPH (official site)",
+          "url": "http://graphcoffeeco.com/"
+        }
+      ],
+      "sources": [
+        "https://danielfooddiary.com/2026/08/08/graphphuket/",
+        "http://graphcoffeeco.com/",
+        "https://www.thaiholidayguide.com/best-cafes-phuket/",
+        "https://baristamagazine.com/4-cool-to-check-out-in-phuket-thailand"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin, 08:30-17:30); Daniel Food Diary 8 Aug 2026 (menu, prices, hours); GRAPH site (roasting since Dec 2017, GRAPH Phuket in its locations). The Barista Magazine page did not load (429), so that mention comes from search results.",
+      "imageCandidates": [
+        {
+          "url": "https://static.wixstatic.com/media/74e890_974950f62730426da093a8a94e107854~mv2.png",
+          "page": "http://graphcoffeeco.com/",
+          "credit": "GRAPH Coffee Co. (roaster photo)",
+          "license": "Place's own website"
+        }
+      ]
+    },
+    {
+      "id": "food-sixory-coffee",
+      "name": "Sixory Coffee",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Yaowarat Road)",
+      "island": "Phuket",
+      "lat": 7.8853523,
+      "lng": 98.3875928,
+      "coordSource": "Google Maps pin (Sixory Coffee), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Sixory Coffee, 66 Yaowarat Road, Talat Yai, Phuket Town",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Americano 80 THB, latte or cortado 90 THB, Thai Espresso 95 THB, Dirty 150 THB, cookies 75 THB (menu in Daniel Food Diary, Aug 2026).",
+      "dishes": [
+        "Iced black coffee",
+        "Latte",
+        "Thai Espresso",
+        "Choose a bean by tasting notes (light floral to dark nutty)"
+      ],
+      "praise": "Daniel Food Diary (Aug 2026): a quiet 'introvert specialty coffee' shop that 'did not feel like it was trying too hard'; the iced black had a 'cleaner finish and brighter lift'. Barista Magazine also picked it among four Phuket cafes and spoke to its founder, Sivarit Tipayapongtada.",
+      "watchOut": "Small; closes in the afternoon.",
+      "description": "A calm, simple coffee bar on Yaowarat Road where you choose the bean by roast and tasting notes.",
+      "openText": "Daily 07:00-17:30 (Daniel Food Diary, Aug 2026); Google showed 07:00-16:30 on a Tuesday.",
+      "days": [],
+      "bestTime": "Early morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ask for the bean menu: each bean is listed with its roast level, body and notes."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Sixory+Coffee/@7.8853523,98.3875928,17z/data=!3m1!4b1!4m6!3m5!1s0x305031457a4c6d95:0x6e85bd45ce65ba36!8m2!3d7.8853523!4d98.3875928!16s%2Fg%2F11sddyp3mx"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/sixorycoffee"
+        }
+      ],
+      "sources": [
+        "https://danielfooddiary.com/2026/08/13/sixorycoffee/",
+        "https://baristamagazine.com/4-cool-to-check-out-in-phuket-thailand"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin); Daniel Food Diary review 13 Aug 2026 with menu prices.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-asterisk-espresso",
+      "name": "Asterisk Espresso",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast",
+        "budget"
+      ],
+      "area": "phuket-town",
+      "district": "Talat Nuea (Phoonphon Road)",
+      "island": "Phuket",
+      "lat": 7.8744666,
+      "lng": 98.3891214,
+      "coordSource": "Google Maps pin (ASTERISK ESPRESSO), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Asterisk Espresso, Bedline Hotel, 74 Phoonphon Road, Phuket Town",
+      "placeId": null,
+      "rating": 4.9,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Hot coffee and pour-over 80 THB, iced 90 THB, matcha 100-120 THB (Daniel Food Diary, Aug 2026).",
+      "dishes": [
+        "Iced black coffee",
+        "Hot white coffee",
+        "Pour-over of the season's beans (Thai, Colombian and Brazilian, or a light Ethiopian and Guatemalan)"
+      ],
+      "praise": "Run by Future Kittipop Eangchoun, Thailand National Barista Champion 2025. Daniel Food Diary (Aug 2026): 'possibly one of the best cups (maybe the best) I had this Phuket trip'. Barista Magazine and Expique also list it.",
+      "watchOut": "Inside a hotel lobby, away from the main Old Town streets.",
+      "description": "A small specialty coffee bar inside the Bedline Hotel, with champion-level coffee at local prices.",
+      "openText": "Daily 06:00-18:00 (Daniel Food Diary, Aug 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Pour-over costs the same 80 THB as an Americano."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/ASTERISK+ESPRESSO/@7.8744666,98.3891214,17z/data=!3m1!4b1!4m6!3m5!1s0x305031e363abdcdb:0x8def966e29e1fd3c!8m2!3d7.8744666!4d98.3891214!16s%2Fg%2F11gy2r18l9"
+        }
+      ],
+      "sources": [
+        "https://danielfooddiary.com/2026/08/14/asteriskespresso/",
+        "https://www.expique.com/best-coffee-roasters-in-phuket/",
+        "https://baristamagazine.com/4-cool-to-check-out-in-phuket-thailand"
+      ],
+      "verification": "Already in the guide; Google Maps data from the Phuket Town researcher's read on 27 Oct 2026 (4.9, open, pin), not read again. Daniel Food Diary 14 Aug 2026 for prices, beans and hours.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-the-shelter-coffee",
+      "name": "The Shelter Coffee",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "phuket-town",
+      "district": "Wichit (Vichitsongkram Road)",
+      "island": "Phuket",
+      "lat": 7.8886502,
+      "lng": 98.3700836,
+      "coordSource": "Google Maps pin (The Shelter Coffee Phuket), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "The Shelter Coffee Phuket, 65/25 Vichitsongkram Road, Wichit, Phuket",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current menu prices found; Old Town specialty shops charge 80-130 THB a cup in 2026.",
+      "dishes": [
+        "AeroPress of Thai specialty coffee",
+        "72-hour cold brew",
+        "Pastries and simple Thai food"
+      ],
+      "praise": "A long-running manual-brew shop that coffee people know: eight years on Dibuk Road, then a move to Vichitsongkram Road (The Way to Coffee, Nov 2025). Expique recommends the AeroPress of Thai coffee and the 72-hour cold brew.",
+      "watchOut": "Now outside the Old Town, 2 km west of it by car. Closed Wednesdays.",
+      "description": "A small brew bar known for AeroPress and other hand-brewed Thai specialty coffee.",
+      "openText": "07:30-16:00, closed Wednesday (Google Maps 27 Oct 2026; Expique).",
+      "days": [
+        "Mon",
+        "Tue",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Morning, on the way into town from Patong or Kathu.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Old guides give the Dibuk Road address; the shop has moved."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/The+Shelter+Coffee+Phuket/@7.8886502,98.3700836,17z/data=!3m1!4b1!4m6!3m5!1s0x305031f004156c47:0xf25bb50260a5cccc!8m2!3d7.8886502!4d98.3700836!16s%2Fg%2F11ddx11fwv"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/thesheltercoffeephuket/"
+        }
+      ],
+      "sources": [
+        "https://www.thewaytocoffee.com/best-cafes-phuket/",
+        "https://www.expique.com/best-coffee-roasters-in-phuket/"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open, pin at Vichitsongkram Road, next open day after Tuesday was Thursday); The Way to Coffee Nov 2025 for the move; Expique (2021) for the drinks.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-rush-coffee",
+      "name": "RUSH Coffee Rommani",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Soi Romanee)",
+      "island": "Phuket",
+      "lat": 7.8856822,
+      "lng": 98.389115,
+      "coordSource": "Google Maps pin (RUSH Coffee Rommani), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "RUSH Coffee Rommani, 31 Soi Rommani, Talat Yai, Phuket Town",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current menu prices found; expect 80-120 THB like its neighbours.",
+      "dishes": [
+        "Black and unsweet cold brew",
+        "Espresso drinks with Thai arabica they roast themselves",
+        "Pastries"
+      ],
+      "praise": "Roasts its own Thai arabica from farmers in northern Thailand (Expique); Google lists it as a coffee roastery. Named with Campus as a top pick for Thai specialty coffee in several Phuket guides.",
+      "watchOut": "Hours vary by day; Google showed two different Tuesday closing times (17:00 and 19:00).",
+      "description": "A small Old Town roaster and coffee bar on Soi Romanee that uses only Thai beans.",
+      "openText": "About 08:00-17:00, Sundays to 19:00 (Expique; Google Maps 27 Oct 2026 showed 08:00-17:00 or 19:00).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Dou Brew is a few doors away on the same soi: easy to try both."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/RUSH+Coffee+Rommani/@7.8856822,98.389115,17z/data=!4m7!3m6!1s0x3050313f08f02c85:0x7e05111fd2dc5ca6!8m2!3d7.8856822!4d98.389115!10e2!16s%2Fg%2F11ghnd4n9t"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/RUSHcoffeePhuket/"
+        }
+      ],
+      "sources": [
+        "https://www.expique.com/best-coffee-roasters-in-phuket/",
+        "https://wanderlog.com/place/details/2005073/rush-coffee-rommani"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin, category Coffee roastery); Expique (2021) for the roasting and beans. No 2026 review found outside Google.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ryn-slow-drop",
+      "name": "Ryn Tearoom (Authentic Tea & Slow Drop Coffee)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "dessert"
+      ],
+      "area": "phuket-town",
+      "district": "Old Town (Krabi Road)",
+      "island": "Phuket",
+      "lat": 7.8849528,
+      "lng": 98.3872602,
+      "coordSource": "Google Maps pin (Ryn Tearoom - Authentic Tea & Slow Drop Coffee), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ryn Tearoom, 8 Krabi Road, Talat Nuea, Phuket Town",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.4,
+          "reviews": 143,
+          "note": "LINE MAN Wongnai Users' Choice 2026",
+          "url": "https://www.wongnai.com/users-choice?regions=843"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found; expect 100-180 THB for a slow-bar coffee or matcha.",
+      "dishes": [
+        "Single origin by the slow bar (hand drip)",
+        "Cold brew",
+        "Matcha latte",
+        "Hojicha latte",
+        "Japanese sweets: daifuku, water drop mochi"
+      ],
+      "praise": "In the LINE MAN Wongnai Users' Choice 2026 list for Phuket. Reviewers describe a calm Japanese-style room with a separate slow bar for hand-brewed specialty coffee.",
+      "watchOut": "Tea and matcha are as much the point as coffee; no espresso machine.",
+      "description": "A quiet tea room and slow-drip coffee bar next to Campus Coffee on Krabi Road.",
+      "openText": "09:00-19:00, some days to 20:00 (Google Maps; Trip.com).",
+      "days": [],
+      "bestTime": "Afternoon, as a calm break from Old Town walking.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Next door to Campus Coffee Roasters."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Ryn+Tearoom+-+Authentic+Tea+%26+Slow+Drop+Coffee/@7.8849528,98.3872602,17z/data=!3m1!4b1!4m6!3m5!1s0x305031fa93f103d3:0x98a490a99879665b!8m2!3d7.8849528!4d98.3872602!16s%2Fg%2F11f38drbf2"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "http://www.facebook.com/ryntea.phuket"
+        }
+      ],
+      "sources": [
+        "https://www.wongnai.com/users-choice?regions=843",
+        "https://au.trip.com/moments/poi-ryn-authentic-tea-and-slow-drop-coffee-81930050"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin); Wongnai Users' Choice 2026 page; Trip.com posts.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-campus-coffee-patong",
+      "name": "Campus Coffee Roasters Patong",
+      "nameThai": "ร้านกาแฟมหาวิทยาลัย",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "patong",
+      "district": "North Patong (Rat Uthit 200 Pee Road)",
+      "island": "Phuket",
+      "lat": 7.8881989,
+      "lng": 98.3000423,
+      "coordSource": "Google Maps pin (Campus Coffee Roasters - Patong), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Campus Coffee Roasters Patong, 186 Rat Uthit 200 Pee Road, Patong",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Same menu as the Old Town shop: espresso about 80 THB, Dirty and cold brew 100 THB (2023-2026 menus).",
+      "dishes": [
+        "Honey Espresso on the Rock",
+        "Pour-over of a northern Thai single origin",
+        "Dirty",
+        "Cold brew"
+      ],
+      "praise": "The Patong shop of Phuket's best known roaster (see the Old Town entry), with the same beans. The Way to Coffee (Nov 2025) mentions the second shop.",
+      "watchOut": "Closed on Saturdays (Daniel Food Diary, 2023): check before you go.",
+      "description": "The Patong branch of Campus Coffee Roasters, 300 m from the Patong villa.",
+      "openText": "09:30-19:30, closed Saturday (Daniel Food Diary 2023; Google Maps 27 Oct 2026 showed 09:30-19:30).",
+      "days": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "bestTime": "Morning coffee from the Patong villa.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "A 4-minute walk from the Patong villa."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Campus+Coffee+Roasters+-+Patong/@7.8881989,98.3000423,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bb8d3e02121:0x7b6ec89125ce67d7!8m2!3d7.8881989!4d98.3000423!16s%2Fg%2F11ww71h2ds"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://www.instagram.com/campuscoffeeroasters/"
+        }
+      ],
+      "sources": [
+        "https://danielfooddiary.com/2023/04/23/campuscoffeeroasters/",
+        "https://www.thewaytocoffee.com/best-cafes-phuket/"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin 0.3 km from the Patong villa, 09:30-19:30); Daniel Food Diary 2023 for the Saturday closing (not confirmed in 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-street-cafe-karon",
+      "name": "Street Cafe (Espresso Bar)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "kata",
+      "district": "Ban Kata (Taina Road)",
+      "island": "Phuket",
+      "lat": 7.8264283,
+      "lng": 98.2974618,
+      "coordSource": "OpenStreetMap node 7294448787 (Street cafe, 107 Taina Road), 27 Oct 2026",
+      "coordConfidence": "medium",
+      "gmapsQuery": "Street Cafe, 107 Taina Road, Kata, Karon, Phuket",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google, via Wanderlog, Oct 2026",
+      "reviews": 610,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Reviewers call the prices reasonable; no menu prices found.",
+      "dishes": [
+        "Spanish latte",
+        "Oat milk latte",
+        "Cloud Matcha Coconut: coconut water with matcha foam",
+        "Almond or lemon croissant"
+      ],
+      "praise": "Open since 2018; The Way to Coffee (Nov 2025) lists it for 'great espresso based drinks' between Karon and Kata. Google reviewers (Oct 2025 to Jan 2026, via Wanderlog) praise the latte art and croissants.",
+      "watchOut": "Espresso drinks only from a small bean choice; one Jan 2026 review complained about a milk mix-up.",
+      "description": "A small espresso bar on Taina Road behind Kata Beach, the best coffee stop around Kata and Karon.",
+      "openText": "09:00-20:00, Wednesday to 14:00 (Wanderlog, from Google).",
+      "days": [],
+      "bestTime": "Morning before the beach.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [],
+      "sources": [
+        "https://www.thewaytocoffee.com/best-cafes-phuket/",
+        "https://wanderlog.com/place/details/4838381/street-cafe--espresso-bar"
+      ],
+      "verification": "Not found on Google Maps by three searches (the reader returned lists of other Kata and Karon cafes), so the pin is from OpenStreetMap and the rating, count and hours from Wanderlog (reviews to Jan 2026). Check that it is open before you go.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hock-hoe-lee-rawai",
+      "name": "Hock Hoe Lee Specialty Coffee & Kitchen",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "rawai",
+      "district": "Rawai (Wiset Road)",
+      "island": "Phuket",
+      "lat": 7.8002239,
+      "lng": 98.3355496,
+      "coordSource": "Google Maps pin (Hock Hoe Lee Phuket’s First Coffee Roaster Since 1958), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hock Hoe Lee Phuket's First Coffee Roaster Since 1958, 28/9 Wiset Road, Rawai",
+      "placeId": "ChIJiUs5RTcvUDARZkEdwxD2_tw",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Bags of Thai single-origin arabica (Doi Chang, Pangkhon, Phahee, Nan) 295 THB, blends 275 THB (own website, Oct 2026). No current drink prices found.",
+      "dishes": [
+        "Black coffee or a flat white of their Doi Chang arabica",
+        "100% organic arabica with a splash of milk",
+        "Thai iced tea",
+        "Western breakfast and sandwiches"
+      ],
+      "praise": "Phuket's first coffee roaster, founded in 1958 and now run by the third generation; it now roasts mainly Thai-grown beans. The Phuket News coffee column (Cafe Society) and Expique feature it, and Expique calls it the original Phuket roaster.",
+      "watchOut": "A breakfast cafe, not a modern slow bar; closes before 17:00.",
+      "description": "The cafe of Phuket's oldest coffee roaster, 200 m from the Rawai villa, serving and selling Thai beans from Doi Chang, Pangkhon, Phahee and Nan.",
+      "openText": "Mon-Sat 07:45-16:45, Sun 07:45-16:30 (own website); Google showed 07:30-17:00.",
+      "days": [],
+      "bestTime": "Breakfast from the Rawai villa.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "A 3-minute walk from the Rawai villa.",
+        "Buy beans here to take home; the old Ranong Road shop in Phuket Town (183 Ranong Rd) sells beans and tea only."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Hock+Hoe+Lee+Phuket%E2%80%99s+First+Coffee+Roaster+Since+1958/@7.8002239,98.3355496,17z/data=!3m1!4b1!4m6!3m5!1s0x30502f3745394b89:0xdcfef610c31d4166!8m2!3d7.8002239!4d98.3355496!16s%2Fg%2F1tfljkcb"
+        },
+        {
+          "label": "Hock Hoe Lee (official site)",
+          "url": "http://www.hockhoelee.com/"
+        }
+      ],
+      "sources": [
+        "http://www.hockhoelee.com/",
+        "https://www.expique.com/best-coffee-roasters-in-phuket/",
+        "https://mail.thephuketnews.com/cafe-society-a-cup-of-history-at-the-island-original-coffee-roaster-hock-hoe-lee-73281.php",
+        "https://simonostheimer.substack.com/p/a-handful-of-beans"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open, pin 0.2 km from the Rawai villa, category Coffee roastery); own website (beans, prices, hours); Expique; Phuket News column.",
+      "imageCandidates": [
+        {
+          "url": "https://static.wixstatic.com/media/6f4e8b_d092f124c7a94a44add3f7bde8b0151e~mv2.jpg",
+          "page": "http://www.hockhoelee.com/",
+          "credit": "Hock Hoe Lee (roaster and shop photo)",
+          "license": "Place's own website"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/6f4e8b_56609996c1d74014940435c9ef60275b~mv2.jpg",
+          "page": "http://www.hockhoelee.com/",
+          "credit": "Hock Hoe Lee (beans)",
+          "license": "Place's own website"
+        }
+      ]
+    },
+    {
+      "id": "food-the-remedy-chalong",
+      "name": "The Remedy",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "local-favourite"
+      ],
+      "area": "chalong",
+      "district": "Chalong (Soi Ta-iad)",
+      "island": "Phuket",
+      "lat": 7.8523599,
+      "lng": 98.345702,
+      "coordSource": "Google Maps pin (The Remedy), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "The Remedy, 10/50 Moo 5, Soi Ta-iad, Chalong, Phuket",
+      "placeId": null,
+      "rating": 4.9,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.5,
+          "reviews": 21,
+          "note": "LINE MAN Wongnai Users' Choice 2026",
+          "url": "https://www.wongnai.com/users-choice?regions=843"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Rose Velvet 80 THB (Wongnai, 2020); cold brew of the day 100 THB (Wongnai, 2022); under 100 THB a person.",
+      "dishes": [
+        "Cold brew of the day (the bean changes daily)",
+        "Rose Velvet: rose cold brew",
+        "Cold brew with the owner's own fruit ferments (some days)",
+        "Homemade cakes and bread"
+      ],
+      "praise": "In the LINE MAN Wongnai Users' Choice 2026 list for Phuket. Thai reviewers on Wongnai recommend it to coffee lovers for the cold brew, made cup by cup by the owner; a quiet loft-style house.",
+      "watchOut": "Mostly Thai customers and little English online; closed Mondays (one listing).",
+      "description": "A small coffee house in a converted home on Soi Ta-iad in Chalong, for cold brew and a choice of beans.",
+      "openText": "08:30-16:30, closed Monday (Google Maps 27 Oct 2026; listing).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Morning, on the way between Rawai and Phuket Town.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "6 km north of the Rawai villa."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/The+Remedy/@7.8523599,98.345702,17z/data=!3m1!4b1!4m6!3m5!1s0x30502f556a844657:0x3dc5acd2c54496b3!8m2!3d7.8523599!4d98.345702!16s%2Fg%2F11gnpbfndw"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/The-Remedy-249511045530406/"
+        }
+      ],
+      "sources": [
+        "https://www.wongnai.com/users-choice?regions=843",
+        "https://www.wongnai.com/reviews/9b3f9b99b6f141cf893ca5116155ec50"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.9, open, pin); Wongnai Users' Choice 2026 page; Wongnai reviews (2020, 2022) for drinks and prices. The Monday closing comes from a 2022 review.",
+      "imageCandidates": []
+    },
+    {
+      "id": "summore-day-cafe",
+      "name": "Summore Day Cafe",
+      "nameThai": null,
+      "kind": "cafe",
+      "tags": [
+        "view",
+        "roaster"
+      ],
+      "area": "rawai",
+      "district": "Promthep road, above Ya Nui",
+      "island": "Phuket",
+      "lat": 7.7642096,
+      "lng": 98.3061679,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Summore Day, 94 Wiset Road, Rawai, Phuket",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google, via Phuket 101, Aug 2026",
+      "reviews": 1227,
+      "reviewsSource": "Google, via Phuket 101, Aug 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "Espresso, Americano or latte 100-130 THB; signature coffees 160-220 THB (Phuket 101, Aug 2026). Mains 320-790 THB.",
+      "dishes": [
+        "Mr. Mustache: cold brew with homemade lemon cream",
+        "Cloud Coco Coffee: coconut milk coffee foam on Thai coconut water",
+        "Drip coffee of their own roast",
+        "Burgers and pasta"
+      ],
+      "praise": "Phuket 101 (Aug 2026): the beans are 'roasted under the house's own profiles', with a small drip menu for people who want the coffee plain; terraced gardens and a rooftop deck over Ya Nui Beach.",
+      "watchOut": "A view cafe and restaurant first; coffee prices are higher than in town.",
+      "description": "A hillside cafe, restaurant and bar between Ya Nui Beach and Promthep Cape that roasts its own coffee, with a sea view.",
+      "openText": "Daily 10:00-20:00",
+      "days": [],
+      "bestTime": "Late afternoon, then Promthep Cape for sunset.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Order and pay at the counter, then sit anywhere.",
+        "5 km from the Rawai villa."
+      ],
+      "links": [
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/summoreday"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/summore-day-cafe/"
+      ],
+      "verification": "Already in the guide; Google Maps data from the Phuket South researcher (27 Oct 2026), not read again. Phuket 101 page updated 28 Aug 2026 for the roasting and coffee prices.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-sync-coffee-kamala",
+      "name": "sync coffee bar & roastery",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "kamala",
+      "district": "Kamala (Na Hat Road)",
+      "island": "Phuket",
+      "lat": 7.9500168,
+      "lng": 98.280971,
+      "coordSource": "Google Maps pin (sync coffee bar & roastery), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "sync coffee bar & roastery, 104/8 Na Hat Road, Kamala, Phuket",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 987,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.2,
+          "reviews": 17,
+          "note": "Older reviews (2019-2023)",
+          "url": "https://www.wongnai.com/restaurants/466661QW-sync-coffee/reviews"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Signature chocolate 120 THB (Wongnai); reviewers put a visit at 100-250 THB a person.",
+      "dishes": [
+        "Flat white",
+        "Dirty",
+        "Yuzu coffee",
+        "Filter coffee from their own roasts (several roast levels)"
+      ],
+      "praise": "The specialty stop on the Kamala side of the island: The Way to Coffee (Nov 2025) lists it for drip and espresso, and it holds 4.8 on Google from about 1,000 reviews (Wanderlog).",
+      "watchOut": "Down a small lane; park at the Kamala Tsunami Memorial and walk.",
+      "description": "A small coffee bar and roastery in a Kamala lane near the beach.",
+      "openText": "08:00-18:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Morning, on the drive between Patong and the airport.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "15 minutes north of the Patong villa by car."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/sync+coffee+bar+%26+roastery/@7.9500168,98.280971,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bff7ecbc2cb:0x77a6a846bd3edd3f!8m2!3d7.9500168!4d98.280971!16s%2Fg%2F11j0dc289c"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://instagram.com/sync_coffee"
+        }
+      ],
+      "sources": [
+        "https://www.thewaytocoffee.com/best-cafes-phuket/",
+        "https://wanderlog.com/list/geoCategory/282411/best-coffee-shops-and-best-cafes-in-choeng-thale",
+        "https://www.wongnai.com/restaurants/466661QW-sync-coffee/reviews"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin); Wanderlog list for the review count; Wongnai (older reviews) for the drinks.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-beans-coffee-roaster",
+      "name": "BEANS Coffee Roaster Phuket",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bang-tao",
+      "district": "Cherng Talay (The Society)",
+      "island": "Phuket",
+      "lat": 7.9967649,
+      "lng": 98.3029365,
+      "coordSource": "Google Maps pin (BEANS Coffee Roaster Phuket), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "BEANS Coffee Roaster Phuket, The Society, 168 Cherng Talay, Phuket",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found.",
+      "dishes": [
+        "Filter of an Ethiopian or a Thai bean",
+        "Pineapple Splash (coffee with pineapple)",
+        "Espresso drinks"
+      ],
+      "praise": "The Phuket shop of a Bangkok roaster, with Thai and imported beans; Phuket 101 (Dec 2024) praises its care for quality and the Pineapple Splash.",
+      "watchOut": "Inside The Society by Sansiri, a lifestyle complex; fewer reviews than the Old Town shops.",
+      "description": "A Bangkok roaster's cafe at The Society in Cherng Talay, near Bang Tao Beach.",
+      "openText": "07:00-17:30 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/BEANS+Coffee+Roaster+Phuket/@7.9967649,98.3029365,17z/data=!3m1!4b1!4m6!3m5!1s0x305039fecd176193:0x5b306fb94172e43c!8m2!3d7.9967649!4d98.3029365!16s%2Fg%2F11wg44ph9s"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/beans-coffee-roaster-phuket/"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open, pin); Phuket 101 page updated Dec 2024.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-kanin-cafe",
+      "name": "Kanin Cafe Phuket",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "bang-tao",
+      "district": "Cherng Talay (Pasak-Koktanod Road)",
+      "island": "Phuket",
+      "lat": 7.9991164,
+      "lng": 98.3061558,
+      "coordSource": "Google Maps pin (Kanin Cafe Phuket - Specialty Coffee & All Day Breakfast and Brunch), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Kanin Cafe Phuket, Pasak-Koktanod Road, Cherng Talay, Phuket",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 475,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found.",
+      "dishes": [
+        "Specialty espresso drinks",
+        "Filter coffee",
+        "All-day breakfast and brunch"
+      ],
+      "praise": "Wanderlog's Cherng Talay list quotes reviewers on its 'superb specialty coffees'; it also appears on a Siam Niramit Phuket list of specialty coffee shops (seen in search results).",
+      "watchOut": "A brunch cafe as much as a coffee bar.",
+      "description": "A specialty coffee and all-day brunch cafe in the Cherng Talay area, near Bang Tao.",
+      "openText": "08:00-17:45 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Kanin+Cafe+Phuket+-+Specialty+Coffee+%26+All+Day+Breakfast+and+Brunch/@7.9991164,98.3061558,17z/data=!3m1!4b1!4m6!3m5!1s0x305039e14c28be8b:0x910fd37fee132e91!8m2!3d7.9991164!4d98.3061558!16s%2Fg%2F11rvbyz59m"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://www.instagram.com/kanincafe/"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/282411/best-coffee-shops-and-best-cafes-in-choeng-thale",
+        "https://www.siamniramitphuket.com/?p=4249"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin); Wanderlog list (4.7 from 475).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-bubbas-ban-tai",
+      "name": "Bubba's Coffee Baan Tai",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "koh-phangan",
+      "district": "Ban Tai",
+      "island": "Koh Phangan",
+      "lat": 9.7003333,
+      "lng": 100.0206323,
+      "coordSource": "Google Maps pin (Bubba's Coffee Baan Tai), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Bubba's Coffee Baan Tai, Koh Phangan",
+      "placeId": "ChIJpbAG5r79VDARYvFdLxxixRU",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1382,
+      "reviewsSource": "Google, via Wanderlog (Bubba's Roastery, Haad Yao), Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Reviewers say prices are a little above the island average; no menu prices found.",
+      "dishes": [
+        "Latte",
+        "Filter coffee of their own roast",
+        "Passion fruit tea",
+        "Breakfast and pastries"
+      ],
+      "praise": "Koh Phangan's first specialty roastery (since 2015), known for buying from local Thai growers; reviewers call the latte 'the best latte in years', and The Backpacking Family (2026) calls the Ban Tai shop 'a pretty remarkable coffee shop and restaurant'.",
+      "watchOut": "Gets packed at busy times. The roastery cafe at Haad Yao is closed on Thursdays.",
+      "description": "The Ban Tai cafe of Bubba's, the island's own roaster, with a second shop in Thong Sala.",
+      "openText": "07:00-17:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Bubba's Thong Sala is 200 m from Dots Coffee, near the pier.",
+        "The roastery itself is at Haad Yao on the west coast."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Bubba%27s+Coffee+Baan+Tai/data=!4m7!3m6!1s0x3054fdbee606b0a5:0x15c5621c2f5df162!8m2!3d9.7003333!4d100.0206323!16s%2Fg%2F11h3ft2n4t!19sChIJpbAG5r79VDARYvFdLxxixRU"
+        },
+        {
+          "label": "Bubba's (official site)",
+          "url": "http://www.bubbascoffee.com/"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/place/details/1949631/bubbas-roastery",
+        "https://thebackpackingfamily.com/?p=3713",
+        "https://www.atly.com/thailand/chang-wat-surat-thani/koh-pha-ngan"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open, pin); the Thong Sala shop and the Haad Yao roastery are also on Google at 4.7. Wanderlog for the review count and the roasting.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-dots-coffee-phangan",
+      "name": "Dots Coffee",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [],
+      "area": "koh-phangan",
+      "district": "Thong Sala",
+      "island": "Koh Phangan",
+      "lat": 9.7108531,
+      "lng": 99.9857977,
+      "coordSource": "Google Maps pin (Dots Coffee), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Dots Coffee, Thong Sala, Koh Phangan",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No menu prices found.",
+      "dishes": [
+        "Single-origin filter (an Ethiopian on the menu listed by Freaking Nomads)",
+        "Americano",
+        "Pastries"
+      ],
+      "praise": "Near the Thong Sala pier and one of the two names that come up most for coffee on the island; a Google reviewer calls its Americano 'the best Americano I've had on Koh Phangan' (Wanderlog).",
+      "watchOut": "Busy with laptop workers.",
+      "description": "A small specialty coffee bar by the Thong Sala pier with single-origin filter coffee and fast wifi.",
+      "openText": "Daily 08:00-17:00 (Google Maps; Freaking Nomads).",
+      "days": [],
+      "bestTime": "Morning, or while you wait for a ferry.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Dots+Coffee/@9.7108531,99.9857977,17z/data=!3m1!4b1!4m6!3m5!1s0x3054fe7e6bbcf1a1:0xf8c34f8dd3f075ba!8m2!3d9.7108531!4d99.9857977!16s%2Fg%2F11clwk9jzb"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://www.instagram.com/dots.kohphangan"
+        }
+      ],
+      "sources": [
+        "https://freakingnomads.com/workspace/dots-coffee",
+        "https://wanderlog.com/place/details/2846010/dots-coffee"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin); Freaking Nomads and Wanderlog listings.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hundred-islands-coffee",
+      "name": "Hundred Islands Coffee Bar",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "budget"
+      ],
+      "area": "koh-phangan",
+      "district": "Ban Tai",
+      "island": "Koh Phangan",
+      "lat": 9.70758,
+      "lng": 100.0063071,
+      "coordSource": "Google Maps pin (Hundred Islands Coffee Bar), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hundred Islands Coffee Bar, Ban Tai, Koh Phangan",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Drinks 60-100 THB (The Backpacking Family, 2026).",
+      "dishes": [
+        "Espresso drinks",
+        "Filter coffee"
+      ],
+      "praise": "The Backpacking Family's 2026 Koh Phangan guide says it 'may well be the best coffee shop in Koh Phangan', with a clean, cool and quiet room.",
+      "watchOut": "Easy to miss at the side of the main road. Closed Mondays.",
+      "description": "A small, quiet coffee bar on the main road in Ban Tai, opposite the high school.",
+      "openText": "08:00-17:00, closed Monday (The Backpacking Family 2026; Google Maps 27 Oct 2026).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Hundred+Islands+Coffee+Bar/@9.70758,100.0063071,17z/data=!3m1!4b1!4m6!3m5!1s0x3054fc330be6c15f:0x40da0dbe40ceab9a!8m2!3d9.70758!4d100.0063071!16s%2Fg%2F11cjp9fmx8"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "http://www.facebook.com/100islandscoffeebar"
+        }
+      ],
+      "sources": [
+        "https://thebackpackingfamily.com/?p=3713"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open, pin, 08:00-17:00); The Backpacking Family 2026 guide.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-indigo-phangan",
+      "name": "Indigo Specialty Coffee & Bakery",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast",
+        "dessert"
+      ],
+      "area": "koh-phangan",
+      "district": "Hin Kong (near Srithanu)",
+      "island": "Koh Phangan",
+      "lat": 9.7490936,
+      "lng": 99.9753358,
+      "coordSource": "Google Maps pin (Indigo Specialty Coffee & Bakery), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Indigo Specialty Coffee & Bakery, 7/24 Moo 6, Hin Kong, Koh Phangan",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found.",
+      "dishes": [
+        "Espresso drinks with beans from an award-winning Thai roaster",
+        "Matcha",
+        "Cakes and tarts",
+        "Eggs Benedict"
+      ],
+      "praise": "The specialty coffee stop for the Srithanu and Hin Kong side, open late; it buys from an award-winning Thai roaster (Freaking Nomads).",
+      "watchOut": "A bakery cafe as much as a coffee bar.",
+      "description": "A coffee and bakery cafe on the main road at Hin Kong, a few minutes from Srithanu.",
+      "openText": "Daily 07:00-22:30 (Google Maps; Freaking Nomads).",
+      "days": [],
+      "bestTime": "Morning, or a late coffee and cake.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Indigo+Specialty+Coffee+%26+Bakery/@9.7490936,99.9753358,17z/data=!3m1!4b1!4m6!3m5!1s0x3054ff8945b7b389:0xd89b8f90dac0ce7e!8m2!3d9.7490936!4d99.9753358!16s%2Fg%2F11j4ktt0xn"
+        },
+        {
+          "label": "Instagram (official)",
+          "url": "https://www.instagram.com/indigocafephangan"
+        }
+      ],
+      "sources": [
+        "https://freakingnomads.com/workspace/indigo-specialty-coffee-and-bakery"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open, pin, 07:00-22:30); Freaking Nomads listing.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-roastery-village-samui",
+      "name": "Roastery Village",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "koh-samui",
+      "district": "Bophut",
+      "island": "Koh Samui",
+      "lat": 9.5509326,
+      "lng": 100.0349506,
+      "coordSource": "Google Maps pin (Roastery Village), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Roastery Village, 151/2 Moo 2, Bophut, Koh Samui",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "250 g of beans 690 THB (Atly); no drink prices found.",
+      "dishes": [
+        "Cappuccino",
+        "Flat white",
+        "Filter of a seasonal lot",
+        "Croissant"
+      ],
+      "praise": "A Samui roaster founded in 2021 that also supplies hotels; you can see into the roasting room. A reviewer on Atly wrote 'I had the best cappuccino I have ever tasted'.",
+      "watchOut": "Pricier than average.",
+      "description": "A Bophut roaster with a cafe in its own building, the serious coffee stop on Samui.",
+      "openText": "08:30-19:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": true,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Roastery+Village/@9.5509326,100.0349506,17z/data=!3m1!4b1!4m6!3m5!1s0x3054f18242596ead:0x529a874847d99780!8m2!3d9.5509326!4d100.0349506!16s%2Fg%2F11pf2ksbr4"
+        },
+        {
+          "label": "Roastery Village (official site)",
+          "url": "https://www.roasteryvillage.com/"
+        }
+      ],
+      "sources": [
+        "https://www.roasteryvillage.com/",
+        "https://www.atly.com/location/RoasteryVillage.md"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin); own website; Atly listing.",
+      "imageCandidates": [
+        {
+          "url": "https://www.roasteryvillage.com/assets/img/poster-home-coffee.jpg",
+          "page": "https://www.roasteryvillage.com/",
+          "credit": "Roastery Village",
+          "license": "Place's own website"
+        },
+        {
+          "url": "https://www.roasteryvillage.com/assets/img/rv-shop-3.jpg",
+          "page": "https://www.roasteryvillage.com/",
+          "credit": "Roastery Village (shop)",
+          "license": "Place's own website"
+        }
+      ]
+    },
+    {
+      "id": "food-flo-coffee-samui",
+      "name": "Flo Coffee Roaster (Chaweng)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "koh-samui",
+      "district": "Chaweng",
+      "island": "Koh Samui",
+      "lat": 9.5176447,
+      "lng": 100.0492926,
+      "coordSource": "Google Maps pin (Flo Coffee Roaster (Chaweng)), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Flo Coffee Roaster (Chaweng), Koh Samui",
+      "placeId": "ChIJIV8MmGfxVDARBSqyuoQm9zI",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 538,
+      "reviewsSource": "Google, via Restaurant Guru, Sep 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "About 100-200 THB a person (Restaurant Guru); reviewers say prices are on the high side.",
+      "dishes": [
+        "Geisha filter",
+        "Iced latte",
+        "Matcha",
+        "Banoffee cake",
+        "Choose your beans from Thai and imported lots"
+      ],
+      "praise": "A Samui roaster with three shops; Google reviewers in mid 2026 call it the 'best coffee in Samui' and single out the Geisha (via Restaurant Guru, updated Sep 2026, #20 of 935 Samui coffee shops).",
+      "watchOut": "Parking is hard at the Bangrak shop.",
+      "description": "The Chaweng shop of Flo, a Samui roaster with Thai and imported beans.",
+      "openText": "08:00-20:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Any time; open into the evening.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "There are also Flo shops in Bangrak (4.8 on Google) and at Central Samui."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Flo+Coffee+Roaster+(Chaweng)/@9.5176447,100.0492926,17z/data=!3m1!4b1!4m6!3m5!1s0x3054f167980c5f21:0x32f72684bab22a05!8m2!3d9.5176447!4d100.0492926!16s%2Fg%2F11h8bh8c_0"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/flocoffeeexperience"
+        }
+      ],
+      "sources": [
+        "https://restaurantguru.com/Flo-Ko-Samui",
+        "https://www.atly.com/location/Flo-Coffee-Roaster-Bangrak.md",
+        "https://bh.trip.com/moments/bo-phut-2036241"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open, pin, 08:00-20:00); Restaurant Guru (updated 28 Sep 2026) for the count and reviews; Atly and Trip.com listings.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-23-roasters-krabi",
+      "name": "23 Roasters Cafe",
+      "nameThai": "โรงคั่วกาแฟ 23 Roaster Cafe Krabi",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "krabi",
+      "district": "Ao Nang (Nopparat Thara junction)",
+      "island": "Krabi mainland",
+      "lat": 8.0750966,
+      "lng": 98.8305021,
+      "coordSource": "Google Maps pin (23 Roasters Cafe Krabi), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "23 Roasters Cafe Krabi, 64/23 Moo 1, Ao Nang, Krabi",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 915,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Coffee 80-100 THB (Google reviewer via Wanderlog).",
+      "dishes": [
+        "Dirty",
+        "Filter of the Charmmy Blend or a fruity single origin",
+        "Banana cake"
+      ],
+      "praise": "A small cafe that roasts and blends its own coffee; Google reviewers (4.8 from 915 via Wanderlog) call it 'super affordable' for the quality.",
+      "watchOut": "On the road from Ao Nang to Nopparat Thara, not in the beach centre.",
+      "description": "A small roaster cafe just outside Ao Nang that sells its own beans.",
+      "openText": "Daily 08:15-17:30 (Google Maps; Wanderlog).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Buy beans here; they grind them for you."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/23+Roasters+Cafe+Krabi/@8.0750966,98.8305021,17z/data=!3m1!4b1!4m6!3m5!1s0x3051bfeb880d490d:0x1691a6eeefc6f687!8m2!3d8.0750966!4d98.8305021!16s%2Fg%2F11fp429zzn"
+        },
+        {
+          "label": "Facebook (official)",
+          "url": "https://www.facebook.com/23roasters/"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/place/details/1966787"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open, pin); Wanderlog page (4.8 from 915).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-la-malila-khao-lak",
+      "name": "La Malila Cafe (Khaolak Roaster)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "khao-lak",
+      "district": "Bang Niang",
+      "island": "Phang Nga mainland",
+      "lat": 8.6648992,
+      "lng": 98.2476128,
+      "coordSource": "Google Maps pin (La Malila Café), read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "La Malila Cafe, Bang Niang, Khao Lak",
+      "placeId": "ChIJhZN9IBzpUDARVlsBmo5sERQ",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found.",
+      "dishes": [
+        "Espresso drinks with their own Khaolak Roaster beans",
+        "Filter of the Mae Jan Tai (Chiang Rai) bean",
+        "Beans to take away: Brazil, Colombia, Guatemala, Mae Jan Tai, house blend"
+      ],
+      "praise": "The cafe of La Flora resort roasts its own beans under the name Khaolak Roaster and sells them, including a Thai Mae Jan Tai; Trip.com posts list it among Khao Lak's good cafes.",
+      "watchOut": "A resort cafe; the evidence is thinner than for the other places.",
+      "description": "A resort cafe in Bang Niang that roasts its own coffee, the best bet for specialty coffee in Khao Lak.",
+      "openText": "09:00-19:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/La+Malila+Caf%C3%A9/data=!4m7!3m6!1s0x3050e91c207d9385:0x14116c8e9a015b56!8m2!3d8.6648992!4d98.2476128!16s%2Fg%2F11txcgs1_7!19sChIJhZN9IBzpUDARVlsBmo5sERQ"
+        },
+        {
+          "label": "La Flora resort (official site)",
+          "url": "http://www.lafloraresort.com/"
+        }
+      ],
+      "sources": [
+        "https://uk.trip.com/moments/poi-la-flora-khao-lak-21717308"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, pin); Trip.com posts for the roasting and beans.",
+      "imageCandidates": []
+    }
+  ],
+  "existingChecked": [
+    {
+      "id": "food-asterisk-espresso",
+      "verdict": "kept",
+      "note": "Included here as kind coffee with score 4 (2025 Thailand barista champion, Daniel Food Diary Aug 2026)."
+    },
+    {
+      "id": "summore-day-cafe",
+      "verdict": "kept",
+      "note": "Included here with the roaster tag: Phuket 101 (Aug 2026) says it roasts its own beans."
+    },
+    {
+      "id": "food-phuketique-coffee-bar",
+      "verdict": "kept",
+      "note": "A toast and coffee bar, not a specialty coffee shop; keep it as kind cafe."
+    },
+    {
+      "id": "view-cafe-phuket",
+      "verdict": "kept",
+      "note": "A view cafe; coffee is not the point. Not added here."
+    },
+    {
+      "id": "fruit-fusion-kamala",
+      "verdict": "kept",
+      "note": "A healthy cafe; not a specialty coffee shop. Not added here."
+    },
+    {
+      "id": "food-la-tarte-doree",
+      "verdict": "kept",
+      "note": "Bakery; not checked again."
+    },
+    {
+      "id": "food-cannelle",
+      "verdict": "kept",
+      "note": "Bakery; not checked again."
+    }
+  ],
+  "notIncluded": [
+    {
+      "name": "Phuket Coffee Lab (Lagoon Road, Cherng Talay)",
+      "reason": "Permanently closed on Google Maps (27 Oct 2026) and on Wanderlog; the Boat Avenue shop closed in 2025. Some 2026 lists still name it."
+    },
+    {
+      "name": "Timecoffeehouse59 & Roasted Coffee (Cherng Talay)",
+      "reason": "Temporarily closed on Google Maps, 27 Oct 2026."
+    },
+    {
+      "name": "Comeback Phuket (Montri Road)",
+      "reason": "Daniel Food Diary (Aug 2026) calls it 'more like an everyday coffee stop than a destination cafe'."
+    },
+    {
+      "name": "Bookhemian, ROOF Pudding & Cafe, MONDO Espresso & Tea Bar, Rose Espresso (Old Town)",
+      "reason": "Popular cafes, but no source says they roast or serve specialty beans; weaker for coffee than the others."
+    },
+    {
+      "name": "Crafty Specialty Coffee, Liberica Coffee, Maew Som Coffee (Rawai)",
+      "reason": "New, 4.8-5.0 on Google but no independent reviews found."
+    },
+    {
+      "name": "Wilson's Cafe (Rawai)",
+      "reason": "A breakfast cafe; Phuket 101 (Aug 2026) says nothing about the beans."
+    },
+    {
+      "name": "BAKE (Bang Tao, Patong)",
+      "reason": "A bakery with Thai beans, not a specialty coffee shop."
+    },
+    {
+      "name": "Momus (Phang Nga Road, Old Town, next to GRAPH)",
+      "reason": "Profiled by Barista Magazine, but no other source found and no Google Maps reads were left to check it. Worth a look when passing GRAPH."
+    }
+  ]
+}

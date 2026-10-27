@@ -16,12 +16,26 @@ const uniq = (a) => Array.from(new Set(a))
 const list = (a) => (Array.isArray(a) ? a : []).filter(Boolean)
 const links = (...lists) => { const seen = new Set(); return lists.flat().filter((l) => l && /^https?:\/\//i.test(l.url) && !seen.has(l.url) && seen.add(l.url)) }
 const num = (v) => (Number.isFinite(Number(v)) && v !== null && v !== '' ? Number(v) : undefined)
-export const FOOD_KINDS = ['thai', 'southern-thai', 'noodles', 'seafood', 'pork', 'grill', 'isaan', 'street-food', 'market', 'dessert', 'cafe', 'bakery', 'fine-dining', 'international']
-export const FOOD_TAGS = ['pork', 'dessert', 'seafood', 'late-night', 'breakfast', 'michelin', 'view', 'beachfront', 'budget', 'group-friendly', 'vegetarian-friendly', 'halal', 'local-favourite', 'booking-needed']
+// coffee: a specialty (third-wave) coffee shop or roaster; fast-food: burgers, fried chicken, pizza, the chains (27 Oct 2026)
+export const FOOD_KINDS = ['thai', 'southern-thai', 'noodles', 'seafood', 'pork', 'grill', 'isaan', 'street-food', 'market', 'dessert', 'cafe', 'coffee', 'bakery', 'fast-food', 'fine-dining', 'international']
+// no halal: the user does not want halal places (27 Oct 2026); roaster: roasts its own beans; chain: a chain outlet
+export const FOOD_TAGS = ['pork', 'dessert', 'seafood', 'late-night', 'breakfast', 'michelin', 'view', 'beachfront', 'budget', 'group-friendly', 'vegetarian-friendly', 'local-favourite', 'booking-needed', 'roaster', 'chain']
 const DAYS = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)$/
-export const FOOD_FILES = ['phuket-west', 'phuket-south', 'phuket-town', 'andaman', 'gulf', 'bangkok-old', 'bangkok-new']
+// the later topic files (27 Oct 2026, the user's second ask)
+const TOPIC = ['coffee', 'bangkok-coffee', 'fastfood']
+export const FOOD_FILES = ['phuket-west', 'phuket-south', 'phuket-town', 'andaman', 'gulf', 'bangkok-old', 'bangkok-new', 'coffee', 'bangkok-coffee', 'fastfood']
 // read and left out: id → why
-const DROP = {}
+// the user (27 Oct 2026): "remove all the halal and muslim options if they are speciffically marked for muslims and
+// specialized on halal"
+const HALAL = 'a Muslim or halal-only place, the user does not want them (27 Oct 2026)'
+const DROP = Object.fromEntries(['food-kalim-rim-lay', 'food-roti-patong-chao-kao', 'food-roti-kamala-beach', 'food-roti-taew-nam', 'food-roti-chaofa', 'food-koh-panyee',
+  'food-tha-ton-do-koh-yao-noi', 'food-kaya-koh-yao-noi', 'food-baan-rim-nam-koh-yao-yai', 'food-yawee-koh-lanta', 'food-muslim-restaurant-charoen-krung'].map((id) => [id, HALAL]))
+// lines about halal or Muslim food come out of the dishes and tips (a market's "Muslim Food (Section 12)" stall)
+const NOT_HALAL = (x) => !/\b(halal|muslim)\b/i.test(String(x))
+// a basics topic rewritten: its title → the new one
+const BASICS_FIX = {
+  'Pork and halal': { title: 'Where the pork is', text: "The Hokkien-Chinese shops of the Old Town cook a lot of pork: moo hong, crispy pork, pork satay, loba and pork lard in the noodles. Muslim shops serve no pork and often no alcohol: you can tell them by a green halal sign (ฮาลาล in Thai) and menus of beef, chicken and goat curry with roti. They are common around Krabi and on Koh Yao and Koh Lanta, so aim for the pork places in this guide there." },
+}
 // the same place from two researchers (or a near copy): the second id → the one kept
 const SAME = {}
 // read again on Google Maps after the research (27 Oct 2026): fields to set
@@ -96,6 +110,9 @@ export function mergeFood(ROOT, log) {
       // the same id from two researchers: one place twice (the first copy kept), or two places of one name (Wanlamun in
       // Phuket Town and in Bangkok): the second gets its area in the id
       if (old && old.tier === 'food' && Number.isFinite(f.lat) && far(old, f) > 500) { f.id += '-' + f.area; old = byId.get(f.id) }
+      // a coffee or fast-food researcher's copy of a place from the first research: its kind, tags and score win (Asterisk is
+      // a specialty coffee shop, not just a cafe)
+      if (old && old.tier === 'food' && TOPIC.includes(k)) { for (const x of [...FOOD_FIELDS, ...FRESH]) if (f[x] !== undefined && !(Array.isArray(f[x]) && !f[x].length && x !== 'days')) old[x] = f[x]; log.push(`food: ${f.id} updated from ${k}`); continue }
       if (old && old.tier === 'food') { log.push(`food: ${f.id} came twice, the first copy kept [${k}]`); continue }
       if (old) {
         // a place already in the guide: the food fields, merged links and sources; a food place also takes the fresh
@@ -120,6 +137,11 @@ export function mergeFood(ROOT, log) {
     const b = clean(list(r.basics)).filter((x) => x && x.title && x.text).map((x) => ({ title: x.title, text: x.text, links: links(list(x.links)) }))
     if (b.length) basics[k.startsWith('bangkok') ? 'bangkok' : 'phuket'] = (basics[k.startsWith('bangkok') ? 'bangkok' : 'phuket'] || []).concat(b)
   }
+  for (const p of pl.items) if (p.category === 'food' || p.foodKind) {
+    if (p.foodTags) p.foodTags = p.foodTags.filter((t) => t !== 'halal')
+    for (const k of ['dishes', 'tips']) if (Array.isArray(p[k])) p[k] = p[k].filter(NOT_HALAL)
+  }
+  for (const k of Object.keys(basics)) basics[k] = basics[k].map((b) => (BASICS_FIX[b.title] ? { ...b, ...BASICS_FIX[b.title] } : b)).map((b) => ({ ...b, links: b.links.filter((l) => NOT_HALAL(l.label + ' ' + l.url)) }))
   wr('data/places.json', pl)
   wr('data/food.json', { generatedOn, basics })
   log.push(`food: ${added} new places, ${updated} already in the guide; basics for ${Object.keys(basics).join(', ') || 'nowhere'} → data/food.json`)

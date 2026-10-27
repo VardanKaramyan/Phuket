@@ -87,7 +87,8 @@ for (const p of pl) {
 for (const p of pl.filter((x) => x.category === 'food' && x.foodKind)) {
   const w = 'places:' + p.id
   if (!(p.dishes || []).length) warn(w, 'a food place with no dishes (what to order)')
-  if (!p.praise) warn(w, 'a food place with nothing on what people say')
+  // a chain outlet (KFC, McDonald's...) is there for where it is, not for its reviews
+  if (!p.praise && !(p.foodTags || []).includes('chain')) warn(w, 'a food place with nothing on what people say')
   const text = [p.name, p.description, p.praise, p.watchOut, p.feeText, p.openText, ...(p.dishes || []), ...(p.tips || [])].filter(Boolean).join(' ')
   if (/!|\p{Extended_Pictographic}/u.test(text)) warn(w, 'an exclamation mark or an emoji in the copy')
   if (/\u2014/.test(text)) warn(w, 'an em dash in the copy')

@@ -45,14 +45,9 @@
     ]
    },
    {
-    "title": "Pork and halal",
-    "text": "The Hokkien-Chinese shops of the Old Town cook a lot of pork: moo hong, crispy pork, pork satay, loba and pork lard in the noodles. Muslim shops serve no pork and often no alcohol; you can tell them by a green halal sign or the word 'halal' in Arabic or Thai (ฮาลาล), women staff in headscarves, and menus of beef, chicken and goat curry with roti. In this guide Roti Chaofa and Roti Taew Nam are halal. If you want no pork in a Chinese shop, say 'mai sai moo'.",
-    "links": [
-     {
-      "label": "Phuket 101: halal restaurants",
-      "url": "https://www.phuket101.net/category/restaurants/halal-en/"
-     }
-    ]
+    "title": "Where the pork is",
+    "text": "The Hokkien-Chinese shops of the Old Town cook a lot of pork: moo hong, crispy pork, pork satay, loba and pork lard in the noodles. Muslim shops serve no pork and often no alcohol: you can tell them by a green halal sign (ฮาลาล in Thai) and menus of beef, chicken and goat curry with roti. They are common around Krabi and on Koh Yao and Koh Lanta, so aim for the pork places in this guide there.",
+    "links": []
    },
    {
     "title": "Seafood priced by weight",
@@ -65,6 +60,56 @@
      {
       "label": "Phuket 101: Laem Sai Seafood (per kilo prices)",
       "url": "https://www.phuket101.net/laem-sai-seafood/"
+     }
+    ]
+   },
+   {
+    "title": "Coffee in Thailand",
+    "text": "Thailand grows its own coffee: arabica in the northern hills of Chiang Rai, Chiang Mai and Nan (Doi Chang and Doi Tung are the best known names), and robusta in the south, mostly around Chumphon, Surat Thani and Ranong. A Thai iced coffee is sweet by default, with sugar and condensed milk: say 'wan noi' (less sweet) or 'mai sai nam tan' (no sugar), or order an Americano or a pour-over in a specialty shop. In 2026 a specialty espresso drink costs about 80-130 THB and a pour-over or signature drink 100-180 THB; a sweet iced coffee from a street stall is about 40-60 THB.",
+    "links": [
+     {
+      "label": "The Way to Coffee: specialty coffee in Thailand (Jan 2026)",
+      "url": "https://www.thewaytocoffee.com/specialtycoffeeblog/specialty-coffee-in-thailand"
+     },
+     {
+      "label": "Wikipedia: Coffee production in Thailand",
+      "url": "https://en.wikipedia.org/wiki/Coffee_production_in_Thailand"
+     }
+    ]
+   },
+   {
+    "title": "Fast food in Thailand",
+    "text": "KFC is the biggest chain (more than 700 outlets), followed by McDonald's, Burger King, Thailand's own The Pizza Company, Pizza Hut, Domino's, Subway and Texas Chicken; Shake Shack is in Bangkok only, and we found no Five Guys in Thailand. The Thai menus add rice bowls with spicy or kaprao chicken, McDonald's pork burgers (Samurai Pork Burger 109 THB), Hat Yai-style and tom yum fried chicken and pork congee at Burger King, and corn or pineapple pies. Most mall outlets keep mall hours (about 10:00-22:00); drive-thru branches and several Patong, Khao San and Sukhumvit outlets are open 24 hours.",
+    "links": [
+     {
+      "label": "McDonald's Thailand prices (THAIest)",
+      "url": "https://thaiest.com/en/thai-food/reviews/mcdonald-s-in-thailand"
+     },
+     {
+      "label": "KFC Thailand prices (THAIest)",
+      "url": "https://thaiest.com/en/thai-food/reviews/kfc-in-thailand"
+     },
+     {
+      "label": "Burger King Thailand prices (THAIest)",
+      "url": "https://thaiest.com/en/thai-food/reviews/burger-king-in-thailand"
+     }
+    ]
+   },
+   {
+    "title": "Delivery, 7-Eleven and what a meal costs",
+    "text": "Grab (GrabFood) and LINE MAN deliver from the chains and from most burger shops in this list; the chains also take orders on their own numbers: McDonald's 1711, KFC 1150, The Pizza Company 1112. At any hour, 7-Eleven heats a ham and cheese toastie for about 30-45 THB. In 2026 a chain meal costs about 150-250 THB (a Big Mac set was 220 THB in late 2024, and Numbeo puts a fast-food meal in Bangkok at about 250 THB in Oct 2026), while a burger at a craft burger shop costs 250-600 THB.",
+    "links": [
+     {
+      "label": "Fast-food meal price in Bangkok, 2026 (combien-coute, Numbeo data)",
+      "url": "https://www.combien-coute.net/mcdo/thailande/bangkok/"
+     },
+     {
+      "label": "Phuket burger price guide (Phuket Expat Guide, Aug 2026)",
+      "url": "https://phuketexpatguide.com/blog/phuket-burger-guide/"
+     },
+     {
+      "label": "The Pizza Company online orders",
+      "url": "https://www.1112.com/"
      }
     ]
    }

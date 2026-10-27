@@ -1,0 +1,1589 @@
+{
+  "generatedOn": "2026-10-27",
+  "region": "bangkok-coffee",
+  "scopeNote": "Bangkok specialty (third-wave) coffee shops and roasters that coffee writers and guides praise in 2025-2026, spread over Ari, Phaya Thai, Siam, Silom, Sathorn, Charoen Krung and Talat Noi, Chinatown (Song Wat), the Old Town, Asok and Phrom Phong, Thonglor, Ekkamai and Phra Khanong, with a few further out for coffee people; most roast their own beans.",
+  "basics": [],
+  "items": [
+    {
+      "id": "food-roots-thonglor",
+      "name": "Roots at theCOMMONS",
+      "nameThai": "รูทส์ แอท เดอะคอมมอนส์",
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.7351348,
+      "lng": 100.5822318,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Roots at the COMMONS, Market Floor, theCOMMONS, Thonglor 17, Sukhumvit 55, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 671,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 75,
+          "note": "via Wanderlog",
+          "url": "https://wanderlog.com/place/details/450745/roots-at-the-commons"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Single-origin filter 150-200 THB, espresso drinks 130-160 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Pour-over of a Thai single origin from a farm Roots buys from (for example Nawin and Tina's natural from Mae Suai, Chiang Rai)",
+        "Coffee Tree Cold Brew (the Barista's Choice on the Roots site, Oct 2026)",
+        "Flat white or piccolo with a Thai espresso blend",
+        "Cold brew with banana, or with cacao nibs"
+      ],
+      "praise": "The Way to Coffee (May 2026) calls Roots 'arguably one of Bangkok's finest coffee roasters'. Its Sensory Research Lead, Chatchalerm 'Boss' Lertanekwattana, won the 2025 World Cup Tasters Championship in Geneva (Barista Magazine, Aug 2025). Founder Varatt Vichit-Vadakan was Thailand's barista champion and competed at the 2014 World Barista Championship.",
+      "watchOut": "A small bar on the Market Floor of theCOMMONS. Seats are shared with the food hall and fill up on weekends.",
+      "description": "The Thonglor bar of Roots, the Bangkok roaster that has built its coffee around Thai farms since 2013. A good place to taste what northern Thailand grows.",
+      "openText": "Daily 07:00-17:00 (Roots branch page and Google, Oct 2026).",
+      "days": [],
+      "bestTime": "Weekday morning.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Other Roots bars: theCOMMONS Saladaeng (Silom, daily 07:30-17:30), Sathon (Bhiraj Tower), Ratchathewi (Asia Hotel, by the BTS), Ari, and EmQuartier (weekdays only).",
+        "Buy a bag of Thai single-origin beans to take home; the staff can tell you the farm and the process."
+      ],
+      "links": [
+        {
+          "label": "Roots branches",
+          "url": "https://rootsbkk.com/branch/"
+        }
+      ],
+      "sources": [
+        "https://rootsbkk.com/branch/",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://www.baristamagazine.com/chatchalerm-lertanekwattana-makes-coffee-history-for-thailand/",
+        "https://www.baristamagazine.com/barista-champion-of-thailand/",
+        "https://www.google.com/maps/place/Roots+at+the+COMMONS/@13.7351348,100.5822318,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29e4d082b139d:0x225f738fad20d53e!8m2!3d13.7351348!4d100.5822318!16s%2Fg%2F11c0rr10wp"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 07:00-17:00, pin). Roots branch page (hours of every branch, Oct 2026). The Way to Coffee (May 2026), Thai Holiday Guide (Jul 2026), Barista Magazine (Aug 2025; 2014 WBC profile), Wanderlog (count).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-nana-coffee-roasters-ari",
+      "name": "NANA Coffee Roasters Ari",
+      "nameThai": "นานา คอฟฟี่ โรสเตอร์ อารีย์",
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Ari",
+      "island": null,
+      "lat": 13.7826347,
+      "lng": 100.54198,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "NANA Coffee Roasters Ari, 24/2 Ari 4 Alley, Samsen Nai, Phaya Thai, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 2878,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.2,
+          "reviews": 181,
+          "note": "Specialty coffee list, Aug 2025",
+          "url": "https://www.wongnai.com/listings/specialty-coffee-in-bangkok"
+        },
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 28,
+          "note": "via Wanderlog",
+          "url": "https://wanderlog.com/place/details/862850/nana-coffee-roasters-ari"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Most drinks 100-200 THB (Thai Holiday Guide, Jul 2026). Slow-bar cups run from 180 to 600 THB, by bean and brew method (Time Out).",
+      "dishes": [
+        "Dirty (the order Wongnai reviewers name most)",
+        "Moonstone, a house signature drink",
+        "Flash-brew iced coffee",
+        "Slow-bar pour-over or siphon of a rare lot",
+        "Yuzu matcha latte"
+      ],
+      "praise": "In almost every Bangkok coffee guide of 2025-2026. Sprudge (May 2025) lists the team's titles: World Siphonist Champion 2018, Thailand National Barista Champion 2019 and Thailand Brewers Cup Champion 2020 and 2024, and calls the menu the biggest specialty menu in Bangkok. Founder Warong 'Koong' Chalanuchpong is a much-awarded roaster.",
+      "watchOut": "Busy and loud at weekends; some Google reviewers say ordering is slow at peak times. Rare slow-bar coffees can cost 400-600 THB a cup.",
+      "description": "Nana's flagship in a garden house off Ari Soi 4: a big roaster-cafe with a long bean list, a slow bar and a competition team behind the counter.",
+      "openText": "Mon-Fri 07:00-18:00, Sat-Sun 08:00-18:00 (Google, via Wanderlog, Oct 2026).",
+      "days": [],
+      "bestTime": "Weekday morning, in the garden.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "A 5-minute walk from Ari BTS. Roots at Ari is on the same soi, and Landhaus Bakery (in this guide) is nearby in Ari.",
+        "Ask the slow bar which lots are new; the price depends on the bean."
+      ],
+      "links": [
+        {
+          "label": "Sprudge guide to Bangkok",
+          "url": "https://sprudge.com/?p=309675"
+        }
+      ],
+      "sources": [
+        "https://sprudge.com/?p=309675",
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://www.wongnai.com/listings/specialty-coffee-in-bangkok",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.timeout.com/bangkok/restaurants/10-best-cafes-to-get-your-fill-of-slow-bar-coffee",
+        "https://filtertravelbycoffee.substack.com/p/explore-bangkok-with-thailands-2024",
+        "https://www.google.com/maps/place/NANA+Coffee+Roasters+Ari/@13.7826347,100.54198,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29d5b73dc4c97:0x4a388f8b9e07b1e8!8m2!3d13.7826347!4d100.54198!16s%2Fg%2F11hh6h1x69"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 07:00-18:00, pin). Sprudge (May 2025), Thai Holiday Guide (Jul 2026), Wongnai list (Aug 2025), Wanderlog (count, week hours), a Mar 2024 interview with the 2024 Brewers Cup champion from the Nana team.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-factory-coffee",
+      "name": "Factory Coffee",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Phaya Thai",
+      "island": null,
+      "lat": 13.7569298,
+      "lng": 100.534614,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Factory Coffee, 49 Phaya Thai Road, Ratchathewi, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 4044,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Average spend 100-200 THB (Visit Thailand Today); a Google reviewer paid 200 THB for the Anusorn Iced Filter (via Wanderlog). No full price list found online.",
+      "dishes": [
+        "Flat white with the Factory blend",
+        "Phayathai: espresso with lemon and soda",
+        "Anusorn Iced Filter, 200 THB",
+        "Filter of a single origin by process (black honey, yellow cherry or pink bourbon, per Roadbook)",
+        "Charcoal Thai tea croissant"
+      ],
+      "praise": "Run by award-winning baristas Biw Settakarn and Man Athip (Roadbook, Apr 2026). Athip Archalerttrakool competed for Thailand at the World Barista Championship. The Way to Coffee (May 2026) lists its hand-roasted beans; Double Skinny Macchiato called the flat white 'super-sweet and tasty'.",
+      "watchOut": "Queues of 30-60 minutes at busy times, say Google reviewers (via Wanderlog). Closes in the afternoon.",
+      "description": "A small, very busy roaster-cafe by Phaya Thai BTS, run by Thai competition baristas. One of the names every Bangkok coffee guide repeats.",
+      "openText": "Daily 08:00-16:00 (Google, via Wanderlog, Oct 2026).",
+      "days": [],
+      "bestTime": "Right at opening, before the queue.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Phaya Thai BTS and the Airport Rail Link are a two-minute walk.",
+        "Factory HQ, the big new roastery-cafe, is at One Cool Avenue on Pradit Manutham Road, far from the centre (taxi)."
+      ],
+      "links": [],
+      "sources": [
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.doubleskinnymacchiato.com/2023/12/bangkok-thailand-specialty-coffee-shop-guide-map.html",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://sprudge.com/?p=309675",
+        "https://wanderlog.com/place/details/394932/factory-coffee-bkk",
+        "https://worldbaristachampionship.org/competitors/page/5/",
+        "https://www.visitthailandtoday.com/restaurants/bangkok/factory-coffee-bangkok",
+        "https://www.google.com/maps/place/Factory+Coffee+-+BKK/@13.7569298,100.534614,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29eb687f7ea03:0x2727f2026e220172!8m2!3d13.7569298!4d100.534614!16s%2Fg%2F1ptwm8lz3"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 08:00-16:00 today, pin). Roadbook (Apr 2026), The Way to Coffee (May 2026), Sprudge (May 2025, Factory HQ), WBC competitor page (Athip), Wanderlog (count, week hours, a reviewer price).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ceresia-coffee-roasters",
+      "name": "Ceresia Coffee Roasters",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Phrom Phong (Sukhumvit 41)",
+      "island": null,
+      "lat": 13.7327579,
+      "lng": 100.5725123,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ceresia Coffee Roasters, 15/1 Sukhumvit 41, Khlong Tan Nuea, Watthana, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 750,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Espresso or piccolo 120 THB, americano 130 THB, latte, flat white or dirty 140 THB, iced espresso tonic 150 THB, single-origin filter 140-160 THB; beans from 408 THB (Ceresia menu and shop, Sep 2026).",
+      "dishes": [
+        "Pour-over of Mae Toey, Thailand (lemon, honey, jasmine tea), 150 THB",
+        "Flat white with the house blend of Brazil Fazenda Rio Verde and Colombia La Joyeria, 140 THB",
+        "Iced espresso tonic, 150 THB",
+        "Cafe au lait: 8 oz filter coffee with milk"
+      ],
+      "praise": "Sprudge (May 2025) calls Ceresia, founded in 2013, 'a major influence' on Bangkok's specialty scene. The Way to Coffee (May 2026) praises its single origins; the beans are roasted in small batches every week.",
+      "watchOut": "It moved from Sukhumvit 33/1 to 15/1 Sukhumvit 41 by 2025, so older guides give the wrong address.",
+      "description": "One of the first Bangkok specialty roasters, now in a quiet residential building off Sukhumvit 41. Filter coffee is the thing here.",
+      "openText": "Daily 08:00-17:00, public holidays included (Ceresia site, Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Beans are sold in 50 g steps, so you can take home a few kinds.",
+        "Cupping sessions can be booked on the website."
+      ],
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://ceresiacoffeeroasters.com/"
+        }
+      ],
+      "sources": [
+        "https://ceresiacoffeeroasters.com/",
+        "https://ceresiacoffeeroasters.com/menu/",
+        "https://ceresiacoffeeroasters.com/buy-our-coffee/",
+        "https://sprudge.com/?p=309675",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.google.com/maps/place/Ceresia+Coffee+Roasters/@13.7327579,100.5725123,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f2e52c38cbf:0x7fa98aa0ea81aeef!8m2!3d13.7327579!4d100.5725123!16s%2Fg%2F11bwyxqfcn"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 08:00-17:00, pin, new address). Ceresia site and drinks menu (posted Sep 2026). Sprudge (May 2025), The Way to Coffee (May 2026), Wanderlog (count).",
+      "imageCandidates": [
+        {
+          "url": "https://ceresiacoffeeroasters.com/wp-content/uploads/2026/01/CeresiaGoogoo_0145-e1788243533689.webp",
+          "page": "https://ceresiacoffeeroasters.com/",
+          "credit": "Ceresia Coffee Roasters",
+          "license": "the place's own website"
+        }
+      ]
+    },
+    {
+      "id": "food-gallery-drip-coffee",
+      "name": "Gallery Drip Coffee",
+      "nameThai": "แกลลอรี่ กาแฟดริป",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Siam (BACC)",
+      "island": null,
+      "lat": 13.7466938,
+      "lng": 100.5304323,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Gallery Drip Coffee, Bangkok Art and Culture Centre, 939 Rama I Road, Pathum Wan, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 956,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.1,
+          "reviews": 224,
+          "note": "Specialty coffee list, Aug 2025",
+          "url": "https://www.wongnai.com/listings/specialty-coffee-in-bangkok"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Drip about 90 THB, cocoa 80 THB (Wongnai reviews, 2025-2026).",
+      "dishes": [
+        "Hand-poured drip of a Thai single origin (Wongnai reviewers name an anaerobic black honey)",
+        "Drip of a Kenya or Costa Rica lot",
+        "Iced drip",
+        "Cake"
+      ],
+      "praise": "A pour-over-only bar with hand grinders and no espresso; Time Out calls it a must for pour-over fans. Double Skinny Macchiato found its anaerobic Chiang Mai coffee 'fruity but balanced'. It sells its own roasted beans (BK Magazine roaster list).",
+      "watchOut": "No espresso drinks. Closed on Monday.",
+      "description": "A drip-coffee bar on the ground floor of the Bangkok Art and Culture Centre, across from MBK and Siam Discovery.",
+      "openText": "Tue-Sun 10:30-19:30, closed Monday (Google, via Wanderlog, Oct 2026).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Afternoon, with a look at the free exhibitions upstairs.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "National Stadium BTS connects to the art centre.",
+        "Bring your own cup for a small discount (Google reviewers, via Wanderlog)."
+      ],
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "http://www.facebook.com/GalleryDripCoffee"
+        }
+      ],
+      "sources": [
+        "https://www.wongnai.com/listings/specialty-coffee-in-bangkok",
+        "https://www.doubleskinnymacchiato.com/2023/12/bangkok-thailand-specialty-coffee-shop-guide-map.html",
+        "https://www.bkmagazine.com/food/10-coffee-roasters-bangkok-take-their-beans-seriously/",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://wanderlog.com/place/details/545388/gallery-drip-coffee",
+        "https://www.timeout.com/bangkok/restaurants/gallery-coffee-drip",
+        "https://www.wongnai.com/restaurants/gallerycoffeedrip/reviews",
+        "https://www.google.com/maps/place/Gallery+Drip+Coffee/@13.7466938,100.5304323,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecd4fe1eee9:0x39edb715e10378e0!8m2!3d13.7466938!4d100.5304323!16s%2Fg%2F1hm5jdwff"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open 10:30-19:30 today, pin). Wongnai list (Aug 2025) and reviews, The Way to Coffee (May 2026), Wanderlog (count, week hours). Roasting: sells its own beans (BK Magazine roaster list, Double Skinny Macchiato); Time Out says the team plans to roast in house, so how much is roasted on site is not clear.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-brave-roasters",
+      "name": "Brave Roasters (Siam Discovery)",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Siam",
+      "island": null,
+      "lat": 13.7463049,
+      "lng": 100.5316592,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Brave Roasters, 3rd Floor, Siam Discovery, Rama I Road, Pathum Wan, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 520,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Espresso drinks with the house blend 100-170 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Flat white with the house blend",
+        "Filter of a rotating limited-edition lot",
+        "Iced latte"
+      ],
+      "praise": "A Bangkok roaster with northern Thai blends, rotating limited editions and an international range (BK Magazine roaster list). The Way to Coffee (May 2026) recommends this branch as a quiet place to work; Sprudge (May 2025) lists Brave among the roasters to know.",
+      "watchOut": "A shop inside a mall, without much character; go for the coffee and the beans.",
+      "description": "The Siam Discovery bar of Brave Roasters, the easiest specialty coffee in the Siam shopping area. Open late with the mall.",
+      "openText": "Daily 10:00-22:00 with the mall (Google, Oct 2026).",
+      "days": [],
+      "bestTime": "A break from shopping in Siam.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Other branches: The PARQ (Ratchadaphisek), Sathorn Soi 12 and Samyan."
+      ],
+      "links": [],
+      "sources": [
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://www.bkmagazine.com/food/10-coffee-roasters-bangkok-take-their-beans-seriously/",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://sprudge.com/?p=309675",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.google.com/maps/place/Brave+Roasters+%2F+Siam+Discovery/@13.7463049,100.5316592,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecd784de691:0xb90106740ab63871!8m2!3d13.7463049!4d100.5316592!16s%2Fg%2F11bx1y9p0f"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 10:00-22:00, pin). Thai Holiday Guide (Jul 2026), The Way to Coffee (May 2026), Wanderlog (count).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-pacamara-thonglor",
+      "name": "Pacamara Coffee Roasters Thonglor 25",
+      "nameThai": "พาคามาร่า คอฟฟี่ โรสเตอร์ ทองหล่อ 25",
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.7399106,
+      "lng": 100.5830132,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Pacamara Coffee Roaster Thonglor 25, 66 Soi Thong Lo 25, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 3.8,
+          "reviews": 92,
+          "note": "Thonglor 25 branch",
+          "url": "https://www.wongnai.com/restaurants/244446ml-pacamara-thonglor-25"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "About 101-250 THB a person (Wongnai review, Aug 2025). An older BK listing gave espresso drinks from 95 THB and slow-bar coffee at 120 THB.",
+      "dishes": [
+        "Slow-bar filter of a house-roasted single origin",
+        "Saint Dirty",
+        "Mocha Valencia",
+        "A coffee mocktail such as the Espresso Sangria"
+      ],
+      "praise": "A Thai roaster that began in Chiang Mai in 2011; the Thonglor house has a roasting room, a cupping room and a coffee school (BK Magazine). Time Out gave it 4 of 5, and a Wongnai reviewer (Aug 2025) found the coffee good and the prices fair.",
+      "watchOut": "Pacamara is now a large Thai chain with many mall and office branches, and Wongnai users rate this branch only 3.8. Come to this Thonglor 25 house, the original Bangkok one, rather than a mall kiosk.",
+      "description": "The Bangkok flagship of Pacamara, a Thai roaster, in a house on Thonglor Soi 25 with a coffee lab and an early opening.",
+      "openText": "Daily from 06:30; Google showed 06:30-18:00 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Early morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Roots at theCOMMONS is a 10-minute walk away on Thonglor 17."
+      ],
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://pacamaracoffee.com/en/catalog/beverage"
+        }
+      ],
+      "sources": [
+        "https://pacamaracoffee.com/en/catalog/beverage",
+        "https://www.timeout.com/bangkok/restaurants/pacamara-coffee-roaster-x-specialty-coffee-lab",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://sprudge.com/?p=309675",
+        "https://bk.asia-city.com/node/109908",
+        "https://www.wongnai.com/restaurants/244446ml-pacamara-thonglor-25/reviews",
+        "https://www.google.com/maps/place/Pacamara+Coffee+Roaster+Thonglor+25/@13.7399106,100.5830132,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29e517896611d:0x3b80311e1ded98b2!8m2!3d13.7399106!4d100.5830132!16s%2Fg%2F11c0xj7g54"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 06:30-18:00, pin). Pacamara site (menu; promotions dated Jun-Oct 2026). Wongnai (3.8, Aug 2025 review), The Way to Coffee (May 2026), BK listing (undated).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-kaizen-coffee",
+      "name": "Kaizen Coffee Ekamai",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.7396843,
+      "lng": 100.5895796,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Kaizen Coffee Ekamai, 888 Ekkamai Road, Khlong Tan Nuea, Watthana, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 973,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Espresso drinks and single-origin filter 130-200 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Nitro cold brew",
+        "Flat white",
+        "Single-origin pour-over",
+        "Eggs benedict",
+        "Miso chicken salad with anchovy dressing"
+      ],
+      "praise": "A Melbourne-style coffee and brunch cafe, open since 2015. In The Way to Coffee (May 2026), Roadbook (Apr 2026) and Thai Holiday Guide (Jul 2026); Time Out rates it 4 of 5.",
+      "watchOut": "Closed on Tuesday on Google, although its own site says open all week. No source says it roasts its own beans.",
+      "description": "The Ekkamai cafe that many coffee people name first in this area: good espresso, nitro on tap and a full brunch menu.",
+      "openText": "Wed-Mon 07:30-16:30, closed Tuesday (Google, via Wanderlog, Oct 2026).",
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon"
+      ],
+      "bestTime": "Late breakfast.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Kaizen ToGo, a takeaway bar, is at 55/1 Sukhumvit 49 (Thonglor)."
+      ],
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://www.kaizencoffee.com/locations"
+        }
+      ],
+      "sources": [
+        "https://www.kaizencoffee.com/locations",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://wanderlog.com/place/details/388371/kaizen-coffee-ekamai",
+        "https://www.google.com/maps/place/Kaizen+Coffee+Ekamai/@13.7396843,100.5895796,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29e4c2c0c0d81:0xade5caffd5cd951c!8m2!3d13.7396843!4d100.5895796!16s%2Fg%2F11b73q01vz"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, pin; Tuesday shown as closed). Wanderlog (count, week hours: closed Tuesday). Kaizen site (says all week; branches). The Way to Coffee (May 2026), Roadbook (Apr 2026), Thai Holiday Guide (Jul 2026).",
+      "imageCandidates": [
+        {
+          "url": "https://framerusercontent.com/images/CA5qoxbm62HnYQDIJ9gV2iejihc.jpg",
+          "page": "https://www.kaizencoffee.com/locations",
+          "credit": "Kaizen Coffee (photo of the Ekamai cafe)",
+          "license": "the place's own website"
+        }
+      ]
+    },
+    {
+      "id": "food-hands-and-heart",
+      "name": "Hands and Heart Coffee Roasters",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Phra Khanong (Sukhumvit 67)",
+      "island": null,
+      "lat": 13.717696,
+      "lng": 100.5912936,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hands and Heart Coffee Roasters, 14 Sukhumvit 67 Alley, Phra Khanong Nuea, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No recent price list found online.",
+      "dishes": [
+        "Clean Hands: the house white coffee, in a glass rimmed with caramel",
+        "Black or white coffee with the house roast"
+      ],
+      "praise": "In Time Out's 20 best new cafes of 2026 (Mar 2026) after its move to Sukhumvit 67: 'Every cup gets the attention it deserves here.' Roadbook (Apr 2026) says one owner is a competition brewer; the shop won the Thailand National Brewers Cup in 2019 (City Nomads).",
+      "watchOut": "Closed on Tuesday and Wednesday.",
+      "description": "A small roaster-cafe in a quiet lane off Sukhumvit 67, full of magazines and books. Few drinks, all made with care.",
+      "openText": "Thu-Mon 10:00-17:00, closed Tue-Wed (Time Out, 2026). Google showed an 11:00 opening for Thursday.",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon"
+      ],
+      "bestTime": "A slow weekday morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Bring a book; the shop invites guests to read.",
+        "Single Lane is a 5-minute walk away on Sukhumvit 69."
+      ],
+      "links": [
+        {
+          "label": "Time Out review",
+          "url": "https://www.timeout.com/bangkok/restaurants/hand-and-hearts-coffee-roaster"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/hand-and-hearts-coffee-roaster",
+        "https://www.timeout.com/bangkok/restaurants/bangkok-best-new-cafes-of-2026",
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://citynomads.com/best-speciality-coffee-shops-and-cafes-in-bangkok/",
+        "https://www.google.com/maps/place/hands+and+heart+coffee+roasters/@13.717696,100.5912936,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f930780c81b:0x409a0e7767197520!8m2!3d13.717696!4d100.5912936!16s%2Fg%2F11lzqsytqj"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, closed Tuesday, opens Thursday, pin). Time Out (2026), Roadbook (Apr 2026), The Way to Coffee (May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-song-wat-coffee-roasters",
+      "name": "SCR Song Wat Coffee Roasters",
+      "nameThai": "ทรงวาด คอฟฟี่ โรสเตอร์",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Chinatown (Song Wat)",
+      "island": null,
+      "lat": 13.7391467,
+      "lng": 100.5066564,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "SCR Song Wat Coffee Roasters, 578 Song Wat Road, Samphanthawong, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 914,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Dirty 150 THB (Passport and Stamps, 2026); 150-300 THB a person at its opening (The Standard, Jun 2023).",
+      "dishes": [
+        "Es Yen: iced dark-roast espresso with sweetened condensed milk",
+        "Songwat Latte",
+        "Black coconut",
+        "Pandan canele",
+        "Sweet miso caramel egg tart"
+      ],
+      "praise": "From the team behind Roast, the group that also runs Roots; it roasts its own beans, mostly medium to dark (The Standard, Jun 2023). 'Seriously good, strong coffee' (Hungry Onion, Nov 2024); Daniel Food Diary (Jul 2025) calls it serious coffee with a well-stocked pastry counter, and Roadbook (Apr 2026) lists it.",
+      "watchOut": "Busy at weekends with the Song Wat crowd.",
+      "description": "A bright coffee bar in an old Song Wat shophouse that started the street's new coffee scene in 2023.",
+      "openText": "Mon-Fri 09:00-17:00, Sat-Sun 09:00-18:00 (Google, via Wanderlog, Oct 2026).",
+      "days": [],
+      "bestTime": "Morning, before a walk along Song Wat Road.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Song Wat Road has many more coffee bars within 10 minutes on foot: Terroir.BKK, Roast8ry BKK and a Mother Roaster branch."
+      ],
+      "links": [],
+      "sources": [
+        "https://danielfooddiary.com/2025/07/30/songwatcafes/",
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.hungryonion.org/t/bangkok-thailand-song-wat-coffee-roasters-song-wat-road/41155",
+        "https://wanderlog.com/place/details/7184883/scr-song-wat-coffee-roasters",
+        "https://thestandard.co/?p=801398",
+        "https://passportandstamps.com/?p=28070",
+        "https://www.google.com/maps/place/SCR+-+Song+Wat+Coffee+Roasters/@13.7391467,100.5066564,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299473e3c27a3:0x1116e7f6e2af94c3!8m2!3d13.7391467!4d100.5066564!16s%2Fg%2F11v0jjkl7y"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 09:00-17:00 today, pin). Wanderlog (count, hours), The Standard (Jun 2023, roasting), Daniel Food Diary (Jul 2025), Roadbook (Apr 2026), Hungry Onion (Nov 2024), Passport and Stamps (2026, price).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-roast8ry-bkk",
+      "name": "Roast8ry BKK",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Chinatown (Song Wat)",
+      "island": null,
+      "lat": 13.7401804,
+      "lng": 100.5044522,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Roast8ry BKK, 25/1 Anuwong Road, Chakkrawat, Samphanthawong, Bangkok",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Iced long black 140 THB, hot flat white 150 THB, Unicorn Latte 250 THB; most people spend 120-500 THB (The Standard, Feb 2026).",
+      "dishes": [
+        "Hot flat white (medium roast) with latte art",
+        "Iced long black",
+        "Unicorn Latte",
+        "The seasonal special from a world barista champion, changed every four months",
+        "Earl Grey cookie"
+      ],
+      "praise": "Opened in early 2026 by Arnon 'Tong' Thitiprasert, the 2017 World Latte Art Champion and the first Thai to win it (The Standard, Feb 2026). Time Out put it in Bangkok's 20 best new cafes of 2026 and says the coffee is 'just as good' as the latte art.",
+      "watchOut": "The special menu changes every four months.",
+      "description": "The Bangkok bar of Roast8ry, the Chiang Mai roaster of a world latte art champion: a long, sleek counter on Anuwong Road.",
+      "openText": "Daily 09:00-18:00 (The Standard, Time Out, 2026); Google showed 09:00-17:30 on Tuesday.",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Ask for a hot milk drink to see the latte art."
+      ],
+      "links": [
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/bangkok/restaurants/roast8ry-bkk"
+        }
+      ],
+      "sources": [
+        "https://thestandard.co/life/roas8ry-cafe-song-wat-champion-barista/",
+        "https://www.timeout.com/bangkok/restaurants/roast8ry-bkk",
+        "https://www.timeout.com/bangkok/restaurants/bangkok-best-new-cafes-of-2026",
+        "https://www.bangkokbiznews.com/business/1241885",
+        "https://www.google.com/maps/place/Roast8ry+BKK/@13.7401804,100.5044522,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990059f25a3b:0x815884bdfee27d1a!8m2!3d13.7401804!4d100.5044522!16s%2Fg%2F11xzmwwj6l"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open 09:00-17:30 today, pin). The Standard (19 Feb 2026, menu and prices), Time Out (2026), Bangkok Biznews (Jul 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-mother-roaster",
+      "name": "Mother Roaster Talat Noi",
+      "nameThai": "มาเธอร์ โรสเตอร์",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Talat Noi (Charoen Krung)",
+      "island": null,
+      "lat": 13.7329909,
+      "lng": 100.5123218,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Mother Roaster, 1172 Soi Charoen Krung 22, Talat Noi, Samphanthawong, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1777,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Filter coffee 120 THB (Double Skinny Macchiato, Dec 2023); drinks about 100-200 THB at the Song Wat branch (Phuket 101, Sep 2026).",
+      "dishes": [
+        "Filter of a Thai single origin, brewed by hand",
+        "A coffee-based cocktail (Roadbook)",
+        "Black Honey Lime, a signature at the Song Wat branch (Phuket 101)"
+      ],
+      "praise": "Founded by Auntie Pim, a barista in her seventies, with her son; they roast their own beans (Roadbook, Apr 2026). Phuket 101 (Aug 2026): small, warm, good baristas, and usually full.",
+      "watchOut": "Upstairs behind a car repair shop and easy to miss. Opening days differ between sources (see the hours), so check before you go.",
+      "description": "A tiny upstairs roaster in old Talat Noi, run by a mother and son. One of the most loved coffee stops in this part of town.",
+      "openText": "Sources differ: Google showed it open 10:00-17:00 on Tuesday 27 Oct 2026; the Google hours copied by Wanderlog give Mon-Sat 09:30-17:30, closed Sunday; Phuket 101 (Aug 2026) gives 10:00-18:00, closed Mon-Tue. Wednesday to Saturday, late morning, is safe.",
+      "days": [],
+      "bestTime": "Late morning on a walk through Talat Noi.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Two more branches: 931 Song Wat Road (daily 10:00-17:00) and Pratu Phi, 457 Maha Chai Road, near the Old Town."
+      ],
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "https://www.facebook.com/motherroaster/"
+        }
+      ],
+      "sources": [
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.phuket101.net/bangkok/best-cafes-in-talat-noi/",
+        "https://www.phuket101.net/bangkok/mother-roaster-songwat/",
+        "https://www.doubleskinnymacchiato.com/2023/12/bangkok-thailand-specialty-coffee-shop-guide-map.html",
+        "https://www.bkmagazine.com/food/10-coffee-roasters-bangkok-take-their-beans-seriously/",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.google.com/maps/place/Mother+Roaster+Talat+Noi/@13.7329909,100.5123218,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299ac4118b4d5:0x546e8781004b98a6!8m2!3d13.7329909!4d100.5123218!16s%2Fg%2F11g_tlfwhl"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 10:00-17:00 today, pin). Roadbook (Apr 2026), Phuket 101 (Aug and Sep 2026), Wanderlog (count, week hours). Hours conflict between sources.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-la-cabra-bangkok",
+      "name": "La Cabra Bangkok",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Talat Noi (Charoen Krung)",
+      "island": null,
+      "lat": 13.7348473,
+      "lng": 100.5141475,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "La Cabra Bangkok, 813 Charoen Krung Road, Talat Noi, Samphanthawong, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 518,
+      "reviewsSource": "Google, via Phuket 101, Sep 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "Hand-brewed filter 260 THB (Double Skinny Macchiato, Dec 2023); Time Out: drip from 200 THB. More than most Bangkok cafes.",
+      "dishes": [
+        "Flat white, the first order for most people (Phuket 101)",
+        "Hand-brewed filter of one of the two daily single origins",
+        "Frangipane poppy seed croissant",
+        "Tebirkes (Danish poppy seed pastry)"
+      ],
+      "praise": "The first cafe outside Denmark of the Danish roaster La Cabra (Phuket 101, Sep 2026). Double Skinny Macchiato called its Colombian filter 'super-juicy'; Phuket 101 calls it a reason to visit Talat Noi's coffee scene.",
+      "watchOut": "Walk-in only. Prices are high for Bangkok.",
+      "description": "The Danish roaster La Cabra in an old shophouse on Charoen Krung: light Nordic roasts and very good pastry.",
+      "openText": "Mon-Fri 08:00-17:00, Sat-Sun 09:00-18:00 (Phuket 101, Sep 2026; Google, Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast with a pastry.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "A second La Cabra, with a bakery, is at 5 Silom Soi 3."
+      ],
+      "links": [
+        {
+          "label": "Links (official)",
+          "url": "https://linktr.ee/lacabrathailand"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/bangkok/la-cabra/",
+        "https://www.doubleskinnymacchiato.com/2023/12/bangkok-thailand-specialty-coffee-shop-guide-map.html",
+        "https://www.timeout.com/bangkok/restaurants/10-best-cafes-to-get-your-fill-of-slow-bar-coffee",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.google.com/maps/place/La+Cabra+Bangkok/@13.7348473,100.5141475,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299d14610bc9d:0xfb373e24ccba3928!8m2!3d13.7348473!4d100.5141475!16s%2Fg%2F11ktmqkv1x"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 08:00-17:00 today, pin). Phuket 101 (Sep 2026, count, hours), The Way to Coffee (May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-sarnies-bangkok",
+      "name": "Sarnies Bangkok",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Charoen Krung (Bang Rak)",
+      "island": null,
+      "lat": 13.7210556,
+      "lng": 100.5147629,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Sarnies Bangkok, 101-103 Charoen Krung 44 Alley, Bang Rak, Bangkok",
+      "placeId": "ChIJUXT3NL6Z4jARwh3cJq_bkog",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 3742,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Coffee about 130-200 THB (Thai Holiday Guide, Jul 2026); brunch plates cost more.",
+      "dishes": [
+        "Dirty coffee (Roadbook)",
+        "Flat white",
+        "Cold brew",
+        "Thai-style breakfast sausage muffin",
+        "Pastrami bagel"
+      ],
+      "praise": "The Singapore group roasts its own beans every week (Roadbook, Apr 2026); Phuket 101 and Thai Holiday Guide (Jul 2026) list it among the best Charoen Krung cafes.",
+      "watchOut": "Busy for brunch at weekends.",
+      "description": "An all-day cafe in an old shophouse near the river on Charoen Krung, with house-roasted coffee and open into the evening.",
+      "openText": "Daily 08:00-21:30 (Google, via Wanderlog, Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast or a late coffee.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Sarnies Sourdough, the bakery of the same group, is around the corner at Charoen Krung 42/1."
+      ],
+      "links": [
+        {
+          "label": "Sarnies",
+          "url": "https://sarnies.com/"
+        }
+      ],
+      "sources": [
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://www.phuket101.net/bangkok/sarnies-bangkok/",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.google.com/maps/place/Sarnies+Bangkok/@13.7210556,100.5147629,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299be34f77451:0x8892dbaf26dc1dc2!8m2!3d13.7210556!4d100.5147629!16s%2Fg%2F11fj2lxlkc"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open to 21:30 today, pin). Roadbook (Apr 2026), Thai Holiday Guide (Jul 2026), Wanderlog (count).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-pobnar",
+      "name": "Pobnar Specialty Coffee & Roastery",
+      "nameThai": "พบหน้า",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Silom",
+      "island": null,
+      "lat": 13.7269697,
+      "lng": 100.5335538,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Pobnar specialty coffee and roastery, 12/13 Convent Road, Silom, Bang Rak, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.3,
+          "reviews": 91,
+          "note": "Specialty coffee list, Aug 2025",
+          "url": "https://www.wongnai.com/listings/specialty-coffee-in-bangkok"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No recent price list found online.",
+      "dishes": [
+        "Pour-over of an Ethiopian single origin",
+        "Americano",
+        "Milk coffee with the house roast"
+      ],
+      "praise": "Sprudge (May 2025): a quiet shop at the end of a small lane that roasts in the back room and carries mostly Ethiopian coffees, from fairly priced ones to rare reserve lots. The Way to Coffee (May 2026) recommends the pour-over; other cafes, such as Single Lane, use its espresso roast.",
+      "watchOut": "Sprudge warns that Google Maps often pins the wrong alley: look for 12/13 Convent Road.",
+      "description": "A small roaster-cafe on Convent Road in Silom, with a long list of Ethiopian beans.",
+      "openText": "Google showed 07:30-17:00 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Morning, near Sala Daeng BTS.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [],
+      "sources": [
+        "https://sprudge.com/?p=309675",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.wongnai.com/listings/specialty-coffee-in-bangkok",
+        "https://www.google.com/maps/place/Pobnar+specialty+coffee+%26+roastery/@13.7269697,100.5335538,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f13c1e63731:0xf411b63ab35d483!8m2!3d13.7269697!4d100.5335538!16s%2Fg%2F11jbfgfdxd"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open 07:30-17:00 today, pin). Sprudge (May 2025), The Way to Coffee (May 2026), Wongnai list (Aug 2025).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-samadool",
+      "name": "Samadool Coffee",
+      "nameThai": "สมดุลคอฟฟี่",
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor (Sukhumvit 49)",
+      "island": null,
+      "lat": 13.7332704,
+      "lng": 100.5757918,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Samadool Coffee, 20/40 Soi Sukhumvit 49/1, Khlong Tan Nuea, Watthana, Bangkok",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No recent price list found online.",
+      "dishes": [
+        "Drip of the seasonal northern Thai single origin",
+        "Filter of a Guatemala or Ethiopia lot"
+      ],
+      "praise": "Sprudge (May 2025): a micro-roastery whose name means 'balance'; it roasts its own beans, changes its roast profile each year and buys northern Thai lots in season. Roadbook (Apr 2026) recommends the seasonal single origin.",
+      "watchOut": "Closes at 16:00 (Google, Tuesday).",
+      "description": "A quiet micro-roastery in a lane off Sukhumvit 49 that does drip coffee and little else.",
+      "openText": "Google showed 07:00-16:00 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ceresia is a 5-minute walk away on Sukhumvit 41."
+      ],
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://samadoolcoffee.com/"
+        }
+      ],
+      "sources": [
+        "https://sprudge.com/?p=309675",
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.google.com/maps/place/Samadool+Coffee/@13.7332704,100.5757918,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f78174c57f5:0x4fc9e908e13c0871!8m2!3d13.7332704!4d100.5757918!16s%2Fg%2F11lh6hr8rs"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open 07:00-16:00 today, pin). Sprudge (May 2025), Roadbook (Apr 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-paga-microroastery",
+      "name": "PAGA Microroastery",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Phrom Phong (Sukhumvit 31)",
+      "island": null,
+      "lat": 13.738794,
+      "lng": 100.5663056,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "PAGA Microroastery, 45/1 Sukhumvit 31, Khlong Toei Nuea, Watthana, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 396,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "A rare liberica filter was 300 THB and a bag of Ethiopian beans 850 THB (Double Skinny Macchiato, Dec 2023); single-origin beans from 690 THB for 200 g (BK Magazine, 2023).",
+      "dishes": [
+        "Single-origin filter, the house speciality",
+        "Piccolo",
+        "A liberica or other unusual lot when on the list"
+      ],
+      "praise": "Roadbook (Apr 2026) describes a white, minimal shop with the roasting room at its heart. Time Out: 'Single origin devotees will find paradise'; it was Double Skinny Macchiato's favourite in Bangkok.",
+      "watchOut": "Filter coffees with rare beans are expensive.",
+      "description": "A small, bright micro-roastery on Sukhumvit 31 for people who want to try unusual single origins as filter coffee.",
+      "openText": "Daily 08:00-17:00 (BK Magazine; Google, Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [],
+      "sources": [
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.doubleskinnymacchiato.com/2023/12/bangkok-thailand-specialty-coffee-shop-guide-map.html",
+        "https://www.bkmagazine.com/food/10-coffee-roasters-bangkok-take-their-beans-seriously/",
+        "https://www.timeout.com/bangkok/restaurants/10-best-cafes-to-get-your-fill-of-slow-bar-coffee",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://www.google.com/maps/place/PAGA+Microroastery/@13.738794,100.5663056,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f1c0ccb2103:0x6421a80e20b26e54!8m2!3d13.738794!4d100.5663056!16s%2Fg%2F11ng1n54zc"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open 08:00-17:00 today, pin). Roadbook (Apr 2026), Wanderlog (count).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-karo-coffee-roasters",
+      "name": "Karo Coffee Roasters",
+      "nameThai": "คาโรคอฟฟี่",
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Phra Khanong (Pridi Banomyong 26)",
+      "island": null,
+      "lat": 13.7258698,
+      "lng": 100.5997849,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Karo Coffee Roasters, 52 Soi Pridi Banomyong 26, Phra Khanong Nuea, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.2,
+          "reviews": 102,
+          "note": "Specialty coffee list, Aug 2025",
+          "url": "https://www.wongnai.com/listings/specialty-coffee-in-bangkok"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Rotating single-origin filter 120-180 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Headless or Fearless, the two house blends",
+        "The daily rotating filter",
+        "Dirty (Wongnai reviewers)",
+        "Lavender latte"
+      ],
+      "praise": "Sri Lanka-born roaster Karo Iyash roasts for other Thai cafes and for export (Time Out). Roadbook (Apr 2026) recommends the house blends and names the Bangkok governor among the regulars.",
+      "watchOut": "Opens very early and closes in the afternoon.",
+      "description": "A neighbourhood roaster-cafe on Soi Pridi Banomyong 26, open from dawn.",
+      "openText": "Google showed 05:00-15:00 on Tuesday (Oct 2026); Roadbook says from 06:00 daily.",
+      "days": [],
+      "bestTime": "Early morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [],
+      "sources": [
+        "https://roadbook.com/bangkok/food-and-drink/best-coffee-shops-bangkok-thailand/",
+        "https://www.thaiholidayguide.com/best-cafes-bangkok/",
+        "https://www.wongnai.com/listings/specialty-coffee-in-bangkok",
+        "https://www.timeout.com/bangkok/restaurants/karo-coffee-roasters",
+        "https://www.google.com/maps/place/Karo+Coffee/@13.7258698,100.5997849,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fe6bb3aad1b:0x61f6929d83cf09d!8m2!3d13.7258698!4d100.5997849!16s%2Fg%2F11g1kswv8k"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open 05:00-15:00 today, pin). Roadbook (Apr 2026), Thai Holiday Guide (Jul 2026), Wongnai list (Aug 2025).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-onibus-coffee-bangkok",
+      "name": "ONIBUS COFFEE Bangkok",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Old Town (Samran Rat)",
+      "island": null,
+      "lat": 13.7529343,
+      "lng": 100.5034082,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "ONIBUS COFFEE Bangkok, 22 Soi Samran Rat, Phra Nakhon, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Americano 140 THB, latte 150 THB at the Central Park branch (Daniel Food Diary, Jul 2026).",
+      "dishes": [
+        "Light-roast pour-over",
+        "Espresso or latte with the house roast"
+      ],
+      "praise": "The Tokyo roaster's Bangkok shop; the beans come from its roastery in Yakumo, Japan, and the light-roast pour-over is its signature (The Way to Coffee, May 2026). A second shop opened at Central Park, Silom, and made Time Out's best new cafes of 2026.",
+      "watchOut": null,
+      "description": "A calm Japanese coffee bar in an Old Town lane near the Giant Swing, good between temples.",
+      "openText": "Google showed 08:00-17:00 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Morning before the Old Town sights.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "The Giant Swing and Wat Suthat are a few minutes on foot."
+      ],
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/onibuscoffee_bkk"
+        }
+      ],
+      "sources": [
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.timeout.com/bangkok/restaurants/bangkok-best-new-cafes-of-2026",
+        "https://danielfooddiary.com/2026/07/07/onibuscoffee/",
+        "https://www.google.com/maps/place/ONIBUS+COFFEE+Bangkok/@13.7529343,100.5034082,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299e589a271fd:0xee880a150402afb!8m2!3d13.7529343!4d100.5034082!16s%2Fg%2F11twtmzg0q"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 08:00-17:00 today, pin). The Way to Coffee (May 2026), Time Out (Mar 2026), Daniel Food Diary (Jul 2026, Central Park prices).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-wanwan-coffee-roasters",
+      "name": "WANWAN Coffee Roasters",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Lat Phrao",
+      "island": null,
+      "lat": 13.805569,
+      "lng": 100.607499,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "WANWAN coffee roasters, 175 Nak Niwat Road, Lat Phrao, Bangkok",
+      "placeId": null,
+      "rating": 4.9,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No recent price list found online.",
+      "dishes": [
+        "Washed or natural single origin as filter",
+        "A fruit-infused coffee drink",
+        "The menu the owner served in competition"
+      ],
+      "praise": "Owner Dawn Chan, from Hong Kong, is a three-time barista champion (Sprudge, May 2025); the Nana team's Brewers Cup champion calls him a top-five World Barista Championship finisher and the shop 'an absolute delight' (Mar 2024). Sprudge found a Colombian double-anaerobic coffee with clear lychee notes. Roasting is upstairs.",
+      "watchOut": "Far north-east of the centre: about 30-45 minutes by taxi from Sukhumvit.",
+      "description": "A roaster-cafe in Lat Phrao run by a champion barista; a trip for coffee lovers, not a stop on the way.",
+      "openText": "Google showed 07:00-18:00 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Weekday morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [],
+      "sources": [
+        "https://sprudge.com/?p=309675",
+        "https://filtertravelbycoffee.substack.com/p/explore-bangkok-with-thailands-2024",
+        "https://www.google.com/maps/place/WANWAN+coffee+roasters/@13.805569,100.607499,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f95d9a4bd61:0xd31b701ab32d0bb6!8m2!3d13.805569!4d100.607499!16s%2Fg%2F11sc3r3k1t"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.9, open 07:00-18:00 today, pin). Sprudge (May 2025), Filter Travel interview (Mar 2024).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-terroir-bkk",
+      "name": "Terroir.BKK Songwat",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Chinatown (Song Wat)",
+      "island": null,
+      "lat": 13.7382949,
+      "lng": 100.5069934,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Terroir.BKK SONGWAT, 1218 Song Wat Road, Samphanthawong, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 371,
+      "reviewsSource": "Google, via Phuket 101, Sep 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No price list found online; Phuket 101 (Aug 2026) puts it in its moderate price band.",
+      "dishes": [
+        "Terroir Special, the house milk coffee",
+        "Pour-over of a northern Thai single origin",
+        "A Geisha pour when there is one",
+        "Americano of a washed Ethiopian"
+      ],
+      "praise": "Phuket 101 (Aug 2026): 'the most coffee-focused stop on the street', and the roaster's own shopfront. Daniel Food Diary (Jul 2025) praises the changing, honest coffee and staff who know the beans.",
+      "watchOut": "Few seats; busy with photographers at weekends.",
+      "description": "The shopfront of Terroir, a Bangkok roaster that works with northern Thai growers, in a raw industrial room on Song Wat Road.",
+      "openText": "Daily 10:00-17:00 (Phuket 101, Sep 2026; Google, Oct 2026).",
+      "days": [],
+      "bestTime": "Weekday late morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Talk to the baristas about this week's beans; the menu changes often."
+      ],
+      "links": [
+        {
+          "label": "Phuket 101 review",
+          "url": "https://www.phuket101.net/bangkok/terroir-bkk-song-wat/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/bangkok/terroir-bkk-song-wat/",
+        "https://www.phuket101.net/bangkok/best-cafes-in-song-wat-bangkok/",
+        "https://danielfooddiary.com/2025/07/30/songwatcafes/",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.google.com/maps/place/Terroir.BKK+SONGWAT/@13.7382949,100.5069934,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299006e7557bf:0xde65fafb7bdbf80b!8m2!3d13.7382949!4d100.5069934!16s%2Fg%2F11wwtwwvf8"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open 10:00-17:00 today, pin). Phuket 101 (Aug and Sep 2026, count), Daniel Food Diary (Jul 2025), The Way to Coffee (May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-fika-and-co",
+      "name": "Fika & Co. Cafe",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [],
+      "area": "bangkok",
+      "district": "Asok (Singha Complex)",
+      "island": null,
+      "lat": 13.7480964,
+      "lng": 100.5645784,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Fika & Co. Cafe, Singha Complex, 1788 New Petchaburi Road, Bangkok",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "About 101-250 THB a person (Wongnai).",
+      "dishes": [
+        "Espresso and milk coffee from a national champion",
+        "Caramel macchiato (a Wongnai reviewer's pick)"
+      ],
+      "praise": "Co-founded by Jane Kawinnart Veeraworawet, who won the Thailand National Barista Championship in 2023 and again at Thailand Coffee Fest 2025 (Thai PR, Jul 2025). She was the first Thai barista in a World Barista Championship semi-final (2023) and competed for Thailand at the 2026 World Barista Championship in Panama (Sprudge, Oct 2026).",
+      "watchOut": "In an office tower; few writers have reviewed it, so the praise rests on the champion and on Google and Wongnai users.",
+      "description": "The cafe of Thailand's current barista champion, on the ground floor of Singha Complex at the Asok-Phetchaburi junction.",
+      "openText": "Google showed 08:30-17:30 on Tuesday (Oct 2026).",
+      "days": [],
+      "bestTime": "Weekday, with the office crowd gone after 09:30.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Phetchaburi MRT is a short walk."
+      ],
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "https://www.facebook.com/fikaandcobkk/"
+        }
+      ],
+      "sources": [
+        "https://www.thaipr.net/?p=3625186",
+        "https://sprudge.com/the-2026-world-barista-championship-starts-today-heres-everyone-competing-1497734.html",
+        "https://www.wongnai.com/restaurants/468151ot-fika-co-cafe-singha-complex/reviews",
+        "https://www.google.com/maps/place/Fika+%26+Co.+Cafe/@13.7480964,100.5645784,17z/data=!4m7!3m6!1s0x30e29fa5c0ab0c85:0x45bf6caee35b5ffb!8m2!3d13.7480964!4d100.5645784!10e2!16s%2Fg%2F11h_w1x1_n"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open 08:30-17:30 today, pin). Sprudge WBC 2026 competitor list (22 Oct 2026), Thai PR article (30 Jul 2025), Wongnai listing.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-smokey-cat",
+      "name": "Smokey Cat Coffee Roaster",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Suan Plu)",
+      "island": null,
+      "lat": 13.7216712,
+      "lng": 100.5374568,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Smokey Cat Coffee Roaster, Suanplu Corner Building, Soi Suan Plu, South Sathorn Road, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 305,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "About 100-150 THB a person (The Standard, 2023); house beans such as Costa Rica Santa Teresa (yellow honey) 480 THB for 100 g (BK Magazine, 2023).",
+      "dishes": [
+        "Filter of a small-batch single origin",
+        "Flat white with the house roast"
+      ],
+      "praise": "A small-batch roaster with rotating roasts (BK Magazine roaster list); Sprudge (May 2025) names it among the Bangkok roasters to know.",
+      "watchOut": "Few recent write-ups; the praise is mostly from Google users (4.7).",
+      "description": "A small roaster-cafe in the Suan Plu area of Sathorn.",
+      "openText": "Daily 08:00-17:00 (BK Magazine; Google, Oct 2026).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "https://www.facebook.com/smokeycat.roaster/"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/food/10-coffee-roasters-bangkok-take-their-beans-seriously/",
+        "https://sprudge.com/?p=309675",
+        "https://wanderlog.com/list/geoCategory/1861406/best-coffee-roasters-in-bangkok",
+        "https://thestandard.co/life/smokey-cat-specialty-coffee/",
+        "https://www.google.com/maps/place/Smokey+Cat+Coffee+Roaster/@13.7216712,100.5374568,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f4f8a9910c5:0xab84900cfbe5be34!8m2!3d13.7216712!4d100.5374568!16s%2Fg%2F11nfsdy1gl"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open 08:00-17:00 today, pin). BK Magazine roaster list (2023), The Standard (2023), Sprudge (May 2025, name only), Wanderlog (count). No 2025-2026 review found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-craftsman-oldtown",
+      "name": "Craftsman Roastery at Old Town",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "roaster",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Old Town (Bamrung Mueang)",
+      "island": null,
+      "lat": 13.7514847,
+      "lng": 100.4970993,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Craftsman Roastery at Old Town, 23 Bamrung Mueang Road, Phra Nakhon, Bangkok",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 432,
+      "reviewsSource": "Google, via Visit Thailand Today, 2026",
+      "otherRatings": [
+        {
+          "site": "Wongnai",
+          "rating": 4.6,
+          "reviews": 7,
+          "note": "few ratings",
+          "url": "https://www.wongnai.com/restaurants/2598051BD-craftsman-roastery-craftsman-roastery-at-old-town"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "About 120 THB a cup (Wongnai review, 2025).",
+      "dishes": [
+        "Espresso or latte with the Wrench Wood house blend",
+        "Filter of the Huai Khun Phar single origin (northern Thailand)",
+        "Americano",
+        "A baked pie"
+      ],
+      "praise": "In Time Out's best new cafes of 2025 (Aug 2025): a century-old Sino-Portuguese shophouse where coffee is 'clearly the star', with beans from Craftsman's own roastery. Wongnai reviewers in 2025 call the coffee quality quite good; The Way to Coffee (May 2026) lists it.",
+      "watchOut": "Queues and slow service at busy times (Wongnai, 2025).",
+      "description": "The Old Town shop of Craftsman, a Thai roaster, in a restored shophouse on Bamrung Mueang Road near the Giant Swing.",
+      "openText": "Daily 07:30-17:00 (Wongnai; Google showed the same on Tuesday 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Early, before the Old Town sights.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "ONIBUS COFFEE is about 10 minutes away on foot, past the Giant Swing."
+      ],
+      "links": [
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/bangkok/restaurants/craftsman-at-oldtown"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/bangkoks-best-new-cafes-of-2025",
+        "https://www.timeout.com/bangkok/restaurants/craftsman-at-oldtown",
+        "https://www.wongnai.com/restaurants/2598051BD-craftsman-roastery-craftsman-roastery-at-old-town",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://www.visitthailandtoday.com/restaurants/bangkok/craftsman-roastery-old-town",
+        "https://www.google.com/maps/place/Craftsman+Roastery+at+Old+Town/@13.7514847,100.4970993,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2999232e9a195:0x25e8f0023a5a917!8m2!3d13.7514847!4d100.4970993!16s%2Fg%2F11vlwx66tj"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open 07:30-17:00 today, pin). Time Out best new cafes 2025 (Aug 2025), Wongnai (2025 reviews), The Way to Coffee (May 2026), Visit Thailand Today (count).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-single-lane",
+      "name": "Single Lane Specialty Coffee",
+      "nameThai": null,
+      "kind": "coffee",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Phra Khanong (Sukhumvit 69)",
+      "island": null,
+      "lat": 13.7156513,
+      "lng": 100.5925465,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "SINGLE LANE Specialty Coffee, 26/9 Sukhumvit 69 Alley, Phra Khanong Nuea, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 547,
+      "reviewsSource": "Google, via Wanderlog, Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No recent price list found online.",
+      "dishes": [
+        "Pour-over from a guest roaster (Sprudge had a washed coffee from Gringo Nordic)",
+        "Flat white with the house blend roasted by Pobnar",
+        "Basque burnt cheesecake",
+        "Sourdough grilled tuna sandwich"
+      ],
+      "praise": "Sprudge (May 2025): an Australian-style cafe with a big filter menu and a top shelf of coffees from roasters such as Coffee Collective, Market Lane and Stitch. The Way to Coffee (May 2026) lists it; 4.8 from 547 Google reviews.",
+      "watchOut": "It does not roast; it brews other roasters' beans.",
+      "description": "A small multi-roaster cafe off Sukhumvit 69, good for tasting imported filter coffees next to Thai ones.",
+      "openText": "Mon-Fri 07:30-16:30, Sat-Sun 08:30-17:30 (Google, via Wanderlog, Oct 2026).",
+      "days": [],
+      "bestTime": "Morning, together with Hands and Heart nearby.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Hands and Heart Coffee Roasters is a 5-minute walk away on Sukhumvit 67 (closed Tue-Wed)."
+      ],
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "https://www.facebook.com/SINGLELANE.BKK"
+        }
+      ],
+      "sources": [
+        "https://sprudge.com/?p=309675",
+        "https://www.thewaytocoffee.com/bangkok-cafe-guide/",
+        "https://wanderlog.com/place/details/2465811/single-lane-specialty-coffee",
+        "https://www.google.com/maps/place/SINGLE+LANE+Specialty+Coffee/@13.7156513,100.5925465,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fccfa20484d:0x825cec20c9c8bcc7!8m2!3d13.7156513!4d100.5925465!16s%2Fg%2F11gxnvkh9d"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, open 07:30-16:30 today, pin). Sprudge (May 2025), The Way to Coffee (May 2026), Wanderlog (count, week hours).",
+      "imageCandidates": []
+    }
+  ],
+  "existingChecked": [],
+  "notIncluded": [
+    {
+      "name": "Phil Coffee Company (Sukhumvit 49/2)",
+      "reason": "Closed: Google Maps shows the Sukhumvit 49/2 shop as permanently closed (27 Oct 2026). The only branch left on Maps is on Soi Seri 7 (Rama IX), far from visitor areas."
+    },
+    {
+      "name": "Paksa",
+      "reason": "Could not find any Bangkok coffee shop or roaster by this name in guides, Google results or coffee press."
+    },
+    {
+      "name": "Ink & Lion Cafe (Ekkamai)",
+      "reason": "Closed (Wanderlog marks it permanently closed)."
+    },
+    {
+      "name": "Roots at Pratu Phee (Old Town)",
+      "reason": "Closed; the other Roots bars are listed under Roots at theCOMMONS."
+    },
+    {
+      "name": "Factory HQ (Pradit Manutham Road)",
+      "reason": "Good, but far from visitor areas; mentioned in the tips of Factory Coffee."
+    },
+    {
+      "name": "Bottomless (flagship, Nonthaburi)",
+      "reason": "A respected roaster, but the flagship is outside Bangkok in Nonthaburi."
+    },
+    {
+      "name": "CHATA Specialty Coffee (Yaowarat)",
+      "reason": "Well rated (4.5) but does not roast; Chinatown already has stronger coffee stops."
+    },
+    {
+      "name": "BEANS Coffee Roaster Song Wat",
+      "reason": "A branch of a chain; fewer independent coffee write-ups than the Song Wat places included."
+    },
+    {
+      "name": "Rocket Coffeebar",
+      "reason": "More a brunch cafe; does not roast."
+    },
+    {
+      "name": "WWA Portal (Sukhumvit 19)",
+      "reason": "Praised for rare filter coffee, but could not confirm roasting or 2025-2026 coffee-press praise; cut for the Google Maps budget."
+    },
+    {
+      "name": "Kurasu Bangkok",
+      "reason": "A branch of the Kyoto brand; weaker local praise than the Thonglor roasters included."
+    },
+    {
+      "name": "Local Boys Coffee Co., Midsummer Cafe & Roastery (Song Wat) and Sunset Coffee Roaster (Talat Noi)",
+      "reason": "Newer roaster-cafes with only one or two write-ups so far; the same streets already have stronger choices."
+    },
+    {
+      "name": "Moon Phases (Khlong Toei)",
+      "reason": "Praised by Sprudge, but closed at weekends and does not roast."
+    },
+    {
+      "name": "Mother Roaster Song Wat and Pratu Phi branches",
+      "reason": "Same roaster as the Talat Noi shop; listed in its tips."
+    }
+  ]
+}

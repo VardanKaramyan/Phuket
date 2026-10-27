@@ -1574,16 +1574,6 @@
     "km": 20.6
    }
   },
-  "pl:food-kalim-rim-lay": {
-   "patong": {
-    "min": 5,
-    "km": 4.4
-   },
-   "rawai": {
-    "min": 25,
-    "km": 22.2
-   }
-  },
   "pl:food-acqua-kalim": {
    "patong": {
     "min": 5,
@@ -1684,16 +1674,6 @@
     "km": 19.6
    }
   },
-  "pl:food-roti-patong-chao-kao": {
-   "patong": {
-    "min": 3,
-    "km": 2.3
-   },
-   "rawai": {
-    "min": 23,
-    "km": 20.9
-   }
-  },
   "pl:food-churrasco-steakhouse-patong": {
    "patong": {
     "min": 1,
@@ -1732,16 +1712,6 @@
    "rawai": {
     "min": 31,
     "km": 28
-   }
-  },
-  "pl:food-roti-kamala-beach": {
-   "patong": {
-    "min": 13,
-    "km": 10.4
-   },
-   "rawai": {
-    "min": 32,
-    "km": 28.2
    }
   },
   "pl:food-smokaccia-laboratory-surin": {
@@ -2424,16 +2394,6 @@
     "km": 13.3
    }
   },
-  "pl:food-roti-taew-nam": {
-   "patong": {
-    "min": 17,
-    "km": 14.8
-   },
-   "rawai": {
-    "min": 17,
-    "km": 13.8
-   }
-  },
   "pl:food-o-cha-rot": {
    "patong": {
     "min": 18,
@@ -2582,16 +2542,6 @@
    "rawai": {
     "min": 15,
     "km": 12.4
-   }
-  },
-  "pl:food-roti-chaofa": {
-   "patong": {
-    "min": 17,
-    "km": 14.2
-   },
-   "rawai": {
-    "min": 14,
-    "km": 12
    }
   },
   "pl:food-jadjan-ko-daeng": {
@@ -2844,16 +2794,6 @@
     "km": 101.9
    }
   },
-  "pl:food-koh-panyee": {
-   "patong": {
-    "min": 104,
-    "km": 93.6
-   },
-   "rawai": {
-    "min": 111,
-    "km": 101.3
-   }
-  },
   "pl:food-mun-pochana": {
    "patong": {
     "min": 92,
@@ -2922,6 +2862,356 @@
    "rawai": {
     "min": 130,
     "km": 144.2
+   }
+  },
+  "pl:food-campus-coffee-roasters": {
+   "patong": {
+    "min": 18,
+    "km": 15.6
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.2
+   }
+  },
+  "pl:food-dou-brew": {
+   "patong": {
+    "min": 17,
+    "km": 15.1
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.1
+   }
+  },
+  "pl:food-graph-coffee-phuket": {
+   "patong": {
+    "min": 18,
+    "km": 15.6
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.4
+   }
+  },
+  "pl:food-sixory-coffee": {
+   "patong": {
+    "min": 18,
+    "km": 15.7
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.3
+   }
+  },
+  "pl:food-the-shelter-coffee": {
+   "patong": {
+    "min": 14,
+    "km": 11.9
+   },
+   "rawai": {
+    "min": 17,
+    "km": 13.7
+   }
+  },
+  "pl:food-rush-coffee": {
+   "patong": {
+    "min": 18,
+    "km": 15.1
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14.1
+   }
+  },
+  "pl:food-ryn-slow-drop": {
+   "patong": {
+    "min": 18,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.2
+   }
+  },
+  "pl:food-campus-coffee-patong": {
+   "patong": {
+    "min": 0,
+    "km": 0.3
+   },
+   "rawai": {
+    "min": 21,
+    "km": 18.9
+   }
+  },
+  "pl:food-street-cafe-karon": {
+   "patong": {
+    "min": 10,
+    "km": 8.7
+   },
+   "rawai": {
+    "min": 12,
+    "km": 9.7
+   }
+  },
+  "pl:food-hock-hoe-lee-rawai": {
+   "patong": {
+    "min": 19,
+    "km": 17.2
+   },
+   "rawai": {
+    "min": 1,
+    "km": 0.2
+   }
+  },
+  "pl:food-the-remedy-chalong": {
+   "patong": {
+    "min": 20,
+    "km": 16.6
+   },
+   "rawai": {
+    "min": 11,
+    "km": 8.2
+   }
+  },
+  "pl:food-sync-coffee-kamala": {
+   "patong": {
+    "min": 12,
+    "km": 10.2
+   },
+   "rawai": {
+    "min": 32,
+    "km": 28
+   }
+  },
+  "pl:food-beans-coffee-roaster": {
+   "patong": {
+    "min": 22,
+    "km": 19.1
+   },
+   "rawai": {
+    "min": 38,
+    "km": 33.4
+   }
+  },
+  "pl:food-kanin-cafe": {
+   "patong": {
+    "min": 22,
+    "km": 19.3
+   },
+   "rawai": {
+    "min": 38,
+    "km": 33.5
+   }
+  },
+  "pl:food-la-malila-khao-lak": {
+   "patong": {
+    "min": 104,
+    "km": 108.4
+   },
+   "rawai": {
+    "min": 111,
+    "km": 116.1
+   }
+  },
+  "pl:food-big-boys-burger-club-patong": {
+   "patong": {
+    "min": 3,
+    "km": 2.3
+   },
+   "rawai": {
+    "min": 21,
+    "km": 19.2
+   }
+  },
+  "pl:food-burgerboyz-patong": {
+   "patong": {
+    "min": 4,
+    "km": 3.2
+   },
+   "rawai": {
+    "min": 24,
+    "km": 20.7
+   }
+  },
+  "pl:food-eat-burgers-beers-karon": {
+   "patong": {
+    "min": 9,
+    "km": 8.5
+   },
+   "rawai": {
+    "min": 12,
+    "km": 10
+   }
+  },
+  "pl:food-sugar-shack-kata": {
+   "patong": {
+    "min": 10,
+    "km": 9.1
+   },
+   "rawai": {
+    "min": 11,
+    "km": 9.2
+   }
+  },
+  "pl:food-treasure-burger-rawai": {
+   "patong": {
+    "min": 17,
+    "km": 15.5
+   },
+   "rawai": {
+    "min": 7,
+    "km": 3.5
+   }
+  },
+  "pl:food-smash-brothers-rawai": {
+   "patong": {
+    "min": 18,
+    "km": 16
+   },
+   "rawai": {
+    "min": 6,
+    "km": 3.1
+   }
+  },
+  "pl:food-pan-burger": {
+   "patong": {
+    "min": 20,
+    "km": 17.3
+   },
+   "rawai": {
+    "min": 26,
+    "km": 22.1
+   }
+  },
+  "pl:food-five-loaves-burgers": {
+   "patong": {
+    "min": 17,
+    "km": 15.2
+   },
+   "rawai": {
+    "min": 17,
+    "km": 13.7
+   }
+  },
+  "pl:food-juicy-lucy-phuket-town": {
+   "patong": {
+    "min": 18,
+    "km": 15.7
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.3
+   }
+  },
+  "pl:food-korean-town-phuket": {
+   "patong": {
+    "min": 16,
+    "km": 12.4
+   },
+   "rawai": {
+    "min": 16,
+    "km": 13.1
+   }
+  },
+  "pl:food-millionaire-burgers": {
+   "patong": {
+    "min": 16,
+    "km": 14.4
+   },
+   "rawai": {
+    "min": 36,
+    "km": 32.1
+   }
+  },
+  "pl:food-ooo-burger": {
+   "patong": {
+    "min": 25,
+    "km": 22.5
+   },
+   "rawai": {
+    "min": 32,
+    "km": 28.4
+   }
+  },
+  "pl:food-mcdonalds-patong-bangla": {
+   "patong": {
+    "min": 3,
+    "km": 2.5
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.5
+   }
+  },
+  "pl:food-burger-king-jungceylon": {
+   "patong": {
+    "min": 2,
+    "km": 1
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.6
+   }
+  },
+  "pl:food-kfc-jungceylon": {
+   "patong": {
+    "min": 2,
+    "km": 1
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.6
+   }
+  },
+  "pl:food-pizza-company-bangla": {
+   "patong": {
+    "min": 4,
+    "km": 2.8
+   },
+   "rawai": {
+    "min": 22,
+    "km": 19.7
+   }
+  },
+  "pl:food-mcdonalds-nai-harn": {
+   "patong": {
+    "min": 17,
+    "km": 16.1
+   },
+   "rawai": {
+    "min": 7,
+    "km": 3.9
+   }
+  },
+  "pl:food-kfc-homepro-chalong": {
+   "patong": {
+    "min": 16,
+    "km": 15
+   },
+   "rawai": {
+    "min": 6,
+    "km": 4.2
+   }
+  },
+  "pl:food-mcdonalds-central-phuket": {
+   "patong": {
+    "min": 14,
+    "km": 12.1
+   },
+   "rawai": {
+    "min": 17,
+    "km": 14
+   }
+  },
+  "pl:food-burger-king-phuket-airport": {
+   "patong": {
+    "min": 42,
+    "km": 36.6
+   },
+   "rawai": {
+    "min": 49,
+    "km": 44.3
    }
   },
   "ev:shelter-phuket": {

@@ -1,0 +1,2822 @@
+{
+  "generatedOn": "2026-10-27",
+  "region": "bangkok-new",
+  "scopeNote": "The modern city: Sukhumvit (Asok to Ekkamai and Phra Khanong), Silom, Sathorn and Chan Road away from the river, Siam, Langsuan, Samyan and Banthat Thong, Victory Monument, Ari and Saphan Khwai, Chatuchak and Ratchada, plus Baan Tepa in Bang Kapi.",
+  "basics": [],
+  "items": [
+    {
+      "id": "food-sorn",
+      "name": "Sorn",
+      "nameThai": "ศรณ์",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed",
+        "seafood"
+      ],
+      "area": "bangkok",
+      "district": "Phrom Phong (Sukhumvit 26)",
+      "island": null,
+      "lat": 13.7231,
+      "lng": 100.568525,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Sorn, 56 Sukhumvit 26, Khlong Toei, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Three Michelin Stars, Thailand 2026",
+      "priceLevel": 4,
+      "priceText": "Set southern Thai tasting menu only. It was 6,500 THB++ in July 2022 (Time Out) and costs more now; the booking page shows the current price.",
+      "dishes": [
+        "Gems on crab stick: crab roasted in the shell and mixed with house chilli paste",
+        "Southern curries with rice cooked in clay pots",
+        "Phuket lobster, Andaman squid and Tapi River prawns"
+      ],
+      "praise": "The first Thai restaurant in the world with three Michelin stars (2025), kept in the 2026 guide. Time Out (Mar 2025) says the bolder, spicier dishes show the kitchen best and that a table \"isn't easy\" to get.",
+      "watchOut": "Book months ahead. Closed on Saturdays. The menu is fixed, so give allergies when you book. A new seasonal menu starts in early January 2027.",
+      "description": "Chef Supaksorn \"Ice\" Jongsiri cooks a long southern Thai tasting menu in a house on Sukhumvit 26, with fish and produce from the south. The top Thai dinner in Bangkok.",
+      "openText": "Sun-Fri 18:00-22:00, closed Saturday (Michelin Guide, Oct 2026).",
+      "days": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "bestTime": "Dinner. Book as soon as the dates you want open.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Book on TableCheck from sornfinesouthern.com or email reservation@sornfinesouthern.com; phone enquiries 14:00-18:00 on +66 99 081 1119.",
+        "A table for 8 is hard to get here; for the whole group, R-Haan's private room is easier."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sorn"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.sornfinesouthern.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sorn",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.timeout.com/bangkok/restaurants/sorn",
+        "https://www.sornfinesouthern.com/",
+        "https://www.google.com/maps/place/Sorn/@13.7231004,100.5685251,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f05dd09f659:0xc0ee0ab9bfd7eaf5!8m2!3d13.7231004!4d100.5685251!16s%2Fg%2F11ggn2dwvn"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, opens 18:00 today, pin). Michelin page (three stars, hours) and the Michelin Thailand 2026 star list. Time Out review (13 Mar 2025). Official site: seasonal menu on set dates Oct-Nov 2026, full launch early Jan 2027.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-suhring",
+      "name": "Sühring",
+      "nameThai": null,
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Yen Akat)",
+      "island": null,
+      "lat": 13.710813,
+      "lng": 100.545487,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Sühring, 10 Soi Yen Akat 3, Chong Nonsi, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Three Michelin Stars, Thailand 2026 (promoted from two)",
+      "priceLevel": 4,
+      "priceText": "Tasting menu only; no current price found online (Oct 2026). Michelin price band 4 of 4.",
+      "dishes": [
+        "Modern German tasting menu built on the chefs' family recipes",
+        "Seasonal produce that is fermented, pickled and cured in house"
+      ],
+      "praise": "Promoted to three Michelin stars in the 2026 guide after seven years with two, making it the second three-star restaurant in Thailand. Michelin says the kitchen counter seats are the ones to ask for.",
+      "watchOut": "Closed Monday and Tuesday; Wednesday is dinner only. Not Thai food: choose it if the group wants a European special dinner.",
+      "description": "Twin chefs Thomas and Mathias Sühring serve a German tasting menu in a restored 1970s villa with a garden in Yen Akat, south Sathorn.",
+      "openText": "Wed 18:00-22:00; Thu-Sun 12:30-14:30 and 18:00-22:00; closed Mon-Tue (Michelin Guide, Oct 2026).",
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Lunch Thu-Sun is easier to book than dinner.",
+      "score": 5,
+      "pick": false,
+      "tips": [
+        "Ask for the kitchen counter when you book."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/suhring"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/suhring",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.google.com/maps/place/S%C3%BChring/@13.7108133,100.5454871,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f475a72816b:0xc55b79df0b138b62!8m2!3d13.7108133!4d100.5454871!16s%2Fg%2F11cm0jh58k"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, closed Tue, pin). Michelin page (three stars 2026, hours) and the Michelin 2026 star list (marked new at three stars).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-r-haan",
+      "name": "R-Haan",
+      "nameThai": "อาหาร",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.731832,
+      "lng": 100.579566,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "R-Haan, 131 Sukhumvit 53 (Thonglor Soi 9), Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Two Michelin Stars, Thailand 2026",
+      "priceLevel": 4,
+      "priceText": "Thai tasting menus only; prices are not listed on the website (Oct 2026). Michelin price band 4 of 4.",
+      "dishes": [
+        "Crab roe and yellow chilli relish with fresh vegetables and fruit",
+        "Tom yam served from a siphon",
+        "Seasonal menus (summer, rainy season, winter) and a royal Thai menu"
+      ],
+      "praise": "Two Michelin stars in the 2026 guide. Michelin describes a menu drawn from all of Thailand's regions, with family-style dishes given modern touches, starting with a cocktail in the lounge.",
+      "watchOut": "Book the private room (8-12 guests) at least 7 days ahead.",
+      "description": "Chef Chumpol Jangprai's Thai tasting menus in a house off Thonglor. It has a private room for 8 to 12, so it is the best starred Thai dinner for the whole group.",
+      "openText": "Daily 18:00-23:00 (official site and Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner; book the private room for the group.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Book at r-haan.com, by phone +66 95 141 5524 (10:30-23:00) or reservation@r-haan.com.",
+        "Walk-ins can sit in the bar area, but the full menu needs a booking."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/r-haan"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.r-haan.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/r-haan",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.r-haan.com/",
+        "https://www.google.com/maps/place/R-HAAN/@13.7318321,100.5795655,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fab5a8cd9f9:0x1d16d2b8c5533110!8m2!3d13.7318321!4d100.5795655!16s%2Fg%2F11gglt712q"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, opens 18:00, pin). Michelin page (two stars, daily 18:00-23:00). Official site: private room 8-12 guests, book 7 days ahead, phone and email.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-le-du",
+      "name": "Le Du",
+      "nameThai": "ฤดู",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Silom",
+      "island": null,
+      "lat": 13.725031,
+      "lng": 100.529352,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Le Du, 399/3 Silom Soi 7, Bangkok",
+      "placeId": null,
+      "rating": 4.1,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "One Michelin Star, Thailand 2026",
+      "priceLevel": 4,
+      "priceText": "Le Du Journey 4,500 THB++ and Le Du Experience 5,500 THB++ (4 or 6 courses; official booking page, read Oct 2026).",
+      "dishes": [
+        "Khao kluk kapi with river prawns, the chef's signature",
+        "Seasonal Thai menu that changes through the year"
+      ],
+      "praise": "One Michelin star in 2026; named the best restaurant in Asia by Asia's 50 Best in 2023. Michelin praises the creative Thai cooking and close, careful service.",
+      "watchOut": "Groups of more than 5 must take the 6-course menu. Changes or cancellations within 72 hours cost 5,000 THB per person.",
+      "description": "Chef Ton Thitid Tassanakajohn's seasonal Thai tasting menu on Silom Soi 7, under a ceiling of 20,000 test tubes. Easier to book than Sorn.",
+      "openText": "Mon-Sat 18:00-23:00, closed Sunday (Michelin Guide, Oct 2026).",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "bestTime": "Dinner; book 2-4 weeks ahead.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book at ledubkk.com; everyone at the table takes the same number of courses.",
+        "Send diet requests at least 72 hours before."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-du"
+        },
+        {
+          "label": "Booking page",
+          "url": "https://www.ledubkk.com/reservation.html"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-du",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.ledubkk.com/reservation.html",
+        "https://www.google.com/maps/place/Le+Du/@13.7250312,100.5293521,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d2cb8cbf2f:0x8fbe3df97d355cce!8m2!3d13.7250312!4d100.5293521!16s%2Fg%2F11b764q55l"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.1, opens 18:00, pin). Michelin page (one star, hours). Official booking page: menus 4,500 and 5,500 THB++, group and cancellation rules.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-gaggan",
+      "name": "Gaggan",
+      "nameThai": null,
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed",
+        "late-night"
+      ],
+      "area": "bangkok",
+      "district": "Phrom Phong (Sukhumvit 31)",
+      "island": null,
+      "lat": 13.740784,
+      "lng": 100.567587,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Gaggan, 68 Sukhumvit 31, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "One Michelin Star, Thailand 2026 (new)",
+      "priceLevel": 4,
+      "priceText": "One long tasting menu; the price is not listed on the website (Oct 2026). Michelin price band 4 of 4.",
+      "dishes": [
+        "Progressive Indian tasting menu served as a show by chef Gaggan Anand"
+      ],
+      "praise": "New Michelin star in 2026. Michelin calls it a playful, interactive dining show with bold flavours. The original Gaggan was named Asia's best restaurant by Asia's 50 Best four years running.",
+      "watchOut": "Open Thursday to Monday only. Guests are asked to put phones away during the meal.",
+      "description": "Chef Gaggan Anand's progressive Indian tasting menu on Sukhumvit 31: playful and long. Choose it for a show as much as a dinner.",
+      "openText": "Thu-Mon 17:00-00:00, closed Tue-Wed (Michelin Guide and gaggan.com, Oct 2026).",
+      "days": [
+        "Mon",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Dinner; book well ahead.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Request a table through gaggan.com, or WhatsApp or Line +66 98 883 1022."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/gaggan-anand"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.gaggan.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/gaggan-anand",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.gaggan.com/",
+        "https://www.google.com/maps/place/Gaggan/@13.7407839,100.5675867,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fff71c7f98b:0x82c0f47139958e00!8m2!3d13.7407839!4d100.5675867!16s%2Fg%2F11hdvt6x30"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, closed today Tue, pin). Michelin page (star, hours Thu-Mon 17:00-00:00). gaggan.com: open Thursday-Monday.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-baan-tepa",
+      "name": "Baan Tepa",
+      "nameThai": "บ้านเทพา",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Bang Kapi (Ramkhamhaeng)",
+      "island": null,
+      "lat": 13.760801,
+      "lng": 100.626354,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Baan Tepa Culinary Space, 561 Ramkhamhaeng Road, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Two Michelin Stars and Michelin Green Star, Thailand 2026",
+      "priceLevel": 4,
+      "priceText": "Seven-course tasting menu; price not shown on the website (Oct 2026). Michelin price band 4 of 4.",
+      "dishes": [
+        "Seven-course Thai tasting menu with herbs from the restaurant garden",
+        "\"Dong Dang\" rice noodles made with an Udon Thani method",
+        "\"Crab Crab Crab\" with crabs from several regions"
+      ],
+      "praise": "Two stars and a Green Star for its farm-to-table work in the 2026 guide. Michelin describes trays of the day's produce shown in the kitchen before each course, and guided garden tours.",
+      "watchOut": "Closed Monday and Tuesday. It is far east of the centre: allow 30-60 minutes by car from Sukhumvit in evening traffic.",
+      "description": "Chef Chudaree \"Tam\" Debhakam's garden restaurant in a family house on Ramkhamhaeng Road. The best Bangkok dinner for Thai produce and herbs.",
+      "openText": "Wed-Sun 17:00-23:00, closed Mon-Tue (Michelin Guide, Oct 2026).",
+      "days": [
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Early dinner, with time for the garden tour.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book at baantepabkk.com or +66 98 696 9074."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baan-tepa"
+        },
+        {
+          "label": "Official site",
+          "url": "https://www.baantepabkk.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baan-tepa",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://www.baantepabkk.com/",
+        "https://www.google.com/maps/place/Baan+Tepa+Culinary+Space/@13.7608005,100.6263537,17z/data=!3m1!4b1!4m6!3m5!1s0x311d618775625b83:0xf756a1dc894ed3e0!8m2!3d13.7608005!4d100.6263537!16s%2Fg%2F11flbr6llt"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, closed today Tue, pin). Michelin page (two stars, Green Star, hours). Official site (signature dishes, Michelin and Asia's 50 Best logos).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-samrub-samrub-thai",
+      "name": "Samrub Samrub Thai",
+      "nameThai": "สำรับสำหรับไทย",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed",
+        "late-night"
+      ],
+      "area": "bangkok",
+      "district": "Silom (Sala Daeng)",
+      "island": null,
+      "lat": 13.726898,
+      "lng": 100.537462,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Samrub Samrub Thai, 39/11 Soi Yommarat, Silom, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "One Michelin Star, Thailand 2026",
+      "priceLevel": 4,
+      "priceText": "Tasting menu only; price not found online (Oct 2026). Michelin price band 4 of 4.",
+      "dishes": [
+        "Tasting menu that changes every two months, built on old Thai recipes; past seasons covered Isaan and southern Thai food"
+      ],
+      "praise": "One Michelin star in 2026. Chef Prin Polsuk (formerly of Nahm) and Thanyaporn \"Mint\" Jarukittikun run it; Time Out (Jul 2025) lists it among Bangkok's best starred restaurants.",
+      "watchOut": "Small counter, often full. Michelin gives the phone number but also says bookings may be taken only through its social media pages.",
+      "description": "A small counter in a four-storey house near Sala Daeng where a former Nahm chef serves a changing menu of traditional Thai cooking.",
+      "openText": "Tue-Thu 17:30-23:00; Fri-Sat 17:30-00:00; closed Sun-Mon (Michelin Guide, Oct 2026).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "bestTime": "Dinner; book through its Instagram or Facebook.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Phone +66 99 651 7292 or message its social media pages."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samrub-samrub-thai"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samrub-samrub-thai",
+        "https://guide.michelin.com/jp/en/article/michelin-guide-ceremony/full-list-michelin-stars-michelin-guide-thailand-2026",
+        "https://timeout.com/bangkok/restaurants/best-restaurants-with-michelin-stars-in-thailand",
+        "https://www.google.com/maps/place/Samrub+Samrub+Thai/@13.7268983,100.5374615,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299b910dfeb3f:0x85b25e6da0e9551a!8m2!3d13.7268983!4d100.5374615!16s%2Fg%2F11g0hmtnhv"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, opens 17:30, pin). Michelin page (one star, hours, booking note). Time Out starred list (1 Jul 2025).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-supanniga-thonglor",
+      "name": "Supanniga Eating Room (Thonglor)",
+      "nameThai": "สุพรรณิการ์ อีทติ้ง รูม",
+      "kind": "thai",
+      "tags": [
+        "pork",
+        "group-friendly",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.730222,
+      "lng": 100.581535,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Supanniga Eating Room, 160/11 Thonglor, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No dish prices found online in Oct 2026. Mid-range for Thonglor.",
+      "dishes": [
+        "Moo cha muang: pork belly curry with sour cha muang leaves, a Chanthaburi dish",
+        "Sen chan pad pu: Chanthaburi rice noodles fried with crab",
+        "Chicken massaman with roti, green curry"
+      ],
+      "praise": "Time Out (Oct 2025): the refreshed menu keeps Khun Yai Somsri's family recipes, served here since 2012, and \"the flavours you know and love are still front and centre\".",
+      "watchOut": "Busy at dinner; book for a group of 8.",
+      "description": "Family recipes from Trat, Chanthaburi and Khon Kaen in a dining room on Thonglor. Easy for a group, and the pork belly curry is the dish to order.",
+      "openText": "Daily 10:00-22:00 (Time Out, Oct 2025; Google Maps showed it open until 22:00 on 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner with a booking, or a late lunch.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book on 091-774-9808 or the website.",
+        "Share moo cha muang, the crab noodles and one curry per two people."
+      ],
+      "links": [
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/bangkok/restaurants/supanniga-eating-room"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/supanniga-eating-room",
+        "https://www.google.com/maps/place/Supanniga+Eating+Room+by+Khun+Yai/@13.7302219,100.5815348,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fac93312861:0x90a83324a47c133b!8m2!3d13.7302219!4d100.5815348!16s%2Fg%2F1hjh8m6h_"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open until 22:00, pin). Time Out article (2 Oct 2025: menu refresh, dishes, hours, booking phone). Its Tha Tien branch is in the Michelin 2026 selection; the Thonglor branch is not listed.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-here-hai",
+      "name": "Here Hai",
+      "nameThai": "เฮียให้",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "michelin",
+        "local-favourite",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.730265,
+      "lng": 100.586342,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Here Hai, 112/1 Ekkamai Road (Sukhumvit 63), Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "No current prices found online; Michelin price band 2 of 4. Cash only.",
+      "dishes": [
+        "Crab fried rice with large pieces of crab meat",
+        "Stir-fried crab with herbs and chilli, smoky from the wok",
+        "Spicy seafood salads"
+      ],
+      "praise": "Bib Gourmand in the 2026 guide. Michelin says it is a busy two-floor place made for sharing, with a wide menu, and that the queue is worth it.",
+      "watchOut": "Closed Monday. It closes at 17:30 and popular dishes sell out; cash only. You can ask for less chilli.",
+      "description": "A Thai-Chinese seafood shop on Ekkamai Road known for crab fried rice and wok-fried crab. Good for a group lunch before Thonglor in the evening.",
+      "openText": "Tue-Sun 10:00-15:00 and 16:00-17:30, closed Monday (Michelin Guide, Oct 2026).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Arrive at 10:00-11:00 to beat the lunch queue.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Bring cash.",
+        "Ask the staff to call when a table for 8 is ready, or split into two tables."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/here-hai"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/here-hai",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.google.com/maps/place/Here+Hai+(Original+shop)/@13.7302655,100.586342,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f33560d4b4d:0x26248887c4796190!8m2!3d13.7302655!4d100.586342!16s%2Fg%2F11fb0rcy__"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open, pin on the original shop). Michelin page (hours, cash only, groups) and the Michelin Bangkok Bib Gourmand list read 27 Oct 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-khua-kling-pak-sod-thonglor",
+      "name": "Khua Kling Pak Sod (Thonglor)",
+      "nameThai": "คั่วกลิ้ง ผักสด",
+      "kind": "southern-thai",
+      "tags": [
+        "pork",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.729046,
+      "lng": 100.579311,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Khua Kling Pak Sod, 98/1 Soi Pai Di Ma Di, Thonglor, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No dish prices found online (Oct 2026); Phuket101 (Dec 2025) calls it affordable.",
+      "dishes": [
+        "Khua kling: dry, very spicy minced pork curry with turmeric and lime leaves",
+        "Other southern curries and stir-fries"
+      ],
+      "praise": "Phuket101 (Dec 2025) puts it among the good restaurants of Sukhumvit and notes it was in the Michelin Guide in past years. Google rating 4.5.",
+      "watchOut": "Southern food is hot; ask for less chilli for the khua kling.",
+      "description": "A southern Thai restaurant in a quiet Thonglor lane, strong on hot curries and the dry pork curry it is named after.",
+      "openText": "Google Maps 27 Oct 2026: 09:00-23:00 (Tuesday). Phuket101 gives about 07:00-22:30.",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Phuket101: Sukhumvit restaurants",
+          "url": "https://www.phuket101.net/great-restaurants-in-sukhumvit/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/great-restaurants-in-sukhumvit/",
+        "https://www.google.com/maps/place/KhuaKling+PakSod+Thong+Lo/@13.7290461,100.5793108,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fab90a06e7b:0x4a4478302bd32522!8m2!3d13.7290461!4d100.5793108!16s%2Fg%2F1261zb235"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open, pin). Phuket101 Sukhumvit page (updated 14 Dec 2025, \"former Michelin restaurant\"). Not in the Michelin 2026 selection.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-baannok-langsuan",
+      "name": "Baannok Bangkok",
+      "nameThai": "บ้านนอกเข้ากรุง",
+      "kind": "thai",
+      "tags": [
+        "michelin",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Langsuan (Chidlom)",
+      "island": null,
+      "lat": 13.741698,
+      "lng": 100.543351,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Baannok Bangkok, 34/3 Lang Suan Road, Bangkok",
+      "placeId": null,
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1509,
+      "reviewsSource": "Google, via Phuket101, Apr 2025",
+      "otherRatings": [],
+      "michelin": "Michelin Guide selection, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "No dish prices found online; Phuket101 (Apr 2025) calls prices \"a little high\". Michelin price band 2 of 4.",
+      "dishes": [
+        "Phat mi Khorat with giant river prawn, the signature",
+        "Kaeng liang with seafood and Isaan herbs",
+        "Sweet and sour Khorat sausage salad"
+      ],
+      "praise": "Michelin (2026) lists it for Khorat cooking with the sweetness toned down. Phuket101 (Apr 2025) praises the family recipes, generous plates and warm owner.",
+      "watchOut": "Small dining room; Michelin says a booking is a must.",
+      "description": "Home-style food from Khorat (Nakhon Ratchasima) on the second floor of a building on Lang Suan Road, near Chidlom.",
+      "openText": "Daily 11:00-22:00 (Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Lunch or an early dinner with a booking.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baannok-bangkok"
+        },
+        {
+          "label": "Phuket101",
+          "url": "https://www.phuket101.net/baannok-bangkok/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baannok-bangkok",
+        "https://www.phuket101.net/baannok-bangkok/",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/the-plate-michelin",
+        "https://www.google.com/maps/place/Baannok+Bangkok+%7C+%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87/@13.7416977,100.5433509,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f5b93de3db9:0x1430eeb8079b4637!8m2!3d13.7416977!4d100.5433509!16s%2Fg%2F11vds5br5r"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.8, open, pin). Michelin page (2026 selection, hours, booking a must). Phuket101 (updated 19 Apr 2025). The high Google score is backed by Michelin, so it is not a bought rating.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-plu-sathorn",
+      "name": "Plu",
+      "nameThai": "พลู",
+      "kind": "thai",
+      "tags": [
+        "pork",
+        "michelin"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Suan Phlu)",
+      "island": null,
+      "lat": 13.721826,
+      "lng": 100.536275,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Plu, 3 Soi Phra Phinit, Sathorn, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; no dish prices found online (Oct 2026).",
+      "dishes": [
+        "Braised pork belly and soft-boiled eggs in five-spice broth, the house dish",
+        "Deep-fried tofu that soaks up the broth"
+      ],
+      "praise": "Bib Gourmand in the 2026 guide. Michelin calls it cosy, with good service and Thai dishes from all regions.",
+      "watchOut": null,
+      "description": "Thai dishes from all over the country in an Art Deco house at The Water Library, Soi Phra Phinit. The five-spice pork belly is the reason to come.",
+      "openText": "Daily 11:00-14:00 and 17:00-21:30 (Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/plu"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/plu",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.google.com/maps/place/Plu/@13.7218262,100.5362749,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f70975bcf69:0xb9d29184e57399a7!8m2!3d13.7218262!4d100.5362749!16s%2Fg%2F11ff1yt6zm"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, opens 17:00, pin). Michelin page (hours, dishes) and the Michelin Bangkok Bib Gourmand list read 27 Oct 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-prik-yuak",
+      "name": "Prik-Yuak",
+      "nameThai": "พริกหยวก",
+      "kind": "thai",
+      "tags": [
+        "group-friendly",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Saphan Khwai (near Ari)",
+      "island": null,
+      "lat": 13.79164,
+      "lng": 100.538559,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Prik-Yuak, 108 Pradiphat Road, Phaya Thai, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; no dish prices found online (Oct 2026).",
+      "dishes": [
+        "Stir-fried squid with yellow chilli and basil",
+        "Home-style curries served on clay plates lined with banana leaf"
+      ],
+      "praise": "Bib Gourmand in 2026. Michelin: over 30 years in business, big portions, good for families and groups. Time Out's Ari guide (May 2026) names it for traditional Thai cooking.",
+      "watchOut": null,
+      "description": "A long-running Thai restaurant in an old school building with a garden and a cafe, near Saphan Khwai BTS. Easy for a table of 8.",
+      "openText": "Tue-Sun 11:00-21:00, closed Monday (Michelin Guide, Oct 2026).",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Lunch or early dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/prik-yuak"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/prik-yuak",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.timeout.com/bangkok/things-to-do/ari",
+        "https://www.google.com/maps/place/Prik-Yuak/@13.7916403,100.5385589,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29d6281f736fd:0x81eda148034cdd87!8m2!3d13.7916403!4d100.5385589!16s%2Fg%2F11qn8h7dl_"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open, pin). Michelin page (hours, groups) and Bib list read 27 Oct 2026. Time Out Ari guide (30 May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-keawloon",
+      "name": "Keawloon",
+      "nameThai": null,
+      "kind": "southern-thai",
+      "tags": [
+        "booking-needed",
+        "michelin"
+      ],
+      "area": "bangkok",
+      "district": "Phra Khanong",
+      "island": null,
+      "lat": 13.71484,
+      "lng": 100.57904,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Keawloon, 21/3 Soi Saeng Chan, Phra Khanong, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026 (new)",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; set family-style meal, no prices found online (Oct 2026).",
+      "dishes": [
+        "Southern starter of sour fruit, sweetened shrimp and stirred shrimp paste",
+        "Family-style meal from the chef's grandmother's recipes from Nakhon Si Thammarat and Sukhothai; the menu changes every two months"
+      ],
+      "praise": "New Bib Gourmand in the 2026 guide. Michelin likes the intimate, home-style feel.",
+      "watchOut": "Booking only: two or three tables per service, two services a day. Probably too small for 8 at once.",
+      "description": "A tiny home-style restaurant in a Phra Khanong lane that cooks one family meal of southern and Sukhothai dishes per table.",
+      "openText": "Daily 11:30-22:30, by reservation only (Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Book a few days ahead.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Call +66 65 196 4168 to book."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/keawloon"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/keawloon",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://guide.michelin.com/th/en/article/michelin-guide-ceremony/bib-gourmand-thailand-2026",
+        "https://www.google.com/maps/place/Keawloon+BKK+(Advance+reservation+only)/@13.7148398,100.5790397,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f00797c11d1:0xe768c144c52d1196!8m2!3d13.7148398!4d100.5790397!16s%2Fg%2F11vrch35lj"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open, listing says advance reservation only, pin). Michelin page (hours, booking rules) and the Michelin 2026 Bib newcomers article.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-beer-hima",
+      "name": "Beer Hima (Chatuchak)",
+      "nameThai": "เบียร์หิมะ",
+      "kind": "southern-thai",
+      "tags": [
+        "seafood",
+        "michelin",
+        "group-friendly",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Chatuchak (Prachachuen)",
+      "island": null,
+      "lat": 13.839923,
+      "lng": 100.547567,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Beer Hima, 12/12 Thetsaban Songkhro Road, Chatuchak, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; no dish prices found online (Oct 2026).",
+      "dishes": [
+        "Southern sour curry with grouper, turmeric and chilli",
+        "Stir-fried prawns with sator beans and shrimp paste"
+      ],
+      "praise": "Bib Gourmand in 2026. Michelin: seafood recipes from Nakhon Si Thammarat, family-friendly, with a private room for up to 30 guests.",
+      "watchOut": null,
+      "description": "A plain, busy southern Thai seafood restaurant in north Bangkok with parking and a private room. Good for a group of 8.",
+      "openText": "Daily 11:00-23:00 (Michelin Guide and Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Lunch after Chatuchak or Or Tor Kor (about 5 km by taxi).",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book the private room on +66 2 954 3404."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/beer-hima-prachachuen"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/beer-hima-prachachuen",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.google.com/maps/place/Beer+Hima/@13.8399229,100.5475665,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c930105742f:0xe13311dc30360885!8m2!3d13.8399229!4d100.5475665!16s%2Fg%2F1vyn19k8"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open until 23:00, pin). Michelin page (hours, private room for 30) and Bib list read 27 Oct 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hia-wan-khao-tom-pla",
+      "name": "Hia Wan Khao Tom Pla",
+      "nameThai": "เฮียหวาน ข้าวต้มปลา",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Chan Road)",
+      "island": null,
+      "lat": 13.707786,
+      "lng": 100.519453,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hia Wan Khao Tom Pla, Chan Road, Sathorn, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; fish prices depend on the catch. Cash only.",
+      "dishes": [
+        "Rice soup with silver pomfret",
+        "Rice soup with mixed seafood",
+        "Red grouper"
+      ],
+      "praise": "Bib Gourmand in 2026. Michelin: only sea-caught fish, and a clear, fresh broth with a juicy pomfret fillet.",
+      "watchOut": "Cash only. Plain shophouse.",
+      "description": "An evening Thai-Chinese shop on Chan Road for khao tom pla, rice soup with fresh sea fish. A light dinner after a heavy day of pork.",
+      "openText": "Daily 16:00-23:00 (Michelin Guide and Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner or a late bite.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/hia-wan-khao-tom-pla"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/hia-wan-khao-tom-pla",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.google.com/maps/place/Hia+Wan+Khao+Tom+Pla/@13.7077863,100.5194527,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298b7413ad89b:0x73a444050dcb6ce0!8m2!3d13.7077863!4d100.5194527!16s%2Fg%2F11b6ypd1yz"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open 16:00-23:00, pin; Google gives 2 Chan Rd, Michelin 816 Chan Road). Michelin page and Bib list read 27 Oct 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-lay-lao-ari",
+      "name": "Lay Lao",
+      "nameThai": "เลลาว",
+      "kind": "isaan",
+      "tags": [
+        "pork",
+        "seafood",
+        "michelin",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Ari",
+      "island": null,
+      "lat": 13.781748,
+      "lng": 100.543785,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Lay Lao, 65 Phahonyothin Soi 7, Ari, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Guide selection, Thailand 2026",
+      "priceLevel": 2,
+      "priceText": "Michelin price band 2 of 4; no dish prices found online (Oct 2026).",
+      "dishes": [
+        "Deep-fried pork belly glazed in the house Lay Lao sauce",
+        "Som tam and Isaan grills",
+        "Seafood dishes in the style of Hua Hin"
+      ],
+      "praise": "In the Michelin 2026 selection, which names the fried pork belly as the signature and lists it as good for groups.",
+      "watchOut": null,
+      "description": "Isaan food and Hua Hin-style seafood in a busy house on Phahonyothin Soi 7, a short walk from Ari BTS.",
+      "openText": "Daily 10:30-22:00 (Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner; arrive before 18:30 for a big table.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/lay-lao"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/lay-lao",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/the-plate-michelin",
+        "https://www.google.com/maps/place/Lay+Lao/@13.7817476,100.5437851,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c1da70480e3:0x21df567d78ca664!8m2!3d13.7817476!4d100.5437851!16s%2Fg%2F11b7gmtffx"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open, pin). Michelin page (2026 selection, daily hours, pork belly, groups).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-somtum-der-saladaeng",
+      "name": "Somtum Der (Sala Daeng)",
+      "nameThai": "ส้มตำเด้อ",
+      "kind": "isaan",
+      "tags": [
+        "pork"
+      ],
+      "area": "bangkok",
+      "district": "Silom (Sala Daeng)",
+      "island": null,
+      "lat": 13.727591,
+      "lng": 100.536404,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Somtum Der, 5/5 Sala Daeng Road, Silom, Bangkok",
+      "placeId": "ChIJ6fUwuS6f4jARYytUkc2MT3s",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Grilled marinated pork 95 THB and koy kung prawns 120 THB in 2016 (Time Out); prices are higher now. The 2026 menu is on the official site.",
+      "dishes": [
+        "Tum thai kai kem: papaya salad with salted egg",
+        "Kor moo tod: fried pork neck with garlic",
+        "Sapoak gai tod: fried chicken thigh"
+      ],
+      "praise": "The Bangkok original of a som tam restaurant that later opened in New York and Tokyo (official site). Time Out found that it does not tone down the spice for Bangkok diners.",
+      "watchOut": "Small dishes; order more than you think. Spicy by default.",
+      "description": "A small Isaan restaurant by Sala Daeng BTS with proper heat and a good range of som tam.",
+      "openText": "Google Maps 27 Oct 2026: open until 23:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Official site and menu",
+          "url": "https://www.somtumder.com/menu.html"
+        }
+      ],
+      "sources": [
+        "https://www.somtumder.com/",
+        "https://www.somtumder.com/menu.html",
+        "https://www.timeout.com/bangkok/restaurants/somtum-der",
+        "https://www.google.com/maps/place/Somtum+Der/data=!4m7!3m6!1s0x30e29f2eb930f5e9:0x7b4f8ccd91542b63!8m2!3d13.7275912!4d100.536404!16s%2Fg%2F1pwfcqcqg!19sChIJ6fUwuS6f4jARYytUkc2MT3s"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open until 23:00, pin). Official site (2026 menus for Sala Daeng and Tha Tien, overseas branches). Time Out review (2016, old prices). Not in the Michelin 2026 selection.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-som-tam-jay-so",
+      "name": "Som Tam Jay So",
+      "nameThai": "ส้มตำเจ๊โส",
+      "kind": "isaan",
+      "tags": [
+        "pork",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Silom (Soi Phiphat 2)",
+      "island": null,
+      "lat": 13.725067,
+      "lng": 100.532595,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Som Tam Jay So, 146 Phiphat Soi 2, Silom, Bangkok",
+      "placeId": null,
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Grilled pork neck 55 THB, som tam 50 THB, chicken wings 17 THB each at Mark Wiens's visit (eatingthaifood.com); prices are a little higher now.",
+      "dishes": [
+        "Kor moo yang: grilled pork neck",
+        "Tam pa: jungle-style papaya salad",
+        "Grilled chicken wings"
+      ],
+      "praise": "Mark Wiens calls its som tam some of the best in Bangkok and the grilled pork neck \"unbelievably juicy\". Seasoned Traveller also sends readers here for Isaan food.",
+      "watchOut": "A lunch place with plastic stools; Google shows it closing at 17:30. Very spicy unless you ask.",
+      "description": "A small street-side Isaan shop in a lane off Convent Road, cooking som tam and grilled pork neck for Silom office workers.",
+      "openText": "Google Maps 27 Oct 2026: 11:00-17:30 (Tuesday).",
+      "days": [],
+      "bestTime": "Lunch, before or after the 12:00-13:00 office rush.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Say \"phet noi\" for less chilli."
+      ],
+      "links": [
+        {
+          "label": "Mark Wiens review",
+          "url": "https://eatingthaifood.com/best-som-tam-in-bangkok"
+        }
+      ],
+      "sources": [
+        "https://eatingthaifood.com/best-som-tam-in-bangkok",
+        "https://seasonedtraveller.com/places/isaan-food-bangkok-som-tam-jay-so",
+        "https://www.google.com/maps/place/Som+Tam+Jay+So/@13.7250673,100.5325952,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f2da6e4aa8b:0xbec886d2ff817d8!8m2!3d13.7250673!4d100.5325952!16s%2Fg%2F11b7ln8vmn"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open until 17:30, pin). Mark Wiens review (eatingthaifood.com, photos from 2016) and Seasoned Traveller. Evidence is older; the Google listing shows it still trading.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-sabaijai-ekkamai",
+      "name": "Sabaijai (Ekkamai)",
+      "nameThai": "สบายใจ",
+      "kind": "isaan",
+      "tags": [
+        "group-friendly",
+        "pork",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.729981,
+      "lng": 100.585609,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Sabaijai, 87 Ekkamai Soi 3, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found online (Oct 2026).",
+      "dishes": [
+        "Gai yang: Isaan grilled chicken",
+        "Som tam",
+        "Larb and other Isaan grills"
+      ],
+      "praise": "Time Out (Jun 2025) names it among its favourite Isaan places in Bangkok. BK Magazine says it has served Isaan food since 2000, with cheap beer in a garden.",
+      "watchOut": null,
+      "description": "A big, relaxed Isaan restaurant in an Ekkamai lane, known for grilled chicken. Easy for 8 with beer before Ekkamai bars.",
+      "openText": "Google Maps 27 Oct 2026: 10:30-22:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out (Isaan picks)",
+          "url": "https://www.timeout.com/bangkok/restaurants/isan-rot-det"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/isan-rot-det",
+        "https://bk.asia-city.com/node/126384",
+        "https://www.google.com/maps/place/Sabaijai+(Original)/@13.7299814,100.5856092,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fad80004455:0xb655821dbfa496f3!8m2!3d13.7299814!4d100.5856092!16s%2Fg%2F1wyc1sj2"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open, pin on the original Ekkamai shop). Time Out page (18 Jun 2025) naming Sabai Jai as a favourite. BK Magazine Isaan guide (description only; page no longer loads).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-polo-fried-chicken",
+      "name": "Polo Fried Chicken (Kai Tod Jay Kee)",
+      "nameThai": "ไก่ทอดเจ๊กี",
+      "kind": "isaan",
+      "tags": [
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Lumphini (Soi Polo)",
+      "island": null,
+      "lat": 13.732227,
+      "lng": 100.545961,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Polo Fried Chicken, 137/1-3 Soi Sanam Khli (Soi Polo), Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "About 100-200 THB per person (Time Out, May 2026).",
+      "dishes": [
+        "Gai tod: fried chicken under a pile of crisp fried garlic",
+        "Som tam with plenty of lime",
+        "Sticky rice"
+      ],
+      "praise": "Time Out (29 May 2026): about 50 years of frying chicken marinated in garlic, coriander root and white pepper, with crisp skin and juicy meat; a daily crowd of locals and visitors.",
+      "watchOut": null,
+      "description": "A family shop in a lane by Lumphini Park, famous for garlic fried chicken with som tam and sticky rice.",
+      "openText": "Daily 07:00-21:00 (Time Out May 2026; Google Maps Oct 2026).",
+      "days": [],
+      "bestTime": "Lunch, or after a walk in Lumphini Park.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/bangkok/restaurants/polo-fried-chicken"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/polo-fried-chicken",
+        "https://www.google.com/maps/place/Polo+Fried+Chicken+(Soi+Polo)/@13.7322268,100.545961,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f2736d3eafb:0x7c7cedbf00d06204!8m2!3d13.7322268!4d100.545961!16s%2Fg%2F1hc2zzhff"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open 07:00-21:00, pin). Time Out article (29 May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-rung-rueang-pork-noodles",
+      "name": "Rung Rueang Pork Noodles",
+      "nameThai": "รุ่งเรือง ก๋วยเตี๋ยวหมู",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "budget",
+        "michelin",
+        "local-favourite",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Phrom Phong (Sukhumvit 26)",
+      "island": null,
+      "lat": 13.728437,
+      "lng": 100.570672,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Rung Rueang Pork Noodles, 10/3 Sukhumvit 26, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Bib Gourmand, Thailand 2026",
+      "priceLevel": 1,
+      "priceText": "Michelin price band 1 of 4 (cheap); cash only. No current price list found online.",
+      "dishes": [
+        "Pork noodle soup with minced pork, pork balls and liver",
+        "Tom yum version with lime, chilli and peanuts",
+        "Blanched pork intestines on the side"
+      ],
+      "praise": "Bib Gourmand in the 2026 guide. Michelin recommends the minced pork soup and the clean, fresh pork intestines.",
+      "watchOut": "Two shops with almost the same name face each other. Michelin means the one on the left as you walk in from Sukhumvit Road; the other is a separate shop.",
+      "description": "An open-air noodle shop near Phrom Phong BTS that cooks only pork noodles, in clear or tom yum broth. Quick, cheap and very local.",
+      "openText": "Daily 08:00-17:00 (Michelin Guide and Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast or a late lunch, outside 12:00-13:00.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Order \"tom yum, sen lek, haeng\" for the dry tom yum noodles.",
+        "Bring cash."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-tiew-mu-rung-rueang"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-tiew-mu-rung-rueang",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand",
+        "https://www.google.com/maps/place/Rung+Rueang+Pork+Noodles/@13.7284371,100.5706724,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f013f990233:0xcfa088d942a40c92!8m2!3d13.7284371!4d100.5706724!16s%2Fg%2F1tfglvmk"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, 08:00-17:00, pin on No. 10/3). Michelin page (hours, cash only, which of the two shops) and Bib list read 27 Oct 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-crispy-pork-alley-samyan",
+      "name": "Crispy Pork Alley (Trok Moo Krob)",
+      "nameThai": "ตรอกหมูกรอบ",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Samyan",
+      "island": null,
+      "lat": 13.733845,
+      "lng": 100.527034,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Crispy Pork Alley (Aunt Tiw), 1543 Rama IV Road, Bangkok",
+      "placeId": "ChIJ8ffRe8KZ4jAR7n2Ek94KvMU",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Rice dishes 40-100 THB: crispy pork with basil, on fried rice or with noodles (BK Magazine, Aug 2022).",
+      "dishes": [
+        "Moo krob pad kra pao: crispy pork belly fried with holy basil, on rice",
+        "Crispy pork with fried rice or stir-fried noodles"
+      ],
+      "praise": "BK Magazine (2022): many Chulalongkorn students name it their favourite moo krob, at low prices for the Samyan area.",
+      "watchOut": null,
+      "description": "A small shop in a lane off Rama IV Road near Samyan Mitrtown, cooking crispy pork belly on rice for students and office workers.",
+      "openText": "Google Maps 27 Oct 2026: 10:00-20:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "BK Magazine: moo krob",
+          "url": "https://bkmagazine.com/restaurants/news/10-places-to-grab-crispy-moo-krob-around-bangkok"
+        }
+      ],
+      "sources": [
+        "https://bkmagazine.com/restaurants/news/10-places-to-grab-crispy-moo-krob-around-bangkok",
+        "https://www.google.com/maps/place/Crispy+Pork+Alley+%28Aunt+Tiw%29/data=!4m7!3m6!1s0x30e299c27bd1f7f1:0xc5bc0ade93847dee!8m2!3d13.7338455!4d100.5270344!16s%2Fg%2F11h5w6wn3q!19sChIJ8ffRe8KZ4jAR7n2Ek94KvMU"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open 10:00-20:00, pin). BK Magazine list (16 Aug 2022).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-mr-joe-kuay-jab",
+      "name": "Guay Jub Mr. Joe",
+      "nameThai": "ก๋วยจั๊บมิสเตอร์โจ",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "budget",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Chan Road (Bang Kho Laem)",
+      "island": null,
+      "lat": 13.709183,
+      "lng": 100.514162,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Kuay Jab Mr. Joe, 313/7 Chan Road, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Guide selection, Thailand 2026",
+      "priceLevel": 1,
+      "priceText": "Kuay jab from 40 THB, extra plate of crispy pork 75 THB, 1 kg of moo krob 750 THB (BK Magazine, Aug 2022; a little higher now).",
+      "dishes": [
+        "Kuay jab: rolled rice noodles in a sweet, peppery broth",
+        "Moo krob: crispy pork belly, by the plate or by the kilo",
+        "Pork offal, with or without"
+      ],
+      "praise": "In the Michelin 2026 selection. BK Magazine (2022) says the crispy pork belly is the real \"crowd magnet\", and many diners order an extra plate.",
+      "watchOut": "Cash only. Go before 13:00; the crispy pork can sell out. About 15-20 minutes by taxi south of Sathorn.",
+      "description": "A local shop on Chan Road famous for its crispy pork belly, served on kuay jab noodles or by the plate. One of the best moo krob in Bangkok.",
+      "openText": "Daily 07:30-16:30 (Michelin Guide and Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Late breakfast, 09:00-11:00.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Take a kilo of moo krob back to the hotel for later."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-jub-mr-joe"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-jub-mr-joe",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/the-plate-michelin",
+        "https://bkmagazine.com/restaurants/news/10-places-to-grab-crispy-moo-krob-around-bangkok",
+        "https://www.google.com/maps/place/Kuay+Jab+Mr.+Joe/@13.7091825,100.5141618,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298b923b05b09:0xa48c51495edef067!8m2!3d13.7091825!4d100.5141618!16s%2Fg%2F119tsqt36"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, 07:30-16:30, pin at 313/7 Chan Rd; Michelin gives 86 Soi Chan 44, the same block). Michelin page (2026 selection, hours, cash only). BK Magazine (Aug 2022, prices).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hongte-pork-leg",
+      "name": "Hongte Pork Leg",
+      "nameThai": null,
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Chong Nonsi)",
+      "island": null,
+      "lat": 13.704827,
+      "lng": 100.52919,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hongte Pork Leg, 1 Sathu Pradit Road, Chong Nonsi, Bangkok",
+      "placeId": null,
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Rice with braised pork leg 60 THB (Time Out, Sep 2024).",
+      "dishes": [
+        "Khao kha moo: braised pork leg on rice, Shantou style with 32 spices",
+        "Extra-large plate of pork leg with skin and fat"
+      ],
+      "praise": "Time Out (Sep 2024) puts it in its 10 best kha moo in Bangkok: it began as a food cart in 1978, and the extra-large size is the one to order.",
+      "watchOut": null,
+      "description": "A khao kha moo shop on Sathu Pradit Road, south of Sathorn, with a long-simmered spiced pork leg.",
+      "openText": "Google Maps 27 Oct 2026: 10:00-22:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Lunch or dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: best kha moo",
+          "url": "https://timeout.com/bangkok/restaurants/best-kha-moo-restaurants-in-bangkok"
+        }
+      ],
+      "sources": [
+        "https://timeout.com/bangkok/restaurants/best-kha-moo-restaurants-in-bangkok",
+        "https://www.google.com/maps/place/Hongte+Pork+Leg/@13.7048266,100.5291902,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298b335ee3ad1:0x62b4e963c19340cc!8m2!3d13.7048266!4d100.5291902!16s%2Fg%2F1thxhhy1"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open, pin). Time Out list (20 Sep 2024).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-arunwan-ekkamai",
+      "name": "Arunwan",
+      "nameThai": "อรุณวรรณ",
+      "kind": "noodles",
+      "tags": [
+        "pork",
+        "budget",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.735029,
+      "lng": 100.587709,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Arunwan, Park X Building, 295 Ekkamai Soi 15, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1554,
+      "reviewsSource": "Google, via Phuket101, Apr 2025",
+      "otherRatings": [],
+      "michelin": "Michelin Guide selection, Thailand 2026",
+      "priceLevel": 1,
+      "priceText": "Kuay jab with basil and crispy pork 90 THB, egg noodles with crispy pork 80 THB, crispy pork rice 77 THB, crispy pork plate 68 THB (Phuket101 menu, Apr 2025).",
+      "dishes": [
+        "Pork offal soup with pickled cabbage, the house soup",
+        "Kuay jab and egg noodles with crispy pork",
+        "Crispy pork wontons with sweet black sauce"
+      ],
+      "praise": "Michelin (2026) says the soup tastes fresh, with the cabbage balancing the sweet pork broth. Phuket101 (Apr 2025): the family recipes date from 1963 and regulars have followed it through four moves.",
+      "watchOut": "Cash only. Closes at 19:00.",
+      "description": "A Thai-Chinese pork noodle shop open since 1963, now on the lower ground floor of Park X on Ekkamai. Almost the whole menu is pork.",
+      "openText": "Daily 09:00-19:00 (Michelin Guide, Oct 2026).",
+      "days": [],
+      "bestTime": "Lunch; pair it with Wattana Panich nearby.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/arunwan-1200640"
+        },
+        {
+          "label": "Phuket101 (menu)",
+          "url": "https://www.phuket101.net/arunwan-restaurant/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/arunwan-1200640",
+        "https://www.phuket101.net/arunwan-restaurant/",
+        "https://www.google.com/maps/place/Arunwan/@13.7350288,100.5877088,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29e4d0b93fb51:0xbd6e132dfa4307ce!8m2!3d13.7350288!4d100.5877088!16s%2Fg%2F1tj500q_"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, open until 19:00, pin). Michelin page (2026 selection, hours, cash only). Phuket101 (updated 28 Apr 2025, menu prices, 4.6 from 1,554 Google reviews).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-toy-boat-noodles",
+      "name": "Toy Kuay Teow Ruea (Doy boat noodles)",
+      "nameThai": "ก๋วยเตี๋ยวเรือ ต้อย",
+      "kind": "noodles",
+      "tags": [
+        "pork",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Victory Monument",
+      "island": null,
+      "lat": 13.768151,
+      "lng": 100.535906,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Toy Kuay Teow Ruea, Ratchawithi Soi 18, Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Small bowls; no current price found online. Bowls at the nearby Boat Noodle Alley were 12-14 THB in 2022.",
+      "dishes": [
+        "Boat noodles with pork in a dark, spiced broth thickened with blood",
+        "Beef boat noodles"
+      ],
+      "praise": "Mark Wiens (Migrationology) calls it the best boat noodle shop in Bangkok. Seasoned Traveller (Feb 2022) suggests it over Boat Noodle Alley for a more traditional bowl.",
+      "watchOut": "A lunch shop; older guides say the noodles sell out by about 15:00. Plain and hot inside.",
+      "description": "A canal-side shop in a soi off Ratchawithi Road, west of Victory Monument, serving rich boat noodles in small bowls.",
+      "openText": "Google Maps 27 Oct 2026: 08:00-17:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Lunch, before 14:00.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Order three to five small bowls each.",
+        "Boat Noodle Alley (Pa Yak and others) is about 1 km east along the canal, under the Victory Monument skywalk: 09:00-20:30 on Google Maps."
+      ],
+      "links": [
+        {
+          "label": "Seasoned Traveller: Boat Noodle Alley",
+          "url": "https://seasonedtraveller.com/places/boat-noodle-alley-bangkok"
+        }
+      ],
+      "sources": [
+        "https://seasonedtraveller.com/places/boat-noodle-alley-bangkok",
+        "https://awesome.blog/?p=1110",
+        "https://www.google.com/maps/place/Boat+Noodles+-+Toy+Kuay+Teow+Ruea/@13.7681512,100.5359061,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29eb1faf77957:0x6e215ef2cc349ad!8m2!3d13.7681512!4d100.5359061!16s%2Fg%2F11bwytx0vf"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, 08:00-17:00, pin; Boat Noodle Alley 4.3, Pa Yak 4.2, both trading). Seasoned Traveller (updated 18 Feb 2022). Mark Wiens Migrationology article title via a search result (not read in full).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-areeya-mookata",
+      "name": "Areeya Mu Kratha",
+      "nameThai": "อารียา หมูกระทะ",
+      "kind": "grill",
+      "tags": [
+        "pork",
+        "group-friendly",
+        "local-favourite",
+        "late-night"
+      ],
+      "area": "bangkok",
+      "district": "Saphan Khwai (near Ari)",
+      "island": null,
+      "lat": 13.791207,
+      "lng": 100.538686,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Areeya Mu Kratha, 110 Pradiphat Road, Bangkok",
+      "placeId": "ChIJHYnhKz-d4jAR3t2-76z52Ls",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Moo kata sets from 399 THB (The Smart Local, Mar 2024).",
+      "dishes": [
+        "Moo kata: marinated pork grilled on a domed pan with broth around the edge",
+        "Fermented fish dipping sauce"
+      ],
+      "praise": "The Smart Local (2024) likes its garden setting with a cafe feel and the fermented fish sauce, and says it fills up fast.",
+      "watchOut": "Evenings only. No booking details found; go before 18:30 or expect a wait.",
+      "description": "A popular Thai barbecue (moo kata) place in a garden on Pradiphat Road, open until midnight. A fun, cheap group dinner.",
+      "openText": "Google Maps 27 Oct 2026: 16:00-00:00 (Tuesday).",
+      "days": [],
+      "bestTime": "18:00, before the dinner crowd.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "The Smart Local: mookata",
+          "url": "https://thesmartlocal.co.th/mookata-restaurants-bangkok"
+        }
+      ],
+      "sources": [
+        "https://thesmartlocal.co.th/mookata-restaurants-bangkok",
+        "https://www.google.com/maps/place/Areeya+Mu+Kratha/data=!4m7!3m6!1s0x30e29d3f2be1891d:0xbbd8f9acefbeddde!8m2!3d13.7912068!4d100.5386859!16s%2Fg%2F11h4nb4bg7!19sChIJHYnhKz-d4jAR3t2-76z52Ls"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 16:00-00:00, pin). The Smart Local Bangkok mookata list (updated 18 Mar 2024). Only one recent independent source found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-banjoo-korean-bbq",
+      "name": "Banjoo Korean BBQ",
+      "nameThai": null,
+      "kind": "grill",
+      "tags": [
+        "pork",
+        "booking-needed",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Asok (Sukhumvit 20)",
+      "island": null,
+      "lat": 13.730041,
+      "lng": 100.56381,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Banjoo Korean BBQ, Mille Malle 2nd floor, Sukhumvit 20, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "Pork belly 350 THB, banchan 120 THB (Time Out, 2020); dry-aged wagyu rib-eye about 1,555 THB (Phuket101, Apr 2026).",
+      "dishes": [
+        "Samgyeopsal pork belly grilled at the table by staff",
+        "Australian wagyu and Black Angus beef",
+        "Steamed egg, kimchi stew and refillable sides"
+      ],
+      "praise": "Time Out put it at the top of its Korean list for authentic food and grilled meat. Phuket101 (Apr 2026): premium meats, staff grill for you, refillable sides, and tables fill quickly.",
+      "watchOut": "Book ahead, and book a private room for 8.",
+      "description": "A Korean barbecue on the second floor of Mille Malle, Sukhumvit 20, busy with Thai and Korean diners. Good for a meat-heavy group dinner.",
+      "openText": "Daily 12:00-22:30 (Phuket101, Apr 2026; Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner with a booking.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Call 065-518-5166 to book; free parking at Mille Malle."
+      ],
+      "links": [
+        {
+          "label": "Phuket101",
+          "url": "https://www.phuket101.net/bangkok/banjoo-korean-bbq/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/bangkok/banjoo-korean-bbq/",
+        "https://www.timeout.com/bangkok/restaurants/banjoo",
+        "https://www.bkmagazine.com/food/bangkoks-best-spots-grilled-and-roasted-korean-bulgogi/",
+        "https://www.google.com/maps/place/Banjoo+Korean+BBQ/@13.7300407,100.5638098,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f032ee1bcaf:0xa998482576f389ac!8m2!3d13.7300407!4d100.5638098!16s%2Fg%2F11cs6kxycn"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open until 22:30, pin). Phuket101 (updated 28 Apr 2026). Time Out review (26 Jun 2020). BK Magazine Korean BBQ list (Jul 2020).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hobak-korean",
+      "name": "Hobak",
+      "nameThai": null,
+      "kind": "grill",
+      "tags": [
+        "pork",
+        "late-night"
+      ],
+      "area": "bangkok",
+      "district": "Asok (Sukhumvit Plaza, Soi 12)",
+      "island": null,
+      "lat": 13.738343,
+      "lng": 100.557968,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hobak, Sukhumvit Plaza, Sukhumvit Soi 12, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "Grilled pork belly 290 THB, pork neck 320 THB, rib-eye 650 THB (BK Magazine, 2020; check the current menu).",
+      "dishes": [
+        "Grilled pork belly and pork neck",
+        "Spicy chicken",
+        "Whole chicken soup (order an hour ahead)"
+      ],
+      "praise": "BK Magazine lists it among Bangkok's best Korean barbecue, with grilled meat as the best sellers and 1980s Seoul decor. It sits in Korea Town at Sukhumvit Plaza.",
+      "watchOut": "Evidence is from 2020; it is still trading with a 4.3 Google rating.",
+      "description": "A Korean barbecue in Korea Town (Sukhumvit Plaza) between Nana and Asok that stays open until early morning. The late option after the Soi 11 and Asok bars.",
+      "openText": "Google Maps 27 Oct 2026: 11:00 until about 06:00 the next morning.",
+      "days": [],
+      "bestTime": "Late night.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "BK Magazine: Korean BBQ",
+          "url": "https://www.bkmagazine.com/food/bangkoks-best-spots-grilled-and-roasted-korean-bulgogi/"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/food/bangkoks-best-spots-grilled-and-roasted-korean-bulgogi/",
+        "https://www.google.com/maps/place/Hobak/@13.7383429,100.5579682,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee3e3fc369d:0x1d97fe21250816b6!8m2!3d13.7383429!4d100.5579682!16s%2Fg%2F11hbgqm9jj"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open, hours to 06:00, pin). BK Magazine list (7 Jul 2020).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-alexanders-german",
+      "name": "Alexander's German Eatery",
+      "nameThai": null,
+      "kind": "international",
+      "tags": [
+        "pork"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.730102,
+      "lng": 100.590047,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Alexander's German Eatery, Soi Charoen Chai (Ekkamai 12), Bangkok",
+      "placeId": null,
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "Schweinshaxe (roast pork knuckle) 520 THB, Hofbräu lager 240 THB per half litre (Time Out, 2018; likely higher now).",
+      "dishes": [
+        "Schweinshaxe: roast pork knuckle with crisp skin",
+        "Spätzle and baked camembert",
+        "Apple strudel"
+      ],
+      "praise": "Time Out called its pork knuckle one of the best it had tried in Bangkok, with crisp skin and tender, juicy meat; the team came from Bei Otto.",
+      "watchOut": "Bei Otto on Sukhumvit, the old German favourite, is now permanently closed (Google Maps, Oct 2026), so this is the place for pork knuckle in Bangkok.",
+      "description": "A German beer hall and restaurant in an Ekkamai lane, run by the former Bei Otto team. Order the pork knuckle with draught beer.",
+      "openText": "Google Maps 27 Oct 2026: 11:00-22:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/bangkok/restaurants/alexanders-german-eatery"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/alexanders-german-eatery",
+        "https://www.google.com/maps/place/Alexander's+German+Eatery/@13.7301021,100.5900471,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fb312cef3a3:0x5579e8d93727d980!8m2!3d13.7301021!4d100.5900471!16s%2Fg%2F11ggs4kkgm"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.4, open, pin). Time Out review (6 Sep 2018). Bei Otto (1/8 Sukhumvit 49) shows permanently closed on Google Maps.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-smokin-pug",
+      "name": "Smokin' Pug",
+      "nameThai": null,
+      "kind": "grill",
+      "tags": [
+        "pork"
+      ],
+      "area": "bangkok",
+      "district": "Langsuan (Chidlom)",
+      "island": null,
+      "lat": 13.735444,
+      "lng": 100.542268,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Smokin' Pug American BBQ, 92 Lang Suan Road, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "No current prices found online (Oct 2026). Phuket101 puts it in the 3 of 4 price band.",
+      "dishes": [
+        "Baby back ribs",
+        "Brisket and pulled pork",
+        "Burgers"
+      ],
+      "praise": "Phuket101's Langsuan guide (Oct 2026) lists it for ribs, brisket and pulled pork. Seth Lui wrote that the baby back ribs are \"worthy of the hype\", and an r/Thailand thread on ribs in Thailand names it as a favourite.",
+      "watchOut": null,
+      "description": "An American smokehouse on Lang Suan Road, the best-known place in Bangkok for slow-smoked pork ribs.",
+      "openText": "Daily 17:00-23:00 (Phuket101 Oct 2026; Google Maps Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Phuket101: Langsuan guide",
+          "url": "https://www.phuket101.net/langsuan-dining-guide/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/langsuan-dining-guide/",
+        "https://sethlui.com/the-smokin-pug-langsuan-road-bangkok-thailand/",
+        "https://www.google.com/maps/place/Smokin'+Pug+American+BBQ/@13.7354443,100.5422683,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d4ac968243:0xcf982a831db7013d!8m2!3d13.7354443!4d100.5422683!16s%2Fg%2F11b76fpw1c"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, opens 17:00, pin). Phuket101 Langsuan guide (updated 10 Oct 2026). Seth Lui review (title and quote via search result). Reddit mention seen only in a search summary.",
+      "imageCandidates": []
+    },
+    {
+      "id": "bkk-wattana-panich",
+      "name": "Wattana Panich",
+      "nameThai": "วัฒนาพานิช",
+      "kind": "noodles",
+      "tags": [
+        "local-favourite",
+        "budget"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.734182,
+      "lng": 100.587647,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Wattana Panich, 336 Ekkamai Road, Bangkok",
+      "placeId": "ChIJ-eIsmEme4jARJj2YJYuFOAA",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 4853,
+      "reviewsSource": "Google Maps, via the guide's own check of 21 Oct 2026",
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Beef noodle soup about 100 THB, big bowl of stewed beef about 150 THB, goat or tendon in Chinese herbs about 200 THB (Phuket101, Apr 2025).",
+      "dishes": [
+        "Beef noodle soup from a pot kept simmering since about 1974",
+        "Stewed beef and tendon",
+        "Goat in Chinese herbs"
+      ],
+      "praise": "Phuket101 (Apr 2025): third generation, dark rich broth from a giant pot topped up every day. Michelin listed it in 2018-2019.",
+      "watchOut": "Beef and goat, not pork. Closes about 19:00.",
+      "description": "A third-generation shop on Ekkamai Road known for beef noodle soup from a pot that has been kept going for decades. Cheap and quick.",
+      "openText": "Daily about 10:00-19:00 (Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Late lunch or 17:00-18:30.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Phuket101",
+          "url": "https://www.phuket101.net/wattana-panich/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/wattana-panich/",
+        "https://www.google.com/maps/search/?api=1&query=Wattana%20Panich%20Ekkamai&query_place_id=ChIJ-eIsmEme4jARJj2YJYuFOAA"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open 10:00-19:00, pin). Phuket101 (27 Apr 2025). Not in the Michelin 2026 selection.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ong-tong-khao-soi-ari",
+      "name": "Ongtong Khaosoi (Ari)",
+      "nameThai": "อองตอง ข้าวซอย",
+      "kind": "noodles",
+      "tags": [
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Ari",
+      "island": null,
+      "lat": 13.78119,
+      "lng": 100.544393,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ongtong Khaosoi, 31 Phahonyothin Soi 7, Ari, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current prices found online (Oct 2026).",
+      "dishes": [
+        "Khao soi: Chiang Mai curry noodle soup with crispy noodles on top",
+        "Northern Thai dishes"
+      ],
+      "praise": "Time Out's Ari guide (30 May 2026) names it as the place for khao soi in Ari.",
+      "watchOut": null,
+      "description": "A small northern Thai shop on Phahonyothin Soi 7 in Ari for a bowl of khao soi without going to Chiang Mai.",
+      "openText": "Google Maps 27 Oct 2026: 09:00-20:30 (Tuesday).",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: Ari",
+          "url": "https://www.timeout.com/bangkok/things-to-do/ari"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/things-to-do/ari",
+        "https://www.google.com/maps/place/Ongtong+Khaosoi+Ari+Branch/@13.7811904,100.5443932,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c1d97b7694f:0x166492c07fae387f!8m2!3d13.7811904!4d100.5443932!16s%2Fg%2F11f26t58m9"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open, pin). Time Out Ari guide (30 May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "bkk-somboon-seafood-surawong",
+      "name": "Somboon Seafood (Surawong)",
+      "nameThai": "สมบูรณ์โภชนา (สุรวงศ์)",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "michelin",
+        "group-friendly",
+        "booking-needed"
+      ],
+      "area": "bangkok",
+      "district": "Surawong (Bang Rak)",
+      "island": null,
+      "lat": 13.728241,
+      "lng": 100.526632,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Somboon Seafood, 169 Surawong Road, Bangkok",
+      "placeId": "ChIJl-fumtGY4jARTrlCA7w6pgI",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Guide selection, Thailand 2026",
+      "priceLevel": 3,
+      "priceText": "Fried curry crab comes in three sizes; a small one cost 550 THB in May 2024 and may cost more now.",
+      "dishes": [
+        "Fried curry crab (with roe crab or meat crab, by season)",
+        "Prawns baked with glass noodles",
+        "Fried sea bass with fish sauce"
+      ],
+      "praise": "In the Michelin selection again for 2026; Michelin credits fresh seafood, consistent cooking and fair prices, and calls this the original branch.",
+      "watchOut": "Crab is priced by size; ask before you order.",
+      "description": "The Thai-Chinese seafood restaurant known for fried curry crab since 1969. A big room that takes a group of 8 easily.",
+      "openText": "Daily 11:00-22:00 (Michelin Guide and Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Dinner 18:00-20:00.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book a table for eight: 063-209-6969 or reservation@somboonseafood.com."
+      ],
+      "links": [
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somboon-seafood-surawong"
+        },
+        {
+          "label": "Official site",
+          "url": "http://www.somboonseafood.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somboon-seafood-surawong",
+        "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/the-plate-michelin",
+        "http://www.somboonseafood.com/",
+        "https://www.theworldofstreetfood.com/2024/05/somboon-seafoods-legendary-fried-crab.html",
+        "https://www.google.com/maps/search/?api=1&query=Somboon%20Seafood%20Surawong&query_place_id=ChIJl-fumtGY4jARTrlCA7w6pgI"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open 11:00-22:00, pin). Michelin page (2026 selection list, hours, dishes). Price from theworldofstreetfood (May 2024).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-mae-varee",
+      "name": "Mae Varee",
+      "nameThai": "แม่วารี",
+      "kind": "dessert",
+      "tags": [
+        "dessert",
+        "budget"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor",
+      "island": null,
+      "lat": 13.724018,
+      "lng": 100.579332,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Mae Varee, 1 Thonglor (Sukhumvit 55), Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No 2026 menu price found; a review summary (bring-you.info) puts a box at about 150-180 THB.",
+      "dishes": [
+        "Mango sticky rice with a choice of nam dok mai or ok rong mango",
+        "Sticky rice in three colours with salty coconut cream",
+        "Mango smoothies and puddings"
+      ],
+      "praise": "Time Out (May 2025): open since 1987, now run by the third generation, with coconut milk from Surat Thani made fresh every day. WAUG (Jan 2026) picks it as the top mango sticky rice shop in Bangkok.",
+      "watchOut": "Mostly takeaway with little seating. Mango is best from about March to June; in January it is still sold, but ask which mango is best that day.",
+      "description": "The best-known mango sticky rice shop in Bangkok, at the corner of Thonglor by the BTS station. Open from early morning to late evening.",
+      "openText": "Daily 06:00-22:00 (Time Out, May 2025; Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Afternoon, when the rice is fresh.",
+      "score": 5,
+      "pick": true,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: mango sticky rice",
+          "url": "https://timeout.com/bangkok/restaurants/best-stores-and-shophouses-to-get-mango-sticky-rice-in-bangkok"
+        }
+      ],
+      "sources": [
+        "https://timeout.com/bangkok/restaurants/best-stores-and-shophouses-to-get-mango-sticky-rice-in-bangkok",
+        "https://www.waug.com/en/magazines/1897",
+        "https://bring-you.info/en/mae-varee-sweet-sticky-rice-with-mang",
+        "https://www.google.com/maps/place/Mae+Varee/@13.7240179,100.5793321,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fa8d88eba6d:0x2e02b0e0a4659c21!8m2!3d13.7240179!4d100.5793321!16s%2Fg%2F1hd_47m88"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open 06:00-22:00, pin). Time Out (2 May 2025). WAUG dessert guide (8 Jan 2026). Price range from a review summary in a search result (bring-you.info; page blocked to fetch).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-after-you",
+      "name": "After You Dessert Cafe",
+      "nameThai": null,
+      "kind": "dessert",
+      "tags": [
+        "dessert"
+      ],
+      "area": "bangkok",
+      "district": "Thonglor (Soi 13) and Siam Paragon",
+      "island": null,
+      "lat": 13.733704,
+      "lng": 100.58136,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "After You Dessert Cafe, Thonglor Soi 13, Bangkok",
+      "placeId": "ChIJw-rVT1Ke4jAR5fpXHIGROjA",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found online (Oct 2026).",
+      "dishes": [
+        "Thai tea kakigori: shaved ice with Thai tea, tapioca pearls and jelly",
+        "Shibuya honey toast: thick toast with butter, syrup and ice cream"
+      ],
+      "praise": "WAUG (Jan 2026) names it one of the Bangkok dessert places to visit, and notes the long waits.",
+      "watchOut": "Queues in the evening. The mall branches give you a ticket so you can shop while you wait.",
+      "description": "A Bangkok dessert chain that started on Thonglor, famous for kakigori shaved ice and Shibuya honey toast. Branches at Siam Paragon, Siam Center and other malls.",
+      "openText": "Thonglor Soi 13: 11:00-23:00; Siam Paragon: 10:00-22:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Mid-afternoon.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Official site",
+          "url": "https://www.afteryoudessertcafe.com/"
+        }
+      ],
+      "sources": [
+        "https://www.waug.com/en/magazines/1897",
+        "https://www.afteryoudessertcafe.com/",
+        "https://www.google.com/maps/place/After+You+Dessert+Cafe+-+Thonglor+13/data=!4m7!3m6!1s0x30e29e524fd5eac3:0x303a91811c57fae5!8m2!3d13.7337038!4d100.5813601!16s%2Fg%2F1th5fxf6!19sChIJw-rVT1Ke4jAR5fpXHIGROjA"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (Thonglor 13: 4.4, open until 23:00, pin; Siam Paragon 4.4). WAUG dessert guide (8 Jan 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-yok-sod-paragon",
+      "name": "Yok Sod (Siam Paragon)",
+      "nameThai": "หยกสด",
+      "kind": "dessert",
+      "tags": [
+        "dessert"
+      ],
+      "area": "bangkok",
+      "district": "Siam",
+      "island": null,
+      "lat": 13.746491,
+      "lng": 100.534577,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Yok Sod Thai dessert, Siam Paragon G floor, Bangkok",
+      "placeId": null,
+      "rating": 4.9,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No prices found online (Oct 2026).",
+      "dishes": [
+        "Inthanin: pandan balls in coconut milk",
+        "Green coconut pudding"
+      ],
+      "praise": "Time Out (May 2025) lists it among the 7 best Thai dessert shops in Bangkok.",
+      "watchOut": null,
+      "description": "A Thai dessert counter in the Siam Paragon food hall that makes sweets with real pandan. Good for a quick taste of khanom Thai while shopping.",
+      "openText": "Daily 10:00-22:00 with the mall (Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Any time the mall is open.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: Thai desserts",
+          "url": "https://www.timeout.com/bangkok/restaurants/the-best-thai-dessert-shops-in-bangkok"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/the-best-thai-dessert-shops-in-bangkok",
+        "https://www.google.com/maps/place/Thai+dessert+%E0%B8%AB%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%94+%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%83%E0%B8%9A%E0%B9%80%E0%B8%95%E0%B8%A2%E0%B9%81%E0%B8%97%E0%B9%89100%25+-+Siam+Paragon+(%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B8%9E%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%AD%E0%B8%99)/@13.7464914,100.5345774,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f3c6f658b51:0x1199f2ab43a023ec!8m2!3d13.7464914!4d100.5345774!16s%2Fg%2F11qpxkvtm9"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.9 on a takeaway counter listing; the high score is backed by Time Out, May 2025). Open, pin.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-wanlamun",
+      "name": "Wanlamun",
+      "nameThai": "หวานละมุน",
+      "kind": "dessert",
+      "tags": [
+        "dessert",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Chan Road)",
+      "island": null,
+      "lat": 13.70616,
+      "lng": 100.526502,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Wanlamun, 95 Chan Road, Sathorn, Bangkok",
+      "placeId": null,
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No prices found online (Oct 2026).",
+      "dishes": [
+        "Khanom tom: coconut-filled rice balls",
+        "Khanom sai sai: coconut cream wrapped in banana leaf",
+        "Khanom chan: layer cake"
+      ],
+      "praise": "Time Out (May 2025) lists it among the 7 best Thai dessert shops in Bangkok for traditional steamed sweets.",
+      "watchOut": null,
+      "description": "A small traditional Thai sweet shop on Chan Road that makes old-style khanom in banana leaf.",
+      "openText": "Google Maps 27 Oct 2026: 08:00-16:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Morning, when the trays are full.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: Thai desserts",
+          "url": "https://www.timeout.com/bangkok/restaurants/the-best-thai-dessert-shops-in-bangkok"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/restaurants/the-best-thai-dessert-shops-in-bangkok",
+        "https://www.google.com/maps/place/Wanlamun+%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99/@13.7061599,100.5265016,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29f2de5b3c41f:0x4f15db688949b96c!8m2!3d13.7061599!4d100.5265016!16s%2Fg%2F11cs1kstfh"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.6, closed Tue evening, opens 08:00, pin). Time Out (22 May 2025).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-jae-wan-banthat-thong",
+      "name": "Jae Wan",
+      "nameThai": "เจ๊หวาน",
+      "kind": "dessert",
+      "tags": [
+        "dessert",
+        "late-night",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Samyan (Banthat Thong Road)",
+      "island": null,
+      "lat": 13.739649,
+      "lng": 100.522222,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Jae Wan, 1700 Banthat Thong Road, Bangkok",
+      "placeId": null,
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No prices found online (Oct 2026).",
+      "dishes": [
+        "Thai-Chinese desserts, hot or cold, with fruit, beans and tofu pudding"
+      ],
+      "praise": "Pixidia's Banthat Thong guide (updated Oct 2026) names it for Thai-Chinese desserts.",
+      "watchOut": null,
+      "description": "A Thai-Chinese dessert shop on Banthat Thong Road, the late-night food street near Chulalongkorn University. Open until about 23:30.",
+      "openText": "Google Maps 27 Oct 2026: 13:45-23:30 (Tuesday).",
+      "days": [],
+      "bestTime": "After dinner on Banthat Thong.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Banthat Thong Road also has milk-dessert shops open until about 01:00 (Nueng Nom Nua, Mother Cow) and egg-tart and khanom khai stalls (Phuket101, Jun 2026)."
+      ],
+      "links": [
+        {
+          "label": "Pixidia: Banthat Thong",
+          "url": "https://pixidia.com/en/bangkok-off-beaten-path-2026-banthat-thong-street-food/"
+        }
+      ],
+      "sources": [
+        "https://pixidia.com/en/bangkok-off-beaten-path-2026-banthat-thong-street-food/",
+        "https://www.phuket101.net/banthat-thong-road/",
+        "https://www.google.com/maps/place/Jae+Wan/@13.7396492,100.5222225,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299293ebc3217:0xdb2ef36a28b04a9e!8m2!3d13.7396492!4d100.5222225!16s%2Fg%2F1ydxc43jr"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, open until 23:30, pin). Pixidia guide (updated 18 Oct 2026). Phuket101 Banthat Thong page (16 Jun 2026) for the other late dessert shops.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-landhaus-bakery-ari",
+      "name": "Landhaus Bakery",
+      "nameThai": null,
+      "kind": "bakery",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Ari",
+      "island": null,
+      "lat": 13.777467,
+      "lng": 100.541117,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Landhaus Bakery, 18 Phahonyothin Soi 5, Ari, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Wholewheat sourdough 120 THB, sourdough baguette 80 THB, chocolate brioche bun 60 THB, apple crumble 160 THB (Time Out, Nov 2024).",
+      "dishes": [
+        "Sourdough, baguette and rye-spelt breads",
+        "Chocolate brioche buns",
+        "Apple crumble"
+      ],
+      "praise": "Time Out lists it among Bangkok's best bakeries (Nov 2024) and best sourdough; its Ari guide (May 2026) names it for rustic breads.",
+      "watchOut": null,
+      "description": "A bakery and cafe in an Ari lane known for sourdough and rye breads, good for breakfast and bread to take away.",
+      "openText": "Google Maps 27 Oct 2026: open until 19:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Morning.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: bakeries",
+          "url": "https://www.timeout.com/bangkok/bakery-shops"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/bakery-shops",
+        "https://www.timeout.com/bangkok/restaurants/best-bakeries-to-find-perfect-sourdough-bread",
+        "https://www.timeout.com/bangkok/things-to-do/ari",
+        "https://www.google.com/maps/place/Landhaus+Bakery/@13.777467,100.5411168,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ea7d4284753:0xad865163f71ec40!8m2!3d13.777467!4d100.5411168!16s%2Fg%2F11ggs79763"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open until 19:00, pin). Time Out bakeries list (5 Nov 2024) and Ari guide (30 May 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-bartels",
+      "name": "Bartels",
+      "nameThai": null,
+      "kind": "bakery",
+      "tags": [
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Sathorn (Soi 3) and Sukhumvit",
+      "island": null,
+      "lat": 13.720304,
+      "lng": 100.537974,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Bartels Sathorn, 167/4-6 Sathorn Soi 3 (Suan Phlu), Bangkok",
+      "placeId": "ChIJ8XTMPAKf4jARRYdW8leszPU",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Organic sourdough loaf 250 THB, double espresso 100 THB (Time Out, Nov 2024).",
+      "dishes": [
+        "Two-day fermented sourdough",
+        "Cinnamon rolls",
+        "Sourdough sandwiches"
+      ],
+      "praise": "Time Out: \"ask any Bangkok bread person where to go for sourdough and Bartels usually comes up fast\".",
+      "watchOut": null,
+      "description": "A Scandinavian-style sourdough bakery with cafes in Sathorn Soi 3 and on Sukhumvit, plus a branch at One Bangkok.",
+      "openText": "Sathorn and Sukhumvit: 07:00-18:00 (Google Maps, 27 Oct 2026).",
+      "days": [],
+      "bestTime": "Breakfast.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: bakeries",
+          "url": "https://www.timeout.com/bangkok/bakery-shops"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/bakery-shops",
+        "https://www.timeout.com/bangkok/restaurants/best-sourdough-bakeries-near-lumpini-park",
+        "https://www.google.com/maps/place/BARTELS+Sathorn+-+Sourdough+Sandwiches,+Coffee+%26+Juicery/data=!4m7!3m6!1s0x30e29f023ccc74f1:0xf5ccac57f2568745!8m2!3d13.7203042!4d100.5379742!16s%2Fg%2F11s763r_72!19sChIJ8XTMPAKf4jARRYdW8leszPU"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (Sathorn 4.6 and Sukhumvit 4.5, both open, pin on Sathorn). Time Out bakeries list (5 Nov 2024) and sourdough list.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-conkeys-bakery",
+      "name": "Conkey's Bakery",
+      "nameThai": null,
+      "kind": "bakery",
+      "tags": [
+        "pork",
+        "breakfast"
+      ],
+      "area": "bangkok",
+      "district": "Ekkamai",
+      "island": null,
+      "lat": 13.733053,
+      "lng": 100.590716,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Conkey's Bakery, 72 Ekkamai Soi 22, Bangkok",
+      "placeId": null,
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Meat pie 200 THB, sausage roll 130 THB, almond chocolate twist 140 THB, raspberry croissant 160 THB (Time Out, Nov 2024).",
+      "dishes": [
+        "Sausage rolls and meat pies",
+        "Croissants and pastries"
+      ],
+      "praise": "Time Out lists it among Bangkok's best bakeries (Nov 2024). Google rating 4.7.",
+      "watchOut": null,
+      "description": "A bakery deep in Ekkamai known for its pork sausage rolls and meat pies as much as its pastries.",
+      "openText": "Google Maps 27 Oct 2026: 08:00-17:00 (Tuesday).",
+      "days": [],
+      "bestTime": "Morning, before the pies sell out.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Time Out: bakeries",
+          "url": "https://www.timeout.com/bangkok/bakery-shops"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/bakery-shops",
+        "https://www.google.com/maps/place/Conkey's+Bakery/@13.7330531,100.5907164,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29e4cbb75eb43:0xbc02728365b8af29!8m2!3d13.7330531!4d100.5907164!16s%2Fg%2F11b7xs3y18"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.7, 08:00-17:00, pin). Time Out bakeries list (5 Nov 2024).",
+      "imageCandidates": []
+    },
+    {
+      "id": "bkk-chatuchak-weekend-market",
+      "name": "Chatuchak Weekend Market (JJ): food stalls",
+      "nameThai": "ตลาดนัดจตุจักร",
+      "kind": "market",
+      "tags": [
+        "dessert",
+        "pork",
+        "budget",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Chatuchak",
+      "island": null,
+      "lat": 13.799781,
+      "lng": 100.550425,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Chatuchak Weekend Market, Kamphaeng Phet 2 Road, Bangkok",
+      "placeId": "ChIJ3fiD6BSc4jARS324hNeR8ZE",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Coconut ice cream at Coco JJ from 60 THB; paella at Viva 8 160 THB; pork boat noodles at Rattanakosin Boat Noodles 60 THB; mango sticky rice ice cream at Celin 90 THB; nasi padang or biryani at Muslim Food from 50 THB (Time Out, Jan 2025).",
+      "dishes": [
+        "Coco JJ (Section 1, Soi 36): coconut ice cream in the shell",
+        "Viva 8 (Section 8): giant-pan paella",
+        "Rattanakosin Boat Noodles (Zone A 48): pork boat noodles",
+        "Muslim Food (Section 12): biryani and nasi padang",
+        "Grilled pork skewers (moo ping) and mango sticky rice from stalls across the market"
+      ],
+      "praise": "Time Out's Jan 2025 guide lists these stalls; Coco JJ has served coconut ice cream since 2008 and Viva 8's paella is cooked in a giant pan by chef Fernando (TAGTHAI, 2025).",
+      "watchOut": "Whole market only Sat-Sun 09:00-18:00. Very hot after midday. Viva 8 has only a 4.0 Google rating: go for the show more than the food.",
+      "description": "Bangkok's huge weekend market, with good snacks between the shopping. For a real meal, cross the road to Or Tor Kor Market.",
+      "openText": "Whole market Sat-Sun 09:00-18:00; on weekdays only small parts open (chatuchakmarket.org).",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Saturday or Sunday 09:00-11:00.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Eat a proper lunch at Or Tor Kor Market across Kamphaeng Phet Road.",
+        "Coco JJ is closed on weekdays."
+      ],
+      "links": [
+        {
+          "label": "Time Out: Chatuchak guide",
+          "url": "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide",
+        "https://www.tagthai.com/explore/p/fill-your-stomach-to-bursting-point-at-chatuchak-weekend-market",
+        "https://www.chatuchakmarket.org/opening-times/",
+        "https://www.google.com/maps/search/?api=1&query=Chatuchak%20Weekend%20Market&query_place_id=ChIJ3fiD6BSc4jARS324hNeR8ZE"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (market 4.4; Coco JJ 4.5, Viva 8 4.0, both trading). Time Out Chatuchak guide (10 Jan 2025) for stalls and prices. TAGTHAI (2025) for Viva 8.",
+      "imageCandidates": []
+    },
+    {
+      "id": "bkk-jodd-fairs-ratchada",
+      "name": "Jodd Fairs Ratchada (night market)",
+      "nameThai": "จ๊อดแฟร์ รัชดา",
+      "kind": "market",
+      "tags": [
+        "pork",
+        "seafood",
+        "late-night",
+        "budget",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Ratchada",
+      "island": null,
+      "lat": 13.76792,
+      "lng": 100.571198,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Jodd Fairs Ratchada, Ratchadaphisek Road, Bangkok",
+      "placeId": "ChIJk31AdLKf4jARXwt8iVGkqwI",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Leng saap pork spine 180 THB (medium, for two), 250 THB (large), 350 THB (extra large); grilled river prawns 200-450 THB; salt-crusted fish 250-400 THB; pork skewers 15-40 THB each; dinner for two 600-1,200 THB with drinks (Travjoy 2026 guide).",
+      "dishes": [
+        "Leng saap \"volcano ribs\": a heap of pork spine in sour, spicy broth",
+        "Grilled river prawns and salt-crusted grilled fish",
+        "Pork skewers and grilled meats",
+        "Mango sticky rice, khanom krok and shaved ice in the dessert zone"
+      ],
+      "praise": "Travjoy (2026) calls it Bangkok's busiest night market for eating. At the old Rama 9 site the leng saap stall, Leng Zapp Volcano Ribs, drew a steady crowd; a 2026 Chinese-language guide still lists volcano ribs among the popular dishes at Ratchada.",
+      "watchOut": "Some map apps still show the closed Rama 9 site: go to Ratchadaphisek Road next to Big C. Most stalls take cash or Thai QR only.",
+      "description": "The busiest food night market in Bangkok, with about 800 stalls, mostly food, plus bars and live music. The best group evening for pork in the city.",
+      "openText": "Daily 17:00-01:00 (official Facebook page; Google Maps Oct 2026).",
+      "days": [],
+      "bestTime": "17:30-19:00 for free tables; packed after 20:00 on Fri-Sat.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Order leng saap one size smaller than you think.",
+        "MRT Thailand Cultural Centre exit 4, then 3 minutes on foot."
+      ],
+      "links": [
+        {
+          "label": "Official Facebook page",
+          "url": "https://www.facebook.com/JoddFairs.Ratchada/"
+        }
+      ],
+      "sources": [
+        "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+        "https://www.facebook.com/JoddFairs.Ratchada/",
+        "https://www.google.com/maps/search/?api=1&query=Jodd%20Fairs%20Ratchada&query_place_id=ChIJk31AdLKf4jARXwt8iVGkqwI"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.2, opens 17:00, hours 17:00-01:00, pin). Travjoy 2026 guide (dishes and prices; it names no stalls). Stall name from an older Rama 9 report via a search result.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-or-tor-kor-market",
+      "name": "Or Tor Kor Market",
+      "nameThai": "ตลาด อ.ต.ก.",
+      "kind": "market",
+      "tags": [
+        "dessert",
+        "pork",
+        "seafood",
+        "breakfast",
+        "local-favourite"
+      ],
+      "area": "bangkok",
+      "district": "Chatuchak",
+      "island": null,
+      "lat": 13.797128,
+      "lng": 100.547533,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Or Tor Kor Market, 101 Kamphaeng Phet Road, Bangkok",
+      "placeId": null,
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Khao kha moo (braised pork leg on rice) 80 THB at the food court (The World of Street Food, May 2024).",
+      "dishes": [
+        "Khao kha moo from the food court",
+        "Thai desserts at Khao Pee Nong, the main branch of a Thai sweet shop: luk chup, thong yip, sangkhaya with sticky rice",
+        "Top-grade mangoes, durian and other fruit",
+        "Ready-to-eat curries and grilled seafood"
+      ],
+      "praise": "The World of Street Food (May 2024) calls it clean, well run and one of the best places in Bangkok for produce, and the pork leg very tender. Time Out (May 2025) lists Khao Pee Nong, whose main shop is here. Phuket101 (Jul 2026) suggests it for breakfast or lunch on a Chatuchak day.",
+      "watchOut": "Prices are higher than at ordinary markets, for better quality.",
+      "description": "One of Bangkok's best fresh markets, across the road from Chatuchak, with a food court for lunch, Thai desserts and top-quality fruit.",
+      "openText": "Daily 06:00-18:00 (Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Weekend morning, together with Chatuchak.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "MRT Kamphaeng Phet is next to it.",
+        "Buy mango and durian here rather than in tourist areas."
+      ],
+      "links": [
+        {
+          "label": "The World of Street Food",
+          "url": "https://www.theworldofstreetfood.com/2024/05/khao-kha-moo-or-stewed-pork-leg-at-or.html"
+        }
+      ],
+      "sources": [
+        "https://www.theworldofstreetfood.com/2024/05/khao-kha-moo-or-stewed-pork-leg-at-or.html",
+        "https://www.timeout.com/bangkok/restaurants/the-best-thai-dessert-shops-in-bangkok",
+        "https://www.phuket101.net/bangkok/chatuchak/",
+        "https://www.google.com/maps/place/Or+Tor+Kor+Market/@13.7971283,100.5475328,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29c141ea782c3:0xef703d7f3769af76!8m2!3d13.7971283!4d100.5475328!16s%2Fg%2F11b621yr9l"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.3, open 06:00-18:00, pin; Kanomthai Kaopeenong 4.5 listed on Kamphaeng Phet Road). The World of Street Food (6 May 2024). Time Out Thai desserts (22 May 2025). Phuket101 Chatuchak page (15 Jul 2026).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-pier-21-terminal-21",
+      "name": "Pier 21 food court (Terminal 21)",
+      "nameThai": null,
+      "kind": "street-food",
+      "tags": [
+        "budget",
+        "pork",
+        "group-friendly"
+      ],
+      "area": "bangkok",
+      "district": "Asok",
+      "island": null,
+      "lat": 13.737625,
+      "lng": 100.56062,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Pier 21 food court, Terminal 21, Sukhumvit Road, Asok, Bangkok",
+      "placeId": null,
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Stewed pork leg rice with egg 37 THB, pork leg with roast pork 47 THB, pork leg with intestine and two eggs 89 THB at Kha Moo Nakornchaisri, stall 9 (thai.lt, Mar 2026).",
+      "dishes": [
+        "Khao kha moo at Kha Moo Nakornchaisri (stall 9)",
+        "Noodles, curries and som tam from dozens of counters"
+      ],
+      "praise": "thai.lt (Mar 2026) reviews its stalls one by one; prices stay close to street level, in an air-conditioned mall at Asok BTS. Google rating 4.5.",
+      "watchOut": "Very busy 12:00-13:00 with office workers.",
+      "description": "The top-floor food court of Terminal 21 at Asok, with Thai street dishes at local prices. Easy for 8 people who all want something different.",
+      "openText": "Daily 10:00-22:00 (Google Maps, Oct 2026).",
+      "days": [],
+      "bestTime": "Lunch or early dinner; busy 12:00-13:00.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "thai.lt review",
+          "url": "https://www.thai.lt/thai-food/reviews/pier-21-food-court/506-kha-moo-nakornchaisri-restaurant-at-pier-21-food-court-no-9"
+        }
+      ],
+      "sources": [
+        "https://www.thai.lt/thai-food/reviews/pier-21-food-court/506-kha-moo-nakornchaisri-restaurant-at-pier-21-food-court-no-9?rCH=2",
+        "https://www.google.com/maps/place/Pier+21/@13.737625,100.5606201,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ee39e563b0b:0x33ce8f75edc2c9c5!8m2!3d13.737625!4d100.5606201!16s%2Fg%2F11c3286pb5"
+      ],
+      "verification": "Google Maps 27 Oct 2026 (4.5, open 10:00-22:00, pin). thai.lt stall review (updated 24 Mar 2026).",
+      "imageCandidates": []
+    }
+  ],
+  "existingChecked": [
+    {
+      "id": "bkk-somboon-seafood-surawong",
+      "verdict": "kept",
+      "note": "Open daily 11:00-22:00 on Google Maps (4.2, 27 Oct 2026); in the Michelin 2026 selection. Refreshed as a food item."
+    },
+    {
+      "id": "bkk-wattana-panich",
+      "verdict": "kept",
+      "note": "Open 10:00-19:00 on Google Maps (4.2, 27 Oct 2026). Not in Michelin 2026; Phuket101 Apr 2025 prices kept."
+    },
+    {
+      "id": "bkk-chatuchak-weekend-market",
+      "verdict": "kept",
+      "note": "Food stalls added from Time Out Jan 2025: Coco JJ, Viva 8, Rattanakosin Boat Noodles, Muslim Food, Celin. For a full lunch, Or Tor Kor Market across the road is added as its own item."
+    },
+    {
+      "id": "bkk-jodd-fairs-ratchada",
+      "verdict": "kept",
+      "note": "Open 17:00-01:00 on Google Maps (4.2). No 2026 source names the stalls; dishes and prices from Travjoy 2026 (leng saap, river prawns, salt-crusted fish, pork skewers)."
+    },
+    {
+      "id": "bkk-ari",
+      "verdict": "kept",
+      "note": "Area card only, not changed. Its food places are now items: Lay Lao, Ongtong Khaosoi, Prik-Yuak, Landhaus Bakery and Areeya Mu Kratha (all checked open on Google Maps, 27 Oct 2026). Aim Bangkok was not checked."
+    }
+  ],
+  "notIncluded": [
+    {
+      "name": "Jeh O Chula (Banthat Thong, tom yum mama and crispy pork)",
+      "reason": "Google Maps marks it \"Temporarily closed\" on 27 Oct 2026 and its Michelin page is gone from the 2026 guide. Phuket101 (Sep 2026) still gave 16:00-00:00. Check again in December; if it has reopened it should go in as a late-night pork pick."
+    },
+    {
+      "name": "Bei Otto (Sukhumvit, pork knuckle)",
+      "reason": "Permanently closed on Google Maps (27 Oct 2026). Alexander's German Eatery, run by its old team, is in instead."
+    },
+    {
+      "name": "Best Beef Sukhumvit (On Nut, moo kata buffet)",
+      "reason": "Permanently closed on Google Maps (27 Oct 2026)."
+    },
+    {
+      "name": "Charoen Saeng Silom (khao kha moo)",
+      "reason": "On Charoen Krung Soi 49, the riverside region of the other Bangkok researcher."
+    },
+    {
+      "name": "Chim by Siam Wisdom",
+      "reason": "One Michelin star, but in Dusit, the other researcher's region."
+    },
+    {
+      "name": "Phed Phed Bistro (Isaan, Bib Gourmand)",
+      "reason": "The Bib branch is in Taling Chan on the west side, outside this region."
+    },
+    {
+      "name": "Mae Duan Thai Dessert (Samyan)",
+      "reason": "In Time Out's 2025 list but only 3.6 on Google Maps (27 Oct 2026)."
+    },
+    {
+      "name": "Isan Rot Det (Rangnam)",
+      "reason": "Time Out pick (Jun 2025) but only 3.8 on Google Maps; Som Tam Jay So and Somtum Der are stronger."
+    },
+    {
+      "name": "Hai Som Tam Convent, Somtam Nua, Baan Somtum Sathorn",
+      "reason": "Solid Isaan places (Google 4.2-4.4), but weaker evidence than the five Isaan items kept."
+    },
+    {
+      "name": "Thai Niyom (Ploenchit), Jaan (Chan Road), Janhom (Ramkhamhaeng)",
+      "reason": "Bib Gourmand 2026, but enough Bib Thai places were kept; Janhom is far east."
+    },
+    {
+      "name": "Kamoo Bonkai (Rama IV, khao kha moo)",
+      "reason": "Time Out 2024 pick, Google 4.2; Hongte and Arunwan cover pork leg and pork noodles in the same area."
+    },
+    {
+      "name": "Phed Mark (Mark Wiens's pad kra pao shop, Phra Khanong)",
+      "reason": "Only 4.0 on Google Maps; mixed reviews."
+    },
+    {
+      "name": "Kuang Seafood (Ratchada 10)",
+      "reason": "Open until 23:30 with a 4.4 Google rating, but no recent independent source found in this round."
+    },
+    {
+      "name": "Huai Khwang Night Market",
+      "reason": "Only old sources (Time Out 2017); Google now lists 11:00-22:00, so it is no longer the late-night spot it was."
+    },
+    {
+      "name": "Eathai (Central Embassy) and Gourmet Eats (Siam Paragon)",
+      "reason": "Mall food halls with Google 4.3-4.4 but no recent independent praise found; Pier 21 kept."
+    },
+    {
+      "name": "Thong Smith boat noodles (EmQuartier, Central Embassy)",
+      "reason": "Google 4.5, but no independent source found in this round."
+    },
+    {
+      "name": "Doo Rae and Kosirae (Korean BBQ)",
+      "reason": "Both trading (Google 4.6 and 4.4) but evidence is from 2020; Banjoo and Hobak kept."
+    },
+    {
+      "name": "Mai Wang Yang Yoo Thai BBQ (Thonglor)",
+      "reason": "Google 4.8 with no independent backing found; possibly inflated ratings."
+    },
+    {
+      "name": "Tonkatsu Aoki (Langsuan)",
+      "reason": "Google 4.9 and a Phuket101 listing only; not enough independent praise."
+    },
+    {
+      "name": "Nueng Nom Nua (Banthat Thong, milk desserts until 01:00)",
+      "reason": "Google 4.0; mentioned as a tip in the Jae Wan item instead."
+    },
+    {
+      "name": "INDDEE, Gaa, Bo.lan, Saneh Jaan, Wana Yook (Michelin starred)",
+      "reason": "All open and starred in 2026 (Google 4.1-4.8), left out to keep the special dinners to the seven most relevant."
+    },
+    {
+      "name": "Holey Artisan Bakery, Butter Bakery, Susan Croissant",
+      "reason": "Good bakeries, but weaker or older evidence than Landhaus, Bartels and Conkey's."
+    }
+  ]
+}

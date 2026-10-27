@@ -90,6 +90,30 @@ const adult = await p.evaluate(async () => {
   return out
 })
 check('18+ cards only under 18+, with the Where row', !adult || (adult.all === 0 && adult.adult > 10 && adult.other === 0 && adult.where && !adult.dur), JSON.stringify(adult))
+// Places → Food: its cards stay out of All; under Food the Where and Kind rows replace the length row, Pork shows only
+// pork places, and a link to a food card opens it under Food
+const foodTab = await p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const bar = document.querySelector('[data-toolbar="places"]'), chip = bar.querySelector('.chip[data-group="tier"][data-value="food"]')
+  if (!chip) return null
+  const shown = () => [...document.querySelectorAll('[data-list="places"] > .card')].filter((c) => !c.hidden)
+  const row = (g) => bar.querySelector(`.chip[data-group="${g}"]`).closest('.chips').hidden
+  const all = shown().filter((c) => c.dataset.tier === 'food').length
+  chip.click(); await wait(150)
+  // in the order on screen (CSS order: the markets' own cards sit higher in the list)
+  const on = shown().map((c, i) => [c, Number(getComputedStyle(c).order) || 0, i]).sort((a, b) => a[1] - b[1] || a[2] - b[2]).map(([c]) => c)
+  const out = { all, food: on.length, other: on.filter((c) => !c.dataset.tier.split(' ').includes('food')).length, markets: on.filter((c) => !c.classList.contains('food-card') && !c.classList.contains('basics')).length, first: on[0]?.id, where: !row('fwhere'), kind: !row('fkind'), dur: !row('dur') }
+  const pork = bar.querySelector('.chip[data-group="fkind"][data-value="pork"]')
+  if (pork) { pork.click(); await wait(150); out.pork = shown().filter((c) => c.classList.contains('food-card')).every((c) => c.dataset.fkind.split(' ').includes('pork')); out.porkN = shown().length }
+  const last = on.filter((c) => c.classList.contains('food-card')).at(-1)
+  bar.querySelector('.chip[data-group="tier"][data-value="all"]').click(); await wait(150)
+  out.reset = row('fwhere') && bar.querySelector('.chip[data-group="fkind"][aria-pressed="true"]').dataset.value === 'all'
+  location.hash = last.id; await wait(400)
+  out.link = { id: last.id, shown: !last.hidden, tab: bar.querySelector('.chip[data-group="tier"][aria-pressed="true"]').dataset.value }
+  bar.querySelector('.chip[data-group="tier"][data-value="all"]').click(); location.hash = 'places'; await wait(150)
+  return out
+})
+check('Food cards only under Food, with the Where and Kind rows; Pork shows pork places; a link to one opens it under Food', !foodTab || (foodTab.all === 0 && foodTab.food > 20 && foodTab.other === 0 && foodTab.first === 'food-basics' && foodTab.where && foodTab.kind && !foodTab.dur && foodTab.pork !== false && foodTab.porkN > 3 && foodTab.reset && foodTab.link.shown && foodTab.link.tab === 'food'), JSON.stringify(foodTab))
 const evShare = await p.evaluate(async () => {
   location.hash = 'events'; await new Promise((r) => setTimeout(r, 300))
   const card = document.querySelector('#events .card[id^="ev-"]')

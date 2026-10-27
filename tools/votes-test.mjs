@@ -1053,7 +1053,7 @@ const amdPaid = await A.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))
   const btn = document.querySelector('#spend-me [data-settle-from="Lara"]')
   if (!btn) return { none: true, card: document.getElementById('spend-me').textContent }
-  const shown = btn.parentElement.querySelector('.move-open b').textContent, to = btn.dataset.settleTo, cents = Number(btn.dataset.cents)
+  const shown = btn.closest('.move').querySelector('.move-open b').textContent, to = btn.dataset.settleTo, cents = Number(btn.dataset.cents)
   btn.click(); await wait(1000)
   const x = JSON.parse(localStorage.getItem('pg:spend')).find((y) => y.kind === 'pay' && y.paid === 'Lara' && y.split[0] === to)
   return { shown, cents, saved: x && { amount: x.amount, cur: x.cur, rate: x.rate }, paidBack: document.querySelectorAll('#spend-paid .xrow').length }
@@ -1077,12 +1077,44 @@ const part = await A.p.evaluate(async (thbOf) => {
   const filled = { title: document.getElementById('sheet-title').textContent, from: f.querySelector('#sp-paid-val').textContent, fixed: f.querySelector('#sp-paid-row').disabled, to: f.querySelector('[data-to][aria-pressed="true"]')?.dataset.to, amount: Number(f.querySelector('#sp-amount').value.replace(/,/g, '')) }
   const half = Math.round(owed / 2), a = f.querySelector('#sp-amount'); a.value = String(half); a.dispatchEvent(new Event('input', { bubbles: true }))
   f.querySelector('#sp-save').click(); await wait(900)
-  return { from, to, owed, half, filled, before, waiting: balOf(from) }
+  return { from, to, owed, half, filled, before, waiting: balOf(from), toast: document.querySelector('.toast')?.textContent || '' }
 }, thbOf.toString())
 await approveAll()
 await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
 part.after = part.none ? 0 : await A.p.evaluate((thbOf, from) => new Function('p', 'return (' + thbOf + ')(p)')(from), thbOf.toString(), part.from)
-check('a tap on your payment to settle opens it filled in, from you; a part payment counts for that much once confirmed', !part.none && part.from === 'Lara' && part.filled.title === 'New payment' && part.filled.from.includes('You') && part.filled.fixed && part.filled.to === part.to && Math.round(part.filled.amount) === part.owed && part.waiting === part.before && Math.abs(part.after - part.before - part.half) <= 1, JSON.stringify(part))
+check('a tap on your payment to settle opens it filled in, from you; a part payment counts for that much once confirmed, and the toast says what is left', !part.none && part.from === 'Lara' && part.filled.title === 'New payment' && part.filled.from.includes('You') && part.filled.fixed && part.filled.to === part.to && Math.round(part.filled.amount) === part.owed && part.waiting === part.before && Math.abs(part.after - part.before - part.half) <= 1 && /^You paid [A-Z][a-z]+( [A-Z])? [\d,.]+\sTHB · [\d,]+\sTHB left/.test(part.toast), JSON.stringify(part))
+// paid in part: the rest stays with the same person, with a bar and what is paid; Pay part opens the sheet empty, with
+// what is owed, Half and All and what is left after; All settles it to the satang (once confirmed, it is gone)
+const prog = await A.p.evaluate(async (from, to) => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const thb = (t) => Number(((t || '').match(/([\d,.]+)\sTHB/) || [0, '0'])[1].replace(/,/g, ''))
+  const li = [...document.querySelectorAll('#spend-settle .move')].find((l) => l.querySelector('[data-part-from="' + from + '"][data-part-to="' + to + '"]'))
+  if (!li) return { none: true, moves: document.getElementById('spend-settle').textContent }
+  const out = { left: thb(li.querySelector('.move-open b').textContent), done: thb(li.querySelector('.move-done small')?.textContent), bar: li.querySelector('.move-bar i')?.style.width || '',
+    partRow: [...document.querySelectorAll('#spend-paid .xrow')].some((r) => /part payment/.test(r.textContent)) }
+  out.before = JSON.parse(localStorage.getItem('pg:spend')).filter((y) => y.kind === 'pay' && y.paid === from && y.split[0] === to).length
+  li.querySelector('[data-part-from]').click(); await wait(200)
+  const f = document.getElementById('spend-form'), a = f.querySelector('#sp-amount'), after = () => f.querySelector('#sp-owe-after').textContent
+  out.open = { amount: a.value, focused: document.activeElement === a, owe: f.querySelector('#sp-owe').hidden ? '' : f.querySelector('#sp-owe-t').textContent + ' ' + f.querySelector('#sp-owe-v').textContent, to: f.querySelector('#sp-to-val').textContent, toBox: f.querySelector('#sp-to-box').hidden }
+  f.querySelector('[data-part="half"]').click(); await wait(50)
+  out.half = { amount: thb(a.value + ' THB'), after: after(), pressed: f.querySelector('[data-part="half"]').getAttribute('aria-pressed') }
+  a.value = String(out.left * 3); a.dispatchEvent(new Event('input', { bubbles: true })); await wait(50)
+  out.over = { after: after(), pressed: f.querySelectorAll('[data-part][aria-pressed="true"]').length }
+  f.querySelector('[data-part="all"]').click(); await wait(50)
+  out.all = { amount: thb(a.value + ' THB'), after: after() }
+  f.querySelector('#sp-save').click(); await wait(900)
+  out.toast = document.querySelector('.toast')?.textContent || ''
+  out.waits = !!document.querySelector('#spend-settle .move[data-from="' + from + '"][data-to="' + to + '"] .wait-pill')
+  return out
+}, part.from, part.to)
+await approveAll()
+await A.p.evaluate(() => window.dispatchEvent(new Event('focus'))); await sleep(1300)
+Object.assign(prog, await A.p.evaluate((from, to) => ({ gone: !document.querySelector('#spend-settle .move[data-from="' + from + '"][data-to="' + to + '"]'),
+  saved: JSON.parse(localStorage.getItem('pg:spend')).filter((y) => y.kind === 'pay' && y.paid === from && y.split[0] === to).length }), part.from, part.to))
+check('paid in part: the rest stays with the same person, with a bar and what is paid; it is a part payment in Paid back', !prog.none && Math.abs(prog.left - (part.owed - part.half)) <= 1 && Math.abs(prog.done - part.half) <= 1 && /^\d+%$/.test(prog.bar) && prog.partRow, JSON.stringify(prog).slice(0, 400))
+check('Pay part opens the sheet empty with what is owed; Half fills half with what is left after; too much says Over by', prog.open && prog.open.amount === '' && prog.open.focused && new RegExp('owe .*' + String(prog.left).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '\\sTHB$').test(prog.open.owe) && prog.open.to.includes(part.to) && prog.open.toBox &&
+  Math.abs(prog.half.amount - prog.left / 2) <= 1 && /left after this/.test(prog.half.after) && prog.half.pressed === 'true' && /^Over by/.test(prog.over.after) && prog.over.pressed === 0, JSON.stringify(prog).slice(0, 500))
+check('All fills the rest and settles it; it waits for confirmation, then the payment is gone from Settle up', Math.abs(prog.all.amount - prog.left) <= 1 && /Settles it/.test(prog.all.after) && /^You paid /.test(prog.toast) && !/left/.test(prog.toast) && prog.waits && prog.gone && prog.saved === prog.before + 1, JSON.stringify(prog).slice(0, 500))
 // filters: Mine, and With someone from a balance row
 const filters = await B.p.evaluate(async () => {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms))

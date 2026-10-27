@@ -17,6 +17,7 @@
   --leaf: #23804f;
   --leaf-soft: #d8efe1;
   --weed: #86b812;
+  --food: #e0601b;
   --alert: #b3361a;
   --alert-soft: #f8e1d9;
   --night: #0f1c2b;
@@ -49,7 +50,7 @@
   :root:not([data-theme="light"]) {
     --bg: #09151a; --surface: #10222a; --surface-2: #172d36; --ink: #e3eeec; --ink-2: #93a9af; --line: #213a43;
     --sea: #39c0cb; --on-sea: #032328; --sea-soft: #12343b; --orchid: #ff6f9c; --sun: #f2b54e; --sun-soft: #3a2e17;
-    --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --alert: #ff8a65; --alert-soft: #3d1d14;
+    --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --food: #ff9a5c; --alert: #ff8a65; --alert-soft: #3d1d14;
     --night: #12233a; --night-2: #1a3049; --night-ink: #eaf2f6; --night-muted: #9fb4c6; --night-line: #2c4a68;
     --pulse: #ff6f9c; --violet: #8f8af0; --on-pulse: #22050f; --map-sea: #0d2a33; --map-land: #1b2f2f; --map-line: #36585c; --map-road: #3d5658; --sea-text: #39c0cb; --warn-ink: #f2b54e; --good-ink: #52c58c; --on-leaf: #04210f; --blue: #79aef0; --seg-on: #2e4a55;
     --scrim: rgb(0 0 0 / 0.6); --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);
@@ -59,7 +60,7 @@
 :root[data-theme="dark"] {
   --bg: #09151a; --surface: #10222a; --surface-2: #172d36; --ink: #e3eeec; --ink-2: #93a9af; --line: #213a43;
   --sea: #39c0cb; --on-sea: #032328; --sea-soft: #12343b; --orchid: #ff6f9c; --sun: #f2b54e; --sun-soft: #3a2e17;
-  --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --alert: #ff8a65; --alert-soft: #3d1d14;
+  --leaf: #52c58c; --leaf-soft: #133325; --weed: #c2ea4a; --food: #ff9a5c; --alert: #ff8a65; --alert-soft: #3d1d14;
   --night: #12233a; --night-2: #1a3049; --night-ink: #eaf2f6; --night-muted: #9fb4c6; --night-line: #2c4a68;
   --pulse: #ff6f9c; --violet: #8f8af0; --on-pulse: #22050f; --map-sea: #0d2a33; --map-land: #1b2f2f; --map-line: #36585c; --map-road: #3d5658; --sea-text: #39c0cb; --warn-ink: #f2b54e; --good-ink: #52c58c; --on-leaf: #04210f; --blue: #79aef0; --seg-on: #2e4a55;
   --scrim: rgb(0 0 0 / 0.6); --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 18px rgb(0 0 0 / 0.25);
@@ -358,6 +359,13 @@ details.note-add summary svg { width: 16px; height: 16px; }
 .move-who svg { flex: none; width: 15px; height: 15px; color: var(--ink-2); }
 .move-who > span:not(.av) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .move-open > b { font: 600 15px/1.2 var(--font-display); }
+/* Mark paid, and Pay part under it; once part is paid: a bar and how much is paid */
+.move-acts { display: grid; justify-items: center; }
+.move-acts .link-btn { justify-self: center; padding: 6px 4px 2px; font-size: 13px; }
+.move-done { display: flex; align-items: center; gap: 8px; min-width: 0; margin-top: 2px; }
+.move-bar { flex: 0 1 120px; height: 5px; overflow: hidden; border-radius: 3px; background: var(--surface-2); }
+.move-bar i { display: block; height: 100%; border-radius: 3px; background: var(--good-ink); }
+.move-done small { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
 .move.quiet { display: block; color: var(--ink-2); font-size: 14.5px; }
 /* Expenses / Balances / Stats */
 .seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; padding: 3px; border-radius: 12px; background: var(--surface-2); }
@@ -491,7 +499,20 @@ html.sheet-open { overflow: hidden; }
 .pick-val b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 15px/1.2 var(--font-body); }
 .pick-row > svg { flex: none; width: 18px; height: 18px; color: var(--ink-2); transition: transform 0.15s; }
 .pick-row[aria-expanded="true"] > svg { transform: rotate(180deg); }
-#sp-paid-box { margin-top: 2px; }
+#sp-paid-box, #sp-to-box { margin-top: 2px; }
+/* a payment on a debt: what is owed, how much of it this pays, Half and All */
+.owe { display: grid; gap: 8px; padding: 10px 12px; border-radius: 12px; background: var(--surface-2); }
+.owe-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0; font-size: 14px; color: var(--ink-2); }
+.owe-top b { font: 600 15px/1.2 var(--font-display); color: var(--ink); white-space: nowrap; }
+.owe-bar { height: 6px; overflow: hidden; border-radius: 3px; background: var(--line); }
+.owe-bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: var(--sea); transition: width 0.15s; }
+.owe-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; }
+.owe-after { display: flex; align-items: center; gap: 5px; min-width: 0; font-size: 13.5px; color: var(--ink-2); }
+.owe-after svg { flex: none; width: 16px; height: 16px; }
+.owe-after.good { color: var(--good-ink); }
+.owe-after.bad { color: var(--alert); font-weight: 500; }
+.owe-chips { display: flex; flex: none; gap: 6px; margin-left: auto; }
+.owe-chips .chip { min-height: 36px; padding: 0 14px; font-size: 13.5px; }
 #sp-what { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font: 400 16px/1.3 var(--font-body); }
 .cat-chip { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: 500 13.5px/1 var(--font-body); cursor: pointer; }
 .cat-chip svg { width: 17px; height: 17px; color: var(--c-ink); }
@@ -968,6 +989,12 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .card .rating svg { width: 15px; height: 15px; color: var(--sun); fill: currentColor; }
 .card .rating b { color: var(--ink); }
 .card .rating .rank { font-weight: 700; color: var(--ink); }
+
+/* Places → Food: most cards have no photo, so the pills sit above the title; best first (the markets' own cards too) */
+.list[data-on="food"] > .card { order: var(--fo, 0); }
+.food-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.food-card.no-photo .pill.must { background: var(--surface-2); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.card .rating .michelin { font-weight: 600; color: var(--ink); }
 
 /* Spend: approvals (an expense counts once the admin approved it, a payment once its receiver and the admin did) */
 .todo-card { display: grid; gap: 8px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); border-left: 4px solid var(--sun); }

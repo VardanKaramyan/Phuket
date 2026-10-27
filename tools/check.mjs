@@ -17,7 +17,7 @@ const areaPoly = Object.fromEntries(areasGeo.features.map((f) => [f.properties.i
 const BOXES = { // rough boxes for off-island areas [minLng, minLat, maxLng, maxLat]
   'koh-phangan': [99.9, 9.6, 100.15, 9.85], 'koh-samui': [99.85, 9.35, 100.15, 9.6], 'phi-phi': [98.7, 7.6, 98.85, 7.8],
   krabi: [98.6, 7.7, 99.2, 8.2], 'koh-lanta': [98.95, 7.4, 99.2, 7.75], 'koh-yao': [98.5, 7.85, 98.7, 8.2],
-  'koh-kaew': [98.34, 7.92, 98.42, 7.99], 'phang-nga': [98.2, 8.0, 98.8, 8.8], 'khao-lak': [98.2, 8.5, 98.4, 8.8], natai: [98.22, 8.2, 98.33, 8.36],
+  'koh-kaew': [98.34, 7.92, 98.42, 7.99], 'phang-nga': [98.2, 8.0, 98.8, 8.8], 'khao-lak': [98.2, 8.5, 98.4, 8.95], natai: [98.22, 8.2, 98.33, 8.36],
   bangkok: [99.8, 13.3, 101.0, 14.2], ayutthaya: [100.4, 14.2, 100.7, 14.5],
   'koh-tao': [99.78, 10.04, 99.88, 10.14], 'koh-lipe': [99.25, 6.45, 99.33, 6.53], trang: [99.15, 7.2, 99.75, 7.7], 'surat-thani': [98.8, 8.9, 99.85, 9.45],
 }
@@ -82,6 +82,15 @@ for (const p of pl) {
   else if (!Number.isFinite(p.lat)) warn(w, 'missing coordinates')
   if (!p.description) warn(w, 'no description')
   if ((p.category === 'market') && !(p.days || []).length) warn(w, 'market without days')
+}
+// Places → Food (tools/merge-food.mjs): what to order and what people say, in the guide's plain style
+for (const p of pl.filter((x) => x.category === 'food' && x.foodKind)) {
+  const w = 'places:' + p.id
+  if (!(p.dishes || []).length) warn(w, 'a food place with no dishes (what to order)')
+  if (!p.praise) warn(w, 'a food place with nothing on what people say')
+  const text = [p.name, p.description, p.praise, p.watchOut, p.feeText, p.openText, ...(p.dishes || []), ...(p.tips || [])].filter(Boolean).join(' ')
+  if (/!|\p{Extended_Pictographic}/u.test(text)) warn(w, 'an exclamation mark or an emoji in the copy')
+  if (/\u2014/.test(text)) warn(w, 'an em dash in the copy')
 }
 // Places → Clubs & festivals: where they are, and their nights are in the guide
 const cl = rd('data/clubs.json', { items: [] }).items

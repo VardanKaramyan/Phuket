@@ -1,0 +1,1955 @@
+{
+ "generatedOn": "2026-10-27",
+ "region": "gulf",
+ "scopeNote": "Koh Phangan (Thong Sala, Ban Tai, Haad Rin, Srithanu, Hin Kong, Chaloklum, Thong Nai Pan) and the Koh Samui stops on the boat and airport route (Bophut, Mae Nam, Chaweng, plus two Michelin specials); Koh Tao not covered.",
+ "basics": [],
+ "items": [
+  {
+   "id": "food-phantip-night-market-thong-sala",
+   "name": "Phantip Night Food Market",
+   "nameThai": "ตลาดพันธ์ทิพย์",
+   "kind": "market",
+   "tags": [
+    "pork",
+    "dessert",
+    "budget",
+    "local-favourite",
+    "vegetarian-friendly"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7122263,
+   "lng": 99.9870678,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pantip Market, Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 3966,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.5,
+     "reviews": 269,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/1946311/pantip-market"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "A full meal about 40-150 THB (Thai Holiday Guide, checked 2026); grilled pork or chicken under 150 THB a portion, mango sticky rice 60 THB (Wanderlog review summary, 2026); meat on sticks 10-30 THB (Wikivoyage).",
+   "dishes": [
+    "Moo ping and other grilled pork skewers",
+    "Pad thai, curries and som tam",
+    "Grilled seafood",
+    "Mango sticky rice and roti",
+    "Coconut rice balls"
+   ],
+   "praise": "Called the cheapest good food on the island (Secret Mountain guide, Aug 2026) and the best area for cheap eats (Wikivoyage). Reviewers praise the variety and the coconut rice balls; about 3 percent of the 3,966 Google reviews are 1-2 stars (Wanderlog, 2026).",
+   "watchOut": "Cash only, bring small notes. Seating is limited at peak time. Most stalls close around 22:00 even though Google lists the market until 24:00.",
+   "description": "Thong Sala's main evening food market, a few minutes' walk from the ferry pier. The easiest place on the island to try many Thai dishes cheaply in one go.",
+   "openText": "Daily, stalls from about 16:00, full choice from 17:00, most close about 22:00",
+   "days": [],
+   "bestTime": "17:00-19:00, before the 19:00-21:00 rush.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Buy one thing from several stalls instead of a big plate from one.",
+    "Good first dinner on the day you arrive by boat: the pier is a short walk away."
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide",
+     "url": "https://www.thaiholidayguide.com/attraction/phantip-night-food-market/"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/phantip-night-food-market/",
+    "https://wanderlog.com/place/details/1946311/pantip-market",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://en.wikivoyage.org/wiki/Ko_Pha_Ngan",
+    "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Pantip Market, 4.5, open, pin). Thai Holiday Guide page (2026) for hours and prices; Wanderlog place page (3,966 Google reviews, Tripadvisor 4.5/269); Secret Mountain guide (Aug 2026); Dar Mansour guide (Aug 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-thong-sala-saturday-walking-street",
+   "name": "Thong Sala Saturday Walking Street",
+   "nameThai": "ถนนคนเดิน พาเพลิน ตลาดเก่า ท้องศาลา",
+   "kind": "market",
+   "tags": [
+    "dessert",
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7092557,
+   "lng": 99.9872378,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Walking Street Koh Phangan, Thong Sala",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Street dishes mostly under 100 THB; about 200-400 THB for a full grazing dinner (La Favela guide, Mar 2026).",
+   "dishes": [
+    "Som tam and pad thai cooked to order",
+    "Grilled fish and squid",
+    "Mango sticky rice"
+   ],
+   "praise": "Listed by most 2026 island guides (Dar Mansour, Aug 2026; La Favela, Mar 2026). La Favela points to the mango sticky rice stall near the middle of the street.",
+   "watchOut": "Saturday only. On this trip the Saturday is 23 Jan 2027, the day the two leave Koh Phangan, so it only works if they stay that evening.",
+   "description": "Weekly street market on Thong Sala's old Chinese Street near the pier, with food stalls, crafts and live music.",
+   "openText": "Saturday about 16:00-22:00",
+   "days": [
+    "Sat"
+   ],
+   "bestTime": "By 17:00, before popular stalls sell out.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Cash only.",
+    "If you miss it, Phantip market 300 m north has the same food every night."
+   ],
+   "links": [
+    {
+     "label": "Thai Holiday Guide",
+     "url": "https://www.thaiholidayguide.com/attraction/saturday-walking-street-market/"
+    }
+   ],
+   "sources": [
+    "https://www.thaiholidayguide.com/attraction/saturday-walking-street-market/",
+    "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html",
+    "https://lafavelaphangan.com/blog/where-to-eat-koh-phangan"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Walking Street Koh Phangan, 4.5, \"Opens 5 PM Sat\", pin). Thai Holiday Guide page, fact-checked Oct 2026, for days and hours.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-krua-chao-koh-ban-tai",
+   "name": "Krua Chao Koh",
+   "nameThai": "ร้านครัวชาวเกาะ",
+   "kind": "southern-thai",
+   "tags": [
+    "seafood",
+    "michelin",
+    "local-favourite"
+   ],
+   "area": "koh-phangan",
+   "district": "Ban Tai",
+   "island": "Koh Phangan",
+   "lat": 9.7037539,
+   "lng": 100.012947,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Krua Chao Koh, 100/1 Ban Tai, Koh Phangan",
+   "placeId": "ChIJJ6pobQj9VDARaH1vLxKmvT0",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026 (marked new on the Michelin site, Oct 2026)",
+   "priceLevel": 2,
+   "priceText": "Michelin price band 'two baht' (moderate); Wongnai lists 101-250 THB a person.",
+   "dishes": [
+    "Hoi nang choi, a local shellfish",
+    "Wai, small local octopus cooked to order",
+    "Southern curries and stir-fries",
+    "Plain fried or steamed fish and squid of the day"
+   ],
+   "praise": "Michelin (2026): simple seafood where 'restrained seasoning lets fresh ingredients shine', liked by locals and visitors. Wongnai reviewers (2020-2022) praise the home-style Southern cooking and fresh fish.",
+   "watchOut": "Google shows a second Krua Chao Koh (17-71 Moo 1) as permanently closed: go to the one at 100/1 Ban Tai. Fresh seafood takes time to cook.",
+   "description": "Casual seaside Southern Thai kitchen in Ban Tai, newly listed by the Michelin Guide. Ask the staff about the day's catch.",
+   "openText": "Daily 11:00-21:30",
+   "days": [],
+   "bestTime": "Lunch or early dinner by the sea.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Ask for the local shellfish (hoi nang choi) and the small octopus (wai).",
+    "Close to the Ban Tai party area: a good dinner before a night out."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/krua-chao-koh"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/krua-chao-koh",
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/restaurants",
+    "https://www.wongnai.com/restaurants/698007nH-%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%8A%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9E%E0%B8%87%E0%B8%B1%E0%B8%99"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Krua Chao Koh, 100/1 Ban Tai, 4.5, open, pin; the 17-71 Moo 1 listing is permanently closed). Michelin page and the Surat Thani list (25 places) read 27 Oct 2026. Wongnai page (5.0 from 3 reviews, 2020-2022) gives 97 Moo 1 as the address; probably the same place.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-dear-phangan",
+   "name": "Dear Phangan",
+   "nameThai": "ถึงพะงัน",
+   "kind": "thai",
+   "tags": [
+    "seafood",
+    "michelin",
+    "booking-needed"
+   ],
+   "area": "koh-phangan",
+   "district": "North of Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.734379,
+   "lng": 99.987542,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Dear Phangan ถึงพะงัน, 13/9 Moo 4, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band 'two baht' (moderate). Blind menu; no current price found. Cash only (Michelin).",
+   "dishes": [
+    "Blind menu that changes with the market and the pier catch",
+    "Deep-fried fermented catfish",
+    "Squid stir-fried with its ink and shrimp paste"
+   ],
+   "praise": "The only Bib Gourmand on Koh Phangan. Michelin: open-air garden kitchen; the chef cooks a set number of portions each day, so booking ahead is essential. Thai Lemon8 post (Nov 2024) also stresses booking because the chef's table has few seats.",
+   "watchOut": "Google Maps showed 'Temporarily closed' on 27 Oct 2026. Message the restaurant (Facebook: dearphangan, phone +66 89 114 3302) to confirm it has reopened and to book. Cash only.",
+   "description": "Small farm-to-table Thai kitchen in a garden of papaya, banana and herbs, with a daily blind menu. Michelin Bib Gourmand.",
+   "openText": "By reservation only; days not published. Google showed temporarily closed on 27 Oct 2026.",
+   "days": [],
+   "bestTime": "Book a few days ahead.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Tell them about food you do not eat when you book.",
+    "Bring cash."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/dear-phangan"
+    },
+    {
+     "label": "Facebook",
+     "url": "http://facebook.com/dearphangan"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/dear-phangan",
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/restaurants",
+    "https://www.lemon8-app.com/@ployjaisdiaries/7433751208877654529?region=us"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, pin, status 'Temporarily closed'). Michelin Surat Thani list read 27 Oct 2026 shows it as Bib Gourmand. Facebook page could not be read. Status uncertain: confirm before going.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-fishermans-restaurant-ban-tai",
+   "name": "Fisherman's Restaurant and Bar",
+   "nameThai": "ฟิชเชอร์แมน",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "beachfront",
+    "booking-needed"
+   ],
+   "area": "koh-phangan",
+   "district": "Ban Tai",
+   "island": "Koh Phangan",
+   "lat": 9.7003265,
+   "lng": 100.0201773,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Fisherman's Restaurant and Bar, Ban Tai, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1920,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.5,
+     "reviews": 2717,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/2031580/fishermans-restaurant-and-bar"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Most dishes about 200-500 THB, crab curry in that range (Secret Mountain guide, Aug 2026); crab and big fish are priced by size.",
+   "dishes": [
+    "Crispy fried fish with tamarind sauce",
+    "Crab curry, with crab you choose from the tank",
+    "Grilled tuna and white snapper",
+    "Yellow curry"
+   ],
+   "praise": "'The best-known seafood restaurant on the island' (Secret Mountain guide, Aug 2026). It is first on Wanderlog's 2026 Koh Phangan lists and reviewers single out the crispy fried fish and choosing your own crab (Wanderlog review summary, 2026). Run by a local fishing family (Lanta-based island travel site, 2026).",
+   "watchOut": "Fills up at sunset; book a table. Ask the price of crab and whole fish before ordering.",
+   "description": "Family-run seafood restaurant on Ban Tai beach, the island's most reviewed place for fish and crab.",
+   "openText": "Daily 13:00-22:00",
+   "days": [],
+   "bestTime": "Sunset dinner; book a beach table.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Order the crispy fish with tamarind sauce.",
+    "Phone +66 84 454 7240 to book."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog",
+     "url": "https://wanderlog.com/place/details/2031580/fishermans-restaurant-and-bar"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/2031580/fishermans-restaurant-and-bar",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://amazinglanta.com/places-to-eat-on-koh-phangan/",
+    "https://wanderlog.com/list/geoCategory/197662",
+    "https://wanderlog.com/list/geoCategory/254006"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 13:00-22:00, pin). Wanderlog place page (Google 1,920, Tripadvisor 4.5/2,717). Secret Mountain guide (Aug 2026), island guide on the Lanta-based travel site (2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nong-view-ban-tai",
+   "name": "Nong View Restaurant",
+   "nameThai": "ร้านน้องวิว เกาะพงัน",
+   "kind": "southern-thai",
+   "tags": [
+    "pork",
+    "seafood",
+    "local-favourite",
+    "group-friendly"
+   ],
+   "area": "koh-phangan",
+   "district": "Ban Tai",
+   "island": "Koh Phangan",
+   "lat": 9.7004768,
+   "lng": 100.0332327,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nong View Restaurant, Ban Tai, Koh Phangan",
+   "placeId": "",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 558,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.2,
+     "reviews": 13,
+     "note": "#20 of 1,542 Thai restaurants in Surat Thani province",
+     "url": "https://www.wongnai.com/restaurants/122132vz-%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9E%E0%B8%87%E0%B8%B1%E0%B8%99"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Wongnai lists 101-250 THB a person; a Wongnai review paid 150 THB for a sea urchin omelette (2017). Big seafood costs more.",
+   "dishes": [
+    "Moo kua kei: pork stir-fried with shrimp paste",
+    "Kaeng prik tiam moo: Southern pork curry with green chilli",
+    "Yum moo krob: crispy pork salad",
+    "Fried prawns with tamarind sauce",
+    "Sour fish curry with coconut shoots"
+   ],
+   "praise": "Thai visitors call it a good local Southern Thai place with fair prices and big portions; the pork with shrimp paste was the best dish (Wongnai, Jun 2024). 'Recommended by locals' (Wongnai, 2019) and named among the island's local Thai places by Mad Monkey and Secret Mountain (Aug 2026, 'unfussy and consistently good').",
+   "watchOut": "Service gets mixed reviews; fresh fish dishes take a while (Wanderlog summary). Little parking.",
+   "description": "Roadside Southern Thai restaurant on the road from Ban Tai to Ban Kai, a Thai favourite for pork curries, crispy pork salad and seafood.",
+   "openText": "Daily about 09:00-22:00",
+   "days": [],
+   "bestTime": "Lunch or dinner; good for a group that shares many dishes.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Order the pork with shrimp paste (moo kua kei) and the crispy pork salad.",
+    "Each table gets a free chilli and coconut dip."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/122132vz-%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9E%E0%B8%87%E0%B8%B1%E0%B8%99"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/restaurants/122132vz-%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%9E%E0%B8%87%E0%B8%B1%E0%B8%99",
+    "https://www.wongnai.com/listings/restaurants-nearby-beach-koh-phangan",
+    "https://wanderlog.com/place/details/7889137/nong-view-restaurant",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.2, open until 22:00, pin). Wongnai page (4.2, 13 reviews, latest Jun 2024) and Wongnai Koh Phangan listing (Oct 2024); Wanderlog place page (Google 558); Secret Mountain guide (Aug 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-khamoo-kateow-thong-sala",
+   "name": "Khamoo Kateow (pork leg shop)",
+   "nameThai": "ขาหมูกะเตี๋ยว",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7090692,
+   "lng": 99.9924316,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "ขาหมูกะเตี๋ยว, Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.1,
+     "reviews": 9,
+     "note": "#52 of 1,542 Thai restaurants in Surat Thani province; in Wongnai's list of 10 Koh Phangan restaurants (Oct 2024)",
+     "url": "https://www.wongnai.com/restaurants/140837aO-%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%81%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Wongnai price band under 100 THB a person (read Oct 2026); reviews in 2014 paid 50 THB for pork leg rice with soup. No newer price found.",
+   "dishes": [
+    "Khao kha moo: braised pork leg on rice",
+    "Pork leg noodles, wet or dry",
+    "Braised pork intestines and oyster omelette",
+    "Noodles with braised chicken and pork ribs",
+    "Kak moo: crispy pork fat"
+   ],
+   "praise": "Thai reviewers on Wongnai praise the soft braised pork leg, rich broth and low prices; 'busy and popular with locals' (Wongnai, 2018); retro shop and good value (Wongnai, Jun 2024).",
+   "watchOut": "Daytime only, closes about 17:00. Some reviewers find the braise a little sweet.",
+   "description": "Old-style Thai shophouse on the road from Thong Sala to Ban Tai, known for braised pork leg on rice and pork noodles.",
+   "openText": "Daily about 08:00-17:00 (Google lists 07:30-17:00)",
+   "days": [],
+   "bestTime": "Breakfast or an early lunch, before noon.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Ask for kha moo with an oyster omelette (kha moo kha-ki)."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/140837aO-%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%81%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/restaurants/140837aO-%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%81%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7",
+    "https://www.wongnai.com/listings/restaurants-nearby-beach-koh-phangan"
+   ],
+   "verification": "Google Maps 27 Oct 2026 ('Pork leg restaurant' ขาหมูกะเตี๋ยว, 4.8, open until 17:00, pin, Thong Sala). Wongnai page (4.1 from 9 reviews, latest Jun 2024). Google review count not shown; praise is mostly Thai reviewers.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-thonglar-thong-sala",
+   "name": "Thonglar",
+   "nameThai": "ทองหล้า เกาะพะงัน",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7099389,
+   "lng": 99.9908733,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "ทองหล้า เกาะพะงัน Thonglar Koh Phangan, Thong Sala",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Dar Mansour guide (Aug 2026) puts it in the cheapest band; no dish prices found.",
+   "dishes": [
+    "Khao man gai: chicken rice",
+    "Khao moo krob: crispy pork belly on rice",
+    "Noodle dishes"
+   ],
+   "praise": "Dar Mansour's Thong Sala guide (Aug 2026): khao man gai 'among the island's best', plus crispy pork and noodles, with a beer garden and live music at weekends.",
+   "watchOut": "Daytime place: Google showed 08:00-17:00 on a Tuesday. Praise outside Google is from one 2026 guide.",
+   "description": "Thai comfort-food shop in Thong Sala for chicken rice and crispy pork on rice, a cheap lunch near the pier.",
+   "openText": "About 08:00-17:00 (Google, Tuesday hours)",
+   "days": [],
+   "bestTime": "Lunch.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Order a mixed plate of chicken rice with crispy pork if they offer it."
+   ],
+   "links": [
+    {
+     "label": "Dar Mansour Thong Sala guide",
+     "url": "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html"
+    }
+   ],
+   "sources": [
+    "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open until 17:00, pin in Thong Sala). Dar Mansour guide (Aug 2026). No review count found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pum-pui-srithanu",
+   "name": "Pum Pui Restaurant",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "budget",
+    "booking-needed",
+    "vegetarian-friendly"
+   ],
+   "area": "koh-phangan",
+   "district": "Srithanu",
+   "island": "Koh Phangan",
+   "lat": 9.7565477,
+   "lng": 99.9711137,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pum Pui Restaurant, Srithanu, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1399,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 5.0,
+     "reviews": 100,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/2051462/pum-pui-restaurant"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Massaman curry with rice 170 THB (review quoted on Wanderlog, 2025-2026). Most Thai dishes are cheaper.",
+   "dishes": [
+    "Massaman curry",
+    "Pineapple fried rice",
+    "Herb-fried fish",
+    "Glass noodles with prawns",
+    "Watermelon shake"
+   ],
+   "praise": "'Without exaggeration, the best Massaman curry I've had so far' and 'probably the best Thai food in the area' (Google reviews on Wanderlog). A blogger's favourite Thai takeaway in Srithanu (Secret Mountain and other guides).",
+   "watchOut": "Closed Saturdays and 16:30-18:00. Queues by about 20:00; parking is chaotic. Some find the pad thai too sour.",
+   "description": "Busy, cheap Thai kitchen in Srithanu that the island's long-stay crowd rates for curries.",
+   "openText": "Sun-Fri 13:00-16:30 and 18:00-22:30; closed Saturday",
+   "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri"
+   ],
+   "bestTime": "Early dinner at 18:00.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Order the massaman curry.",
+    "Book or come at 18:00 when it reopens."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/PumPui-Restaurant-100218938021208"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/2051462/pum-pui-restaurant",
+    "https://wanderlog.com/list/geoCategory/197662"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, split hours 13:00-16:30 and 18:00-22:30, pin in Srithanu). Wanderlog place page (Google 1,399, Tripadvisor 5.0/100, closed Saturday).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-aunties-restaurant-thong-sala",
+   "name": "Auntie's Restaurant",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7115145,
+   "lng": 99.9867711,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Auntie's Restaurant, Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 832,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 5.0,
+     "reviews": 214,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/374917/aunties-restaurant"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Cheap: Wanderlog and Dar Mansour (Aug 2026) put it in the lowest price band; no dish prices found.",
+   "dishes": [
+    "Green, massaman and panang curries",
+    "Chicken satay",
+    "Pad thai with cashew nuts",
+    "Tom yum"
+   ],
+   "praise": "Reviewers call the curries and satay authentic and the owner, who cooks and serves alone, warm and welcoming (Wanderlog summary). Dar Mansour (Aug 2026): home-style Thai, generous portions, fair prices.",
+   "watchOut": "One person cooks and serves, so dishes come one by one and it is slow at peak times. Small and plain; bring small notes.",
+   "description": "Tiny home-style Thai kitchen in central Thong Sala, close to Phantip market.",
+   "openText": "Daily 13:00-21:30",
+   "days": [],
+   "bestTime": "Late lunch, off-peak.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Go before 18:00 to avoid a long wait."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog",
+     "url": "https://wanderlog.com/place/details/374917/aunties-restaurant"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/374917/aunties-restaurant",
+    "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 13:00-21:30, pin). Wanderlog place page (Google 832, Tripadvisor 5.0/214). Dar Mansour guide (Aug 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-moonsoons-thong-nai-pan",
+   "name": "Moonsoon's Restaurant",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "vegetarian-friendly"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Nai Pan Noi",
+   "island": "Koh Phangan",
+   "lat": 9.7774325,
+   "lng": 100.0537479,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Moonsoon's Restaurant, Thong Nai Pan Noi, Koh Phangan",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 660,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.7,
+     "reviews": 258,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/2373851/moonsoons-restaurant"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "No current prices found; listed in the moderate range on Wanderlog.",
+   "dishes": [
+    "Red duck curry",
+    "Massaman beef curry",
+    "Cashew chicken",
+    "Summer rolls"
+   ],
+   "praise": "Reviewers praise large portions, fast friendly service and spice levels made to order (Wanderlog summary, 2026); in Wanderlog's 50 best Koh Phangan restaurants.",
+   "watchOut": "Closed Mondays. Thong Nai Pan is a 30-40 minute drive from Thong Sala on a hilly road.",
+   "description": "The best-reviewed Thai restaurant in Thong Nai Pan Noi, with Thai cooking classes as well.",
+   "openText": "Tue-Sun 15:00-22:00; closed Monday",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Dinner if you stay or spend the day at Thong Nai Pan.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Tell them how spicy you want it."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog",
+     "url": "https://wanderlog.com/place/details/2373851/moonsoons-restaurant"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/2373851/moonsoons-restaurant",
+    "https://wanderlog.com/list/geoCategory/197662"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open 15:00-22:00, pin at Thong Nai Pan Noi). Wanderlog place page (Google 660, Tripadvisor 4.7/258). Praise is from review sites only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-fabios-ban-tai",
+   "name": "Fabio's Restaurant",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "booking-needed"
+   ],
+   "area": "koh-phangan",
+   "district": "Ban Tai",
+   "island": "Koh Phangan",
+   "lat": 9.700513,
+   "lng": 100.0297485,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Fabio's Restaurant, Ban Tai, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 550,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.5,
+     "reviews": 415,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/374937/fabios-restaurant"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Most dishes 300-600 THB (Secret Mountain guide, Aug 2026).",
+   "dishes": [
+    "Handmade egg pasta, carbonara, lasagna",
+    "Wood-fired pizza",
+    "Homemade bread",
+    "Crème brûlée"
+   ],
+   "praise": "'The island's Italian benchmark' (Secret Mountain guide, Aug 2026); 'some of the best pizzas on the island' (Lanta-based island travel site, 2026). Google reviewers: 'the best Italian place in KPG', 'the lasagna was insanely good' (Wanderlog).",
+   "watchOut": "Closed Mondays; evenings only. Small and often full: book.",
+   "description": "Small Italian-run restaurant near Ban Tai with fresh pasta and wood-fired pizza, the international place long-stay residents name first.",
+   "openText": "Tue-Thu, Sat, Sun 18:00-22:00; Fri 16:00-22:00; closed Monday",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Dinner, booked.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book a day ahead in January."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog",
+     "url": "https://wanderlog.com/place/details/374937/fabios-restaurant"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/374937/fabios-restaurant",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://amazinglanta.com/places-to-eat-on-koh-phangan/",
+    "https://wanderlog.com/list/geoCategory/197662"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, Tuesday 18:00-22:00, pin near Ban Tai). Wanderlog place page (Google 550, Tripadvisor 4.5/415). Secret Mountain guide (Aug 2026); island guide on the Lanta-based travel site (2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-lalcove-hin-kong",
+   "name": "L'Alcove",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "seafood",
+    "beachfront",
+    "view",
+    "booking-needed",
+    "late-night"
+   ],
+   "area": "koh-phangan",
+   "district": "Hin Kong",
+   "island": "Koh Phangan",
+   "lat": 9.7466815,
+   "lng": 99.9757396,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "L'Alcove, Hin Kong Beach, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 2151,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.5,
+     "reviews": 1195,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/1949613/lalcove"
+    },
+    {
+     "site": "Restaurant Guru",
+     "rating": 4.9,
+     "reviews": 4660,
+     "note": "votes across sites, Oct 2026",
+     "url": "https://restaurantguru.com/Ko-Pha-ngan"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Most dishes 400-800 THB (Secret Mountain guide, Aug 2026).",
+   "dishes": [
+    "Prawns on lemongrass sticks",
+    "Whole catch of the day with chilli and mango salad",
+    "French bistro dishes with Thai touches"
+   ],
+   "praise": "Secret Mountain (Aug 2026): 'book it for sunset'. Reviewers praise the cooking, generous starters and tables on the sand (Wanderlog summary); one of the most reviewed restaurants on the island.",
+   "watchOut": "Closed Mondays. Sunset tables go first. Prices are high for the island.",
+   "description": "French and Thai bistro with tables on Hin Kong beach on the west coast, the island's favourite sunset dinner.",
+   "openText": "Tue-Sun 17:30-24:00; closed Monday",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Arrive about 17:30 for sunset.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book a beach table for sunset.",
+    "Live music on Friday and Saturday evenings."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "http://www.alcovephangan.com/"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/1949613/lalcove",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://restaurantguru.com/Ko-Pha-ngan"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, Tuesday 17:30-24:00, pin at Hin Kong). Wanderlog place page (Google 2,151, Tripadvisor 4.5/1,195). Secret Mountain guide (Aug 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-dao-chef-nir-mesika-thong-sala",
+   "name": "DAO by Chef Nir Mesika",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "seafood",
+    "booking-needed"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7093915,
+   "lng": 99.9891483,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "DAO by Chef Nir Mesika, Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": 5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 321,
+   "reviewsSource": "Google, via Wanderlog seafood list, read Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 4,
+   "priceText": "10-course tasting menu 3,000 THB a person; wine pairing 2,000 THB (4 glasses) or 2,500 THB (5 glasses); plus 7% VAT and service (official menu page, read 27 Oct 2026).",
+   "dishes": [
+    "10-course tasting menu, meat and fish or fish only",
+    "Mediterranean and Middle Eastern cooking with Thai ingredients"
+   ],
+   "praise": "'The island's best restaurant, full stop' (La Favela guide, Mar 2026); 'the most ambitious cooking on the island' (Secret Mountain guide, Aug 2026); 16 guests at a communal chef's table (Dar Mansour, Aug 2026).",
+   "watchOut": "Few seats: book well ahead. Google shows 5.0 but the count is small; the praise is backed by three separate 2026 island guides.",
+   "description": "Chef's-table tasting menu for about 16 guests in Thong Sala, the special dinner of the island.",
+   "openText": "Evenings by reservation; Google showed \"opens 20:30\" on a Tuesday. Days not published.",
+   "days": [],
+   "bestTime": "Book the evening sitting several days ahead.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book through daokpg.com or +66 61 062 3734.",
+    "Choose the fish-only menu if someone does not eat meat."
+   ],
+   "links": [
+    {
+     "label": "Website and menu",
+     "url": "http://www.daokpg.com/menu"
+    }
+   ],
+   "sources": [
+    "http://www.daokpg.com/menu",
+    "https://lafavelaphangan.com/blog/where-to-eat-koh-phangan",
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://darmansour.com/journal-where-to-eat-thong-sala-koh-phangan.html",
+    "https://wanderlog.com/list/geoCategory/254006"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (5.0, \"Opens 8:30 PM\", pin in Thong Sala). Official menu page read 27 Oct 2026 for prices. La Favela (Mar 2026), Secret Mountain (Aug 2026) and Dar Mansour (Aug 2026) guides.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-satimi-ice-cream-thong-sala",
+   "name": "Satimi's Ice Cream",
+   "nameThai": "ซาติมิ",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Thong Sala",
+   "island": "Koh Phangan",
+   "lat": 9.7095373,
+   "lng": 99.987423,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Satimi's ice cream, Thong Sala, Koh Phangan",
+   "placeId": "",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 5.0,
+     "reviews": 5,
+     "note": "#2 of 67 ice cream shops in Surat Thani province",
+     "url": "https://www.wongnai.com/restaurants/232930Dv-satimi"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Rocky Stone scoop 60 THB, caramel cookie dough 50 THB, croffle 60 THB (Wongnai review, Apr 2022).",
+   "dishes": [
+    "Homemade ice cream from local ingredients",
+    "Passion fruit mojito and star gooseberry with lime sorbets",
+    "Coconut choco caramel",
+    "Croffle"
+   ],
+   "praise": "Wongnai reviewers (2016-2022) say every flavour is good and not too sweet and that the owner lets you taste first; 'so rich and creamy' about the dark chocolate (Wongnai, 2018).",
+   "watchOut": "Closed Mondays (Wongnai). Small shop.",
+   "description": "Small homemade ice cream shop on Talad Kao Road, a short walk from Thong Sala pier.",
+   "openText": "Tue-Sun about 10:30-18:30 (Wongnai); Google showed 11:00-19:00 on a Tuesday",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Afternoon, before the boat.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask to taste the fruit sorbets."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "http://www.satimisicecream.com/"
+    },
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/232930Dv-satimi"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/restaurants/232930Dv-satimi"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, open 11:00-19:00, pin in Thong Sala). Wongnai page (5.0 from 5 reviews, #2 of 67 ice cream shops in the province). Review count on Google not shown.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pure-joy-haad-rin",
+   "name": "Pure Joy Restaurant",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "dessert",
+    "vegetarian-friendly",
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Haad Rin",
+   "island": "Koh Phangan",
+   "lat": 9.6752397,
+   "lng": 100.0641777,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pure Joy Restaurant, Haad Rin, Koh Phangan",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 488,
+   "reviewsSource": "Google, via Wanderlog place page, read Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 5.0,
+     "reviews": 106,
+     "note": "via Wanderlog place page, Oct 2026",
+     "url": "https://wanderlog.com/place/details/874427/pure-joy-restaurant"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No current prices found; reviewers call it good value (Wanderlog summary, 2026).",
+   "dishes": [
+    "Green and massaman curry",
+    "Pad thai",
+    "Mango sticky rice",
+    "Spring rolls"
+   ],
+   "praise": "Reviewers praise generous portions, quick service and value, and recommend the mango sticky rice (Wanderlog summary, 2026); called the most consistent Thai choice in Haad Rin by listing sites.",
+   "watchOut": "A little hard to find in the lanes; use the map. Ask for less spice if you want milder curry.",
+   "description": "Small Thai kitchen in the Haad Rin lanes, a better meal than the party strip before or after the Full Moon beach.",
+   "openText": "Daily 11:00-23:00",
+   "days": [],
+   "bestTime": "Dinner before the party, about 20:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Eat here before the party: on Full Moon night tables run out."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog",
+     "url": "https://wanderlog.com/place/details/874427/pure-joy-restaurant"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/874427/pure-joy-restaurant"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open 11:00-23:00, pin in Haad Rin). Wanderlog place page (Google 488, Tripadvisor 5.0/106). Praise is from review sites only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-haad-rin-night-street-food",
+   "name": "Haad Rin Walking Street night food",
+   "nameThai": "ถนนคนเดินหาดริ้น",
+   "kind": "street-food",
+   "tags": [
+    "late-night",
+    "budget"
+   ],
+   "area": "koh-phangan",
+   "district": "Haad Rin",
+   "island": "Koh Phangan",
+   "lat": 9.6754151,
+   "lng": 100.0659744,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Haad Rin Walking Street, Haad Rin, Koh Phangan",
+   "placeId": "",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Stall snacks and plates mostly 50-150 THB; no recent price list found.",
+   "dishes": [
+    "Fried chicken with sticky rice",
+    "Pad thai and fried rice from carts",
+    "Toasties and burgers"
+   ],
+   "praise": "Wikivoyage: street food is 'readily available all night' in Haad Rin and several places near the beach stay open 24/7.",
+   "watchOut": "Party-night food is for filling up, not for the best cooking; one guide says the all-night tourist restaurants are overpriced. On Full Moon night it is hard to get a table anywhere.",
+   "description": "The lanes between Haad Rin Nok (Sunrise) beach and the pier, where carts and small kitchens serve food through the night on party nights.",
+   "openText": "Stalls and some kitchens run all night on party nights; Google lists the street as open 24 hours",
+   "days": [],
+   "bestTime": "After the party, 01:00-05:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Carry small notes and keep to busy, well-lit stalls."
+   ],
+   "links": [
+    {
+     "label": "Wikivoyage Haad Rin",
+     "url": "https://en.wikivoyage.org/wiki/Haad_Rin"
+    }
+   ],
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Haad_Rin"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Haad Rin Walking Street, 4.2, open 24 hours, pin). Wikivoyage Haad Rin page (Eat section). No single vendor could be verified, so this is an area entry.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-food-factory-ban-tai",
+   "name": "Food Factory Koh Phangan",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "late-night"
+   ],
+   "area": "koh-phangan",
+   "district": "Ban Tai",
+   "island": "Koh Phangan",
+   "lat": 9.7087244,
+   "lng": 100.0022606,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Food Factory Koh Phangan, 100/25 Ban Tai",
+   "placeId": "",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "No current prices found.",
+   "dishes": [
+    "Burgers, pizza and fries",
+    "Thai rice and noodle dishes",
+    "Western breakfasts"
+   ],
+   "praise": "Listed as open 24/7 and handy for late-night hunger; a Wanderlog reviewer ordered a large meal at about 05:00 (Wanderlog and Atly listings).",
+   "watchOut": "No pizza after 01:00 (listing note). A reviewer mentions odd characters late at night. Evidence beyond Google is thin; it is here because it is open 24 hours on the Ban Tai road.",
+   "description": "24-hour diner on the road between Thong Sala and Ban Tai, the safe bet for food after the Ban Tai parties.",
+   "openText": "Open 24 hours (Google)",
+   "days": [],
+   "bestTime": "After a Ban Tai party.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Go in a group late at night."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/FoodFactorySportsDiner"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/place/details/2845998/food-factory-koh-phangan",
+    "https://www.atly.com/location/FoodFactoryKohPhangan.md"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Food Factory Koh Phangan, 100/25 Ban Tai, 4.3, open 24 hours, pin). Wanderlog and Atly listing snippets; the Wanderlog page timed out when read. A separate \"Food Factory Sports Diner\" listing in Thong Sala also exists.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nongnook-seafood-chaloklum",
+   "name": "Nongnook Seafood",
+   "nameThai": "น้องนุ๊กซีฟู๊ด",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "koh-phangan",
+   "district": "Chaloklum",
+   "island": "Koh Phangan",
+   "lat": 9.7864513,
+   "lng": 100.0048232,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Nongnook Seafood, Chaloklum, Koh Phangan",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 308,
+   "reviewsSource": "Google, via Wanderlog seafood list, read Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Dishes about 60-150 THB (Secret Mountain guide, Aug 2026); whole fish more.",
+   "dishes": [
+    "Tom yum seafood",
+    "Whole fried snapper",
+    "Fish from the Chaloklum boats"
+   ],
+   "praise": "Secret Mountain (Aug 2026): 'village prices and harbour-fresh fish' in the fishing village of Chaloklum.",
+   "watchOut": "Hours not shown on Google; simple setting.",
+   "description": "Simple seafood kitchen in Chaloklum fishing village on the north coast, with fish from the local boats at village prices.",
+   "openText": "Hours not published; usually lunch and dinner",
+   "days": [],
+   "bestTime": "Lunch on a north-coast day trip.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Pair it with a swim at Chaloklum or Malibu beach."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/nongnookseefood"
+    }
+   ],
+   "sources": [
+    "https://secretmountainphangan.com/guide/best-restaurants-koh-phangan",
+    "https://wanderlog.com/list/geoCategory/254006"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, pin in Chaloklum; no status or hours shown). Secret Mountain guide (Aug 2026); Wanderlog seafood list (Google 308).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-fishermans-village-walking-street-bophut",
+   "name": "Fisherman's Village Walking Street",
+   "nameThai": "ถนนคนเดินหมู่บ้านชาวประมงบ่อผุด",
+   "kind": "market",
+   "tags": [
+    "dessert",
+    "pork",
+    "budget"
+   ],
+   "area": "koh-samui",
+   "district": "Bophut",
+   "island": "Koh Samui",
+   "lat": 9.5584582,
+   "lng": 100.0313766,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Fisherman's Village Night Market, Bophut, Koh Samui",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pad thai 60-80 THB, mango sticky rice 50-80 THB, grilled coconut prawns 80-120 THB, satay about 10 THB a stick; 300-500 THB for a grazing dinner (Visit Thailand Today, updated 24 Oct 2026).",
+   "dishes": [
+    "Pork and chicken satay",
+    "Grilled coconut prawns",
+    "Mango sticky rice and roti",
+    "Coconut ice cream"
+   ],
+   "praise": "The best known night market on Samui; Inside Samui (2026) lists its grilled prawns, mango sticky rice, roti and coconut ice cream.",
+   "watchOut": "The big market is Friday only; on this trip the Fridays (15 and 22 Jan) fall while the two are on Phuket and Koh Phangan. The smaller Wharf market at the west end runs on Mon, Tue, Wed and Sun evenings. Cash only.",
+   "description": "Friday night street market on the beach road of Bophut's old Fisherman's Village, 10 minutes from Samui airport and the Bangrak piers.",
+   "openText": "Friday about 17:00-22:00 or 23:00; Wharf market Mon, Wed 17:00-24:00 and Tue, Sun 16:30-23:30",
+   "days": [
+    "Fri"
+   ],
+   "bestTime": "Before 18:00 on Friday.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "On a Tuesday transit day (19 Jan), the Wharf market at the west end is open from 16:30."
+   ],
+   "links": [
+    {
+     "label": "Visit Thailand Today guide",
+     "url": "https://www.visitthailandtoday.com/guides/fishermans-village-koh-samui"
+    }
+   ],
+   "sources": [
+    "https://www.visitthailandtoday.com/guides/fishermans-village-koh-samui",
+    "https://www.insidesamui.com/?p=825"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Fisherman's Village Night Market, 4.4, pin). Visit Thailand Today guide updated 24 Oct 2026 for days, hours and prices; Inside Samui night market guide (2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jun-hom-mae-nam",
+   "name": "Jun Hom Seafood",
+   "nameThai": "ร้านอาหารจันทร์หอมซีฟู้ด",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "michelin",
+    "beachfront",
+    "local-favourite"
+   ],
+   "area": "koh-samui",
+   "district": "Mae Nam",
+   "island": "Koh Samui",
+   "lat": 9.5796667,
+   "lng": 99.9561672,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Jun Hom Seafood, Mae Nam, Koh Samui",
+   "placeId": "",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 673,
+   "reviewsSource": "Google, via Restaurant Guru, Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 3.7,
+     "reviews": 134,
+     "note": "via Restaurant Guru, Oct 2026",
+     "url": "https://restaurantguru.com/Jun-Hom-Ko-Samui"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Reviewers report 200-1,000 THB a person (Restaurant Guru, 2026); Michelin price band 'two baht'. Cash only.",
+   "dishes": [
+    "Crab curry with coconut milk and shrubby basil (or wild betel leaves)",
+    "Deep-fried local silver sillago",
+    "Stir-fried squid"
+   ],
+   "praise": "Michelin calls it a 'local gem on the island' with generous, low-priced dishes; the crab coconut curry is the highlight. Recent Google reviews praise the ingredients and the Southern flavours (Restaurant Guru, 2026).",
+   "watchOut": "Cooked to order, so expect to wait. Closes at 20:00. Cash only. Tripadvisor scores are lower (3.7), mostly about service.",
+   "description": "Open-air beach restaurant in Mae Nam with a Michelin Bib Gourmand for Southern Thai seafood, near the Lomprayah pier.",
+   "openText": "Daily 12:00-20:00",
+   "days": [],
+   "bestTime": "Late lunch on a boat-transfer day.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Order the crab curry and ask for betel leaves instead of basil.",
+    "Bring cash."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/jun-hom"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/jun-hom",
+    "https://guide.michelin.com/th/en/article/dining-out/5-cheap-michelin-guide-eats-surat-thani-koh-samui",
+    "https://restaurantguru.com/Jun-Hom-Ko-Samui"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Jun Hom Seafood, 4.2, open 12:00-20:00, pin in Mae Nam). Michelin page and Surat Thani list (Bib Gourmand) read 27 Oct 2026; Restaurant Guru page (Google 673, Tripadvisor 3.7/134).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ko-seng-mae-nam",
+   "name": "Ko Seng",
+   "nameThai": "ร้านอาหารโกเซ้ง",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "michelin",
+    "local-favourite",
+    "group-friendly"
+   ],
+   "area": "koh-samui",
+   "district": "Mae Nam",
+   "island": "Koh Samui",
+   "lat": 9.5661349,
+   "lng": 99.9935524,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ko Seng, Soi Mae Nam 5, Koh Samui",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band 'two baht' (moderate), described as fairly priced with generous portions. Cash only.",
+   "dishes": [
+    "Black pepper crab",
+    "Stir-fried prawns",
+    "Traditional steamed fish",
+    "Southern yellow curry of giant sea catfish roe and taro stems"
+   ],
+   "praise": "Michelin: a modest place that has 'championed Thai and Southern Thai seafood for over 50 years', with bold flavours and generous portions.",
+   "watchOut": "Plain air-conditioned room, no view. Closes at 20:00. Cash only.",
+   "description": "Fifty-year-old Thai-Chinese seafood house in Mae Nam, simple and air-conditioned, a Michelin pick for crab and fish.",
+   "openText": "Daily 10:00-20:00",
+   "days": [],
+   "bestTime": "Lunch.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Order the black pepper crab."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/ko-seng"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/ko-seng"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open 10:00-20:00, pin at Soi Mae Nam 5). Michelin page read 27 Oct 2026. No review count found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-khao-horm-bophut",
+   "name": "Khao Horm",
+   "nameThai": "ร้านข้าวหอม",
+   "kind": "southern-thai",
+   "tags": [
+    "pork",
+    "michelin",
+    "group-friendly"
+   ],
+   "area": "koh-samui",
+   "district": "Bophut (near the airport)",
+   "island": "Koh Samui",
+   "lat": 9.5615709,
+   "lng": 100.0606398,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao Hom ร้านข้าวหอม, Bophut, Koh Samui",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band 'two baht' (moderate); no dish prices found.",
+   "dishes": [
+    "Stir-fried minced pork with yellow curry paste",
+    "Southern Thai family recipes",
+    "Local seafood curries"
+   ],
+   "praise": "Michelin: 5 minutes from the airport, 'a great spot to get your last-minute fill' of Southern Thai food before flying; family recipes over a century old; the inspector recommends the stir-fried minced pork in yellow curry paste.",
+   "watchOut": "Google lists the phone as 077 953 160; Michelin gives +66 87 413 4084.",
+   "description": "Family Southern Thai restaurant in a big open pavilion near Samui airport, with air-conditioned rooms and parking.",
+   "openText": "Daily 10:30-22:00",
+   "days": [],
+   "bestTime": "Lunch before a flight or right after landing.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Order the minced pork in yellow curry paste, Southern style and spicy.",
+    "Good for a group with bags: big room and car park."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/khao-horm"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/khao-horm"
+   ],
+   "verification": "Google Maps 27 Oct 2026 ('Khao Hom' ร้านข้าวหอม, 4.4, open 10:30-22:00, pin 1.5 km north of the airport, matching Michelin's '5 minutes from the airport'). Michelin page read 27 Oct 2026. No review count found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kapi-sator-chaweng",
+   "name": "Kapi Sator",
+   "nameThai": "กะปิ สะตอ",
+   "kind": "southern-thai",
+   "tags": [
+    "pork",
+    "seafood",
+    "michelin",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "koh-samui",
+   "district": "Chaweng",
+   "island": "Koh Samui",
+   "lat": 9.5353655,
+   "lng": 100.0435233,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kapi Sator, 25/236 Tawirat Phakdi Road, Bophut, Koh Samui",
+   "placeId": "ChIJ-x3FS6LxVDARpnwp5tXYgVQ",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Samui streaky pork 200 THB, fried pork ribs with garlic 250 THB, slow-simmered pork stew 300 THB, Southern crab meat curry 500 THB, squid in black ink 300 THB, Surat Thani oysters 80-120 THB each (official QR menu, read 27 Oct 2026). No service charge.",
+   "dishes": [
+    "Samui streaky pork and fried pork ribs with garlic",
+    "Fried shrimp with sator beans and shrimp paste",
+    "Stir-fried squid in sweet sauce",
+    "Southern crab meat curry"
+   ],
+   "praise": "Michelin: Southern and classic Thai from Bophut market produce, 'simple but full of flavour'; groups should book because tables fill. Also in Michelin's affordable Surat Thani and Samui picks (Jul 2024).",
+   "watchOut": "There is a second branch in Central Festival mall (4.9 on Google, open until 01:00); the Michelin listing is this ring-road branch.",
+   "description": "Southern Thai restaurant on the Chaweng ring road with a strong pork list and local seafood, a Michelin pick.",
+   "openText": "Daily 10:00-22:00",
+   "days": [],
+   "bestTime": "Dinner; book for a group.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "For pork: the Samui streaky pork and the garlic pork ribs.",
+    "The mall branch is a late-night backup."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/kapi-sator"
+    },
+    {
+     "label": "Website",
+     "url": "https://www.kapisator.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/kapi-sator",
+    "https://qr.imenupro.com/1gjz-6",
+    "https://guide.michelin.com/th/en/article/dining-out/5-cheap-michelin-guide-eats-surat-thani-koh-samui"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Kapi Sator, 25/236 Tawirat Phakdi Rd, 4.7, open 10:00-22:00, pin). Michelin page; official website and QR menu read 27 Oct 2026 for prices.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-phensiri-chaweng",
+   "name": "Phensiri Thai Restaurant",
+   "nameThai": "เพ็ญศิริ อาหารไทยพื้นบ้าน เกาะสมุย",
+   "kind": "southern-thai",
+   "tags": [
+    "dessert",
+    "michelin",
+    "group-friendly"
+   ],
+   "area": "koh-samui",
+   "district": "Chaweng",
+   "island": "Koh Samui",
+   "lat": 9.5117149,
+   "lng": 100.0549702,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Phensiri Thai Restaurant, 80/30 Moo 3, Chaweng, Koh Samui",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 2563,
+   "reviewsSource": "Google, via Restaurant Guru, updated 22 Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Tripadvisor",
+     "rating": 4.5,
+     "reviews": 1802,
+     "note": "via Restaurant Guru, Oct 2026",
+     "url": "https://restaurantguru.com/Phensiri-Thai-Bistro-Ko-Samui"
+    }
+   ],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Reviewers report 400-1,400 THB a person, most 800-1,000 THB (Restaurant Guru, Oct 2026).",
+   "dishes": [
+    "Kua kling, dry Southern curry",
+    "Grilled eggplant with minced pork",
+    "Massaman beef curry",
+    "'Samui lost recipe' dishes such as tom kati yod prow (coconut shoot soup)",
+    "Homemade desserts"
+   ],
+   "praise": "Michelin calls it 'a must-visit for Thai and Southern Thai cuisine', with spice levels you can adjust and English-speaking staff. A Google review a month before 22 Oct 2026: 'the best Thai restaurant on the island' (Restaurant Guru).",
+   "watchOut": "Busy at lunch and dinner; book in high season. Pricier than local shops.",
+   "description": "Chef-owner Southern Thai restaurant in Chaweng, cooking Samui family recipes with coconut oil instead of palm oil since 2012.",
+   "openText": "Daily 12:00-22:00",
+   "days": [],
+   "bestTime": "Dinner; book.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Try one of the Samui lost-recipe dishes and the grilled eggplant with pork."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/phensiri"
+    },
+    {
+     "label": "Website",
+     "url": "http://www.phensiri.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/phensiri",
+    "https://restaurantguru.com/Phensiri-Thai-Bistro-Ko-Samui",
+    "http://www.phensiri.com/",
+    "https://wanderlog.com/list/geoCategory/361483/desserts"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open 12:00-22:00, pin in Chaweng). Michelin page; restaurant website; Restaurant Guru (Google 2,563, Tripadvisor 4.5/1,802, updated 22 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-baan-suan-lung-khai-taling-ngam",
+   "name": "Baan Suan Lung Khai",
+   "nameThai": "บ้านสวนลุงไข่",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "michelin",
+    "booking-needed",
+    "group-friendly",
+    "dessert"
+   ],
+   "area": "koh-samui",
+   "district": "Taling Ngam",
+   "island": "Koh Samui",
+   "lat": 9.4293665,
+   "lng": 99.9487437,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ban Suan Lung Khai, Taling Ngam, Koh Samui",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Set menus 500, 700 and 1,200 THB a person (Michelin Thai article, Aug 2024); the dishes depend on the day's catch.",
+   "dishes": [
+    "Blue swimming crab and grilled prawns",
+    "Oysters with chilli paste and shallots",
+    "Crab curry and sour fish curry with rice noodles",
+    "Clams boiled in coconut water",
+    "Local Samui dessert"
+   ],
+   "praise": "Michelin: Uncle Khai's garden house on his coconut plantation, three Southern set menus with 'top-notch ingredients sourced from local fishermen and friends', served on woven trays; 'save room for the local dessert'. Michelin ran a 'Behind the Bib' feature on it (Aug 2024).",
+   "watchOut": "Reservation required. Lunch 11:00-14:00 and dinner 16:30-19:00 only. On the far south-west coast, about 45 minutes from the airport. The owner does not make dishes less spicy.",
+   "description": "Set-menu seafood lunches and early dinners on a veranda in a coconut plantation, a Michelin Bib Gourmand.",
+   "openText": "Daily 11:00-14:00 and 16:30-19:00, by reservation",
+   "days": [],
+   "bestTime": "Lunch, booked a day ahead.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Call +66 81 416 2244 to book.",
+    "Combine with the Raja ferry at Lipa Noi or Nathon."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/baan-suan-lung-khai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/baan-suan-lung-khai",
+    "https://guide.michelin.com/th/th/article/dining-out/behind-the-bib-baan-suan-lung-khai"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, split hours 11:00-14:00 and 16:30-19:00, pin at Taling Ngam). Michelin page and Thai Behind the Bib article read 27 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-long-dtai-cape-fahn",
+   "name": "Long Dtai",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "seafood",
+    "michelin",
+    "view",
+    "booking-needed"
+   ],
+   "area": "koh-samui",
+   "district": "Choeng Mon (Cape Fahn)",
+   "island": "Koh Samui",
+   "lat": 9.5736692,
+   "lng": 100.0886935,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Long Dtai Restaurant, Cape Fahn Hotel, Koh Samui",
+   "placeId": "",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "Michelin price band 'three baht'; menu prices are in a PDF that could not be read. Expect resort prices.",
+   "dishes": [
+    "Grilled squid marinated in turmeric and coconut milk",
+    "Grilled tiger prawns",
+    "Five-spice duck eggs",
+    "Southern Thai curries"
+   ],
+   "praise": "Michelin: chef David Thompson's Southern Thai menu looks simple but 'his skill shows in the details'; the grilled squid is the standout. On a private islet reached by wading through shallow water.",
+   "watchOut": "Closed Wednesdays. Dinner only. Book; the resort is reached across a shallow channel.",
+   "description": "David Thompson's Southern Thai restaurant on the terrace of Cape Fahn's private islet, the special dinner on Samui.",
+   "openText": "Thu-Tue 18:00-23:00 (bar from 17:00); closed Wednesday",
+   "days": [
+    "Mon",
+    "Tue",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Book a sunset drink at the bar first.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on longdtai.com or +66 77 602 301."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/long-dtai"
+    },
+    {
+     "label": "Website",
+     "url": "https://longdtai.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/long-dtai",
+    "https://longdtai.com/",
+    "https://guide.michelin.com/th/en/article/dining-out/7-must-try-dishes-in-surat-thani-and-koh-samui"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.2, Tuesday 17:00-23:00, pin at Cape Fahn). Michelin page and official website read 27 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-che-mui-mae-nam",
+   "name": "Che Mui",
+   "nameThai": "เจ้มุ้ยข้าวขาหมู ขนมจีนเมืองคอน",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "koh-samui",
+   "district": "Mae Nam",
+   "island": "Koh Samui",
+   "lat": 9.5660059,
+   "lng": 100.0042765,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Che Mui เจ้มุ้ยข้าวขาหมู ขนมจีนเมืองคอน, Mae Nam, Koh Samui",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 15,
+     "note": "21 ratings; #2 of 512 single-dish restaurants in Surat Thani province",
+     "url": "https://www.wongnai.com/restaurants/113394Kc-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%A1%E0%B8%B8%E0%B9%89%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%AD%E0%B8%99"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Khao kha moo 90 THB, braised pork ribs on rice 90 THB (Wongnai menu, read Oct 2026).",
+   "dishes": [
+    "Khao kha moo: braised pork leg on rice",
+    "Braised pork ribs on rice",
+    "Khanom jeen rice noodles with Nakhon Si Thammarat curries: crab curry and pla ta-lang fish-innard sauce"
+   ],
+   "praise": "Thai families and regulars eat here (Wongnai, 2015-2016); 'plain-looking shop with very tasty food', crab khanom jeen singled out (Wongnai, Dec 2019). After the 2022 move the khanom jeen 'tastes unchanged' (Wongnai, Oct 2022).",
+   "watchOut": "Daytime only, closes about 17:30; Wongnai also says closed Wednesdays. One 2022 reviewer found the pork leg less tasty than before and prices higher. Little parking; Thai menu.",
+   "description": "Local open-air shop in Mae Nam for braised pork leg on rice and Southern rice-noodle curries, near the Lomprayah pier.",
+   "openText": "Daily about 08:00-17:30 (Google, Tuesday hours)",
+   "days": [],
+   "bestTime": "Breakfast or lunch before the boat.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Order kha moo on rice and one plate of khanom jeen with crab curry."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/113394Kc-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%A1%E0%B8%B8%E0%B9%89%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%AD%E0%B8%99"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=100054269301676"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/restaurants/113394Kc-%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%A1%E0%B8%B8%E0%B9%89%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%AD%E0%B8%99"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (Che Mui เจ้มุ้ยข้าวขาหมู ขนมจีนเมืองคอน, 4.5, open 08:00-17:30, pin in Mae Nam; same phone 099 353 9639 as Wongnai). Wongnai page read 27 Oct 2026 (3.9 from 15 reviews, latest Oct 2022).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-freezy-cow-bophut",
+   "name": "Freezy Cow",
+   "nameThai": "",
+   "kind": "dessert",
+   "tags": [
+    "dessert"
+   ],
+   "area": "koh-samui",
+   "district": "Bophut",
+   "island": "Koh Samui",
+   "lat": 9.5480041,
+   "lng": 100.0373458,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Freezy Cow, Ring Road, Bophut, Koh Samui",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 643,
+   "reviewsSource": "Google, via Wanderlog Samui desserts list, 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Cone with up to two flavours 135 THB (Wanderlog review summary, 2026).",
+   "dishes": [
+    "Homemade ice cream in cones and cups"
+   ],
+   "praise": "Google reviewers: 'the quality of the ice cream is exceptional' (Wanderlog Samui desserts list, 2026).",
+   "watchOut": "Praise is from Google reviews only.",
+   "description": "Small ice cream shop on the Bophut ring road, 1 km from Fisherman's Village and 10 minutes from the airport.",
+   "openText": "Daily 09:00-20:00 (Google, Tuesday hours)",
+   "days": [],
+   "bestTime": "Afternoon.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Stop here on the way between the airport or Bangrak pier and Fisherman's Village."
+   ],
+   "links": [
+    {
+     "label": "Wanderlog Samui desserts",
+     "url": "https://wanderlog.com/list/geoCategory/361483/desserts"
+    }
+   ],
+   "sources": [
+    "https://wanderlog.com/list/geoCategory/361483/desserts"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open 09:00-20:00, pin on the Bophut ring road). Wanderlog desserts list (Google 643).",
+   "imageCandidates": []
+  }
+ ],
+ "existingChecked": [],
+ "notIncluded": [
+  {
+   "name": "Mama Pooh's Kitchen (Ban Tai / Srithanu)",
+   "reason": "Closed: Wanderlog shows it permanently closed (2026), though older blogs still recommend it."
+  },
+  {
+   "name": "Beach Garden (Chaloklum)",
+   "reason": "Wanderlog marks it permanently closed; not checked further."
+  },
+  {
+   "name": "Nong M Seafood (Chaloklum pier)",
+   "reason": "Closed: permanently closed on Wanderlog and Google lists."
+  },
+  {
+   "name": "Karma Kafe (Srithanu)",
+   "reason": "Closed: permanently closed."
+  },
+  {
+   "name": "Alex Restaurant (Haad Salad)",
+   "reason": "Closed: permanently closed."
+  },
+  {
+   "name": "Pa Thong Cuisine (Thong Nai Pan)",
+   "reason": "Closed: permanently closed on Google Maps, 27 Oct 2026."
+  },
+  {
+   "name": "Fast Chicken Corner (Ban Tai)",
+   "reason": "Closed: permanently closed on Google Maps, 27 Oct 2026."
+  },
+  {
+   "name": "Krua Chao Koh second branch (17-71 Moo 1, Ban Tai)",
+   "reason": "Closed: permanently closed on Google; the Michelin one at 100/1 Ban Tai is in the list."
+  },
+  {
+   "name": "Phangan Home Made Ice Cream and Thai food",
+   "reason": "Google Maps shows 'Temporarily closed' (27 Oct 2026)."
+  },
+  {
+   "name": "Julien's Bakery (north of Thong Sala)",
+   "reason": "Google Maps shows 'Temporarily closed' (27 Oct 2026)."
+  },
+  {
+   "name": "Little Home (Haad Rin)",
+   "reason": "Google Maps shows 'Temporarily closed' (27 Oct 2026)."
+  },
+  {
+   "name": "Daily Korea Kohsamui (Korean BBQ, Chaweng)",
+   "reason": "Closed: permanently closed on Google Maps."
+  },
+  {
+   "name": "Krua Chao Baan Samui (Lamai)",
+   "reason": "Was in Michelin 2024 and 2025 but is not in the 2026 Surat Thani list; Google 4.0. Weaker than the others."
+  },
+  {
+   "name": "Bang Por Seafood Takho (Mae Nam)",
+   "reason": "Michelin Selected 2026, but Google 4.2 (1,207) and Trip 4.2; cut for length since Jun Hom and Ko Seng are nearby."
+  },
+  {
+   "name": "Seoul Vibe Korean Restaurant (Thong Sala)",
+   "reason": "Reviews mostly praise the vegan BBQ and call it expensive; pork BBQ not confirmed."
+  },
+  {
+   "name": "Outlaws Saloon (Ban Tai road)",
+   "reason": "Steaks and ribs until 24:00, but reviewers report uneven steak quality (Wanderlog)."
+  },
+  {
+   "name": "KAP's Burger & BBQ Ribs and Locals Smoked BBQ (Bophut, Samui)",
+   "reason": "Google 4.8-4.9 with no independent reviews found."
+  },
+  {
+   "name": "Nira's Home Bakery (Thong Sala)",
+   "reason": "Long-running and well known, but Wongnai 3.5 from 13 reviews; weaker than the others."
+  },
+  {
+   "name": "Peppercorn steakhouse, Ying Ying's Kitchen, Cucina Italiana, Mythai Burgers, Romanzo Tropicale (Koh Phangan)",
+   "reason": "Well reviewed (Google 4.5-4.8) but cut for length; Fabio's, Pum Pui and L'Alcove cover the same ground."
+  },
+  {
+   "name": "Nana Tam and Kob Thai (Lamai, Samui)",
+   "reason": "Good local Thai reviews but Lamai is off the airport and pier route; cut for length."
+  },
+  {
+   "name": "Koh Tao places",
+   "reason": "None checked to the standard needed; not included."
+  }
+ ]
+}

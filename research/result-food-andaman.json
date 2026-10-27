@@ -1,0 +1,2685 @@
+{
+  "generatedOn": "2026-10-27",
+  "region": "andaman",
+  "scopeNote": "Day-trip and short-stay food around Phuket: Phang Nga (Khok Kloi, Phang Nga town, Koh Panyee, Lam Kaen near Thap Lamu pier, Khao Lak, Takua Pa), Krabi (Krabi Town, Ao Nang, Ao Nam Mao, Nopparat Thara, Railay, Klong Muang), Koh Phi Phi Don (Tonsai), Koh Yao Noi and Koh Yao Yai, and Koh Lanta (Saladan, Long Beach, Kantiang), with lunch stops near piers and roads first and a few dinners for a night there.",
+  "basics": [],
+  "items": [
+    {
+      "id": "food-thian-leng-bak-kut-teh",
+      "name": "Thian Leng Bak Kut Teh",
+      "nameThai": "เทียนเหล็ง บะกุ๊ดเต๋",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "breakfast",
+        "budget",
+        "local-favourite",
+        "michelin"
+      ],
+      "area": "phang-nga",
+      "district": "Khok Kloi",
+      "island": "Phang Nga mainland",
+      "lat": 8.293627,
+      "lng": 98.301065,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Thian Leng Bak Kut Teh, 35 Mu 4, Phet Kasem Road, Khok Kloi, Takua Thung, Phang Nga",
+      "placeId": "",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Selected, Thailand 2026 guide (Phang Nga)",
+      "priceLevel": 1,
+      "priceText": "No dish prices found online. Michelin puts it in its lowest price band (one baht sign).",
+      "dishes": [
+        "Bak kut teh: pork rib soup with Chinese herbs, Kedah (Malaysia) style, served in a clay pot"
+      ],
+      "praise": "Michelin inspectors write that the ribs are slow-cooked until the meat comes off the bone, and that the shop is so sure of the soup that it offers your money back if you do not like it (Michelin Guide, 2026 selection).",
+      "watchOut": "Breakfast and lunch only: it closes at 16:00 (Sunday 15:00). Cash only.",
+      "description": "A roadside shop on the highway at Khok Kloi, about 25 minutes north of Phuket Airport, that cooks one thing: Malaysian-style pork rib soup. The easiest pork stop on any drive north to Khao Lak or Phang Nga.",
+      "openText": "Mon-Sat 07:00-16:00, Sun 07:00-15:00",
+      "days": [],
+      "bestTime": "Breakfast or early lunch on the way north.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Order rice and Chinese tea with the soup.",
+        "Baan Rearn Mai seafood is 500 m away if the group wants a second, bigger meal."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Thian+Leng+Bak+Kut+Teh/@8.2936274,98.3010653,17z/data=!3m1!4b1!4m6!3m5!1s0x30505a0e83e6c6cb:0xab165195922cfe92!8m2!3d8.2936274!4d98.3010653!16s%2Fg%2F11bt_krgdg"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/thian-leng-bak-kut-teh"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/thian-leng-bak-kut-teh"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.4, open hours shown, pin on Phet Kasem Road at Khok Kloi). Michelin page read 27 Oct 2026 (Selected, hours, cash only). No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-baan-rearn-mai",
+      "name": "Baan Rearn Mai Seafood",
+      "nameThai": "ร้านอาหารบ้านเรือนไม้ ซีฟู้ด",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "michelin",
+        "local-favourite",
+        "group-friendly"
+      ],
+      "area": "phang-nga",
+      "district": "Khok Kloi",
+      "island": "Phang Nga mainland",
+      "lat": 8.297281,
+      "lng": 98.298397,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Baan Rearn Mai, 37/18 Mu 4, Khok Kloi, Takua Thung, Phang Nga",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Selected, Thailand 2026 guide (Phang Nga)",
+      "priceLevel": 2,
+      "priceText": "No dish prices found online. Michelin rates it two baht signs (mid-price). Crab is priced by size.",
+      "dishes": [
+        "Yellow curry with crab (the house signature)",
+        "Steamed sea bass with soy sauce"
+      ],
+      "praise": "Michelin (2026 selection) notes 25 years of light, fresh seafood cooking and singles out the steamed sea bass with soy sauce. Google rating 4.7 in Oct 2026.",
+      "watchOut": "Open only until 18:00, so it is a lunch place. Cash only.",
+      "description": "A small wooden seafood house in Khok Kloi, 25 minutes north of Phuket Airport, known for its yellow crab curry. A good lunch on the drive to Khao Lak or back from Phang Nga Bay.",
+      "openText": "Daily 10:00-18:00",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ask the price of crab before they cook it.",
+        "Thian Leng pork rib soup is next door for breakfast."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Raan+Baan+Ruean+Mai/@8.2972812,98.298397,17z/data=!3m1!4b1!4m6!3m5!1s0x30505a7068b045bd:0x774f713e9fea3b9a!8m2!3d8.2972812!4d98.298397!16s%2Fg%2F11fy9xc1hc"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/baan-rearn-mai"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/baan-rearn-mai"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, pin in Khok Kloi). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-aulis-phuket",
+      "name": "Aulis Phuket",
+      "nameThai": "อาวลิส ภูเก็ต",
+      "kind": "fine-dining",
+      "tags": [
+        "michelin",
+        "booking-needed"
+      ],
+      "area": "phang-nga",
+      "district": "Natai Beach (Khok Kloi)",
+      "island": "Phang Nga mainland",
+      "lat": 8.286981,
+      "lng": 98.274821,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Aulis Phuket, Iniala Beach House, 40/14 Mu 6, Ban Natai, Khok Kloi, Phang Nga",
+      "placeId": "ChIJa5G2159bUDARtErVOCyhyNQ",
+      "rating": 5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "One Michelin star, Thailand 2026 guide (the only starred restaurant in Phang Nga)",
+      "priceLevel": 4,
+      "priceText": "Tasting menu price is not published on its website or the Michelin page; Michelin rates it four baht signs (the top band). A credit card is needed to hold the booking.",
+      "dishes": [
+        "Multi-course tasting menu from Thai and local farm produce, served at a chef's counter",
+        "Non-alcoholic drinks pairing (Michelin says it is worth trying)"
+      ],
+      "praise": "Simon Rogan's first restaurant in Thailand, opened December 2023, holds one Michelin star. Michelin inspectors describe a tasting menu built on native ingredients from local growers, served at an open kitchen counter.",
+      "watchOut": "Only 15 seats at one counter: 8 people would fill half of it. Closed for the low season until about 16 Nov 2026 (website). Groups of 5 or more must change or cancel at least 10 days ahead.",
+      "description": "A 15-seat chef's table inside Iniala Beach House on Natai Beach, about 25 minutes north of Phuket Airport. The one Michelin-starred special dinner in the region.",
+      "openText": "Tue-Sat, one dinner sitting from 18:30; lunch on request (website, Oct 2026)",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "bestTime": "Book weeks ahead for a Tuesday to Saturday dinner.",
+      "score": 5,
+      "pick": false,
+      "tips": [
+        "Book online, by phone +66 96 604 5469 or by email info@aulisphuket.com.",
+        "Allow 1 hour each way by car from Patong."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Aulis+Phuket+%E0%B8%AD%E0%B8%B2%E0%B8%A7%E0%B8%A5%E0%B8%B4%E0%B8%AA+%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95/@8.2869813,98.2748214,17z/data=!3m1!4b1!4m6!3m5!1s0x30505b9fd7b6916b:0xd4c8a12c38d54ab4!8m2!3d8.2869813!4d98.2748214!16s%2Fg%2F11j7h5d9rr"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/aulis-1210910"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.aulisphuket.com/"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/aulis-1210910",
+        "https://www.aulisphuket.com/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (5.0, fine dining, opens 18:30, pin at Iniala Beach House). Michelin page read 27 Oct 2026 (star, closed for the season at the time). Website read 27 Oct 2026 (closed 16 May to 16 Nov, 15 seats, Tue-Sat 18:30). No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-khun-thip-satay",
+      "name": "Khun Thip's Satay",
+      "nameThai": "หมูสะเต๊ะเมืองพังงา คุณทิพย์",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "budget",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "phang-nga",
+      "district": "Phang Nga town",
+      "island": "Phang Nga mainland",
+      "lat": 8.461587,
+      "lng": 98.531177,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Khun Thip's Satay, 184 Phet Kasem Road, Thai Chang, Mueang Phang Nga",
+      "placeId": "",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Selected, Thailand 2026 guide (Phang Nga)",
+      "priceLevel": 1,
+      "priceText": "Set menus only, minimum 10 skewers (Michelin, 2026). No current skewer price found; Michelin rates it one baht sign.",
+      "dishes": [
+        "Pork satay with peanut sauce and cucumber relish",
+        "Pork liver satay",
+        "Pork intestine satay",
+        "Seafood satay set"
+      ],
+      "praise": "Grilling satay since 1975. Michelin (2026 selection) recommends the pork satay for its tender meat, coconut aroma and sweet peanut sauce, and also the liver and intestine skewers.",
+      "watchOut": "Lunch only, 11:00-15:00, and closed on Tuesday and Wednesday. Cash only.",
+      "description": "A satay shop in Phang Nga town that has done pork satay sets for 50 years. Phang Nga town is the land side of the Phang Nga Bay (James Bond Island) trips, so it fits a lunch before or after the boat.",
+      "openText": "Thu-Mon 11:00-15:00, closed Tue and Wed",
+      "days": [
+        "Mon",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Lunch, before it sells out in the afternoon.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "A group of 8 can share the meat set and a seafood set."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Khun+Thip+Mueang+Phang-nga+Satay/@8.4615871,98.5311773,17z/data=!3m1!4b1!4m6!3m5!1s0x305101743243ce5d:0x196b32b3e3f09799!8m2!3d8.4615871!4d98.5311773!16s%2Fg%2F1hm1pwnjq"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/khun-thip-s-satay"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/khun-thip-s-satay"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.4, opens Thursday 11:00, closed Tue). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-koh-panyee",
+      "name": "Koh Panyee floating village restaurants",
+      "nameThai": "เกาะปันหยี",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "halal",
+        "group-friendly",
+        "view"
+      ],
+      "area": "phang-nga",
+      "district": "Koh Panyee",
+      "island": "Koh Panyee",
+      "lat": 8.335432,
+      "lng": 98.503605,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ko Panyi floating village, Phang Nga",
+      "placeId": "",
+      "rating": null,
+      "ratingSource": "Google Maps, 27 Oct 2026: the village itself 4.4; sample restaurants Mariya Sea View 4.1, Panyi Restaurant 3.9",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Most visitors eat a set lunch that is part of the tour price. No current a la carte prices found.",
+      "dishes": [
+        "Grilled fish, prawns and squid",
+        "Tom yum goong",
+        "Curries and stir-fries"
+      ],
+      "praise": "Phuket101 (updated Mar 2026): the food is decent rather than special, but the seafood is fresh because it is still a working fishing village; the writer has had good tom yum goong there more than once.",
+      "watchOut": "This is a tour-group lunch stop: about a dozen big restaurants on stilts fill up between 11:00 and 13:00. It is a Muslim village: no pork and no alcohol anywhere, and you should not bring any.",
+      "description": "The fishing village on stilts in Phang Nga Bay where most James Bond Island tours stop for lunch. Go for the setting and fresh seafood, not for a great meal.",
+      "openText": "Restaurants roughly 10:00-16:00, mainly lunch",
+      "days": [],
+      "bestTime": "Lunch, early (before 11:00) if you come by private longtail.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Grilled squid and satay from the small stalls are cheaper than the big restaurants (Phuket101, 2026).",
+        "Panyee Muteara Seafood is the best known of the restaurants."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Ko+Panyi+Phangnga/@8.3354322,98.5036047,17z/data=!3m1!4b1!4m6!3m5!1s0x3051ab52477bc903:0xa7cc4a84fea295a2!8m2!3d8.3354322!4d98.5036047!16s%2Fg%2F11h_ccrs0l"
+        },
+        {
+          "label": "Phuket101: Koh Panyee",
+          "url": "https://www.phuket101.net/koh-panyee/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/koh-panyee/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026: village pin 4.4; Mariya Sea View restaurant (4.1, 10:00-16:00) and Panyi Restaurant (3.9) checked; Panyee Muteara did not come up by name. Phuket101 page updated 26 Mar 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-mun-pochana",
+      "name": "Mun Pochana",
+      "nameThai": "มันโภชนา",
+      "kind": "southern-thai",
+      "tags": [
+        "pork",
+        "seafood",
+        "michelin",
+        "group-friendly",
+        "local-favourite"
+      ],
+      "area": "khao-lak",
+      "district": "Lam Kaen (Thap Lamu)",
+      "island": "Phang Nga mainland",
+      "lat": 8.59315,
+      "lng": 98.256579,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Mun Pochana, 46/11 Phet Kasem Road, Lam Kaen, Thai Mueang, Phang Nga",
+      "placeId": "",
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Bib Gourmand, Thailand 2026 guide (listed as \"Mun\")",
+      "priceLevel": 1,
+      "priceText": "No dish prices found online. Michelin rates it one baht sign (cheap).",
+      "dishes": [
+        "Pork ribs in fermented black bean sauce",
+        "Daily catch cooked Southern Thai style"
+      ],
+      "praise": "Michelin (2026 Bib Gourmand): a long-standing local favourite, recently renovated, with bold Southern Thai flavours in generous portions; inspectors recommend the pork ribs with black beans.",
+      "watchOut": "Cash only. Busy with local families at weekends.",
+      "description": "An air-conditioned Southern Thai restaurant on the highway at Lam Kaen, about 4 km from Thap Lamu pier (Similan Islands boats). Good for a group lunch or dinner on the way to Khao Lak.",
+      "openText": "Daily 10:30-22:30",
+      "days": [],
+      "bestTime": "Lunch after a Similan trip, or dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ask what fish came in today."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Mun+Pochana/@8.5931495,98.2565791,17z/data=!3m1!4b1!4m6!3m5!1s0x3050ee37d46995eb:0x9c3a91d352c12cb8!8m2!3d8.5931495!4d98.2565791!16s%2Fg%2F1hdzsxr4_"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/mon-phochana"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/Manpochana"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/mon-phochana"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.3, open, 10:30-22:30, pin on Phet Kasem Road at Lam Kaen). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-krachang-khao-lak",
+      "name": "Krachang Khao Lak",
+      "nameThai": "กระชังเขาหลัก",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "michelin",
+        "view",
+        "group-friendly"
+      ],
+      "area": "khao-lak",
+      "district": "Lam Kaen (Thap Lamu)",
+      "island": "Phang Nga mainland",
+      "lat": 8.563553,
+      "lng": 98.227028,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Krachang Khao Lak, 78/155 Mu 5, Lam Kaen, Thai Mueang, Phang Nga",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Bib Gourmand, Thailand 2026 guide",
+      "priceLevel": 2,
+      "priceText": "No dish prices found online. Michelin rates it two baht signs; live seafood is sold by weight.",
+      "dishes": [
+        "Shrimp and coconut soup with melinjo (liang) leaves",
+        "Turmeric-marinated grilled giant trevally",
+        "Live-catch seafood from the daily board"
+      ],
+      "praise": "In the 2026 Bib Gourmand list. Michelin describes a breezy, rustic place over the water serving mostly live-catch seafood, and calls the grilled giant trevally a rare local fish. Google rating 4.7 (Oct 2026).",
+      "watchOut": "Michelin lists it as open daily, but Google shows it closed on Tuesdays. Call first: +66 95 656 0862.",
+      "description": "A seafood restaurant near Thap Lamu pier, south of Khao Lak; the name means fish cage. The strongest seafood choice on the Phuket to Khao Lak road.",
+      "openText": "12:00-20:00; Google shows Tuesday closed",
+      "days": [
+        "Mon",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Late lunch, or an early dinner before dark.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Ask the weight and price of fish before they cook it.",
+        "Car park on site; the group fits easily."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Krachang+Khao+Lak+(%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81)/@8.5635528,98.2270278,17z/data=!3m1!4b1!4m6!3m5!1s0x3050f1b4faa30e4d:0x7fa52a6109abeb50!8m2!3d8.5635528!4d98.2270278!16s%2Fg%2F11tkbjy310"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krachang-khao-lak"
+        },
+        {
+          "label": "Website",
+          "url": "https://openlink.co/krachangkhaolak"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krachang-khao-lak",
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/451452"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, closed on the day read, opens Wednesday 12:00). Michelin page read 27 Oct 2026 (Bib Gourmand, hours 12:00-20:00). Named in the Thai government list of 2026 Bib Gourmand winners.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-krua-luang-ten",
+      "name": "Krua Luang Ten",
+      "nameThai": "ครัวหลวงเทน",
+      "kind": "southern-thai",
+      "tags": [
+        "seafood",
+        "michelin",
+        "local-favourite",
+        "budget"
+      ],
+      "area": "khao-lak",
+      "district": "Khuek Khak (Khao Lak)",
+      "island": "Phang Nga mainland",
+      "lat": 8.714767,
+      "lng": 98.257574,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Krua Luang Ten, 160 Mu 2, Phet Kasem Road, Khuek Khak, Takua Pa",
+      "placeId": "",
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Bib Gourmand, Thailand 2026 guide",
+      "priceLevel": 1,
+      "priceText": "No dish prices found online. Michelin rates it one baht sign (cheap).",
+      "dishes": [
+        "Catch of the day, Southern style",
+        "Tai pla (fermented fish curry) dip with free fresh vegetables"
+      ],
+      "praise": "Michelin (2026 Bib Gourmand): robust Southern Thai flavours, specials built on the daily catch and seasonal produce, tables set on sand floors.",
+      "watchOut": "Short hours: 11:00-13:00 and 17:00-20:00. Closed on the 10th, 20th and 30th of each month. Cash only. Everything is cooked to order, so order all your dishes at the start.",
+      "description": "A local Southern Thai kitchen in north Khao Lak with tables on sand. A good dinner for a night in Khao Lak.",
+      "openText": "Daily 11:00-13:00 and 17:00-20:00; closed on the 10th, 20th and 30th of the month",
+      "days": [],
+      "bestTime": "Arrive at 17:00 for dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Order everything at once, as Michelin advises."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Krua+Luang+Ten/@8.7147669,98.257574,17z/data=!3m1!4b1!4m6!3m5!1s0x3050e9a53a5ce127:0x641db1b78c15a4db!8m2!3d8.7147669!4d98.257574!16s%2Fg%2F11bvt4h7hc"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krua-luang-ten"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krua-luang-ten"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.3, hours 11:00-13:00 and 17:00-20:00, pin at Khuek Khak). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-go-pong",
+      "name": "Go Pong",
+      "nameThai": "",
+      "kind": "noodles",
+      "tags": [
+        "budget",
+        "dessert",
+        "pork"
+      ],
+      "area": "khao-lak",
+      "district": "Khao Lak centre",
+      "island": "Phang Nga mainland",
+      "lat": 8.647826,
+      "lng": 98.25196,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Go Pong, Khao Lak, Khuek Khak",
+      "placeId": "",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1454,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.4,
+          "reviews": 884,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/74083/where-to-eat-best-restaurants-in-khao-lak"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current menu prices found; reviewers call it very cheap (Wanderlog review summary, 2024-2026).",
+      "dishes": [
+        "Pork, chicken or beef noodle soup",
+        "Seafood stir-fried noodles",
+        "Mango sticky rice"
+      ],
+      "praise": "Reviewers repeat that the noodle soups are light and clean and the prices low; a 2024 review praises the beef soup, another the pork noodle soup. Listed by Lonely Planet for Khao Lak.",
+      "watchOut": "Simple open shop on the main road, no air conditioning.",
+      "description": "A noodle shop in Khao Lak centre, opposite Jai Restaurant, that grew from a stall under a plastic awning. The cheap, easy lunch in Khao Lak, with mango sticky rice after.",
+      "openText": "Daily, about 12:00-21:00 (Google, Oct 2026)",
+      "days": [],
+      "bestTime": "Lunch or an early dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "They can make vegan versions (Wanderlog review)."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Go+Pong/@8.6478256,98.2519605,17z/data=!3m1!4b1!4m6!3m5!1s0x3050eec57cd61721:0x3ce273409a9227fd!8m2!3d8.6478256!4d98.2519605!16s%2Fg%2F11cm098cgh"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/place/details/1137868/go-pong",
+        "https://wanderlog.com/list/geoCategory/74083/where-to-eat-best-restaurants-in-khao-lak"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, open, 12:00-21:00). Wanderlog list shows Google 4.5 (1,454) and Tripadvisor 4.4 (884).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-bang-niang-market",
+      "name": "Bang Niang Market",
+      "nameThai": "ตลาดนัดบางเนียง",
+      "kind": "market",
+      "tags": [
+        "pork",
+        "dessert",
+        "budget",
+        "group-friendly"
+      ],
+      "area": "khao-lak",
+      "district": "Bang Niang (Khao Lak)",
+      "island": "Phang Nga mainland",
+      "lat": 8.666682,
+      "lng": 98.251355,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Bang Niang Market, Phet Kasem Road, Khuek Khak, Khao Lak",
+      "placeId": "",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 8990,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.0,
+          "reviews": 1481,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/74083/where-to-eat-best-restaurants-in-khao-lak"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Fruit shakes about 60 THB, strawberry or mixed shakes about 80 THB, cocktails about 120 THB (Phuket101, Aug 2026). Food stalls are street prices.",
+      "dishes": [
+        "Grilled pork ribs (ask for the soft-bone ones) near the entrance",
+        "Moo ping pork skewers with sticky rice",
+        "Roti with banana",
+        "Khao mok gai (chicken biryani)",
+        "Mango sticky rice, coconut ice cream, banana in coconut milk"
+      ],
+      "praise": "Phuket101 (updated Aug 2026): the biggest market in Khao Lak, and the food is the main reason to go; the pork ribs stall near the entrance is the one they name first.",
+      "watchOut": "Only four days a week: Monday, Wednesday, Thursday and Saturday. Cash only. Clothes and souvenirs are marked up.",
+      "description": "The big open-air evening market in Khao Lak with hundreds of stalls. The easy, cheap dinner for the whole group on a Khao Lak night.",
+      "openText": "Mon, Wed, Thu, Sat 14:00-22:00",
+      "days": [
+        "Mon",
+        "Wed",
+        "Thu",
+        "Sat"
+      ],
+      "bestTime": "18:00-20:00, when the grills are going.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "On the other days, The Landmark Night Market nearby opens daily (Phuket101).",
+        "Banana Bar next to the market keeps serving after the stalls close."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Bang+Niang+Market+(Chong+fah)/@8.6666817,98.251355,17z/data=!3m1!4b1!4m6!3m5!1s0x3050e931b491d32b:0xc80005efb2269fff!8m2!3d8.6666817!4d98.251355!16s%2Fg%2F11b8232cn2"
+        },
+        {
+          "label": "Phuket101: Bang Niang Market",
+          "url": "https://www.phuket101.net/bang-niang-night-market"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/bang-niang-night-market",
+        "https://wanderlog.com/list/geoCategory/74083/where-to-eat-best-restaurants-in-khao-lak"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.2, closed on Tuesday as expected). Phuket101 page updated 17 Aug 2026 (days and hours). Wanderlog shows Google 4.2 (8,990) and Tripadvisor 4.0 (1,481).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-hok-kee-lao",
+      "name": "Hok Kee Lao",
+      "nameThai": "ฮกกี่เหลา",
+      "kind": "thai",
+      "tags": [
+        "pork",
+        "seafood",
+        "michelin",
+        "group-friendly",
+        "local-favourite"
+      ],
+      "area": "khao-lak",
+      "district": "Takua Pa",
+      "island": "Phang Nga mainland",
+      "lat": 8.84925,
+      "lng": 98.346085,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Hok Kee Lao, 207 Rat Bumrung Road, Bang Nai Si, Takua Pa",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Bib Gourmand, Thailand 2026 guide",
+      "priceLevel": 2,
+      "priceText": "Crab meat in lime dressing 170 THB, sea cucumber with abalone 350 THB (BK Magazine, Oct 2017, at the old address; expect higher now). Michelin rates it two baht signs.",
+      "dishes": [
+        "Stir-fried soft tofu with minced pork and shrimp",
+        "Nam chup yam: Southern chilli relish with fresh vegetables",
+        "Crab meat with lime dressing",
+        "Old-style sea cucumber and abalone"
+      ],
+      "praise": "In the Michelin guide since 2020 and a Bib Gourmand in 2026. Michelin calls it a heritage restaurant for Thai, Chinese and Southern flavours that is \"well worth making the short trip\" from Takua Pa; BK Magazine (2017) said the crab dish is not to be missed. Google rating 4.7 (Oct 2026).",
+      "watchOut": "It moved from the old two-storey house on Sena Rat Road to a bigger place on Rat Bumrung Road: use the new pin. Cash only.",
+      "description": "The best-known Thai-Chinese family restaurant in Takua Pa, now in a larger building that suits a group. Worth the detour if you visit Takua Pa old town from Khao Lak.",
+      "openText": "Daily 10:30-13:30 and 16:30-21:30",
+      "days": [],
+      "bestTime": "Lunch before 13:30, or dinner.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Order the tofu with minced pork; Michelin praises its custard-like texture."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/%E0%B8%AE%E0%B8%81%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B2/@8.8492502,98.3460849,17z/data=!3m1!4b1!4m6!3m5!1s0x3050db003c34a7fb:0x8fe996309e89ae17!8m2!3d8.8492502!4d98.3460849!16s%2Fg%2F11yd1r0_tw"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/hok-kee-lao"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/hok-kee-lao",
+        "https://bkmagazine.com/travel/news/best-local-restaurants-pha-nga-krabi-thailand"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, 10:30-13:30 and 16:30-21:30, pin at 207 Rat Bumrung Rd). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-lok-un-takua-pa",
+      "name": "Lok-Un",
+      "nameThai": "ร้านหลกอั้น",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "breakfast",
+        "budget",
+        "michelin",
+        "local-favourite"
+      ],
+      "area": "khao-lak",
+      "district": "Takua Pa",
+      "island": "Phang Nga mainland",
+      "lat": 8.866248,
+      "lng": 98.346761,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Lok-Un, 85 Si Mueang Road, Takua Pa",
+      "placeId": "",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": "Michelin Selected, Thailand 2026 guide (Phang Nga)",
+      "priceLevel": 1,
+      "priceText": "No dish prices found online. Michelin rates it one baht sign (cheap).",
+      "dishes": [
+        "BBQ red pork (moo daeng) on rice",
+        "Crispy pork belly (moo krob)",
+        "Braised pork knuckle (kha moo)",
+        "Hainanese chicken rice"
+      ],
+      "praise": "Michelin (2026 selection): a Chinese-Thai shop rooted in Takua Pa's tin-mining community, with a short menu of BBQ pork, crispy pork and braised pork knuckle made the old way, which draws a steady flow of locals. Google 4.6 (Oct 2026).",
+      "watchOut": "Closed on Sunday and closes at 16:00. Cash only.",
+      "description": "An old-school pork-on-rice shop in Takua Pa: red pork, crispy pork and pork knuckle in one plate. A strong pork breakfast or lunch north of Khao Lak.",
+      "openText": "Mon-Sat 07:00-16:00, closed Sun",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "bestTime": "Breakfast or lunch; good things sell out by afternoon.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Ask for a mixed plate (khao moo daeng moo krob) with the knuckle on the side."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Lok-Un/@8.8662481,98.3467605,17z/data=!3m1!4b1!4m6!3m5!1s0x3050db05c7905cc3:0xd577aaf6eff6eeb2!8m2!3d8.8662481!4d98.3467605!16s%2Fg%2F11f3czpnxw"
+        },
+        {
+          "label": "Michelin Guide",
+          "url": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/rock-un"
+        }
+      ],
+      "sources": [
+        "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/rock-un"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.6, 07:00-16:00, pin on Si Mueang Road). Michelin page read 27 Oct 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ruenmai-krabi",
+      "name": "RuenMai",
+      "nameThai": "ร้านอาหารเรือนไม้",
+      "kind": "southern-thai",
+      "tags": [
+        "seafood",
+        "group-friendly",
+        "booking-needed"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town (Sai Thai)",
+      "island": "Krabi mainland",
+      "lat": 8.088079,
+      "lng": 98.882336,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "RuenMai Krabi, 117 Moo 3, Sai Thai, Mueang Krabi",
+      "placeId": "ChIJ5ULwEFOUUTARviM4wqjwrA8",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1730,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 109,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Stir-fried prawns with shrimp paste and sator beans 250 THB, fried mackerel with soy sauce 240 THB (BK Magazine, Sep 2019). Most dishes 150-300 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Goong pad kapi sataw: prawns with shrimp paste and stink beans",
+        "Gaeng tai pla: Southern fermented fish curry",
+        "Massaman curry",
+        "Pad pak miang (stir-fried melinjo leaves)",
+        "Fresh crab"
+      ],
+      "praise": "Listed by BK Magazine in 2017 and its pick for Krabi in 2019; Thai Holiday Guide (Jul 2026) calls it authentic Southern cooking in a garden; Will Fly For Food (Oct 2026): \"the place to visit if it's your first time trying authentic Thai food\".",
+      "watchOut": "Outside the walking areas: arrange a car or tuk-tuk both ways. Closed 15:00-17:00. Call ahead at weekends.",
+      "description": "Southern Thai cooking in wooden salas among ponds and gardens, about 10 minutes from Krabi Town on the Ao Nang side. The top all-round dinner choice in Krabi for a group.",
+      "openText": "Daily 10:30-15:00 and 17:00-21:00",
+      "days": [],
+      "bestTime": "Dinner from 17:00, or a long lunch.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Phone +66 89 288 3232 to book a sala for 8.",
+        "They grow many of their own herbs and vegetables."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/RuenMai+Krabi/data=!4m7!3m6!1s0x3051945310f042e5:0xfacf0a8c23823be!8m2!3d8.0880795!4d98.8823363!16s%2Fg%2F1q6jzmj8y!19sChIJ5ULwEFOUUTARviM4wqjwrA8"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/ruenmaikrabirestuarant"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/",
+        "https://bkmagazine.com/travel/news/best-local-restaurants-pha-nga-krabi-thailand",
+        "https://www.thaiholidayguide.com/best-restaurants-krabi/",
+        "https://www.willflyforfood.net/the-7-best-places-to-try-thai-food-in-krabi-thailand/",
+        "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, 10:30-15:00 and 17:00-21:00). Wanderlog shows Google 4.7 (1,730), Tripadvisor 4.5 (109). Thai Holiday Guide updated Jul 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-nong-joke-krabi",
+      "name": "Nong Joke",
+      "nameThai": "ร้านอาหารน้องโจ๊ก",
+      "kind": "southern-thai",
+      "tags": [
+        "seafood",
+        "local-favourite",
+        "group-friendly"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town (Sai Thai)",
+      "island": "Krabi mainland",
+      "lat": 8.050375,
+      "lng": 98.916475,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Nong Joke, 50/3 Moo 7, Sai Thai Road, Mueang Krabi",
+      "placeId": "",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1596,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 90,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/place/details/1022533"
+        },
+        {
+          "site": "Wongnai",
+          "rating": 4.2,
+          "reviews": 235,
+          "note": "via search snippet",
+          "url": "https://www.wongnai.com/restaurants/nongjok"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Kua kling 120 THB, sour curry with fish and coconut shoots 150 THB (BK Magazine, Sep 2019). Mark Wiens paid 60-150 THB a dish (older post). KTC (Jan 2026) puts a meal at 300-500 THB a person.",
+      "dishes": [
+        "Tom som pla: sour fish soup",
+        "Nam prik goong sot: fresh shrimp chilli dip with vegetables",
+        "Yellow curry with braised pork leg and young coconut",
+        "Crab curry with rice noodles",
+        "Kua kling (dry spicy curry)"
+      ],
+      "praise": "Mark Wiens (Eating Thai Food): \"should strive to eat at Nong Joke when in Krabi\"; BK Magazine (2019) calls it \"fearlessly spicy\"; Fah Thai magazine: cherished by local families for Southern Thai food.",
+      "watchOut": "Spicy by default: ask for \"mai phet mak\" (not very spicy). Closed 14:00-16:00.",
+      "description": "A family Southern Thai restaurant just south of Krabi Town that locals have used for over 40 years. Best for curries, sour soups and seafood.",
+      "openText": "Daily 11:00-14:00 and 16:00-21:00",
+      "days": [],
+      "bestTime": "Lunch or dinner.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Try the sour fish soup and the shrimp chilli dip together."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Nong+Joke/@8.0503751,98.9164752,17z/data=!3m1!4b1!4m6!3m5!1s0x305194a4537bc4e9:0x1707c65a2a30dc5a!8m2!3d8.0503751!4d98.9164752!16s%2Fg%2F1tg975fy"
+        },
+        {
+          "label": "Website",
+          "url": "http://www.nongjokekrabi.com/"
+        },
+        {
+          "label": "Eating Thai Food review",
+          "url": "https://www.eatingthaifood.com/nong-joke-krabi"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/",
+        "https://www.eatingthaifood.com/nong-joke-krabi",
+        "https://fahthaimag.com/a-cosy-favourite/",
+        "https://www.ktc.co.th/article/dining/restaurant/krabi-recommend-food",
+        "https://wanderlog.com/place/details/1022533"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, open, 11:00-14:00 and 16:00-21:00). Wanderlog shows Google 4.5 (1,596), Tripadvisor 4.5 (90). KTC list updated 3 Jan 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-kotung-krabi",
+      "name": "Kotung",
+      "nameThai": "ร้านอาหารโกตุง",
+      "kind": "thai",
+      "tags": [
+        "pork",
+        "seafood",
+        "group-friendly",
+        "local-favourite"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town (Maharaj Road)",
+      "island": "Krabi mainland",
+      "lat": 8.098041,
+      "lng": 98.899879,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Kotung Restaurant, 66 Maharaj Road, Krabi",
+      "placeId": "",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 928,
+      "reviewsSource": "Google count shown on a Wanderlog place page, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 30,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/place/details/228811"
+        },
+        {
+          "site": "Wongnai",
+          "rating": 4.1,
+          "reviews": 133,
+          "note": "via search snippet",
+          "url": "https://www.wongnai.com/restaurants/kotung"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Crab curry with rice noodles 180 THB, kao yok (braised pork belly with taro) 150 THB, tofu song krueng 120 THB (BK Magazine, Sep 2019). Most dishes 80-150 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Kao yok: braised pork belly with taro",
+        "Crab coconut curry with rice noodles",
+        "Gaeng som (sour curry)",
+        "Tofu with crab meat in Chinese gravy"
+      ],
+      "praise": "BK Magazine (2019): 36 years of Sino-Thai cooking, so popular it moved to a bigger site; Thai Holiday Guide (Jul 2026, editor's pick): order the braised pork belly or crab curry. Google reviews in 2026 praise the fresh seafood.",
+      "watchOut": "Closing days vary; check its Facebook page. It is north of the town centre near the bus terminal, not by the river.",
+      "description": "A large Sino-Thai diner in Krabi Town (about 300 seats) known for braised pork belly and crab curry. Easy for 8 people.",
+      "openText": "Daily 11:00-22:00 (closing days vary)",
+      "days": [],
+      "bestTime": "Lunch or dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Some 2019 diners found the braised pork a little sweet; balance it with gaeng som."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Kotung+Restaurant/@8.0980411,98.8998786,17z/data=!3m1!4b1!4m6!3m5!1s0x305194993535c9d9:0x10d436e3e74ab1c3!8m2!3d8.0980411!4d98.8998786!16s%2Fg%2F1v3_02zf"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/kotungkrabi2522/"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/",
+        "https://bkmagazine.com/travel/news/best-local-restaurants-pha-nga-krabi-thailand",
+        "https://www.thaiholidayguide.com/best-food-krabi/",
+        "https://wanderlog.com/place/details/228811"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, open until 22:00). Wanderlog place page shows Google 4.5 (928) with dated 2026 reviews; Tripadvisor 4.5 (30).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-kosuang-krabi",
+      "name": "KoSuang",
+      "nameThai": "ร้านอาหารโกส้วง",
+      "kind": "pork",
+      "tags": [
+        "pork",
+        "breakfast",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town",
+      "island": "Krabi mainland",
+      "lat": 8.068103,
+      "lng": 98.916535,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "KoSuang Restaurant, 249/7 Utarakit Road, Krabi Town",
+      "placeId": "",
+      "rating": 4.4,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1118,
+      "reviewsSource": "Google count shown on a Wanderlog place page, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 32,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/place/details/761621"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current menu prices found; BK Magazine (2019) lists it with Krabi Town's cheap local shops.",
+      "dishes": [
+        "Moo krob: crispy pork belly on rice",
+        "Moo daeng: red BBQ pork on rice",
+        "Handmade egg noodles with roast duck",
+        "Hainanese chicken rice"
+      ],
+      "praise": "BK Magazine (2019): expect queues from morning to afternoon, but the pork is \"well worth the wait\"; a Wongnai reviewer (2021) singled out the red pork. Reviewers on Wanderlog say to order anything with the fresh noodles.",
+      "watchOut": "Morning and lunch only: closes 14:30. There is a smaller second branch (KoSuang 2); this pin is the main shop.",
+      "description": "The best-known pork-on-rice shop in Krabi Town, for crispy pork, red pork and handmade egg noodles. A good breakfast before a boat from Krabi.",
+      "openText": "Daily 06:30-14:30",
+      "days": [],
+      "bestTime": "Breakfast, 07:00-09:00.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "Get a mixed plate of crispy and red pork, plus a bowl of egg noodles to share."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/KoSuang+Restaurant/@8.0681026,98.9165355,17z/data=!3m1!4b1!4m6!3m5!1s0x3051949b210ecd79:0x553e7b5c3f73ab2a!8m2!3d8.0681026!4d98.9165355!16s%2Fg%2F1hd_s2ntc"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/",
+        "https://wanderlog.com/place/details/761621"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.4, 06:30-14:30, opens Wednesday 06:30). Wanderlog place page shows Google 4.4 (1,118), Tripadvisor 4.5 (32). BK Magazine (2019) printed a Vicar Road address, but its phone number (075 612 550) matches this Google listing on Utarakit Road.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-khanom-jeen-pa-tom",
+      "name": "Khanom Jeen Pa Tom",
+      "nameThai": "ร้านขนมจีน ป้าต้อม",
+      "kind": "noodles",
+      "tags": [
+        "breakfast",
+        "budget",
+        "local-favourite"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town",
+      "island": "Krabi mainland",
+      "lat": 8.057963,
+      "lng": 98.913213,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Khanom Jeen Pa Tom, Krabi Road, Krabi Town",
+      "placeId": "ChIJT_NVUr2UUTARt-3UGJOwto4",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Noodles with coconut fish curry (nam ya kati) 20 THB, gaeng tai pla 20 THB, soft-boiled egg 10 THB, fried chicken 15 THB a piece (BK Magazine, Sep 2019; prices have likely risen).",
+      "dishes": [
+        "Khanom jeen (fermented rice noodles) with nam ya kati fish curry",
+        "Khanom jeen with gaeng tai pla",
+        "Southern fried chicken"
+      ],
+      "praise": "BK Magazine (2019): well loved for its soft fermented rice noodles and low prices, and says to add the fried chicken. Google 4.5 (Oct 2026).",
+      "watchOut": "Closes at 14:00. Curries are spicy; free fresh vegetables help.",
+      "description": "A local khanom jeen shop in Krabi Town: help-yourself rice noodles with Southern curries and fried chicken, for very little money.",
+      "openText": "Daily 07:00-14:00",
+      "days": [],
+      "bestTime": "Breakfast or early lunch.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Take a piece of fried chicken with your noodles."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Khanom+Jeen+Pa+Tom/data=!4m7!3m6!1s0x305194bd5255f34f:0x8eb6b09318d4edb7!8m2!3d8.0579632!4d98.9132128!16s%2Fg%2F11c2pn09c0!19sChIJT_NVUr2UUTARt-3UGJOwto4"
+        }
+      ],
+      "sources": [
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, 07:00-14:00). Only one independent source found (BK Magazine 2019), so treat it as a local tip.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-krabi-walking-street",
+      "name": "Krabi Town Walking Street",
+      "nameThai": "ถนนคนเดินกระบี่",
+      "kind": "market",
+      "tags": [
+        "budget",
+        "dessert",
+        "seafood",
+        "group-friendly"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town",
+      "island": "Krabi mainland",
+      "lat": 8.064136,
+      "lng": 98.916269,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Krabi Town Night Market (Walking Street), Maharaj Road, Krabi",
+      "placeId": "ChIJsY7cDZuUUTAReC0SG3DDiSQ",
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Boiled shellfish (hoi chak teen) 50-60 THB a bag, grilled squid skewers 40-60 THB, roti with condensed milk 30 THB, khao man gai 60-70 THB (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Grilled squid and seafood skewers",
+        "Hoi chak teen (boiled dog conch)",
+        "Pad thai in an egg crepe",
+        "Roti with condensed milk",
+        "Coconut ice cream in the shell"
+      ],
+      "praise": "Thai Holiday Guide (Jul 2026): the best food variety in Krabi Town; BK Magazine (2019): probably the biggest night bazaar in town, with live music.",
+      "watchOut": "Weekends only (Friday to Sunday). On other nights there are smaller food stalls by Chao Fah pier on the river (about 17:00-22:30, Google Maps).",
+      "description": "The weekend night market in central Krabi Town, with street food, a stage and live music. Cheap and easy for the whole group.",
+      "openText": "Fri-Sun 17:00-22:00",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Around 18:00, before the crowds.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Stalls about 50 m from the stage are said to be 10-20 THB cheaper (Thai Holiday Guide)."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Krabi+Town+Night+Market/data=!4m7!3m6!1s0x3051949b0ddc8eb1:0x2489c3701b122d78!8m2!3d8.064136!4d98.9162686!16s%2Fg%2F11c7ky0qxs!19sChIJsY7cDZuUUTAReC0SG3DDiSQ"
+        }
+      ],
+      "sources": [
+        "https://www.thaiholidayguide.com/best-food-krabi/",
+        "https://www.bkmagazine.com/travel/here-are-best-spots-local-bites-krabi/",
+        "https://whereintheworldisnina.com/eat-krabi-town/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.3, closed on Tuesday as expected). Thai Holiday Guide updated Jul 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-gecko-cabane",
+      "name": "Gecko Cabane",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "pork",
+        "booking-needed"
+      ],
+      "area": "krabi",
+      "district": "Krabi Town",
+      "island": "Krabi mainland",
+      "lat": 8.061473,
+      "lng": 98.915662,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Gecko Cabane Restaurant, Soi Ruamjit, Krabi Town",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1054,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.7,
+          "reviews": 798,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current dish prices found; mid-price for Krabi Town.",
+      "dishes": [
+        "Massaman curry",
+        "Pork tenderloin hang lay curry",
+        "Pineapple fried rice"
+      ],
+      "praise": "Will Fly For Food (updated Oct 2026): a cosy place where a French owner and his Thai wife cook Thai food with some Western touches; ranked first on the Wanderlog Krabi Town list.",
+      "watchOut": "Small place; book for 8.",
+      "description": "A small Thai restaurant with a French twist in the old streets of Krabi Town. A relaxed dinner if you stay in town.",
+      "openText": "Daily about 12:00-22:00",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Dishes can be made less spicy on request."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Gecko+Cabane+Restaurant/@8.0614728,98.9156616,17z/data=!3m1!4b1!4m6!3m5!1s0x30519461a3403aa3:0xb21ff72120dc1200!8m2!3d8.0614728!4d98.9156616!16s%2Fg%2F1tf8wdny"
+        },
+        {
+          "label": "Website",
+          "url": "https://geckocabanerestaurant.com/"
+        }
+      ],
+      "sources": [
+        "https://www.willflyforfood.net/the-7-best-places-to-try-thai-food-in-krabi-thailand/",
+        "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 12:00-22:00). Wanderlog shows Google 4.7 (1,054), Tripadvisor 4.7 (798).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ton-ma-yom",
+      "name": "Ton Ma Yom Thai Food",
+      "nameThai": "ร้านอาหารต้นมะยม อ่าวนาง",
+      "kind": "thai",
+      "tags": [
+        "vegetarian-friendly",
+        "booking-needed",
+        "dessert"
+      ],
+      "area": "krabi",
+      "district": "Ao Nang",
+      "island": "Krabi mainland",
+      "lat": 8.037391,
+      "lng": 98.834475,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ton Ma Yom Thaifood, 262/7 Leela Valley, Ao Nang Soi 11",
+      "placeId": "",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1584,
+      "reviewsSource": "Google count shown on a Wanderlog place page, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 2151,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/place/details/761627"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No menu prices found; 2026 Google reviews call prices \"very reasonable\".",
+      "dishes": [
+        "Green curry",
+        "Tom yum soup",
+        "Massaman curry with beef",
+        "Whole steamed fish with soy and ginger",
+        "Mango sticky rice",
+        "Taro in coconut milk"
+      ],
+      "praise": "Google reviews from Jul-Aug 2026: \"Tastes like someone's grandma made it\", \"Best food in Krabi so far\". Will Fly For Food: small, family-run, large portions at fair prices. One Mar 2026 review found the squid chewy.",
+      "watchOut": "Closed on Monday. Queues at peak times; there is no big sign, so use the pin.",
+      "description": "A small family Thai kitchen in a side street of Ao Nang that is full most evenings. The safe local-style dinner in Ao Nang.",
+      "openText": "Tue-Sun 08:00-14:00 and 17:00-21:00, closed Mon",
+      "days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "bestTime": "Arrive at 17:00 for dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Many vegan options (HappyCow)."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Ton+Ma+Yom+Thaifood,Aonang/@8.0373905,98.8344752,17z/data=!3m1!4b1!4m6!3m5!1s0x3051c0006999f063:0x4fbd056aeaba3109!8m2!3d8.0373905!4d98.8344752!16s%2Fg%2F11b6nhgjqg"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/TonMaYomRestaurant"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/place/details/761627",
+        "https://www.willflyforfood.net/the-7-best-places-to-try-thai-food-in-krabi-thailand/",
+        "https://www.happycow.net/reviews/ton-ma-yom-ao-nang-105910"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.6, 08:00-14:00 and 17:00-21:00). Wanderlog shows Google 4.6 (1,584) and Tripadvisor 4.5 (2,151), with dated 2026 reviews.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ra-beung-lay",
+      "name": "Ra Beung Lay Seafood",
+      "nameThai": "ร้านอาหารระเบียงเลซีฟู้ด",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "view",
+        "group-friendly"
+      ],
+      "area": "krabi",
+      "district": "Ao Nam Mao",
+      "island": "Krabi mainland",
+      "lat": 8.027224,
+      "lng": 98.870394,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Ra Beung Lay Seafood Restaurant, 10 Moo 5, Ao Nam Mao, Sai Thai, Krabi",
+      "placeId": "",
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 3410,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.8,
+          "reviews": 490,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No dish prices found; seafood is priced by weight.",
+      "dishes": [
+        "Grilled squid",
+        "Whole fish",
+        "Seafood Thai dishes"
+      ],
+      "praise": "Thai Holiday Guide (Jul 2026): a quieter, slower seafood meal with west-facing sea views and sunsets. High scores on both Google and Tripadvisor.",
+      "watchOut": "A Google 4.8 from 3,400 reviews is very high; the Tripadvisor 4.8 from 490 reviews backs it, but there is little press coverage. Ask seafood prices first.",
+      "description": "A seafood restaurant on Ao Nam Mao bay, next to the pier for longtails to Railay East, with a sunset view. Good after a Railay day.",
+      "openText": "Daily 11:00-22:00",
+      "days": [],
+      "bestTime": "Sunset dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Book a sea-side table for sunset."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Ra+Beung+Lay+Seafood+Restaurant+%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%80%E0%B8%A5+%E0%B8%8B%E0%B8%B5%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94/@8.0272243,98.8703941,17z/data=!3m1!4b1!4m6!3m5!1s0x3051ead009682fd5:0x19127e638d8a6450!8m2!3d8.0272243!4d98.8703941!16s%2Fg%2F11b7lpdd_8"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/share/1KSeQw1y3G/?mibextid=wwXIfr"
+        }
+      ],
+      "sources": [
+        "https://www.thaiholidayguide.com/best-restaurants-krabi/",
+        "https://wanderlog.com/list/geoCategory/765117/best-thai-foods-and-restaurants-in-krabi-town"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.8, open, 11:00-22:00, pin at Ao Nam Mao). Wanderlog shows Google 4.8 (3,410), Tripadvisor 4.8 (490).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-krua-thara",
+      "name": "Krua Thara",
+      "nameThai": "ร้านอาหารครัวธารา",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "group-friendly"
+      ],
+      "area": "krabi",
+      "district": "Nopparat Thara",
+      "island": "Krabi mainland",
+      "lat": 8.047035,
+      "lng": 98.800167,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Krua Thara, 82 Moo 5, Nopparat Thara Road, Ao Nang",
+      "placeId": "",
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 884,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.0,
+          "reviews": 712,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/77489/best-restaurants-with-a-view-in-ao-nang"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "300-600 THB a person; fish and crab by weight (Thai Holiday Guide, Jul 2026).",
+      "dishes": [
+        "Steamed mixed seafood platter",
+        "Pla tod sam rot: fried fish with three-flavour sauce",
+        "Crab stir-fried with black pepper",
+        "Mantis shrimp fried with garlic and pepper"
+      ],
+      "praise": "Thai Holiday Guide (Jul 2026): its editor's pick for live-tank seafood in Ao Nang. Older Wongnai reviews by Thai diners praise the crab and the mantis shrimp.",
+      "watchOut": "Confirm weight, price per unit and any cooking charge before ordering. Crowded by 19:00 at weekends.",
+      "description": "A big live-tank seafood restaurant near Nopparat Thara pier, west of Ao Nang, where boats leave for Phi Phi and the islands.",
+      "openText": "Daily about 11:30-20:30 (Google, Oct 2026)",
+      "days": [],
+      "bestTime": "Late lunch or early dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Krua+Thara+%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%B2/@8.047035,98.8001673,17z/data=!3m1!4b1!4m6!3m5!1s0x3051bf8451936adb:0x9f9885704ebfd465!8m2!3d8.047035!4d98.8001673!16s%2Fg%2F11r8bdg2v"
+        },
+        {
+          "label": "Website",
+          "url": "https://kruathara.wordpress.com/"
+        }
+      ],
+      "sources": [
+        "https://www.thaiholidayguide.com/best-restaurants-krabi/",
+        "https://wanderlog.com/list/geoCategory/77489/best-restaurants-with-a-view-in-ao-nang",
+        "https://www.wongnai.com/restaurants/228545cc-kruathara-2"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.3, open, 11:30-20:30). Wanderlog shows Google 4.3 (884), Tripadvisor 4.0 (712).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-mangrove-railay",
+      "name": "Mangrove Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "budget"
+      ],
+      "area": "krabi",
+      "district": "Railay",
+      "island": "Krabi mainland (Railay, boat only)",
+      "lat": 8.01223,
+      "lng": 98.840148,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Mangrove Restaurant, Railay Centre, Railay",
+      "placeId": "",
+      "rating": 4.2,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1416,
+      "reviewsSource": "Google count shown on a Wanderlog place page, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.0,
+          "reviews": 1169,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/place/details/2115231/mangrove-restaurant"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found; reviewers say it is cheaper than most of Railay. Expect Railay prices to be above Ao Nang because supplies arrive by boat (Thai Holiday Guide, 2026).",
+      "dishes": [
+        "Seafood pad thai",
+        "Khao soi",
+        "Fish in panang curry",
+        "Grilled prawns",
+        "Fruit shakes"
+      ],
+      "praise": "A Wanderlog reviewer: \"more reasonably priced than a lot of other restaurants on Railay\"; recommended in several Railay guides.",
+      "watchOut": "Railay is not a food destination: menus are similar everywhere and prices are higher. Eat well in Ao Nang or Krabi Town before or after.",
+      "description": "A simple Thai restaurant on the path between Railay West and East. A practical lunch on a Railay day trip.",
+      "openText": "Daily 10:00-22:00",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Go outside 12:00-13:30 to avoid the busiest time."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Mangrove+restaurant/@8.01223,98.8401485,17z/data=!3m1!4b1!4m6!3m5!1s0x3051ebb17408f719:0x6c0a211754c183d5!8m2!3d8.01223!4d98.8401485!16s%2Fg%2F11pq4_y_fg"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/place/details/2115231/mangrove-restaurant",
+        "https://www.thaiholidayguide.com/best-restaurants-krabi/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.2, open, 10:00-22:00, pin in Railay centre). Wanderlog shows Google 4.2 (1,416), Tripadvisor 4.0 (1,169).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-see-the-sea-klong-muang",
+      "name": "See The Sea",
+      "nameThai": "ซี เดอะ ซี",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "view"
+      ],
+      "area": "krabi",
+      "district": "Klong Muang",
+      "island": "Krabi mainland",
+      "lat": 8.072476,
+      "lng": 98.744847,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "See The Sea Restaurant, Klong Muang Beach, Nong Thale, Krabi",
+      "placeId": "",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "800-1,000 THB a person (KTC, Jan 2026).",
+      "dishes": [
+        "Squid stir-fried in black ink sauce",
+        "Sour curry with sea bass",
+        "Fried sea bass with fish sauce",
+        "Prawn curry with wild betel leaves",
+        "Large mud crabs"
+      ],
+      "praise": "KTC (Jan 2026) lists it among 20 recommended restaurants in Krabi for Southern seafood. Google rating 4.6 (Oct 2026).",
+      "watchOut": "Only one independent write-up found; the Google rating has no review count in our view. Pricier than town.",
+      "description": "A seafood restaurant on Klong Muang beach, the quiet resort coast north of Ao Nang, with a sunset view.",
+      "openText": "Daily 11:30-21:00",
+      "days": [],
+      "bestTime": "Sunset dinner if you stay at Klong Muang or Tubkaek.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/See+The+Sea+Restaurant/@8.0724762,98.7448466,17z/data=!3m1!4b1!4m6!3m5!1s0x3051b8d2659aa907:0xa60e7b301f4ba37b!8m2!3d8.0724762!4d98.7448466!16s%2Fg%2F11dxky09p4"
+        }
+      ],
+      "sources": [
+        "https://www.ktc.co.th/article/dining/restaurant/krabi-recommend-food"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.6, open, 11:30-21:00). KTC list updated 3 Jan 2026.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-garlic-1992",
+      "name": "Garlic 1992",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "budget"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.741275,
+      "lng": 98.774203,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Garlic 1992 Restaurant, Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 3934,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.4,
+          "reviews": 963,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "About 200-300 THB a person (a Spanish travel blog, 2026).",
+      "dishes": [
+        "Khao soi",
+        "Seafood pineapple fried rice served in the pineapple",
+        "Curries",
+        "Fried chicken"
+      ],
+      "praise": "Open since 1992 and always busy; one 2026 guide names it the best local-style Thai restaurant on the island, and diners say the queue moves fast (a Spanish travel blog, 2026).",
+      "watchOut": "There is usually a queue at dinner; it was cash only in 2022.",
+      "description": "A long-running cheap Thai restaurant in Tonsai village. The reliable everyday meal on Phi Phi.",
+      "openText": "About 11:00-23:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch, or dinner before 18:30.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Small tables: a group of 8 may be split."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Garlic+1992+Restaurant/@7.7412753,98.7742031,17z/data=!3m1!4b1!4m6!3m5!1s0x3051dee1099d8ffd:0xd64948737e3af4f8!8m2!3d7.7412753!4d98.7742031!16s%2Fg%2F11cmqz_c_y"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880",
+        "https://foodiesviajeros.com/en/thailand/where-to-eat-in-koh-phi-phi/",
+        "https://imjesstraveling.com/koh-phi-phi-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, open, 11:00-23:00, pin in Tonsai). Wanderlog shows Google 4.5 (3,934), Tripadvisor 4.4 (963).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-papaya-phi-phi",
+      "name": "Papaya Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "late-night",
+        "vegetarian-friendly"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.739714,
+      "lng": 98.773472,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Papaya Restaurant (Indian & Thai Food), Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1671,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 1799,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found; budget to mid-price for Phi Phi.",
+      "dishes": [
+        "Pineapple fried rice",
+        "Pad thai",
+        "Spicy papaya salad",
+        "Thai curries",
+        "Indian curries"
+      ],
+      "praise": "One guide calls its pineapple fried rice the best on the island and praises the generous portions; Frommer's lists it for Thai food in Tonsai. One reviewer found the food only average.",
+      "watchOut": "Small and busy; ask for less spice if needed.",
+      "description": "A small Thai and Indian restaurant in Tonsai village that stays open late, until 23:30.",
+      "openText": "About 10:00-23:30 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Late dinner after the bars.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Papaya+Restaurant+(Indian+%26+Thai+Food)/@7.7397142,98.7734717,17z/data=!3m1!4b1!4m6!3m5!1s0x3051dee1ca5ff80d:0xff4e512de1fdd5c4!8m2!3d7.7397142!4d98.7734717!16s%2Fg%2F11bz09_2fd"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880",
+        "https://www.frommers.com/destinations/koh-phi-phi/restaurants/",
+        "https://traveltriangle.com/blog/phi-phi-islands-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.6, open, 10:00-23:30). Wanderlog shows Google 4.6 (1,671), Tripadvisor 4.5 (1,799).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-only-noodles-phi-phi",
+      "name": "Only Noodles",
+      "nameThai": "",
+      "kind": "noodles",
+      "tags": [
+        "budget"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.740036,
+      "lng": 98.773126,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Only Noodles, Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1194,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.8,
+          "reviews": 411,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current prices found; one of the cheapest sit-down meals in Tonsai.",
+      "dishes": [
+        "Pad thai",
+        "Stir-fried noodles: choose rice, egg, glass or udon noodles, then the meat or seafood"
+      ],
+      "praise": "Rated 4.7 on Google and 4.8 on Tripadvisor; guides describe a small counter that only does noodles and does them well.",
+      "watchOut": "Very small; take-away is easier for a group.",
+      "description": "A tiny noodle counter in Tonsai village: pick the noodle, pick the topping, eat in 10 minutes. A quick lunch near the pier.",
+      "openText": "About 10:30-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch right after the boat.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Only+Noodles/@7.7400362,98.7731255,17z/data=!3m1!4b1!4m6!3m5!1s0x3051dee1b227720b:0xa6765c19f6baa42d!8m2!3d7.7400362!4d98.7731255!16s%2Fg%2F11bxfk1d48"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 10:30-22:00). Wanderlog shows Google 4.7 (1,194), Tripadvisor 4.8 (411).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-annas-phi-phi",
+      "name": "Anna's Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "dessert",
+        "breakfast"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.738994,
+      "lng": 98.771744,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Anna's Restaurant, Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 2596,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 3077,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found; mid-price for Phi Phi.",
+      "dishes": [
+        "Som tam with sticky rice",
+        "Green curry",
+        "Mango sticky rice",
+        "Western breakfasts"
+      ],
+      "praise": "Long-standing Tonsai favourite; Alex and Leah called its som tam exceptional, and guides say the Thai food is spicy and full of flavour.",
+      "watchOut": "Fills up between about 17:45 and 19:00; come early.",
+      "description": "A long-running Thai and Western restaurant in Tonsai village, between Tonsai and Loh Dalum bays, good for breakfast or dinner.",
+      "openText": "Daily, about 07:00 or 12:00 until 22:00 (sources differ)",
+      "days": [],
+      "bestTime": "Early dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Finish with mango sticky rice."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Anna's+Restaurant/@7.738994,98.771744,17z/data=!3m1!4b1!4m6!3m5!1s0x3051dee03d8967ef:0x60308a5912ee147e!8m2!3d7.738994!4d98.771744!16s%2Fg%2F11b6bwpgsl"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880",
+        "https://www.hoteles.com/go/thailand/annas-restaurant",
+        "https://traveltriangle.com/blog/phi-phi-islands-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open until 22:00). Wanderlog shows Google 4.7 (2,596), Tripadvisor 4.5 (3,077).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-efe-phi-phi",
+      "name": "Efe Mediterranean Cuisine",
+      "nameThai": "",
+      "kind": "international",
+      "tags": [
+        "group-friendly"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.738819,
+      "lng": 98.772607,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Efe Mediterranean Cuisine Restaurant, Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1485,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.8,
+          "reviews": 1780,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found.",
+      "dishes": [
+        "Doner kebab",
+        "Mezze with hummus and homemade pita",
+        "Lamb kebabs",
+        "Moussaka"
+      ],
+      "praise": "Tripadvisor 4.8 from 1,780 reviews; Alex and Leah called the doner very good and loaded with meat; on several 2025-2026 Phi Phi lists.",
+      "watchOut": "The sit-down restaurant opens at 16:00. Efe also has a second, more casual kebab shop in the village.",
+      "description": "A Turkish and Mediterranean restaurant in Tonsai with kebabs, mezze and fresh pita: the best-rated break from Thai food on the island.",
+      "openText": "About 16:00-23:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Efe+Mediterranean+Cuisine+Restaurant/@7.7388189,98.7726071,17z/data=!3m1!4b1!4m6!3m5!1s0x3051dee02d90404d:0x67ef269d33ed346c!8m2!3d7.7388189!4d98.7726071!16s%2Fg%2F11csrpzqq8"
+        },
+        {
+          "label": "Facebook",
+          "url": "http://www.facebook.com/eferestaurant/"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880",
+        "https://imjesstraveling.com/koh-phi-phi-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 16:00-23:00). Wanderlog shows Google 4.7 (1,485), Tripadvisor 4.8 (1,780).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-phi-phi-bakery",
+      "name": "Phi Phi Bakery",
+      "nameThai": "",
+      "kind": "bakery",
+      "tags": [
+        "dessert",
+        "breakfast"
+      ],
+      "area": "phi-phi",
+      "district": "Tonsai village",
+      "island": "Koh Phi Phi Don",
+      "lat": 7.740051,
+      "lng": 98.773401,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Phi Phi Bakery, Tonsai, Koh Phi Phi",
+      "placeId": "",
+      "rating": 4.3,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 463,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.5,
+          "reviews": 521,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197880"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No current prices found.",
+      "dishes": [
+        "Croissants and Danish pastries",
+        "Cakes",
+        "Sandwiches",
+        "Coffee"
+      ],
+      "praise": "On most Phi Phi guides for breakfast; Tripadvisor 4.5 from 521 reviews.",
+      "watchOut": "A simple bakery cafe, not a dessert specialist.",
+      "description": "A bakery cafe in Tonsai village for coffee, pastries and cake, open from 07:00.",
+      "openText": "About 07:00-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Breakfast before the boat.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Phi+Phi+Bakery/@7.7400514,98.7734011,17z/data=!3m1!4b1!4m6!3m5!1s0x3051c0008e4d2c27:0x74508ac0843de6c6!8m2!3d7.7400514!4d98.7734011!16s%2Fg%2F1pzrsjz5y"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/phiphibakery"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197880",
+        "https://traveltriangle.com/blog/phi-phi-islands-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.3, open, 07:00-22:00). Wanderlog shows Google 4.3 (463), Tripadvisor 4.5 (521).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-tha-ton-do-koh-yao-noi",
+      "name": "Koh Yao Tha Ton Do Seafood",
+      "nameThai": "ร้านอาหารเกาะยาวท่าต้นโดซีฟู้ด",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "halal",
+        "view",
+        "local-favourite"
+      ],
+      "area": "koh-yao",
+      "district": "Koh Yao Noi (west coast)",
+      "island": "Koh Yao Noi",
+      "lat": 8.141376,
+      "lng": 98.598109,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Koh Yao Tha Ton Do Seafood, Koh Yao Noi",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No prices published; local island prices (Phuket101, Jul 2026).",
+      "dishes": [
+        "Whole fish, crab and prawns from the day's catch",
+        "Southern Thai curries and stir-fries"
+      ],
+      "praise": "Time Out (Jul 2026): the stilt-house setting is \"exactly the sort of place you'd hope to find on a fishing island\", with family recipes; Phuket101 (Jul 2026): the author ate lunch there twice on one trip.",
+      "watchOut": "Muslim island: no pork, and usually no alcohol. Pradu Seafood next door is Muslim-run and lets you bring your own drinks (Phuket101).",
+      "description": "A wooden seafood restaurant on stilts over the mangroves on the west side of Koh Yao Noi. The classic island lunch.",
+      "openText": "About 09:00-21:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch on a Koh Yao day trip.",
+      "score": 4,
+      "pick": true,
+      "tips": [
+        "It sells bags of local Koh Yao rice to take home."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Koh+Yao+Tha+Ton+Do+Seafood/@8.1413761,98.5981086,17z/data=!3m1!4b1!4m6!3m5!1s0x3051b139db89c085:0x7eac42fa3fd6c919!8m2!3d8.1413761!4d98.5981086!16s%2Fg%2F11g72mt57m"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/kohyaothatondoseafood/"
+        }
+      ],
+      "sources": [
+        "https://www.timeout.com/phuket/things-to-do/your-ultimate-guide-to-koh-yao-noi",
+        "https://www.phuket101.net/koh-yao-noi-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 09:00-21:00). Time Out 23 Jul 2026 and Phuket101 updated 29 Jul 2026. No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-kaya-koh-yao-noi",
+      "name": "Kaya Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "dessert",
+        "halal",
+        "budget"
+      ],
+      "area": "koh-yao",
+      "district": "Koh Yao Noi (Lam Sai)",
+      "island": "Koh Yao Noi",
+      "lat": 8.095543,
+      "lng": 98.616026,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Kaya Restaurant, Lam Sai, Koh Yao Noi",
+      "placeId": "",
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No prices published; guides call it cheap (Phuket101, Jul 2026).",
+      "dishes": [
+        "Massaman curry",
+        "Tempura prawns",
+        "Mango sticky rice"
+      ],
+      "praise": "Phuket101 (Jul 2026) rates its mango sticky rice among the best on the island; Thailand Magazine calls it the island's best; Go To Thailand recommends it for Thai food.",
+      "watchOut": "Family-run with few tables. No alcohol.",
+      "description": "A small family Thai restaurant on the main road in the south-east of Koh Yao Noi, known for massaman and mango sticky rice.",
+      "openText": "About 10:00-21:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch or early dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Kaya+Restaurant/@8.0955426,98.6160255,17z/data=!3m1!4b1!4m6!3m5!1s0x3051b6fc69ded951:0x53a7fcb36f4beb7e!8m2!3d8.0955426!4d98.6160255!16s%2Fg%2F11btn151ll"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/koh-yao-noi-restaurants/",
+        "https://thailandmagazine.com/islands/koh-yao-noi/eat-drink/",
+        "https://gotothailand.com/koh-yao-noi-tropical-secret/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.8, open, 10:00-21:00). No review count found. Halal tag based on the Muslim island and no alcohol, not on a certificate.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-rice-paddy-koh-yao-noi",
+      "name": "Rice Paddy",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "dessert",
+        "booking-needed"
+      ],
+      "area": "koh-yao",
+      "district": "Koh Yao Noi (Pasai)",
+      "island": "Koh Yao Noi",
+      "lat": 8.104523,
+      "lng": 98.622628,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Rice Paddy Restaurant, Pasai, Koh Yao Noi",
+      "placeId": "",
+      "rating": 4.6,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": null,
+          "reviews": null,
+          "note": "#3 of 68 restaurants on Koh Yao Noi (from a search snippet; date not shown)",
+          "url": "https://www.tripadvisor.co.nz/ShowUserReviews-g661285-d2099980-r540363809-Rice_Paddy-Ko_Yao_Noi_Phang_Nga_Province.html"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "No prices found.",
+      "dishes": [
+        "Banana blossom salad with crispy anchovies",
+        "Massaman curry",
+        "Ice cream from its own parlour"
+      ],
+      "praise": "Phuket101 (Jul 2026): refined Thai food and a comfortable choice for a longer dinner; Go To Thailand lists it among its favourites.",
+      "watchOut": "Dinner place; book in high season.",
+      "description": "A popular sit-down Thai dinner in Pasai on Koh Yao Noi, with an ice cream parlour attached.",
+      "openText": "About 12:00-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Rice+Paddy+Restaurant/@8.1045234,98.6226284,17z/data=!3m1!4b1!4m6!3m5!1s0x3051b702b24bde97:0x601d622116dcc8d8!8m2!3d8.1045234!4d98.6226284!16s%2Fg%2F11bbrg_r0p"
+        },
+        {
+          "label": "Website",
+          "url": "http://www.ricepaddy.website/"
+        }
+      ],
+      "sources": [
+        "https://www.phuket101.net/koh-yao-noi-restaurants/",
+        "https://gotothailand.com/koh-yao-noi-tropical-secret/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.6, open, 12:00-22:00). No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-baan-rim-nam-koh-yao-yai",
+      "name": "Baan Rim Nam",
+      "nameThai": "บ้านริมน้ำ เรสเทอรอง",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "halal",
+        "view",
+        "budget"
+      ],
+      "area": "koh-yao",
+      "district": "Koh Yao Yai (Klong Hia pier)",
+      "island": "Koh Yao Yai",
+      "lat": 8.083486,
+      "lng": 98.564533,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Baan Rim Nam Restaurant, Klong Hia, Koh Yao Yai",
+      "placeId": "",
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Most dishes 100-150 THB, plus 7% VAT shown only in small print (21 Sensations, updated Jul 2026).",
+      "dishes": [
+        "Catch of the day",
+        "Beef curry",
+        "Spicy salads",
+        "Banana in coconut milk",
+        "Fruit smoothies"
+      ],
+      "praise": "21 Sensations (updated Jul 2026): views over Phang Nga Bay, \"exceptional\" smoothies; recommends the catch of the day.",
+      "watchOut": "No alcohol; fresh juices and mocktails instead.",
+      "description": "A restaurant on stilts over the sea at Klong Hia pier in the north of Koh Yao Yai, 15 minutes by scooter from the main village.",
+      "openText": "About 11:00-21:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 4,
+      "pick": false,
+      "tips": [
+        "Try banana in coconut milk for dessert."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Baan+Rim+Nam+Restaurant/@8.0834863,98.5645335,17z/data=!3m1!4b1!4m6!3m5!1s0x3051b5d3c805117f:0xa68a627b8f3d4a5!8m2!3d8.0834863!4d98.5645335!16s%2Fg%2F1pxwcl37n"
+        }
+      ],
+      "sources": [
+        "https://21sensations.com/koh-yao-yai-restaurants-where-to-eat-on-the-island/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.8, open, 11:00-21:00). No review count found. Halal tag based on no alcohol and the Muslim island, not a certificate.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-isaan-fine-koh-yao-yai",
+      "name": "Isaan Fine",
+      "nameThai": "",
+      "kind": "isaan",
+      "tags": [
+        "pork",
+        "budget"
+      ],
+      "area": "koh-yao",
+      "district": "Koh Yao Yai (Phru Nai)",
+      "island": "Koh Yao Yai",
+      "lat": 7.985487,
+      "lng": 98.570533,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Isaan Fine, Phru Nai, Koh Yao Yai",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Most dishes 80-150 THB (21 Sensations, updated Jul 2026).",
+      "dishes": [
+        "Grilled pork skewers",
+        "Som tam (green papaya salad)",
+        "Thai seafood dishes"
+      ],
+      "praise": "21 Sensations (updated Jul 2026): a favourite with repeat visitors that \"punches well above its appearance\"; the pork skewers are the signature order.",
+      "watchOut": "No alcohol. Simple, no-frills place. Only one independent write-up found.",
+      "description": "A plain Isaan (north-east Thai) restaurant near the main village of Koh Yao Yai, and one of the few places on the island with pork.",
+      "openText": "About 12:00-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch or dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Isaan+Fine/@7.9854872,98.5705327,17z/data=!3m1!4b1!4m6!3m5!1s0x3051cb00831e5313:0x2ff50d8cdecaffa8!8m2!3d7.9854872!4d98.5705327!16s%2Fg%2F11f78lrzyh"
+        }
+      ],
+      "sources": [
+        "https://21sensations.com/koh-yao-yai-restaurants-where-to-eat-on-the-island/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 12:00-22:00). No review count found; one blog source.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-yawee-koh-lanta",
+      "name": "Yawee Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "halal",
+        "budget",
+        "vegetarian-friendly",
+        "local-favourite"
+      ],
+      "area": "koh-lanta",
+      "district": "Long Beach road",
+      "island": "Koh Lanta",
+      "lat": 7.593139,
+      "lng": 99.035408,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Yawee Restaurant, Sala Dan, Koh Lanta",
+      "placeId": "",
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 2985,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.8,
+          "reviews": 289,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "Dishes from 50 THB (I Dream of Mangoes, updated Oct 2026).",
+      "dishes": [
+        "Shrimp omelette on rice",
+        "Green, red, massaman and panang curries",
+        "Pineapple fried rice",
+        "Pomelo salad",
+        "Tofu curries"
+      ],
+      "praise": "I Dream of Mangoes (Oct 2026): \"ask many locals where they eat Thai food, and Yawee will almost certainly be mentioned\"; The Star (Jul 2026): the pineapple fried rice was \"the best I've ever had\"; Travel Lush (2026) ate there four times.",
+      "watchOut": "Muslim-run: no pork and no alcohol. Often a queue. Closes for the month of Ramadan.",
+      "description": "A cheap, open-air Thai restaurant on the main road south of Saladan that both locals and visitors queue for.",
+      "openText": "Daily 09:30-21:30",
+      "days": [],
+      "bestTime": "Lunch or early dinner.",
+      "score": 5,
+      "pick": true,
+      "tips": [
+        "Book by WhatsApp in high season (Google review tip via Wanderlog)."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Yawee+Restaurant/@7.5931389,99.0354076,17z/data=!3m1!4b1!4m6!3m5!1s0x304e0498028ec5e1:0x82df9629dd8c85da!8m2!3d7.5931389!4d99.0354076!16s%2Fg%2F1tmmblqc"
+        }
+      ],
+      "sources": [
+        "https://www.idreamofmangoes.com/post/the-best-restaurants-in-koh-lanta/",
+        "https://www.thestar.com.my/lifestyle/travel/2026/07/30/this-thai-island-is-full-of-surprises-and-good-food",
+        "https://travel-lush.com/best-restaurants-in-koh-lanta/",
+        "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.8, open, 09:30-21:30). Wanderlog shows Google 4.8 (2,985), Tripadvisor 4.8 (289).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-ginas-koh-lanta",
+      "name": "Gina's Cafe & Restaurant",
+      "nameThai": "",
+      "kind": "thai",
+      "tags": [
+        "budget"
+      ],
+      "area": "koh-lanta",
+      "district": "Long Beach road",
+      "island": "Koh Lanta",
+      "lat": 7.598041,
+      "lng": 99.036218,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Gina Cafe and Restaurant, Sala Dan, Koh Lanta",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 2,
+      "priceText": "Curries about 180 THB, big enough for two (I Dream of Mangoes, updated Oct 2026).",
+      "dishes": [
+        "Massaman curry (also with duck)",
+        "Tom yum",
+        "Other Thai curries"
+      ],
+      "praise": "The Star (Jul 2026): the massaman duck curry impressed, and the tom yum beat versions they had in Phuket; I Dream of Mangoes (Oct 2026): the curries are \"out of this world\".",
+      "watchOut": "Plain shop with no air conditioning.",
+      "description": "A simple roadside Thai kitchen behind Long Beach, a few doors from Yawee, praised for its curries.",
+      "openText": "About 10:00-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Dinner.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Gina+Caf%C3%A9+and+Restaurant/@7.5980406,99.0362182,17z/data=!3m1!4b1!4m6!3m5!1s0x304e03dda0896c37:0x50aa07036e9523f1!8m2!3d7.5980406!4d99.0362182!16s%2Fg%2F11k3jf6070"
+        }
+      ],
+      "sources": [
+        "https://www.thestar.com.my/lifestyle/travel/2026/07/30/this-thai-island-is-full-of-surprises-and-good-food",
+        "https://www.idreamofmangoes.com/post/the-best-restaurants-in-koh-lanta/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open until 22:00). No review count found.",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-yang-garden-koh-lanta",
+      "name": "Yang Garden Restaurant",
+      "nameThai": "",
+      "kind": "grill",
+      "tags": [
+        "booking-needed"
+      ],
+      "area": "koh-lanta",
+      "district": "Long Beach road",
+      "island": "Koh Lanta",
+      "lat": 7.591278,
+      "lng": 99.035686,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Yang Garden Restaurant, 8/1 Moo 2, Sala Dan, Koh Lanta",
+      "placeId": "",
+      "rating": 4.8,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 854,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.8,
+          "reviews": 1545,
+          "note": "shown on Wanderlog, Oct 2026; first on the Wanderlog Ko Lanta list",
+          "url": "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 4,
+      "priceText": "About GBP 100 for two with a bottle of wine (I Dream of Mangoes, 2024-2026).",
+      "dishes": [
+        "Steaks",
+        "Tuna steak",
+        "Creative grill plates"
+      ],
+      "praise": "I Dream of Mangoes (updated Oct 2026): the closest thing to fine dining on the island; the tuna steak was \"sublime\" and the wine list strong. Tripadvisor 4.8 from 1,545 reviews.",
+      "watchOut": "Dinner only, from 17:30. Reservations needed.",
+      "description": "A garden steakhouse near Saladan and the best-rated special dinner on Koh Lanta.",
+      "openText": "About 17:30-22:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Dinner; book a day ahead.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Yang+Garden+Restaurant/@7.5912781,99.0356859,17z/data=!3m1!4b1!4m6!3m5!1s0x304e050da790702b:0xe2f2bd06a95f9b52!8m2!3d7.5912781!4d99.0356859!16s%2Fg%2F11b7l8_j1_"
+        },
+        {
+          "label": "Website",
+          "url": "http://www.yanglanta.com/"
+        }
+      ],
+      "sources": [
+        "https://www.idreamofmangoes.com/post/the-best-restaurants-in-koh-lanta/",
+        "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.8, 17:30-22:00). Wanderlog shows Google 4.8 (854), Tripadvisor 4.8 (1,545).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-phad-thai-rock-n-roll",
+      "name": "Phad Thai Rock n Roll",
+      "nameThai": "ผัดไทย ร็อคแอนด์โรล",
+      "kind": "street-food",
+      "tags": [
+        "budget"
+      ],
+      "area": "koh-lanta",
+      "district": "Kantiang Bay road",
+      "island": "Koh Lanta",
+      "lat": 7.500856,
+      "lng": 99.068068,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Phad Thai Rock n Roll, Koh Lanta",
+      "placeId": "",
+      "rating": 4.7,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": 1051,
+      "reviewsSource": "Google count shown on Wanderlog, read 27 Oct 2026",
+      "otherRatings": [
+        {
+          "site": "Tripadvisor",
+          "rating": 4.6,
+          "reviews": 1379,
+          "note": "shown on Wanderlog, Oct 2026",
+          "url": "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta"
+        }
+      ],
+      "michelin": null,
+      "priceLevel": 1,
+      "priceText": "No current prices found; street-food prices.",
+      "dishes": [
+        "Pad thai (the signature)",
+        "Other wok noodles and Thai street dishes"
+      ],
+      "praise": "Tripadvisor 4.6 from 1,379 reviews and Google 4.7 from 1,051; guides name it for Thai street food with pad thai as the signature.",
+      "watchOut": "A roadside stand with simple seating.",
+      "description": "A pad thai stand on the road near Kantiang Bay in the south of Koh Lanta, for a quick, cheap meal.",
+      "openText": "About 11:00-21:00 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch.",
+      "score": 4,
+      "pick": false,
+      "tips": [],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Phad+Thai+Rock+n+Roll/@7.5008555,99.0680676,17z/data=!3m1!4b1!4m6!3m5!1s0x304e0f6db0918255:0xbfd7d6290098965f!8m2!3d7.5008555!4d99.0680676!16s%2Fg%2F11b6hwprdp"
+        }
+      ],
+      "sources": [
+        "https://wanderlog.com/list/geoCategory/197696/where-to-eat-best-restaurants-in-ko-lanta",
+        "https://www.tripadvisor.com/Restaurants-g303905-Ko_Lanta_Krabi_Province.html"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.7, open, 11:00-21:00). Wanderlog shows Google 4.7 (1,051), Tripadvisor 4.6 (1,379).",
+      "imageCandidates": []
+    },
+    {
+      "id": "food-laanta-seafood-saladan",
+      "name": "Laanta Seafood",
+      "nameThai": "ลานตา ซีฟู้ด",
+      "kind": "seafood",
+      "tags": [
+        "seafood",
+        "view",
+        "group-friendly"
+      ],
+      "area": "koh-lanta",
+      "district": "Saladan pier",
+      "island": "Koh Lanta",
+      "lat": 7.650403,
+      "lng": 99.037959,
+      "coordSource": "Google Maps pin, read 27 Oct 2026",
+      "coordConfidence": "high",
+      "gmapsQuery": "Laanta Seafood, 73 Sala Dan, Koh Lanta",
+      "placeId": "ChIJbWpjxeUCTjARomdsREtpgOY",
+      "rating": 4.5,
+      "ratingSource": "Google Maps, 27 Oct 2026",
+      "reviews": null,
+      "reviewsSource": null,
+      "otherRatings": [],
+      "michelin": null,
+      "priceLevel": 3,
+      "priceText": "No prices found; fish, crab and lobster are sold by weight from the ice display.",
+      "dishes": [
+        "Fish of the day from the ice display",
+        "Crab and lobster from the tank",
+        "Thai seafood dishes"
+      ],
+      "praise": "A long-running Koh Lanta guide site lists the Saladan stilt restaurants as the island's seafood row, open all year, with very fresh fish chosen from the display; Google 4.5 (Oct 2026).",
+      "watchOut": "Ask the weight and price before cooking. Little independent detail on this one restaurant.",
+      "description": "One of the seafood restaurants on stilts at Saladan village, right by the pier where boats from Phuket and Phi Phi arrive.",
+      "openText": "About 10:00-21:30 (Google Maps hours, Oct 2026; days not confirmed)",
+      "days": [],
+      "bestTime": "Lunch on arrival or a sunset dinner.",
+      "score": 3,
+      "pick": false,
+      "tips": [
+        "Saladan Seafood next door is the same style if this one is full."
+      ],
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://www.google.com/maps/place/Laanta+Seafood/data=!4m7!3m6!1s0x304e02e5c5636a6d:0xe680694b446c67a2!8m2!3d7.6504029!4d99.0379591!16s%2Fg%2F1hc1y2hp5!19sChIJbWpjxeUCTjARomdsREtpgOY"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/profile.php?id=100063649626379"
+        }
+      ],
+      "sources": [
+        "https://amazinglanta.com/koh-lantas-best-seafood-restaurants/"
+      ],
+      "verification": "Google Maps read 27 Oct 2026 (4.5, open, 10:00-21:30, pin at Saladan). No review count found.",
+      "imageCandidates": []
+    }
+  ],
+  "existingChecked": [],
+  "notIncluded": [
+    {
+      "name": "BangNara Roti (Krabi Town)",
+      "reason": "Halal roti breakfast, Google 4.3; the BK Magazine (2019) praise was for a Bangnara roti shop in Ao Nang with a different phone number, so the Krabi Town shop has little independent backing."
+    },
+    {
+      "name": "Chao Fah pier night market (Krabi Town)",
+      "reason": "Daily food stalls by the river (Google 4.3, 17:00-22:30), but sources say stalls are thin on quiet nights; mentioned under Krabi Town Walking Street instead."
+    },
+    {
+      "name": "Le Grand Bleu (Koh Phi Phi)",
+      "reason": "Google Maps shows it permanently closed (27 Oct 2026)."
+    },
+    {
+      "name": "Tonsai Seafood (Koh Phi Phi)",
+      "reason": "Weak reviews: Google 3.3 (649), Tripadvisor 3.0 (406)."
+    },
+    {
+      "name": "Dow Restaurant (Koh Phi Phi)",
+      "reason": "Listed as temporarily closed on Wanderlog (Oct 2026)."
+    },
+    {
+      "name": "Baan Tha Ley Cafe (Klong Muang, Krabi)",
+      "reason": "Google Maps shows it temporarily closed (27 Oct 2026); known for black crab dip."
+    },
+    {
+      "name": "Lae Lay Grill (Ao Nang)",
+      "reason": "The hilltop sunset view is the draw; food reviews are mixed for the price (Tripadvisor 4.0 from 2,404)."
+    },
+    {
+      "name": "Moo Uan \"The Fat Pig\" (Koh Lanta)",
+      "reason": "Pork restaurant, but listed as temporarily closed on Wanderlog (Oct 2026); check again before the trip."
+    },
+    {
+      "name": "Drunken Sailors (Kantiang Bay, Koh Lanta)",
+      "reason": "Listed as temporarily closed on Wanderlog (Oct 2026)."
+    },
+    {
+      "name": "Joe's Texas BBQ (Koh Lanta)",
+      "reason": "Ribs and brisket boards praised in one blog; Google 4.8 but no other source, and we could not confirm the ribs are pork."
+    },
+    {
+      "name": "Mama Dang Kitchen (Koh Lanta)",
+      "reason": "Good khao soi (one blog, Google 4.6 from 883), weaker evidence than the Lanta places kept."
+    },
+    {
+      "name": "Tonfon Bistro (Thap Put, Phang Nga)",
+      "reason": "Michelin Bib Gourmand, but closed Tuesdays and away from the usual day-trip routes; a good stop on the Phang Nga to Krabi road."
+    },
+    {
+      "name": "Roe Dang (Lam Kaen, Phang Nga)",
+      "reason": "Michelin Bib Gourmand, closed Wednesday and Thursday; Mun Pochana and Krachang Khao Lak cover the same stretch."
+    },
+    {
+      "name": "Krua Khonkhon (Khao Lak)",
+      "reason": "New in the Michelin 2026 selection with deep-fried pork belly, Google 4.8; left out for space, a good second dinner in Khao Lak."
+    },
+    {
+      "name": "Krua Ko Yot and Juumpo (Khao Lak)",
+      "reason": "Michelin Selected; fewer reviews and weaker than the Bib Gourmand places kept."
+    },
+    {
+      "name": "Pitak (Phang Nga town)",
+      "reason": "Michelin Selected Southern Thai, open to 22:30; Khun Thip satay chosen for the short stop in town."
+    },
+    {
+      "name": "Takua Pa Sunday Walking Street",
+      "reason": "Sundays only and only November to April; sources give little detail on the food."
+    },
+    {
+      "name": "Sai Mei Dim Sum (Krabi Town)",
+      "reason": "Pork dim sum breakfast (Google 4.4), but the only food-writer review is old (Mark Wiens, about 2011)."
+    },
+    {
+      "name": "Ali Baba Restaurant (Ao Nang)",
+      "reason": "Halal Indian and Thai; Google 4.8 from about 4,000 reviews but only 180 on Tripadvisor; not checked further."
+    },
+    {
+      "name": "Wang Sai Seafood (Ao Nang)",
+      "reason": "Weak reviews: Google 3.9, Tripadvisor 3.0."
+    },
+    {
+      "name": "Railay Family Restaurant (Railay)",
+      "reason": "Google 4.1; Mangrove Restaurant chosen for Railay."
+    },
+    {
+      "name": "PakNam Krabi Seafood (Krabi Town)",
+      "reason": "Halal riverside seafood, Google 4.1; weaker than Nong Joke nearby."
+    },
+    {
+      "name": "Pradu Seafood and Kindee Thai (Koh Yao Noi)",
+      "reason": "Good local options (Phuket101, Time Out 2026); left out for space next to Tha Ton Do and Kaya."
+    }
+  ]
+}

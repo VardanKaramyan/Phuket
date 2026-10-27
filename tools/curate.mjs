@@ -8,6 +8,7 @@ import { mergeLateJan } from './merge-late-jan.mjs'
 import { mergeIslandsEvents } from './merge-islands-events.mjs'
 import { mergeBangkok } from './merge-bangkok.mjs'
 import { mergeAdult } from './merge-adult.mjs'
+import { mergeFood } from './merge-food.mjs'
 import { inTrip } from './trip.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -363,6 +364,8 @@ mergeIslandsEvents(ROOT, log)
 mergeBangkok(ROOT, log)
 // ---- the 23 Oct 2026 research: Places → 18+ and Weed ----
 mergeAdult(ROOT, log)
+// ---- the 27 Oct 2026 research: Places → Food ----
+mergeFood(ROOT, log)
 // the group no longer goes to Koh Phangan on 10-13 Jan (villas booked in Phuket, 19 Oct 2026)
 {
   const d = rd('places.json')

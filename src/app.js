@@ -15,7 +15,7 @@
     set(k, v) { try { localStorage.setItem('pg:' + k, JSON.stringify(v)); return true } catch { return false } },
   }
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
-  const gmaps = (q, pid) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q) + (pid ? '&query_place_id=' + encodeURIComponent(pid) : '')
+  const gmaps = (q, pid, cid) => (!pid && /^\d+$/.test(cid || '') ? 'https://www.google.com/maps?cid=' + cid : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q) + (pid ? '&query_place_id=' + encodeURIComponent(pid) : ''))
   const gdir = (lat, lng) => 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -246,6 +246,8 @@
     }
     const apply = () => {
       syncRows()
+      // under Food the cards go best first (CSS order, src/styles.css)
+      if (state.tier !== undefined) listEl.dataset.on = state.tier
       let shown = 0
       cards.forEach((card) => {
         let ok = !isHiddenStay(card) && Object.entries(state).every(([g, v]) => match(card, g, v))
@@ -256,7 +258,13 @@
       if (bar) $$('.chip[data-value]', bar).forEach((chip) => {
         const n = $('.n', chip); if (!n) return
         const g = chip.dataset.group, v = chip.dataset.value
-        n.textContent = cards.filter((c) => !isHiddenStay(c) && Object.entries(state).every(([gg, vv]) => gg === g || match(c, gg, vv)) && match(c, g, v)).length
+        // what the list would show after this tap: a row that the tap hides (Food's rows, under All) no longer filters
+        const st = { ...state, [g]: v }
+        $$('.chips[data-when]', bar).forEach((row) => {
+          const [wg, vals] = row.dataset.when.split(':'), first = $('.chip[data-group]', row)
+          if (first && wg === g && vals.replace('!', '').split(' ').includes(v) === vals.startsWith('!')) st[first.dataset.group] = first.dataset.value
+        })
+        n.textContent = cards.filter((c) => !isHiddenStay(c) && Object.entries(st).every(([gg, vv]) => match(c, gg, vv))).length
       })
     }
     const reset = () => {
@@ -266,6 +274,13 @@
       })
       query = ''; if (search) search.value = ''
       apply()
+    }
+    // a card the filters hide, shown: the filters cleared, and a card that shows only under its own tab (Food, 18+)
+    // gets that tab
+    const reveal = (card) => {
+      reset()
+      const g = card.dataset.only, chip = g && bar && $('.chip[data-group="' + g + '"][data-value="' + CSS.escape((card.dataset[g] || '').split(' ')[0]) + '"]', bar)
+      if (card.hidden && chip) { $$('.chip[data-group="' + g + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip))); state[g] = chip.dataset.value; apply() }
     }
     if (bar) {
       $$('.chip[data-group]', bar).forEach((chip) => {
@@ -299,7 +314,7 @@
       shareBtn.hidden = !on || !/^https?:$/.test(location.protocol)
       if (on) shareBtn.dataset.url = shareUrl(id + '-' + on.dataset.value)
     }
-    lists.push({ apply, reset, pick, el: listEl })
+    lists.push({ apply, reset, reveal, pick, el: listEl })
   })
 
   /* ---------- hidden villas: 'Hide' on a card, 'Show again' in the Hidden villas list under the cards ---------- */
@@ -467,7 +482,7 @@
     if (view === 'areas') initMap()
     if (focusEl) {
       // a link to a card that the current filters hide: clear that list's filters first
-      if (focusEl.hidden) { const l = lists.find((x) => x.el.contains(focusEl)); if (l) l.reset() }
+      if (focusEl.hidden) { const l = lists.find((x) => x.el.contains(focusEl)); if (l) l.reveal(focusEl) }
       holdAnchor(focusEl)
       requestAnimationFrame(() => {
         focusEl.scrollIntoView({ block: 'start' })
@@ -515,9 +530,9 @@
     Object.values(markers).forEach((m) => m.setStyle(dotStyle(m.kind)))
     map.getContainer().classList.toggle('dim-tiles', base === 'streets' && isDark())
   }
-  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun', adult: '--orchid', weed: '--weed' }
+  const DOT = { event: '--pulse', place: '--sea', gem: '--leaf', hotel: '--violet', money: '--sun', adult: '--orchid', weed: '--weed', food: '--food' }
   // hidden gems, 18+ places and weed shops have layers of their own; other pins go by their type
-  const layerOf = (kind, t) => (['gem', 'adult', 'weed'].includes(kind) ? kind : t)
+  const layerOf = (kind, t) => (['gem', 'adult', 'weed', 'food'].includes(kind) ? kind : t)
   function dotStyle(kind) {
     return { radius: kind === 'event' ? 7 : 6, color: cssVar('--surface'), weight: 2, fillColor: cssVar(DOT[kind] || '--sea'), fillOpacity: 1 }
   }
@@ -546,7 +561,7 @@
     const dll = (p.dlat ?? p.lat) + ',' + (p.dlng ?? p.lng)
     const dir = p.nodir ? '' : '<a class="btn" target="_blank" rel="noopener" href="' + gdir(p.dlat ?? p.lat, p.dlng ?? p.lng) + '" data-dir="' + dll + '" data-dir-name="' + esc(p.name) + '">' + esc(p.dlabel || 'Directions') + '</a>'
     return '<h4>' + esc(p.name) + '</h4>' + (p.sub ? '<p>' + esc(p.sub) + '</p>' : '') +
-      '<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="' + gmaps(p.q, p.pid) + '">Google Maps</a>' + dir + card + '</div>'
+      '<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="' + gmaps(p.q, p.pid, p.cid) + '">Google Maps</a>' + dir + card + '</div>'
   }
   function setBase(name, byUser) {
     if (!map) return
@@ -724,7 +739,7 @@
         layers.areas.addLayer(L.marker([a.label[0], a.label[1]], { interactive: false, keyboard: false, icon: L.divIcon({ className: 'area-label', html: '<span data-rank="' + (a.rank || 0) + '">' + esc(a.short || a.name) + '</span>', iconSize: [0, 0] }) }))
       },
     })
-    ;['event', 'place', 'gem', 'hotel', 'money', 'adult', 'weed'].forEach((t) => { layers[t] = L.layerGroup() })
+    ;['event', 'place', 'gem', 'hotel', 'money', 'adult', 'weed', 'food'].forEach((t) => { layers[t] = L.layerGroup() })
     layers.base = L.layerGroup().addTo(map) // our villas: always shown, in a pane above the other pins
     map.createPane('basePane').style.zIndex = 450
     ;['event', 'place', 'gem', 'hotel', 'weed'].forEach((t) => layers[t].addTo(map))
@@ -1681,11 +1696,19 @@
     for (const v of Object.values(b)) v.net = v.paid + v.sent - v.share - v.got
     return b
   }
-  // the fewest payments that settle everyone: the one who owes most pays the one owed most, and so on (under 1 THB: even)
-  function settleUp(b) {
-    const cred = [], debt = []
+  // the fewest payments that settle everyone: the one who owes most pays the one owed most, and so on (under 1 THB: even);
+  // prefer: pairs (from|to) paid in part, settled first, so the rest of a debt paid in part stays with the same person
+  function settleUp(b, prefer = []) {
+    let cred = [], debt = []
     for (const [p, v] of Object.entries(b)) { if (v.net >= 100) cred.push([p, v.net]); else if (v.net <= -100) debt.push([p, -v.net]) }
     const out = [], big = (a, c) => c[1] - a[1]
+    for (const k of prefer) {
+      const [f, t] = k.split('|'), d = debt.find((y) => y[0] === f), c = cred.find((y) => y[0] === t)
+      if (!d || !c || d[1] < 100 || c[1] < 100) continue
+      const v = Math.min(d[1], c[1])
+      out.push({ from: f, to: t, cents: v }); d[1] -= v; c[1] -= v
+    }
+    cred = cred.filter((y) => y[1] >= 100); debt = debt.filter((y) => y[1] >= 100)
     while (cred.length && debt.length) {
       cred.sort(big); debt.sort(big)
       const c = cred[0], d = debt[0], t = Math.min(c[1], d[1])
@@ -1695,6 +1718,25 @@
       if (d[1] < 100) debt.shift()
     }
     return out
+  }
+  // the payments to settle up, and how much of each is paid: the expenses and payments again in the order they were
+  // added; a payment that leaves part of a debt open marks that pair (from|to) with what is paid so far (and the
+  // payment as a part payment); the mark goes once the pair is settled or no longer owes
+  function planOf(list) {
+    const b = Object.fromEntries(PEOPLE.map((p) => [p, { net: 0 }])), done = {}, part = new Set()
+    let moves = []
+    list.map((x, i) => [x, i]).sort((a, c) => (Number(a[0].t) || 0) - (Number(c[0].t) || 0) || c[1] - a[1]).forEach(([x]) => {
+      const parts = partsOf(x)
+      if (!parts.length || !b[x.paid]) return
+      const total = parts.reduce((a, [, c]) => a + c, 0), k = isPay(x) ? x.paid + '|' + parts[0][0] : ''
+      b[x.paid].net += total
+      if (k) b[parts[0][0]].net -= total; else parts.forEach(([p, c]) => { b[p].net -= c })
+      moves = settleUp(b, Object.keys(done).concat(k && !(k in done) ? [k] : []))
+      const now = new Set(moves.map((m) => m.from + '|' + m.to))
+      if (k && now.has(k)) { done[k] = (done[k] || 0) + total; part.add(x.id) }
+      for (const j of Object.keys(done)) if (!now.has(j)) delete done[j]
+    })
+    return { moves, done, part }
   }
   // even: under 1 THB, or a few baht left over that no payment can settle (the others are each under 1 THB), so the
   // card, the bars and Settle up always agree
@@ -1763,6 +1805,7 @@
   let outbox = canVote ? store.get('spendOutbox', []) : []
   const saveOutbox = () => store.set('spendOutbox', outbox)
   let rows = spend // what the tab shows: the group's expenses and this phone's unsent ones, newest day first
+  let plan = { moves: [], done: {}, part: new Set() } // the payments to settle up, from rows (planOf)
   function shownSpend() {
     const have = new Set(spend.map((x) => x.id)), local = outbox.filter((o) => !have.has(o.spend.newId)) // the server has it: its row shows
     if (!local.length) return spend
@@ -1813,7 +1856,8 @@
     if (!spendBox || !canVote) return
     $('#spend-off').hidden = true
     rows = shownSpend()
-    const me = meOf(), b = balancesOf(rows.filter(counts)), moves = settleUp(b)
+    plan = planOf(rows.filter(counts))
+    const me = meOf(), b = balancesOf(rows.filter(counts)), moves = plan.moves
     // the rows a tap opened stay open
     const open = new Set($$('#spend-bal .bal-row[aria-expanded="true"]').map((r) => r.dataset.p))
     $('#spend-body').hidden = false
@@ -1827,16 +1871,6 @@
     renderSpendStats(b)
     // the Trip page's tile: where you stand
     if (tileLine) tileLine.textContent = me && rows.some(counts) ? (evenOf(me, b, moves) ? 'You are even' : (b[me].net > 0 ? 'You get back ' : 'You owe ') + money(Math.abs(b[me].net))) : tileText
-  }
-  // a payment to settle: who pays whom and how much (a tap opens it as a payment you can change), and Mark paid; only who
-  // pays can mark it paid, and while one is waiting for its receiver and the admin it says so instead
-  const moveLi = (m, me) => {
-    const mine = !!me && m.from === me
-    const sent = rows.filter((x) => isPay(x) && !counts(x) && !x.no && !x.pending && x.paid === m.from && toOf(x) === m.to)
-    return '<li class="move" data-from="' + esc(m.from) + '" data-to="' + esc(m.to) + '">' + (mine ? '<button class="move-open" type="button" data-pay-from="' + esc(m.from) + '" data-pay-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc(you(m.from, me, true) + ' pays ' + you(m.to, me) + ' ' + money(m.cents)) + '">' : '<span class="move-open">') +
-      '<span class="move-who">' + av(m.from) + '<span>' + esc(you(m.from, me, true)) + '</span>' + ic('next') + av(m.to) + '<span>' + esc(you(m.to, me)) + '</span></span><b class="num">' + esc(money(m.cents)) + '</b>' + (mine ? '</button>' : '</span>') +
-      (sent.length ? '<span class="wait-pill">' + esc(waitOf(sent[0], me)) + '</span>'
-        : mine ? '<button class="btn small" type="button" data-settle-from="' + esc(m.from) + '" data-settle-to="' + esc(m.to) + '" data-cents="' + m.cents + '" aria-label="' + esc('Mark paid: ' + you(m.from, me, true) + ' to ' + you(m.to, me) + ', ' + money(m.cents)) + '"' + (paying.has(m.from + '|' + m.to + '|' + m.cents) ? ' disabled>Saving…' : '>' + ic('check') + 'Mark paid') + '</button>' : '') + '</li>'
   }
   // To confirm: a payment to you ("Vahik paid you": Got it or Not received), and for the admin every expense and payment
   // not approved yet (Approve or Reject; a payment to him: Got it, which approves it too)
@@ -1880,6 +1914,21 @@
       applyShared(await post({ name: me, [yes ? 'confirm' : 'reject']: id }))
       toast(yes ? (isPay(x) && toOf(x) === me && !isAdmin() ? 'Confirmed. It counts once ' + ADMIN + ' approves it.' : counts(rows.find((y) => y.id === id) || {}) ? 'Approved: it counts now' : 'Approved. It counts once ' + toOf(x) + ' confirms it.') : isPay(x) && toOf(x) === me ? 'Marked as not received' : 'Rejected', undefined, true) // news must not cover it
     } catch (e) { toast(e.status === 403 || e.status === 404 ? e.message : navigator.onLine ? 'Could not save it. Try again in a minute.' : 'This needs internet.') }
+  }
+  // a payment to settle: who pays whom and what is left (once part is paid: a bar and how much is paid); a tap opens it
+  // as a payment you can change; Mark paid pays the rest at once, Pay part opens it empty, for the amount handed over;
+  // only who pays can do either, and while a payment waits for its receiver and the admin it says so instead
+  function moveLi(m, me) {
+    const mine = !!me && m.from === me, done = plan.done[m.from + '|' + m.to] || 0, who = you(m.from, me, true) + ' to ' + you(m.to, me)
+    const sent = rows.filter((x) => isPay(x) && !counts(x) && !x.no && !x.pending && x.paid === m.from && toOf(x) === m.to)
+    const main = '<span class="move-who">' + av(m.from) + '<span>' + esc(you(m.from, me, true)) + '</span>' + ic('next') + av(m.to) + '<span>' + esc(you(m.to, me)) + '</span></span><b class="num">' + esc(money(m.cents)) + '</b>' +
+      (done ? '<span class="move-done"><span class="move-bar" aria-hidden="true"><i style="width:' + Math.max(4, Math.round((done / (done + m.cents)) * 100)) + '%"></i></span><small class="num">' + esc(money(done)) + ' paid</small></span>' : '')
+    const cents = ' data-cents="' + m.cents + '"'
+    return '<li class="move" data-from="' + esc(m.from) + '" data-to="' + esc(m.to) + '">' +
+      (mine ? '<button class="move-open" type="button" data-pay-from="' + esc(m.from) + '" data-pay-to="' + esc(m.to) + '"' + cents + ' aria-label="' + esc(you(m.from, me, true) + ' pays ' + you(m.to, me) + ' ' + money(m.cents) + (done ? ', ' + money(done) + ' paid so far' : '')) + '">' + main + '</button>' : '<span class="move-open">' + main + '</span>') +
+      (sent.length ? '<span class="wait-pill">' + esc(waitOf(sent[0], me)) + '</span>'
+        : mine ? '<span class="move-acts"><button class="btn small" type="button" data-settle-from="' + esc(m.from) + '" data-settle-to="' + esc(m.to) + '"' + cents + ' aria-label="' + esc('Mark paid: ' + who + ', ' + money(m.cents)) + '"' + (paying.has(m.from + '|' + m.to + '|' + m.cents) ? ' disabled>Saving…' : '>' + ic('check') + 'Mark paid') + '</button>' +
+          '<button class="link-btn" type="button" data-part-from="' + esc(m.from) + '" data-part-to="' + esc(m.to) + '" aria-label="' + esc('Pay part: ' + who) + '">Pay part</button></span>' : '') + '</li>'
   }
   // the top card: who you are (asked once), what you owe or get back, and your payments to settle
   function renderMe(me, b, moves) {
@@ -1930,7 +1979,7 @@
     const shown = x.cur === showCur ? orig(x) : '≈' + money(centsOf(x))
     const under = x.cur === showCur ? '' : '<small class="x-orig">' + esc(orig(x)) + '</small>'
     return '<button class="xrow' + (counts(x) ? '' : ' waiting') + '" type="button" data-spend-id="' + esc(x.id) + '"><span class="x-ic c-' + cat + '">' + ic(cat) + '</span>' +
-      '<span class="x-main"><b>' + esc(title) + (x.photo ? '<span class="x-photo" aria-label="with a receipt photo">' + ic('camera') + '</span>' : '') + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + (wait ? '<span class="' + (x.no ? 'said-no' : 'wait') + '">' + esc(wait) + '</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small>' + (x.loc ? '<small class="x-place">' + ic('pin') + esc(placeName(x.loc.lat, x.loc.lng)) + '</small>' : '') + '</span>' +
+      '<span class="x-main"><b>' + esc(title) + (x.photo ? '<span class="x-photo" aria-label="with a receipt photo">' + ic('camera') + '</span>' : '') + '</b><small>' + (x.pending ? '<span class="unsent">Not sent yet</span> · ' : '') + (wait ? '<span class="' + (x.no ? 'said-no' : 'wait') + '">' + esc(wait) + '</span> · ' : '') + esc(pay ? (withDay ? dayWord(x.date) + (plan.part.has(x.id) ? ' · part payment' : '') : plan.part.has(x.id) ? 'Part payment' : 'Payment') : you(x.paid, me, true) + ' paid · ' + who) + '</small>' + (x.loc ? '<small class="x-place">' + ic('pin') + esc(placeName(x.loc.lat, x.loc.lng)) + '</small>' : '') + '</span>' +
       '<span class="x-amt"><b class="num">' + esc(shown) + '</b>' + under + mine + '</span></button>'
   }
   // the expenses by day, newest first, with each day's total (payments are not spending)
@@ -2081,7 +2130,7 @@
     const last = lastSplit()
     st = x
       ? { id: x.pending ? '' : x.id, local: x.pending ? x.newId : '', newId: x.pending ? x.newId : '', x, kind: isPay(x) ? 'pay' : 'spend', cur: x.cur, rate: rateOf(x), paid: x.paid, to: isPay(x) ? (x.split || [])[0] : '', split: new Set(isPay(x) ? PEOPLE : x.split), mode: x.amounts ? 'amounts' : x.shares ? 'shares' : 'equal', shares: { ...(x.shares || {}) }, locked: { ...(x.amounts || {}) }, cat: x.cat || '', picked: !!x.cat }
-      : { newId: newSpendId(), kind: kind || 'spend', cur: CURS.includes(store.get('spendLastCur', 'THB')) ? store.get('spendLastCur', 'THB') : 'THB', paid: (pre && (pre.paid || pre.from)) || me, to: (pre && pre.to) || '', split: new Set(dayIn(0) > groupEnd && last.length ? last : PEOPLE), mode: 'equal', shares: {}, locked: {}, cat: '', picked: false }
+      : { newId: newSpendId(), kind: kind || 'spend', cur: pre && pre.from ? showCur : CURS.includes(store.get('spendLastCur', 'THB')) ? store.get('spendLastCur', 'THB') : 'THB', paid: (pre && (pre.paid || pre.from)) || me, to: (pre && pre.to) || '', toPicked: !!(pre && pre.to), part: !!(pre && pre.part), split: new Set(dayIn(0) > groupEnd && last.length ? last : PEOPLE), mode: 'equal', shares: {}, locked: {}, cat: '', picked: false }
     if (!x) st.rate = midOf(st.cur)
     st.opener = document.activeElement
     st.by = x && x.pending ? x.by || me : me // not sent yet: still new, so still for whom it was
@@ -2099,9 +2148,10 @@
     fx('#sp-cats').hidden = true
     fx('#sp-paid-box').hidden = true
     fx('#sp-by-box').hidden = true
+    fx('#sp-to-box').hidden = true
     setSaving(false)
     if (pre && pre.cents) fillPay(pre.cents)
-    else if (st.kind === 'pay' && !x) prefillPay()
+    else if (st.kind === 'pay' && !x && !st.part) prefillPay()
     syncSheet(true)
     if (sheet.showModal) sheet.showModal(); else sheet.setAttribute('open', '')
     form.scrollTop = 0
@@ -2117,24 +2167,32 @@
     st = { ...d.s, dirty: true, discard: false, saved: false, opener: document.activeElement }
     fx('#sp-amount').value = d.amount; fx('#sp-what').value = d.what; fx('#sp-date').value = d.date
     fx('#sp-err').textContent = ''; fx('#sp-meta').hidden = true
-    fx('#sp-rate-box').hidden = true; fx('#sp-cats').hidden = true; fx('#sp-paid-box').hidden = true; fx('#sp-by-box').hidden = true
+    fx('#sp-rate-box').hidden = true; fx('#sp-cats').hidden = true; fx('#sp-paid-box').hidden = true; fx('#sp-by-box').hidden = true; fx('#sp-to-box').hidden = true
     setSaving(false)
     syncSheet(true)
     sheet.showModal(); form.scrollTop = 0; root.classList.add('sheet-open'); history.pushState({ sheet: 1 }, ''); kb()
   }
-  // a payment filled in to settle: the amount as shown, kept exact (to the satang) while nobody changes it
-  function fillPay(cents, cur = showCur) {
+  // a payment filled in to settle: the amount as shown, kept exact (to the satang) while nobody changes it; part: all
+  // of the debt or half of it (the button that filled it in); the sheet keeps the day's rate, and Save the exact one
+  function fillPay(cents, cur = showCur, part = 'all') {
     const p = payOf(cents, cur)
-    st.cur = p.cur; st.rate = p.rate || 1; st.exact = { cents, amount: p.amount, cur: p.cur }; st.typed = false
+    st.cur = p.cur; st.rate = midOf(p.cur) || 1; st.exact = { cents, amount: p.amount, cur: p.cur, part }; st.typed = false; st.rateTyped = false
+    fx('#sp-rate-box').hidden = true
     fx('#sp-amount').value = fmtAmount(p.amount)
   }
-  // a new payment: from you to the one you owe most, for what you owe; again when From or To changes, until typed
+  // the debt a new payment is for: the payment to settle from From to To, if there is one
+  const oweOf = () => (st && st.kind === 'pay' && !st.x && st.to && plan.moves.find((y) => y.from === st.paid && y.to === st.to)) || null
+  // half a debt: in baht whole baht, like the cash handed over (drams, dirhams and dollars round in payOf)
+  const halfOf = (cents, cur) => (cur === 'THB' ? Math.round(cents / 200) * 100 : Math.round(cents / 2))
+  // a new payment: from you to the one you owe most, for what you owe (half, if Half filled it in); again when From or
+  // To changes, until typed; after Pay part it stays empty until Half or All
   function prefillPay() {
     if (!st.toPicked || st.to === st.paid) st.to = ''
-    const m = settleUp(balancesOf(rows)).find((y) => y.from === st.paid && (!st.to || y.to === st.to))
+    const m = plan.moves.find((y) => y.from === st.paid && (!st.to || y.to === st.to))
     if (!st.to) st.to = m ? m.to : ''
     if (st.typed) return
-    if (m) fillPay(m.cents)
+    const part = st.exact ? st.exact.part : st.part ? '' : 'all'
+    if (m && part) { const cur = st.curPicked ? st.cur : showCur; fillPay(part === 'half' ? halfOf(m.cents, cur) : m.cents, cur, part) }
     else { st.exact = null; fx('#sp-amount').value = '' }
   }
   function setSaving(on) {
@@ -2169,6 +2227,10 @@
     fx('#sp-by-row').setAttribute('aria-expanded', String(!fx('#sp-by-box').hidden))
     $$('[data-by]', form).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.by === st.by)))
     $$('[data-to]', form).forEach((b) => { b.setAttribute('aria-pressed', String(b.dataset.to === st.to)); b.disabled = b.dataset.to === st.paid })
+    // To: one row like Paid by (a tap shows the 8), open while nobody is picked
+    if (pay && !st.to) fx('#sp-to-box').hidden = false
+    fx('#sp-to-val').innerHTML = st.to ? av(st.to) + '<b>' + esc(you(st.to, me, true)) + '</b>' : ''
+    fx('#sp-to-row').setAttribute('aria-expanded', String(!fx('#sp-to-box').hidden))
     // the category: a tile by What was it (guessed from the words until someone picks one); a tap opens the 8
     const cat = st.picked ? st.cat : guessCat(fx('#sp-what').value), tile = fx('#sp-cat')
     tile.className = 'x-ic cat-tile c-' + cat
@@ -2221,6 +2283,7 @@
     const far = st.rateTyped && cur !== 'THB' && rate && midOf(cur) && Math.abs(rate / midOf(cur) - 1) > 0.2
     fx('#sp-rate-warn').hidden = !far
     if (far) fx('#sp-rate-warn').textContent = 'Far from today’s rate: ' + (cur === 'AMD' ? '1 THB = ' + rateText(1 / midOf(cur)) + ' AMD' : '1 ' + cur + ' = ' + rateText(midOf(cur)) + ' THB')
+    syncOwe(ok ? total : 0)
     if (st.kind === 'pay') return
     const who = PEOPLE.filter((p) => st.split.has(p)), sum = fx('#sp-sum')
     sum.className = 'split-sum'
@@ -2351,6 +2414,32 @@
   const autoHere = (s) => { if (navigator.permissions) navigator.permissions.query({ name: 'geolocation' }).then((r) => { if (r.state === 'granted') useHere(s, true) }).catch(() => {}) }
   // a photo cannot wait on the phone for internet: an expense saved offline goes without it
   const withoutPhoto = (x) => { const had = !!x.receipt; delete x.receipt; return had }
+  // the satang of a payment as typed: exact when Half or All filled it in (or it is the whole debt as shown), else at its rate
+  function payCents(total, m) {
+    if (!(total > 0)) return 0
+    if (st.rateTyped) return Math.round(total * st.rate * 100)
+    if (st.exact && st.exact.cur === st.cur && st.exact.amount === total) return st.exact.cents
+    const whole = m && payOf(m.cents, st.cur)
+    if (whole && whole.cur === st.cur && whole.amount === total) return m.cents
+    return Math.round(total * (st.cur === 'THB' ? 1 : st.rate) * 100)
+  }
+  // a payment on a debt: what is owed between these two (in the payment's currency), Half and All, and what is left after
+  function syncOwe(total) {
+    const box = fx('#sp-owe'), m = oweOf()
+    box.hidden = !m
+    if (!m) return
+    // in the currency of the payment, at its rate (the day's rate, or the one typed)
+    const me = meOf(), cur = st.cur, rate = cur === 'THB' ? 1 : st.rate, cents = payCents(total, m), left = m.cents - cents, after = fx('#sp-owe-after')
+    fx('#sp-owe-t').textContent = st.paid === me ? 'You owe ' + st.to : st.to === me ? st.paid + ' owes you' : st.paid + ' owes ' + st.to
+    fx('#sp-owe-v').textContent = money(m.cents, cur, rate)
+    fx('#sp-owe-bar').style.width = Math.min(100, Math.round((cents / m.cents) * 100)) + '%'
+    after.className = 'owe-after'
+    if (!cents) after.textContent = ''
+    else if (Math.abs(left) < 100) { after.innerHTML = ic('check') + 'Settles it'; after.classList.add('good') }
+    else if (left > 0) after.textContent = money(left, cur, rate) + ' left after this'
+    else { after.textContent = 'Over by ' + money(-left, cur, rate); after.classList.add('bad') }
+    $$('[data-part]', box).forEach((b) => b.setAttribute('aria-pressed', String(!!cents && !!st.exact && st.exact.part === b.dataset.part && st.exact.cur === cur && st.exact.amount === total)))
+  }
   // the sheet as an expense or payment to send, or an error shown in it
   function collect() {
     const err = (m, el) => { fx('#sp-err').className = 'sheet-err'; fx('#sp-err').textContent = m; if (el) fx(el).focus(); return null }
@@ -2367,8 +2456,9 @@
     if (st.locDirty) x.loc = st.loc ? { lat: st.loc.lat, lng: st.loc.lng, src: st.loc.src } : null
     if (st.kind === 'pay') {
       if (!st.to || st.to === st.paid) return err('Pick who got the money')
-      // the amount that was filled in to settle, unchanged: the rate that settles it to the satang
-      if (st.exact && !st.rateTyped && st.exact.cur === st.cur && st.exact.amount === amount) { if (st.cur === 'THB') delete x.rate; else x.rate = st.exact.cents / 100 / amount }
+      // filled in by Half or All (or typed as the whole debt), unchanged: the rate that settles it to the satang
+      const m = oweOf(), c = payCents(amount, m)
+      if (!st.rateTyped && st.cur !== 'THB' && c !== Math.round(amount * st.rate * 100)) x.rate = c / 100 / amount
       return Object.assign(x, { kind: 'pay', what: '', split: [st.to] })
     }
     const what = fx('#sp-what').value.trim()
@@ -2412,6 +2502,7 @@
       // opening or closing a part is not a change
       if (t.id === 'sp-paid-row') { fx('#sp-paid-box').hidden = !fx('#sp-paid-box').hidden; syncSheet(false); return }
       if (t.id === 'sp-by-row') { fx('#sp-by-box').hidden = !fx('#sp-by-box').hidden; syncSheet(false); return }
+      if (t.id === 'sp-to-row') { fx('#sp-to-box').hidden = !fx('#sp-to-box').hidden; syncSheet(false); return }
       if (t.id === 'sp-cat') { fx('#sp-cats').hidden = !fx('#sp-cats').hidden; syncSheet(false); return }
       if (t.id === 'sp-rate-btn') {
         const box = fx('#sp-rate-box')
@@ -2437,11 +2528,17 @@
       if (d.cur) {
         // another currency: today's rate for it (a typed rate was for the other one); a filled-in payment follows
         st.cur = d.cur; st.curPicked = true; st.rate = midOf(d.cur); st.rateTyped = false; fx('#sp-rate-box').hidden = true
-        if (st.kind === 'pay' && st.exact && !st.typed) fillPay(st.exact.cents, d.cur)
+        if (st.kind === 'pay' && st.exact && !st.typed) fillPay(st.exact.cents, d.cur, st.exact.part)
       } else if (d.cat) { st.cat = d.cat; st.picked = true; fx('#sp-cats').hidden = true }
       else if (d.by) { st.by = d.by; fx('#sp-by-box').hidden = true; if (!st.paidPicked) st.paid = d.by }
       else if (d.paid) { st.paid = d.paid; st.paidPicked = true; fx('#sp-paid-box').hidden = true; if (st.to === st.paid) st.to = ''; if (st.kind === 'pay' && !st.x) prefillPay() }
-      else if (d.to) { st.to = d.to; st.toPicked = true; if (!st.x && !st.typed) prefillPay() }
+      else if (d.to) { st.to = d.to; st.toPicked = true; fx('#sp-to-box').hidden = true; if (!st.x && !st.typed) prefillPay() }
+      else if (d.part) {
+        // All of the debt, to the satang, or half of it
+        const m = oweOf()
+        if (!m) return
+        fillPay(d.part === 'half' ? halfOf(m.cents, st.cur) : m.cents, st.cur, d.part)
+      }
       else if (d.mode) { st.mode = d.mode; syncSheet(true); return }
       else if (d.splitSet) { st.split = new Set(d.splitSet === 'all' ? PEOPLE : lastSplit()); syncSheet(true); return }
       else if (d.splitP) {
@@ -2525,6 +2622,9 @@
         // not sent yet: changed on this phone (it was sent meanwhile: the change goes as a change, same id)
         if (!outbox.some((o) => o.spend.newId === s.local)) { delete x.newId; x.id = s.local; s.id = s.local; s.local = '' } else { s.saved = true; keepOnPhone(me, x, withoutPhoto(x) ? 'Changed on this phone, without the photo (a photo needs internet)' : 'Changed on this phone'); closeSheet(); flushOutbox(); return }
       }
+      // a new payment on a debt: the toast says what is left of it
+      const owed = isPay(x) && !x.id && plan.moves.find((m) => m.from === x.paid && m.to === x.split[0]), xr = x.cur === 'THB' ? 1 : x.rate
+      const left = owed ? owed.cents - Math.round(x.amount * xr * 100) : 0
       s.saving = true; setSaving(true)
       try {
         const j = await post({ name: me, spend: x }, x.receipt ? 30000 : 15000)
@@ -2534,7 +2634,7 @@
         if (st === s) closeSheet()
         applyShared(j)
         if (navigator.vibrate) navigator.vibrate(15)
-        toast((x.id ? 'Saved' : isPay(x) ? 'Payment added' : 'Expense added') + (x.by ? ' for ' + x.by : '') + (x.receipt ? ' with the photo' : ''), !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
+        toast((x.id ? 'Saved' : isPay(x) ? you(x.paid, me, true) + ' paid ' + you(x.split[0], me) + ' ' + amt(x.amount, x.cur) + (left >= 100 ? ' · ' + money(left, x.cur, s.rateTyped ? xr : midOf(x.cur)) + ' left' : '') : 'Expense added') + (x.by ? ' for ' + x.by : '') + (x.receipt ? ' with the photo' : ''), !x.id && j.id ? { label: 'Undo', run: () => unsave(j.id) } : undefined)
         refocus(x.id ? '[data-spend-id="' + CSS.escape(x.id) + '"]' : '#spend-add')
       } catch (er) {
         const mine = st === s
@@ -2592,6 +2692,7 @@
       }
       else if (d.settleFrom) settle(d.settleFrom, d.settleTo, Number(d.cents))
       else if (d.payFrom) openSheet(null, 'pay', { from: d.payFrom, to: d.payTo, cents: Number(d.cents) })
+      else if (d.partFrom) openSheet(null, 'pay', { from: d.partFrom, to: d.partTo, part: true })
       else if (d.nextPaid) openSheet(null, 'spend', { paid: d.nextPaid })
       else if ('addFirst' in d) openSheet(null)
       else if (d.spendFilter) { filter = d.spendFilter === 'person' ? 'all' : d.spendFilter; renderList(meOf()) }
@@ -2613,10 +2714,10 @@
     })
     // Share as text: the share sheet on a phone, else copied
     $('#spend-copy').addEventListener('click', async () => {
-      const b = balancesOf(rows.filter(counts)), moves = settleUp(b)
+      const b = balancesOf(rows.filter(counts)), moves = plan.moves
       const text = ['Spending, Phuket trip', ...rows.map((x) => [dayWord(x.date), isPay(x) ? x.paid + ' paid ' + (x.split || [])[0] : x.what, orig(x), isPay(x) ? '' : x.paid + ' paid', isPay(x) ? '' : whoOf(PEOPLE.filter((p) => (x.split || []).includes(p)), '')].filter(Boolean).join(' · ')), '',
         'Balances:', ...PEOPLE.map((p) => p + ': ' + (evenOf(p, b, moves) ? 'even' : (b[p].net > 0 ? 'gets back ' : 'owes ') + money(Math.abs(b[p].net)))), '',
-        'Settle up:', ...moves.map((m) => m.from + ' pays ' + m.to + ' ' + money(m.cents))].join('\n')
+        'Settle up:', ...moves.map((m) => m.from + ' pays ' + m.to + ' ' + money(m.cents) + (plan.done[m.from + '|' + m.to] ? ' (' + money(plan.done[m.from + '|' + m.to]) + ' paid)' : ''))].join('\n')
       if (navigator.share) { try { await navigator.share({ title: 'Spending, Phuket trip', text }); return } catch (er) { if (er && er.name === 'AbortError') return } }
       try { await navigator.clipboard.writeText(text); toast('Copied') } catch { toast('Could not copy here') }
     })

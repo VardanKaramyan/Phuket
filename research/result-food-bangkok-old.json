@@ -1,0 +1,3454 @@
+{
+ "generatedOn": "2026-10-27",
+ "region": "bangkok-old",
+ "scopeNote": "Old Bangkok by the river: Rattanakosin, Banglamphu and Pratu Phi, Dusit and Nang Loeng, Chinatown and Talat Noi, Charoen Krung and Bang Rak by the old Oriental, and the Thonburi bank (Khlong San, Kudi Chin, Wang Lang), checked against the Michelin Guide Thailand 2026 lists, Wongnai Users' Choice 2026 and Google Maps on 27 Oct 2026.",
+ "basics": [
+  {
+   "title": "Street food: when stalls cook and how to pay",
+   "text": "Old Bangkok eats in two shifts: pork-leg, congee and noodle shops cook from about 7:00 and many sell out or close by 13:00-15:00, while Yaowarat and Banglamphu stalls open from about 17:00 to midnight. Monday is the weakest day, because many street vendors and Yaowarat stalls take it off. Most stalls are cash only; many show a Thai QR code (PromptPay) that needs a Thai bank app, so carry small notes (20, 100 THB). At famous stalls you often pay or order before you sit, and the queue moves faster than it looks.",
+   "links": [
+    {
+     "label": "Grab: 30 Yaowarat restaurants with hours (Apr 2025)",
+     "url": "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/"
+    }
+   ]
+  },
+  {
+   "title": "Michelin street stalls: is the queue worth it",
+   "text": "The 2026 Michelin Guide cut many old Chinatown and Bang Rak stalls (Nai Ek, Ouan Pochana, Jok Prince, Prachak are no longer listed), but Thai diners still rate them highly on Wongnai. Bib Gourmand means good value, not a long queue: places such as Krua Apsorn, K. Panich or Kolun.h usually take 0-20 minutes. Jay Fai, the one-star stall, means 2-3 hours of waiting and about 1,500 THB for the crab omelette; most groups are happier at Thipsamai or Fai Ta Lu nearby. Go at opening time or mid-afternoon to avoid the worst queues.",
+   "links": [
+    {
+     "label": "Michelin Bib Gourmand, Bangkok",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/bib-gourmand"
+    },
+    {
+     "label": "Wongnai Users' Choice 2026",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ]
+  },
+  {
+   "title": "Fine dining: booking and dress",
+   "text": "Book the starred restaurants weeks ahead: Nusara has about 10 seats at one table and Potong about 28, so a table for 8 needs early contact and sometimes a full buyout. Most take bookings on their own site, by phone or LINE, and some ask for a deposit or card guarantee. Prices are shown before 10% service and 7% VAT, so add about 17%. Dress smart casual; at hotel restaurants such as Le Normandie avoid shorts, sandals and sleeveless shirts.",
+   "links": [
+    {
+     "label": "Michelin one-star list, Bangkok",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurants/1-star-michelin"
+    }
+   ]
+  },
+  {
+   "title": "Getting around for food",
+   "text": "The MRT Blue Line is the easiest way in: Wat Mangkon for Yaowarat, Hua Lamphong for Talat Noi and Si Morakot, Sam Yot for Pratu Phi, the Giant Swing and Phraeng Phuthon, and Sanam Chai for Wat Pho and Tha Tien. The Chao Phraya Express boat links Tha Chang, Tha Tien, Ratchawong (Chinatown), Si Phraya, Oriental and Sathorn pier (BTS Saphan Taksin), and small cross-river ferries go to Wang Lang and Wat Arun. For 8 people book two Grab cars or a large car; Chinatown traffic is slow after 17:00, so walk the last part.",
+   "links": [
+    {
+     "label": "Chao Phraya Express Boat",
+     "url": "https://www.chaophrayaexpressboat.com/"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bkk-thipsamai",
+   "name": "Thipsamai Pad Thai (Pratu Phi)",
+   "nameThai": "ทิพย์สมัย ผัดไทยประตูผี",
+   "kind": "noodles",
+   "tags": [
+    "late-night",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Pratu Phi",
+   "island": null,
+   "lat": 13.7527976,
+   "lng": 100.504823,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Thipsamai, 313 Maha Chai Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Thipsamai/@13.7527976,100.504823,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991678584ec5:0x698c069655046fbe!8m2!3d13.7527976!4d100.504823!16s%2Fg%2F1tksf77l",
+   "address": "313, 315 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 12674,
+   "reviewsSource": "Google, count read for the guide on 21 Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Superb pad thai wrapped in egg about 150 THB, fresh orange juice about 199 THB (Trvlogue review, 2026; juice price changes with the season).",
+   "dishes": [
+    "Pad thai wrapped in a thin egg omelette",
+    "Pad thai with fresh river prawns",
+    "Fresh orange juice"
+   ],
+   "praise": "Reviews call it the classic Bangkok pad thai, cooked over high heat at the front; the queue moves fast (Trvlogue, 2026). Google rating 4.2 from about 12,700 reviews.",
+   "watchOut": "Closed Tuesday. Long queue 18:00-21:00. Not in the Michelin 2026 selection.",
+   "description": "The best known pad thai shop in the old town, open late, with a queue most evenings. Jay Fai is a few doors away.",
+   "openText": "Daily 9:00-24:00, closed Tuesday.",
+   "days": [
+    "Mon",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Before 18:00 or after 21:30.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Order from the menu while you queue.",
+    "Pair it with sunset at the Golden Mount, 200 m away."
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://thipsamai.com/"
+    }
+   ],
+   "sources": [
+    "https://thipsamai.com/",
+    "https://www.trvlogue.com/en/thipsamai-bangkok-pad-thai",
+    "https://www.google.com/maps/place/Thipsamai/@13.7527976,100.504823,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991678584ec5:0x698c069655046fbe!8m2!3d13.7527976!4d100.504823!16s%2Fg%2F1tksf77l"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.2, Tuesday closed, pin at 313-315 Maha Chai Rd. thipsamai.com hours (guide check 21 Oct 2026). Not in the Michelin 2026 Bangkok lists.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jay-fai",
+   "name": "Jay Fai",
+   "nameThai": "ร้านเจ๊ไฝ",
+   "kind": "street-food",
+   "tags": [
+    "michelin",
+    "seafood",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Pratu Phi",
+   "island": null,
+   "lat": 13.7525912,
+   "lng": 100.5048189,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Raan Jay Fai, 327 Maha Chai Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Raan+Jay+Fai/@13.7525912,100.5048189,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29916f7bc1a6b:0xd7abaa5b13a1d242!8m2!3d13.7525912!4d100.5048189!16s%2Fg%2F11hbnv0kwc",
+   "address": "327 Maha Chai Rd, Samran Rat, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 3.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "One Michelin Star, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "Crab omelette 1,500 THB on the menu; a larger version was charged 4,000 THB (Pattaya Mail, 21 Aug 2025).",
+   "dishes": [
+    "Crab omelette (khai jeaw poo)",
+    "Drunken noodles with seafood",
+    "Stir-fried prawns in yellow curry"
+   ],
+   "praise": "Michelin 2026 still gives the one star for the crab omelette cooked over charcoal by the owner in ski goggles. Many visitors say the crab is generous but the wait and the price are hard to justify; Google rating is only 3.6.",
+   "watchOut": "Waits of 2-3 hours. Very high prices for a street shophouse; check the price of each dish. In Aug 2025 the shop was fined for not showing a 4,000 THB crab omelette on the menu. The owner, now in her 80s, talks about retiring, so check her Instagram before you go.",
+   "description": "The only street-food stall in Bangkok with a Michelin star: a cook in her 80s making crab omelettes and drunken noodles over charcoal.",
+   "openText": "Wed-Sat 9:00-19:30 (Michelin 2026). Closed Sunday to Tuesday.",
+   "days": [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Arrive before 9:00 and put your name on the list, then come back at your time.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Walk-in only; the staff give queue times in the morning.",
+    "Cash only.",
+    "For a group of 8, one person can queue while the rest eat at Thipsamai next door."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/jay-fai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/jay-fai",
+    "https://www.pattayamail.com/thailandnews/bangkoks-jay-fai-fined-2000-baht-for-unclear-pricing-on-crab-omelet-515005",
+    "https://www.khaosodenglish.com/featured/2024/10/29/jay-fai-denies-retirement-still-going-strong-after-7-years-of-michelin-stars/",
+    "https://www.google.com/maps/place/Raan+Jay+Fai/@13.7525912,100.5048189,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29916f7bc1a6b:0xd7abaa5b13a1d242!8m2!3d13.7525912!4d100.5048189!16s%2Fg%2F11hbnv0kwc"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (one star, Wed-Sat 9:00-19:30, cash only). Google Maps 27 Oct 2026: 3.6, closed Tuesday, opens 9:00 Wednesday. Pattaya Mail 21 Aug 2025 for prices. Khaosod Oct 2024: she denied retiring.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-krua-apsorn",
+   "name": "Krua Apsorn",
+   "nameThai": "ครัวอัปษร",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "seafood",
+    "group-friendly",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Dusit",
+   "island": null,
+   "lat": 13.7740734,
+   "lng": 100.5062943,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Krua Apsorn Samsen, 503 Sam Sen Road, Dusit, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Krua+Apsorn+@Samsen/@13.7740734,100.5062943,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991380a7acd9:0x66683f6419f20baa!8m2!3d13.7740734!4d100.5062943!16s%2Fg%2F1tcytw9l",
+   "address": "503 505 Sam Sen Rd, Dusit, Dusit District, Bangkok 10300, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.2,
+     "reviews": 349,
+     "note": "Dinso Road branch, 349 ratings and 267 reviews; reviews up to May 2026",
+     "url": "https://www.wongnai.com/r/3621rD"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Crab meat with yellow chilli 589 THB, fluffy crab omelette 139 THB, pork stir-fried with Karen chilli 169 THB, coconut ice cream 45 THB (Wongnai menu, Dinso branch, Oct 2026).",
+   "dishes": [
+    "Crab meat stir-fried with yellow chilli",
+    "Yellow curry with lotus stem and prawns",
+    "Fluffy crab omelette",
+    "Pork stir-fried with bird's eye chilli"
+   ],
+   "praise": "Michelin 2026 calls the pork with bird's eye chilli \"tender and bursting with herbal aromas\". A Wongnai Users' Choice 2026 winner; Wongnai reviewers through May 2026 praise the crab with yellow chilli.",
+   "watchOut": "Cash only at the Samsen branch (Michelin). Closes at 20:00 to 20:30, so it is a lunch or early dinner place.",
+   "description": "A family Thai kitchen famous for crab dishes, with members of the royal family among its regulars (Michelin). Plain room, home-style cooking.",
+   "openText": "Samsen: daily 10:00-20:00. Dinso Road: daily 10:30-20:30.",
+   "days": [],
+   "bestTime": "Lunch on a weekday, or before 18:00.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "The Dinso Road branch (169 Dinso Rd) is 5 minutes from Democracy Monument and easier from Khao San.",
+    "Order the crab with yellow chilli and the crab omelette to share."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/krua-apsorn-sam-sen"
+    },
+    {
+     "label": "Wongnai (Dinso branch)",
+     "url": "https://www.wongnai.com/r/3621rD"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/krua-apsorn-sam-sen",
+    "https://www.wongnai.com/r/3621rD",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Krua+Apsorn+@Samsen/@13.7740734,100.5062943,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991380a7acd9:0x66683f6419f20baa!8m2!3d13.7740734!4d100.5062943!16s%2Fg%2F1tcytw9l"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, Samsen branch, daily 10:00-20:00). Google Maps 27 Oct 2026: Samsen 4.4 open, Dinso 4.3 open. Wongnai Dinso page (prices, reviews to 12 May 2026). Wongnai Users' Choice 2026 list.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pad-thai-fai-ta-lu",
+   "name": "Pad Thai Fai Ta Lu",
+   "nameThai": "ผัดไทยไฟทะลุ",
+   "kind": "noodles",
+   "tags": [
+    "michelin",
+    "pork",
+    "late-night",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Banglamphu",
+   "island": null,
+   "lat": 13.7578915,
+   "lng": 100.5022115,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pad Thai Fai Ta Lu, 115/5 Dinso Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Pad+Thai+Fai+Ta+Lu+(Dinso+Rd)/@13.7578915,100.5022115,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29914a4c82e27:0xf3554702ca8ce524!8m2!3d13.7578915!4d100.5022115!16s%2Fg%2F11gcfswpy5",
+   "address": "115/5 Dinso Rd, Wat Bowon Niwet, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.1,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget (under about 150 THB a plate); no dated menu found.",
+   "dishes": [
+    "Pad thai with char-grilled pork",
+    "Pad thai with river prawns cooked in the shell"
+   ],
+   "praise": "Michelin 2026 recommends it for \"skilfully wok-cooked\" pad thai and says the smell of sizzling pork greets you at the door. Google rating 4.1.",
+   "watchOut": "A small shop; at peak times expect to wait or take away.",
+   "description": "A small pad thai shop where the chef cooks over a huge flame. The house version comes with charcoal-grilled pork, a good choice for pork lovers.",
+   "openText": "Daily 10:00-24:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Late evening after 21:00, when the old town is quiet.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Air-conditioned and takes cards (Michelin).",
+    "About 10 minutes on foot from Khao San Road."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/eat-pad-thai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/eat-pad-thai",
+    "https://www.google.com/maps/place/Pad+Thai+Fai+Ta+Lu+(Dinso+Rd)/@13.7578915,100.5022115,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29914a4c82e27:0xf3554702ca8ce524!8m2!3d13.7578915!4d100.5022115!16s%2Fg%2F11gcfswpy5"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, daily 10:00-24:00). Google Maps 27 Oct 2026: 4.1, open, 115/5 Dinso Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-k-panich",
+   "name": "K. Panich (Kor Panich)",
+   "nameThai": "ก.พานิช",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Giant Swing",
+   "island": null,
+   "lat": 13.7520958,
+   "lng": 100.4983613,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "K. Panich Sticky Rice, 431 Tanao Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/K.+Panich+Sticky+Rice/@13.7520958,100.4983613,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991199349559:0x1a1541ebb99bd515!8m2!3d13.7520958!4d100.4983613!16s%2Fg%2F1q5hrmy4x",
+   "address": "431 433 Thanon Tanao, Khwaeng Sao Chingcha, Khet Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 173,
+     "note": "173 ratings, 128 reviews",
+     "url": "https://www.wongnai.com/r/5266Lq"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Mango with sticky rice set about 130 THB, sticky rice with custard about 60 THB (Wongnai reviews, 2025).",
+   "dishes": [
+    "Mango sticky rice",
+    "Sticky rice with Thai custard (sangkaya)",
+    "Durian sticky rice in season"
+   ],
+   "praise": "Michelin 2026 calls it an \"iconic family-run eatery\" for mango sticky rice from a recipe kept for generations. A Wongnai Users' Choice 2026 winner.",
+   "watchOut": "Mostly a takeaway shop; the seated room is across the street. Mango quality follows the season (best March to June).",
+   "description": "The most famous mango sticky rice in Bangkok, from a shop open since before the Second World War, near the Giant Swing.",
+   "openText": "Mon-Sat 7:00-17:00 (Michelin 2026). Wongnai says it also opens on Sundays from January to June.",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Late morning, before the sticky rice sells out.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Cash only.",
+    "Nuttaporn coconut ice cream is about 100 m away on Phraeng Phuthon."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/k-panich"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/k-panich",
+    "https://www.wongnai.com/r/5266Lq",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/K.+Panich+Sticky+Rice/@13.7520958,100.4983613,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2991199349559:0x1a1541ebb99bd515!8m2!3d13.7520958!4d100.4983613!16s%2Fg%2F1q5hrmy4x"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, Mon-Sat 7:00-17:00, cash only). Google Maps 27 Oct 2026: 4.4. Wongnai page (3.9, 173 ratings; reviews to Jul 2025). Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kolun-h",
+   "name": "Kolun.h (Hainanese rice noodles)",
+   "nameThai": "ขนมจีนไหหลำโกหลุ่น",
+   "kind": "noodles",
+   "tags": [
+    "pork",
+    "michelin",
+    "budget",
+    "breakfast",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Giant Swing",
+   "island": null,
+   "lat": 13.7535363,
+   "lng": 100.4999961,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kolun.h, 110/1 Mahannop Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Kolun.h/@13.7535363,100.4999961,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29913ddb0e401:0x92e85755c46b460e!8m2!3d13.7535363!4d100.4999961!16s%2Fg%2F1s04fp0g7",
+   "address": "110/1 Thanon Mahannop, Sao Chingcha, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.8,
+     "reviews": 103,
+     "note": "103 ratings; reviews to Mar 2026",
+     "url": "https://www.wongnai.com/restaurants/21777PH-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%84%E0%B8%AB%E0%B8%AB%E0%B8%A5%E0%B8%B3%E0%B9%82%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%99-kolun-h-%E0%B9%80%E0%B8%AA%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%8A%E0%B9%89%E0%B8%B2-giant-swing/reviews"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Clear-broth Hainanese noodles 70 THB, rice with braised pork and crispy pork 70 THB (Wongnai reviews, 2025-2026).",
+   "dishes": [
+    "Hainanese rice noodles with braised pork, radish and crispy pork belly",
+    "Peppery goat soup with herbs"
+   ],
+   "praise": "Michelin 2026 (Bib) says it has fed locals since 1997 and warns of \"long queues at peak times\". Wongnai reviewers like the chewy, udon-like noodles.",
+   "watchOut": "Closes at 15:00.",
+   "description": "A small shop for Hainanese-style rice noodles topped with braised pork and crispy pork belly, in a rich or clear broth.",
+   "openText": "Daily 8:00-15:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Breakfast or before 11:30.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask for both crispy and braised pork.",
+    "Combine with K. Panich and the Giant Swing nearby."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kolun-h"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kolun-h",
+    "https://www.google.com/maps/place/Kolun.h/@13.7535363,100.4999961,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29913ddb0e401:0x92e85755c46b460e!8m2!3d13.7535363!4d100.4999961!16s%2Fg%2F1s04fp0g7"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, daily 8:00-15:00). Google Maps 27 Oct 2026: 4.4, opens 8:00. Wongnai page (3.8, reviews to 1 Mar 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-thai-tham",
+   "name": "Thai Tham (pork brain soup)",
+   "nameThai": "เกาเหลาสมองหมูไทยทำ",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "michelin",
+    "budget",
+    "breakfast",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Phraeng Phuthon",
+   "island": null,
+   "lat": 13.7517806,
+   "lng": 100.4967616,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Thai Tham, 28/1 Phraeng Phuthon Road, Bangkok",
+   "placeId": "ChIJRZUW6BGZ4jARlUw_qmJ0fgY",
+   "mapsUrl": "https://www.google.com/maps/place/Thai+Tham/data=!4m7!3m6!1s0x30e29911e8169545:0x67e7462aa3f4c95!8m2!3d13.7517806!4d100.4967616!16s%2Fg%2F1tctc0zy!19sChIJRZUW6BGZ4jARlUw_qmJ0fgY",
+   "address": "28/1 Phraeng Phuthon Rd, San Chao Pho Sua, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget; no dated menu found.",
+   "dishes": [
+    "Clear soup with braised pig brain",
+    "Chinese liver sausage"
+   ],
+   "praise": "Michelin 2026 (Bib) describes a century-old shop where the elderly owner prepares the pig brain fresh each morning. Google rating 4.6.",
+   "watchOut": "This is offal food: pig brain and organs. Closes at 14:00 and on Sunday.",
+   "description": "An old shophouse that does one unusual pork dish very well: pig brain in a light peppery broth. For the adventurous pork fans in the group.",
+   "openText": "Mon-Sat 7:00-14:00, closed Sunday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Breakfast.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Nuttaporn ice cream is on the same square for dessert."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/thai-tham"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/thai-tham",
+    "https://www.google.com/maps/place/Thai+Tham/data=!4m7!3m6!1s0x30e29911e8169545:0x67e7462aa3f4c95!8m2!3d13.7517806!4d100.4967616!16s%2Fg%2F1tctc0zy!19sChIJRZUW6BGZ4jARlUw_qmJ0fgY"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, Mon-Sat 7:00-14:00). Google Maps 27 Oct 2026: 4.6, 28/1 Phraeng Phuthon Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ten-suns",
+   "name": "Ten Suns (beef noodles)",
+   "nameThai": "เทนซัน ไร้เทียมทาน",
+   "kind": "noodles",
+   "tags": [
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Banglamphu",
+   "island": null,
+   "lat": 13.7625387,
+   "lng": 100.5041377,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ten Suns, 456 Wisut Kasat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Ten+Suns/@13.7625387,100.5041377,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996bcbdf953f:0xa052ff3f92d2fe04!8m2!3d13.7625387!4d100.5041377!16s%2Fg%2F11c805rsxl",
+   "address": "456 ถ. วิสุทธิกษัตริย์ Ban Phan Thom, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget; no dated menu found.",
+   "dishes": [
+    "Braised beef noodle soup with cheek, tongue, tendon or shank",
+    "Beef balls with extra broth"
+   ],
+   "praise": "Michelin 2026 (Bib) praises the \"well-seasoned, mellow broth\" and the meaty beef balls. Google rating 4.6.",
+   "watchOut": "Beef, not pork. Closed Monday; closes at 16:00.",
+   "description": "A long-running old-town shop for braised beef noodle soup, where you choose the cut.",
+   "openText": "Tue-Sun 9:00-16:00, closed Monday (Michelin 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Order the mixed beef bowl to try several cuts."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ten-suns"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ten-suns",
+    "https://www.google.com/maps/place/Ten+Suns/@13.7625387,100.5041377,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996bcbdf953f:0xa052ff3f92d2fe04!8m2!3d13.7625387!4d100.5041377!16s%2Fg%2F11c805rsxl"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, Tue-Sun 9:00-16:00). Google Maps 27 Oct 2026: 4.6, 456 Wisut Kasat Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mont-nom-sod",
+   "name": "Mont Nom Sod",
+   "nameThai": "มนต์นมสด",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Giant Swing",
+   "island": null,
+   "lat": 13.7541542,
+   "lng": 100.501137,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mont Nom Sod, 160/1 Dinso Road, Bangkok",
+   "placeId": "ChIJ0QDC8BOZ4jARY7WqIrAOkck",
+   "mapsUrl": "https://www.google.com/maps/place/Mont+NomSod/data=!4m7!3m6!1s0x30e29913f0c200d1:0xc9910eb022aab563!8m2!3d13.7541542!4d100.501137!16s%2Fg%2F1v5fpbl5!19sChIJ0QDC8BOZ4jARY7WqIrAOkck",
+   "address": "160/1-3 Dinso Rd, Sao Chingcha, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.1,
+     "reviews": 1178,
+     "note": "1,178 ratings, 939 reviews; reviews to Apr 2026",
+     "url": "https://www.wongnai.com/r/2559ZT"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Toast with butter and Thai custard 30 THB, toast with chocolate 35-42 THB, iced milk tea 55 THB (Wongnai, 2026).",
+   "dishes": [
+    "Thick toast with Thai custard (sangkaya)",
+    "Toast with sweet condensed milk",
+    "Fresh milk, hot or cold"
+   ],
+   "praise": "Wongnai Users' Choice 2026 winner with over 1,100 ratings; reviews from March and April 2026 still praise the soft toast and pandan custard.",
+   "watchOut": "Busy after 19:00 with students; table turnover is quick.",
+   "description": "An old milk bar opposite Bangkok City Hall, loved by Thais for thick toast with custard and glasses of fresh milk.",
+   "openText": "Daily about 12:30-21:30 (Wongnai, 2026).",
+   "days": [],
+   "bestTime": "Afternoon snack or after dinner.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Order the pandan sangkaya toast to share."
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "http://www.mont-nomsod.com/"
+    },
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/2559ZT"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/2559ZT",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Mont+NomSod/data=!4m7!3m6!1s0x30e29913f0c200d1:0xc9910eb022aab563!8m2!3d13.7541542!4d100.501137!16s%2Fg%2F1v5fpbl5!19sChIJ0QDC8BOZ4jARY7WqIrAOkck"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.4, open 13:00-22:00 that day, 160/1-3 Dinso Rd. Wongnai page (4.1, 1,178 ratings; reviews 28 Mar-26 Apr 2026). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nuttaporn",
+   "name": "Nuttaporn Ice Cream",
+   "nameThai": "นัฐพรไอศครีมกะทิสด",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Phraeng Phuthon",
+   "island": null,
+   "lat": 13.7516701,
+   "lng": 100.4974967,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nuttaporn Ice Cream, 94 Phraeng Phuthon Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Nuttaporn+Ice+Cream/@13.7516701,100.4974967,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29911be4652e5:0x696b3ba7e4651648!8m2!3d13.7516701!4d100.4974967!16s%2Fg%2F1hc37tpv8",
+   "address": "94 Phraeng Phuthon Rd, San Chao Pho Sua, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Wongnai reviewers spend under 100 THB a person; a scoop of coconut ice cream is a few tens of baht (no dated menu found).",
+   "dishes": [
+    "Fresh coconut milk ice cream",
+    "Ice cream with sticky rice and toppings"
+   ],
+   "praise": "Known for 70-80 years for ice cream made with fresh coconut milk (Wikipedia; Wongnai); Google rating 4.5 on 27 Oct 2026.",
+   "watchOut": "Small shop with little seating. Closes in the late afternoon.",
+   "description": "A tiny old shop for fresh coconut ice cream, on a quiet square of old shophouses.",
+   "openText": "About 9:00-17:00 (Google, read on a Tuesday, Oct 2026).",
+   "days": [],
+   "bestTime": "Afternoon.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Try coconut, then a second flavour such as Thai tea."
+   ],
+   "links": [
+    {
+     "label": "Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/Nattaporn_Ice_Cream"
+    }
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nattaporn_Ice_Cream",
+    "https://www.google.com/maps/place/Nuttaporn+Ice+Cream/@13.7516701,100.4974967,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29911be4652e5:0x696b3ba7e4651648!8m2!3d13.7516701!4d100.4974967!16s%2Fg%2F1hc37tpv8"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, open, 94 Phraeng Phuthon Rd. Wikipedia article on the shop. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mae-prapha",
+   "name": "Mae Prapha Crispy Pancakes",
+   "nameThai": "ขนมเบื้องแม่ประภา บางลำพู",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Banglamphu",
+   "island": null,
+   "lat": 13.7625491,
+   "lng": 100.4975194,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mae Prapha Crispy Pancake, 102 Phra Sumen Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Mae+Prapha+Crispy+Pancake/@13.7625491,100.4975194,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996dbcc42b7b:0x9bc078229846193b!8m2!3d13.7625491!4d100.4975194!16s%2Fg%2F1q5blqpkj",
+   "address": "102 Phra Sumen Rd, Chana Songkhram, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Crispy pancake (khanom bueang) 16 THB a piece, coconut tart 30 THB for two (Wongnai review, 2025).",
+   "dishes": [
+    "Khanom bueang, thin crispy Thai pancakes, sweet or savoury",
+    "Coconut tarts"
+   ],
+   "praise": "Michelin 2026 says the stall is over 50 years old and makes each pancake to order from a mung bean and brown rice batter. Google rating 4.4.",
+   "watchOut": "Each pancake is cooked to order, so expect a short wait.",
+   "description": "A small shophouse near Khao San that has made khanom bueang, the thin crispy Thai pancake, for half a century.",
+   "openText": "Daily 9:00-18:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Afternoon.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Cash only.",
+    "Buy a box of both sweet and savoury to share."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/mae-prapha-crispy-pancake-phra-nakhon"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/mae-prapha-crispy-pancake-phra-nakhon",
+    "https://www.google.com/maps/place/Mae+Prapha+Crispy+Pancake/@13.7625491,100.4975194,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996dbcc42b7b:0x9bc078229846193b!8m2!3d13.7625491!4d100.4975194!16s%2Fg%2F1q5blqpkj"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, daily 9:00-18:00, cash only). Google Maps 27 Oct 2026: 4.4, open, 102 Phra Sumen Rd. Wongnai review 2025 for prices.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nusara",
+   "name": "Nusara",
+   "nameThai": "นุสรา",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "view",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Tha Tien",
+   "island": null,
+   "lat": 13.7457026,
+   "lng": 100.4915282,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nusara, 336 Maharat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Nusara/@13.7457026,100.4915282,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29943777af77b:0xf244d0d180904b2f!8m2!3d13.7457026!4d100.4915282!16s%2Fg%2F11jn0g8ml6",
+   "address": "336 Maharat Rd, Phra Borom Maha Ratchawang, Khet Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "One Michelin Star, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "Tasting menu 4,590 THB plus service and VAT (Wongnai, 2026).",
+   "dishes": [
+    "Thai Wagyu stir-fried with holy basil",
+    "A set of regional Thai relishes"
+   ],
+   "praise": "One Michelin star in 2026; Michelin calls it one of Bangkok's most intimate Thai meals. Ranked on Asia's 50 Best Restaurants and a Wongnai Users' Choice 2026 winner.",
+   "watchOut": "About 10 seats at one table; books out weeks ahead and cannot take 8 easily. Dinner only.",
+   "description": "A tiny Thai tasting-menu restaurant by chef Thitid \"Ton\" Tassanakajohn, named after his grandmother, with drinks on a terrace facing Wat Pho.",
+   "openText": "Daily 18:00-23:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Book the first seating to see Wat Pho at dusk from the terrace.",
+   "score": 5,
+   "pick": false,
+   "tips": [
+    "Book as soon as reservations open.",
+    "Smart casual."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/nusara-1192382"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/nusara-1192382",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Nusara/@13.7457026,100.4915282,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29943777af77b:0xf244d0d180904b2f!8m2!3d13.7457026!4d100.4915282!16s%2Fg%2F11jn0g8ml6"
+   ],
+   "verification": "Michelin 1-star list and page read 27 Oct 2026 (daily 18:00-23:00). Google Maps 27 Oct 2026: 4.5, 336 Maharat Rd. Price from a 2026 Wongnai listing via a search snippet. Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-rongros",
+   "name": "Rongros",
+   "nameThai": "โรงรส",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "view",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Tha Tien",
+   "island": null,
+   "lat": 13.7442546,
+   "lng": 100.4917087,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "RONGROS, 392/16 Maharat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/RONGROS/@13.7442546,100.4917087,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299c16bd4838d:0x1f890e048ae0d78b!8m2!3d13.7442546!4d100.4917087!16s%2Fg%2F11h7cnm3yx",
+   "address": "392/16 Maharat Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Green curry with rib-eye beef and roti",
+    "Glass noodle salad"
+   ],
+   "praise": "Michelin 2026 recommends the green curry with rib-eye and the terrace for sunset over Wat Arun; it notes it is \"a favorite spot for tourists\". Google rating 4.7.",
+   "watchOut": "Popular with tourists, so book a terrace table for sunset.",
+   "description": "A Thai restaurant on the river at Tha Tien with a direct view of Wat Arun, good for a group dinner at sunset.",
+   "openText": "Daily 11:00-15:00 and 17:00-22:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Sunset, about 17:45-18:30 in January.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask for the terrace when you book.",
+    "Cards accepted."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/rongros"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/rongros",
+    "https://www.google.com/maps/place/RONGROS/@13.7442546,100.4917087,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299c16bd4838d:0x1f890e048ae0d78b!8m2!3d13.7442546!4d100.4917087!16s%2Fg%2F11h7cnm3yx"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, daily 11:00-15:00 and 17:00-22:00). Google Maps 27 Oct 2026: 4.7, opens 17:00, 392/16 Maharat Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-sang-thatien",
+   "name": "Sang Thatien",
+   "nameThai": "แสง ท่าเตียน",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Tha Tien",
+   "island": null,
+   "lat": 13.7452141,
+   "lng": 100.4914343,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Sang Tha Tian, 75 Maharat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Sang+Tha+Tian/@13.7452141,100.4914343,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299248b8e8983:0x67443dd0434f73a7!8m2!3d13.7452141!4d100.4914343!16s%2Fg%2F11pz44th40",
+   "address": "75 พระบรมมหาราชวง Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.4,
+     "reviews": 71,
+     "note": "71 ratings; reviews to Jun 2026",
+     "url": "https://www.wongnai.com/r/1817603fQ"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Michelin price band ฿฿฿; Wongnai lists it at over 1,000 THB a person (2026).",
+   "dishes": [
+    "Strawberry salad with shrimp paste and sweet pork",
+    "Crab meat with fresh herbs and spicy sauce",
+    "Yellow curry with pork belly"
+   ],
+   "praise": "Michelin 2026 says the crab meat with fresh herbs \"is unmissable\". A Wongnai Users' Choice 2026 winner; recent Wongnai reviews (Jan-Jun 2026) like the fruit salads and the salt-fried prawns.",
+   "watchOut": "Small room in a former ice factory. Hours differ between Michelin and Wongnai; Wongnai says closed Monday.",
+   "description": "Home-style Thai cooking with seasonal fruit, in an old ice factory near Wat Pho.",
+   "openText": "Dinner from 17:00 on weekdays, from 13:00 at weekends (Michelin 2026). Wongnai lists Tue-Sun 13:00-22:00, closed Monday.",
+   "days": [],
+   "bestTime": "Early dinner after visiting Wat Pho.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book ahead for a group."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sang-tha-tien"
+    },
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/1817603fQ"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sang-tha-tien",
+    "https://www.wongnai.com/r/1817603fQ",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Sang+Tha+Tian/@13.7452141,100.4914343,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299248b8e8983:0x67443dd0434f73a7!8m2!3d13.7452141!4d100.4914343!16s%2Fg%2F11pz44th40"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected). Google Maps 27 Oct 2026: 4.5, 75 Maharat Rd (no hours shown). Wongnai page (4.4, reviews to 12 Jun 2026). Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kope-hya-tai-kee",
+   "name": "Kope Hya Tai Kee",
+   "nameThai": "โกปี๊เฮี้ยะไถ่กี่",
+   "kind": "cafe",
+   "tags": [
+    "breakfast",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Giant Swing",
+   "island": null,
+   "lat": 13.7531642,
+   "lng": 100.5022646,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kope Hya Tai Kee, Siri Phong Road, Sao Chingcha, Bangkok",
+   "placeId": "ChIJkTwiHRSZ4jARrHxwA41ji4c",
+   "mapsUrl": "https://www.google.com/maps/place/Kope+Hya+Tai+Kee/data=!4m7!3m6!1s0x30e299141d223c91:0x878b638d03707cac!8m2!3d13.7531642!4d100.5022646!16s%2Fg%2F1hdz33f9_!19sChIJkTwiHRSZ4jARrHxwA41ji4c",
+   "address": "Siri Phong Rd, Samran Rat, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No dated menu found; coffee, toast and eggs at old-shop prices.",
+   "dishes": [
+    "Hainanese-style coffee (kopi)",
+    "Soft-boiled eggs",
+    "Toast with kaya or butter",
+    "Dim sum"
+   ],
+   "praise": "An old Hainanese-style coffee shop near the Giant Swing; Google rating 4.5 on 27 Oct 2026. It now has several branches around Bangkok.",
+   "watchOut": "Breakfast and coffee only, not a full meal.",
+   "description": "A traditional coffee shop for a Thai-Chinese breakfast of kopi, eggs and toast, a short walk from the Giant Swing.",
+   "openText": "About 7:00-20:00 (Google, read on a Tuesday, Oct 2026).",
+   "days": [],
+   "bestTime": "Breakfast.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Combine with Kolun.h noodles nearby for a full breakfast."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/kope.htk"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/place/Kope+Hya+Tai+Kee/data=!4m7!3m6!1s0x30e299141d223c91:0x878b638d03707cac!8m2!3d13.7531642!4d100.5022646!16s%2Fg%2F1hdz33f9_!19sChIJkTwiHRSZ4jARrHxwA41ji4c"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, open 7:00-20:00 that day, Siri Phong Rd. Praise from Google only; not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-on-lok-yun",
+   "name": "On Lok Yun",
+   "nameThai": "ออน ล๊อก หยุ่น",
+   "kind": "cafe",
+   "tags": [
+    "breakfast",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Wang Burapha",
+   "island": null,
+   "lat": 13.7469885,
+   "lng": 100.5006309,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "On Lok Yun, 72 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/On+Lok+Yun/@13.7469885,100.5006309,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299fed0dd26dd:0x663efac170fe5375!8m2!3d13.7469885!4d100.5006309!16s%2Fg%2F11sfpg3qsh",
+   "address": "72 ถ. เจริญกรุง Wang Burapha Phirom, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Grab lists it at the low-middle price band ($$, Jun 2025); a breakfast set of eggs, toast and coffee is cheap. No dated menu found.",
+   "dishes": [
+    "American breakfast with eggs and Chinese sausage",
+    "Toast with custard",
+    "Thai coffee"
+   ],
+   "praise": "An old breakfast shop listed by Grab in June 2025 among the legendary places on Charoen Krung; Google rating 4.5 on 27 Oct 2026.",
+   "watchOut": "Closes at 14:30. Queues at weekend mornings.",
+   "description": "An old-fashioned Chinese-Thai breakfast café with wooden furniture, a good start before the Grand Palace or Chinatown.",
+   "openText": "Daily 6:00-14:30 (Grab, Jun 2025; Google, Oct 2026).",
+   "days": [],
+   "bestTime": "Weekday breakfast.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Cash only."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/onlokyun/"
+    }
+   ],
+   "sources": [
+    "https://www.grab.com/th/food-blog/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87/",
+    "https://www.google.com/maps/place/On+Lok+Yun/@13.7469885,100.5006309,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299fed0dd26dd:0x663efac170fe5375!8m2!3d13.7469885!4d100.5006309!16s%2Fg%2F11sfpg3qsh"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, 6:00-14:30 that day, 72 Charoen Krung Rd. Grab food blog Jun 2025 (Charoen Krung legends). not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jiew-joke-banglamphu",
+   "name": "Jiew Joke Banglamphu",
+   "nameThai": "จิว โจ๊กบางลำพู",
+   "kind": "street-food",
+   "tags": [
+    "pork",
+    "late-night",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Banglamphu",
+   "island": null,
+   "lat": 13.7599034,
+   "lng": 100.4988435,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Jiew Joke Bang Lamphu, 182 Tani Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Jiew+Joke+Bang+Lamphu/@13.7599034,100.4988435,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29985cdf93abb:0x6926da0e94353a10!8m2!3d13.7599034!4d100.4988435!16s%2Fg%2F11jgykcfqp",
+   "address": "182 Thanon Tani, Talat Yot, Phra Nakhon, Bangkok 10200, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.0,
+     "reviews": 101,
+     "note": "101 ratings, 91 reviews",
+     "url": "https://www.wongnai.com/r/129453yU"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pork congee 69 THB, pork sukiyaki dry or in soup 89 THB, mixed sukiyaki 129 THB, century egg 16 THB (Wongnai menu, 2026).",
+   "dishes": [
+    "Pork congee (jok)",
+    "Dry pork sukiyaki stir-fried in a hot pan"
+   ],
+   "praise": "A Wongnai Users' Choice 2026 winner for late-night congee and wok-fried suki, a block from Khao San.",
+   "watchOut": "Closed Monday. Hours on Wongnai differ slightly (closing 2:00 to 3:00).",
+   "description": "A late-night stop for smooth pork congee and smoky stir-fried sukiyaki, open long after the old town restaurants close.",
+   "openText": "Tue-Sun about 19:00-2:30 (Wongnai and Google, 2026). Closed Monday.",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "After 22:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A good last stop after Khao San Road."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/129453yU"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/129453yU",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Jiew+Joke+Bang+Lamphu/@13.7599034,100.4988435,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29985cdf93abb:0x6926da0e94353a10!8m2!3d13.7599034!4d100.4988435!16s%2Fg%2F11jgykcfqp"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, 19:00-3:00 that day, 182 Tani Rd. Wongnai page (4.0, 101 ratings, review last month). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nang-loeng-market",
+   "name": "Nang Loeng Market",
+   "nameThai": "ตลาดนางเลิ้ง",
+   "kind": "market",
+   "tags": [
+    "dessert",
+    "pork",
+    "budget",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "bangkok",
+   "district": "Nang Loeng",
+   "island": null,
+   "lat": 13.7592631,
+   "lng": 100.5120479,
+   "coordSource": "Google Maps pin (place URL), read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nang Loeng Market, Nakhon Sawan Road, Bangkok",
+   "placeId": "ChIJ5zAhsUCZ4jARTMZX6mRg6K0",
+   "mapsUrl": "https://www.google.com/maps/place/Nang+Loeng+Market/data=!4m7!3m6!1s0x30e29940b12130e7:0xade86064ea57c64c!8m2!3d13.7592631!4d100.5120479!16s%2Fg%2F11b7gvf6x6!19sChIJ5zAhsUCZ4jARTMZX6mRg6K0",
+   "address": null,
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Coconut cups (khanom thuai talai) 35 THB a box, Thai desserts 20-35 THB, sakoo dumplings with pork 50 THB a box, khao chae set 40 THB (Thairath, 24 Jul 2026).",
+   "dishes": [
+    "Khanom thuai talai coconut cups",
+    "Thai desserts: tako, mo kaeng, foi thong",
+    "Sakoo tapioca dumplings with pork",
+    "Khao chae, rice in jasmine-scented water"
+   ],
+   "praise": "Thairath (24 Jul 2026) lists several shops of 60-100 years, including Monta's coconut cups that sell over a thousand cups a day. Michelin Bib Gourmand Boonlert grilled pork noodles is in the next lane.",
+   "watchOut": "A lunchtime market: most stalls close by 14:00-15:00 and many shut on Sunday.",
+   "description": "One of Bangkok's oldest land markets (about 1900), known for Thai desserts and old family food stalls, near Government House.",
+   "openText": "Mon-Sat, about 7:00-14:00 for most stalls; some stalls close on Sunday (Thairath, Jul 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "10:00-12:30 on a weekday.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Walk one full loop first, then buy.",
+    "Cash only.",
+    "Jib Kee duck (Nakhon Sawan Soi 7) is next to the market for lunch."
+   ],
+   "links": [
+    {
+     "label": "Thairath: Nang Loeng food (Jul 2026)",
+     "url": "https://en.thairath.co.th/lifestyle/food/2948454"
+    }
+   ],
+   "sources": [
+    "https://en.thairath.co.th/lifestyle/food/2948454",
+    "https://en.wikipedia.org/wiki/Nang_Loeng_Market",
+    "https://www.google.com/maps/place/Nang+Loeng+Market/data=!4m7!3m6!1s0x30e29940b12130e7:0xade86064ea57c64c!8m2!3d13.7592631!4d100.5120479!16s%2Fg%2F11b7gvf6x6!19sChIJ5zAhsUCZ4jARTMZX6mRg6K0"
+   ],
+   "verification": "Google Maps 27 Oct 2026: Nang Loeng Market 4.4 (pin from the place URL). Thairath English 24 Jul 2026 for shops, prices and hours.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-boonlert-egg-noodles",
+   "name": "Bunloet (Boonlert) egg noodles with grilled pork",
+   "nameThai": "บุญเลิศ บะหมี่เกี๊ยวหมูย่างซีอิ๊ว",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Nang Loeng",
+   "island": null,
+   "lat": 13.7597659,
+   "lng": 100.5123167,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Boonlert Egg noodle, Nakhon Sawan Soi 8, Bangkok",
+   "placeId": "ChIJuyAMy0CZ4jARcJcKfKgoW-E",
+   "mapsUrl": "https://www.google.com/maps/place/Boonlert+Egg+noodle/data=!4m7!3m6!1s0x30e29940cb0c20bb:0xe15b28a87c0a9770!8m2!3d13.7597659!4d100.5123167!16s%2Fg%2F12qg11gw3!19sChIJuyAMy0CZ4jARcJcKfKgoW-E",
+   "address": "Nakhon Sawan 8, Wat Sommanat, Pom Prap Sattru Phai, Bangkok 10100, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget; no dated menu found.",
+   "dishes": [
+    "Egg noodles with charcoal-grilled soy pork (moo yang see ew)",
+    "Wonton noodles in pork bone broth"
+   ],
+   "praise": "Michelin 2026 (Bib) says the pork rump is marinated for four hours, grilled on charcoal and served on egg noodles in pork bone broth, from a recipe used for over 40 years. Google rating 4.4.",
+   "watchOut": "Daytime only, closes at 17:00.",
+   "description": "A 40-year-old stall by Nang Loeng market for egg noodles with charcoal-grilled soy pork.",
+   "openText": "Daily 10:00-17:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Lunch, with dessert at Nang Loeng market.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask for extra grilled pork."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bunloet"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bunloet",
+    "https://www.google.com/maps/place/Boonlert+Egg+noodle/data=!4m7!3m6!1s0x30e29940cb0c20bb:0xe15b28a87c0a9770!8m2!3d13.7597659!4d100.5123167!16s%2Fg%2F12qg11gw3!19sChIJuyAMy0CZ4jARcJcKfKgoW-E"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, daily 10:00-17:00). Google Maps 27 Oct 2026: 4.4, Nakhon Sawan Soi 8, 10:00-17:00 that day.",
+   "imageCandidates": []
+  },
+  {
+   "id": "bkk-yaowarat-night-food",
+   "name": "Yaowarat (Chinatown) night food",
+   "nameThai": "ถนนเยาวราช",
+   "kind": "street-food",
+   "tags": [
+    "pork",
+    "seafood",
+    "dessert",
+    "late-night",
+    "group-friendly",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.74008,
+   "lng": 100.51064,
+   "coordSource": "Google Maps listing (T & K Seafood corner), from the guide; re-checked 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Yaowarat Road, Samphanthawong, Bangkok",
+   "placeId": null,
+   "mapsUrl": null,
+   "address": null,
+   "rating": 4.5,
+   "ratingSource": "Google Maps (Chinatown Bangkok, Yaowarat), 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Kuay jap 70-100 THB a bowl, small crispy pork rice 90 THB at Nai Ek (Wongnai, 2026); seafood restaurants cost more.",
+   "dishes": [
+    "Kuay jap (peppery rolled noodle soup) with crispy pork",
+    "Grilled river prawns and crab",
+    "Oyster omelette",
+    "Fried dough sticks with custard",
+    "Bingsu and ginger dumplings"
+   ],
+   "praise": "Grab (Apr 2025) and Wongnai Users' Choice 2026 still put Yaowarat stalls among Bangkok's best night food; the classic kuay jap stalls draw queues every evening.",
+   "watchOut": "Very crowded 19:00-22:00 at weekends. Many stalls rest on Monday. Keep phones and wallets in front pockets.",
+   "description": "Chinatown's main road turns into an open-air food street every evening. Use this card as the overview; the best single stalls have their own cards.",
+   "openText": "Stalls from about 17:00-18:00 to midnight; restaurants from late afternoon. Many stalls take Monday off.",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "18:30-22:00, Tuesday to Sunday.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "MRT Wat Mangkon, about 250 m from the Soi Texas corner.",
+    "Split up into pairs to queue at different stalls, then share.",
+    "Bring cash; some stalls take Thai QR only."
+   ],
+   "links": [
+    {
+     "label": "Grab: 30 Yaowarat restaurants (Apr 2025)",
+     "url": "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/"
+    }
+   ],
+   "sources": [
+    "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/",
+    "https://guide.michelin.com/th/en/article/dining-out/five-incredible-street-food-stalls-in-yaowarat-s-chinatown",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+   ],
+   "verification": "Kept the guide card and refreshed it 27 Oct 2026: Google Maps (Chinatown Yaowarat 4.5); Grab Yaowarat list dated 17 Apr 2025 with hours; single stalls checked on Google Maps the same day.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nai-ek-roll-noodles",
+   "name": "Nai Ek Roll Noodles",
+   "nameThai": "ก๋วยจั๊บนายเอ็ก",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "late-night",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7401053,
+   "lng": 100.5099369,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nai Ek Roll Noodle, 442 Yaowarat Soi 9, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Nai+Ek+Roll+Noodle/@13.7401053,100.5099369,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992175e2fda9:0x694279ae73a6b2da!8m2!3d13.7401053!4d100.5099369!16s%2Fg%2F1tj6r85r",
+   "address": "442 ซอย 9, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 646,
+     "note": "646 ratings, 513 reviews; reviews to Mar 2026",
+     "url": "https://www.wongnai.com/restaurants/1667sR-ก๋วยจั๊บนายเอ็ก-เยาวราช-ซอย9"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Kuay jap about 70 THB, small crispy pork rice 90 THB, small baked pork ribs 110 THB (Wongnai, 2026).",
+   "dishes": [
+    "Kuay jap in clear peppery broth with crispy pork belly",
+    "Crispy pork belly (moo krob) on rice",
+    "Stewed pork ribs",
+    "Pork blood soup"
+   ],
+   "praise": "The World of Street Food (Jan 2024) calls the moo krob perhaps the best it has had and the stewed ribs some of the best; Wongnai reviewers through March 2026 praise the crispy pork, offal and peppery broth. Google 4.4.",
+   "watchOut": "Queue at peak times; pay in cash before you sit. It held a Bib Gourmand for years but is not in the 2026 Michelin list.",
+   "description": "An air-conditioned Chinatown shop for kuay jap, rolled rice noodles in peppery pork broth, with some of the best crispy pork belly in the city. Open from breakfast to after midnight.",
+   "openText": "Daily 7:30-24:00 (Wongnai, 2026; Google shows to 0:30).",
+   "days": [],
+   "bestTime": "Mid-afternoon or after 22:00 to avoid the queue.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Order an extra plate of crispy pork to share.",
+    "Cash only."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/1667sR-ก๋วยจั๊บนายเอ็ก-เยาวราช-ซอย9"
+    }
+   ],
+   "sources": [
+    "https://www.theworldofstreetfood.com/2024/01/kuay-jab-nai-ek-peppery-rolled-noodle.html",
+    "https://www.wongnai.com/restaurants/1667sR-ก๋วยจั๊บนายเอ็ก-เยาวราช-ซอย9",
+    "https://www.google.com/maps/place/Nai+Ek+Roll+Noodle/@13.7401053,100.5099369,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992175e2fda9:0x694279ae73a6b2da!8m2!3d13.7401053!4d100.5099369!16s%2Fg%2F1tj6r85r"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.4, open 7:30-0:30 that day, 442 Yaowarat Soi 9. Wongnai page (3.9, 646 ratings; reviews 18-19 Mar 2026). not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ouan-pochana",
+   "name": "Guay Jub Ouan Pochana",
+   "nameThai": "ก๋วยจั๊บอ้วนโภชนา",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "late-night",
+    "budget"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7406171,
+   "lng": 100.5091977,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Guay Jub Ouan Pochana, 408 Yaowarat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Guay+Jub+Ouan+Pochana/@13.7406171,100.5091977,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299218e92fdfd:0x58961f6ef715fa67!8m2!3d13.7406171!4d100.5091977!16s%2Fg%2F1hdz014sg",
+   "address": "408 Yaowarat Rd, Chakkrawat, Chakkaphat, Bangkok 10100, Thailand",
+   "rating": 3.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "A bowl is about 60-100 THB (guide card, Oct 2026); Grab price band $$ (Apr 2025).",
+   "dishes": [
+    "Kuay jap in very peppery dark or clear broth",
+    "Crispy pork belly and pork offal"
+   ],
+   "praise": "Mark Wiens recommends the clear broth with crispy pork; Grab (Apr 2025) lists it among Yaowarat's top stalls. Google rating is lower (3.9) than Nai Ek's.",
+   "watchOut": "Closed Monday. Plastic stools on the pavement and a queue in the evening. Not in the 2026 Michelin list.",
+   "description": "The best-known pavement stall for kuay jap on Yaowarat Road, with a strong pepper broth and crispy pork.",
+   "openText": "Tue-Sun 11:00-24:00, closed Monday (Grab, Apr 2025; Google shows 10:30-24:00).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Before 18:30.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "If the queue is long, Nai Ek is 100 m away."
+   ],
+   "links": [
+    {
+     "label": "Eating Thai Food (Mark Wiens)",
+     "url": "https://eatingthaifood.com/irresistible-nasty-pig-bits-at-kuay-jab-uan-pochana"
+    }
+   ],
+   "sources": [
+    "https://eatingthaifood.com/irresistible-nasty-pig-bits-at-kuay-jab-uan-pochana",
+    "https://theworldofstreetfood.com/2024/03/kuay-jap-ouan-pochana-award-winning.html",
+    "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/",
+    "https://www.google.com/maps/place/Guay+Jub+Ouan+Pochana/@13.7406171,100.5091977,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299218e92fdfd:0x58961f6ef715fa67!8m2!3d13.7406171!4d100.5091977!16s%2Fg%2F1hdz014sg"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 3.9, open 10:30-24:00 that day, 408 Yaowarat Rd. Grab Yaowarat list 17 Apr 2025 (Tue-Sun 11:00-0:00). not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-tk-seafood",
+   "name": "T & K Seafood",
+   "nameThai": "ต๋อย & คิด ซีฟู๊ด",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "late-night",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7400778,
+   "lng": 100.510636,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "T & K Seafood, 49 Phadung Dao Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/T+%26+K+Seafood/@13.7400778,100.510636,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921726b262f:0xe57403745890580b!8m2!3d13.7400778!4d100.510636!16s%2Fg%2F11d_9f8n_v",
+   "address": "49, 51 Phadung Dao Rd, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.1,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Grab price band $$$ (Apr 2025); a 2022 review paid about 500 THB a person. Prawns come in small, medium and large portions, so ask the price first.",
+   "dishes": [
+    "Grilled giant river prawns",
+    "Soft-shell crab stir-fried with curry powder",
+    "Tom yum goong"
+   ],
+   "praise": "Grab (Apr 2025) lists it first in its 30 Yaowarat picks; the green-shirt stall faces red-shirt Lek & Rut Seafood across Soi Texas, and both fill every night. Google 4.1.",
+   "watchOut": "Tourist prices for seafood by weight; check before you order. Very busy after 19:00.",
+   "description": "A big pavement seafood restaurant at the Soi Texas corner of Yaowarat, with long tables that work for a group of 8.",
+   "openText": "Daily 16:00-24:00 (Grab, Apr 2025; Google, Oct 2026).",
+   "days": [],
+   "bestTime": "Arrive by 18:00 to get a long table.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Lek & Rut Seafood opposite stays open to about 2:00.",
+    "Share one large plate of prawns rather than many small ones."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/tkseafood/"
+    }
+   ],
+   "sources": [
+    "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/",
+    "https://www.timeout.com/bangkok/th/restaurants/ต๋อย-คิด-ซีฟู้ด",
+    "https://live2makan.com/2022/10/01/tk-bangkok/",
+    "https://www.google.com/maps/place/T+%26+K+Seafood/@13.7400778,100.510636,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29921726b262f:0xe57403745890580b!8m2!3d13.7400778!4d100.510636!16s%2Fg%2F11d_9f8n_v"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.1, open 16:00-24:00, 49-51 Phadung Dao Rd; Lek Seafood 4.3, open to 2:00. Grab list 17 Apr 2025. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nai-mong-hoi-tod",
+   "name": "Nai Mong Hoi Tod",
+   "nameThai": "นายหมงหอยทอด",
+   "kind": "street-food",
+   "tags": [
+    "seafood",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7421953,
+   "lng": 100.510739,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nai Mong Fry Oyster, 539 Phlap Phla Chai Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Nai+Mong+Fry+Oyster/@13.7421953,100.510739,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29923c5c9bd6f:0xb1ac821cce78091e!8m2!3d13.7421953!4d100.510739!16s%2Fg%2F11b7q8_jhx",
+   "address": "539 Phlap Phla Chai Rd, Pom Prap, Pom Prap Sattru Phai, Bangkok 10100, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No dated menu found.",
+   "dishes": [
+    "Crispy oyster omelette (or suan)",
+    "Crispy mussel pancake (hoi tod)"
+   ],
+   "praise": "A long-time Chinatown name for crispy oyster omelettes, cooked on a flat pan at the door; Google rating 4.3 on 27 Oct 2026.",
+   "watchOut": "Closed Tuesday. Oily food; share one plate.",
+   "description": "A shophouse for hoi tod and or suan, oyster omelettes with a crisp edge and soft centre, on the lane next to Yaowarat.",
+   "openText": "Opens about 10:00; closed Tuesday (Google, Oct 2026).",
+   "days": [
+    "Mon",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Late afternoon, before the Yaowarat stalls open.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Ask for the crispy style (or suan krob)."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/hoithod539/"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/place/Nai+Mong+Fry+Oyster/@13.7421953,100.510739,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29923c5c9bd6f:0xb1ac821cce78091e!8m2!3d13.7421953!4d100.510739!16s%2Fg%2F11b7q8_jhx"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, closed Tuesday, opens 10:00 Wednesday, 539 Phlap Phla Chai Rd. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026). No 2025-2026 written review found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jek-pui-curry",
+   "name": "Jek Pui curry stall",
+   "nameThai": "ข้าวแกงเจ๊กปุ๊ย",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7437524,
+   "lng": 100.5090193,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao Gaeng Jek Pui, 25 Mangkon Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Khao+Gaeng+Jek+Pui+(Je+Chie)/@13.7437524,100.5090193,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29922450dd985:0x851947ae4360e5a3!8m2!3d13.7437524!4d100.5090193!16s%2Fg%2F1hd_6vmdm",
+   "address": "25 Mangkon Rd, Pom Prap, Pom Prap Sattru Phai, Bangkok 10100, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.0,
+     "reviews": 309,
+     "note": "309 ratings, 260 reviews",
+     "url": "https://www.wongnai.com/r/17872tx"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pork curry with winter melon 50 THB, chicken green curry 50 THB, Chinese sausage 25 THB (Wongnai, 2026).",
+   "dishes": [
+    "Pork curry with winter melon",
+    "Green curry with fish balls",
+    "Baked pork ribs in sauce",
+    "Chinese sausage"
+   ],
+   "praise": "A Wongnai Users' Choice 2026 winner; the famous standing curry stall where diners sit on stools with no tables. Google rating 4.5.",
+   "watchOut": "No tables: you hold your plate on a stool. Popular curries sell out by 18:00.",
+   "description": "An old curry-on-rice stall by Wat Mangkon, where you eat sitting on a row of stools along the wall.",
+   "openText": "Daily 14:00-19:30 (Wongnai, 2026).",
+   "days": [],
+   "bestTime": "15:00-17:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Point at two curries over rice.",
+    "200 m from MRT Wat Mangkon."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/17872tx"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/17872tx",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://eatingthaifood.com/restaurants/thai-curry-kaeng-kari",
+    "https://www.google.com/maps/place/Khao+Gaeng+Jek+Pui+(Je+Chie)/@13.7437524,100.5090193,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29922450dd985:0x851947ae4360e5a3!8m2!3d13.7437524!4d100.5090193!16s%2Fg%2F1hd_6vmdm"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, open 14:00-19:30, 25 Mangkon Rd. Wongnai page (4.0, 309 ratings, reviews in the last 3 months). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-urai-braised-goose",
+   "name": "Urai Braised Goose",
+   "nameThai": "อุไร ห่านพะโล้ ทรงวาด",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Song Wat",
+   "island": null,
+   "lat": 13.7382155,
+   "lng": 100.5075808,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Urai Braised Goose, 935 Song Wat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Urai+Braised+Goose/@13.7382155,100.5075808,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299202c08a4cb:0x936fa5b33fb223e6!8m2!3d13.7382155!4d100.5075808!16s%2Fg%2F1hdyws41f",
+   "address": "935 Song Wat Rd, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.3,
+     "reviews": 123,
+     "note": "123 ratings, 94 reviews; reviews to Mar 2026",
+     "url": "https://www.wongnai.com/r/76318TF"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Braised goose medium plate 180 THB, large plate 320 THB (Wongnai menu, 2026).",
+   "dishes": [
+    "Braised goose (han palo) with thin skin",
+    "Goose wings, neck and feet",
+    "Clear soup with winter melon"
+   ],
+   "praise": "Michelin 2026 (Bib) says the family has braised goose for about six decades, with soft meat and thin skin. A Wongnai Users' Choice 2026 winner.",
+   "watchOut": "Short hours with a break in the afternoon. Closed on Chinese Buddhist holy days, twice a month. Intestines only on Wednesday and Saturday.",
+   "description": "A Teochew family shop on old Song Wat Road that serves almost only braised goose.",
+   "openText": "Daily 10:00-13:00 and 16:00-19:00 (Monday lunch only, Michelin 2026).",
+   "days": [],
+   "bestTime": "Opening time at 10:00 or 16:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Cash only.",
+    "Song Wat Road is good for a walk with old warehouses and cafés."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/urai-braised-goose"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/urai-braised-goose",
+    "https://www.wongnai.com/r/76318TF",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Urai+Braised+Goose/@13.7382155,100.5075808,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299202c08a4cb:0x936fa5b33fb223e6!8m2!3d13.7382155!4d100.5075808!16s%2Fg%2F1hdyws41f"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand). Google Maps 27 Oct 2026: 4.2, open 10:00-13:00 and 16:00-19:00. Wongnai page (4.3; review 30 Mar 2026). Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-lod-chong-singapore",
+   "name": "Lod Chong Singapore",
+   "nameThai": "ลอดช่องสิงคโปร์ เจ้าแรก",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7404595,
+   "lng": 100.5120522,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lod Chong Singapore, 658 Charoen Krung Road, Bangkok",
+   "placeId": "ChIJj3waSSGZ4jAR48m9Dn3QwpU",
+   "mapsUrl": "https://www.google.com/maps/place/Lod+Chong+Singapore+%28Singapore+Pochana%29/data=!4m7!3m6!1s0x30e29921491a7c8f:0x95c2d07d0ebdc9e3!8m2!3d13.7404595!4d100.5120522!16s%2Fg%2F1tjxc2s1!19sChIJj3waSSGZ4jAR48m9Dn3QwpU",
+   "address": "658 ถ. เจริญกรุง Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Grab price band $$ (Apr 2025); a bowl costs a few tens of baht. No dated menu found.",
+   "dishes": [
+    "Lod chong: pandan rice noodles in coconut milk with shaved ice",
+    "Mixed beans and grains in coconut milk"
+   ],
+   "praise": "Listed by Grab in both its Yaowarat (Apr 2025) and Charoen Krung (Jun 2025) round-ups as the original lod chong shop; Google rating 4.3.",
+   "watchOut": "Closed Thursday.",
+   "description": "The first shop of the well-known Singapore-style lod chong, a cold coconut dessert, near Soi Texas.",
+   "openText": "10:30-21:30, closed Thursday (Grab, 2025).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Hot afternoon, or after dinner on Yaowarat.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Add the mixed toppings for more texture."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://m.facebook.com/lodchongsg/"
+    }
+   ],
+   "sources": [
+    "https://www.grab.com/th/food-blog/ร้านอาหารเยาวราช/",
+    "https://www.google.com/maps/place/Lod+Chong+Singapore+%28Singapore+Pochana%29/data=!4m7!3m6!1s0x30e29921491a7c8f:0x95c2d07d0ebdc9e3!8m2!3d13.7404595!4d100.5120522!16s%2Fg%2F1tjxc2s1!19sChIJj3waSSGZ4jAR48m9Dn3QwpU"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, open 10:30-21:30, 658 Charoen Krung Rd. Grab Yaowarat list (17 Apr 2025) and Charoen Krung list (Jun 2025). not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-hua-seng-hong-yaowarat",
+   "name": "Hua Seng Hong (Yaowarat)",
+   "nameThai": "ฮั่วเซ่งฮง เยาวราช",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "group-friendly",
+    "late-night"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7408546,
+   "lng": 100.5091015,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Hua Seng Hong Restaurant, 371 Yaowarat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Hua+Seng+Hong+Restaurant+@Yaowarat+Road/@13.7408546,100.5091015,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29927349ec805:0x7c9caa46ce24aff3!8m2!3d13.7408546!4d100.5091015!16s%2Fg%2F1v2pmnj8",
+   "address": "371, 373 Yaowarat Rd, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Grab price band $ to $$ (2025); dim sum by the basket. No dated menu found.",
+   "dishes": [
+    "Dim sum: shrimp dumplings, barbecue pork buns",
+    "Red-braised pork leg",
+    "Roast duck",
+    "Fish maw soup"
+   ],
+   "praise": "Grab (Jun 2025) lists the Charoen Krung branch for dim sum, red-braised pork leg and roast duck; Google 4.3 for the Yaowarat Road branch on 27 Oct 2026.",
+   "watchOut": "A big, busy Chinese restaurant; service can be rushed.",
+   "description": "A large Chinese restaurant on Yaowarat Road with dim sum and Teochew dishes, easy for a group of 8 who want to sit in air conditioning.",
+   "openText": "Daily about 9:00-24:00 (Google, Oct 2026).",
+   "days": [],
+   "bestTime": "Dim sum at lunch, or a group dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Book a round table for 8 at weekends."
+   ],
+   "links": [
+    {
+     "label": "Official site",
+     "url": "https://www.huasenghong.com/"
+    }
+   ],
+   "sources": [
+    "https://www.grab.com/th/food-blog/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87/",
+    "https://www.google.com/maps/place/Hua+Seng+Hong+Restaurant+@Yaowarat+Road/@13.7408546,100.5091015,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29927349ec805:0x7c9caa46ce24aff3!8m2!3d13.7408546!4d100.5091015!16s%2Fg%2F1v2pmnj8"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, open 9:00-24:00 that day, 371-373 Yaowarat Rd. Grab Charoen Krung list (Jun 2025). not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-potong",
+   "name": "Potong",
+   "nameThai": "โพทง",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.7391549,
+   "lng": 100.5084933,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Restaurant POTONG, 422 Vanich 1 Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Restaurant+POTONG/@13.7391549,100.5084933,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299175b2bb877:0x7a9846ca9402acf0!8m2!3d13.7391549!4d100.5084933!16s%2Fg%2F11fsb6vs_m",
+   "address": "422 Vanich 1 Rd, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "One Michelin Star, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "About 20-course tasting menu 6,300 THB plus 10% service and 7% VAT (Restaurants for Kings and other 2026 listings).",
+   "dishes": [
+    "14-day aged duck",
+    "Layered pad thai with tiger prawn",
+    "Rat na"
+   ],
+   "praise": "One Michelin star in 2026 for \"assured technique and creativity\". Chef Pichaya \"Pam\" Soontornyanakij was named The World's Best Female Chef 2025. A Wongnai Users' Choice 2026 winner.",
+   "watchOut": "Closed Wednesday. Reopened on 16 Jun 2026 after a renovation with 28 seats, so tables for 8 are hard; book far ahead.",
+   "description": "A progressive Thai-Chinese tasting menu in a 120-year-old family shophouse that was once a herbal medicine shop.",
+   "openText": "15:30-23:00, closed Wednesday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Dinner, with a drink at the bar upstairs after.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Plan 9,000-11,000 THB a person with drinks.",
+    "Tell them about allergies when you book."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/potong"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/potong",
+    "https://restaurantsforkings.com/city/bangkok/potong.html",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Restaurant+POTONG/@13.7391549,100.5084933,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299175b2bb877:0x7a9846ca9402acf0!8m2!3d13.7391549!4d100.5084933!16s%2Fg%2F11fsb6vs_m"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (one star, closed Wednesday). Google Maps 27 Oct 2026: 4.6, open 15:30-23:00. Price and reopening date from 2026 listings via search snippets. Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-chop-chop-cook-shop",
+   "name": "Chop Chop Cook Shop",
+   "nameThai": null,
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Chinatown",
+   "island": null,
+   "lat": 13.741431,
+   "lng": 100.5076983,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Chop Chop Cook Shop, 328 Yaowarat Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Chop+Chop+Cook+Shop/@13.741431,100.5076983,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299d4a42b7ed1:0xe8686337db43e1a8!8m2!3d13.741431!4d100.5076983!16s%2Fg%2F11v0xnqp9b",
+   "address": "Ground Floor, 328 Yaowarat Rd, Chakkrawat, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band ฿฿ (moderate); the online menu shows no prices.",
+   "dishes": [
+    "Roast duck and barbecue pork",
+    "Roast duck soup with noodles",
+    "Crispy prawn wafer",
+    "Ginger milk curd"
+   ],
+   "praise": "Michelin 2026 says David Thompson's Chinese-Thai diner in a five-storey Art Deco building uses top ingredients simply, and says not to skip the roast duck soup. Google 4.4.",
+   "watchOut": "Closed Monday.",
+   "description": "A roast meat and noodle shop by chef David Thompson at the top of Yaowarat Road, with barbecue pork and roast duck.",
+   "openText": "Tue-Sun 12:00-22:00, closed Monday (Michelin 2026; official site).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Late lunch.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book online for a group."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/chop-chop-cook-shop"
+    },
+    {
+     "label": "Official site",
+     "url": "https://chopchopbkk.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/chop-chop-cook-shop",
+    "https://chopchopbkk.com/",
+    "https://www.google.com/maps/place/Chop+Chop+Cook+Shop/@13.741431,100.5076983,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299d4a42b7ed1:0xe8686337db43e1a8!8m2!3d13.741431!4d100.5076983!16s%2Fg%2F11v0xnqp9b"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, Tue-Sun 12:00-22:00). Google Maps 27 Oct 2026: 4.4, open 12:00-22:00, 328 Yaowarat Rd. Official site menu page.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-si-morakot",
+   "name": "Khao Moo Daeng Si Morakot",
+   "nameThai": "ข้าวหมูแดงสีมรกต",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Talat Noi",
+   "island": null,
+   "lat": 13.7371139,
+   "lng": 100.51473,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Khao Moo Daeng Si Morakot, 80-82 Soi Sukon 1, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Khao+Moo+Daeng+Si+Morakot/@13.7371139,100.51473,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992713d4b2f9:0xc0f0e00dca7c9aba!8m2!3d13.7371139!4d100.51473!16s%2Fg%2F1td_836v",
+   "address": "80-82 Sukon 1 Aly, Talat Noi, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.0,
+     "reviews": 942,
+     "note": "942 ratings, 688 reviews",
+     "url": "https://www.wongnai.com/r/8201OM"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Red pork with crispy pork, Chinese sausage and egg 82 THB, regular plate 40 THB, duck soup with pickled lime 35 THB (Wongnai, 2026).",
+   "dishes": [
+    "Khao moo daeng: red barbecue pork, crispy pork belly, Chinese sausage and egg with thick sweet gravy",
+    "Braised duck soup with pickled lime"
+   ],
+   "praise": "A Wongnai Users' Choice 2026 winner with nearly 950 ratings; Mark Wiens calls it one of the best plates of khao moo daeng in Bangkok and praises the charcoal-roasted pork and gravy.",
+   "watchOut": "Closes at 16:00. Small shop; tables turn fast.",
+   "description": "A 50-year-old shop near Hua Lamphong and Wat Traimit that makes every part of its red pork rice in-house.",
+   "openText": "Daily 9:00-16:00 (Wongnai, 2026).",
+   "days": [],
+   "bestTime": "Late breakfast or lunch, before 13:00.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Order the special plate with egg.",
+    "About 5 minutes on foot from MRT Hua Lamphong and Wat Traimit."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/8201OM"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/8201OM",
+    "https://www.eatingthaifood.com/restaurants/khao-moo-daeng-si-morakot/",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Khao+Moo+Daeng+Si+Morakot/@13.7371139,100.51473,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992713d4b2f9:0xc0f0e00dca7c9aba!8m2!3d13.7371139!4d100.51473!16s%2Fg%2F1td_836v"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.4, opens 9:30, 80-82 Sukon 1 Alley. Wongnai page (4.0, 942 ratings, reviews last month). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-charmgang",
+   "name": "Charmgang",
+   "nameThai": "ชามแกง",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Talat Noi",
+   "island": null,
+   "lat": 13.7327791,
+   "lng": 100.515087,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Charmgang, 14 Charoen Krung Soi 35, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Charmgang/@13.7327791,100.515087,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29989de26f155:0xba87408868e4fb82!8m2!3d13.7327791!4d100.515087!16s%2Fg%2F11j09zkg3c",
+   "address": "14 ซ. เจริญกรุง 35 Talat Noi, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Pomelo salad with cobia",
+    "Seared scallop on a crispy coconut cupcake",
+    "Thai curries of the day"
+   ],
+   "praise": "Michelin 2026 calls it a lively spot that stays true to Thai flavours, with a \"well-balanced\" pomelo salad. Google rating 4.7.",
+   "watchOut": "Small and busy; book. Weekend lunch only 12:00-13:30.",
+   "description": "A modern Thai curry house in a Talat Noi shophouse, with good cocktails and a young crowd.",
+   "openText": "Mon-Fri 18:00-23:00; Sat-Sun 12:00-13:30 and 18:00-23:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Dinner at 18:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask for the curry specials."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charmgang"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://facebook.com/charmgangcurryshop"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charmgang",
+    "https://www.google.com/maps/place/Charmgang/@13.7327791,100.515087,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29989de26f155:0xba87408868e4fb82!8m2!3d13.7327791!4d100.515087!16s%2Fg%2F11j09zkg3c"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected). Google Maps 27 Oct 2026: 4.7, opens 18:00, 14 Charoen Krung Soi 35.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-duck-noodle-house",
+   "name": "Duck Noodle House (Talat Noi)",
+   "nameThai": "เป็ดตุ๋น เจ้าท่า",
+   "kind": "noodles",
+   "tags": [
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Talat Noi",
+   "island": null,
+   "lat": 13.7330348,
+   "lng": 100.5131923,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Duck & Noodles House, 945 Soi Wanit 2, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Duck+%26+Noodles+House/@13.7330348,100.5131923,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d8d1ecc045:0x71a5e8c84a4290ec!8m2!3d13.7330348!4d100.5131923!16s%2Fg%2F11ckr5x12d",
+   "address": "945 Soi Wanit 2, Talat Noi, Samphanthawong, Bangkok 10100, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget; no dated menu found.",
+   "dishes": [
+    "Braised duck and goose noodles",
+    "Flat egg noodles with mixed offal"
+   ],
+   "praise": "Michelin 2026 says the second-generation shop is popular with Talat Noi locals and warns \"come before lunch, as the goose sells out fast\". Google 4.4.",
+   "watchOut": "Closed Sunday. Goose sells out by lunch.",
+   "description": "A family noodle shop in the Talat Noi lanes for braised duck and goose.",
+   "openText": "Mon-Sat 8:30-15:30, closed Sunday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Before 11:30.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Cash only.",
+    "Good stop on a Talat Noi walk."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/duck-noodle-house"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/duck-noodle-house",
+    "https://www.google.com/maps/place/Duck+%26+Noodles+House/@13.7330348,100.5131923,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d8d1ecc045:0x71a5e8c84a4290ec!8m2!3d13.7330348!4d100.5131923!16s%2Fg%2F11ckr5x12d"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, Mon-Sat 8:30-15:30). Google Maps 27 Oct 2026: 4.4, 945 Soi Wanit 2.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-charoen-saeng-silom",
+   "name": "Charoen Saeng Silom (pork leg)",
+   "nameThai": "ขาหมูเจริญแสงสีลม",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "michelin",
+    "budget",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7228017,
+   "lng": 100.5168825,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Charoen Saeng Silom, 492/6 Charoen Krung Soi 49, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Charoen+Saeng+Silom/@13.7228017,100.5168825,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c538adb537:0xb0993c65cb43bdf3!8m2!3d13.7228017!4d100.5168825!16s%2Fg%2F1tdj7g4r",
+   "address": "492/6 ถ.สีลม ติด Soi Charoen Krung 49, Suriya Wong, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.3,
+     "reviews": 740,
+     "note": "740 ratings, 500 reviews; reviews to May 2026",
+     "url": "https://www.wongnai.com/r/8476Cb"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Pork knuckle (kaki) 70-80 THB, pork leg with skin about 60 THB, rice 10 THB; a large stewed pork leg about 320 THB (Wongnai 2026; Time Out 2024).",
+   "dishes": [
+    "Khao kha moo: pork leg stewed with Chinese herbs",
+    "Kaki (pork knuckle)",
+    "Mixed offal"
+   ],
+   "praise": "Michelin 2026 describes soft, caramelised pork in a rich herbal gravy from a 1959 recipe. Time Out (Sep 2024) puts it among the best kha moo in Bangkok; a Wongnai Users' Choice 2026 winner with 740 ratings.",
+   "watchOut": "Morning only: it closes at 13:00 and the best cuts go by 11:00. Cash only.",
+   "description": "Bangkok's best known braised pork leg shop, in a lane opposite State Tower on Charoen Krung.",
+   "openText": "Daily 7:00-13:00 (Michelin 2026; Wongnai says 7:30-13:00).",
+   "days": [],
+   "bestTime": "8:00-10:30.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Order the kaki with skin, plus the sour chilli sauce.",
+    "About 7 minutes on foot from BTS Saphan Taksin."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charoen-saeng-silom"
+    },
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/8476Cb"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charoen-saeng-silom",
+    "https://www.wongnai.com/r/8476Cb",
+    "https://timeout.com/bangkok/restaurants/best-kha-moo-restaurants-in-bangkok",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Charoen+Saeng+Silom/@13.7228017,100.5168825,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c538adb537:0xb0993c65cb43bdf3!8m2!3d13.7228017!4d100.5168825!16s%2Fg%2F1tdj7g4r"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, daily 7:00-13:00, cash only). Google Maps 27 Oct 2026: 4.4, 7:00-13:00 that day. Wongnai page (4.3, 740 ratings; review 30 May 2026). Wongnai Users' Choice 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kha-moo-trok-sung",
+   "name": "Kha Moo Trok Sung (Bang Rak)",
+   "nameThai": "ขาหมูตรอกซุง บางรัก",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7194428,
+   "lng": 100.5166856,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Trok Sung Stewed Pork Leg, 106/5 Charoen Wiang Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Trok+Sung+Stewed+Pork+Leg+(Bang+Rak)/@13.7194428,100.5166856,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5c0945b7d:0xdd405ab4c70bac23!8m2!3d13.7194428!4d100.5166856!16s%2Fg%2F1tdt3kxc",
+   "address": "106, 5 Thanon Charoen Wiang, Si Lom, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.1,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.8,
+     "reviews": 116,
+     "note": "116 ratings, 96 reviews",
+     "url": "https://www.wongnai.com/r/64455tW"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pork leg on rice 75 THB, crispy pork rice 80 THB, mixed pork leg rice 90 THB, a whole leg 650 THB (Wongnai menu, 2026).",
+   "dishes": [
+    "Khao kha moo: pork leg braised in a mild, not sweet, gravy",
+    "Kaki (pig ankle) and pork intestine",
+    "Crispy pork belly"
+   ],
+   "praise": "Selling khao kha moo since about 1960; won the Shell Chuan Chim award in 1985 (Bangkok Biznews). A Wongnai Users' Choice 2026 winner. Time Out (Sep 2024) lists it among the best kha moo in Bangkok.",
+   "watchOut": "Closed Sunday. It has branches in malls; the original is this shophouse.",
+   "description": "A second family pork leg shop on Charoen Krung, with a lighter, less sweet gravy than Charoen Saeng and longer hours.",
+   "openText": "Mon-Sat 10:00-19:00, closed Sunday (Wongnai and Bangkok Biznews).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Lunch, or an afternoon pork stop after Charoen Saeng closes.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Opposite Robinson Bang Rak, about 4 minutes from BTS Saphan Taksin."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/64455tW"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/64455tW",
+    "https://www.bangkokbiznews.com/lifestyle/food/1072900",
+    "https://timeout.com/bangkok/restaurants/best-kha-moo-restaurants-in-bangkok",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Trok+Sung+Stewed+Pork+Leg+(Bang+Rak)/@13.7194428,100.5166856,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5c0945b7d:0xdd405ab4c70bac23!8m2!3d13.7194428!4d100.5166856!16s%2Fg%2F1tdt3kxc"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.1, open 9:30-18:30 that day, 106/5 Charoen Wiang Rd. Wongnai page (3.8, reviews last month). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jok-prince",
+   "name": "Jok Prince",
+   "nameThai": "โจ๊กปรินซ์ บางรัก",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "late-night",
+    "breakfast",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7208579,
+   "lng": 100.516151,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Jok Prince Bangrak, 1391 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Jok+Prince+Bangrak/@13.7208579,100.516151,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5ae4db7f9:0xa7904c168b6f6d83!8m2!3d13.7208579!4d100.516151!16s%2Fg%2F12qg0b0tr",
+   "address": "1391 ถ. เจริญกรุง Si Lom, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.8,
+     "reviews": 419,
+     "note": "419 ratings, 323 reviews (evening session)",
+     "url": "https://www.wongnai.com/r/3606XJ"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pork congee 67 THB, with century egg 94 THB, special pork and offal 80 THB, fried dough stick 10 THB (Wongnai menu, 2026).",
+   "dishes": [
+    "Charcoal-cooked rice congee with minced pork balls",
+    "Congee with pork offal and egg"
+   ],
+   "praise": "A Wongnai Users' Choice 2026 winner with over 400 ratings; the congee is cooked over charcoal.",
+   "watchOut": "A pavement stall with a few stools.",
+   "description": "A charcoal-cooked rice porridge stall on Charoen Krung, open early morning and again from afternoon to about 3:00.",
+   "openText": "Daily 6:00-13:00 and 15:00-3:00 (Google and a Wongnai reviewer, 2026).",
+   "days": [],
+   "bestTime": "Breakfast, or a late-night bowl.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Order it with century egg and a fried dough stick.",
+    "300 m from BTS Saphan Taksin."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/3606XJ"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/3606XJ",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Jok+Prince+Bangrak/@13.7208579,100.516151,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5ae4db7f9:0xa7904c168b6f6d83!8m2!3d13.7208579!4d100.516151!16s%2Fg%2F12qg0b0tr"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, open to 3:00 that day (6:00-13:00, 15:00-3:00), 1391 Charoen Krung Rd. Wongnai page (3.8, 419 ratings, reviews in the last 2 months). Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-prachak-roast-duck",
+   "name": "Prachak Roasted Duck",
+   "nameThai": "ประจักษ์เป็ดย่าง",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "budget",
+    "group-friendly",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7203757,
+   "lng": 100.5160568,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Prachak Roasted Duck, 1415 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Prachak+(Roasted+Duck)/@13.7203757,100.5160568,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5ae7f1d55:0xb3b1bf2284911ad0!8m2!3d13.7203757!4d100.5160568!16s%2Fg%2F1hc8ld1sz",
+   "address": "1415 ถ. เจริญกรุง Si Lom, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 529,
+     "note": "529 ratings, 416 reviews; review 27 Jun 2026",
+     "url": "https://www.wongnai.com/r/2496xR"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Duck rice 79 THB, red pork rice 79 THB, duck with crispy pork rice 105 THB, crispy pork 890 THB a kilo, whole roast duck 865 THB (Wongnai menu, 2026).",
+   "dishes": [
+    "Roast duck on rice",
+    "Red barbecue pork and crispy pork on rice",
+    "Duck egg noodles",
+    "Shrimp wontons"
+   ],
+   "praise": "Grab (Jun 2025) puts it first in its Charoen Krung legends and it is a Wongnai Users' Choice 2026 winner. Wongnai members recommend the crispy pork as well as the duck.",
+   "watchOut": "Basic room, can be hot at lunch.",
+   "description": "A long-running Cantonese roast shop for duck, red pork and crispy pork over rice or egg noodles.",
+   "openText": "Daily 7:00-20:30 (Wongnai, 2026; Google 8:00-20:30).",
+   "days": [],
+   "bestTime": "Lunch or early dinner.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "For 8 people, order a whole duck and a kilo of crispy pork to share."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/r/2496xR"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/r/2496xR",
+    "https://www.grab.com/th/food-blog/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87/",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Prachak+(Roasted+Duck)/@13.7203757,100.5160568,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c5ae7f1d55:0xb3b1bf2284911ad0!8m2!3d13.7203757!4d100.5160568!16s%2Fg%2F1hc8ld1sz"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.3, open to 20:30, 1415 Charoen Krung Rd. Wongnai page (3.9, 529 ratings; review 27 Jun 2026). Grab Jun 2025. Wongnai Users' Choice 2026. not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-samlor",
+   "name": "Samlor",
+   "nameThai": "สามล้อ",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7302505,
+   "lng": 100.5155559,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Samlor, 1076 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Sam+Lor/@13.7302505,100.5155559,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29949a21c764f:0x5244a59b041fbee!8m2!3d13.7302505!4d100.5155559!16s%2Fg%2F11lkjymcdt",
+   "address": "1076 ถ. เจริญกรุง Bangrak, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Fluffy Thai omelette",
+    "Catch of the day"
+   ],
+   "praise": "Michelin 2026 (Bib) praises elevated Thai dishes inspired by street food, cooked in an open kitchen; the signature is the fluffy omelette. Google 4.3.",
+   "watchOut": "Closed Tuesday. Small loft room; book for a group.",
+   "description": "A small loft restaurant on Charoen Krung from the team behind 80/20, cooking street-food dishes with better produce.",
+   "openText": "Mon and Wed-Fri 18:00-22:30; Sat-Sun 11:00-13:30 and 18:00-22:30; closed Tuesday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Dinner.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask the chef what fish came in that day."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samlor"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samlor",
+    "https://www.google.com/maps/place/Sam+Lor/@13.7302505,100.5155559,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29949a21c764f:0x5244a59b041fbee!8m2!3d13.7302505!4d100.5155559!16s%2Fg%2F11lkjymcdt"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, closed Tuesday). Google Maps 27 Oct 2026: 4.3, closed today (Tuesday), 1076 Charoen Krung Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-le-normandie",
+   "name": "Anne-Sophie Pic at Le Normandie",
+   "nameThai": null,
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "view",
+    "booking-needed"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7237108,
+   "lng": 100.5142684,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Anne-Sophie Pic at Le Normandie, Mandarin Oriental, 48 Oriental Avenue, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Anne-Sophie+Pic+At+Le+Normandie/@13.7237108,100.5142684,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992821157c7b:0xf713ba8bffa9fc4b!8m2!3d13.7237108!4d100.5142684!16s%2Fg%2F11x_dblszv",
+   "address": "48 Oriental Ave, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Two Michelin Stars, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "Three-course business lunch 4,500 THB plus service and VAT, signature berlingots 1,000 THB extra (Mandarin Oriental press release, 22 Aug 2026). Dinner tasting menus cost more.",
+   "dishes": [
+    "Anne-Sophie Pic's lobster signature",
+    "The Voyage tasting menu"
+   ],
+   "praise": "Promoted to two Michelin stars in the 2026 guide; Michelin calls the renovated river-view room elegant and understated. A Wongnai Users' Choice 2026 winner.",
+   "watchOut": "Closed Monday and Tuesday. Dress smart and ask about the dress code when you book.",
+   "description": "The historic French dining room of the Mandarin Oriental, now run by Anne-Sophie Pic, with windows over the Chao Phraya.",
+   "openText": "Wed-Sun 12:00-15:30 and 18:30-23:30 (Michelin 2026).",
+   "days": [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch is the cheaper way in.",
+   "score": 5,
+   "pick": false,
+   "tips": [
+    "Book through the hotel (+66 2 659 9000).",
+    "Take the hotel boat or the Chao Phraya Express to Oriental pier."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-normandie"
+    },
+    {
+     "label": "Mandarin Oriental",
+     "url": "https://www.mandarinoriental.com/en/bangkok/chao-phraya-river/dine/le-normandie"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-normandie",
+    "https://www.sustainablefirst.com/global-travel-news/anne-sophie-pic-at-le-normandie-introduces-a-business-lunch/",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Anne-Sophie+Pic+At+Le+Normandie/@13.7237108,100.5142684,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2992821157c7b:0xf713ba8bffa9fc4b!8m2!3d13.7237108!4d100.5142684!16s%2Fg%2F11x_dblszv"
+   ],
+   "verification": "Michelin 2-star list and page read 27 Oct 2026 (Wed-Sun). Google Maps 27 Oct 2026: 4.7, closed today (Tuesday). Wongnai Users' Choice 2026. Dress code not confirmed for 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-aksorn",
+   "name": "Aksorn",
+   "nameThai": "อักษร",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7245013,
+   "lng": 100.516239,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Aksorn, 5th floor, Central The Original Store, 1266 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Aksorn/@13.7245013,100.516239,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996bd1ab1511:0x519ff926a421da5e!8m2!3d13.7245013!4d100.516239!16s%2Fg%2F11kxcl0tv6",
+   "address": "The Original Store, Aksorn 1266 charoen krung rd 5th Floor, Central:, 1266 ถ. เจริญกรุง Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "One Michelin Star, Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "Michelin price band ฿฿฿; a set menu served family style. Check the current price when booking.",
+   "dishes": [
+    "Set menu from mid-20th-century Thai cookbooks, several dishes served together to share"
+   ],
+   "praise": "One Michelin star in 2026. Michelin says David Thompson revives mid-century Thai recipes, served family style and well balanced, with approachable spice.",
+   "watchOut": "Dinner only.",
+   "description": "Chef David Thompson's Thai restaurant on the top floor of Central's original department store on Charoen Krung, near the Oriental. Family-style sharing suits a group.",
+   "openText": "Daily 18:00-23:00 (Michelin 2026).",
+   "days": [],
+   "bestTime": "Dinner, with a drink on the terrace.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book for 8 well ahead (+66 2 116 8662)."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/aksorn"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/aksorn",
+    "https://www.google.com/maps/place/Aksorn/@13.7245013,100.516239,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2996bd1ab1511:0x519ff926a421da5e!8m2!3d13.7245013!4d100.516239!16s%2Fg%2F11kxcl0tv6"
+   ],
+   "verification": "Michelin 1-star list and page read 27 Oct 2026 (daily 18:00-23:00). Google Maps 27 Oct 2026: 4.0, opens 18:00, 1266 Charoen Krung Rd 5F.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-muslim-restaurant-charoen-krung",
+   "name": "Muslim Restaurant (Charoen Krung)",
+   "nameThai": "ร้านอาหารมุสลิม",
+   "kind": "international",
+   "tags": [
+    "halal",
+    "budget",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "bangkok",
+   "district": "Bang Rak",
+   "island": null,
+   "lat": 13.7227252,
+   "lng": 100.5164177,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Muslim Restaurant, 1354 Charoen Krung Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Muslim+Restaurant/@13.7227252,100.5164177,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c4290695d3:0x30c7323115fb6b12!8m2!3d13.7227252!4d100.5164177!16s%2Fg%2F1hc18yp27",
+   "address": "1354 1356 ถ. เจริญกรุง Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No dated menu found; curries and biryani at local prices.",
+   "dishes": [
+    "Chicken or mutton biryani",
+    "Massaman and Indian-style curries",
+    "Roti"
+   ],
+   "praise": "An old halal shop on Charoen Krung; Google rating 4.2 on 27 Oct 2026.",
+   "watchOut": "No alcohol. Closes at 17:30.",
+   "description": "A simple Thai-Muslim eatery for biryani, curries and roti, a change from pork-heavy Chinese food on the same street.",
+   "openText": "About 6:30-17:30 (Google, read on a Tuesday, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Halal, good for anyone in the group who does not eat pork."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Muslim+Restaurant/@13.7227252,100.5164177,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298c4290695d3:0x30c7323115fb6b12!8m2!3d13.7227252!4d100.5164177!16s%2Fg%2F1hc18yp27"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.2, open 6:30-17:30, 1354-1356 Charoen Krung Rd. Praise mainly from Google; not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-100-mahaseth",
+   "name": "100 Mahaseth",
+   "nameThai": "100 มหาเศรษฐ์",
+   "kind": "isaan",
+   "tags": [
+    "pork",
+    "michelin",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Si Phraya",
+   "island": null,
+   "lat": 13.7290523,
+   "lng": 100.5183387,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "100 Mahaseth, 100 Maha Set Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/100+Mahaseth/@13.7290523,100.5183387,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d0aa03e6df:0xd4abb510b6104776!8m2!3d13.7290523!4d100.5183387!16s%2Fg%2F11fy55m5ry",
+   "address": "100 Maha Set Rd, Si Phraya, Bang Rak, Bangkok 10500, Thailand",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Isaan set with som tam and crispy pork skin with jaew",
+    "Sour soup with baby pork ribs and chamuang leaves",
+    "Thai aged steak specials"
+   ],
+   "praise": "Michelin 2026 describes nose-to-tail, offal-focused Isaan food with careful balance and lists it as good for groups. Google rating 4.4.",
+   "watchOut": "Closed Monday. Some dishes are bone marrow and organs.",
+   "description": "A modern Isaan grill house that uses the whole animal, strong on pork and beef, near Si Phraya pier.",
+   "openText": "Tue-Sun 11:30-22:30, closed Monday (Michelin 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Group dinner.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Check the blackboard for aged steaks.",
+    "Book for 8."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/100-mahaseth"
+    },
+    {
+     "label": "Official site",
+     "url": "https://www.100mahaseth.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/100-mahaseth",
+    "https://www.google.com/maps/place/100+Mahaseth/@13.7290523,100.5183387,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298d0aa03e6df:0xd4abb510b6104776!8m2!3d13.7290523!4d100.5183387!16s%2Fg%2F11fy55m5ry"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, Tue-Sun 11:30-22:30, good for groups). Google Maps 27 Oct 2026: 4.4, open 11:30-22:30, 100 Maha Set Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-somsak-pu-ob",
+   "name": "Somsak Pu Ob",
+   "nameThai": "สมศักดิ์ปูอบ",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "michelin",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Khlong San",
+   "island": null,
+   "lat": 13.7254463,
+   "lng": 100.4954363,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Somsak Pu-ob Charoen Rat, Soi Charoen Rat 1, Khlong San, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Somsak+Pu-ob/@13.7254463,100.4954363,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298faae07d02d:0xea8ee29256e1161b!8m2!3d13.7254463!4d100.4954363!16s%2Fg%2F11c1v0hxxs",
+   "address": "Charoen Rat Rd, Khlong Ton Sai, Khlong San, Bangkok 10600, Thailand",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.2,
+     "reviews": 229,
+     "note": "Family branch near BTS Krung Thon Buri (Somsak Pu Ob Y), 229 ratings",
+     "url": "https://www.wongnai.com/r/202845vr"
+    },
+    {
+     "site": "LINE MAN Wongnai Users' Choice",
+     "rating": null,
+     "reviews": null,
+     "note": "Winner, Best of 2026 (announced 30 Mar 2026)",
+     "url": "https://wongnai.com/news/line-man-wongnai-users-choice-2026"
+    }
+   ],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 3,
+   "priceText": "Crab meat baked with glass noodles 360 THB, prawns with glass noodles 335 THB, large crab by weight about 860 THB (Wongnai menu of the Krung Thon Buri branch, 2026).",
+   "dishes": [
+    "Crab baked with glass noodles in a clay pot",
+    "Prawns baked with glass noodles",
+    "Steamed crab"
+   ],
+   "praise": "Michelin 2026 (Bib) says the 30-year-old street cart serves very fresh crab and prawns, and praises the glass noodles soaked in the juices. A Wongnai Users' Choice 2026 winner.",
+   "watchOut": "Closed Monday. Evenings only. A street-side setup with simple tables.",
+   "description": "A Thonburi street stall that does one thing: crab or prawns baked on glass noodles, rich with pepper and sesame.",
+   "openText": "Tue-Sun 16:00-21:30, closed Monday (Michelin 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "17:00-18:30, before crabs run out.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Grab from the old town or ICONSIAM takes about 15 minutes.",
+    "The Lat Ya Road branch (Google 4.4) is about 200 m away if the first is full."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somsak-pu-ob-charoen-rat"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somsak-pu-ob-charoen-rat",
+    "https://www.wongnai.com/r/202845vr",
+    "https://wongnai.com/news/line-man-wongnai-users-choice-2026",
+    "https://www.google.com/maps/place/Somsak+Pu-ob/@13.7254463,100.4954363,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298faae07d02d:0xea8ee29256e1161b!8m2!3d13.7254463!4d100.4954363!16s%2Fg%2F11c1v0hxxs"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, 199-205 Soi Charoen Rat 1, Tue-Sun 16:00-21:30). Google Maps 27 Oct 2026: Charoen Rat branch 4.2 open 16:00-21:30; Lat Ya branch 4.4. Prices from the Wongnai page of the Krung Thon Buri family branch.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ann-tha-din-daeng",
+   "name": "Ann Tha Din Daeng",
+   "nameThai": "แอน ท่าดินแดง",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "michelin",
+    "group-friendly",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Khlong San",
+   "island": null,
+   "lat": 13.7327986,
+   "lng": 100.5023054,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ann Tha Din Daeng, 167 Tha Din Daeng Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Ann+Tha+Din+Daeng/@13.7327986,100.5023054,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298e177092037:0x24b24a1cc85fc98f!8m2!3d13.7327986!4d100.5023054!16s%2Fg%2F11c6fcpbjx",
+   "address": "167 Tha Din Daeng Rd, Khlong San, Bangkok 10600, Thailand",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Salt and pepper stir-fried prawns",
+    "Clams with sweet chilli paste and Thai basil"
+   ],
+   "praise": "Michelin 2026 (Bib) says it has served Thai-Chinese seafood for over two decades on Tha Din Daeng, Thonburi's little Chinatown, and praises the salt and pepper prawns. Google 4.3.",
+   "watchOut": "Closed Monday and Tuesday.",
+   "description": "A local seafood restaurant in Thonburi's old Chinese market street, with simple cooking and fair prices.",
+   "openText": "Wed-Sun 10:30-20:00 (Michelin 2026).",
+   "days": [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch, then Bokkia dessert on the same street.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Tha Din Daeng Road is about 15 minutes on foot from ICONSIAM."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ann-tha-din-daeng"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ann-tha-din-daeng",
+    "https://www.google.com/maps/place/Ann+Tha+Din+Daeng/@13.7327986,100.5023054,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298e177092037:0x24b24a1cc85fc98f!8m2!3d13.7327986!4d100.5023054!16s%2Fg%2F11c6fcpbjx"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand, Wed-Sun 10:30-20:00). Google Maps 27 Oct 2026: 4.3, closed Tuesday, 167 Tha Din Daeng Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-bokkia-tha-din-daeng",
+   "name": "Bokkia Tha Din Daeng",
+   "nameThai": "โบ๊กเกี้ย ท่าดินแดง",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "michelin",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Khlong San",
+   "island": null,
+   "lat": 13.7335746,
+   "lng": 100.5025841,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bokkia Tha Din Daeng, 323 Tha Din Daeng Road, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%9A%E0%B9%8A%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%89%E0%B8%A2+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87/@13.7335746,100.5025841,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298e199a79a51:0x7da4b918dd5b42bb!8m2!3d13.7335746!4d100.5025841!16s%2Fg%2F11bw_7k1ww",
+   "address": "323 Tha Din Daeng Rd, Khlong San, Bangkok 10600, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price band: budget; no dated menu found.",
+   "dishes": [
+    "Bokkia: chilled jelly noodles with crushed ice, syrup and toppings"
+   ],
+   "praise": "Michelin 2026 (Bib) describes a family stall whose bokkia is refreshing and not too sweet, with good-quality toppings. Google 4.5.",
+   "watchOut": "Short and odd hours; closed Friday.",
+   "description": "A tiny market stall for bokkia, an old Chinese-Thai iced dessert that is hard to find elsewhere.",
+   "openText": "Mon-Thu 17:30-20:00; Sat-Sun 9:00-12:00 and 17:00-20:00; closed Friday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Early evening.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Combine with dinner at Somsak Pu Ob, about 1.2 km away."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bokkia-tha-din-daeng"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bokkia-tha-din-daeng",
+    "https://www.google.com/maps/place/%E0%B9%82%E0%B8%9A%E0%B9%8A%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%89%E0%B8%A2+%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87/@13.7335746,100.5025841,17z/data=!3m1!4b1!4m6!3m5!1s0x30e298e199a79a51:0x7da4b918dd5b42bb!8m2!3d13.7335746!4d100.5025841!16s%2Fg%2F11bw_7k1ww"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Bib Gourmand). Google Maps 27 Oct 2026: 4.5, open 15:30-19:00 that day, 323 Tha Din Daeng Rd.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-thanusingha-kudi-chin",
+   "name": "Thanusingha (Kudi Chin cakes)",
+   "nameThai": "ธนูสิงห์ ขนมฝรั่งกุฎีจีน",
+   "kind": "bakery",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Kudi Chin",
+   "island": null,
+   "lat": 13.7396949,
+   "lng": 100.4929712,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Thanusingha Bakery, Soi Kudeejeen, Thon Buri, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Thanusingha/@13.7396949,100.4929712,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299030782d949:0x1aad42ee68a16c95!8m2!3d13.7396949!4d100.4929712!16s%2Fg%2F11c3xbfmvg",
+   "address": "237 7 Soi Kudeejeen, Wat Kanlaya, Thon Buri, Bangkok 10600, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No dated price found; a box of small cakes costs a few tens of baht.",
+   "dishes": [
+    "Khanom farang kudi chin: small Portuguese-style cakes with raisins and squash"
+   ],
+   "praise": "One of the few family bakeries still baking the Portuguese-Thai cakes of the Kudi Chin community; Google rating 4.5 on 27 Oct 2026.",
+   "watchOut": "Daytime only; sells out in the afternoon.",
+   "description": "A home bakery in the old Portuguese quarter across the river from Pak Khlong Talat, making a cake you only find here.",
+   "openText": "About 10:00-17:00 (Google, read on a Tuesday, Oct 2026).",
+   "days": [],
+   "bestTime": "Late morning, with a walk past Santa Cruz Church.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Cross from Pak Khlong Talat on the Memorial Bridge or by ferry to Wat Kalaya."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/Thanusingha/"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/place/Thanusingha/@13.7396949,100.4929712,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299030782d949:0x1aad42ee68a16c95!8m2!3d13.7396949!4d100.4929712!16s%2Fg%2F11c3xbfmvg"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, open 10:00-17:00 that day, 237/7 Soi Kudeejeen. Praise mainly from Google and its history; not in the Michelin 2026 Bangkok selection (Bib, Selected and star lists read 27 Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-wang-lang-market",
+   "name": "Wang Lang Market",
+   "nameThai": "ตลาดวังหลัง",
+   "kind": "market",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "bangkok",
+   "district": "Wang Lang",
+   "island": null,
+   "lat": 13.756087,
+   "lng": 100.4862868,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Wang Lang Market, Bangkok Noi, Bangkok",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/Wang+Lang+Market/@13.756087,100.4862868,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29940434595a9:0x9920fad98b918771!8m2!3d13.756087!4d100.4862868!16s%2Fg%2F11f57gsz5j",
+   "address": "112 13 ซอย วังหลัง Siriraj, Bangkok Noi, Bangkok 10700, Thailand",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Snacks and dishes mostly 20-80 THB (no dated list found).",
+   "dishes": [
+    "Thai desserts and snacks",
+    "Noodles and curry on rice"
+   ],
+   "praise": "A busy daytime market by Siriraj Hospital and Wang Lang pier, full of students and hospital staff; Google rating 4.5 on 27 Oct 2026.",
+   "watchOut": "Crowded lanes at lunchtime; some stalls rest at weekends.",
+   "description": "A local market on the Thonburi bank for cheap snacks and Thai desserts, one ferry stop from Tha Chang near the Grand Palace.",
+   "openText": "About 9:00-18:00 (Google, Oct 2026).",
+   "days": [],
+   "bestTime": "Weekday 11:00-14:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Cross-river ferry from Tha Chang or Tha Maharaj to Wang Lang pier."
+   ],
+   "links": [
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/marketwanglang"
+    }
+   ],
+   "sources": [
+    "https://www.google.com/maps/place/Wang+Lang+Market/@13.756087,100.4862868,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29940434595a9:0x9920fad98b918771!8m2!3d13.756087!4d100.4862868!16s%2Fg%2F11f57gsz5j"
+   ],
+   "verification": "Google Maps 27 Oct 2026: 4.5, open 9:00-18:00 that day. Praise mainly from Google; no 2025-2026 written review found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kaenkrung",
+   "name": "KaenKrung",
+   "nameThai": "แก่นกรุง",
+   "kind": "isaan",
+   "tags": [
+    "pork",
+    "michelin",
+    "group-friendly"
+   ],
+   "area": "bangkok",
+   "district": "Bangkok Noi",
+   "island": null,
+   "lat": 13.7501672,
+   "lng": 100.4836642,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "KAENKRUNG, 521/11 Arun Amarin Road, Bangkok Noi",
+   "placeId": null,
+   "mapsUrl": "https://www.google.com/maps/place/%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87+KAENKRUNG/@13.7501672,100.4836642,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299e1ee2161cb:0xb3f5a4dd8f101e9!8m2!3d13.7501672!4d100.4836642!16s%2Fg%2F11h4f_mcv8",
+   "address": "521 11 ศิริราช Bangkok Noi, Bangkok 10700, Thailand",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": null,
+   "otherRatings": [],
+   "michelin": "Michelin Selected, Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Michelin price band ฿฿ (moderate); no dated menu found.",
+   "dishes": [
+    "Hao dong: grilled pork tossed with herbs and spices",
+    "Khon Kaen style Isaan salads and grills"
+   ],
+   "praise": "Michelin 2026 says the chef-owners cook contemporary Isaan food from Khon Kaen, \"perfect for those who love strong, punchy flavours\", and lists it as good for groups. Google 4.8.",
+   "watchOut": "Closed Tuesday and Wednesday. Google 4.8 is very high for its age; Michelin is the main independent source.",
+   "description": "A newer Isaan restaurant on the Thonburi side with a smoky grilled pork signature, good for a spicy group dinner.",
+   "openText": "Mon and Thu-Sun 12:00-22:00; closed Tuesday and Wednesday (Michelin 2026).",
+   "days": [
+    "Mon",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Book through LINE for a group."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kaenkrung"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kaenkrung",
+    "https://www.google.com/maps/place/%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87+KAENKRUNG/@13.7501672,100.4836642,17z/data=!3m1!4b1!4m6!3m5!1s0x30e299e1ee2161cb:0xb3f5a4dd8f101e9!8m2!3d13.7501672!4d100.4836642!16s%2Fg%2F11h4f_mcv8"
+   ],
+   "verification": "Michelin page read 27 Oct 2026 (Selected, good for groups). Google Maps 27 Oct 2026: 4.8, closed today (Tuesday), 521/11 Arun Amarin Rd.",
+   "imageCandidates": []
+  }
+ ],
+ "existingChecked": [
+  {
+   "id": "bkk-yaowarat-night-food",
+   "verdict": "kept",
+   "note": "Kept as the overview card and refreshed (Google 27 Oct 2026, Grab Apr 2025). Its best single stalls now have their own cards: Nai Ek, Ouan Pochana, T & K Seafood, Nai Mong Hoi Tod, Jek Pui, Lod Chong Singapore, Hua Seng Hong, Chop Chop Cook Shop. Note: Nai Ek and Ouan Pochana are no longer in the Michelin 2026 list, so the old card's Michelin wording should be softened."
+  },
+  {
+   "id": "bkk-thipsamai",
+   "verdict": "kept",
+   "note": "Open, Google 4.2 (about 12,700 reviews), closed Tuesday, 9:00-24:00. Not in the Michelin 2026 selection. Jay Fai, a few doors away, keeps its one star (Wed-Sat 9:00-19:30) and now has its own card."
+  },
+  {
+   "id": "bkk-talat-noi",
+   "verdict": "kept",
+   "note": "Culture card only recorded. Its food places added as items: Khao Moo Daeng Si Morakot (Soi Sukon 1), Charmgang (Charoen Krung Soi 35), Duck Noodle House (Soi Wanit 2). Hong Sieng Kong café (Google 4.4, open 10:00-20:00) is fine for a drink but not added as food."
+  },
+  {
+   "id": "bkk-pak-khlong-talat",
+   "verdict": "kept",
+   "note": "Recorded only; its food is not notable enough for a food card. Thanusingha (Kudi Chin cakes) is across the river from it, and Nang Loeng or Wang Lang are better food markets."
+  }
+ ],
+ "notIncluded": [
+  {
+   "name": "Methavalai Sorndaeng (Ratchadamnoen)",
+   "reason": "Lost its Michelin star and is not in the 2026 guide; Google 4.4. Weaker than the other Thai restaurants here."
+  },
+  {
+   "name": "Lim Lao Ngow fishball noodles (Song Sawat)",
+   "reason": "No longer in the Michelin 2026 list; evening only (16:30-21:00), Google 4.3. Left out for space."
+  },
+  {
+   "name": "Lek & Rut Seafood (Yaowarat)",
+   "reason": "Good, open to about 2:00 (Google 4.3), but kept as a tip on the T & K and Yaowarat cards to avoid two near-identical seafood cards."
+  },
+  {
+   "name": "Pa Tong Go Savoey (Yaowarat)",
+   "reason": "Google 3.8; reviews say it is mostly a tourist queue for fried dough."
+  },
+  {
+   "name": "Roti Mataba (Phra Athit Road)",
+   "reason": "Google Maps shows it as temporarily closed on 27 Oct 2026."
+  },
+  {
+   "name": "Chote Chitr (Phraeng Phuthon)",
+   "reason": "Google shows other businesses at its old address; could not confirm it still trades."
+  },
+  {
+   "name": "Elvis Suki (Soi Yotse)",
+   "reason": "The original shop was not found on Google Maps; only branches outside the region."
+  },
+  {
+   "name": "Sunee Khao Moo Daeng (Talat Phlu)",
+   "reason": "Wongnai 3.6 from 261 ratings and Google 4.0; Si Morakot is the stronger red pork rice."
+  },
+  {
+   "name": "Tanbo chicken rice (Yaowarat)",
+   "reason": "The Wongnai Users' Choice 2026 award went to its Sutthisan branch; the Yaowarat shop has a 4.8 Google rating with no independent backing."
+  },
+  {
+   "name": "Khong Prasoet crispy pork (Soi Sukon)",
+   "reason": "Google 4.4, but the only written praise found is from 2019."
+  },
+  {
+   "name": "Khao Tom Jay Suay (Phlap Phla Chai, to 3:00)",
+   "reason": "Late-night rice soup, Google 4.1; only old (2019) press found."
+  },
+  {
+   "name": "Mae Thum Padthai Kheng (Siri Phong Road)",
+   "reason": "Michelin Selected, but Google 4.9 looks high for its age, and three pad thai shops are already in."
+  },
+  {
+   "name": "Aheesah Roddee (Banglamphu)",
+   "reason": "Michelin Selected Indonesian-Thai halal shop, Google 4.4; left out for space (Muslim Restaurant covers halal)."
+  },
+  {
+   "name": "Choen (Soi Pradu, Pom Prap)",
+   "reason": "Michelin Selected wood-fire Thai counter; counter seats do not suit a group of 8."
+  },
+  {
+   "name": "Khao San Sek (Song Wat)",
+   "reason": "Michelin Selected, Google 4.4; left out for space."
+  },
+  {
+   "name": "Chakrabongse Dining (Tha Tien)",
+   "reason": "Michelin Selected river-view Thai, Google 4.7; Rongros gives the same Wat Arun view at a lower price."
+  },
+  {
+   "name": "Supanniga Eating Room (Tha Tien)",
+   "reason": "Michelin Selected, but the Google listing could not be read; Rongros and Sang Thatien chosen instead."
+  },
+  {
+   "name": "Jok's Kitchen (Charoen Krung Soi 21)",
+   "reason": "Michelin Selected (฿฿฿), but Google shows the address under another name (Jok One Table), so not confirmed."
+  },
+  {
+   "name": "80/20 (Charoen Krung Soi 26)",
+   "reason": "One Michelin star, Google 4.5; left out to keep the special dinners short."
+  },
+  {
+   "name": "Blue by Alain Ducasse (ICONSIAM)",
+   "reason": "One Michelin star, French; left out to keep the special dinners short."
+  },
+  {
+   "name": "Chef's Table and Mezzaluna (lebua, State Tower)",
+   "reason": "Two Michelin stars each; left out to keep the special dinners short."
+  },
+  {
+   "name": "Côte by Mauro Colagreco (Capella)",
+   "reason": "Two Michelin stars, but on the river in Yan Nawa, just south of this region."
+  },
+  {
+   "name": "Nai Uan Yentafo (Sao Chingcha)",
+   "reason": "Wongnai Users' Choice 2026, Google 4.2; pink yen ta fo noodles, left out for space."
+  },
+  {
+   "name": "Jay Ngor Beef Noodle (Ratchawat, Dusit)",
+   "reason": "Michelin Selected, Google 4.5; Ten Suns chosen for beef noodles."
+  },
+  {
+   "name": "Kuay Jab Nai Lek (Yaowarat Soi 11)",
+   "reason": "Good evening kuay jap, but Nai Ek and Ouan Pochana already cover the dish."
+  },
+  {
+   "name": "SookSiam (ICONSIAM)",
+   "reason": "Indoor street-food floor, Google 4.7, but no independent praise for its food found."
+  },
+  {
+   "name": "Wua Tong Pochana (Si Phraya)",
+   "reason": "Roast duck, Google 4.6 and Grab Jun 2025; left out for space next to Prachak."
+  },
+  {
+   "name": "Peng Peng rice soup (Banglamphu)",
+   "reason": "Wongnai Users' Choice 2026; left out for space."
+  },
+  {
+   "name": "Hong Sieng Kong (Talat Noi)",
+   "reason": "River café praised more for the setting than for the food."
+  }
+ ]
+}

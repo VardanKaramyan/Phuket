@@ -1,0 +1,3000 @@
+{
+ "generatedOn": "2026-10-27",
+ "region": "phuket-west",
+ "scopeNote": "Patong first (with Kalim, Tri Trang and the Patong hill road), then Kamala, Surin, Bang Tao and Cherngtalay, Layan, Nai Thon, Nai Yang, Mai Khao, inland Thalang and the Pa Khlok east coast; Phuket Town, Kathu, Karon to Chalong and anything off the island are left to the other researchers.",
+ "basics": [],
+ "items": [
+  {
+   "id": "food-banzaan-market-patong",
+   "name": "Banzaan Fresh Market (seafood and night food)",
+   "nameThai": "ตลาดสดบันซ้าน",
+   "kind": "market",
+   "tags": [
+    "seafood",
+    "budget",
+    "dessert",
+    "late-night",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "Patong (behind Jungceylon)",
+   "island": "Phuket",
+   "lat": 7.891131,
+   "lng": 98.301885,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Banzaan Fresh Market, 74/51 Nanai Road, Patong",
+   "placeId": "",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Trip.com (via Restaurant Guru)",
+     "rating": 3.9,
+     "reviews": 197,
+     "note": "the upstairs food court only",
+     "url": "https://restaurantguru.com/Food-Court-at-Banzaan-Fresh-Market-Patong"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Curries, stir-fries, pad thai and boat noodles 80-120 THB a plate; cooking fee for seafood you buy downstairs 50-100 THB (Phuket Expat Guide, Jul 2026).",
+   "dishes": [
+    "Seafood you choose downstairs (prawns, fish, squid, Phuket lobster) and have grilled or steamed",
+    "Mango sticky rice from the fruit and dessert stalls",
+    "Pad thai, curries and boat noodles in the upstairs food court"
+   ],
+   "praise": "Phuket 101 (Dec 2025) calls the pick-and-cook seafood 'fun and cheaper than ordering in a seafood restaurant'; the Phuket Expat Guide (Jul 2026) says two people eat for under 400 THB.",
+   "watchOut": "Agree the seafood weight, price and cooking fee before anything is cooked. Prices are higher than at markets outside Patong. Reviews of the upstairs food court are mixed on cleanliness.",
+   "description": "Patong's real fresh market, one street behind Jungceylon. In the morning it sells fish, meat and fruit; in the evening food carts fill the streets around it and you can have seafood cooked on the spot.",
+   "openText": "Daily 06:00-24:00 (Google Maps, Oct 2026). Morning for the fresh market; the food carts outside are busiest from about 17:00.",
+   "days": [],
+   "bestTime": "17:30-20:00 for the night food carts, or before 10:00 to see the market.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Buy seafood on the ground floor, then take it upstairs or to the next-door kitchens to be cooked.",
+    "Mango sticky rice here is the cheapest in Patong, sold in a box."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/banzaan-market/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/banzaan-market/",
+    "https://phuketexpatguide.com/blog/food-restaurants-patong-phuket/",
+    "https://www.phuket101.net/mango-sticky-rice-in-phuket/",
+    "https://restaurantguru.com/Food-Court-at-Banzaan-Fresh-Market-Patong",
+    "https://www.google.com/maps/place/Banzaan+Fresh+Market/@7.8911311,98.3018855,17z/data=!3m1!4b1!4m6!3m5!1s0x30503aa4367683ff:0xecb83eaace4d02a5!8m2!3d7.8911311!4d98.3018855!16s%2Fg%2F1hdzkxrcs"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.3, open, 06:00-24:00, pin on Nanai Road). Phuket 101 page updated Dec 2025; Phuket Expat Guide Jul 2026 with prices; Restaurant Guru shows the food court at 3.9 on Trip.com.",
+   "imageCandidates": []
+  },
+  {
+   "id": "malin-plaza-night-market",
+   "name": "Malin Plaza night market",
+   "nameThai": "มาลิน พลาซ่า",
+   "kind": "market",
+   "tags": [
+    "seafood",
+    "budget",
+    "dessert",
+    "group-friendly",
+    "halal"
+   ],
+   "area": "patong",
+   "district": "South Patong (Prachanukhro Road)",
+   "island": "Phuket",
+   "lat": 7.882641,
+   "lng": 98.293181,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Malin Plaza, Prachanukhro Rd, Patong, Phuket",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pad thai 80 THB, pad kra pao 100-120 THB; seafood by weight (guide data, re-checked against Phuket 101, Oct 2026).",
+   "dishes": [
+    "Grilled skewers and seafood from the ice, cooked to order",
+    "Pad thai and fried rice",
+    "Mango sticky rice and roti pancakes"
+   ],
+   "praise": "Phuket 101's market guide (Oct 2026) names it the main street-food market of Patong, and its OTOP market review (Oct 2026) sends readers here for 'a larger street food scene'.",
+   "watchOut": "Touristy and hot, no air-con. Ask the total price before seafood is cooked. A few stalls charge more than others.",
+   "description": "A big covered night market at the south end of Patong. The front half is food stalls with shared tables, the back half sells clothes and souvenirs. Cheap for Patong and easy for a group of 8.",
+   "openText": "Daily 11:00-23:00 (Google Maps, Oct 2026). Phuket 101 gives 14:00-24:00. Quiet until late afternoon.",
+   "days": [],
+   "bestTime": "18:00-19:00, when stalls are ready and tables are free. Busiest 20:00-22:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Several stalls show a halal sign: check each stall.",
+    "Look at a few food stalls before you order; prices differ."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/malin-plaza-night-market/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/malin-plaza-night-market/",
+    "https://www.phuket101.net/phuket-night-markets/",
+    "https://www.phuket101.net/otop-night-market-otop-shopping-paradise-patong-beach/",
+    "https://www.google.com/maps/place/Malin+Plaza/@7.8826409,98.2931814,17z/data=!3m1!4b1!4m6!3m5!1s0x30503ab171165609:0xa69d5fe90256b9b7!8m2!3d7.8826409!4d98.2931814!16s%2Fg%2F11b742fvmz"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open now, 11:00-23:00, pin matches the guide pin). Phuket 101 night-market page updated 2 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-briley-chicken-rice-patong",
+   "name": "Briley Chicken and Rice",
+   "nameThai": "ข้าวมันไก่ไบรเล่ย์ นาใน ป่าตอง",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "budget",
+    "late-night",
+    "local-favourite",
+    "breakfast"
+   ],
+   "area": "patong",
+   "district": "Patong (Nanai Road)",
+   "island": "Phuket",
+   "lat": 7.894692,
+   "lng": 98.305257,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Briley Chicken and Rice, 17 Nanai Road, Patong",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 1309,
+   "reviewsSource": "Google count shown on Restaurant Guru, page updated Oct 2026",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Stewed pork leg on rice 60 THB, red pork on rice 60 THB, crispy pork on rice 60 THB, small beer 65 THB (Phuket 101, Sep 2024). Restaurant Guru puts it at under 200 THB a person.",
+   "dishes": [
+    "Khao man gai: Hainanese boiled chicken with rice and ginger sauce",
+    "Khao kha moo: stewed pork leg on rice",
+    "Khao moo daeng and moo krob: red pork and crispy pork belly on rice"
+   ],
+   "praise": "Phuket 101 calls it one of the two famous chicken rice restaurants in Phuket, open for more than 20 years, with 'moist and tender' chicken and a good bone soup; reviewers on Trip.com and Restaurant Guru call it good value.",
+   "watchOut": "Cash only. Popular dishes can run out in the late afternoon. The room is big and hot; sit near the entrance.",
+   "description": "A long-running chicken rice shop that also does the three classic Thai-Chinese pork plates. Cheap, fast and open around the clock, a few minutes from the Patong villa.",
+   "openText": "Open 24 hours (Google Maps and Restaurant Guru, Oct 2026). The 2024 Phuket 101 page gave 06:00-20:00 at an older Rat-U-Thit Road address.",
+   "days": [],
+   "bestTime": "Breakfast or lunch for the full choice; it also works after a night out.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Order a mixed plate of red pork and crispy pork with an extra plate of chicken to share.",
+    "Google Maps now shows the shop at 17 Nanai Road; older guides give 143/6 Rat-U-Thit Road."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/briley-chicken-rice/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/briley-chicken-rice/",
+    "https://restaurantguru.com/ข้าวมันไก่-Briley-Patong",
+    "https://sa.trip.com/travel-guide/phuket-364-restaurant/briley-chicken-and-rice-19646877",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://www.google.com/maps/place/Briley+Chicken+and+Rice/@7.8946925,98.3052574,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a985da43c21:0x19a8e2e84c747b66!8m2!3d7.8946925!4d98.3052574!16s%2Fg%2F11b769bpzm"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open 24 hours, 17 Nanai Rd). A search for the old 143/6 Rat-U-Thit address finds no restaurant listing, so the Nanai Road shop is the current one. Phuket 101 page (Sep 2024) and its Oct 2026 Patong list; Restaurant Guru (Google 4.4 from 1,309).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-paak-naam-pho-pork-leg-patong",
+   "name": "Paak Naam Pho Kamoo Rice (pork leg rice)",
+   "nameThai": "ข้าวขาหมู ปากน้ำโพ",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "budget",
+    "late-night",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "Patong (Sainamyen Road)",
+   "island": "Phuket",
+   "lat": 7.896411,
+   "lng": 98.303062,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Paak Naam Pho Kamoo Rice, 64/2 Sainamyen Road, Patong",
+   "placeId": "ChIJ_0dkwoo7UDAR3edR3hnAfS4",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No menu or prices online (checked Wongnai and Google, Oct 2026). A one-plate shophouse.",
+   "dishes": [
+    "Khao kha moo: pork leg braised in five-spice soy, on rice with pickled greens and a boiled egg"
+   ],
+   "praise": "Google Maps rates it 4.7 (Oct 2026). We found no independent review: Wongnai lists the shop but has no reviews yet.",
+   "watchOut": "Praise is only on Google so far. A simple shophouse with no English menu: point at the pork leg.",
+   "description": "A small pork leg rice shop on Sainamyen Road, a street of local shophouses near the Nanai Road side of Patong. One dish, done all day until midnight.",
+   "openText": "11:00-24:00 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "A quick lunch, or a late plate before 24:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Ask for extra crispy skin (moo krob) or a side of pork blood soup if they have it."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.wongnai.com/restaurants/3863284sN-ข้าวขาหมูปากน้ำโพ-ไสน้ำเย็น",
+    "https://www.google.com/maps/place/Paak+Naam+Pho+Kamoo+Rice/data=!4m7!3m6!1s0x30503b8ac26447ff:0x2e7dc019de51e7dd!8m2!3d7.8964113!4d98.3030618!16s%2Fg%2F11lg7yw31r!19sChIJ_0dkwoo7UDAR3edR3hnAfS4"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open now, 11:00-24:00, pin on Sainamyen Rd). Wongnai listing exists (0 reviews). Google only: no independent praise found.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kaab-gluay-patong",
+   "name": "Kaab Gluay",
+   "nameThai": "ร้านอาหาร กาบกล้วย",
+   "kind": "southern-thai",
+   "tags": [
+    "pork",
+    "seafood",
+    "group-friendly",
+    "local-favourite",
+    "late-night"
+   ],
+   "area": "patong",
+   "district": "North Patong (Phrabaramee Road)",
+   "island": "Phuket",
+   "lat": 7.902989,
+   "lng": 98.308316,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kaab Gluay, 58/3 Phrabaramee Road, Patong",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 2103,
+   "reviewsSource": "Google count shown on Restaurant Guru, updated 22 Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 85,
+     "note": "#22 of 3,591 Thai restaurants in Phuket on Wongnai",
+     "url": "https://www.wongnai.com/restaurants/19322Pt-กาบกล้วย"
+    },
+    {
+     "site": "Trip.com (via Restaurant Guru)",
+     "rating": 4.2,
+     "reviews": 374,
+     "note": "",
+     "url": "https://restaurantguru.com/Kaab-Gluay-Patong"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Most dishes 100-120 THB, seafood by 100 g (Phuket 101, Sep 2024); 200-400 THB a person (Restaurant Guru, Oct 2026).",
+   "dishes": [
+    "Kaeng prik kadook moo: very spicy Southern Thai pork rib curry",
+    "Crab cakes",
+    "Tom yum with prawns",
+    "Seafood by weight"
+   ],
+   "praise": "Phuket 101 calls it one of the few real local Thai restaurants in Patong, busy every day, with many Phuket residents and Thai groups, which is rare in Patong; its Oct 2026 Patong guide sends readers here for 'Thai food without the tourist markup'.",
+   "watchOut": "Busy at dinner, so tables turn fast. Southern dishes are very hot: say how spicy you want them.",
+   "description": "A large open-air Thai restaurant on the road into north Patong, where locals and returning visitors eat. The long menu covers Thai classics, Southern curries and seafood, at local prices.",
+   "openText": "Daily 11:00-23:30 (Google Maps and Restaurant Guru, Oct 2026). Older pages say to 02:00.",
+   "days": [],
+   "bestTime": "Dinner from 18:30; a late dinner after 22:00 is easy too.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Good for 8: big tables, a long menu with English descriptions, and fast service.",
+    "Try one Southern curry for the table even if most of the group eats mild."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/kaab-gluay-restaurant/"
+    },
+    {
+     "label": "Facebook",
+     "url": "https://www.facebook.com/kaabgluaypatong"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/kaab-gluay-restaurant/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://restaurantguru.com/Kaab-Gluay-Patong",
+    "https://www.wongnai.com/restaurants/19322Pt-กาบกล้วย",
+    "https://www.google.com/maps/place/Kaab+Gluay/@7.9029887,98.3083158,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a995dae8e59:0x5b63ce8956c5dfe8!8m2!3d7.9029887!4d98.3083158!16s%2Fg%2F1tdhwvqd"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, 11:00-23:30). Phuket 101 page (Sep 2024) and Patong guide (Oct 2026); Restaurant Guru (Google 4.5 from 2,103, Oct 2026); Wongnai 3.9 from 85 Thai reviews.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-no9-restaurant-patong",
+   "name": "No.9 Restaurant",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "budget",
+    "group-friendly",
+    "dessert"
+   ],
+   "area": "patong",
+   "district": "North Patong (Phrabaramee Road)",
+   "island": "Phuket",
+   "lat": 7.905803,
+   "lng": 98.29818,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "No.9 Restaurant, 209 Phrabaramee Road, Patong",
+   "placeId": "ChIJpdXucJo6UDARvVANXVTMG0Q",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Google (No.9 2nd Restaurant branch, 143 Phrabaramee Road)",
+     "rating": 4.5,
+     "reviews": null,
+     "note": "second branch 450 m away",
+     "url": "https://restaurantguru.com/No-9-2Nd-Restaurant-Patong"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Som tam 95 THB, noodle soup 75 THB, massaman curry 150 THB, green curry 170 THB, Hokkien yellow noodles 135 THB, mango sticky rice 120 THB (Phuket 101, Sep 2024).",
+   "dishes": [
+    "Hokkien yellow noodles",
+    "Massaman and green curries",
+    "Mango sticky rice",
+    "A few European plates such as goulash"
+   ],
+   "praise": "Phuket 101 calls it a 'good surprise' given how hard good Thai food is to find in Patong, and keeps it in its Oct 2026 Patong guide for som tam, curries and noodle soups.",
+   "watchOut": "Plain room and food is cooked a little mild for visitors: ask for Thai spicy.",
+   "description": "A clean, simple Thai restaurant away from the busy streets in north Patong, with low prices and patient staff. A safe everyday lunch or dinner.",
+   "openText": "11:00-22:00 (Google Maps, Oct 2026). The No.9 2nd branch is open 11:30-22:30.",
+   "days": [],
+   "bestTime": "Lunch or an early dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "If it is full, the second branch (No.9 2nd Restaurant, 143 Phrabaramee Road) has a similar Thai menu and a 4.5 on Google."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/no-9-restaurant-in-patong-beach-phuket/"
+    },
+    {
+     "label": "Website",
+     "url": "https://no9restaurant.shop/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/no-9-restaurant-in-patong-beach-phuket/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://restaurantguru.com/No-9-2Nd-Restaurant-Patong",
+    "https://www.google.com/maps/place/No.9+Restaurant/data=!4m7!3m6!1s0x30503a9a70eed5a5:0x441bcc545d0d50bd!8m2!3d7.905803!4d98.2981798!16s%2Fg%2F1q5bkpb1n!19sChIJpdXucJo6UDARvVANXVTMG0Q"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.2, open now, 11:00-22:00, 209 Phrabaramee Rd); No.9 2nd read the same day (4.5, 143 Phrabaramee Rd). Phuket 101 review (Sep 2024) and Oct 2026 Patong list.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-naughty-nuris-patong",
+   "name": "Naughty Nuri's Phuket",
+   "nameThai": "",
+   "kind": "pork",
+   "tags": [
+    "pork",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "patong",
+   "district": "Patong (Rat-U-Thit Road)",
+   "island": "Phuket",
+   "lat": 7.898122,
+   "lng": 98.299678,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Naughty Nuri's Phuket, 122 Rat-U-Thit 200 Pee Road, Patong",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.7,
+     "reviews": 26,
+     "note": "Phuket listing",
+     "url": "https://www.wongnai.com/restaurants/nnthailand"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Nuri's signature ribs 450 THB, babi guling (roast suckling pig) 1,600 THB half or 3,000 THB whole, pork satay 180 THB, draught beer 120 THB (Phuket 101, Aug 2026).",
+   "dishes": [
+    "Signature BBQ pork spare ribs",
+    "Babi guling: Balinese roast suckling pig, half or whole",
+    "Wah Tusuk Babi pork satay"
+   ],
+   "praise": "Phuket 101 (Aug 2026) found the ribs 'better than expected' and plans to go back; The Phuket News ran a feature on Phuket 'falling in love' with its Balinese-style pork ribs.",
+   "watchOut": "Desserts are weaker than the meat (Phuket 101). Staff sing and dance at some tables. Pre-order the whole suckling pig.",
+   "description": "The Phuket branch of the Bali rib house, in a big garden restaurant on Rat-U-Thit Road. For a pork-loving group of 8 this is the one place in Patong with a whole roast suckling pig.",
+   "openText": "Daily 12:00-24:00 (Google Maps and Phuket 101, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner around 19:00; book a table for 8.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Call 076 340 308 a day ahead to order the whole babi guling for the group.",
+    "There is a second branch on Chao Fah Road in Phuket Town; this listing is the Patong one."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/naughty-nuris-phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/naughty-nuris-phuket/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://www.thephuketnews.com/phuket-is-falling-in-love-with-naughty-nuri-succulent-balinese-style-pork-ribs-65634.php",
+    "https://www.wongnai.com/restaurants/nnthailand",
+    "https://www.google.com/maps/place/Naughty+Nuri%E2%80%99s+Phuket/@7.8981221,98.299678,17z/data=!3m1!4b1!4m6!3m5!1s0x30503aa29c8dda43:0x95fd79e79e01cae8!8m2!3d7.8981221!4d98.299678!16s%2Fg%2F11g68ytjq1"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 12:00-24:00, 122 Rat-U-Thit Rd). Phuket 101 review updated 27 Aug 2026 with prices; Phuket News feature (older); Wongnai 4.7 from 26.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kalim-rim-lay",
+   "name": "Kalim Rim Lay (halal seafood by the sea)",
+   "nameThai": "ร้านอาหารกะหลิมริมเล",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "halal",
+    "beachfront",
+    "budget",
+    "local-favourite",
+    "view"
+   ],
+   "area": "patong",
+   "district": "Kalim",
+   "island": "Phuket",
+   "lat": 7.916053,
+   "lng": 98.291232,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kalim Rimlay Restaurant, 324 Phrabaramee Road, Kalim, Patong",
+   "placeId": "",
+   "rating": 4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 3.9,
+     "reviews": 28,
+     "note": "",
+     "url": "https://www.wongnai.com/restaurants/111251qU-กะหลิมริมเล"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No menu prices online; Phuket 101 (Oct 2024) rates it cheap and Wongnai lists it at ฿฿.",
+   "dishes": [
+    "Deep-fried whole fish",
+    "Grilled squid with seafood sauce",
+    "Larb pet (spicy duck salad)",
+    "Som tam and grilled chicken"
+   ],
+   "praise": "Phuket 101 calls it 'good honest Thai food and seafood at a good price', with mostly local customers, and its Oct 2026 Patong guide names it a long-standing favourite for local prices.",
+   "watchOut": "Halal: no pork and no alcohol. Basic bamboo huts. Closes early (20:00).",
+   "description": "Bamboo huts over the rocks at Kalim, just north of Patong, serving Thai and Muslim-Thai seafood at local prices. Come at high tide before sunset.",
+   "openText": "10:00-20:00 (Google Maps, Oct 2026); Phuket 101 says 09:00-20:30.",
+   "days": [],
+   "bestTime": "17:00-19:00, for the sunset over Patong Bay.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A good choice when one of the group eats halal."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/rim-lay-restaurant/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/rim-lay-restaurant/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://www.phuket101.net/seaside-local-restaurants-in-phuket",
+    "https://www.wongnai.com/listings/restaurant-patong-phuket",
+    "https://www.google.com/maps/place/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B0%E0%B8%AB%E0%B8%A5%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B9%80%E0%B8%A5+Kalim+Rimlay+Restaurant+(Halal+Food+)/@7.9160533,98.2912323,17z/data=!3m1!4b1!4m6!3m5!1s0x30503b797bfcb331:0xb0b01a1410f43569!8m2!3d7.9160533!4d98.2912323!16s%2Fg%2F11fhz5v7j7"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.0, open now, 10:00-20:00, pin at Kalim). Phuket 101 page (Oct 2024) and Oct 2026 Patong guide; Wongnai 3.9 from 28.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-acqua-kalim",
+   "name": "Acqua",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed",
+    "seafood"
+   ],
+   "area": "patong",
+   "district": "Kalim (Phrabaramee Road)",
+   "island": "Phuket",
+   "lat": 7.916563,
+   "lng": 98.291086,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Acqua Restaurant, 324/15 Phrabaramee Road, Kalim, Patong",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 4,
+   "priceText": "Appetisers about 600-1,200 THB each (Phuket 101, Nov 2024); a tasting menu is offered. Michelin price level ฿฿฿฿.",
+   "dishes": [
+    "Tortelli Il Mare: burrata tortelli in squid ink with Sardinian sea urchin",
+    "Squid tagliatelle",
+    "Wood-fired pizza and home-made pasta"
+   ],
+   "praise": "Michelin's inspector (2026 guide) praises chef Alessandro Frau's Sardinian cooking and the wine collection; Phuket 101 says 'you won't regret the evening if excellent food matters to you'.",
+   "watchOut": "Expensive. It sits by the road, so there is no sea view (Phuket 101). Starters are stronger than mains, says Phuket 101.",
+   "description": "Phuket's best-known Italian fine-dining room, run by Sardinian chef Alessandro Frau, on the Kalim road just north of Patong.",
+   "openText": "Daily 17:30-23:00 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner at 19:30; book in high season.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book by phone (+66 76 618 127) and ask for a table for 8 in advance."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/acqua"
+    },
+    {
+     "label": "Website",
+     "url": "https://acquarestaurantphuket.com"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/acqua",
+    "https://www.phuket101.net/acqua-restaurant-phuket/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://www.google.com/maps/place/Acqua+Restaurant/@7.9165631,98.2910857,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a8bb9a9853b:0xa94f8814af909175!8m2!3d7.9165631!4d98.2910857!16s%2Fg%2F1td8p421"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, 17:30-23:00, pin at 324/15 Phrabaramee Rd). Michelin page (2026 list, no Bib or star icon). Phuket 101 review (Nov 2024).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-larome-by-the-sea-kalim",
+   "name": "L'Arôme by the Sea",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "view",
+    "booking-needed",
+    "seafood"
+   ],
+   "area": "patong",
+   "district": "Kalim (cliff above Kalim Beach)",
+   "island": "Phuket",
+   "lat": 7.915132,
+   "lng": 98.292488,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "L'Arome by the Sea, 247/5 Phrabaramee Road, Patong",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.9,
+     "reviews": 10,
+     "note": "",
+     "url": "https://www.wongnai.com/restaurants/926669HN-l-arôme-by-the-sea"
+    }
+   ],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 4,
+   "priceText": "Seafood tasting menu of about 10 courses; prices are not published online. Michelin price level ฿฿฿฿.",
+   "dishes": [
+    "Seafood-led French tasting menu with Asian touches, fermentation and grilling",
+    "Vegetarian tasting menu"
+   ],
+   "praise": "Michelin's inspector (2026) describes a seafood tasting menu 'rooted in modern French cuisine' after cocktails on the roof; Phuket 101 (Aug 2026) calls the view 'one of the most spectacular sea views in Phuket'.",
+   "watchOut": "One of the most expensive dinners on this coast. Phuket 101 lists it as closed Monday in one guide and daily in another: check when you book.",
+   "description": "French tasting-menu restaurant on the cliff above Kalim Beach, with a rooftop sunset bar. The special-occasion dinner of the Patong week.",
+   "openText": "Daily 16:00-23:00 (Michelin and Google Maps, Oct 2026). Sunset Deck bar from 16:00.",
+   "days": [],
+   "bestTime": "Drinks on the Sunset Deck at 18:00, dinner after sunset.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book online at en.laromegroup.com/laromebythesea and say you are 8."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/l-arome-by-the-sea"
+    },
+    {
+     "label": "Website",
+     "url": "https://en.laromegroup.com/laromebythesea"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/l-arome-by-the-sea",
+    "https://www.phuket101.net/larome-by-the-sea-restaurant/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://www.google.com/maps/place/L'Ar%C3%B4me+by+the+sea/@7.9151324,98.2924876,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bdcbf313181:0xf2c8e1443e465b2e!8m2!3d7.9151324!4d98.2924876!16s%2Fg%2F11n139t5_n"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 16:00-23:00, pin at 247/5 Phrabaramee Rd). Michelin page (2026 list); Phuket 101 page updated 26 Aug 2026; Wongnai 4.9 from 10.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ta-khai-rosewood",
+   "name": "Ta Khai (Rosewood Phuket)",
+   "nameThai": "",
+   "kind": "southern-thai",
+   "tags": [
+    "michelin",
+    "seafood",
+    "view",
+    "beachfront",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "patong",
+   "district": "Emerald Bay, south of Patong (towards Tri Trang)",
+   "island": "Phuket",
+   "lat": 7.885949,
+   "lng": 98.271695,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ta Khai, Rosewood Phuket, 88/28 Muen-Ngern Road, Patong",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 3,
+   "priceText": "No menu prices online; Phuket 101 (Aug 2026) rates it 'pricey' but says the bill 'felt justified'. Michelin price level ฿฿฿.",
+   "dishes": [
+    "Whole fish from local boats, steamed or grilled",
+    "Southern Thai and Phuket curries for sharing"
+   ],
+   "praise": "Michelin's inspector (2026) says the sharing menu of central, Southern and Phuket dishes 'suits groups'; Phuket 101 (Aug 2026, paid visit) calls it a place to keep for a special occasion.",
+   "watchOut": "Resort prices. Hours can change with the weather because seating is in open salas by the sea.",
+   "description": "Rosewood's Southern Thai restaurant in wooden salas over the beach at Emerald Bay, a few minutes south of Patong. Seafood comes from local fishermen and is served family style.",
+   "openText": "Daily 18:00-22:00 (Michelin, Rosewood site and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Book for 18:00 to catch the last light.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Book a sala for 8 on SevenRooms or by phone (+66 76 356 888). Dress code is casual."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/ta-khai"
+    },
+    {
+     "label": "Rosewood",
+     "url": "https://www.rosewoodhotels.com/en/phuket/dining/ta-khai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/ta-khai",
+    "https://www.phuket101.net/ta-khai-restaurant-phuket/",
+    "https://www.rosewoodhotels.com/en/phuket/dining/ta-khai",
+    "https://www.google.com/maps/place/Ta+Khai/@7.8859495,98.2716953,17z/data=!3m1!4b1!4m6!3m5!1s0x30503ad0c32efead:0xdf3c77f3f707754d!8m2!3d7.8859495!4d98.2716953!16s%2Fg%2F11gfjtn410"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, 18:00-22:00, pin at Rosewood). Michelin page (2026 list); Phuket 101 review updated 27 Aug 2026; Rosewood dining page.",
+   "imageCandidates": []
+  },
+  {
+   "id": "the-kitchen-patong",
+   "name": "The Kitchen Patong (late food by Bangla)",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "late-night",
+    "group-friendly"
+   ],
+   "area": "patong",
+   "district": "Patong (Bangla Road, inland end)",
+   "island": "Phuket",
+   "lat": 7.893113,
+   "lng": 98.298515,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Kitchen Patong, 167 Rat-U-Thit 200 Pee Road, Patong",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google, as shown on Restaurant Guru, Oct 2026 (our own Google Maps read opened on the hours panel and showed no rating)",
+   "reviews": 2169,
+   "reviewsSource": "Google count shown on Restaurant Guru, Oct 2026",
+   "otherRatings": [
+    {
+     "site": "Trip.com (via Restaurant Guru)",
+     "rating": 3.8,
+     "reviews": 763,
+     "note": "",
+     "url": "https://restaurantguru.com/The-Kitchen-Patong"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices are not published online; Phuket 101 rates it $$ (affordable) (Oct 2026).",
+   "dishes": [
+    "Thai rice and noodle dishes",
+    "Burgers, pizza and grilled meats up to a Tomahawk steak"
+   ],
+   "praise": "Phuket 101's Oct 2026 Patong guide says the Thai dishes are 'decent, especially late at night', with a large menu.",
+   "watchOut": "Not a food destination by itself; it is in the list for the hours. Walk-in only.",
+   "description": "A busy restaurant opposite the inland end of Bangla Road that keeps cooking until 03:00, when most kitchens in Patong are closed.",
+   "openText": "Daily 11:30-03:00 (Google Maps, Oct 2026). Walk-in only.",
+   "days": [],
+   "bestTime": "After 23:00, after a bar or club.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Other late food nearby: Bangla Night Market food court (18:00-02:00, Google Maps) and Briley chicken and pork rice on Nanai Road (24 hours)."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.kitchen-thailand.net/"
+    }
+   ],
+   "sources": [
+    "https://www.kitchen-thailand.net/",
+    "https://www.phuket101.net/the-kitchen-patong/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://restaurantguru.com/The-Kitchen-Patong",
+    "https://www.google.com/maps/place/The+Kitchen+Patong/@7.8931128,98.2985146,17z/data=!4m7!3m6!1s0x30503aa357dc9267:0x29e42e572102b6f6!8m2!3d7.8931128!4d98.2985146!10e2!16s%2Fg%2F11bvt6fgcf"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (hours 11:30-03:00, pin unchanged; rating not shown in our read). Restaurant Guru Oct 2026 (Google 4.5 from 2,169; Trip.com 3.8 from 763). Phuket 101 Oct 2026 Patong guide.",
+   "imageCandidates": []
+  },
+  {
+   "id": "pensook-view-cafe",
+   "name": "Pensook View Cafe (Thai food with a Patong Bay view)",
+   "nameThai": "",
+   "kind": "southern-thai",
+   "tags": [
+    "view",
+    "pork",
+    "seafood",
+    "group-friendly",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "Patong Hill (Pun Tao Kong Shrine)",
+   "island": "Phuket",
+   "lat": 7.904354,
+   "lng": 98.320557,
+   "coordSource": "Google Maps pin, read 27 Oct 2026 (same pin as the guide: on the side road opposite Pun Tao Kong Shrine)",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Pensook View Cafe, Wichitsongkram Road, Kathu, Phuket",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Local restaurant prices; no menu with prices online (Oct 2026).",
+   "dishes": [
+    "Gaeng som: sour orange curry with prawns and acacia omelette",
+    "Squid stir-fried in its black ink",
+    "Moo tod bai makrut: fried pork with crisp kaffir lime leaves (not spicy)",
+    "Nam prik goong siap: dried prawn chilli dip"
+   ],
+   "praise": "Phuket 101 (Sep 2026) calls it 'real southern Thai cooking instead of a tourist menu' with the whole bay below.",
+   "watchOut": "Food can be very hot: say how spicy for each dish. Closed Wednesdays per Phuket 101; Google shows every day, so call 087 884 1524 first.",
+   "description": "Terraces cut into Patong Hill with Southern Thai food and the whole of Patong Bay below. Room for a group of 8. Best at sunset.",
+   "openText": "11:00-22:00, closed Wednesday (Phuket 101, Sep 2026). Google Maps shows open every day (Oct 2026).",
+   "days": [
+    "Mon",
+    "Tue",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Arrive an hour before sunset (about 18:30 in January) and stay for the lights.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Look for Pun Tao Kong Shrine and take the side road opposite it.",
+    "When you leave, turn left downhill and make a U-turn; do not cross the main road."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/pensook-view-cafe/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/pensook-view-cafe/",
+    "https://www.facebook.com/p/Pensook-View-Cafe-61553505127602/",
+    "https://www.google.com/maps/place/Pensook+View+Cafe/@7.9043537,98.3205573,17z/data=!3m1!4b1!4m6!3m5!1s0x305031ee4ca15f2f:0x2de4785d2fd82cc3!8m2!3d7.9043537!4d98.3205573!16s%2Fg%2F11y1w47z2d"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open, closes 22:00, pin unchanged). Phuket 101 page updated 20 Sep 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-maimanee-mango-sticky-rice-patong",
+   "name": "Maimanee mango sticky rice",
+   "nameThai": "",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget",
+    "late-night"
+   ],
+   "area": "patong",
+   "district": "Patong (beach road, Thaweewong Road)",
+   "island": "Phuket",
+   "lat": 7.892227,
+   "lng": 98.294363,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Maimanee mango sticky rice with coconut milk, 124/11 Thaweewong Road, Patong",
+   "placeId": "ChIJP2hTJtM7UDAR0Ve7VPZ6Q2U",
+   "rating": 5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Mango sticky rice: mango cut to order, coconut milk pressed on the spot"
+   ],
+   "praise": "Phuket 101's mango sticky rice guide (Jul 2026) says the mango is cut to order and the coconut milk pressed fresh, and that regulars call it 'the best in Phuket'.",
+   "watchOut": "A tiny stall-style shop that only opens in the evening. Good mangoes are in season from about March; in January the shop still sells it but mango quality varies.",
+   "description": "A tiny evening shop on the Patong beach road that makes only mango sticky rice. A short walk from Bangla Road for dessert after dinner.",
+   "openText": "18:00-23:59 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "After dinner, 20:00-23:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Other Patong options from the same guide: Yim Mango on the beach road, and the mango sticky rice eatery inside Rosthip restaurant on Rat-U-Thit Road (12:00-24:00, Google 4.2)."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101 mango guide",
+     "url": "https://www.phuket101.net/mango-sticky-rice-in-phuket/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/mango-sticky-rice-in-phuket/",
+    "https://www.google.com/maps/place/Maimanee+mango+sticky+rice+with+coconut+milk/data=!4m7!3m6!1s0x30503bd32653683f:0x65437af654bb57d1!8m2!3d7.8922272!4d98.2943627!16s%2Fg%2F11rvlry97n!19sChIJP2hTJtM7UDAR0Ve7VPZ6Q2U"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (5.0, 18:00-23:59, pin on Thaweewong Rd; review count not visible, so the 5.0 may rest on few reviews). Phuket 101 mango sticky rice guide updated 22 Jul 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kanomwan-baan-mor-patong",
+   "name": "Kanomwan Baan Mor (Thai desserts)",
+   "nameThai": "ร้านขนมหวาน บ้านมอญ",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "East Patong (Phisit Karani Road)",
+   "island": "Phuket",
+   "lat": 7.900145,
+   "lng": 98.310353,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "medium",
+   "gmapsQuery": "Kanomwan Baan Mor, 31/7 Phisit Karani Road, Patong",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No prices online (Oct 2026).",
+   "dishes": [
+    "Thai desserts (khanom wan); what is in the trays changes from day to day"
+   ],
+   "praise": "Google Maps 4.5 (Oct 2026). We found no independent review in English or on Wongnai.",
+   "watchOut": "Google only, and Google shows no opening hours: go in the daytime and expect a simple shop with Thai labels.",
+   "description": "A small Thai dessert shop on Phisit Karani Road, the local side of Patong east of Nanai Road, away from the tourist streets.",
+   "openText": "Hours not listed on Google Maps or Wongnai (Oct 2026).",
+   "days": [],
+   "bestTime": "Afternoon.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Point at what is in the trays; most Thai desserts here cost little."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Kanomwan+Baan+Mor/@7.9001453,98.310353,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bbe79776195:0xbcf1d230a6d71735!8m2!3d7.9001453!4d98.310353!16s%2Fg%2F11h0093v1_"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, Thai dessert shop, pin on Phisit Karani Rd; no hours shown). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-mae-manee-moo-kata-patong",
+   "name": "Mae Manee Moo Kata (Thai BBQ)",
+   "nameThai": "แม่มณีหมูกระทะ",
+   "kind": "grill",
+   "tags": [
+    "pork",
+    "group-friendly",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "Patong (beach road, corner of Soi Dr. Watthana)",
+   "island": "Phuket",
+   "lat": 7.890216,
+   "lng": 98.293351,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Mae Manee Grilled Pork, 76 Thaweewong Road, Patong",
+   "placeId": "ChIJGT5eZ9UlUDAREDC7dZtuTTA",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": null,
+     "reviews": 1,
+     "note": "101-250 THB a person",
+     "url": "https://www.wongnai.com/restaurants/468561Qe"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "About 101-250 THB a person (Wongnai listing).",
+   "dishes": [
+    "Moo kata: pork and seafood grilled on a dome pan at the table, with broth around the edge",
+    "Thai a-la-carte dishes from midday"
+   ],
+   "praise": "Google Maps 4.3 (Oct 2026). A small Phuket moo kata chain with three branches (Wongnai). We found no recent independent review.",
+   "watchOut": "Hot and smoky: wear clothes you do not mind smelling of BBQ. The moo kata grill starts at 17:00.",
+   "description": "Moo kata, the Thai pork BBQ and hotpot that groups of Thai friends eat together, on the south end of the Patong beach road. A cheap and fun dinner for 8.",
+   "openText": "11:00-23:00 (Google Maps, Oct 2026). Moo kata from 17:00, a-la-carte from 12:00 (Wongnai).",
+   "days": [],
+   "bestTime": "Dinner from 18:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Order pork belly, pork neck and marinated pork; add prawns and morning glory for the broth."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.wongnai.com/restaurants/468561Qe",
+    "https://www.phuket101.net/mookata-buffet-restaurants/",
+    "https://www.google.com/maps/place/Mae+Manee+Grilled+Pork/data=!4m7!3m6!1s0x305025d5675e3e19:0x304d6e9b75bb3010!8m2!3d7.8902156!4d98.2933511!16s%2Fg%2F11j0xpbc5c!19sChIJGT5eZ9UlUDAREDC7dZtuTTA"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.3, open now, 11:00-23:00, pin at 76 Thaweewong Rd). Wongnai listing (branch hours and price band, 2022 post). Little independent backing.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-hankuk-siktang-patong",
+   "name": "Hankuk Siktang Korean BBQ",
+   "nameThai": "",
+   "kind": "grill",
+   "tags": [
+    "pork",
+    "late-night",
+    "group-friendly"
+   ],
+   "area": "patong",
+   "district": "Patong (near Jungceylon)",
+   "island": "Phuket",
+   "lat": 7.895812,
+   "lng": 98.299937,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "HANKUK SIKTANG Korean BBQ Restaurant, Patong",
+   "placeId": "ChIJz3ZEUsQ7UDARJGIh74jKkpw",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Samgyeopsal: thick pork belly grilled at the table",
+    "Korean side dishes (banchan)"
+   ],
+   "praise": "Google Maps 4.7 (Oct 2026). We found no independent review.",
+   "watchOut": "Google only. Check the price per portion before ordering for 8.",
+   "description": "A Korean barbecue restaurant in central Patong for grilled pork belly at the table, open until 02:00.",
+   "openText": "11:00-02:00 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "Late dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "A second Korean option 300 m away: Maru KoreanBBQ, 124 Soi Rat-U-Thit 200 Pee 1 (Google 4.4, 11:30-23:00)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/%ED%95%9C%EA%B5%AD%EC%8B%9D%EB%8B%B9+HANKUK+SIKTANG+%28Korean+BBQ+Restaurant%29/data=!4m7!3m6!1s0x30503bc4524476cf:0x9c92ca88ef216224!8m2!3d7.8958125!4d98.2999375!16s%2Fg%2F11w7h8py2k!19sChIJz3ZEUsQ7UDARJGIh74jKkpw"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open now, 11:00-02:00, plus code V7WX+8X). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pork-bones-porridge-patong",
+   "name": "Pork Bones Porridge (late-night khao tom)",
+   "nameThai": "ร้านข้าวต้มกระดูกหมูอ่อน",
+   "kind": "thai",
+   "tags": [
+    "pork",
+    "late-night",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "Patong (Sainamyen Road)",
+   "island": "Phuket",
+   "lat": 7.895626,
+   "lng": 98.304889,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Pork Bones Porridge, 10 Sainamyen Road, Patong",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": null,
+     "reviews": 1,
+     "note": "review from Apr 2020",
+     "url": "https://www.wongnai.com/restaurants/414855zn-ร้านข้าวต้มกระดูกหมูอ่อน-เจ้าเดียวในป่าตอง"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Pork bone rice porridge 50 THB, with egg 60 THB (Wongnai menu).",
+   "dishes": [
+    "Khao tom kraduk moo on: rice soup with soft pork ribs",
+    "Khanom jeen with Southern fish curry",
+    "Leng saep: spicy pork backbone soup"
+   ],
+   "praise": "A Thai reviewer on Wongnai (2020) calls it a 'legendary' late-night shop, running for more than 25 years; Google Maps 4.6 (Oct 2026).",
+   "watchOut": "Only opens at night. Simple shop under a guesthouse; Thai menu.",
+   "description": "A night-only rice soup shop on Sainamyen Road that a Thai reviewer calls a late-night legend. Pork bone porridge and Southern dishes until morning.",
+   "openText": "19:00-07:00 every night (Wongnai); Google Maps shows 19:00-06:00 (Oct 2026).",
+   "days": [],
+   "bestTime": "00:00-03:00, after a night out.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "The shop is on the ground floor of Sukjai Guesthouse, a green three-storey building (Wongnai)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.wongnai.com/restaurants/414855zn-ร้านข้าวต้มกระดูกหมูอ่อน-เจ้าเดียวในป่าตอง",
+    "https://www.google.com/maps/place/Pork+Bones+Porridge/@7.8956264,98.3048889,17z/data=!3m1!4b1!4m6!3m5!1s0x30503aa10a33b19d:0x550d9224cda5cdac!8m2!3d7.8956264!4d98.3048889!16s%2Fg%2F11g6vxzytb"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, closed, opens 19:00, pin at 10 Sainamyen Rd). Wongnai menu, hours and one Thai review (Apr 2020).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-somtum-yum-pao-kalim",
+   "name": "Somtum Yum Pao (Isaan food and seafood at Kalim)",
+   "nameThai": "ส้มตำ ยำ เผา",
+   "kind": "isaan",
+   "tags": [
+    "seafood",
+    "local-favourite",
+    "view",
+    "late-night",
+    "group-friendly"
+   ],
+   "area": "patong",
+   "district": "Kalim (in front of Kalim Beach)",
+   "island": "Phuket",
+   "lat": 7.911936,
+   "lng": 98.294804,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Somtum Yum Pao, 312 Phrabaramee Road, Kalim, Patong",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Wongnai",
+     "rating": 4.1,
+     "reviews": 45,
+     "note": "#18 of 731 seafood restaurants in Phuket on Wongnai",
+     "url": "https://www.wongnai.com/restaurants/233738qo-ส้มตำ-ยำ-เผา-กะหลิม-ป่าตอง"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "251-500 THB a person (Wongnai); fresh oysters 25 THB each, crab and mango salad 120 THB (Wongnai reviews, 2018).",
+   "dishes": [
+    "Grilled river prawns",
+    "Pla kapong tod nam pla: sea bass fried with fish sauce",
+    "Som tam papaya salads, including a fried seafood som tam",
+    "Fresh oysters"
+   ],
+   "praise": "Thai reviewers on Wongnai praise the grilled river prawns and fish-sauce sea bass at fair prices (May and Jun 2023) and call it good value for Phuket; Google Maps 4.7 (Oct 2026).",
+   "watchOut": "Parking is hard. The room is narrow: about 10 people fit at one table (Wongnai). Wongnai says closed Mondays.",
+   "description": "A Thai-run som tam and grilled seafood restaurant facing Kalim Beach, popular with Thai visitors. Spicy Isaan salads and seafood with a sunset view.",
+   "openText": "14:00-24:00 (Google Maps, Oct 2026); Wongnai lists it closed on Mondays.",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Late afternoon for the light over the bay, says a Wongnai reviewer.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Ask for \"phet noi\" (a little spicy) for the som tam unless you like it very hot."
+   ],
+   "links": [
+    {
+     "label": "Wongnai",
+     "url": "https://www.wongnai.com/restaurants/233738qo-ส้มตำ-ยำ-เผา-กะหลิม-ป่าตอง"
+    }
+   ],
+   "sources": [
+    "https://www.wongnai.com/restaurants/233738qo-ส้มตำ-ยำ-เผา-กะหลิม-ป่าตอง",
+    "https://www.google.com/maps/place/%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3+%E0%B8%A2%E0%B8%B3+%E0%B9%80%E0%B8%9C%E0%B8%B2+Somtum+Yum+Pao/@7.9119364,98.2948037,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a8e56faaaab:0xae7a2b7e14572ca1!8m2!3d7.9119364!4d98.2948037!16s%2Fg%2F11g6njcj6f"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open now, 14:00-24:00, pin at Kalim). Wongnai 4.1 from 45 reviews (2017-2023).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-golek-nanai-patong",
+   "name": "Krua GoLek (Southern Thai on Nanai Road)",
+   "nameThai": "ครัวโกเล็ก นาใน ป่าตอง",
+   "kind": "southern-thai",
+   "tags": [
+    "local-favourite",
+    "budget"
+   ],
+   "area": "patong",
+   "district": "Patong (Nanai Road)",
+   "island": "Phuket",
+   "lat": 7.889542,
+   "lng": 98.30337,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "GoLek Restaurant, 76/1 Nanai Road, Patong",
+   "placeId": "ChIJGSMy-Kk7UDARONbdrV-YqRg",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Southern Thai curries and stir-fries cooked to order"
+   ],
+   "praise": "BK Magazine (Asia City) once named Go Lek on Patong's eastern edge as the place for fiery Southern Thai food; Google Maps 4.7 (Oct 2026).",
+   "watchOut": "The press mention is old; current praise is mainly on Google. Spicy by default.",
+   "description": "A Thai kitchen on Nanai Road, the local back street of Patong, close to the villa area. Cooked-to-order Southern Thai food at local prices.",
+   "openText": "11:00-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch or dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Say \"mai phet\" for not spicy, \"phet nit noi\" for a little."
+   ],
+   "links": [],
+   "sources": [
+    "https://bk.asia-city.com/node/126835",
+    "https://www.google.com/maps/place/GoLek+Restaurant/data=!4m7!3m6!1s0x30503ba9f8322319:0x18a9985fadddd638!8m2!3d7.889542!4d98.3033704!16s%2Fg%2F11h89qhgg8!19sChIJGSMy-Kk7UDARONbdrV-YqRg"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open now, 11:00-23:00, pin at 76/1 Nanai Rd). Older BK Magazine mention.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-roti-patong-chao-kao",
+   "name": "Roti Patong Tea and Coffee (original roti shop)",
+   "nameThai": "โรตีป่าตอง เจ้าเก่า ฮาลาล",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "breakfast",
+    "halal",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "patong",
+   "district": "North Patong (Phrabaramee Road)",
+   "island": "Phuket",
+   "lat": 7.903279,
+   "lng": 98.306826,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Roti Patong Tea and Coffee, 120/9 Phrabaramee Road, Patong",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Roti with condensed milk, banana or egg",
+    "Roti with curry for breakfast",
+    "Thai milk tea (cha chak)"
+   ],
+   "praise": "Google Maps 4.8 (Oct 2026). Its Thai name says \"chao kao\", the original shop. No independent review found.",
+   "watchOut": "Morning only, closes 14:30. Google only.",
+   "description": "A Muslim-Thai roti and tea shop on the north Patong road, for a cheap breakfast of roti with curry or a sweet roti with condensed milk.",
+   "openText": "07:30-14:30 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "Breakfast, 08:00-10:00.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Order one sweet roti and one roti with curry per two people."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Roti+Patong+Tea+and+Coffee/@7.903279,98.3068255,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bfc7c87bf9d:0xcb8b798a9a92bdd1!8m2!3d7.903279!4d98.3068255!16s%2Fg%2F11k6z7w3ng"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, closed at time of read, 07:30-14:30, pin at 120/9 Phrabaramee Rd). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-churrasco-steakhouse-patong",
+   "name": "Churrasco Phuket Steakhouse",
+   "nameThai": "",
+   "kind": "grill",
+   "tags": [
+    "group-friendly"
+   ],
+   "area": "patong",
+   "district": "Patong (Jungceylon, Garden Zone)",
+   "island": "Phuket",
+   "lat": 7.890852,
+   "lng": 98.300695,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Churrasco Phuket Steakhouse, Jungceylon, Patong",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "Restaurant Guru",
+     "rating": 4.9,
+     "reviews": 2726,
+     "note": "aggregate of Google and other sites",
+     "url": "https://restaurantguru.com/Churrasco-Phuket-Steakhouse-Patong"
+    }
+   ],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Wagyu picanha 200 g 990 THB or 300 g 1,390 THB, wagyu maminha 200 g 790 THB, beef skewer 300 g with baked potato 590 THB (Phuket 101, Sep 2024).",
+   "dishes": [
+    "Wagyu picanha with chimichurri",
+    "Beef skewer (brochetta)",
+    "Angus and wagyu steaks by size"
+   ],
+   "praise": "Phuket 101 calls it one of the best steakhouses in Phuket for the price and kept it in its Oct 2026 Patong list; the wagyu came medium rare as ordered.",
+   "watchOut": "Beef, not pork. Google shows it as a paid ad in searches, so look at the reviews yourself.",
+   "description": "A South American style steakhouse inside Jungceylon mall, air-conditioned, with a big room that takes 8 easily.",
+   "openText": "Daily 12:00-23:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner after shopping at Jungceylon.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Share a 400 g Gaucho cut between two."
+   ],
+   "links": [
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/churrasco-phuket-steakhouse/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/churrasco-phuket-steakhouse/",
+    "https://www.phuket101.net/best-restaurants-in-patong/",
+    "https://restaurantguru.com/Churrasco-Phuket-Steakhouse-Patong",
+    "https://www.google.com/maps/place/Churrasco+Phuket+Steakhouse/@7.8908518,98.3006948,17z/data=!3m1!4b1!4m6!3m5!1s0x30503aa496dab315:0x6f3c8b50550ef0f6!8m2!3d7.8908518!4d98.3006948!16s%2Fg%2F12hq6q7v_"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open now, 12:00-23:00, Jungceylon Garden Zone). Phuket 101 review (Sep 2024) and Oct 2026 list. Restaurant Guru 4.9.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-talung-thai-kamala",
+   "name": "Talung Thai (Paresa Resort)",
+   "nameThai": "ตะลุงไทย",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "view",
+    "seafood",
+    "booking-needed"
+   ],
+   "area": "kamala",
+   "district": "Kamala (Paresa, clifftop south of the beach)",
+   "island": "Phuket",
+   "lat": 7.932984,
+   "lng": 98.262419,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Talung Thai Restaurant, Paresa Phuket, Layi-Nakalay Road, Kamala",
+   "placeId": "",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 3,
+   "priceText": "No menu prices online (Oct 2026). Michelin price level ฿฿฿.",
+   "dishes": [
+    "Mixed Thai canapes",
+    "Stir-fried Phuket lobster",
+    "Thai desserts"
+   ],
+   "praise": "Michelin's inspector (2026) recommends the stir-fried Phuket lobster after drinks on the clifftop terrace at sunset; Phuket 101 (Oct 2026) says the menu is 'presented nicely without being fussy'.",
+   "watchOut": "Resort prices; part of the menu is international. Book a terrace table for sunset.",
+   "description": "A clifftop Thai restaurant at Paresa Resort, between Kalim and Kamala, with one of the best sunset terraces on the west coast.",
+   "openText": "Daily 12:00-23:00 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Sunset, about 18:15-18:45 in January.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book via the Michelin page or +66 76 302 000."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/talung-thai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/talung-thai",
+    "https://www.phuket101.net/kamala-beach-restaurants/",
+    "https://www.google.com/maps/place/Talung+Thai+Restaurant+%7C+Paresa+Phuket/@7.9329842,98.2624191,17z/data=!3m1!4b1!4m6!3m5!1s0x30503b8ffd9961f5:0x3e787ffbdd5c1f03!8m2!3d7.9329842!4d98.2624191!16s%2Fg%2F11hd9qb9z_"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.3, open now, 12:00-23:00, pin at Paresa). Michelin page (2026 list); Phuket 101 Kamala guide updated 23 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jaras-kamala",
+   "name": "Jaras (InterContinental Phuket)",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "seafood",
+    "booking-needed",
+    "view"
+   ],
+   "area": "kamala",
+   "district": "North Kamala (InterContinental)",
+   "island": "Phuket",
+   "lat": 7.962111,
+   "lng": 98.284314,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Jaras Restaurant, InterContinental Phuket Resort, Kamala",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 3,
+   "priceText": "Seasonal tasting menu; prices not published online (Oct 2026). Michelin price level ฿฿.",
+   "dishes": [
+    "Jorang: prawn with Thai curry sauce",
+    "Tom yum goong served in a young coconut",
+    "Grilled tiger prawns with pomelo"
+   ],
+   "praise": "Michelin's inspector (2026) singles out the jorang with prawn and curry sauce and the zero-waste cooking; Phuket 101 (Oct 2026) says the food is 'genuinely good' with a serious wine list.",
+   "watchOut": "Resort prices; book ahead.",
+   "description": "Modern Thai tasting menus from local and regional produce at the InterContinental in north Kamala. A calm special dinner close to Kamala villas.",
+   "openText": "Daily 12:00-21:30 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner at 18:30.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on phuket.intercontinental.com/dining/jaras or +66 76 629 999."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jaras"
+    },
+    {
+     "label": "InterContinental",
+     "url": "https://phuket.intercontinental.com/dining/jaras"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jaras",
+    "https://www.phuket101.net/kamala-beach-restaurants/",
+    "https://www.google.com/maps/place/Jaras+Restaurant/@7.962111,98.2843139,17z/data=!3m1!4b1!4m6!3m5!1s0x30503b7c9f887e3f:0x53cd94edca23dc7d!8m2!3d7.962111!4d98.2843139!16s%2Fg%2F11h5fhgxhy"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open now, 12:00-21:30, pin at the resort). Michelin page (2026 list); Phuket 101 Kamala guide (Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "fruit-fusion-kamala",
+   "name": "Fruit Fusion Kamala (healthy cafe)",
+   "nameThai": "",
+   "kind": "cafe",
+   "tags": [
+    "breakfast",
+    "vegetarian-friendly"
+   ],
+   "area": "kamala",
+   "district": "Kamala (beach road)",
+   "island": "Phuket",
+   "lat": 7.949919,
+   "lng": 98.279689,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Fruit Fusion Kamala Cafe, 66/6 Na Hat Road, Kamala",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Prices not published online; some reviews call it a little pricey (guide data, Oct 2026).",
+   "dishes": [
+    "Smoothie and fruit bowls",
+    "Avocado toast and wraps",
+    "Fresh juices and coffee"
+   ],
+   "praise": "Google Maps 4.7 (Oct 2026); Wanderlog reviewers praise the bowls and juices.",
+   "watchOut": "Service is slow when it is full.",
+   "description": "A small cafe on Kamala's beach road for a fresh breakfast: smoothie bowls, toast, juices and coffee, with many vegetarian dishes.",
+   "openText": "Daily 08:30-20:30 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Late breakfast.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "For specialty coffee in Kamala: Sync Coffee Bar & Roastery, 104/8 Na Hat Road (guide data)."
+   ],
+   "links": [],
+   "sources": [
+    "https://wanderlog.com/place/details/3006980/fruit-fusion-kamala-cafe",
+    "https://www.google.com/maps/place/Fruit+Fusion+Kamala+Cafe/@7.9499191,98.2796889,17z/data=!3m1!4b1!4m6!3m5!1s0x30503bfd64346755:0x97ea1b037a3b15d5!8m2!3d7.9499191!4d98.2796889!16s%2Fg%2F11h2gt9clb"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 08:30-20:30, same pin as the guide).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-duck-spicy-kamala",
+   "name": "Duck Spicy (Kamala)",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "budget",
+    "local-favourite",
+    "group-friendly"
+   ],
+   "area": "kamala",
+   "district": "Kamala (a few blocks from the beach)",
+   "island": "Phuket",
+   "lat": 7.950048,
+   "lng": 98.285167,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Duck Spicy Kamala, Phuket",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Low prices; no menu prices online (Oct 2026).",
+   "dishes": [
+    "Crispy duck choo chee curry",
+    "Som tam with crispy duck",
+    "Duck rolls",
+    "Garlic chicken with rice"
+   ],
+   "praise": "JetSettingFools ranks it first in Kamala for Thai food ('hands down the best restaurant in Kamala Beach for Thai cuisine'), for low prices and friendly service; Google Maps 4.4 (Oct 2026).",
+   "watchOut": "Open-air room with fans, on a busy corner. One older listing says closed on Sundays.",
+   "description": "A family-style open-air Thai restaurant in Kamala known for its duck dishes, a cheap alternative to the beachfront restaurants.",
+   "openText": "09:00-22:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch or an early dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Order the duck choo chee and a crispy duck som tam for the table."
+   ],
+   "links": [],
+   "sources": [
+    "https://jetsettingfools.com/kamala-beach-restaurants-phuket-thailand/",
+    "https://wanderlog.com/place/details/2624710/duck-spicy",
+    "https://www.google.com/maps/place/Duck+Spicy+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%81%E0%B8%A1%E0%B8%A5%E0%B8%B2/@7.9500481,98.2851672,17z/data=!3m1!4b1!4m6!3m5!1s0x30503a3da74ddb85:0x373a957ca78f9ccc!8m2!3d7.9500481!4d98.2851672!16s%2Fg%2F11c1gymns9"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open now, 09:00-22:00, Kamala branch pin). JetSettingFools Kamala guide (undated).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-roti-kamala-beach",
+   "name": "Roti and pancakes by Amena's sister (Kamala Beach)",
+   "nameThai": "",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "halal",
+    "budget",
+    "breakfast"
+   ],
+   "area": "kamala",
+   "district": "Kamala (by the tsunami memorial)",
+   "island": "Phuket",
+   "lat": 7.9519,
+   "lng": 98.282342,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Roti & pancake by Amena's sister, Kamala Beach tsunami monument",
+   "placeId": "ChIJl1lqw487UDARyt4eoiJZm04",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Banana and egg roti with condensed milk",
+    "Nutella roti"
+   ],
+   "praise": "Google Maps 4.9 (Oct 2026). No independent review found.",
+   "watchOut": "Google only. A stall, not a restaurant: no seating to speak of.",
+   "description": "A Muslim-Thai roti stall by the tsunami memorial on Kamala Beach, for a hot sweet roti after the beach.",
+   "openText": "09:00-21:30 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "Late afternoon, after the beach.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Roti+%26%E2%80%8B+pancake+by+Amena%27s+sister+at+kamala+beach/data=!4m7!3m6!1s0x30503b8fc36a5997:0x4e9b5922a21edeca!8m2!3d7.9518999!4d98.2823422!16s%2Fg%2F11t1lb14jq!19sChIJl1lqw487UDARyt4eoiJZm04"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, open now, 09:00-21:30, pin by the tsunami memorial). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-smokaccia-laboratory-surin",
+   "name": "The Smokaccia Laboratory",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed",
+    "vegetarian-friendly"
+   ],
+   "area": "surin",
+   "district": "Surin (Srisoonthorn Road)",
+   "island": "Phuket",
+   "lat": 7.976273,
+   "lng": 98.285018,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "The Smokaccia Laboratory, 116/4 Moo 3, Surin, Cherngtalay",
+   "placeId": "",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 401,
+   "reviewsSource": "Google count quoted by Phuket 101, Oct 2026",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 4,
+   "priceText": "Nine- or 18-course tasting menu; prices not published online. Michelin price level ฿฿฿.",
+   "dishes": [
+    "Smokaccia: smoked focaccia with tomato reduction and mortadella foam",
+    "A reimagined lasagna Bolognese"
+   ],
+   "praise": "Michelin's inspector (2026) praises the smokaccia with mortadella foam and the zero-waste approach; Phuket 101 (Oct 2026) says it is famous for its light, crisp sourdough.",
+   "watchOut": "A small counter: a group of 8 needs to book well ahead. Closed Tuesday and Wednesday.",
+   "description": "A small creative Italian tasting-menu counter in Surin built around bread and smoke. For the members of the group who like a long chef-led meal.",
+   "openText": "Mon and Thu-Sun 12:00-15:00 and 18:00-21:00; closed Tue and Wed (Michelin, Oct 2026).",
+   "days": [
+    "Mon",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch, the easier booking.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book at thesmokaccia.com or +66 93 179 4489."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/the-smokaccia-laboratory"
+    },
+    {
+     "label": "Website",
+     "url": "https://thesmokaccia.com"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/the-smokaccia-laboratory",
+    "https://www.phuket101.net/surin-beach-restaurants/",
+    "https://www.google.com/maps/place/The+Smokaccia+Laboratory/@7.9762725,98.2850182,17z/data=!3m1!4b1!4m6!3m5!1s0x305039403bf3d949:0xe271bf6920c855a7!8m2!3d7.9762725!4d98.2850182!16s%2Fg%2F11rcl5ndck"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, closed today Tuesday, pin on Srisoonthorn Rd). Michelin page (2026 list); Phuket 101 Surin guide updated 12 Oct 2026 (Google 4.9 from 401).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-wagyu-steakhouse-surin",
+   "name": "Wagyu Steakhouse (Twinpalms)",
+   "nameThai": "",
+   "kind": "grill",
+   "tags": [
+    "michelin",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "surin",
+   "district": "Surin (Twinpalms, main road)",
+   "island": "Phuket",
+   "lat": 7.976678,
+   "lng": 98.281774,
+   "coordSource": "Google Maps pin from the search result list, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "WAGYU STEAKHOUSE, 106/46 Moo 3, Cherngtalay, Surin",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps search list, 27 Oct 2026",
+   "reviews": 474,
+   "reviewsSource": "Google count quoted by Phuket 101, Oct 2026",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 4,
+   "priceText": "Steaks priced by cut and weight; prices not published online. Michelin price level ฿฿฿.",
+   "dishes": [
+    "Josper-oven grilled wagyu tomahawk",
+    "Steak chosen from the dry-ageing fridge",
+    "Tuna and scallop ceviche"
+   ],
+   "praise": "Michelin's inspector (2026) notes you pick your steak from the fridge and it is grilled in an open kitchen; Phuket 101 (Oct 2026) calls the wagyu 'cooked to perfection'.",
+   "watchOut": "Expensive, and beef rather than pork.",
+   "description": "A two-floor steakhouse at Twinpalms in Surin, good for a meat-heavy group dinner for 8.",
+   "openText": "Daily 17:30-24:00 (Michelin, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner from 19:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on +66 94 480 0882; ask for the upstairs room for a group."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/wagyu-steakhouse"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/wagyu-steakhouse",
+    "https://www.phuket101.net/surin-beach-restaurants/",
+    "https://www.google.com/maps/place/WAGYU+STEAKHOUSE/data=!4m7!3m6!1s0x305039361101b4f9:0x88f87fb4f6559db4!8m2!3d7.9766784!4d98.2817743"
+   ],
+   "verification": "Google Maps search list 27 Oct 2026 (4.5, pin at 106/46 Moo 3). Michelin page (2026 list); Phuket 101 Surin guide (Oct 2026, Google 4.5 from 474).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-suay-cherngtalay",
+   "name": "Suay Cherngtalay",
+   "nameThai": "สวย เชิงทะเล",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "group-friendly",
+    "booking-needed"
+   ],
+   "area": "bang-tao",
+   "district": "Cherngtalay (Baan Wana Park, Srisoonthorn Road)",
+   "island": "Phuket",
+   "lat": 7.980086,
+   "lng": 98.329423,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "SUAY Restaurant Cherngtalay, 177/99 Moo 6, Si Sunthon",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 3,
+   "priceText": "Set menus and a-la-carte; prices are in a PDF menu, not on the web page (Oct 2026). Michelin price level ฿฿.",
+   "dishes": [
+    "Miang foie gras wrap",
+    "Grilled lemongrass lamb chops with papaya salsa",
+    "Crab cakes with Sriracha aioli and mango chutney",
+    "Sous-vide beef short rib"
+   ],
+   "praise": "Michelin's inspector (2026) says chef Tammasak's spicing is 'bold but well-judged'; Phuket 101's Bang Tao guide (Oct 2026) praises the balance of tastes and textures.",
+   "watchOut": "Modern Thai with Western touches: not the place for traditional Southern food.",
+   "description": "Chef Tammasak's modern Thai restaurant inland from Laguna, with a garden terrace and live music on Monday and Thursday. Easy for a group of 8.",
+   "openText": "Daily 16:00-23:00 (Michelin and official site, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner on a Monday or Thursday for the live band.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Book on TableCheck via suayrestaurant.com or +66 93 339 1890."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/suay-cherngtalay"
+    },
+    {
+     "label": "Website",
+     "url": "https://suayrestaurant.com/suay-cherngtalay"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/suay-cherngtalay",
+    "https://www.phuket101.net/bangtao-beach-restaurants/",
+    "https://suayrestaurant.com/suay-cherngtalay",
+    "https://www.google.com/maps/place/SUAY+Restaurant+-+Cherngtalay/@7.9800865,98.3294234,17z/data=!3m1!4b1!4m6!3m5!1s0x30503740c029c575:0xcc32f59cd95099b7!8m2!3d7.9800865!4d98.3294234!16s%2Fg%2F11f00q3w_l"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open now, 16:00-23:00). Michelin page (2026 list); Phuket 101 Bang Tao guide updated 23 Oct 2026; official site.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-nitan-cherngtalay",
+   "name": "Nitan",
+   "nameThai": "นิธาน",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed",
+    "seafood"
+   ],
+   "area": "bang-tao",
+   "district": "Cherngtalay (Srisoonthorn Road)",
+   "island": "Phuket",
+   "lat": 7.979712,
+   "lng": 98.329751,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Nitan Phuket, 177/38 Srisoonthorn Road, Si Sunthon",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 4,
+   "priceText": "Tasting menu with wine pairing; prices on nitanphuket.com. Michelin price level ฿฿฿.",
+   "dishes": [
+    "Southern Thai tasting menu with seasonal, local produce"
+   ],
+   "praise": "Michelin's inspector (2026) says classic Southern Thai dishes are made with modern technique, with 'balanced flavours and some creativity'.",
+   "watchOut": "Dinner only, one tasting menu, closed Monday and Tuesday.",
+   "description": "A small tasting-menu restaurant that cooks Southern Thai food with modern technique, near Laguna. The serious Thai fine-dining choice in Cherngtalay.",
+   "openText": "Wed-Sun 19:00-22:00; closed Mon and Tue (Michelin, Oct 2026).",
+   "days": [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Book the 19:00 start.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on nitanphuket.com or +66 98 459 9250."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/nitan"
+    },
+    {
+     "label": "Website",
+     "url": "https://nitanphuket.com"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/nitan",
+    "https://www.google.com/maps/place/Nitan+Phuket/@7.9797116,98.3297506,17z/data=!3m1!4b1!4m6!3m5!1s0x30503725912d512b:0xd9e5da59ef112bcb!8m2!3d7.9797116!4d98.3297506!16s%2Fg%2F11h77pb6my"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, closed today Tuesday, pin on Srisoonthorn Rd). Michelin page (2026 list).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-kin-kub-ei-cherngtalay",
+   "name": "Kin-Kub-Ei",
+   "nameThai": "กินกับอี๋",
+   "kind": "southern-thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "local-favourite",
+    "booking-needed"
+   ],
+   "area": "bang-tao",
+   "district": "Cherngtalay (Srisoonthorn Road, inland)",
+   "island": "Phuket",
+   "lat": 7.980033,
+   "lng": 98.333349,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Kin-Kub-Ei, 81 Srisoonthorn Road, Si Sunthon, Thalang",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "'Affordable' (Phuket 101); Michelin price level ฿฿. The menu changes with the market; no prices online.",
+   "dishes": [
+    "Pla tod krueng: crisp local fish with tangy curry paste",
+    "Nam prik chilli dip with vegetables",
+    "Moo tod: fried pork",
+    "Gai baan pae sa: steamed village chicken with soy"
+   ],
+   "praise": "Michelin's inspector (2026) says chef Tubtim cooks Southern dishes 'passed down through generations' with quality at affordable prices; Phuket 101 says it is worth booking well in advance.",
+   "watchOut": "Open only a few days a week and the days have changed: Michelin says Thursday 12:00-19:00, Phuket 101 (2024) says Fri-Sun 11:00-18:00, Google (Oct 2026) shows closed Tuesday and opening Wednesday 12:00. Reservation needed; some dishes must be pre-ordered.",
+   "description": "A home kitchen in a shaded garden where chef Tubtim and Ei cook family Southern Thai recipes. One of the most praised local tables near Bang Tao.",
+   "openText": "A few days a week, roughly 12:00-19:00; call first (+66 83 509 8264 per Michelin, 095 428 7195 per Phuket 101).",
+   "days": [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Check their social media or call to confirm the day before you go.",
+    "Ask them to plan the meal for 8 when you book."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kin-kub-ei"
+    },
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/kin-kub-ei/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kin-kub-ei",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurants/bib-gourmand",
+    "https://www.phuket101.net/kin-kub-ei/",
+    "https://www.phuket101.net/bangtao-beach-restaurants/",
+    "https://www.google.com/maps/place/%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B8%B5%E0%B9%8B+Kin-Kub-Ei/@7.9800333,98.3333489,17z/data=!3m1!4b1!4m6!3m5!1s0x305037a7347b52f7:0x761ee12e3eb62228!8m2!3d7.9800333!4d98.3333489!16s%2Fg%2F11f5q5my4l"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, closed Tuesday, opens Wednesday 12:00, pin at 81 Srisoonthorn Rd). Michelin 2026 Bib Gourmand list (18 restaurants, Kin-Kub-Ei included) and Michelin page (Thursday hours); Phuket 101 page (Sep 2024) and Bang Tao guide (Oct 2026). Opening days conflict between sources.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-krua-praya-thalang",
+   "name": "Krua Praya",
+   "nameThai": "ครัวพระยา ร้านอาหารพื้นเมืองภูเก็ต",
+   "kind": "southern-thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "group-friendly",
+    "local-favourite"
+   ],
+   "area": "thalang",
+   "district": "Thalang (Soi Hua Tha, near the Heroines Monument)",
+   "island": "Phuket",
+   "lat": 7.97481,
+   "lng": 98.370455,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Krua Praya, 216/19 Moo 3, Soi Hua Tha, Si Sunthon, Thalang",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 2,
+   "priceText": "Hor mok fish curry custard 80 THB, fried turmeric fish 200 THB, pineapple curry 180 THB, fried egg salad 180 THB (Phuket 101, Sep 2026).",
+   "dishes": [
+    "Fried pork belly with curry paste and young coconut shoots",
+    "Moo hong-style Phuket stew (rich, not spicy)",
+    "Pla tod khamin: fried turmeric fish",
+    "Kaeng kati sapparot: pineapple curry"
+   ],
+   "praise": "Michelin's inspector (2026) names the crispy, spicy fried pork belly with curry paste as the signature; Phuket 101 (Sep 2026) says it is 'not easy to find' but 'worth the drive', with fair prices.",
+   "watchOut": "Dishes are cooked to order, so expect to wait. Closed Tuesday.",
+   "description": "A garden restaurant under big trees inland in Thalang that cooks Phuket dishes with bold flavours. Michelin tags it good for groups, and the signature is a pork belly dish.",
+   "openText": "11:00-22:00, closed Tuesday (Michelin and Phuket 101, 2026).",
+   "days": [
+    "Mon",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch on the way to or from the airport side, or an early dinner.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Call +66 83 138 6789 to book a table for 8.",
+    "Order the fried pork belly and the mild Phuket stew together."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-praya-phuket"
+    },
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/krua-praya/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-praya-phuket",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurants/bib-gourmand",
+    "https://www.phuket101.net/krua-praya/",
+    "https://www.google.com/maps/place/Krua+Praya/@7.9748104,98.370455,17z/data=!3m1!4b1!4m6!3m5!1s0x305036c65d538cb3:0x1a9c265b0e6665c9!8m2!3d7.9748104!4d98.370455!16s%2Fg%2F11f5h34b0b"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, closed Tuesday, opens Wednesday 11:00, pin on Soi Hua Tha). Michelin 2026 Bib Gourmand list and Michelin page; Phuket 101 page updated 23 Sep 2026 with prices.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-five-olives-cherngtalay",
+   "name": "Five Olives",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "michelin",
+    "group-friendly"
+   ],
+   "area": "bang-tao",
+   "district": "Cherngtalay (Boat Avenue park)",
+   "island": "Phuket",
+   "lat": 7.999236,
+   "lng": 98.306533,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Five Olives, 2/1 Pasak-Koktanod Road, Cherngtalay",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [
+    {
+     "site": "50 Top Pizza Asia-Pacific",
+     "rating": null,
+     "reviews": null,
+     "note": "#26 in Asia-Pacific (per Foodle and Phuket 101)",
+     "url": "https://foodle.pro/restaurants/michelin-star-restaurants/c-thailand/choeng-thale/year-2025"
+    }
+   ],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 2,
+   "priceText": "Prices not published online (Oct 2026). Michelin price level ฿฿.",
+   "dishes": [
+    "Neapolitan pizza from a wood-fired oven",
+    "Home-made pasta and risotto",
+    "Braised sea bass with clams"
+   ],
+   "praise": "Michelin's inspector (2026) praises the 'puffy, charred rims and airy bases'; Phuket 101 (Oct 2026) notes the pizza is in the Asia-Pacific Top 50 Pizzerias.",
+   "watchOut": "Busy at weekends: book for 8.",
+   "description": "A Thai chef-owner makes Neapolitan pizza and Italian dishes in an air-conditioned room or on a leafy terrace near Boat Avenue. An easy group dinner when the group wants a break from Thai food.",
+   "openText": "Daily 11:00-23:00 (Michelin, Oct 2026).",
+   "days": [],
+   "bestTime": "Dinner; on Friday combine it with the Boat Avenue Friday market (17:00-22:00, Phuket 101).",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on +66 82 629 4944 or fiveolives.co."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/five-olives"
+    },
+    {
+     "label": "Website",
+     "url": "https://fiveolives.co"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/five-olives",
+    "https://www.phuket101.net/bangtao-beach-restaurants/",
+    "https://www.phuket101.net/phuket-night-markets/",
+    "https://www.google.com/maps/place/Five+Olives/@7.9992358,98.3065328,17z/data=!3m1!4b1!4m6!3m5!1s0x305039bf83ee35c9:0x734a5a92734b2dd7!8m2!3d7.9992358!4d98.3065328!16s%2Fg%2F11sx1zvjs0"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open, closes 23:00). Michelin page (2026 list); Phuket 101 Bang Tao guide (Oct 2026).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-black-cat-bang-tao",
+   "name": "Black Cat (French bistro)",
+   "nameThai": "",
+   "kind": "international",
+   "tags": [
+    "pork",
+    "group-friendly"
+   ],
+   "area": "bang-tao",
+   "district": "Cherngtalay (opposite Porto de Phuket)",
+   "island": "Phuket",
+   "lat": 7.991535,
+   "lng": 98.306465,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Black Cat Bar & Restaurant, 104 Bandon-Cherngtalay Road",
+   "placeId": "",
+   "rating": 4.3,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "Pork chop with mushroom sauce",
+    "French onion soup",
+    "Creme brulee"
+   ],
+   "praise": "Phuket 101's Bang Tao guide (Oct 2026) describes classic bistro cooking since 1996; Villa Phuket's Bang Tao list (Feb 2024) also includes it.",
+   "watchOut": "Western bistro prices.",
+   "description": "A French bistro cooking since 1996 opposite Porto de Phuket. Phuket 101 names its pork chop with mushroom sauce and its onion soup.",
+   "openText": "11:30-23:00; Sunday 17:00-23:00 (Phuket 101, Oct 2026). Google Maps shows 11:30-23:00 on Tuesday.",
+   "days": [],
+   "bestTime": "Dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Free Laguna shuttle above a minimum spend (Phuket 101)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/bangtao-beach-restaurants/",
+    "https://www.villa-phuket.com/magazine/?p=2769",
+    "https://www.google.com/maps/place/Black+Cat+Bar+%26+Restaurant/@7.9915346,98.3064652,17z/data=!3m1!4b1!4m6!3m5!1s0x305039d8dc47cbc5:0x1186d6a75773d1eb!8m2!3d7.9915346!4d98.3064652!16s%2Fg%2F1hf2m5d5r"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.3, open now, 11:30-23:00). Phuket 101 Bang Tao guide updated 23 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-melt-ice-cream-bang-tao",
+   "name": "Melt (ice cream)",
+   "nameThai": "",
+   "kind": "dessert",
+   "tags": [
+    "dessert",
+    "late-night"
+   ],
+   "area": "bang-tao",
+   "district": "Bang Tao (beach road)",
+   "island": "Phuket",
+   "lat": 7.984036,
+   "lng": 98.287305,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Melt ice cream, 69/53 Moo 3, Bang Tao Beach",
+   "placeId": "ChIJ02FwIjA5UDARutaAxs2VjHo",
+   "rating": 4.9,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "Prices not published online (Oct 2026).",
+   "dishes": [
+    "House-made ice cream and sorbet"
+   ],
+   "praise": "Google Maps 4.9 (Oct 2026). We found no independent review.",
+   "watchOut": "Google only.",
+   "description": "An ice cream shop on the Bang Tao beach road, open late for dessert after dinner in Cherngtalay.",
+   "openText": "12:00-23:30 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "After dinner.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Melt/data=!4m7!3m6!1s0x30503930227061d3:0x7a8c95cdc680d6ba!8m2!3d7.9840356!4d98.2873053!16s%2Fg%2F11yjn4bt1y!19sChIJ02FwIjA5UDARutaAxs2VjHo"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.9, open now, 12:00-23:30). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-pru-trisara",
+   "name": "PRU (Trisara)",
+   "nameThai": "พรุ",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "booking-needed"
+   ],
+   "area": "layan",
+   "district": "Trisara (between Layan and Nai Thon)",
+   "island": "Phuket",
+   "lat": 8.038477,
+   "lng": 98.276724,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "PRU Restaurant, Trisara, 60/1 Moo 6 Srisoonthorn Road, Cherngtalay",
+   "placeId": "ChIJEzq5U284UDARMU-I3GW73kY",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "One Michelin star, Michelin Guide Thailand 2026",
+   "priceLevel": 4,
+   "priceText": "The PRU Experience tasting menu 7,500++ THB a person; lunch experience 4,000++ THB (official site, Oct 2026).",
+   "dishes": [
+    "'King of the Fruits': durian with caviar and sea grapes",
+    "Seasonal tasting menu from the restaurant farm, with fermenting and preserving"
+   ],
+   "praise": "The only Michelin-starred restaurant in Phuket in the 2026 guide; the inspector describes a seasonal menu from its own farm and trusted Thai suppliers, with a short kitchen visit.",
+   "watchOut": "Set menu only, limited seats; book weeks ahead for 8. The most expensive meal in this list.",
+   "description": "Phuket's only Michelin-star restaurant, at Trisara resort. A farm-to-table tasting menu by chef Jimmy, with drinks in the lounge and a kitchen visit.",
+   "openText": "Dinner Tue-Sat, seatings 17:45-19:00; lunch Fri-Sat, 12:30 and 13:00 (official site, Oct 2026).",
+   "days": [
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "bestTime": "Dinner, first seating.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Book on prurestaurant.com or reservations@prurestaurant.com; tell them about allergies and the group size early."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/pru"
+    },
+    {
+     "label": "Website",
+     "url": "https://www.prurestaurant.com/"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/pru",
+    "https://www.prurestaurant.com/",
+    "https://www.phuket101.net/nai-thon-beach-restaurants/",
+    "https://www.google.com/maps/place/PRU+%E0%B8%9E%E0%B8%A3%E0%B8%B8/data=!4m7!3m6!1s0x3050386f53b93a13:0x46debb65dc884f31!8m2!3d8.0384773!4d98.276724!16s%2Fg%2F11c5s_q36l!19sChIJEzq5U284UDARMU-I3GW73kY"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, 17:30-22:30, pin at Trisara). Michelin page shows the star (2026 list, page 2); official site with prices.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-shameena-nai-thon",
+   "name": "Shameena Restaurant & Lounge",
+   "nameThai": "",
+   "kind": "thai",
+   "tags": [
+    "vegetarian-friendly",
+    "local-favourite"
+   ],
+   "area": "nai-thon",
+   "district": "Nai Thon (across the road from the beach)",
+   "island": "Phuket",
+   "lat": 8.059094,
+   "lng": 98.278098,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Shameena Restaurant & Lounge, Nai Thon Beach",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "'Reasonable for the location' (Phuket 101, Mar 2026); no prices online.",
+   "dishes": [
+    "A short menu of about 30 Thai classics cooked by the owner",
+    "Vegetarian, vegan and gluten-free versions"
+   ],
+   "praise": "Phuket 101's Nai Thon guide (Mar 2026) says each dish is freshly made with quality ingredients and the food is 'bold and authentic'.",
+   "watchOut": "Small family place: for 8, call ahead.",
+   "description": "A small family-run Thai restaurant across the road from quiet Nai Thon Beach, where the owner cooks a short menu herself.",
+   "openText": "Closes 22:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch after a swim at Nai Thon.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/nai-thon-beach-restaurants/",
+    "https://www.google.com/maps/place/Shameena+Restaurant+%26+Lounge/@8.0590943,98.2780983,17z/data=!3m1!4b1!4m6!3m5!1s0x3050478fba90afab:0xa09fba9c8f238dcb!8m2!3d8.0590943!4d98.2780983!16s%2Fg%2F11b6_szgxd"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, closes 22:00, pin at Nai Thon). Phuket 101 Nai Thon guide updated 12 Mar 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "natural-restaurant-airport",
+   "name": "Natural Restaurant (airport branch)",
+   "nameThai": "ครัวธรรมชาติ สนามบิน",
+   "kind": "southern-thai",
+   "tags": [
+    "seafood",
+    "group-friendly",
+    "late-night"
+   ],
+   "area": "nai-yang",
+   "district": "Nai Yang (near the airport)",
+   "island": "Phuket",
+   "lat": 8.093333,
+   "lng": 98.314575,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Natural Restaurant Airport, 3/10 Moo 1, Baan Nai Yang, Sakhu",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 3000,
+   "reviewsSource": "more than 3,000 Google reviews (guide data, Oct 2026)",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "Mid-range; the restaurant's own price level is ฿฿ (official site, Oct 2026).",
+   "dishes": [
+    "Andaman fish and prawns",
+    "Southern curries made with house curry pastes",
+    "Spicy Thai salads"
+   ],
+   "praise": "Google Maps 4.8 (Oct 2026) from more than 3,000 reviews; Phuket 101 has a page on this branch.",
+   "watchOut": "Busy at lunch. Pick the branch at 3/10 Moo 1, Baan Nai Yang, not the Phuket Town one.",
+   "description": "Family-run Southern Thai restaurant since 1992 in a garden with a waterfall, 5 minutes from the airport. A relaxed last meal before a flight.",
+   "openText": "Daily 07:00-00:30 (Google Maps and official site, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch on the departure day, before 12:00.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on Chope through the official site."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://naturalphuket.com/"
+    },
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/natural-restaurant-airport/"
+    }
+   ],
+   "sources": [
+    "https://naturalphuket.com/",
+    "https://www.phuket101.net/natural-restaurant-airport/",
+    "https://www.google.com/maps/place/Natural+Restaurant%E2%80%8B/@8.0933334,98.3145749,17z/data=!3m1!4b1!4m6!3m5!1s0x305049d68f820357:0x9632e253f51f1249!8m2!3d8.0933334!4d98.3145749!16s%2Fg%2F11qnljx8kg"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 07:00-00:30, same pin as the guide).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-lertrod-kitchen-nai-yang",
+   "name": "Lertrod Kitchen",
+   "nameThai": "ครัวเลิศรส ภูเก็ต",
+   "kind": "thai",
+   "tags": [
+    "michelin",
+    "seafood",
+    "local-favourite",
+    "group-friendly"
+   ],
+   "area": "nai-yang",
+   "district": "Sakhu (Nai Yang Road, near the airport)",
+   "island": "Phuket",
+   "lat": 8.100365,
+   "lng": 98.307341,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Lertrod Kitchen, 17/7 Moo 1, Nai Yang Road, Sakhu",
+   "placeId": "",
+   "rating": 4.4,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 2,
+   "priceText": "No menu prices online (Oct 2026). Michelin price level ฿฿.",
+   "dishes": [
+    "Southern Thai and Thai-Chinese seafood dishes",
+    "Noodles, rice dishes, salads and soups"
+   ],
+   "praise": "Michelin's inspector (2026) tags it 'eat like a local': a simple shophouse with a long menu of central, Thai-Chinese and Southern dishes, focused on seafood, with spice adjusted on request.",
+   "watchOut": "Cash only. Plain shophouse room with air-con.",
+   "description": "A simple local seafood restaurant in a shophouse on the road to Nai Yang Beach, a few minutes from the airport. Cheaper and more local than the resorts nearby.",
+   "openText": "Daily 10:00-22:00 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch or dinner on an airport day.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Call +66 76 619 900 to book for 8."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/lertrod"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/lertrod",
+    "https://foodle.pro/restaurants/michelin-star-restaurants/c-thailand/sakhu/year-2025",
+    "https://www.google.com/maps/place/LERTROD+KITCHEN/@8.1003653,98.3073411,17z/data=!3m1!4b1!4m6!3m5!1s0x3050474785646c4d:0xb978b01cd034f452!8m2!3d8.1003653!4d98.3073411!16s%2Fg%2F11gjm3rbq0"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.4, open now, 10:00-22:00, pin on Nai Yang Rd Soi 7). Michelin page (2026 list).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-black-ginger-nai-yang",
+   "name": "Black Ginger (The Slate)",
+   "nameThai": "",
+   "kind": "southern-thai",
+   "tags": [
+    "seafood",
+    "dessert",
+    "booking-needed"
+   ],
+   "area": "nai-yang",
+   "district": "Nai Yang (The Slate resort)",
+   "island": "Phuket",
+   "lat": 8.085162,
+   "lng": 98.298309,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Black Ginger, The Slate, 116 Moo 1, Sakhu, Nai Yang",
+   "placeId": "",
+   "rating": 4.2,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": 728,
+   "reviewsSource": "Google count quoted by Phuket 101, Oct 2024",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 3,
+   "priceText": "Fresh Phuket spring rolls 310 THB, fish cakes 290 THB, steamed whole snapper with lime 620 THB, coconut ice cream 110 THB (Phuket 101, Oct 2024).",
+   "dishes": [
+    "Poh pia sod: fresh Phuket spring rolls you roll yourself",
+    "Pla kapong nueng manao: steamed snapper with chilli, garlic and lime",
+    "Crispy prawns with battered cha-plu leaves",
+    "Coconut ice cream and bua loy"
+   ],
+   "praise": "Phuket 101's Nai Yang guide (Oct 2026) calls it 'one of Phuket's best Thai restaurants' and a meal 'you remember'.",
+   "watchOut": "Expensive and far from Patong. Google rating is 4.2, lower than the praise.",
+   "description": "A dark wooden Thai house on a lagoon at The Slate, reached by a small raft. Southern Thai food for one special dinner near the airport.",
+   "openText": "Daily 17:30-23:00 (Google Maps, Oct 2026); Phuket 101 gives 18:00-23:00.",
+   "days": [],
+   "bestTime": "Dinner the night before an early flight.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on blackginger.com or 076 327 006."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://www.blackginger.com/"
+    },
+    {
+     "label": "Phuket 101",
+     "url": "https://www.phuket101.net/black-ginger-restaurant/"
+    }
+   ],
+   "sources": [
+    "https://www.phuket101.net/black-ginger-restaurant/",
+    "https://www.phuket101.net/nai-yang-beach-restaurants/",
+    "https://www.google.com/maps/place/Black+Ginger+%7C+Thai+Restaurant+%7C+The+Slate,+Phuket/@8.085162,98.298309,17z/data=!3m1!4b1!4m6!3m5!1s0x305047d1f2bed697:0x4c9d940f809c3e57!8m2!3d8.085162!4d98.298309!16s%2Fg%2F11bwkppkql"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.2, 17:30-23:00, pin at The Slate). Phuket 101 review (Oct 2024) and Nai Yang guide updated 5 Oct 2026.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-toh-daeng-mai-khao",
+   "name": "Toh Daeng at Baan Ar Jor",
+   "nameThai": "โต๊ะแดง บ้านอาจ้อ",
+   "kind": "southern-thai",
+   "tags": [
+    "pork",
+    "seafood",
+    "booking-needed",
+    "local-favourite"
+   ],
+   "area": "mai-khao",
+   "district": "Mai Khao (Thep Krasattri Road, near the airport)",
+   "island": "Phuket",
+   "lat": 8.156787,
+   "lng": 98.305127,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Toh Daeng at Baan Ar Jor, 102 Thep Krasattri Road, Mai Khao",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "The restaurant says Bib Gourmand every year 2021-2026; we did not find it on the online 2026 Michelin list (Oct 2026)",
+   "priceLevel": 2,
+   "priceText": "Prices are on the menu page of the official site, not on the home page (Oct 2026).",
+   "dishes": [
+    "Mee krob goong: crispy sweet noodles with prawns",
+    "Kaeng tu mee: Peranakan fish curry",
+    "Yam yanat: Phuket pineapple salad",
+    "Braised pork belly"
+   ],
+   "praise": "Google Maps 4.7 (Oct 2026). Its own site lists a ThaiSELECT Signature award (2023) and a Thailand Best Local Food 2026 award for its pineapple salad.",
+   "watchOut": "Only five communal tables: book. Last order 20:30.",
+   "description": "Phuket Hokkien home cooking in a 1936 Sino-colonial mansion at Mai Khao, ten minutes from the airport. Profits go to the local school.",
+   "openText": "Daily 10:00-22:00, last order 20:30 (official site and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch on an airport day.",
+   "score": 4,
+   "pick": true,
+   "tips": [
+    "Book on 062 459 8889.",
+    "Order the braised pork belly and the crispy noodles for the table."
+   ],
+   "links": [
+    {
+     "label": "Website",
+     "url": "https://tohdaengphuket.com/"
+    }
+   ],
+   "sources": [
+    "https://tohdaengphuket.com/",
+    "https://foodle.pro/restaurants/michelin-star-restaurants/c-thailand/mai-khao/year-2025",
+    "https://www.theworldofstreetfood.com/2026/02/toh-daeng-bang-kachao-upscale-phuket.html",
+    "https://www.google.com/maps/place/Toh+Daeng+at+Baan+Ar+Jor/@8.1567873,98.3051271,17z/data=!4m9!3m8!1s0x305045907782df2d:0xd9cff4f5cde8184!5m2!4m1!1i2!8m2!3d8.1567873!4d98.3051271!16s%2Fg%2F11fct1r1rq"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, open, 10:00-22:00, pin on Thep Krasattri Rd). Official site (awards, hours). Foodle lists it under Michelin 2025; it is not on guide.michelin.com in Oct 2026, so the Michelin claim is the restaurant's own.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-rimpan-seafood-mai-khao",
+   "name": "Rimpan Seafood",
+   "nameThai": "ครัวริมพาน ซีฟู้ด",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "local-favourite",
+    "view"
+   ],
+   "area": "mai-khao",
+   "district": "Mai Khao (north tip, near Sarasin Bridge)",
+   "island": "Phuket",
+   "lat": 8.199538,
+   "lng": 98.296997,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Rimpan Seafood, Mai Khao, Thalang",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "No prices online (Oct 2026).",
+   "dishes": [
+    "Grilled and steamed fish, prawns, crab and shellfish",
+    "Local Southern curries"
+   ],
+   "praise": "Phuket 101's guide to seaside local restaurants calls it 'small but great', a Phuket local restaurant 'hidden in plain sight' near the bridge to the mainland; Google Maps 4.5 (Oct 2026).",
+   "watchOut": "Far north: about 15 minutes beyond the airport. Closes at 21:00.",
+   "description": "A small local seafood restaurant by the water at the very north of Phuket, near Sarasin Bridge. Worth it if you are driving to Phang Nga or Khao Lak.",
+   "openText": "11:00-21:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch.",
+   "score": 3,
+   "pick": false,
+   "tips": [],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/seaside-local-restaurants-in-phuket",
+    "https://www.google.com/maps/place/Rimpan+Seafood/@8.1995376,98.2969972,17z/data=!3m1!4b1!4m6!3m5!1s0x30504546354fe829:0x6799248f2e9d354f!8m2!3d8.1995376!4d98.2969972!16s%2Fg%2F11g_z4194v"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open, closes 21:00, pin at Mai Khao). Phuket 101 seaside local restaurants guide (Sep 2024).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-krua-baan-platong-thalang",
+   "name": "Krua Baan Platong",
+   "nameThai": "ครัวบ้านปลาทอง",
+   "kind": "southern-thai",
+   "tags": [
+    "michelin",
+    "pork",
+    "budget",
+    "local-favourite",
+    "booking-needed"
+   ],
+   "area": "thalang",
+   "district": "Thalang (Thep Krasattri Road)",
+   "island": "Phuket",
+   "lat": 7.996781,
+   "lng": 98.355466,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Krua Baan Platong, 167/1 Moo 5, Thep Krasattri Road, Si Sunthon, Thalang",
+   "placeId": "",
+   "rating": 4.6,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Bib Gourmand, Michelin Guide Thailand 2026",
+   "priceLevel": 1,
+   "priceText": "Michelin price level ฿ (the lowest); no menu prices online (Oct 2026).",
+   "dishes": [
+    "Moo sam chan nueng: steamed pork belly with Southern budu dipping sauce",
+    "Stir-fried banana stalk with shrimps and shrimp paste"
+   ],
+   "praise": "Michelin's inspector (2026) praises 'melt-in-your-mouth steamed pork belly' with budu sauce and home-style Southern food from quality local ingredients.",
+   "watchOut": "Cash only. Michelin strongly advises booking and pre-ordering.",
+   "description": "A townhouse with an open garden on the main road through Thalang, cooking home-style Southern Thai food. One of three Bib Gourmand restaurants in this part of the island, and strong on pork.",
+   "openText": "Daily 11:30-20:00 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch; on the way to the airport or the north beaches.",
+   "score": 5,
+   "pick": true,
+   "tips": [
+    "Call +66 62 962 2563 to book and pre-order the steamed pork belly."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-baan-platong"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-baan-platong",
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurants/bib-gourmand",
+    "https://www.google.com/maps/place/Krua+Baan+Platong/@7.9967806,98.3554663,17z/data=!3m1!4b1!4m6!3m5!1s0x305036fcfcddd2ab:0x1a3292ff403ecac4!8m2!3d7.9967806!4d98.3554663!16s%2Fg%2F11f5g63sg0"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.6, open, closes 20:00, pin on Thep Krasattri Rd). Michelin 2026 Bib Gourmand list (18 in Phuket, this one included); Michelin page with hours and dishes.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-jampa-thalang",
+   "name": "Jampa",
+   "nameThai": "",
+   "kind": "fine-dining",
+   "tags": [
+    "michelin",
+    "vegetarian-friendly",
+    "booking-needed"
+   ],
+   "area": "thalang",
+   "district": "Thalang (Tri Vananda, Thep Krasattri)",
+   "island": "Phuket",
+   "lat": 8.039401,
+   "lng": 98.317468,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "JAMPA Restaurant, The Community House, Tri Vananda, Thep Krasatti, Thalang",
+   "placeId": "",
+   "rating": 4.7,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 3,
+   "priceText": "A-la-carte all day and a lunch tasting menu; prices on jamparestaurant.com. Michelin price level ฿฿฿.",
+   "dishes": [
+    "The 'Jampa Experience' seasonal lunch menu",
+    "Four-course wood-fired lunch at the lakeside Hideaway",
+    "Plant-forward menu"
+   ],
+   "praise": "Michelin's inspector (2026) recommends the lunchtime Jampa Experience for its natural, seasonal flavours.",
+   "watchOut": "Closed Tuesday and Wednesday. European food from Thai produce, not Thai food.",
+   "description": "A farm-to-table restaurant at the Tri Vananda wellness estate in Thalang, with an all-day menu and a seasonal lunch menu. European cooking with Thai produce.",
+   "openText": "Thu-Mon 12:00-22:00; closed Tue and Wed (Michelin, Oct 2026).",
+   "days": [
+    "Mon",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "bestTime": "Lunch.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Book on jamparestaurant.com or +66 76 342 122."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jampa"
+    },
+    {
+     "label": "Website",
+     "url": "https://jamparestaurant.com"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jampa",
+    "https://www.google.com/maps/place/JAMPA+Restaurant/@8.0394011,98.3174679,17z/data=!3m1!4b1!4m6!3m5!1s0x30503728fdc0aee9:0xe07daddf9e5f321b!8m2!3d8.0394011!4d98.3174679!16s%2Fg%2F11jz95zthl"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.7, closed today Tuesday, pin at Tri Vananda). Michelin page (2026 list).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-ban-mae-tao-khanom-jeen-thalang",
+   "name": "Ban Mae Tao's Khanom Jeen",
+   "nameThai": "ขนมจีนบ้านแม่เฒ่า",
+   "kind": "noodles",
+   "tags": [
+    "breakfast",
+    "budget",
+    "local-favourite"
+   ],
+   "area": "thalang",
+   "district": "Si Sunthon (inland from Cherngtalay)",
+   "island": "Phuket",
+   "lat": 7.992813,
+   "lng": 98.345955,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Ban Mae Tao's Khanom Jeen, Si Sunthon, Thalang",
+   "placeId": "",
+   "rating": 4.8,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 1,
+   "priceText": "No prices online (Oct 2026).",
+   "dishes": [
+    "Khanom jeen: fresh rice noodles with Southern curries (fish curry, nam ya) and a tray of fresh vegetables"
+   ],
+   "praise": "Google Maps 4.8 (Oct 2026). Khanom jeen is the classic Phuket breakfast. No independent review found.",
+   "watchOut": "Google only. Thai-only menu; curries can be very spicy.",
+   "description": "A local khanom jeen shop for the Phuket breakfast of rice noodles with curry and free vegetables, on the way inland from Bang Tao.",
+   "openText": "09:00-19:00 (Google Maps, Tuesday hours, Oct 2026).",
+   "days": [],
+   "bestTime": "Breakfast, 09:00-11:00, before the curries sell out.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Another khanom jeen shop on the main road north: Khanom Jeen Jee-Liu & Ba Chang, 355/3 Thep Krasattri Road (07:40-15:00, Google 4.4)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.google.com/maps/place/Ban+Mae+Tao's+Khanom+Jeen/@7.9928127,98.3459546,17z/data=!3m1!4b1!4m6!3m5!1s0x3050371d9526042d:0xa44a3c62a9f37685!8m2!3d7.9928127!4d98.3459546!16s%2Fg%2F11gk8q60t8"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.8, open, 09:00-19:00, plus code X8VW+49G). Google only.",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-peang-prai-bang-pae",
+   "name": "Peang-Prai (Bang Pae waterfall)",
+   "nameThai": "ร้านอาหารเพียงไพร",
+   "kind": "southern-thai",
+   "tags": [
+    "michelin",
+    "seafood",
+    "group-friendly"
+   ],
+   "area": "thalang",
+   "district": "Pa Khlok (entrance to Bang Pae waterfall)",
+   "island": "Phuket",
+   "lat": 8.041706,
+   "lng": 98.395453,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Peang Prai Restaurant, Soi Namtok Bang Pae, Pa Khlok, Thalang",
+   "placeId": "",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": "Michelin Guide Thailand 2026, listed (Selected)",
+   "priceLevel": 2,
+   "priceText": "No menu prices online (Oct 2026). Michelin price level ฿฿.",
+   "dishes": [
+    "Seasonal local clams stir-fried with chilli paste",
+    "Southern and Phuket dishes"
+   ],
+   "praise": "Michelin's inspector (2026) says the local Phuket dishes stand out, in two wooden pavilions in the forest at the waterfall entrance.",
+   "watchOut": "Closes at 20:00; lunch is the natural time.",
+   "description": "Two wooden pavilions in the forest at the gate of Bang Pae waterfall, serving traditional Thai and Southern dishes. Lunch after the waterfall or the gibbon project.",
+   "openText": "Daily 10:00-20:00 (Michelin and Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Lunch after Bang Pae waterfall.",
+   "score": 4,
+   "pick": false,
+   "tips": [
+    "Call +66 83 249 5428 to book for 8."
+   ],
+   "links": [
+    {
+     "label": "Michelin Guide",
+     "url": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/peang-prai"
+    }
+   ],
+   "sources": [
+    "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/peang-prai",
+    "https://www.google.com/maps/place/Peang+Prai+Restaurant/@8.0417055,98.3954527,17z/data=!3m1!4b1!4m6!3m5!1s0x3050360748873c7d:0xd7369ca03743226a!8m2!3d8.0417055!4d98.3954527!16s%2Fg%2F11b7xk1pvz"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open now, 10:00-20:00, pin at Bang Pae). Michelin page (2026 list).",
+   "imageCandidates": []
+  },
+  {
+   "id": "food-bang-pae-seafood-pa-khlok",
+   "name": "Bang Pae Seafood",
+   "nameThai": "ร้านอาหารบางแปซีฟู๊ด",
+   "kind": "seafood",
+   "tags": [
+    "seafood",
+    "local-favourite",
+    "view",
+    "group-friendly"
+   ],
+   "area": "ao-po",
+   "district": "Pa Khlok east coast (Bang Pae pier)",
+   "island": "Phuket",
+   "lat": 8.036655,
+   "lng": 98.415177,
+   "coordSource": "Google Maps pin, read 27 Oct 2026",
+   "coordConfidence": "high",
+   "gmapsQuery": "Bang Pae Seafood Restaurant, Soi Bang Toei, Pa Khlok",
+   "placeId": "ChIJzwgo2OFLUDARQSFtFfTL6K8",
+   "rating": 4.5,
+   "ratingSource": "Google Maps, 27 Oct 2026",
+   "reviews": null,
+   "reviewsSource": "",
+   "otherRatings": [],
+   "michelin": null,
+   "priceLevel": 2,
+   "priceText": "No prices online (Oct 2026); seafood by weight.",
+   "dishes": [
+    "Grilled and steamed fish, prawns, crab and shells",
+    "Local curries"
+   ],
+   "praise": "Phuket 101's guide to seaside local restaurants says it is busy on weekends with Thai people, expats and tourists; Google Maps 4.5 (Oct 2026).",
+   "watchOut": "Hard to find (Phuket 101). Closes at 20:00. Ask prices by weight first.",
+   "description": "A Thai seafood restaurant on the quiet east coast at Pa Khlok, where Thai families come at weekends. Mangroves and sea, far from the tourist beaches.",
+   "openText": "10:00-20:00 (Google Maps, Oct 2026).",
+   "days": [],
+   "bestTime": "Weekend lunch.",
+   "score": 3,
+   "pick": false,
+   "tips": [
+    "Laem Sai Seafood, further north on the same coast, has a big wooden terrace over the water (Phuket 101; Google 4.4, 10:30-20:30)."
+   ],
+   "links": [],
+   "sources": [
+    "https://www.phuket101.net/seaside-local-restaurants-in-phuket",
+    "https://www.google.com/maps/place/Bang+Pae+Seafood+Restaurant/data=!4m7!3m6!1s0x30504be1d82808cf:0xafe8cbf4156d2141!8m2!3d8.036655!4d98.415177!16s%2Fg%2F11r8bht93!19sChIJzwgo2OFLUDARQSFtFfTL6K8"
+   ],
+   "verification": "Google Maps 27 Oct 2026 (4.5, open now, 10:00-20:00, pin at Bang Pae pier). Phuket 101 seaside local restaurants guide (Sep 2024).",
+   "imageCandidates": []
+  }
+ ],
+ "existingChecked": [
+  {
+   "id": "malin-plaza-night-market",
+   "verdict": "kept",
+   "note": "Google Maps 27 Oct 2026: 4.4, open now, daily 11:00-23:00, pin unchanged. Phuket 101 still sends readers here as the main Patong street-food market (Oct 2026)."
+  },
+  {
+   "id": "the-kitchen-patong",
+   "verdict": "kept",
+   "note": "Google Maps 27 Oct 2026: hours 11:30-03:00, pin unchanged. Google 4.5 from 2,169 (via Restaurant Guru, Oct 2026), Trip.com 3.8. Listed in the Phuket 101 Patong guide, Oct 2026. Kept for its late hours, score 3."
+  },
+  {
+   "id": "pensook-view-cafe",
+   "verdict": "kept",
+   "note": "Google Maps 27 Oct 2026: 4.6, open, closes 22:00. Phuket 101 page updated 20 Sep 2026 (closed Wednesday)."
+  },
+  {
+   "id": "fruit-fusion-kamala",
+   "verdict": "kept",
+   "note": "Google Maps 27 Oct 2026: 4.7, open, 08:30-20:30. A breakfast cafe, score 3."
+  },
+  {
+   "id": "natural-restaurant-airport",
+   "verdict": "kept",
+   "note": "Google Maps 27 Oct 2026: 4.8, open, 07:00-00:30, pin unchanged."
+  }
+ ],
+ "notIncluded": [
+  {
+   "name": "Pan Yaah Seaview Restaurant (Kalim)",
+   "reason": "Closed: Google Maps shows it as permanently closed (27 Oct 2026), although some 2026 guides still list it."
+  },
+  {
+   "name": "Sea Hag (Patong, Soi Dr. Watthana)",
+   "reason": "Closed: Google Maps shows it as temporarily closed (27 Oct 2026)."
+  },
+  {
+   "name": "The Siam Supper Club (Laguna)",
+   "reason": "Closed: Google Maps shows it as permanently closed (27 Oct 2026)."
+  },
+  {
+   "name": "Ember Steakhouse (Bang Tao)",
+   "reason": "Closed: Google Maps shows it as temporarily closed (27 Oct 2026)."
+  },
+  {
+   "name": "The Dome BBQ Restaurant (Patong)",
+   "reason": "Closed: Google Maps shows it as permanently closed (27 Oct 2026)."
+  },
+  {
+   "name": "Meg Khram The Sunshine Restaurant (north Patong)",
+   "reason": "Bought or pushed ratings: 4.7 from more than 6,000 Google reviews, and recent reviews name staff and read as written on request; the food is pricey Thai with a view (Phuket 101, Dec 2024). Talung Thai and L'Arome cover sunset dinners better."
+  },
+  {
+   "name": "SIAM Phuket Seafood, Sultan's Grill, Amritsr, Cappadocia and similar beach-road restaurants (Patong)",
+   "reason": "Bought ratings pattern: 4.8-5.0 from 5,000-13,000 reviews each on Restaurant Guru and Google, on the most touristy street; no independent food praise."
+  },
+  {
+   "name": "Sunshine View Restaurant (Tri Trang hill)",
+   "reason": "Google 4.9 with thousands of reviews for a mixed Thai, Indian and European menu: likely pushed ratings."
+  },
+  {
+   "name": "Savoey Seafood and Patong Seafood (Patong beach road)",
+   "reason": "Tourist traps: seafood by weight at beach-road prices, Google 4.0-4.4; better seafood at Banzaan market or Somtum Yum Pao in Kalim."
+  },
+  {
+   "name": "No.6 Restaurant (Patong)",
+   "reason": "Tourist favourite with queues; Phuket 101 calls the food \"not bad\" but the service and atmosphere poor. No.9 and Kaab Gluay are better."
+  },
+  {
+   "name": "Baan Rim Pa (Kalim)",
+   "reason": "Weaker than the others: classic cliff-top Thai, but Wongnai 3.6 from 24 reviews; Acqua and L'Arome next door are stronger."
+  },
+  {
+   "name": "OTOP Market food street and Bangla Night Market (Patong)",
+   "reason": "Weaker than Malin Plaza and Banzaan: Phuket 101 (Oct 2026) says the OTOP food court is small and secondary. Bangla Night Market (18:00-02:00) is noted as a late option in The Kitchen tips."
+  },
+  {
+   "name": "Ma Doo Bua (Thalang)",
+   "reason": "Weaker than the others: lotus pond cafe with Google 3.7 (Oct 2026)."
+  },
+  {
+   "name": "Sizzle Rooftop and Tambu (Avista Hideaway, Tri Trang)",
+   "reason": "Michelin-listed, but left out to keep three special dinners near Patong (Acqua, L'Arome, Ta Khai); Tambu is Indian."
+  },
+  {
+   "name": "Thai Library (Trisara), Buabok (Amanpuri), hom (InterContinental)",
+   "reason": "Michelin-listed resort dining; left out for space, PRU, Jaras and Talung Thai cover the same resorts and style."
+  },
+  {
+   "name": "Tiffin by La Sala (Mai Khao)",
+   "reason": "Listed by Michelin in 2025 but not on the 2026 list."
+  },
+  {
+   "name": "Smokestack BBQ & Grill (Courtyard by Marriott Patong)",
+   "reason": "New hotel BBQ; only hotel press releases and a few mixed user reviews."
+  },
+  {
+   "name": "Nanami Yakiniku (Bang Tao), Holey Artisan Bakery (Porto de Phuket), Temptation by Vincent (Patong), Rim Ta Lay Seafood (Nai Yang), Laem Sai Seafood (Pa Khlok)",
+   "reason": "Google-only praise (4.4-4.9) and no independent reviews found; kept as tips or left for a later pass."
+  },
+  {
+   "name": "Ton Mayom (Thep Krasattri Road, Ratsada)",
+   "reason": "Michelin-listed, but in Ratsada, Phuket Town district: for the Phuket Town researcher."
+  },
+  {
+   "name": "Bang Tao and Cherngtalay night markets",
+   "reason": "Several small weekly markets (Phuket 101, Aug 2026: Wat Manik Tue and Thu 16:00-20:00, opposite the police station Wed and Sun, Soi Bangtao 2 Mon and Thu, Boat Avenue Friday 17:00-22:00); one Google listing is permanently closed and we could not match the others to their days, so we did not add one as a card."
+  }
+ ]
+}

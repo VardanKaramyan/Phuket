@@ -32,6 +32,9 @@ for (const [list, map] of [[events, underground.events || {}], [clubs, undergrou
 // Places → 18+ and Weed: the law-free basics and the price guides (the 23 Oct 2026 research, tools/merge-adult.mjs);
 // the venues and shops themselves are places with tier 'adult'
 const adult = readJSON('data/adult.json', {}) || {}
+// Places → Food: the basics for Phuket and Bangkok (the 27 Oct 2026 research, tools/merge-food.mjs); the places
+// themselves are places with category 'food' (new ones have tier 'food') and food fields (foodKind, dishes, praise …)
+const food = readJSON('data/food.json', {}) || {}
 const areasDoc = readJSON('data/areas.json', { items: [] })
 const areas = areasDoc.items || []
 const hotels = readJSON('data/hotels.json', { items: [] }).items || []
@@ -61,7 +64,8 @@ const dayLabel = (iso) => `${dowOf(iso)} ${Number(iso.slice(8, 10))} ${MON[Numbe
 // ---------- helpers ----------
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 const has = (v) => v != null && String(v).trim() !== ''
-const gmaps = (q, pid) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q) + (pid ? '&query_place_id=' + encodeURIComponent(pid) : '')
+// cid: Google's number for a listing (the food research has it from the Maps page), when there is no place id
+const gmaps = (q, pid, cid) => (!pid && /^\d+$/.test(cid || '') ? 'https://www.google.com/maps?cid=' + cid : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q) + (pid ? '&query_place_id=' + encodeURIComponent(pid) : ''))
 const gdir = (lat, lng) => `https://www.google.com/maps/dir/?api=1&destination=${(+lat).toFixed(6)},${(+lng).toFixed(6)}`
 const isUrl = (u) => typeof u === 'string' && /^https?:\/\//i.test(u)
 const textOf = (...parts) => esc(parts.flat().filter(Boolean).join(' ').toLowerCase())
@@ -168,7 +172,7 @@ const voteBar = (key, name) => `<div class="votes js-only" data-vote-item="${esc
 function actionRow({ item, q, mapKey, fav, extraBtns = '' }) {
   const parts = []
   const query = q || item.gmapsQuery
-  if (has(query)) parts.push(`<a class="btn primary" href="${gmaps(query, item.placeId)}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a>`)
+  if (has(query)) parts.push(`<a class="btn primary" href="${gmaps(query, item.placeId, q ? '' : item.gcid)}" target="_blank" rel="noopener">${icon('pin')}Google Maps</a>`)
   const d = dirOf(item)
   if (d) parts.push(`<a class="btn" href="${gdir(d.lat, d.lng)}" target="_blank" rel="noopener" data-dir="${+d.lat},${+d.lng}" data-dir-name="${esc(item.name || '')}">${icon('route')}${esc(d.label)}</a>`)
   ;(item.extraMaps || []).forEach((x) => parts.push(`<a class="btn" href="${gmaps(x.q, x.placeId)}" target="_blank" rel="noopener">${icon('pin')}${esc(x.label)}</a>`))
@@ -353,6 +357,53 @@ ${voteBar('pl:' + p.id, p.name)}
 ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
 </div></article>`
 }
+// Places → Food: every place with category 'food' (the older ones too), only under Food, where a Where row and a Kind
+// row replace the length row; best first in each place
+const FOOD_KIND = { thai: 'Thai', 'southern-thai': 'Southern Thai', noodles: 'Noodles', seafood: 'Seafood', pork: 'Pork', grill: 'Grill & BBQ', isaan: 'Isaan', 'street-food': 'Street food', market: 'Market', dessert: 'Dessert', cafe: 'Cafe', bakery: 'Bakery', 'fine-dining': 'Fine dining', international: 'International' }
+const FOOD_WHERE = { patong: 'Patong', 'kata-karon': 'Kata & Karon', south: 'Rawai & Chalong', town: 'Phuket Town', north: 'Kamala to the airport', andaman: 'Krabi & Phang Nga', gulf: 'Phangan & Samui', bangkok: 'Bangkok' }
+const FOOD_AREAS = { patong: ['patong'], 'kata-karon': ['karon', 'kata', 'kata-noi'], south: ['rawai', 'nai-harn', 'promthep', 'chalong', 'cape-panwa'], town: ['phuket-town', 'kathu', 'koh-kaew'], north: ['kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'thalang', 'ao-po'], andaman: ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'natai', 'koh-lipe', 'trang'], gulf: ['koh-phangan', 'koh-samui', 'koh-tao', 'surat-thani'], bangkok: BKK }
+const foodWhere = (p) => Object.keys(FOOD_AREAS).find((k) => FOOD_AREAS[k].includes(p.area)) || 'town'
+// the Kind row: a place can be under several (a Thai place known for its pork is under Thai and Pork)
+const FOOD_CHIPS = [['pick', 'Top picks'], ['pork', 'Pork'], ['seafood', 'Seafood'], ['thai', 'Thai'], ['sweet', 'Desserts & cafes'], ['street', 'Street food & markets'], ['michelin', 'Michelin'], ['fine', 'Special dinners'], ['grill', 'Grill & steak'], ['intl', 'International'], ['late', 'Late night'], ['group', 'Big groups']]
+function foodKeys(p) {
+  const k = p.foodKind, t = p.foodTags || []
+  return [p.pick && 'pick', (k === 'pork' || t.includes('pork')) && 'pork', (k === 'seafood' || t.includes('seafood')) && 'seafood', ['thai', 'southern-thai', 'noodles', 'isaan'].includes(k) && 'thai',
+    (['dessert', 'cafe', 'bakery'].includes(k) || t.includes('dessert')) && 'sweet', ['street-food', 'market'].includes(k) && 'street', (t.includes('michelin') || !!MICHELIN[p.michelin]) && 'michelin',
+    k === 'fine-dining' && 'fine', k === 'grill' && 'grill', k === 'international' && 'intl', t.includes('late-night') && 'late', t.includes('group-friendly') && 'group'].filter(Boolean)
+}
+const foodItems = places.filter((p) => p.category === 'food')
+// the markets the food research covered keep their own card (under All too) and show under Food as well
+const foodMarkets = places.filter((p) => p.category === 'market' && p.foodKind)
+// how widely the food is praised (the researcher's 3 to 5), half a point for a Top pick, then the Google rating
+const foodRank = (p) => (p.foodScore || (p.tier === 'must-see' ? 4 : 3)) + (p.pick ? 0.5 : 0) + ((p.rating || 4.3) - 4.3)
+const foodSorted = [...foodItems, ...foodMarkets].sort((a, b) => Object.keys(FOOD_WHERE).indexOf(foodWhere(a)) - Object.keys(FOOD_WHERE).indexOf(foodWhere(b)) || foodRank(b) - foodRank(a) || bayes(b) - bayes(a) || a.name.localeCompare(b.name))
+// under Food the cards take this order (CSS order: the markets' cards sit elsewhere in the list)
+const foodOrder = new Map(foodSorted.map((p, i) => [p.id, i + 1]))
+const PRICE_LEVEL = ['', '฿', '฿฿', '฿฿฿', '฿฿฿฿']
+// the Michelin Guide Thailand 2026 (tools/merge-food.mjs michelinOf)
+const MICHELIN = { '3 stars': 'Michelin 3 stars', '2 stars': 'Michelin 2 stars', '1 star': 'Michelin star', 'Bib Gourmand': 'Michelin Bib Gourmand', Selected: 'Michelin Guide' }
+function foodCard(p, mode) {
+  const kind = FOOD_KIND[p.foodKind] || 'Food'
+  const place = p.district || areaName(p.area) || p.island
+  const photo = images['places:' + p.id] && !(extra.dropImages || []).includes('places:' + p.id)
+  const pills = `<span class="pill food">${esc(kind)}</span>${p.pick ? '<span class="pill must">Top pick</span>' : ''}`
+  const google = p.rating ? `<span>${icon('star')}<b>${esc(trimNum(p.rating))}</b> ${p.reviews ? `${esc(p.reviews.toLocaleString('en-US'))} Google reviews` : 'on Google'}</span>` : ''
+  const others = (p.otherRatings || []).slice(0, 2).map((r) => `<span>${esc(r.site)} <b>${esc(trimNum(r.rating))}</b>${r.reviews ? ` ${esc(r.reviews.toLocaleString('en-US'))} reviews` : ''}</span>`).join('')
+  const mich = MICHELIN[p.michelin] ? `<span class="michelin" title="Michelin Guide Thailand 2026">${esc(MICHELIN[p.michelin])}</span>` : ''
+  const open = [p.openText, daysText(p)].filter(has).join(' · ')
+  return `<article class="card food-card${photo ? '' : ' no-photo'}" id="pl-${esc(p.id)}" style="--fo:${foodOrder.get(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Food" data-tier="food" data-only="tier" data-fwhere="${foodWhere(p)}" data-fkind="${foodKeys(p).join(' ')}" data-dur="" data-text="${textOf(p.name, p.nameThai, kind, place, areaName(p.area), p.island, p.dishes, (p.foodTags || []).map((t) => t.replace(/-/g, ' ')), p.michelin, 'food')}">
+${photo ? `${imgTag('places:' + p.id, p.name, mode, '')}<div class="tag-top">${pills}</div></div>` : ''}
+<div class="body">
+${photo ? '' : `<div class="food-pills">${pills}</div>`}
+<div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc([place, kind, PRICE_LEVEL[p.priceLevel] || ''].filter(has).join(' · '))}${has(p.nameThai) ? ` · <span lang="th">${esc(p.nameThai)}</span>` : ''}</p></div></div>
+${google || others || mich ? `<p class="rating">${google}${others}${mich}</p>` : ''}
+<p class="desc">${esc(p.description)}</p>
+${facts([['Order', (p.dishes || []).join('; ')], ['People say', p.praise], ['Price', p.feeText], ['Open', open], ['By car', driveText('pl:' + p.id, p)]])}
+${moreBlock('Good to know & links', [p.watchOut, ...(p.tips || [])], p.links, [['Best time', p.bestTime], ['Michelin', p.michelinNote], ['Getting there', p.gettingThere]])}
+${voteBar('pl:' + p.id, p.name)}
+${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
+</div></article>`
+}
 // piers come last, after food: in All they are a reference list, not places to visit
 const placesSorted = places.slice().sort((a, b) => BKK.includes(a.area) - BKK.includes(b.area) || (a.tier === 'pier') - (b.tier === 'pier') || (a.category === 'food') - (b.category === 'food') || (tierOrder[a.tier] ?? 3) - (tierOrder[b.tier] ?? 3) || placeIndex.get(a.id) - placeIndex.get(b.id))
 const trimNum = (x) => String(Math.round(x * 10) / 10)
@@ -375,17 +426,18 @@ function placeCard(p, mode) {
   const durLabel = durText(p)
   const [tierLabel, tierCls] = TIER[p.tier] || ['Place', 'soft']
   // Bangkok's places sit under their own tab only
-  const tierKeys = BKK.includes(p.area) ? 'bangkok' : [p.tier, p.category === 'food' ? 'food' : ''].filter(Boolean).join(' ')
+  const eats = p.category === 'market' && p.foodKind
+  const tierKeys = [BKK.includes(p.area) ? 'bangkok' : p.tier, eats ? 'food' : ''].filter(Boolean).join(' ')
   const days = daysText(p)
   const sub = [areaName(p.area), cap(p.category)].filter(has).join(' · ')
-  return `<article class="card" id="pl-${esc(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
+  return `<article class="card" id="pl-${esc(p.id)}"${eats ? ` style="--fo:${foodOrder.get(p.id)}" data-fwhere="${foodWhere(p)}" data-fkind="${foodKeys(p).join(' ')}"` : ''} data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
 ${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class="pill ${p.category === 'food' ? 'food' : tierCls}">${p.category === 'food' ? 'Food' : tierLabel}</span></div>${p.tier === 'pier' ? '' : `<div class="tag-bottom"><span class="pill">${icon('clock')}${esc(durLabel)}</span></div>`}</div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc(sub)}${has(p.nameThai) ? ` · <span lang="th">${esc(p.nameThai)}</span>` : ''}</p></div></div>
 <p class="desc">${esc(p.description)}</p>
 ${p.tier === 'pier' ? pierBody(p)
     : p.tier === 'tour' ? facts([['Time', durLabel], ['Price', p.priceText || p.feeText], ['Private boat', p.privateCharter], ['Includes', p.includes], ['Leaves from', p.departsFrom], ['Best time', p.bestTime]]) + cardLinks(piersOf(p).length > 1 ? 'The piers:' : 'The pier:', piersOf(p), pierShort)
-    : facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Cost', p.feeText], ['By car', driveText('pl:' + p.id, p)]])}
+    : facts([['Time', durLabel + (['1-2h', '2-3h'].includes(p.durationLabel) ? ' on site' : '')], ['Best time', p.bestTime], ['Eat', eats ? (p.dishes || []).join('; ') : ''], ['Cost', p.feeText], ['By car', driveText('pl:' + p.id, p)]])}
 ${moreBlock(p.tier === 'tour' ? 'Operators, getting there & tips' : 'Opening, getting there & tips', p.tips, [...(p.tier === 'tour' ? p.operators || [] : []), ...(p.links || [])], [['Open', [p.openText, days].filter(has).join(' · ')], ['Getting there', p.gettingThere], ['Facilities', p.facilities]])}
 ${voteBar('pl:' + p.id, p.name)}
 ${actionRow({ item: p, mapKey: 'place:' + p.id, fav: 'pl:' + p.id })}
@@ -649,7 +701,8 @@ function sunTimes(iso, lat = 7.89, lng = 98.3, tz = 7) {
   return { rise: t(Jt - w / 360), set: t(Jt + w / 360) }
 }
 // the agenda's market dots: markets, and food places open only on a few days (a restaurant closed on Wednesdays is not one)
-const markets = places.filter((p) => (p.days || []).length && (p.category === 'market' ? p.days.length < 7 : p.category === 'food' && p.days.length <= 3))
+// the new food places (tier 'food') add only their markets on Phuket
+const markets = places.filter((p) => (p.days || []).length && (p.category === 'market' ? p.days.length < 7 : p.category === 'food' && p.days.length <= 3 && (p.tier !== 'food' || (p.foodKind === 'market' && OFF_ISLAND[p.area] === undefined))))
 // the plan has the two of you on Koh Phangan on these nights, so its parties come first in the agenda
 const PLAN_PHANGAN = new Set(['2027-01-19', '2027-01-20', '2027-01-21', '2027-01-22'])
 function dayAgenda(iso) {
@@ -703,7 +756,7 @@ function homeView(mode) {
   const bestBrand = brands[0]
   const tiles = [
     ['events', 'events', 'Music & raves', plural(datedEvents.filter((e) => e.window === 'in').length, 'dated event') + ' in your dates'],
-    ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier', 'adult'].includes(p.tier)).length, 'spot'), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
+    ['places', 'places', 'Places to go', [plural(places.filter((p) => !['day-trip', 'tour', 'pier', 'adult', 'food'].includes(p.tier) && p.category !== 'food').length, 'spot'), ...(foodItems.length ? [plural(foodItems.length, 'place') + ' to eat'] : []), plural(places.filter((p) => p.tier === 'day-trip').length, 'day trip'), ...(places.some((p) => p.tier === 'tour') ? [plural(places.filter((p) => p.tier === 'tour').length, 'boat tour')] : [])].join(' · ')],
     ['areas', 'areas', 'Areas & map', plural(areas.length, 'area') + ', drawn on the map'],
     ['stay', 'stay', 'Where to stay', plural(hotels.length, 'villa') + ' + your own'],
     ...(buildName === 'standalone' ? [['spend', 'wallet', 'Spending', 'Who paid what, and who owes whom']] : []),
@@ -859,12 +912,13 @@ ${seg('sp-kind', 'data-kind', [['spend', 'Expense'], ['pay', 'Payment']], 'Expen
 <div class="amount-box"><input id="sp-amount" name="amount" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="0" aria-label="Amount"><div class="seg seg-cur" id="sp-curs" role="group" aria-label="Currency">${SPEND_CURS.map((c, i) => `<button type="button" data-cur="${c}" aria-pressed="${i === 0}" aria-label="${CUR_NAME[c]}s (${c})"><b>${c}</b><small>${CUR_NAME[c]}</small></button>`).join('')}</div>
 <p class="conv"><span id="sp-conv"></span><button class="link-btn" type="button" id="sp-rate-btn" hidden></button></p>
 <label class="rate-box" id="sp-rate-box" hidden><span id="sp-rate-l">THB for 1 AED</span><input id="sp-rate" inputmode="decimal" autocomplete="off"></label><p class="rate-warn" id="sp-rate-warn" hidden></p></div>
+<div class="owe" id="sp-owe" hidden><p class="owe-top"><span id="sp-owe-t"></span><b class="num" id="sp-owe-v"></b></p><span class="owe-bar" aria-hidden="true"><i id="sp-owe-bar"></i></span><div class="owe-foot"><span class="owe-after" id="sp-owe-after" aria-live="polite"></span><span class="owe-chips" role="group" aria-label="How much"><button class="chip" type="button" data-part="half" aria-pressed="false">Half</button><button class="chip" type="button" data-part="all" aria-pressed="false">All</button></span></div></div>
 <div class="what-row" data-only="spend"><button class="x-ic cat-tile" type="button" id="sp-cat" aria-expanded="false" aria-controls="sp-cats"></button><input id="sp-what" name="what" maxlength="80" enterkeyhint="done" placeholder="What was it?" aria-label="What was it"></div>
 <div class="cat-grid" id="sp-cats" role="group" aria-label="Category" hidden>${SPEND_CATS.map(([k, t]) => `<button type="button" class="cat-chip c-${k}" data-cat="${k}" aria-pressed="false">${icon(SPEND_ICON[k] || k)}<span>${t}</span></button>`).join('')}</div>
 <div class="quick" id="sp-quick" hidden></div>
 <div class="field"><button class="pick-row" type="button" id="sp-paid-row" aria-expanded="false" aria-controls="sp-paid-box"><span class="field-label" id="sp-paid-l">Paid by</span><span class="pick-val" id="sp-paid-val"></span>${icon('chev')}</button><div id="sp-paid-box" role="group" aria-labelledby="sp-paid-l" hidden>${people('data-paid')}</div></div>
 <div class="field" id="sp-by-field" hidden><button class="pick-row" type="button" id="sp-by-row" aria-expanded="false" aria-controls="sp-by-box"><span class="field-label" id="sp-by-l">Added by</span><span class="pick-val" id="sp-by-val"></span>${icon('chev')}</button><div id="sp-by-box" role="group" aria-labelledby="sp-by-l" hidden>${people('data-by')}</div></div>
-<div class="field" data-only="pay"><span class="field-label" id="sp-to-l">To</span><div role="group" aria-labelledby="sp-to-l">${people('data-to')}</div></div>
+<div class="field" data-only="pay"><button class="pick-row" type="button" id="sp-to-row" aria-expanded="false" aria-controls="sp-to-box"><span class="field-label" id="sp-to-l">To</span><span class="pick-val" id="sp-to-val"></span>${icon('chev')}</button><div id="sp-to-box" role="group" aria-labelledby="sp-to-l" hidden>${people('data-to')}</div></div>
 <div class="field" data-only="spend"><div class="field-row"><span class="field-label" id="sp-split-l">Split</span>${seg('sp-mode', 'data-mode', [['equal', 'Equally'], ['shares', 'Shares'], ['amounts', 'Amounts']], 'How to split')}</div><div id="sp-split" role="group" aria-labelledby="sp-split-l"></div><p class="split-sum" id="sp-sum" aria-live="polite"></p></div>
 <div class="field"><span class="field-label">Day</span><div class="day-pick"><button type="button" class="chip" data-day="0" aria-pressed="false">Today</button><button type="button" class="chip" data-day="-1" aria-pressed="false">Yesterday</button><input type="date" id="sp-date" name="date" required min="2026-06-01" max="2027-02-28" aria-label="Day"></div></div>
 <div class="field receipt-field"><span class="field-label" id="sp-photo-l">Receipt</span>
@@ -965,24 +1019,35 @@ function weedBasics() {
   const ranked = { title: 'How the shops are ranked', text: 'Best first in each place: Phuket, Koh Phangan, Koh Samui, Bangkok. The rank adds the Quality and Value scores (each out of 5, from what buyers say on Reddit and in reviews: good weed, and a good price for it), and half a point for a Top pick, the best shops in their area. Equal scores go by the Google rating and how many reviews it has. Almost every shop shows 4.8 to 5.0 on Google, so the stars alone say little.' }
   return basicsCard('weed-basics', 'Weed basics', [...prices, ranked, ...((adult.basics || {}).weed || [])], 'data-tier="adult weed" data-only="tier" data-where="phuket islands bangkok"')
 }
+// Places → Food, first cards: the food basics for Phuket and around (with how the places are picked), and for Bangkok
+function foodBasics() {
+  const fb = food.basics || {}
+  const how = { title: 'How the places are picked', text: 'Every place was chosen because many people praise its food: the Michelin Guide, Wongnai, Tripadvisor, Reddit, food writers and recent reviews, from 2025 and 2026 first, and each one was checked on Google Maps in October 2026. Best first in each place: how widely the food is praised, then the Top picks, then the Google rating. Prices: ฿ most dishes under 150 THB, ฿฿ 150-350 THB, ฿฿฿ 350-800 THB, ฿฿฿฿ more.' }
+  const away = Object.keys(FOOD_WHERE).filter((k) => k !== 'bangkok').join(' ')
+  return [basicsCard('food-basics', 'Food basics', [...(fb.phuket || []), how], `data-tier="food" data-only="tier" data-fwhere="${away}"`),
+    basicsCard('food-basics-bkk', 'Bangkok food basics', [...(fb.bangkok || []), how], 'data-tier="food" data-only="tier" data-fwhere="bangkok"')]
+}
 // the Places list: Phuket's places, the Bangkok basics (first under Bangkok), the clubs and festivals (most underground
-// first), Bangkok's places, then 18+ and Weed
+// first), Bangkok's places, Food (first its basics), then 18+ and Weed
 const clubWhere = (c) => (BKK.includes(c.area) ? 2 : ['koh-phangan', 'koh-samui', 'koh-tao'].includes(c.area) ? 1 : 0)
 const clubsSorted = clubs.slice().sort((a, b) => (b.undergroundScore || 0) - (a.undergroundScore || 0) || clubWhere(a) - clubWhere(b) || a.name.localeCompare(b.name))
 function placesList(mode) {
-  const rest = placesSorted.filter((p) => p.tier !== 'adult')
+  const rest = placesSorted.filter((p) => p.tier !== 'adult' && p.category !== 'food')
   const home = rest.filter((p) => !BKK.includes(p.area)), bkk = rest.filter((p) => BKK.includes(p.area))
   return [...home.map((p) => placeCard(p, mode)), bangkokBasics(), ...clubsSorted.map((c) => clubCard(c, mode)), ...bkk.map((p) => placeCard(p, mode)),
+    ...foodBasics(), ...foodSorted.filter((p) => p.category === 'food').map((p) => foodCard(p, mode)),
     adultBasics(), weedBasics(), ...adultSorted.map((p) => adultCard(p, mode))].filter(Boolean).join('\n')
 }
 function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">${esc(extra.placesIntro || 'Each place shows how long it takes, the best time to go and what it costs. In January the west-coast sea is calm and clear.')}</p></div>
 <div class="toolbar" data-toolbar="places">
-${chipRow('places', 'tier', [['all', 'All'], ...(clubs.length ? [['club', 'Clubs & festivals']] : []), ...([...places, ...clubs].some((x) => BKK.includes(x.area) && x.tier !== 'adult') ? [['bangkok', 'Bangkok']] : []), ...(adultItems.length ? [['adult', '18+']] : []), ...(adultItems.some((p) => p.category === 'cannabis') ? [['weed', 'Weed']] : []), ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['food', 'Food'], ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
-${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed', [], '', adultItems.length ? ' data-when="tier:!adult weed"' : '')}
+${chipRow('places', 'tier', [['all', 'All'], ...(foodItems.length ? [['food', 'Food']] : []), ...(clubs.length ? [['club', 'Clubs & festivals']] : []), ...([...places, ...clubs].some((x) => BKK.includes(x.area) && x.tier !== 'adult') ? [['bangkok', 'Bangkok']] : []), ...(adultItems.length ? [['adult', '18+']] : []), ...(adultItems.some((p) => p.category === 'cannabis') ? [['weed', 'Weed']] : []), ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
+${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed', [], '', ' data-when="tier:!adult weed food"')}
+${foodItems.length ? chipRow('places', 'fwhere', [['all', 'Everywhere'], ...Object.keys(FOOD_WHERE).filter((k) => foodItems.some((p) => foodWhere(p) === k)).map((k) => [k, FOOD_WHERE[k]])], 'Filter food by place', [], '', ' data-when="tier:food" hidden') : ''}
+${foodItems.length ? chipRow('places', 'fkind', [['all', 'All kinds'], ...FOOD_CHIPS.filter(([k]) => foodItems.some((p) => foodKeys(p).includes(k)))], 'Filter food by kind', [], '', ' data-when="tier:food" hidden') : ''}
 ${adultItems.length ? chipRow('places', 'where', [['all', 'Everywhere'], ...Object.keys(WHERE_NAME).filter((k) => adultItems.some((p) => adultWhere(p) === k)).map((k) => [k, WHERE_NAME[k]])], 'Filter by place', [], '', ' data-when="tier:adult weed" hidden') : ''}
-<input class="search" type="search" id="places-search" placeholder="Search beaches, temples, markets…" aria-label="Search places">
+<input class="search" type="search" id="places-search" placeholder="Search places, dishes, markets…" aria-label="Search places">
 </div>
 <div class="list" data-list="places">${placesList(mode)}</div>
 <p class="empty" data-empty="places" hidden>No places match these filters.</p>
@@ -1031,7 +1096,7 @@ function areasView(mode, opts) {
 <button class="chip" type="button" data-layer="event" aria-pressed="true"><i style="background:var(--pulse)"></i>Music</button>
 <button class="chip" type="button" data-layer="place gem" aria-pressed="true"><i style="background:var(--sea)"></i><i style="background:var(--leaf)"></i>Places</button>
 <button class="chip" type="button" data-layer="hotel" aria-pressed="true"><i style="background:var(--violet)"></i>Villas</button>
-${adultItems.some((p) => p.category === 'cannabis') ? '<button class="chip" type="button" data-layer="weed" aria-pressed="true"><i style="background:var(--weed)"></i>Weed</button>\n' : ''}<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>${adultItems.some((p) => p.category !== 'cannabis') ? '\n<button class="chip" type="button" data-layer="adult" aria-pressed="false"><i style="background:var(--orchid)"></i>18+</button>' : ''}
+${adultItems.some((p) => p.category === 'cannabis') ? '<button class="chip" type="button" data-layer="weed" aria-pressed="true"><i style="background:var(--weed)"></i>Weed</button>\n' : ''}${foodItems.length ? '<button class="chip" type="button" data-layer="food" aria-pressed="false"><i style="background:var(--food)"></i>Food</button>\n' : ''}<button class="chip" type="button" data-layer="money" aria-pressed="false"><i style="background:var(--sun)"></i>Money</button>${adultItems.some((p) => p.category !== 'cannabis') ? '\n<button class="chip" type="button" data-layer="adult" aria-pressed="false"><i style="background:var(--orchid)"></i>18+</button>' : ''}
 </div>
 </div>
 <p class="map-credit js-only" id="map-credit"></p>
@@ -1247,6 +1312,7 @@ function clientData(build) {
     const d = dirOf(it)
     const pt = { t, k, id, name, sub: amd.text(sub), lat: +(+it.lat).toFixed(6), lng: +(+it.lng).toFixed(6), q: it.gmapsQuery || name, card }
     if (it.placeId) pt.pid = it.placeId
+    else if (it.gcid) pt.cid = it.gcid
     if (!d) pt.nodir = 1
     else if (d.lat !== it.lat || d.lng !== it.lng) Object.assign(pt, { dlat: d.lat, dlng: d.lng, dlabel: d.label })
     pts.push(pt)
@@ -1262,6 +1328,7 @@ function clientData(build) {
   events.forEach((e) => { const ds = (e.dates || []).filter(inTrip); add('event', 'event', e, e.id, e.name, [popVenue(e.venue), ds.length ? popDates(ds) : popPattern(e.recurrence)].filter(has).join(' · '), 'ev-' + e.id) })
   places.forEach((p) => p.tier === 'adult'
     ? add('place', p.category === 'cannabis' ? 'weed' : 'adult', p, p.id, p.name, [ADULT_KIND[p.category], p.rating ? `${trimNum(p.rating)} on Google` : ''].filter(has).join(' · '), 'pl-' + p.id)
+    : p.category === 'food' ? add('place', 'food', p, p.id, p.name, [FOOD_KIND[p.foodKind] || 'Food', p.rating ? `${trimNum(p.rating)} on Google` : '', PRICE_LEVEL[p.priceLevel] || ''].filter(has).join(' · '), 'pl-' + p.id)
     : add('place', p.tier === 'hidden-gem' ? 'gem' : 'place', p, p.id, p.name, [(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : durText(p)].filter(has).join(' · '), 'pl-' + p.id))
   // villas: the tier as the line, and the trip total (priceOf) shown big in the popup
   hotels.forEach((h) => {
@@ -1391,10 +1458,11 @@ function kml() {
   const pm = (name, desc, lat, lng, style, it) => (Number.isFinite(+lat) && !(it && lowConf(it)) ? `<Placemark><name>${esc(name)}</name><description>${cdata(desc)}</description><styleUrl>#${style}</styleUrl><Point><coordinates>${lng},${lat},0</coordinates></Point></Placemark>` : '')
   const folder = (name, inner) => `<Folder><name>${esc(name)}</name>${inner}</Folder>`
   return `<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}${pinStyle('p-adult', '#c4285f')}${pinStyle('p-weed', '#86b812')}
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Phuket trip · Jan 2027</name>${styles}${pinStyle('p-event', '#ff5f93')}${pinStyle('p-place', '#0a7480')}${pinStyle('p-gem', '#c4285f')}${pinStyle('p-hotel', '#5a55c6')}${pinStyle('p-money', '#c98414')}${pinStyle('p-adult', '#c4285f')}${pinStyle('p-weed', '#86b812')}${pinStyle('p-food', '#e0601b')}
 ${folder('Areas', areasK)}
 ${folder('Music & raves', events.map((e) => pm(e.name, `${e.venue || ''}<br>${(e.dates || []).join(', ') || e.recurrence || ''}<br>${e.description || ''}`, e.lat, e.lng, 'p-event', e)).join(''))}
-${folder('Places to go', places.filter((p) => p.tier !== 'adult').map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
+${folder('Places to go', places.filter((p) => p.tier !== 'adult' && p.category !== 'food').map((p) => pm(p.name, `${[(TIER[p.tier] || [''])[0], p.tier === 'pier' ? '' : (DUR[p.durationLabel] || [''])[0]].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, p.tier === 'hidden-gem' ? 'p-gem' : 'p-place')).join(''))}
+${foodItems.length ? folder('Food', foodSorted.filter((p) => p.category === 'food').map((p) => pm(p.name, `${[FOOD_KIND[p.foodKind] || 'Food', p.district || areaName(p.area)].filter(has).join(' · ')}<br>${p.description || ''}`, p.lat, p.lng, 'p-food', p)).join('')) : ''}
 ${adultItems.length ? folder('18+ and weed', adultSorted.map((p) => pm(p.name, `${ADULT_KIND[p.category] || ''}<br>${p.description || ''}`, p.lat, p.lng, p.category === 'cannabis' ? 'p-weed' : 'p-adult', p)).join('')) : ''}
 ${folder('Hotels', hotels.map((h) => { const bv = baseOfVilla(h.id); return pm(h.name, `${HTIER[h.tier] || ''} · ${bv && bv.paid ? `Booked ${baseRange(bv)}: paid ${paidLine(bv.paid)}` : h.priceText || ''}<br>${h.whyStay || ''}`, h.lat, h.lng, 'p-hotel') }).join(''))}
 ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => pm(`${b.name} · ${x.name}`, `${x.hoursText || ''}<br>${b.summary || ''}`, x.lat, x.lng, 'p-money'))).join(''))}

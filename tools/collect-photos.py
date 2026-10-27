@@ -12,9 +12,11 @@ W = os.environ.get('PHUKET_WORKFLOWS_DIR', os.path.expanduser('~/.claude/project
 # w8: the stays' listing photos, picked by hand (no workflow): research/photos/w8/stays.json
 # w12: Bangkok's nights and places, the clubs and festivals (21 Oct 2026 research): research/photos/w12/*.json
 # w13: Places → 18+ and Weed (23 Oct 2026 research), the researchers' photo picks, each looked at: research/photos/w13/*.json
+# w14: Places → Food (27 Oct 2026): the places' own photos (their Michelin Guide page or website) and free dish photos
+#      (Wikimedia Commons) for the stand-ins and the category tiles, each looked at: research/photos/w14/{food,dishes}.json
 # w11: the Promthep area photo, picked by hand (20 Oct 2026): research/photos/w11/areas-south.json
 # w9: piers, boat tours, islands, places and events from the 19 Oct 2026 research; w10: the critic's four additions
-WAVES = {'w1': 'wf_37b202cc-9ea', 'w2': 'wf_7449d89f-29c', 'w3': 'wf_a1aa8663-200', 'w4': 'wf_f4d31692-ce6', 'w5': 'wf_14607df2-a14', 'w6': 'wf_566ae36a-956', 'w7': 'wf_cf058967-e2e', 'w8': None, 'w9': 'wf_24b94078-911', 'w10': 'wf_e63f8df1-e98', 'w11': None, 'w12': None, 'w13': None}
+WAVES = {'w1': 'wf_37b202cc-9ea', 'w2': 'wf_7449d89f-29c', 'w3': 'wf_a1aa8663-200', 'w4': 'wf_f4d31692-ce6', 'w5': 'wf_14607df2-a14', 'w6': 'wf_566ae36a-956', 'w7': 'wf_cf058967-e2e', 'w8': None, 'w9': 'wf_24b94078-911', 'w10': 'wf_e63f8df1-e98', 'w11': None, 'w12': None, 'w13': None, 'w14': None}
 
 extracted = {}
 for wave, wf in WAVES.items():

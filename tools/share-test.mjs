@@ -114,6 +114,34 @@ const foodTab = await p.evaluate(async () => {
   return out
 })
 check('Food cards only under Food, with the Where and Kind rows; Pork shows pork places; a link to one opens it under Food', !foodTab || (foodTab.all === 0 && foodTab.food > 20 && foodTab.other === 0 && foodTab.first === 'food-basics' && foodTab.where && foodTab.kind && !foodTab.dur && foodTab.pork !== false && foodTab.porkN > 3 && foodTab.reset && foodTab.link.shown && foodTab.link.tab === 'food'), JSON.stringify(foodTab))
+// Places → Food → a category: its subcategory row shows (no other), a subcategory and Good for narrow the list, a second
+// tap on a Good for chip turns it off, and under All every food row goes back to its first chip (the counts too)
+const foodCats = await p.evaluate(async () => {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  const bar = document.querySelector('[data-toolbar="places"]'), q = (s) => bar.querySelector(s)
+  if (!q('.chip[data-group="fkind"][data-value="pork"]') || !q('.chip[data-group="subpork"]')) return null
+  const shown = () => [...document.querySelectorAll('[data-list="places"] > .card')].filter((c) => !c.hidden && !c.classList.contains('basics'))
+  const has = (c, k, v) => (c.dataset[k] || '').split(' ').includes(v)
+  q('.chip[data-group="tier"][data-value="food"]').click(); await wait(100)
+  q('.chip[data-group="fkind"][data-value="pork"]').click(); await wait(100)
+  const subs = [...bar.querySelectorAll('.chips[data-when^="fkind:"]')].filter((r) => !r.hidden).map((r) => r.dataset.when)
+  const leg = q('.chip[data-group="subpork"]:not([data-value="all"])'); leg.click(); await wait(100)
+  const out = { subs, sub: leg.dataset.value, subOk: shown().length > 0 && shown().every((c) => has(c, 'fkind', 'pork') && has(c, 'subpork', leg.dataset.value)) }
+  const allN = Number(q('.chip[data-group="tier"][data-value="all"] .n').textContent)
+  q('.chip[data-group="subpork"][data-value="all"]').click(); await wait(100)
+  const good = q('.chip[data-group="fgood"]:not([data-value="all"])'); good.click(); await wait(100)
+  out.good = good.dataset.value; out.goodOk = shown().length > 0 && shown().every((c) => has(c, 'fgood', good.dataset.value) && has(c, 'fkind', 'pork'))
+  good.click(); await wait(100)
+  out.off = q('.chip[data-group="fgood"][aria-pressed="true"]').dataset.value
+  q('.chip[data-group="subpork"]:not([data-value="all"])').click(); await wait(100)
+  q('.chip[data-group="tier"][data-value="all"]').click(); await wait(100)
+  out.back = ['fkind', 'subpork', 'fgood'].map((g) => q(`.chip[data-group="${g}"][aria-pressed="true"]`).dataset.value).join(' ')
+  out.hidden = [...bar.querySelectorAll('.chips[data-when="tier:food"], .chips[data-when^="fkind:"]')].every((r) => r.hidden)
+  out.allN = allN; out.allShown = [...document.querySelectorAll('[data-list="places"] > .card')].filter((c) => !c.hidden).length
+  location.hash = 'places'; await wait(100)
+  return out
+})
+check('Food categories: one subcategory row, subcategory and Good for filter, Good for turns off, all reset under All', !foodCats || (foodCats.subs.join() === 'fkind:pork' && foodCats.subOk && foodCats.goodOk && foodCats.off === 'all' && foodCats.back === 'all all all' && foodCats.hidden && foodCats.allN === foodCats.allShown), JSON.stringify(foodCats))
 const evShare = await p.evaluate(async () => {
   location.hash = 'events'; await new Promise((r) => setTimeout(r, 300))
   const card = document.querySelector('#events .card[id^="ev-"]')

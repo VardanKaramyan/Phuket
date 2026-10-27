@@ -1,0 +1,544 @@
+{
+ "results": [
+  {
+   "key": "dish:khinkali",
+   "ok": true,
+   "file": "assets/raw/dish-khinkali.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Khinkali%2C_Restaurant_Aragvi.jpg/1280px-Khinkali%2C_Restaurant_Aragvi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khinkali,_Restaurant_Aragvi.jpg",
+   "credit": "Sandra C from Canada, Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:pizza",
+   "ok": true,
+   "file": "assets/raw/dish-pizza.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg/1280px-Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Neapolitan_pizza_at_Trappica_(48701940197).jpg",
+   "credit": "Bex Walton from London, England, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:pasta",
+   "ok": true,
+   "file": "assets/raw/dish-pasta.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Tagliatelle_rag%C3%B9_bolognese_01.jpg/1280px-Tagliatelle_rag%C3%B9_bolognese_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tagliatelle_rag%C3%B9_bolognese_01.jpg",
+   "credit": "https://www.flickr.com/photos/wordridden/, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:khao-kha-moo",
+   "ok": true,
+   "file": "assets/raw/dish-khao-kha-moo.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Khao_kha_moo_thailand.jpg/1280px-Khao_kha_moo_thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khao_kha_moo_thailand.jpg",
+   "credit": "Amin, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:kuay-jap",
+   "ok": true,
+   "file": "assets/raw/dish-kuay-jap.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Kuaichap_%28rolled_noodle_soup_with_intestines%29%2C_Chiang_Mai%2C_2018-07-28_%284%29.jpg/1280px-Kuaichap_%28rolled_noodle_soup_with_intestines%29%2C_Chiang_Mai%2C_2018-07-28_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kuaichap_(rolled_noodle_soup_with_intestines),_Chiang_Mai,_2018-07-28_(4).jpg",
+   "credit": "Bitterschoko, Wikimedia Commons",
+   "license": "CC0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:moo-krob",
+   "ok": true,
+   "file": "assets/raw/dish-moo-krob.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Khao_mu_krop.jpg/1280px-Khao_mu_krop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khao_mu_krop.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:moo-daeng",
+   "ok": true,
+   "file": "assets/raw/dish-moo-daeng.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/DFC_6062_Khao_Moo_Deng_roasted_pork_over_steamed_rice_with_rich_red_sauce_served_with_sliced_hard-boiled_eggs_and_fresh_cucumber.jpg/1280px-DFC_6062_Khao_Moo_Deng_roasted_pork_over_steamed_rice_with_rich_red_sauce_served_with_sliced_hard-boiled_eggs_and_fresh_cucumber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:DFC_6062_Khao_Moo_Deng_roasted_pork_over_steamed_rice_with_rich_red_sauce_served_with_sliced_hard-boiled_eggs_and_fresh_cucumber.jpg",
+   "credit": "PattayaPatrol, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:moo-kata",
+   "ok": true,
+   "file": "assets/raw/dish-moo-kata.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Bo_Put%2C_Ko_Samui_District%2C_Surat_Thani%2C_Thailand_-_panoramio_%284%29.jpg/1280px-Bo_Put%2C_Ko_Samui_District%2C_Surat_Thani%2C_Thailand_-_panoramio_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bo_Put,_Ko_Samui_District,_Surat_Thani,_Thailand_-_panoramio_(4).jpg",
+   "credit": "Anton10, Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:korean-bbq",
+   "ok": true,
+   "file": "assets/raw/dish-korean-bbq.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Korean.cuisine-Samgyeopsal-01.jpg/1280px-Korean.cuisine-Samgyeopsal-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Korean.cuisine-Samgyeopsal-01.jpg",
+   "credit": "by hellochris, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:satay",
+   "ok": true,
+   "file": "assets/raw/dish-satay.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Mu_satay_Bang_Sue.jpg/1280px-Mu_satay_Bang_Sue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mu_satay_Bang_Sue.jpg",
+   "credit": "Phoebus 28, Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:moo-ping",
+   "ok": true,
+   "file": "assets/raw/dish-moo-ping.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Mu_ping.jpg/1280px-Mu_ping.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mu_ping.jpg",
+   "credit": "Phoebus 28, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:bak-kut-teh",
+   "ok": true,
+   "file": "assets/raw/dish-bak-kut-teh.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Bak_Kut_Teh_in_Hong_Kong.jpg/1280px-Bak_Kut_Teh_in_Hong_Kong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bak_Kut_Teh_in_Hong_Kong.jpg",
+   "credit": "Ceeseven, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:ribs",
+   "ok": true,
+   "file": "assets/raw/dish-ribs.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Barbecued_-_Pork_ribs.jpg/1280px-Barbecued_-_Pork_ribs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Barbecued_-_Pork_ribs.jpg",
+   "credit": "Enrico BBQness, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:dim-sum",
+   "ok": true,
+   "file": "assets/raw/dish-dim-sum.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Dim_sum_collection_in_lunch.jpg/1280px-Dim_sum_collection_in_lunch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dim_sum_collection_in_lunch.jpg",
+   "credit": "Geoffreyrabbit, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:pad-thai",
+   "ok": true,
+   "file": "assets/raw/dish-pad-thai.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1280px-Phat_Thai_kung_Chang_Khien_street_stall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:khao-soi",
+   "ok": true,
+   "file": "assets/raw/dish-khao-soi.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg/1280px-Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg",
+   "credit": "Chainwit., Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:khanom-jeen",
+   "ok": true,
+   "file": "assets/raw/dish-khanom-jeen.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Khanom_chin_nam_ngiao.jpg/1280px-Khanom_chin_nam_ngiao.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khanom_chin_nam_ngiao.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:boat-noodles",
+   "ok": true,
+   "file": "assets/raw/dish-boat-noodles.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Boat_Noodles_with_sliced_beef_round_steak%2C_beef_ball%2C_braised_shank_and_tendon.jpg/1280px-Boat_Noodles_with_sliced_beef_round_steak%2C_beef_ball%2C_braised_shank_and_tendon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Boat_Noodles_with_sliced_beef_round_steak,_beef_ball,_braised_shank_and_tendon.jpg",
+   "credit": "Zheng Zhou, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:beef-noodles",
+   "ok": true,
+   "file": "assets/raw/dish-beef-noodles.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Kuai_tiao_nuea_pueai.jpg/1280px-Kuai_tiao_nuea_pueai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kuai_tiao_nuea_pueai.jpg",
+   "credit": "lazy fri13th, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:crab-curry",
+   "ok": true,
+   "file": "assets/raw/dish-crab-curry.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Phuket_Style_Crab_Curry_Kanomjean_Vermicelli_rice_noodle_with_blue_crab%2C_crab_meat_curry%2C_served_with_hard_boiled_egg%2C_pickle_carrot_and_papaya_%2825069887921%29.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Phuket_Style_Crab_Curry_Kanomjean_Vermicelli_rice_noodle_with_blue_crab,_crab_meat_curry,_served_with_hard_boiled_egg,_pickle_carrot_and_papaya_(25069887921).jpg",
+   "credit": "T.Tseng, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:noodle-soup",
+   "ok": true,
+   "file": "assets/raw/dish-noodle-soup.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Thai_noodle_soup%2C_Khao_Yai%2C_Thailand.jpg/1280px-Thai_noodle_soup%2C_Khao_Yai%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Thai_noodle_soup,_Khao_Yai,_Thailand.jpg",
+   "credit": "Vyacheslav Argenberg, Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:khao-man-gai",
+   "ok": true,
+   "file": "assets/raw/dish-khao-man-gai.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Hainanese_chicken_rice.jpg/1280px-Hainanese_chicken_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Hainanese_chicken_rice.jpg",
+   "credit": "Misaochan, Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:duck",
+   "ok": true,
+   "file": "assets/raw/dish-duck.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Roast_duck_and_rice.JPG/1280px-Roast_duck_and_rice.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Roast_duck_and_rice.JPG",
+   "credit": "Sakurai Midori, Wikimedia Commons",
+   "license": "CC BY 2.5",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:oyster-omelette",
+   "ok": true,
+   "file": "assets/raw/dish-oyster-omelette.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/DZ3_0635_Crispy_Thai-style_oyster_omelette_topped_with_fresh_scallions_-_a_savory_street-food_favorite_from_Sattahip.jpg/1280px-DZ3_0635_Crispy_Thai-style_oyster_omelette_topped_with_fresh_scallions_-_a_savory_street-food_favorite_from_Sattahip.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:DZ3_0635_Crispy_Thai-style_oyster_omelette_topped_with_fresh_scallions_-_a_savory_street-food_favorite_from_Sattahip.jpg",
+   "credit": "PattayaPatrol, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:gaeng-som",
+   "ok": true,
+   "file": "assets/raw/dish-gaeng-som.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Kaeng_som_kung.jpg/1280px-Kaeng_som_kung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kaeng_som_kung.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:kua-kling",
+   "ok": true,
+   "file": "assets/raw/dish-kua-kling.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Khua_Kling_Moo_Sab.jpg/1280px-Khua_Kling_Moo_Sab.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khua_Kling_Moo_Sab.jpg",
+   "credit": "Zheng Zhou, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:massaman",
+   "ok": true,
+   "file": "assets/raw/dish-massaman.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Massaman_curry%2C_Bang_Kapi%2C_Bangkok.jpg/1280px-Massaman_curry%2C_Bang_Kapi%2C_Bangkok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Massaman_curry,_Bang_Kapi,_Bangkok.jpg",
+   "credit": "Vee Satayamas, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:crab",
+   "ok": true,
+   "file": "assets/raw/dish-crab.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Steamed_crabs.jpg/1280px-Steamed_crabs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Steamed_crabs.jpg",
+   "credit": "Lilblackdog29, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:prawns",
+   "ok": true,
+   "file": "assets/raw/dish-prawns.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kung_yang.JPG/1280px-Kung_yang.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kung_yang.JPG",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:squid",
+   "ok": true,
+   "file": "assets/raw/dish-squid.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Plamuk_yang.jpg/1280px-Plamuk_yang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Plamuk_yang.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:clams",
+   "ok": true,
+   "file": "assets/raw/dish-clams.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Kraphao_hoi_lai.jpg/1280px-Kraphao_hoi_lai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kraphao_hoi_lai.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:fish",
+   "ok": true,
+   "file": "assets/raw/dish-fish.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Thai_steamed_fish_with_lime_juice.jpg/1280px-Thai_steamed_fish_with_lime_juice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Thai_steamed_fish_with_lime_juice.jpg",
+   "credit": "User:Mattes, Wikimedia Commons",
+   "license": "Public domain",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:curry",
+   "ok": true,
+   "file": "assets/raw/dish-curry.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Thai_green_chicken_curry_and_roti.jpg/1280px-Thai_green_chicken_curry_and_roti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Thai_green_chicken_curry_and_roti.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:som-tam",
+   "ok": true,
+   "file": "assets/raw/dish-som-tam.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3_%E0%B8%95%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%94_Tumtaad_%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88_01.jpg/1280px-%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3_%E0%B8%95%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%94_Tumtaad_%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3_%E0%B8%95%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%94_Tumtaad_%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88_01.jpg",
+   "credit": "Togsvfx, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:gai-yang",
+   "ok": true,
+   "file": "assets/raw/dish-gai-yang.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Kai_yang_CM.jpg/1280px-Kai_yang_CM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kai_yang_CM.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:fried-chicken",
+   "ok": true,
+   "file": "assets/raw/dish-fried-chicken.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Bankrueed_fried_chicken_wings.jpg/1280px-Bankrueed_fried_chicken_wings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bankrueed_fried_chicken_wings.jpg",
+   "credit": "Vee Satayamas, Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:mango-sticky-rice",
+   "ok": true,
+   "file": "assets/raw/dish-mango-sticky-rice.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Mango_sticky_rice.jpg/1280px-Mango_sticky_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mango_sticky_rice.jpg",
+   "credit": "Muzirian, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:roti",
+   "ok": true,
+   "file": "assets/raw/dish-roti.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Roti_kluai_khai_chiang_mai_04.jpg/1280px-Roti_kluai_khai_chiang_mai_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Roti_kluai_khai_chiang_mai_04.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:thai-pancakes",
+   "ok": true,
+   "file": "assets/raw/dish-thai-pancakes.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Khanom_bueang_01.jpg/1280px-Khanom_bueang_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khanom_bueang_01.jpg",
+   "credit": "Ilya Plekhanov, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:o-aew",
+   "ok": true,
+   "file": "assets/raw/dish-o-aew.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Oh_Aew.jpg/1280px-Oh_Aew.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Oh_Aew.jpg",
+   "credit": "Government of Thailand, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:shaved-ice",
+   "ok": true,
+   "file": "assets/raw/dish-shaved-ice.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Kakigori-aug2009-spoons.jpg/1280px-Kakigori-aug2009-spoons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Kakigori-aug2009-spoons.jpg",
+   "credit": "Nesnad, Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:ice-cream",
+   "ok": true,
+   "file": "assets/raw/dish-ice-cream.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Coconut_Ice_Cream%2C_Bangkok.jpg/1280px-Coconut_Ice_Cream%2C_Bangkok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Coconut_Ice_Cream,_Bangkok.jpg",
+   "credit": "Anilakeo, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:coffee",
+   "ok": true,
+   "file": "assets/raw/dish-coffee.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Cha_Yen_%26_Kaffer_Yen_-_Thai_Street_Food%2C_Worthing_2026-06-21.jpg/1280px-Cha_Yen_%26_Kaffer_Yen_-_Thai_Street_Food%2C_Worthing_2026-06-21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Cha_Yen_%26_Kaffer_Yen_-_Thai_Street_Food,_Worthing_2026-06-21.jpg",
+   "credit": "Andy Li, Wikimedia Commons",
+   "license": "CC0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:bakery",
+   "ok": true,
+   "file": "assets/raw/dish-bakery.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Arsicault_Bakery_croissants_%2824690473276%29.jpg/1280px-Arsicault_Bakery_croissants_%2824690473276%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arsicault_Bakery_croissants_(24690473276).jpg",
+   "credit": "Willis Lam, Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:steak",
+   "ok": true,
+   "file": "assets/raw/dish-steak.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Tomahawk_steaks_on_the_grill.jpg/1280px-Tomahawk_steaks_on_the_grill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tomahawk_steaks_on_the_grill.jpg",
+   "credit": "StoppedTime, Wikimedia Commons",
+   "license": "CC0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:burger",
+   "ok": true,
+   "file": "assets/raw/dish-burger.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Cultivated_hamburger%2C_2013.jpg/1280px-Cultivated_hamburger%2C_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Cultivated_hamburger,_2013.jpg",
+   "credit": "Mosa Meat, Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:tasting-menu",
+   "ok": true,
+   "file": "assets/raw/dish-tasting-menu.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Tot%C3%A8nes_ou_petits_calmars_farcis_aux_%C3%A9pinards_et_aux_pignons.jpg/1280px-Tot%C3%A8nes_ou_petits_calmars_farcis_aux_%C3%A9pinards_et_aux_pignons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tot%C3%A8nes_ou_petits_calmars_farcis_aux_%C3%A9pinards_et_aux_pignons.jpg",
+   "credit": "ADT 04, Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:night-market",
+   "ok": true,
+   "file": "assets/raw/dish-night-market.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/DFC_2094_Evening_buzz_at_a_busy_night_market_-_food_stalls_colorful_lights_and_people_strolling_through_the_crowded_aisle.jpg/1280px-DFC_2094_Evening_buzz_at_a_busy_night_market_-_food_stalls_colorful_lights_and_people_strolling_through_the_crowded_aisle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:DFC_2094_Evening_buzz_at_a_busy_night_market_-_food_stalls_colorful_lights_and_people_strolling_through_the_crowded_aisle.jpg",
+   "credit": "PattayaPatrol, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:mee-hokkien",
+   "ok": true,
+   "file": "assets/raw/dish-mee-hokkien.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vegetarian_fried_Hokkien_noodle.jpg/1280px-Vegetarian_fried_Hokkien_noodle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Vegetarian_fried_Hokkien_noodle.jpg",
+   "credit": "Cun Cun, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:kebab",
+   "ok": true,
+   "file": "assets/raw/dish-kebab.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/D%C3%B6ner_Kebab_with_french_fries_and_chili_sauce_2022-12-28_-_3.jpg/1280px-D%C3%B6ner_Kebab_with_french_fries_and_chili_sauce_2022-12-28_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:D%C3%B6ner_Kebab_with_french_fries_and_chili_sauce_2022-12-28_-_3.jpg",
+   "credit": "Almanta, Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:biryani",
+   "ok": true,
+   "file": "assets/raw/dish-biryani.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Khao_mok_kai_%28chicken_biryani%29%2C_Bangkok%2C_2018-10-09.jpg/1280px-Khao_mok_kai_%28chicken_biryani%29%2C_Bangkok%2C_2018-10-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Khao_mok_kai_(chicken_biryani),_Bangkok,_2018-10-09.jpg",
+   "credit": "Bitterschoko, Wikimedia Commons",
+   "license": "CC0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:jok",
+   "ok": true,
+   "file": "assets/raw/dish-jok.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Chinese_rice_congee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Chinese_rice_congee.jpg",
+   "credit": "Daiju Azuma, Wikimedia Commons",
+   "license": "CC BY-SA 2.5",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:thai-food",
+   "ok": true,
+   "file": "assets/raw/dish-thai-food.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Thai_lunch.jpg/1280px-Thai_lunch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Thai_lunch.jpg",
+   "credit": "Takeaway, Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  },
+  {
+   "key": "dish:thai-sweets",
+   "ok": true,
+   "file": "assets/raw/dish-thai-sweets.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Bualoy_kaiwan_-_Thai_food.JPG/1280px-Bualoy_kaiwan_-_Thai_food.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bualoy_kaiwan_-_Thai_food.JPG",
+   "credit": "User:Mattes, Wikimedia Commons",
+   "license": "Public domain",
+   "note": "A free photo of the dish (Wikimedia Commons), the stand-in for places without their own and the category tiles; looked at by hand on 27 Oct 2026."
+  }
+ ]
+}

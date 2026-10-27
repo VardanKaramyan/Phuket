@@ -995,6 +995,21 @@ html:not(.js) body:has(#money:target, #money :target) .tabbar a[href="#money"] {
 .food-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
 .food-card.no-photo .pill.must { background: var(--surface-2); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
 .card .rating .michelin { font-weight: 600; color: var(--ink); }
+/* the categories as photo tiles (a round dish photo over the name), then the subcategory and Good for chips */
+.chips.cats { gap: 2px; padding-block: 2px 2px; }
+.chips.cats .chip { flex-direction: column; justify-content: flex-start; gap: 5px; width: 78px; padding: 2px 2px 4px; border: 0; background: none; border-radius: 14px; font-size: 12.5px; line-height: 1.2; text-align: center; white-space: normal; }
+.chips.cats .cat-t { display: block; min-height: 2.4em; }
+.chips.cats .chip .n { font-size: 11px; margin-top: -5px; }
+.cat-img { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background-color: var(--surface-2); background-position: center; background-size: cover; background-repeat: no-repeat; box-shadow: inset 0 0 0 1px var(--line); color: var(--ink-2); }
+.cat-img svg { width: 28px; height: 28px; }
+.chips.cats .chip[aria-pressed="true"] { background: none; color: var(--ink); }
+.chips.cats .chip[aria-pressed="true"] .cat-img { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--food); }
+.chips.cats .chip[aria-pressed="true"] .cat-t { font-weight: 700; }
+.chips.cats .chip[aria-pressed="true"] .n { color: var(--ink-2); opacity: 1; }
+/* a place without its own photo: its signature dish, marked as an example photo; the label sits above the credit line,
+   so the two never meet on a narrow phone */
+.media.stand .dish-img { position: absolute; inset: 0; background-position: center; background-size: cover; background-repeat: no-repeat; }
+.media.stand .standin { bottom: 26px; }
 
 /* Spend: approvals (an expense counts once the admin approved it, a payment once its receiver and the admin did) */
 .todo-card { display: grid; gap: 8px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); border-left: 4px solid var(--sun); }

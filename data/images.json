@@ -3398,5 +3398,1825 @@
   "credit": "nakhon100",
   "license": "CC BY 2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Soi_Thaniya_By_Night_(5828832343).jpg"
+ },
+ "dish:khinkali": {
+  "file": "assets/img/dish-khinkali.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Sandra C from Canada, Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khinkali,_Restaurant_Aragvi.jpg"
+ },
+ "dish:pizza": {
+  "file": "assets/img/dish-pizza.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1280,
+  "credit": "Bex Walton from London, England, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Neapolitan_pizza_at_Trappica_(48701940197).jpg"
+ },
+ "dish:pasta": {
+  "file": "assets/img/dish-pasta.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "https://www.flickr.com/photos/wordridden/, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tagliatelle_rag%C3%B9_bolognese_01.jpg"
+ },
+ "dish:khao-kha-moo": {
+  "file": "assets/img/dish-khao-kha-moo.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Amin, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khao_kha_moo_thailand.jpg"
+ },
+ "dish:kuay-jap": {
+  "file": "assets/img/dish-kuay-jap.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Bitterschoko, Wikimedia Commons",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kuaichap_(rolled_noodle_soup_with_intestines),_Chiang_Mai,_2018-07-28_(4).jpg"
+ },
+ "dish:moo-krob": {
+  "file": "assets/img/dish-moo-krob.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khao_mu_krop.jpg"
+ },
+ "dish:moo-daeng": {
+  "file": "assets/img/dish-moo-daeng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "PattayaPatrol, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DFC_6062_Khao_Moo_Deng_roasted_pork_over_steamed_rice_with_rich_red_sauce_served_with_sliced_hard-boiled_eggs_and_fresh_cucumber.jpg"
+ },
+ "dish:moo-kata": {
+  "file": "assets/img/dish-moo-kata.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Anton10, Wikimedia Commons",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bo_Put,_Ko_Samui_District,_Surat_Thani,_Thailand_-_panoramio_(4).jpg"
+ },
+ "dish:korean-bbq": {
+  "file": "assets/img/dish-korean-bbq.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "by hellochris, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Korean.cuisine-Samgyeopsal-01.jpg"
+ },
+ "dish:satay": {
+  "file": "assets/img/dish-satay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Phoebus 28, Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mu_satay_Bang_Sue.jpg"
+ },
+ "dish:moo-ping": {
+  "file": "assets/img/dish-moo-ping.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Phoebus 28, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mu_ping.jpg"
+ },
+ "dish:bak-kut-teh": {
+  "file": "assets/img/dish-bak-kut-teh.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Ceeseven, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bak_Kut_Teh_in_Hong_Kong.jpg"
+ },
+ "dish:ribs": {
+  "file": "assets/img/dish-ribs.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Enrico BBQness, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Barbecued_-_Pork_ribs.jpg"
+ },
+ "dish:dim-sum": {
+  "file": "assets/img/dish-dim-sum.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Geoffreyrabbit, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dim_sum_collection_in_lunch.jpg"
+ },
+ "dish:pad-thai": {
+  "file": "assets/img/dish-pad-thai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1280,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg"
+ },
+ "dish:khao-soi": {
+  "file": "assets/img/dish-khao-soi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1024,
+  "credit": "Chainwit., Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khao_Soi_Northern_Thai_food_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2_%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%AD%E0%B8%87.jpg"
+ },
+ "dish:khanom-jeen": {
+  "file": "assets/img/dish-khanom-jeen.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 757,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khanom_chin_nam_ngiao.jpg"
+ },
+ "dish:boat-noodles": {
+  "file": "assets/img/dish-boat-noodles.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Zheng Zhou, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Boat_Noodles_with_sliced_beef_round_steak,_beef_ball,_braised_shank_and_tendon.jpg"
+ },
+ "dish:beef-noodles": {
+  "file": "assets/img/dish-beef-noodles.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "lazy fri13th, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kuai_tiao_nuea_pueai.jpg"
+ },
+ "dish:crab-curry": {
+  "file": "assets/img/dish-crab-curry.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "T.Tseng, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Phuket_Style_Crab_Curry_Kanomjean_Vermicelli_rice_noodle_with_blue_crab,_crab_meat_curry,_served_with_hard_boiled_egg,_pickle_carrot_and_papaya_(25069887921).jpg"
+ },
+ "dish:noodle-soup": {
+  "file": "assets/img/dish-noodle-soup.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 991,
+  "credit": "Vyacheslav Argenberg, Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thai_noodle_soup,_Khao_Yai,_Thailand.jpg"
+ },
+ "dish:khao-man-gai": {
+  "file": "assets/img/dish-khao-man-gai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Misaochan, Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hainanese_chicken_rice.jpg"
+ },
+ "dish:duck": {
+  "file": "assets/img/dish-duck.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Sakurai Midori, Wikimedia Commons",
+  "license": "CC BY 2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Roast_duck_and_rice.JPG"
+ },
+ "dish:oyster-omelette": {
+  "file": "assets/img/dish-oyster-omelette.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "PattayaPatrol, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DZ3_0635_Crispy_Thai-style_oyster_omelette_topped_with_fresh_scallions_-_a_savory_street-food_favorite_from_Sattahip.jpg"
+ },
+ "dish:gaeng-som": {
+  "file": "assets/img/dish-gaeng-som.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1281,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kaeng_som_kung.jpg"
+ },
+ "dish:kua-kling": {
+  "file": "assets/img/dish-kua-kling.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Zheng Zhou, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khua_Kling_Moo_Sab.jpg"
+ },
+ "dish:massaman": {
+  "file": "assets/img/dish-massaman.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Vee Satayamas, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Massaman_curry,_Bang_Kapi,_Bangkok.jpg"
+ },
+ "dish:crab": {
+  "file": "assets/img/dish-crab.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Lilblackdog29, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Steamed_crabs.jpg"
+ },
+ "dish:prawns": {
+  "file": "assets/img/dish-prawns.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 891,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kung_yang.JPG"
+ },
+ "dish:squid": {
+  "file": "assets/img/dish-squid.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Plamuk_yang.jpg"
+ },
+ "dish:clams": {
+  "file": "assets/img/dish-clams.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1665,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kraphao_hoi_lai.jpg"
+ },
+ "dish:fish": {
+  "file": "assets/img/dish-fish.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "User:Mattes, Wikimedia Commons",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Thai_steamed_fish_with_lime_juice.jpg"
+ },
+ "dish:curry": {
+  "file": "assets/img/dish-curry.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 857,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thai_green_chicken_curry_and_roti.jpg"
+ },
+ "dish:som-tam": {
+  "file": "assets/img/dish-som-tam.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 863,
+  "credit": "Togsvfx, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3_%E0%B8%95%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%94_Tumtaad_%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88_01.jpg"
+ },
+ "dish:gai-yang": {
+  "file": "assets/img/dish-gai-yang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 815,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kai_yang_CM.jpg"
+ },
+ "dish:fried-chicken": {
+  "file": "assets/img/dish-fried-chicken.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Vee Satayamas, Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bankrueed_fried_chicken_wings.jpg"
+ },
+ "dish:mango-sticky-rice": {
+  "file": "assets/img/dish-mango-sticky-rice.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1707,
+  "credit": "Muzirian, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mango_sticky_rice.jpg"
+ },
+ "dish:roti": {
+  "file": "assets/img/dish-roti.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 925,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Roti_kluai_khai_chiang_mai_04.jpg"
+ },
+ "dish:thai-pancakes": {
+  "file": "assets/img/dish-thai-pancakes.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "Ilya Plekhanov, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khanom_bueang_01.jpg"
+ },
+ "dish:o-aew": {
+  "file": "assets/img/dish-o-aew.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1920,
+  "credit": "Government of Thailand, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Oh_Aew.jpg"
+ },
+ "dish:shaved-ice": {
+  "file": "assets/img/dish-shaved-ice.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1018,
+  "credit": "Nesnad, Wikimedia Commons",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Kakigori-aug2009-spoons.jpg"
+ },
+ "dish:ice-cream": {
+  "file": "assets/img/dish-ice-cream.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Anilakeo, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Coconut_Ice_Cream,_Bangkok.jpg"
+ },
+ "dish:coffee": {
+  "file": "assets/img/dish-coffee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 964,
+  "credit": "Andy Li, Wikimedia Commons",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cha_Yen_%26_Kaffer_Yen_-_Thai_Street_Food,_Worthing_2026-06-21.jpg"
+ },
+ "dish:bakery": {
+  "file": "assets/img/dish-bakery.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Willis Lam, Wikimedia Commons",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Arsicault_Bakery_croissants_(24690473276).jpg"
+ },
+ "dish:steak": {
+  "file": "assets/img/dish-steak.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "StoppedTime, Wikimedia Commons",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tomahawk_steaks_on_the_grill.jpg"
+ },
+ "dish:burger": {
+  "file": "assets/img/dish-burger.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 1280,
+  "credit": "Mosa Meat, Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cultivated_hamburger,_2013.jpg"
+ },
+ "dish:tasting-menu": {
+  "file": "assets/img/dish-tasting-menu.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "ADT 04, Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tot%C3%A8nes_ou_petits_calmars_farcis_aux_%C3%A9pinards_et_aux_pignons.jpg"
+ },
+ "dish:night-market": {
+  "file": "assets/img/dish-night-market.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "PattayaPatrol, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DFC_2094_Evening_buzz_at_a_busy_night_market_-_food_stalls_colorful_lights_and_people_strolling_through_the_crowded_aisle.jpg"
+ },
+ "dish:mee-hokkien": {
+  "file": "assets/img/dish-mee-hokkien.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 571,
+  "credit": "Cun Cun, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vegetarian_fried_Hokkien_noodle.jpg"
+ },
+ "dish:kebab": {
+  "file": "assets/img/dish-kebab.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 720,
+  "credit": "Almanta, Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:D%C3%B6ner_Kebab_with_french_fries_and_chili_sauce_2022-12-28_-_3.jpg"
+ },
+ "dish:biryani": {
+  "file": "assets/img/dish-biryani.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 986,
+  "credit": "Bitterschoko, Wikimedia Commons",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Khao_mok_kai_(chicken_biryani),_Bangkok,_2018-10-09.jpg"
+ },
+ "dish:jok": {
+  "file": "assets/img/dish-jok.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1000,
+  "srcH": 1000,
+  "credit": "Daiju Azuma, Wikimedia Commons",
+  "license": "CC BY-SA 2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Chinese_rice_congee.jpg"
+ },
+ "dish:thai-food": {
+  "file": "assets/img/dish-thai-food.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "Takeaway, Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Thai_lunch.jpg"
+ },
+ "dish:thai-sweets": {
+  "file": "assets/img/dish-thai-sweets.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 960,
+  "credit": "User:Mattes, Wikimedia Commons",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Bualoy_kaiwan_-_Thai_food.JPG"
+ },
+ "places:food-acqua-kalim": {
+  "file": "assets/img/places-food-acqua-kalim.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/acqua"
+ },
+ "places:food-ta-khai-rosewood": {
+  "file": "assets/img/places-food-ta-khai-rosewood.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/ta-khai"
+ },
+ "places:food-larome-by-the-sea-kalim": {
+  "file": "assets/img/places-food-larome-by-the-sea-kalim.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/l-arome-by-the-sea"
+ },
+ "places:food-talung-thai-kamala": {
+  "file": "assets/img/places-food-talung-thai-kamala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1024,
+  "srcH": 768,
+  "credit": "© Talung Thai",
+  "license": "official site",
+  "source": "https://www.paresaresorts.com/dining/talung-thai-restaurant/"
+ },
+ "places:food-jaras-kamala": {
+  "file": "assets/img/places-food-jaras-kamala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jaras"
+ },
+ "places:food-wagyu-steakhouse-surin": {
+  "file": "assets/img/places-food-wagyu-steakhouse-surin.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/wagyu-steakhouse"
+ },
+ "places:food-nitan-cherngtalay": {
+  "file": "assets/img/places-food-nitan-cherngtalay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/nitan"
+ },
+ "places:food-suay-cherngtalay": {
+  "file": "assets/img/places-food-suay-cherngtalay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/suay-cherngtalay"
+ },
+ "places:food-smokaccia-laboratory-surin": {
+  "file": "assets/img/places-food-smokaccia-laboratory-surin.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/the-smokaccia-laboratory"
+ },
+ "places:food-kin-kub-ei-cherngtalay": {
+  "file": "assets/img/places-food-kin-kub-ei-cherngtalay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/kin-kub-ei"
+ },
+ "places:food-krua-praya-thalang": {
+  "file": "assets/img/places-food-krua-praya-thalang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-praya-phuket"
+ },
+ "places:food-lertrod-kitchen-nai-yang": {
+  "file": "assets/img/places-food-lertrod-kitchen-nai-yang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/lertrod"
+ },
+ "places:food-five-olives-cherngtalay": {
+  "file": "assets/img/places-food-five-olives-cherngtalay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/five-olives"
+ },
+ "places:food-pru-trisara": {
+  "file": "assets/img/places-food-pru-trisara.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1440,
+  "srcH": 850,
+  "credit": "© PRU",
+  "license": "official site",
+  "source": "https://www.prurestaurant.com/"
+ },
+ "places:food-krua-baan-platong-thalang": {
+  "file": "assets/img/places-food-krua-baan-platong-thalang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-baan-platong"
+ },
+ "places:food-peang-prai-bang-pae": {
+  "file": "assets/img/places-food-peang-prai-bang-pae.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/peang-prai"
+ },
+ "places:food-mook-manee": {
+  "file": "assets/img/places-food-mook-manee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/mook-manee"
+ },
+ "places:food-jampa-thalang": {
+  "file": "assets/img/places-food-jampa-thalang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jampa"
+ },
+ "places:food-bucha": {
+  "file": "assets/img/places-food-bucha.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/bucha"
+ },
+ "places:food-chuan-chim": {
+  "file": "assets/img/places-food-chuan-chim.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/chuan-chim"
+ },
+ "places:food-the-charm": {
+  "file": "assets/img/places-food-the-charm.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/the-charm"
+ },
+ "places:food-phakakrong": {
+  "file": "assets/img/places-food-phakakrong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/phakakrong"
+ },
+ "places:food-heh-phuket": {
+  "file": "assets/img/places-food-heh-phuket.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/heh"
+ },
+ "places:food-surf-turf-soul-kitchen": {
+  "file": "assets/img/places-food-surf-turf-soul-kitchen.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/surf-turf-by-soul-kitchen"
+ },
+ "places:food-a-pong-mae-sunee": {
+  "file": "assets/img/places-food-a-pong-mae-sunee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/a-pong-mae-sunee"
+ },
+ "places:food-roti-taew-nam": {
+  "file": "assets/img/places-food-roti-taew-nam.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-taew-nam"
+ },
+ "places:food-o-cha-rot": {
+  "file": "assets/img/places-food-o-cha-rot.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/o-cha-rot"
+ },
+ "places:food-royd": {
+  "file": "assets/img/places-food-royd.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1500,
+  "srcH": 1000,
+  "credit": "© Restaurant Royd",
+  "license": "official site",
+  "source": "https://www.restaurantroyd.com/"
+ },
+ "places:food-loba-bang-niao": {
+  "file": "assets/img/places-food-loba-bang-niao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/loba-bang-niao"
+ },
+ "places:food-shrimp-noodles-ao-kae": {
+  "file": "assets/img/places-food-shrimp-noodles-ao-kae.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/shrimp-noodles-ao-kae"
+ },
+ "places:food-krua-kao-kuk": {
+  "file": "assets/img/places-food-krua-kao-kuk.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/krua-kao-kuk"
+ },
+ "places:food-roti-chaofa": {
+  "file": "assets/img/places-food-roti-chaofa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/roti-chaofa"
+ },
+ "places:food-jadjan-ko-daeng": {
+  "file": "assets/img/places-food-jadjan-ko-daeng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jadjan"
+ },
+ "places:food-khao-tom-dibuk": {
+  "file": "assets/img/places-food-khao-tom-dibuk.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/khao-tom-thanon-di-buk"
+ },
+ "places:food-go-ang-seafood": {
+  "file": "assets/img/places-food-go-ang-seafood.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/go-ang-seafood"
+ },
+ "places:food-hong-khao-tom-pla": {
+  "file": "assets/img/places-food-hong-khao-tom-pla.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/hong-khao-tom-pla"
+ },
+ "places:food-go-la-hokkien-noodles": {
+  "file": "assets/img/places-food-go-la-hokkien-noodles.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/go-la"
+ },
+ "places:food-o-tao-bang-niao": {
+  "file": "assets/img/places-food-o-tao-bang-niao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/o-tao-bang-niao"
+ },
+ "places:food-gorjan": {
+  "file": "assets/img/places-food-gorjan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/gorjan"
+ },
+ "places:food-la-gaetana": {
+  "file": "assets/img/places-food-la-gaetana.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/la-gaetana"
+ },
+ "places:food-chom-chan": {
+  "file": "assets/img/places-food-chom-chan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/chomchan"
+ },
+ "places:food-ko-tee-sangkasi": {
+  "file": "assets/img/places-food-ko-tee-sangkasi.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/sang-ka-sri"
+ },
+ "places:food-ton-mayom": {
+  "file": "assets/img/places-food-ton-mayom.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/ton-mayom"
+ },
+ "places:food-niyom-salt-grilled-duck": {
+  "file": "assets/img/places-food-niyom-salt-grilled-duck.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/niyom-salt-grilled-duck"
+ },
+ "places:food-pathongko-mae-pranee": {
+  "file": "assets/img/places-food-pathongko-mae-pranee.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/pathongko-mae-pranee"
+ },
+ "places:food-mee-sapam-khun-yai-chian": {
+  "file": "assets/img/places-food-mee-sapam-khun-yai-chian.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/meesapam-khun-yai-chian"
+ },
+ "places:food-lob-baan": {
+  "file": "assets/img/places-food-lob-baan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/lob-baan"
+ },
+ "places:food-khrua-ohm": {
+  "file": "assets/img/places-food-khrua-ohm.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/khrua-ohm"
+ },
+ "places:food-jongjit-kitchen": {
+  "file": "assets/img/places-food-jongjit-kitchen.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/jongjit-kitchen"
+ },
+ "places:food-omemo-kathu": {
+  "file": "assets/img/places-food-omemo-kathu.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/phuket-region/phuket/restaurant/omemo"
+ },
+ "places:food-thian-leng-bak-kut-teh": {
+  "file": "assets/img/places-food-thian-leng-bak-kut-teh.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/thian-leng-bak-kut-teh"
+ },
+ "places:food-baan-rearn-mai": {
+  "file": "assets/img/places-food-baan-rearn-mai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/baan-rearn-mai"
+ },
+ "places:food-aulis-phuket": {
+  "file": "assets/img/places-food-aulis-phuket.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/aulis-1210910"
+ },
+ "places:food-khun-thip-satay": {
+  "file": "assets/img/places-food-khun-thip-satay.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/khun-thip-s-satay"
+ },
+ "places:food-krachang-khao-lak": {
+  "file": "assets/img/places-food-krachang-khao-lak.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krachang-khao-lak"
+ },
+ "places:food-krua-luang-ten": {
+  "file": "assets/img/places-food-krua-luang-ten.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/krua-luang-ten"
+ },
+ "places:food-mun-pochana": {
+  "file": "assets/img/places-food-mun-pochana.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/mon-phochana"
+ },
+ "places:food-lok-un-takua-pa": {
+  "file": "assets/img/places-food-lok-un-takua-pa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/rock-un"
+ },
+ "places:food-long-dtai-cape-fahn": {
+  "file": "assets/img/places-food-long-dtai-cape-fahn.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/long-dtai"
+ },
+ "places:food-kapi-sator-chaweng": {
+  "file": "assets/img/places-food-kapi-sator-chaweng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/kapi-sator"
+ },
+ "places:food-phensiri-chaweng": {
+  "file": "assets/img/places-food-phensiri-chaweng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1568,
+  "srcH": 1045,
+  "credit": "© Phensiri Thai Restaurant",
+  "license": "official site",
+  "source": "https://www.phensiri.com/"
+ },
+ "places:food-nusara": {
+  "file": "assets/img/places-food-nusara.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/nusara-1192382"
+ },
+ "places:food-chop-chop-cook-shop": {
+  "file": "assets/img/places-food-chop-chop-cook-shop.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/chop-chop-cook-shop"
+ },
+ "places:food-potong": {
+  "file": "assets/img/places-food-potong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/potong"
+ },
+ "places:food-charoen-saeng-silom": {
+  "file": "assets/img/places-food-charoen-saeng-silom.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charoen-saeng-silom"
+ },
+ "places:food-aksorn": {
+  "file": "assets/img/places-food-aksorn.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2500,
+  "srcH": 1670,
+  "credit": "© Aksorn",
+  "license": "official site",
+  "source": "https://www.aksornbkk.com/"
+ },
+ "places:food-le-normandie": {
+  "file": "assets/img/places-food-le-normandie.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-normandie"
+ },
+ "places:food-suhring": {
+  "file": "assets/img/places-food-suhring.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/suhring"
+ },
+ "places:food-r-haan": {
+  "file": "assets/img/places-food-r-haan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/r-haan"
+ },
+ "places:food-sorn": {
+  "file": "assets/img/places-food-sorn.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sorn"
+ },
+ "places:food-le-du": {
+  "file": "assets/img/places-food-le-du.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/le-du"
+ },
+ "places:food-samrub-samrub-thai": {
+  "file": "assets/img/places-food-samrub-samrub-thai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samrub-samrub-thai"
+ },
+ "places:food-gaggan": {
+  "file": "assets/img/places-food-gaggan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/gaggan-anand"
+ },
+ "places:food-baan-tepa": {
+  "file": "assets/img/places-food-baan-tepa.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baan-tepa"
+ },
+ "places:food-boonlert-egg-noodles": {
+  "file": "assets/img/places-food-boonlert-egg-noodles.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bunloet"
+ },
+ "places:food-urai-braised-goose": {
+  "file": "assets/img/places-food-urai-braised-goose.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/urai-braised-goose"
+ },
+ "places:food-charmgang": {
+  "file": "assets/img/places-food-charmgang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/charmgang"
+ },
+ "places:food-duck-noodle-house": {
+  "file": "assets/img/places-food-duck-noodle-house.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/duck-noodle-house"
+ },
+ "places:food-samlor": {
+  "file": "assets/img/places-food-samlor.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/samlor"
+ },
+ "places:food-ann-tha-din-daeng": {
+  "file": "assets/img/places-food-ann-tha-din-daeng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ann-tha-din-daeng"
+ },
+ "places:food-100-mahaseth": {
+  "file": "assets/img/places-food-100-mahaseth.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/100-mahaseth"
+ },
+ "places:food-bokkia-tha-din-daeng": {
+  "file": "assets/img/places-food-bokkia-tha-din-daeng.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/bokkia-tha-din-daeng"
+ },
+ "places:food-kaenkrung": {
+  "file": "assets/img/places-food-kaenkrung.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kaenkrung"
+ },
+ "places:food-somsak-pu-ob": {
+  "file": "assets/img/places-food-somsak-pu-ob.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somsak-pu-ob-charoen-rat"
+ },
+ "places:food-here-hai": {
+  "file": "assets/img/places-food-here-hai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/here-hai"
+ },
+ "places:food-plu-sathorn": {
+  "file": "assets/img/places-food-plu-sathorn.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/plu"
+ },
+ "places:food-prik-yuak": {
+  "file": "assets/img/places-food-prik-yuak.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/prik-yuak"
+ },
+ "places:food-keawloon": {
+  "file": "assets/img/places-food-keawloon.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/keawloon"
+ },
+ "places:food-beer-hima": {
+  "file": "assets/img/places-food-beer-hima.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/beer-hima-prachachuen"
+ },
+ "places:food-baannok-langsuan": {
+  "file": "assets/img/places-food-baannok-langsuan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/baannok-bangkok"
+ },
+ "places:food-hia-wan-khao-tom-pla": {
+  "file": "assets/img/places-food-hia-wan-khao-tom-pla.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/hia-wan-khao-tom-pla"
+ },
+ "places:food-lay-lao-ari": {
+  "file": "assets/img/places-food-lay-lao-ari.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/lay-lao"
+ },
+ "places:food-rung-rueang-pork-noodles": {
+  "file": "assets/img/places-food-rung-rueang-pork-noodles.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-tiew-mu-rung-rueang"
+ },
+ "places:food-mr-joe-kuay-jab": {
+  "file": "assets/img/places-food-mr-joe-kuay-jab.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/guay-jub-mr-joe"
+ },
+ "places:food-arunwan-ekkamai": {
+  "file": "assets/img/places-food-arunwan-ekkamai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/arunwan-1200640"
+ },
+ "places:food-hok-kee-lao": {
+  "file": "assets/img/places-food-hok-kee-lao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/th-phang-nga-region/th-phang-nga/restaurant/hok-kee-lao"
+ },
+ "places:food-krua-chao-koh-ban-tai": {
+  "file": "assets/img/places-food-krua-chao-koh-ban-tai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/krua-chao-koh"
+ },
+ "places:food-dear-phangan": {
+  "file": "assets/img/places-food-dear-phangan.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/suraasdrthaanii_2719394/restaurant/dear-phangan"
+ },
+ "places:food-jun-hom-mae-nam": {
+  "file": "assets/img/places-food-jun-hom-mae-nam.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/jun-hom"
+ },
+ "places:food-khao-horm-bophut": {
+  "file": "assets/img/places-food-khao-horm-bophut.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/khao-horm"
+ },
+ "places:food-ko-seng-mae-nam": {
+  "file": "assets/img/places-food-ko-seng-mae-nam.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/ko-seng"
+ },
+ "places:food-baan-suan-lung-khai-taling-ngam": {
+  "file": "assets/img/places-food-baan-suan-lung-khai-taling-ngam.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/cchanghwad-suraasdrthaanii/koh-samui_7770005/restaurant/baan-suan-lung-khai"
+ },
+ "places:food-jay-fai": {
+  "file": "assets/img/places-food-jay-fai.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/jay-fai"
+ },
+ "places:food-krua-apsorn": {
+  "file": "assets/img/places-food-krua-apsorn.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/krua-apsorn-sam-sen"
+ },
+ "places:food-k-panich": {
+  "file": "assets/img/places-food-k-panich.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/k-panich"
+ },
+ "places:food-pad-thai-fai-ta-lu": {
+  "file": "assets/img/places-food-pad-thai-fai-ta-lu.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/eat-pad-thai"
+ },
+ "places:food-kolun-h": {
+  "file": "assets/img/places-food-kolun-h.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/kolun-h"
+ },
+ "places:food-thai-tham": {
+  "file": "assets/img/places-food-thai-tham.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/thai-tham"
+ },
+ "places:food-ten-suns": {
+  "file": "assets/img/places-food-ten-suns.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/ten-suns"
+ },
+ "places:food-mae-prapha": {
+  "file": "assets/img/places-food-mae-prapha.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/mae-prapha-crispy-pancake-phra-nakhon"
+ },
+ "places:food-rongros": {
+  "file": "assets/img/places-food-rongros.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/rongros"
+ },
+ "places:food-sang-thatien": {
+  "file": "assets/img/places-food-sang-thatien.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/sang-tha-tien"
+ },
+ "places:bkk-somboon-seafood-surawong": {
+  "file": "assets/img/places-bkk-somboon-seafood-surawong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 1200,
+  "credit": "© Michelin Guide",
+  "license": "guide page",
+  "source": "https://guide.michelin.com/th/en/bangkok-region/bangkok/restaurant/somboon-seafood-surawong"
+ },
+ "places:food-black-ginger-nai-yang": {
+  "file": "assets/img/places-food-black-ginger-nai-yang.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 800,
+  "srcH": 1000,
+  "credit": "© Black Ginger",
+  "license": "official site",
+  "source": "https://blackginger.com/"
+ },
+ "places:food-toh-daeng-mai-khao": {
+  "file": "assets/img/places-food-toh-daeng-mai-khao.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1200,
+  "srcH": 800,
+  "credit": "© Toh Daeng at Baan Ar Jor",
+  "license": "official site",
+  "source": "https://tohdaengphuket.com/"
+ },
+ "places:food-rawai-view": {
+  "file": "assets/img/places-food-rawai-view.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1281,
+  "srcH": 1280,
+  "credit": "© Rawai View Cafe",
+  "license": "official site",
+  "source": "https://rawai-view.com/"
+ },
+ "places:food-barada": {
+  "file": "assets/img/places-food-barada.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1916,
+  "srcH": 2395,
+  "credit": "© Barada Chocolate Factory",
+  "license": "official site",
+  "source": "https://baradachocolate.com/"
+ },
+ "places:food-raya-phuket-town": {
+  "file": "assets/img/places-food-raya-phuket-town.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 824,
+  "srcH": 583,
+  "credit": "© Raya Restaurant",
+  "license": "official site",
+  "source": "https://www.rayarestaurant.net/"
+ },
+ "places:food-local-canteen": {
+  "file": "assets/img/places-food-local-canteen.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2500,
+  "srcH": 3750,
+  "credit": "© Local Canteen Phuket",
+  "license": "official site",
+  "source": "https://www.localcanteen.com/"
+ },
+ "places:food-bang-niang-market": {
+  "file": "assets/img/places-food-bang-niang-market.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2560,
+  "srcH": 1707,
+  "credit": "© Bang Niang Market",
+  "license": "official site",
+  "source": "https://bangniangmarket.com/"
+ },
+ "places:food-krua-thara": {
+  "file": "assets/img/places-food-krua-thara.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1199,
+  "srcH": 807,
+  "credit": "© Krua Thara",
+  "license": "official site",
+  "source": "https://kruathara.wordpress.com/"
+ },
+ "places:food-gecko-cabane": {
+  "file": "assets/img/places-food-gecko-cabane.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1080,
+  "srcH": 834,
+  "credit": "© Gecko Cabane",
+  "license": "official site",
+  "source": "https://geckocabanerestaurant.com/fr"
+ },
+ "places:food-yang-garden-koh-lanta": {
+  "file": "assets/img/places-food-yang-garden-koh-lanta.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 2500,
+  "srcH": 1406,
+  "credit": "© Yang Garden Restaurant",
+  "license": "official site",
+  "source": "https://www.yanglanta.com/"
+ },
+ "places:food-lalcove-hin-kong": {
+  "file": "assets/img/places-food-lalcove-hin-kong.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1992,
+  "srcH": 1330,
+  "credit": "© L'Alcove",
+  "license": "official site",
+  "source": "https://www.alcovephangan.com/"
+ },
+ "places:food-dao-chef-nir-mesika-thong-sala": {
+  "file": "assets/img/places-food-dao-chef-nir-mesika-thong-sala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1600,
+  "srcH": 1067,
+  "credit": "© DAO by Chef Nir Mesika",
+  "license": "official site",
+  "source": "https://www.daokpg.com/menu"
+ },
+ "places:food-satimi-ice-cream-thong-sala": {
+  "file": "assets/img/places-food-satimi-ice-cream-thong-sala.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1376,
+  "srcH": 768,
+  "credit": "© Satimi's Ice Cream",
+  "license": "official site",
+  "source": "https://www.satimisook.com/"
+ },
+ "places:food-yok-sod-paragon": {
+  "file": "assets/img/places-food-yok-sod-paragon.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1536,
+  "srcH": 750,
+  "credit": "© Yok Sod",
+  "license": "official site",
+  "source": "https://yoksodbaitoey.com/"
+ },
+ "places:food-bartels": {
+  "file": "assets/img/places-food-bartels.webp",
+  "w": 640,
+  "h": 360,
+  "srcW": 1280,
+  "srcH": 853,
+  "credit": "© Bartels",
+  "license": "official site",
+  "source": "https://www.bartelsinternational.com/"
  }
 }

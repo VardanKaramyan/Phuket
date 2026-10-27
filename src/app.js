@@ -258,11 +258,12 @@
       if (bar) $$('.chip[data-value]', bar).forEach((chip) => {
         const n = $('.n', chip); if (!n) return
         const g = chip.dataset.group, v = chip.dataset.value
-        // what the list would show after this tap: a row that the tap hides (Food's rows, under All) no longer filters
+        // what the list would show after this tap: a row that the tap hides (Food's rows, under All) no longer filters, nor
+        // a row that hides with it (a category's subcategories); the rows come in that order
         const st = { ...state, [g]: v }
         $$('.chips[data-when]', bar).forEach((row) => {
           const [wg, vals] = row.dataset.when.split(':'), first = $('.chip[data-group]', row)
-          if (first && wg === g && vals.replace('!', '').split(' ').includes(v) === vals.startsWith('!')) st[first.dataset.group] = first.dataset.value
+          if (first && first.dataset.group !== g && vals.replace('!', '').split(' ').includes(st[wg]) === vals.startsWith('!')) st[first.dataset.group] = first.dataset.value
         })
         n.textContent = cards.filter((c) => !isHiddenStay(c) && Object.entries(st).every(([gg, vv]) => match(c, gg, vv))).length
       })
@@ -287,8 +288,11 @@
         const g = chip.dataset.group
         if (chip.getAttribute('aria-pressed') === 'true') state[g] = chip.dataset.value
         chip.addEventListener('click', () => {
-          $$('.chip[data-group="' + g + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === chip)))
-          state[g] = chip.dataset.value; apply()
+          // a row with data-toggle (Food's Good for): a second tap on the chip that is on turns it off
+          const row = chip.closest('.chips')
+          const on = row && row.hasAttribute('data-toggle') && chip.getAttribute('aria-pressed') === 'true' ? $('.chip[data-group]', row) : chip
+          $$('.chip[data-group="' + g + '"]', bar).forEach((c) => c.setAttribute('aria-pressed', String(c === on)))
+          state[g] = on.dataset.value; apply()
           // a list you can link to (Liked, Saved): its address goes in the address bar, ready to copy
           if ($('.chip[data-link]', bar) && $$('.chip[data-group="' + g + '"]', bar).some((c) => c.hasAttribute('data-link'))) {
             history.replaceState(null, '', '#' + id + (chip.hasAttribute('data-link') ? '/' + chip.dataset.value : ''))

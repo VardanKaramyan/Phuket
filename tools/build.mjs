@@ -10,6 +10,7 @@ import * as turf from '@turf/turf'
 import sharp from 'sharp'
 import { TRIP, TRIP_DAYS, TRIP_LABEL, inTrip, phaseOf, phaseRange, phaseLabel, baseOf, leavingOn } from './trip.mjs'
 import { makeAmd } from './amd.mjs'
+import { FOOD_CATS, FOOD_GOOD, foodCats, dishOf, DISH_LABEL } from './food-cats.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const P = (...a) => path.join(ROOT, ...a)
@@ -93,6 +94,7 @@ const ICON = {
   stay: '<path d="M3 18.5v-11M3 14h18v4.5M21 14v-2.5A3.5 3.5 0 0 0 17.5 8H11v6"/><circle cx="7" cy="11" r="1.6"/>',
   money: '<rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5h.01M18 14.5h.01"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.6v.01"/>',
+  bowl: '<path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0zM8.5 20.5h7M9.5 3.5c-.8 1-.8 2 0 3s.8 2 0 3M14.5 3.5c-.8 1-.8 2 0 3s.8 2 0 3"/>',
   star: '<path d="M12 3.6l2.6 5.3 5.8.85-4.2 4.1 1 5.8L12 16.9l-5.2 2.75 1-5.8-4.2-4.1 5.8-.85z"/>',
   pin: '<path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
   camera: '<path d="M4 8.2h3.2l1.6-2.4h6.4l1.6 2.4H20V19H4z"/><circle cx="12" cy="13.3" r="3.3"/>',
@@ -363,13 +365,19 @@ const FOOD_KIND = { thai: 'Thai', 'southern-thai': 'Southern Thai', noodles: 'No
 const FOOD_WHERE = { patong: 'Patong', 'kata-karon': 'Kata & Karon', south: 'Rawai & Chalong', town: 'Phuket Town', north: 'Kamala to the airport', andaman: 'Krabi & Phang Nga', gulf: 'Phangan & Samui', bangkok: 'Bangkok' }
 const FOOD_AREAS = { patong: ['patong'], 'kata-karon': ['karon', 'kata', 'kata-noi'], south: ['rawai', 'nai-harn', 'promthep', 'chalong', 'cape-panwa'], town: ['phuket-town', 'kathu', 'koh-kaew'], north: ['kamala', 'surin', 'bang-tao', 'layan', 'nai-thon', 'nai-yang', 'mai-khao', 'thalang', 'ao-po'], andaman: ['phang-nga', 'khao-lak', 'krabi', 'phi-phi', 'koh-yao', 'koh-lanta', 'natai', 'koh-lipe', 'trang'], gulf: ['koh-phangan', 'koh-samui', 'koh-tao', 'surat-thani'], bangkok: BKK }
 const foodWhere = (p) => Object.keys(FOOD_AREAS).find((k) => FOOD_AREAS[k].includes(p.area)) || 'town'
-// the Kind row: a place can be under several (a Thai place known for its pork is under Thai and Pork)
-const FOOD_CHIPS = [['pick', 'Top picks'], ['pork', 'Pork'], ['seafood', 'Seafood'], ['thai', 'Thai'], ['sweet', 'Desserts & cafes'], ['street', 'Street food & markets'], ['michelin', 'Michelin'], ['fine', 'Special dinners'], ['grill', 'Grill & steak'], ['intl', 'International'], ['late', 'Late night'], ['group', 'Big groups']]
-function foodKeys(p) {
-  const k = p.foodKind, t = p.foodTags || []
-  return [p.pick && 'pick', (k === 'pork' || t.includes('pork')) && 'pork', (k === 'seafood' || t.includes('seafood')) && 'seafood', ['thai', 'southern-thai', 'noodles', 'isaan'].includes(k) && 'thai',
-    (['dessert', 'cafe', 'bakery'].includes(k) || t.includes('dessert')) && 'sweet', ['street-food', 'market'].includes(k) && 'street', (t.includes('michelin') || !!MICHELIN[p.michelin]) && 'michelin',
-    k === 'fine-dining' && 'fine', k === 'grill' && 'grill', k === 'international' && 'intl', t.includes('late-night') && 'late', t.includes('group-friendly') && 'group'].filter(Boolean)
+// the categories (the photo tiles), their subcategories and the Good for row (tools/food-cats.mjs); a place can be
+// under several (a Thai place known for its pork is under Thai and Pork)
+const catMemo = new Map()
+const catOf = (p) => { if (!catMemo.has(p.id)) catMemo.set(p.id, foodCats(p)); return catMemo.get(p.id) }
+const foodAttrs = (p) => { const c = catOf(p); return ` data-fwhere="${foodWhere(p)}" data-fkind="${c.cats.join(' ')}" data-fgood="${c.good.join(' ')}"${c.cats.map((k) => ` data-sub${k}="${c.subs[k].join(' ')}"`).join('')}` }
+// a place without its own photo shows its signature dish, marked as an example photo (tools/food-cats.mjs dishOf);
+// the dish photos are CSS backgrounds (dishCss), so the single file carries each one once
+const dishOk = (d) => !!d && !!images['dish:' + d] && fs.existsSync(P(images['dish:' + d].file))
+const dishKey = (p) => (dishOk(dishOf(p)) ? dishOf(p) : '')
+function dishMedia(d) {
+  const im = images['dish:' + d]
+  const credit = has(im.credit) ? `<span class="credit">${esc(String(im.credit).replace(/<[^>]+>/g, '').slice(0, 80))}${has(im.license) ? ' · ' + esc(im.license) : ''}</span>` : ''
+  return `<div class="media stand"><span class="dish-img dish-${d}" role="img" aria-label="${esc(DISH_LABEL[d] + ', an example photo, not from this place')}"></span>${credit}<span class="standin">${esc(DISH_LABEL[d])} · example photo</span>`
 }
 const foodItems = places.filter((p) => p.category === 'food')
 // the markets the food research covered keep their own card (under All too) and show under Food as well
@@ -386,15 +394,17 @@ function foodCard(p, mode) {
   const kind = FOOD_KIND[p.foodKind] || 'Food'
   const place = p.district || areaName(p.area) || p.island
   const photo = images['places:' + p.id] && !(extra.dropImages || []).includes('places:' + p.id)
+  const dish = !photo && dishKey(p)
+  const media = photo ? imgTag('places:' + p.id, p.name, mode, '') : dish ? dishMedia(dish) : ''
   const pills = `<span class="pill food">${esc(kind)}</span>${p.pick ? '<span class="pill must">Top pick</span>' : ''}`
   const google = p.rating ? `<span>${icon('star')}<b>${esc(trimNum(p.rating))}</b> ${p.reviews ? `${esc(p.reviews.toLocaleString('en-US'))} Google reviews` : 'on Google'}</span>` : ''
   const others = (p.otherRatings || []).slice(0, 2).map((r) => `<span>${esc(r.site)} <b>${esc(trimNum(r.rating))}</b>${r.reviews ? ` ${esc(r.reviews.toLocaleString('en-US'))} reviews` : ''}</span>`).join('')
   const mich = MICHELIN[p.michelin] ? `<span class="michelin" title="Michelin Guide Thailand 2026">${esc(MICHELIN[p.michelin])}</span>` : ''
   const open = [p.openText, daysText(p)].filter(has).join(' · ')
-  return `<article class="card food-card${photo ? '' : ' no-photo'}" id="pl-${esc(p.id)}" style="--fo:${foodOrder.get(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Food" data-tier="food" data-only="tier" data-fwhere="${foodWhere(p)}" data-fkind="${foodKeys(p).join(' ')}" data-dur="" data-text="${textOf(p.name, p.nameThai, kind, place, areaName(p.area), p.island, p.dishes, (p.foodTags || []).map((t) => t.replace(/-/g, ' ')), p.michelin, 'food')}">
-${photo ? `${imgTag('places:' + p.id, p.name, mode, '')}<div class="tag-top">${pills}</div></div>` : ''}
+  return `<article class="card food-card${media ? '' : ' no-photo'}" id="pl-${esc(p.id)}" style="--fo:${foodOrder.get(p.id)}" data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Food" data-tier="food" data-only="tier"${foodAttrs(p)} data-dur="" data-text="${textOf(p.name, p.nameThai, kind, place, areaName(p.area), p.island, p.dishes, (p.foodTags || []).map((t) => t.replace(/-/g, ' ')), p.michelin, 'food')}">
+${media ? `${media}<div class="tag-top">${pills}</div></div>` : ''}
 <div class="body">
-${photo ? '' : `<div class="food-pills">${pills}</div>`}
+${media ? '' : `<div class="food-pills">${pills}</div>`}
 <div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc([place, kind, PRICE_LEVEL[p.priceLevel] || ''].filter(has).join(' · '))}${has(p.nameThai) ? ` · <span lang="th">${esc(p.nameThai)}</span>` : ''}</p></div></div>
 ${google || others || mich ? `<p class="rating">${google}${others}${mich}</p>` : ''}
 <p class="desc">${esc(p.description)}</p>
@@ -430,7 +440,7 @@ function placeCard(p, mode) {
   const tierKeys = [BKK.includes(p.area) ? 'bangkok' : p.tier, eats ? 'food' : ''].filter(Boolean).join(' ')
   const days = daysText(p)
   const sub = [areaName(p.area), cap(p.category)].filter(has).join(' · ')
-  return `<article class="card" id="pl-${esc(p.id)}"${eats ? ` style="--fo:${foodOrder.get(p.id)}" data-fwhere="${foodWhere(p)}" data-fkind="${foodKeys(p).join(' ')}"` : ''} data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
+  return `<article class="card" id="pl-${esc(p.id)}"${eats ? ` style="--fo:${foodOrder.get(p.id)}"${foodAttrs(p)}` : ''} data-fav-card="pl:${esc(p.id)}" data-name="${esc(p.name)}" data-kind="Place" data-tier="${esc(tierKeys)}" data-dur="${durKey}" data-text="${textOf(p.name, p.nameThai, p.category, areaName(p.area), p.goodFor, p.tier)}">
 ${imgTag('places:' + p.id, p.name, mode, '◆')}<div class="tag-top"><span class="pill ${p.category === 'food' ? 'food' : tierCls}">${p.category === 'food' ? 'Food' : tierLabel}</span></div>${p.tier === 'pier' ? '' : `<div class="tag-bottom"><span class="pill">${icon('clock')}${esc(durLabel)}</span></div>`}</div>
 <div class="body">
 <div class="title-row"><div><h2 class="card-title">${esc(p.name)}</h2><p class="subtitle">${esc(sub)}${has(p.nameThai) ? ` · <span lang="th">${esc(p.nameThai)}</span>` : ''}</p></div></div>
@@ -1038,6 +1048,29 @@ function placesList(mode) {
     ...foodBasics(), ...foodSorted.filter((p) => p.category === 'food').map((p) => foodCard(p, mode)),
     adultBasics(), weedBasics(), ...adultSorted.map((p) => adultCard(p, mode))].filter(Boolean).join('\n')
 }
+// under Food: the categories as photo tiles, each one's subcategory row (shown while it is on), then Good for, whose
+// chips turn off with a second tap (data-toggle, src/app.js)
+function foodRows() {
+  const eats = [...foodItems, ...foodMarkets]
+  const cats = FOOD_CATS.filter((c) => eats.some((p) => catOf(p).cats.includes(c.key)))
+  const tile = (v, t, d, i) => `<button class="chip cat" type="button" data-group="fkind" data-value="${v}" aria-pressed="${i === 0}"><span class="cat-img${dishOk(d) ? ' dish-' + d : ''}" aria-hidden="true">${dishOk(d) ? '' : icon('bowl')}</span><span class="cat-t">${esc(t)}</span> <span class="n"></span></button>`
+  const tiles = `<div class="chips cats" role="toolbar" aria-label="Food by category" data-when="tier:food" hidden>${[['all', 'All', 'thai-food'], ...cats.map((c) => [c.key, c.label, c.tile])].map(([v, t, d], i) => tile(v, t, d, i)).join('')}</div>`
+  const subs = cats.map((c) => {
+    const items = c.subs.filter(([k]) => eats.some((p) => (catOf(p).subs[c.key] || []).includes(k)))
+    return items.length ? chipRow('places', 'sub' + c.key, [['all', c.all], ...items.map(([k, l]) => [k, l])], c.label + ': by kind', [], '', ` data-when="fkind:${c.key}" hidden`) : ''
+  }).join('\n')
+  const good = FOOD_GOOD.filter(([k]) => eats.some((p) => catOf(p).good.includes(k)))
+  const goodRow = chipRow('places', 'fgood', [['all', 'Any'], ...good.map(([k, l]) => [k, l])], 'Food: good for', [], '', ' data-when="tier:food" data-toggle hidden').replace('aria-pressed="true">', 'aria-pressed="true" hidden>')
+  return [tiles, subs, goodRow].join('\n')
+}
+// the dish photos (stand-ins and tiles) as CSS backgrounds: a file each on the website, inline once in the single file
+function dishCss(mode) {
+  return Object.keys(images).filter((k) => k.startsWith('dish:') && dishOk(k.slice(5)) && usedKey(k)).map((k) => {
+    const im = images[k]
+    const src = mode === 'inline' ? 'data:image/webp;base64,' + fs.readFileSync(P(im.file)).toString('base64') : 'img/' + path.basename(im.file)
+    return `.dish-${k.slice(5)}{background-image:url(${src})}`
+  }).join('\n')
+}
 function placesView(mode) {
   return `<section class="view" id="places" aria-labelledby="places-title">
 <div class="view-head"><span class="eyebrow">Must-see · hidden gems · day trips</span><h1 class="view-title" id="places-title">Places to go</h1><p class="lede">${esc(extra.placesIntro || 'Each place shows how long it takes, the best time to go and what it costs. In January the west-coast sea is calm and clear.')}</p></div>
@@ -1045,7 +1078,7 @@ function placesView(mode) {
 ${chipRow('places', 'tier', [['all', 'All'], ...(foodItems.length ? [['food', 'Food']] : []), ...(clubs.length ? [['club', 'Clubs & festivals']] : []), ...([...places, ...clubs].some((x) => BKK.includes(x.area) && x.tier !== 'adult') ? [['bangkok', 'Bangkok']] : []), ...(adultItems.length ? [['adult', '18+']] : []), ...(adultItems.some((p) => p.category === 'cannabis') ? [['weed', 'Weed']] : []), ['must-see', 'Must-see'], ['hidden-gem', 'Hidden gems'], ['day-trip', 'Day trips'], ...(places.some((x) => x.tier === 'tour') ? [['tour', 'Boat tours']] : []), ...(places.some((x) => x.tier === 'pier') ? [['pier', 'Piers & ferries']] : []), ['saved', 'Saved']], 'Filter places', ['saved'], shareListBtn)}
 ${chipRow('places', 'dur', [['all', 'Any length'], ['short', 'Up to 3 hours'], ['half', 'Half day'], ['full', 'Full day +'], ['evening', 'Evening']], 'Filter by time needed', [], '', ' data-when="tier:!adult weed food"')}
 ${foodItems.length ? chipRow('places', 'fwhere', [['all', 'Everywhere'], ...Object.keys(FOOD_WHERE).filter((k) => foodItems.some((p) => foodWhere(p) === k)).map((k) => [k, FOOD_WHERE[k]])], 'Filter food by place', [], '', ' data-when="tier:food" hidden') : ''}
-${foodItems.length ? chipRow('places', 'fkind', [['all', 'All kinds'], ...FOOD_CHIPS.filter(([k]) => foodItems.some((p) => foodKeys(p).includes(k)))], 'Filter food by kind', [], '', ' data-when="tier:food" hidden') : ''}
+${foodItems.length ? foodRows() : ''}
 ${adultItems.length ? chipRow('places', 'where', [['all', 'Everywhere'], ...Object.keys(WHERE_NAME).filter((k) => adultItems.some((p) => adultWhere(p) === k)).map((k) => [k, WHERE_NAME[k]])], 'Filter by place', [], '', ' data-when="tier:adult weed" hidden') : ''}
 <input class="search" type="search" id="places-search" placeholder="Search places, dishes, markets…" aria-label="Search places">
 </div>
@@ -1300,8 +1333,10 @@ if (sat) {
 const satInline = () => JSON.stringify(Object.fromEntries(satFiles.map((f) => [f.replace(/\.webp$/, ''), 'data:image/webp;base64,' + fs.readFileSync(P('assets/sat', f)).toString('base64')])))
 
 // ---------- client data ----------
+const usedDishes = () => new Set([...foodItems.filter((p) => !images['places:' + p.id] || (extra.dropImages || []).includes('places:' + p.id)).map(dishKey), ...FOOD_CATS.map((c) => c.tile), 'thai-food'].filter(Boolean))
 const usedKey = (k) => {
   const [kind, id] = k.split(':')
+  if (kind === 'dish') return usedDishes().has(id)
   const list = { events, places, areas, hotels, money: brands }[kind]
   return !!(list && list.some((x) => x.id === id))
 }
@@ -1407,7 +1442,7 @@ function page(build) {
   const mode = build === 'single' ? 'inline' : 'file'
   const body = amd.html(chrome([homeView(mode), eventsView(mode), placesView(mode), areasView(mode, { kml: build === 'standalone' }), stayView(mode), moneyView(mode), infoView(), appsView(), notesView(), spendView(), statsView(), adminView()].join('\n')))
   const data = JSON.stringify(clientData(build)).replace(/</g, '\\u003c')
-  const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss)
+  const css = fontCss() + '\n' + minCss(leafletCss) + '\n' + minCss(appCss) + '\n' + dishCss(mode)
   const leaflet = build === 'artifact'
     ? '<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>'
     : `<script>${leafletJs}</script>`
@@ -1473,7 +1508,7 @@ ${folder('Money changers', brands.flatMap((b) => (b.branches || []).map((x) => p
 // ---------- write ----------
 const usedKeys = new Set([
   ...events.map((e) => 'events:' + e.id), ...places.map((p) => 'places:' + p.id), ...areas.map((a) => 'areas:' + a.id),
-  ...hotels.map((h) => 'hotels:' + h.id), ...brands.map((b) => 'money:' + b.id),
+  ...hotels.map((h) => 'hotels:' + h.id), ...brands.map((b) => 'money:' + b.id), ...[...usedDishes()].map((d) => 'dish:' + d),
 ])
 for (const dir of ['dist/img', 'artifact/img']) { fs.rmSync(P(dir), { recursive: true, force: true }); fs.mkdirSync(P(dir), { recursive: true }) }
 for (const [k, im] of Object.entries(images)) {

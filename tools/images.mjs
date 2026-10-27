@@ -16,8 +16,8 @@ for (const pick of picks) {
   if (!pick || !pick.ok || !pick.file) continue
   const src = path.isAbsolute(pick.file) ? pick.file : P(pick.file)
   if (!fs.existsSync(src)) { failed.push(pick.key + ' (missing file)'); continue }
-  // crops chosen by eye: keep the pools in the Renew photo, keep Unclave's logo out of frame
-  const POSITION = { 'places:renew-sauna-ice-bath': 'south', 'events:unclave-phangan': 'north' }
+  // crops chosen by eye: keep the pools in the Renew photo, keep Unclave's logo out of frame, the clams in their bowl
+  const POSITION = { 'places:renew-sauna-ice-bath': 'south', 'events:unclave-phangan': 'north', 'dish:clams': 'centre' }
   if (POSITION[pick.key]) pick.position = POSITION[pick.key]
   // a fixed 16:9 band (top edge in source pixels) where no gravity works: the Seaside portrait photo keeps
   // the fire dancer, the crowd and the top of the decks; the Sédo flyer keeps both DJs and the decks, not its old date
